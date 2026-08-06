@@ -8451,7 +8451,7 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T06:05:29+00:00",
-    "detail_fail_count": 3,
+    "detail_fail_count": 4,
     "revoked": false,
     "own_id": "琼航警132/26",
     "cancels": []
@@ -8714,7 +8714,7 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T06:05:29+00:00",
-    "detail_fail_count": 3,
+    "detail_fail_count": 4,
     "revoked": false,
     "own_id": "琼航警127/26",
     "cancels": []
@@ -12909,7 +12909,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T11:42:26+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "沪航警607/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/466381dbd988428988dfda5fa5a357e0.html": {
     "title": "水下检验—冀航警511/26",
@@ -12921,6 +12923,32 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T11:42:26+00:00",
+    "revoked": false,
+    "own_id": "冀航警511/26",
+    "cancels": []
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/70bcd8c6e7514ba288f498ace9d871c4.html": {
+    "title": "水下检验—冀航警512/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/70bcd8c6e7514ba288f498ace9d871c4.html?hav=1jWj6r2hy3yfaLOupx8kng4gB4",
+    "date": "2026-08-06",
+    "bureau": "河北海事局",
+    "military": false,
+    "points": [],
+    "groups": [],
+    "detail_fetched": false,
+    "first_seen": "2026-08-06T14:23:56+00:00",
+    "revoked": false
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cc837b6469474c4bbe550d78d0d12766.html": {
+    "title": "“沿海消拖10”拖带船舶“三航工8”—琼航警147/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cc837b6469474c4bbe550d78d0d12766.html?hav=1jWj6r2hy3yfaLOuv5YvQlKbga",
+    "date": "2026-08-06",
+    "bureau": "海南海事局",
+    "military": false,
+    "points": [],
+    "groups": [],
+    "detail_fetched": false,
+    "first_seen": "2026-08-06T14:23:56+00:00",
     "revoked": false
   }
 }
