@@ -6390,9 +6390,12 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T06:05:29+00:00",
-    "revoked": false,
+    "revoked": true,
     "own_id": "粤航警516/26",
-    "cancels": []
+    "cancels": [],
+    "revoked_by": [
+      "粤航警542/26"
+    ]
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/64133b3b7ed744eb96d38108804bbe06.html": {
     "title": "拖带作业—粤航警515/26",
@@ -8448,7 +8451,7 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T06:05:29+00:00",
-    "detail_fail_count": 2,
+    "detail_fail_count": 3,
     "revoked": false,
     "own_id": "琼航警132/26",
     "cancels": []
@@ -8711,7 +8714,7 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T06:05:29+00:00",
-    "detail_fail_count": 2,
+    "detail_fail_count": 3,
     "revoked": false,
     "own_id": "琼航警127/26",
     "cancels": []
@@ -12655,7 +12658,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T09:23:38+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "津航警252/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/918a680d91d7480a83deee519f2f6471.html": {
     "title": "潜水作业—冀航警510/26",
@@ -12667,7 +12672,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T09:23:38+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "冀航警510/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/36f57f91c87f4424b48d9b9f9a479124.html": {
     "title": "撤销粤航警516/26—粤航警542/26",
@@ -12679,7 +12686,11 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T09:23:38+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "粤航警542/26",
+    "cancels": [
+      "粤航警516/26"
+    ]
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/41dd1772d5a74cb585db18226db76335.html": {
     "title": "拖带作业—粤航警541/26",
@@ -12691,7 +12702,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T09:23:38+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "粤航警541/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/88875cf1126746afb7af5ceb344fa503.html": {
     "title": "军事训练—桂航警177/26",
@@ -12785,7 +12798,8 @@
     "detail_gave_up": false,
     "extraction_version": 12,
     "cancels": [],
-    "revoked": false
+    "revoked": false,
+    "own_id": "桂航警177/26"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b4f6252044aa42f2a0c5affab598a244.html": {
     "title": "宜宾航警62/26—宜宾海航警62/26",
@@ -12797,7 +12811,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T09:23:38+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "宜宾海航警62/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6beb6d0f55dd4aedadbb585eafe8c407.html": {
     "title": "中华人民共和国重庆海事局航行警告—渝航警386/26",
@@ -12809,7 +12825,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T09:23:38+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "渝航警386/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0af6b71b140d4e79b39b712d47e10340.html": {
     "title": "中华人民共和国重庆海事局航行警告—渝航警385/26",
@@ -12821,7 +12839,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T09:23:38+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "渝航警385/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/91ff168a7b73491ba3946a577ecfb91a.html": {
     "title": "武汉海事局关于“陈江桩10”轮拖带作业的航行警告—汉航警40/26",
@@ -12833,7 +12853,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T09:23:38+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "汉航警40/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7bdd3f5b0a1c478688c14445746f03a4.html": {
     "title": "武汉海事局关于“ATHENIAN FIDELITY”轮拖带作业的航行警告—汉航警39/26",
@@ -12845,7 +12867,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T09:23:38+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "汉航警39/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4ce2f630a77646c48de4389b3e59d111.html": {
     "title": "中华人民共和国宜昌海事局航行警告—宜航警63/26",
@@ -12857,7 +12881,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T09:23:38+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "宜航警63/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/81fea514435040a580a5ef25437132e1.html": {
     "title": "武汉海事局关于“长雁2”轮拖带作业的航行警告—汉航警38/26",
@@ -12869,6 +12895,32 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T09:23:38+00:00",
+    "revoked": false,
+    "own_id": "汉航警38/26",
+    "cancels": []
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/59e63e41d72e48f3bdf91a2f49507c98.html": {
+    "title": "人员落水—沪航警607/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/59e63e41d72e48f3bdf91a2f49507c98.html?hav=1jWj6r2hy3yfaLOupvqpCVRSA5",
+    "date": "2026-08-06",
+    "bureau": "上海海事局",
+    "military": false,
+    "points": [],
+    "groups": [],
+    "detail_fetched": false,
+    "first_seen": "2026-08-06T11:42:26+00:00",
+    "revoked": false
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/466381dbd988428988dfda5fa5a357e0.html": {
+    "title": "水下检验—冀航警511/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/466381dbd988428988dfda5fa5a357e0.html?hav=1jWj6r2hy3yfaLOupuYtWbsBZp",
+    "date": "2026-08-06",
+    "bureau": "河北海事局",
+    "military": false,
+    "points": [],
+    "groups": [],
+    "detail_fetched": false,
+    "first_seen": "2026-08-06T11:42:26+00:00",
     "revoked": false
   }
 }
