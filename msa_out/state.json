@@ -8451,7 +8451,7 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T06:05:29+00:00",
-    "detail_fail_count": 11,
+    "detail_fail_count": 12,
     "revoked": false,
     "own_id": "琼航警132/26",
     "cancels": []
@@ -8714,7 +8714,7 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T06:05:29+00:00",
-    "detail_fail_count": 11,
+    "detail_fail_count": 12,
     "revoked": false,
     "own_id": "琼航警127/26",
     "cancels": []
@@ -13035,7 +13035,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-07T08:35:02+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "津航警255/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/95a8872c425c44f7aa8828ea4d58d1bd.html": {
     "title": "航标设置—津航警254/26",
@@ -13047,7 +13049,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-07T08:35:02+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "津航警254/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f54725033cb45bfaa7718eb52b3bafd.html": {
     "title": "吊装作业—津航警253/26",
@@ -13059,7 +13063,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-07T08:35:02+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "津航警253/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0f4a3e87605e4fbf9ea4ec0624420350.html": {
     "title": "水下检验—冀航警514/26",
@@ -13071,7 +13077,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-07T08:35:02+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "冀航警514/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f46d9ac79a1546ab8c51ccce1b8628d1.html": {
     "title": "水工作业-勘探409—鲁航警638/26",
@@ -13083,6 +13091,310 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-07T08:35:02+00:00",
+    "revoked": false,
+    "own_id": "鲁航警638/26",
+    "cancels": []
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f41dfde286a4cd291b853c547034df0.html": {
+    "title": "实弹射击—粤航警543/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f41dfde286a4cd291b853c547034df0.html?hav=1jWj6r2hy3yfaMrfOV9c46bRrw",
+    "date": "2026-08-07",
+    "bureau": "广东海事局",
+    "military": true,
+    "points": [
+      {
+        "lat": 21.405,
+        "lon": 110.965,
+        "raw": "21-24.3N 110-57.9E",
+        "fmt": "DDM_HYPHEN",
+        "start": 28,
+        "end": 46
+      },
+      {
+        "lat": 21.405,
+        "lon": 110.99166666666666,
+        "raw": "21-24.3N 110-59.5E",
+        "fmt": "DDM_HYPHEN",
+        "start": 51,
+        "end": 69
+      },
+      {
+        "lat": 21.378333333333334,
+        "lon": 110.99166666666666,
+        "raw": "21-22.7N 110-59.5E",
+        "fmt": "DDM_HYPHEN",
+        "start": 74,
+        "end": 92
+      },
+      {
+        "lat": 21.378333333333334,
+        "lon": 110.965,
+        "raw": "21-22.7N 110-57.9E",
+        "fmt": "DDM_HYPHEN",
+        "start": 97,
+        "end": 115
+      }
+    ],
+    "groups": [
+      [
+        {
+          "lat": 21.405,
+          "lon": 110.965,
+          "raw": "21-24.3N 110-57.9E",
+          "fmt": "DDM_HYPHEN",
+          "start": 28,
+          "end": 46
+        },
+        {
+          "lat": 21.405,
+          "lon": 110.99166666666666,
+          "raw": "21-24.3N 110-59.5E",
+          "fmt": "DDM_HYPHEN",
+          "start": 51,
+          "end": 69
+        },
+        {
+          "lat": 21.378333333333334,
+          "lon": 110.99166666666666,
+          "raw": "21-22.7N 110-59.5E",
+          "fmt": "DDM_HYPHEN",
+          "start": 74,
+          "end": 92
+        },
+        {
+          "lat": 21.378333333333334,
+          "lon": 110.965,
+          "raw": "21-22.7N 110-57.9E",
+          "fmt": "DDM_HYPHEN",
+          "start": 97,
+          "end": 115
+        }
+      ]
+    ],
+    "detail_fetched": true,
+    "first_seen": "2026-08-07T10:04:33+00:00",
+    "raw_text": "南海，8月8日，以下四点连线海域内进行射击训练： （1）21-24.3N 110-57.9E； （2）21-24.3N 110-59.5E； （3）21-22.7N 110-59.5E； （4）21-22.7N 110-57.9E。禁止驶入。",
+    "validity": null,
+    "detail_fail_count": 0,
+    "detail_gave_up": false,
+    "extraction_version": 12,
+    "cancels": [],
+    "revoked": false
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9184c32717ea40aea876e7e1b6f850ff.html": {
+    "title": "拖带作业—桂航警178/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9184c32717ea40aea876e7e1b6f850ff.html?hav=1jWj6r2hy3yfaMrfOTrgXY5slb",
+    "date": "2026-08-07",
+    "bureau": "广西海事局",
+    "military": false,
+    "points": [],
+    "groups": [],
+    "detail_fetched": false,
+    "first_seen": "2026-08-07T10:04:33+00:00",
+    "revoked": false
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/51999844f12a4285a010777eebe791f2.html": {
+    "title": "军事训练—琼航警149/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/51999844f12a4285a010777eebe791f2.html?hav=1jWj6r2hy3yfaMrfOV9cDWCjIX",
+    "date": "2026-08-07",
+    "bureau": "海南海事局",
+    "military": true,
+    "points": [
+      {
+        "lat": 20.0,
+        "lon": 111.21166666666667,
+        "raw": "20-00.0N 111-12.7E",
+        "fmt": "DDM_HYPHEN",
+        "start": 25,
+        "end": 43
+      },
+      {
+        "lat": 19.933333333333334,
+        "lon": 111.295,
+        "raw": "19-56.0N 111-17.7E",
+        "fmt": "DDM_HYPHEN",
+        "start": 44,
+        "end": 62
+      },
+      {
+        "lat": 19.816666666666666,
+        "lon": 111.18333333333334,
+        "raw": "19-49.0N 111-11.0E",
+        "fmt": "DDM_HYPHEN",
+        "start": 63,
+        "end": 81
+      },
+      {
+        "lat": 19.883333333333333,
+        "lon": 111.10333333333334,
+        "raw": "19-53.0N 111-06.2E",
+        "fmt": "DDM_HYPHEN",
+        "start": 82,
+        "end": 100
+      },
+      {
+        "lat": 19.861666666666668,
+        "lon": 110.98333333333333,
+        "raw": "19-51.7N 110-59.0E",
+        "fmt": "DDM_HYPHEN",
+        "start": 102,
+        "end": 120
+      },
+      {
+        "lat": 19.906666666666666,
+        "lon": 110.97,
+        "raw": "19-54.4N 110-58.2E",
+        "fmt": "DDM_HYPHEN",
+        "start": 121,
+        "end": 139
+      },
+      {
+        "lat": 19.925,
+        "lon": 111.045,
+        "raw": "19-55.5N 111-02.7E",
+        "fmt": "DDM_HYPHEN",
+        "start": 140,
+        "end": 158
+      },
+      {
+        "lat": 19.88,
+        "lon": 111.05833333333334,
+        "raw": "19-52.8N 111-03.5E",
+        "fmt": "DDM_HYPHEN",
+        "start": 159,
+        "end": 177
+      }
+    ],
+    "groups": [
+      [
+        {
+          "lat": 20.0,
+          "lon": 111.21166666666667,
+          "raw": "20-00.0N 111-12.7E",
+          "fmt": "DDM_HYPHEN",
+          "start": 25,
+          "end": 43
+        },
+        {
+          "lat": 19.933333333333334,
+          "lon": 111.295,
+          "raw": "19-56.0N 111-17.7E",
+          "fmt": "DDM_HYPHEN",
+          "start": 44,
+          "end": 62
+        },
+        {
+          "lat": 19.816666666666666,
+          "lon": 111.18333333333334,
+          "raw": "19-49.0N 111-11.0E",
+          "fmt": "DDM_HYPHEN",
+          "start": 63,
+          "end": 81
+        },
+        {
+          "lat": 19.883333333333333,
+          "lon": 111.10333333333334,
+          "raw": "19-53.0N 111-06.2E",
+          "fmt": "DDM_HYPHEN",
+          "start": 82,
+          "end": 100
+        }
+      ],
+      [
+        {
+          "lat": 19.861666666666668,
+          "lon": 110.98333333333333,
+          "raw": "19-51.7N 110-59.0E",
+          "fmt": "DDM_HYPHEN",
+          "start": 102,
+          "end": 120
+        },
+        {
+          "lat": 19.906666666666666,
+          "lon": 110.97,
+          "raw": "19-54.4N 110-58.2E",
+          "fmt": "DDM_HYPHEN",
+          "start": 121,
+          "end": 139
+        },
+        {
+          "lat": 19.925,
+          "lon": 111.045,
+          "raw": "19-55.5N 111-02.7E",
+          "fmt": "DDM_HYPHEN",
+          "start": 140,
+          "end": 158
+        },
+        {
+          "lat": 19.88,
+          "lon": 111.05833333333334,
+          "raw": "19-52.8N 111-03.5E",
+          "fmt": "DDM_HYPHEN",
+          "start": 159,
+          "end": 177
+        }
+      ]
+    ],
+    "detail_fetched": true,
+    "first_seen": "2026-08-07T10:04:33+00:00",
+    "raw_text": "南海，自8月7日1800时至8月8日1400时，在20-00.0N/111-12.7E、19-56.0N/111-17.7E、19-49.0N/111-11.0E、19-53.0N/111-06.2E以及19-51.7N/110-59.0E、19-54.4N/110-58.2E、19-55.5N/111-02.7E、19-52.8N/111-03.5E四点连线水域范围内进行军事训练，禁止驶入。",
+    "validity": {
+      "start": "2026-08-07T10:00:00+00:00",
+      "end": "2026-08-08T06:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月7日1800时至8月8日1400时"
+      ]
+    },
+    "detail_fail_count": 0,
+    "detail_gave_up": false,
+    "extraction_version": 12,
+    "cancels": [],
+    "revoked": false
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8405257ddda84ef485f577cd561fbc2c.html": {
+    "title": "火箭发射—琼航警148/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8405257ddda84ef485f577cd561fbc2c.html?hav=1jWj6r2hy3yfaMrfOV9cDV4L6x",
+    "date": "2026-08-07",
+    "bureau": "海南海事局",
+    "military": true,
+    "points": [
+      {
+        "lat": 19.5975,
+        "lon": 110.93633333333334,
+        "raw": "19-35.85N 110-56.18E",
+        "fmt": "DDM_HYPHEN",
+        "start": 32,
+        "end": 52
+      }
+    ],
+    "groups": [
+      [
+        {
+          "lat": 19.5975,
+          "lon": 110.93633333333334,
+          "raw": "19-35.85N 110-56.18E",
+          "fmt": "DDM_HYPHEN",
+          "start": 32,
+          "end": 52
+        }
+      ]
+    ],
+    "detail_fetched": true,
+    "first_seen": "2026-08-07T10:04:33+00:00",
+    "raw_text": "南海，自8月16日至8月17日，每日1100时至1300时，在以19-35.85N 110-56.18E为中心，5.4海里为半径的圆形区域内进行火箭发射，禁止驶入。",
+    "validity": {
+      "start": "2026-08-16T03:00:00+00:00",
+      "end": "2026-08-17T05:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "自8月16日至8月17日，每日1100时至1300时"
+      ]
+    },
+    "detail_fail_count": 0,
+    "detail_gave_up": false,
+    "extraction_version": 12,
+    "cancels": [],
     "revoked": false
   }
 }
