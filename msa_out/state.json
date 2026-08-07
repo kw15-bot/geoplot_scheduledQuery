@@ -700,7 +700,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "沪航警561/26"
@@ -1555,7 +1555,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "辽航警336/26"
@@ -1663,7 +1663,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "辽航警334/26"
@@ -1785,7 +1785,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "辽航警331/26"
@@ -1893,7 +1893,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "辽航警329/26"
@@ -1931,7 +1931,7 @@
     "validity": null,
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12
+    "extraction_version": 13
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b3b3510396d54d5fa7560d6ea80cac1c.html": {
     "title": "拖带华勇起重29—辽航警326/26",
@@ -2050,7 +2050,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "辽航警324/26"
@@ -2210,7 +2210,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": true,
     "own_id": "辽航警323/26",
@@ -2307,7 +2307,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "辽航警322/26"
@@ -2401,7 +2401,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "辽航警321/26"
@@ -2495,7 +2495,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "辽航警320/26"
@@ -2589,7 +2589,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "辽航警319/26"
@@ -2683,7 +2683,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "辽航警318/26"
@@ -2805,7 +2805,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "辽航警315/26"
@@ -2871,7 +2871,7 @@
     "validity": null,
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12
+    "extraction_version": 13
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/075ae0a93ed14191a95dd68e2cf31ef4.html": {
     "title": "撤销航警—辽航警310/26",
@@ -2892,7 +2892,7 @@
     "validity": null,
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12
+    "extraction_version": 13
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/df805fe2a88944b1b577952b207af61c.html": {
     "title": "渤海军事演习—辽航警309/26",
@@ -2983,7 +2983,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "辽航警309/26"
@@ -3525,7 +3525,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "冀航警481/26"
@@ -3815,7 +3815,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "冀航警466/26"
@@ -4216,7 +4216,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "鲁航警629/26"
@@ -4326,7 +4326,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "鲁航警628/26"
@@ -5178,7 +5178,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "浙航警674/26"
@@ -5579,7 +5579,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "闽航警126/26"
@@ -5981,7 +5981,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "粤航警539/26"
@@ -6175,7 +6175,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "粤航警531/26"
@@ -6515,7 +6515,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "粤航警514/26"
@@ -6639,7 +6639,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "粤航警512/26"
@@ -6859,7 +6859,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "桂航警171/26"
@@ -7125,7 +7125,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": true,
     "own_id": "桂航警166/26",
@@ -7306,7 +7306,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "桂航警159/26"
@@ -7517,7 +7517,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "桂航警150/26"
@@ -7901,7 +7901,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警146/26"
@@ -7995,7 +7995,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警145/26"
@@ -8103,7 +8103,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警143/26"
@@ -8212,7 +8212,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警141/26"
@@ -8286,7 +8286,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警138/26"
@@ -8394,7 +8394,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警136/26"
@@ -8451,7 +8451,7 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T06:05:29+00:00",
-    "detail_fail_count": 13,
+    "detail_fail_count": 14,
     "revoked": false,
     "own_id": "琼航警132/26",
     "cancels": []
@@ -8545,7 +8545,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警131/26"
@@ -8591,7 +8591,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警130/26"
@@ -8699,7 +8699,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警128/26"
@@ -8714,7 +8714,7 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T06:05:29+00:00",
-    "detail_fail_count": 13,
+    "detail_fail_count": 14,
     "revoked": false,
     "own_id": "琼航警127/26",
     "cancels": []
@@ -8850,7 +8850,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警123/26"
@@ -8958,7 +8958,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警121/26"
@@ -9004,7 +9004,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警120/26"
@@ -9050,7 +9050,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警119/26"
@@ -9158,7 +9158,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警117/26"
@@ -10179,7 +10179,7 @@
     "validity": null,
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12
+    "extraction_version": 13
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6c75728677f94d7482be3a03fe7bd0df.html": {
     "title": "6月26日江苏宇航海洋工程有限公司“宇航起重53”拖带—苏航警36/26",
@@ -11836,7 +11836,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "云航警125/26"
@@ -12028,7 +12028,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "云航警117/26"
@@ -12234,7 +12234,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "云航警108/26"
@@ -12465,7 +12465,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "云航警102/26"
@@ -12643,7 +12643,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "云航警95/26"
@@ -12796,7 +12796,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "桂航警177/26"
@@ -13174,10 +13174,17 @@
     "detail_fetched": true,
     "first_seen": "2026-08-07T10:04:33+00:00",
     "raw_text": "南海，8月8日，以下四点连线海域内进行射击训练： （1）21-24.3N 110-57.9E； （2）21-24.3N 110-59.5E； （3）21-22.7N 110-59.5E； （4）21-22.7N 110-57.9E。禁止驶入。",
-    "validity": null,
+    "validity": {
+      "start": "2026-08-07T16:00:00+00:00",
+      "end": "2026-08-08T16:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月8日"
+      ]
+    },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "粤航警543/26"
@@ -13351,7 +13358,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警149/26"
@@ -13397,7 +13404,7 @@
     },
     "detail_fail_count": 0,
     "detail_gave_up": false,
-    "extraction_version": 12,
+    "extraction_version": 13,
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警148/26"
