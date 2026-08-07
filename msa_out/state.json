@@ -8451,7 +8451,7 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T06:05:29+00:00",
-    "detail_fail_count": 14,
+    "detail_fail_count": 15,
     "revoked": false,
     "own_id": "琼航警132/26",
     "cancels": []
@@ -8714,7 +8714,7 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-06T06:05:29+00:00",
-    "detail_fail_count": 14,
+    "detail_fail_count": 15,
     "revoked": false,
     "own_id": "琼航警127/26",
     "cancels": []
@@ -13408,5 +13408,17 @@
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警148/26"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/72a9abad8ff34ed38929e5682dc6e3a1.html": {
+    "title": "碍航物—桂航警179/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/72a9abad8ff34ed38929e5682dc6e3a1.html?hav=1jWj6r2hy3yfaMrfOXjTLBwLOC",
+    "date": "2026-08-07",
+    "bureau": "广西海事局",
+    "military": false,
+    "points": [],
+    "groups": [],
+    "detail_fetched": false,
+    "first_seen": "2026-08-07T12:10:42+00:00",
+    "revoked": false
   }
 }
