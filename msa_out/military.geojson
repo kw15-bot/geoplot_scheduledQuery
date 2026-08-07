@@ -1776,6 +1776,7 @@
         "date": "2026-07-23",
         "bureau": "海南海事局",
         "group_count": 0,
+        "detail_gave_up": true,
         "kind": "no_coords"
       },
       "geometry": null
@@ -1903,6 +1904,7 @@
         "date": "2026-07-15",
         "bureau": "海南海事局",
         "group_count": 0,
+        "detail_gave_up": true,
         "kind": "no_coords"
       },
       "geometry": null
