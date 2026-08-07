@@ -131,7 +131,12 @@ BUREAUS = [
 # still-nominally-valid military warning as revoked even though its stated validity
 # window hasn't ended yet. Bumping forces a one-time re-fetch so already-cached
 # cancellation notices with no title-target get scanned for this too.
-DETAIL_EXTRACTION_VERSION = 12
+# v13: extract_validity_periods() now also accepts a bare date with no time clause
+# (see v8) when it's immediately followed by "以下.../如下..." introducing an itemized
+# list of points (e.g. "8月8日，以下四点连线海域内进行射击训练：（1）..."), not just
+# by "在.../将在.../拟在..." directly naming the area. Forces a retry of anything cached
+# with "validity": None purely because of that gap.
+DETAIL_EXTRACTION_VERSION = 13
 
 # If an article's detail fetch keeps failing with a stale-access-token redirect (see
 # fetch()'s "想定外のURLへリダイレクトされました" check below), it usually means the
@@ -565,10 +570,13 @@ def extract_validity_periods(text):
             # 在37-46.86N ...", meaning "for these entire days" (interpreted as CST
             # 0000 on the start day through 2400 on the end day). Only accept this as a
             # validity window -- rather than some unrelated date mention elsewhere in
-            # the text -- when it's immediately followed by the warning's action clause
-            # (almost always "在..." or "将/拟在...", introducing the affected area).
+            # the text -- when it's immediately followed by the warning's action clause.
+            # This is almost always "在..." or "将/拟在...", introducing the affected
+            # area directly, but it's sometimes instead "以下/如下...", introducing an
+            # itemized list of points (e.g. "8月8日，以下四点连线海域内进行射击训练：
+            # （1）21-24.3N ...").
             tail = rest.lstrip("，,、 ")
-            if not re.match(r"(?:将|拟|将于)?在", tail):
+            if not re.match(r"(?:将|拟|将于)?(?:在|以下|如下)", tail):
                 continue  # not adjacent to the action clause -- skip, as before
             h1 = mi1 = 0
             h2, mi2 = 24, 0
@@ -1408,3 +1416,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+  
