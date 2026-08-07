@@ -571,12 +571,16 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
    GEOPLOT MIL — app.js
    ============================================================ */
 
-// Bump this on every edit to this file (format: vYYYYMMDD.N, N = today's build count).
-// Shown in the header next to the notif bell so it's easy to confirm at a glance
-// (especially over screen-share / when reporting a bug) whether the browser is
-// actually running the latest file, rather than a stale cached copy -- this exact
-// confusion has happened multiple times during development (see HANDOFF.md).
-const APP_VERSION = 'v20260805.28';
+// Bump this on every edit to this file (format: vMAJOR.MINOR.PATCH, plain decimal --
+// no date encoding). Bump PATCH for a normal fix/tweak, MINOR for a new feature, MAJOR
+// for a breaking/large change. Shown in the header next to the notif bell so it's easy
+// to confirm at a glance (especially over screen-share / when reporting a bug) whether
+// the browser is actually running the latest file, rather than a stale cached copy --
+// this exact confusion has happened multiple times during development (see HANDOFF.md).
+// Formerly dated (vYYYYMMDD.N, N = that day's build count); switched to this scheme
+// starting at v1.1.7 (continuing on from where the dated scheme's build count left off,
+// not a reset to "new/early software").
+const APP_VERSION = 'v1.1.7';
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
