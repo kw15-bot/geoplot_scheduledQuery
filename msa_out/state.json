@@ -13637,7 +13637,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-08T10:03:21+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "琼航警152/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1a47ec2c117141139339683323a72dd3.html": {
     "title": "北部湾一人落水失踪—琼航警151/26",
@@ -13649,6 +13651,8 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-08T10:03:21+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "琼航警151/26",
+    "cancels": []
   }
 }
