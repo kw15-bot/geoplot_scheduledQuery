@@ -13609,6 +13609,8 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-08T03:56:06+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "安海航警29/26",
+    "cancels": []
   }
 }
