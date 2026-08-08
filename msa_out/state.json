@@ -13584,5 +13584,17 @@
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警150/26"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ca6f0cba12bc42f29c020ff3ea4f2d74.html": {
+    "title": "南海HZ21-8-8d井钻井作业—粤航警544/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ca6f0cba12bc42f29c020ff3ea4f2d74.html?hav=1jWj6r2hy3yfaOKPwwipmJIrjM",
+    "date": "2026-08-08",
+    "bureau": "广东海事局",
+    "military": false,
+    "points": [],
+    "groups": [],
+    "detail_fetched": false,
+    "first_seen": "2026-08-08T02:33:26+00:00",
+    "revoked": false
   }
 }
