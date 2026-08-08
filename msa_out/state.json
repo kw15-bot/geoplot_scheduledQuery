@@ -13665,6 +13665,20 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-08T11:48:22+00:00",
+    "revoked": false,
+    "own_id": "沪航警609/26",
+    "cancels": []
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3fa47bee97314c0d99db0baad8b728b6.html": {
+    "title": "中华人民共和国重庆海事局航行警告—渝航警387/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3fa47bee97314c0d99db0baad8b728b6.html?hav=1jWj6r2hy3yfaOKPx8KBsk4nJR",
+    "date": "2026-08-08",
+    "bureau": "长江海事局",
+    "military": false,
+    "points": [],
+    "groups": [],
+    "detail_fetched": false,
+    "first_seen": "2026-08-08T12:17:39+00:00",
     "revoked": false
   }
 }
