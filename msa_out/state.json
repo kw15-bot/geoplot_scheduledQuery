@@ -13693,6 +13693,8 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-08T13:18:08+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "冀航警515/26",
+    "cancels": []
   }
 }
