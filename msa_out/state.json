@@ -13612,5 +13612,17 @@
     "revoked": false,
     "own_id": "安海航警29/26",
     "cancels": []
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/eaff8204765b4d4ab9fda8912a96839f.html": {
+    "title": "拖带作业—粤航警545/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/eaff8204765b4d4ab9fda8912a96839f.html?hav=1jWj6r2hy3yfaOKPx5kKS4v3oG",
+    "date": "2026-08-08",
+    "bureau": "广东海事局",
+    "military": false,
+    "points": [],
+    "groups": [],
+    "detail_fetched": false,
+    "first_seen": "2026-08-08T09:23:07+00:00",
+    "revoked": false
   }
 }
