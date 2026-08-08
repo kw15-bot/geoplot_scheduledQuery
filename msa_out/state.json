@@ -13623,6 +13623,32 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-08T09:23:07+00:00",
+    "revoked": false,
+    "own_id": "粤航警545/26",
+    "cancels": []
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4b1cc5f950d0444190759be3bc71a3e8.html": {
+    "title": "洋浦海域一渔船沉—琼航警152/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4b1cc5f950d0444190759be3bc71a3e8.html?hav=1jWj6r2hy3yfaOKPx5kKWtX4un",
+    "date": "2026-08-08",
+    "bureau": "海南海事局",
+    "military": false,
+    "points": [],
+    "groups": [],
+    "detail_fetched": false,
+    "first_seen": "2026-08-08T10:03:21+00:00",
+    "revoked": false
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1a47ec2c117141139339683323a72dd3.html": {
+    "title": "北部湾一人落水失踪—琼航警151/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1a47ec2c117141139339683323a72dd3.html?hav=1jWj6r2hy3yfaOKPx5kKWtX4uf",
+    "date": "2026-08-08",
+    "bureau": "海南海事局",
+    "military": false,
+    "points": [],
+    "groups": [],
+    "detail_fetched": false,
+    "first_seen": "2026-08-08T10:03:21+00:00",
     "revoked": false
   }
 }
