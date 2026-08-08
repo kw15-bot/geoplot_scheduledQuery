@@ -13654,5 +13654,17 @@
     "revoked": false,
     "own_id": "琼航警151/26",
     "cancels": []
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1c7738b8956b446eb7eb1bb9240ae89a.html": {
+    "title": "灯浮移位—沪航警609/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1c7738b8956b446eb7eb1bb9240ae89a.html?hav=1jWj6r2hy3yfaOKPx8KBeY8I1J",
+    "date": "2026-08-08",
+    "bureau": "上海海事局",
+    "military": false,
+    "points": [],
+    "groups": [],
+    "detail_fetched": false,
+    "first_seen": "2026-08-08T11:48:22+00:00",
+    "revoked": false
   }
 }
