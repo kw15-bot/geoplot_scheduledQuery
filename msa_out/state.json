@@ -13721,7 +13721,9 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-08T16:17:09+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "沪航警611/26",
+    "cancels": []
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c24e16f02e7842098d7ffa1f44de9676.html": {
     "title": "军事训练—琼航警153/26",
@@ -13814,6 +13816,7 @@
     "detail_gave_up": false,
     "extraction_version": 13,
     "cancels": [],
-    "revoked": false
+    "revoked": false,
+    "own_id": "琼航警153/26"
   }
 }
