@@ -13707,6 +13707,8 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-08T14:46:32+00:00",
-    "revoked": false
+    "revoked": false,
+    "own_id": "沪航警610/26",
+    "cancels": []
   }
 }
