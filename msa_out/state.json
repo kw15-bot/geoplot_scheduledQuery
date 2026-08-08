@@ -13679,6 +13679,20 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-08T12:17:39+00:00",
+    "revoked": false,
+    "own_id": "渝航警387/26",
+    "cancels": []
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/07255c6c31ce4d51b884384de8069be5.html": {
+    "title": "水下检验—冀航警515/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/07255c6c31ce4d51b884384de8069be5.html?hav=1jWj6r2hy3yfaOKQ2GkMMAyIlF",
+    "date": "2026-08-08",
+    "bureau": "河北海事局",
+    "military": false,
+    "points": [],
+    "groups": [],
+    "detail_fetched": false,
+    "first_seen": "2026-08-08T13:18:08+00:00",
     "revoked": false
   }
 }
