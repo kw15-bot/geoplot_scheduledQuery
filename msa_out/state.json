@@ -13595,6 +13595,20 @@
     "groups": [],
     "detail_fetched": false,
     "first_seen": "2026-08-08T02:33:26+00:00",
+    "revoked": false,
+    "own_id": "粤航警544/26",
+    "cancels": []
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/49a594d1356e498bb8baba4e5b18ad8c.html": {
+    "title": "关于实施防范13号台风“白海豚”临时交通管制的航行警告—安海航警29/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/49a594d1356e498bb8baba4e5b18ad8c.html?hav=1jWj6r2hy3yfaOKPwy0lIswpUH",
+    "date": "2026-08-08",
+    "bureau": "长江海事局",
+    "military": false,
+    "points": [],
+    "groups": [],
+    "detail_fetched": false,
+    "first_seen": "2026-08-08T03:56:06+00:00",
     "revoked": false
   }
 }
