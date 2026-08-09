@@ -4687,11 +4687,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/56e36902aae9430eb6a5ba5d511d7e85.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-08-09",
     "detail_fetched": false,
     "first_seen": "2026-08-09T14:49:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": null,
     "points": [],
     "revoked": false,
     "title": "关于防范台风“白海豚”的航行通告",
@@ -13942,6 +13944,18 @@
     "revoked": false,
     "title": "1月29日半潜驳船“汉拿山”拖带作业—苏航警7/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fdf379f561094a16a148b44ac8ce8e1f.html?hav=1jWj6r2hxsLOaPDiqnXvBD6pxQ"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/feab9b77bcdf406eb3f85069bd9e5bba.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-09",
+    "detail_fetched": false,
+    "first_seen": "2026-08-09T15:17:30+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "撤销粤航警540/26—粤航警546/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/feab9b77bcdf406eb3f85069bd9e5bba.html?hav=1jWj6r2hy3yfaPnAatuw1SFY8O"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ff25784d665d4e9abfd836026e082891.html": {
     "bureau": "广东海事局",
