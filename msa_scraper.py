@@ -136,7 +136,22 @@ BUREAUS = [
 # list of points (e.g. "8月8日，以下四点连线海域内进行射击训练：（1）..."), not just
 # by "在.../将在.../拟在..." directly naming the area. Forces a retry of anything cached
 # with "validity": None purely because of that gap.
-DETAIL_EXTRACTION_VERSION = 13
+# v14: found via a --pages 10 deep re-scan + audit of the resulting logs (see
+# deep_scan_report.py). Three independent fixes, all narrow/additive:
+#   - DDM_HYPHEN coordinates (e.g. "38-42.80N") now also accept a prime-symbol-turned-
+#     apostrophe between the minutes value and the hemisphere letter (e.g. "38-42.80'N",
+#     from source text using "38-42.80′N") -- previously only the plain "°...'" DDM
+#     format accepted that apostrophe, not the hyphen-separated one.
+#   - The daily time-range clause ("每天HHMM时至HHMM时") now also accepts the "至"
+#     being altogether missing (a real typo seen in at least one bureau's text, e.g.
+#     "每天0800时1900时" instead of "每天0800时至1900时").
+#   - A bare date range with no time clause is now also accepted as a validity window
+#     when it's immediately preceded by a "活动时间："/"时间：" label, as used in the
+#     numbered-clause notice template some bureaus use (e.g. "一、活动时间： 2026年
+#     6月24日至7月8日。"), not just when immediately followed by 在/以下/如下 etc.
+# Bumping forces a one-time re-fetch of anything cached with a validity/coords gap
+# purely because of one of these three gaps.
+DETAIL_EXTRACTION_VERSION = 14
 
 # If an article's detail fetch keeps failing with a stale-access-token redirect (see
 # fetch()'s "想定外のURLへリダイレクトされました" check below), it usually means the
@@ -355,7 +370,7 @@ _pat("DMS", r"(\d{1,3})°\s*(\d{1,2})'\s*(\d{1,2}(?:\.\d+)?)\"?\s*([NSEW])", _b_
 _pat("DMS_PREFIX", r"([NSEW])\s*(\d{1,3})°\s*(\d{1,2})'\s*(\d{1,2}(?:\.\d+)?)\"?", _b_dms_prefix)
 _pat("DDM", r"(\d{1,3})°\s*(\d{1,2}(?:\.\d+)?)'?\s*([NSEW])", _b_ddm)
 _pat("DDM_PREFIX", r"([NSEW])\s*(\d{1,3})°\s*(\d{1,2}(?:\.\d+)?)'?", _b_ddm_prefix)
-_pat("DDM_HYPHEN", r"(?<!\d)(\d{1,3})-(\d{1,2}(?:\.\d+)?)\s*([NSEW])(?![A-Za-z])", _b_ddm)
+_pat("DDM_HYPHEN", r"(?<!\d)(\d{1,3})-(\d{1,2}(?:\.\d+)?)'?\s*([NSEW])(?![A-Za-z])", _b_ddm)
 _pat("DD", r"(?<!\d)(\d{1,3}(?:\.\d+)?)°?\s*([NSEW])(?![A-Za-z])", _b_dd)
 _pat("DD_PREFIX", r"(?<![A-Za-z0-9])([NSEW])\s*(\d{1,3}(?:\.\d+)?)°?\b", _b_dd_prefix)
 _pat("ICAO", r"\b([A-Z]{4})\b", _b_icao)
@@ -495,7 +510,7 @@ _DATEPART_RE = re.compile(
     r"(?:至\s*(?:(\d{4})年)?(?:(\d{1,2})月)?(\d{1,2})日)?"
 )
 _TIMEPART_RE = re.compile(
-    r"^\s*[，,]?\s*(?:每天|每日)?\s*(\d{1,2}[:：]\d{2}|\d{1,4})时?(?:(\d{1,2})分)?\s*[至\-－]\s*" + _TIME_TOK_END
+    r"^\s*[，,]?\s*(?:每天|每日)?\s*(\d{1,2}[:：]\d{2}|\d{1,4})时?(?:(\d{1,2})分)?\s*(?:[至\-－]\s*)?" + _TIME_TOK_END
 )
 _LISTDATE_RE = re.compile(r"(\d{1,2})月(\d{1,2})日|(\d{1,2})日")
 
@@ -570,13 +585,21 @@ def extract_validity_periods(text):
             # 在37-46.86N ...", meaning "for these entire days" (interpreted as CST
             # 0000 on the start day through 2400 on the end day). Only accept this as a
             # validity window -- rather than some unrelated date mention elsewhere in
-            # the text -- when it's immediately followed by the warning's action clause.
-            # This is almost always "在..." or "将/拟在...", introducing the affected
-            # area directly, but it's sometimes instead "以下/如下...", introducing an
-            # itemized list of points (e.g. "8月8日，以下四点连线海域内进行射击训练：
-            # （1）21-24.3N ...").
+            # the text -- when either:
+            #  (a) it's immediately followed by the warning's action clause -- almost
+            #      always "在..." or "将/拟在...", introducing the affected area
+            #      directly, but sometimes instead "以下/如下...", introducing an
+            #      itemized list of points (e.g. "8月8日，以下四点连线海域内进行射击
+            #      训练：（1）21-24.3N ..."); or
+            #  (b) it's immediately preceded by a "活动时间："/"时间：" label, as used
+            #      in the numbered-clause notice template some bureaus use (e.g.
+            #      "一、活动时间： 2026年6月24日至7月8日。" -- here the actual action
+            #      clause is elsewhere in the document, e.g. under a later "二、活动
+            #      水域：" heading, not right after the date).
             tail = rest.lstrip("，,、 ")
-            if not re.match(r"(?:将|拟|将于)?(?:在|以下|如下)", tail):
+            before = text[max(0, dp_start - 20):dp_start]
+            has_label_before = re.search(r"(?:活动)?时间[:：]\s*$", before)
+            if not (re.match(r"(?:将|拟|将于)?(?:在|以下|如下)", tail) or has_label_before):
                 continue  # not adjacent to the action clause -- skip, as before
             h1 = mi1 = 0
             h2, mi2 = 24, 0
@@ -1153,7 +1176,16 @@ def run_once(args, keywords):
     bureaus = [b for b in BUREAUS if not wanted_ids or b["id"] in wanted_ids]
 
     is_first_run = not os.path.exists(state_path)
-    page_count = args.first_run_pages if is_first_run else args.pages
+    if args.pages is not None:
+        # User explicitly passed --pages (e.g. a one-off deep re-scan) -- this always
+        # wins, first run or not. Previously this branch didn't exist and a first run
+        # (no state.json yet) would silently ignore an explicit --pages in favor of
+        # --first-run-pages, which was surprising (see HANDOFF.md).
+        page_count = args.pages
+    elif is_first_run:
+        page_count = args.first_run_pages
+    else:
+        page_count = 1
     page_count = max(1, page_count)
 
     session = requests.Session()
@@ -1162,7 +1194,11 @@ def run_once(args, keywords):
     new_military = 0
     ts = datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds")
 
-    page_note = f"（初回実行のため各局{page_count}ページ目まで遡って取得）" if is_first_run and page_count > 1 else ""
+    if page_count > 1:
+        reason = "初回実行のため" if is_first_run else "--pages指定のため"
+        page_note = f"（{reason}各局{page_count}ページ目まで遡って取得）"
+    else:
+        page_note = ""
     print(f"[{ts}] 巡回開始: {len(bureaus)}局{page_note}")
     bureau_fail_count = 0
     cert_fail_count = 0
@@ -1375,7 +1411,9 @@ def main():
     ap.add_argument("--keywords-file", default="", help="キーワード一覧テキストファイル（1行1語、省略で既定値を使用）")
     ap.add_argument("--delay", type=float, default=1.5, help="リクエスト間隔（秒）既定1.5秒。短くしすぎないこと")
     ap.add_argument("--max-detail-per-run", type=int, default=200, help="1回の実行で本文取得する上限件数（大きめが安全。小さくすると後ろの局が後回しになりがち）")
-    ap.add_argument("--pages", type=int, default=1, help="通常実行時に各海事局の一覧を何ページ読むか（既定1ページ）")
+    ap.add_argument("--pages", type=int, default=None,
+                     help="各海事局の一覧を何ページ読むか（既定は未指定=初回実行なら--first-run-pages、"
+                          "2回目以降は1ページ。明示的に指定すると初回/2回目以降を問わずそちらを優先）")
     ap.add_argument("--first-run-pages", type=int, default=3, help="state.jsonがまだ無い初回実行時に各海事局の一覧を何ページ読むか（既定3ページ。多めに遡って取りこぼしを減らす）")
     ap.add_argument("--insecure", action="store_true",
                      help="SSL証明書検証を無効化する（診断用）。ウイルス対策ソフトや企業プロキシによる"
@@ -1416,4 +1454,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-  
