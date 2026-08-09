@@ -1031,13 +1031,28 @@ def save_state(path, state):
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     tmp = path + ".tmp"
     with open(tmp, "w", encoding="utf-8") as f:
-        json.dump(state, f, ensure_ascii=False, indent=2)
+        # sort_keys=True matters here beyond just readability: without it, dict
+        # insertion order means every newly-discovered article gets appended at the
+        # very end of the file. Two runs that each add a *different* new article then
+        # both edit the same trailing lines (right before the closing brace), which
+        # git sees as a real conflict even though the additions never actually
+        # overlapped -- this is what caused the "CONFLICT (content): Merge conflict in
+        # msa_out/state.json" failures in the GitHub Actions workflow. Sorting by key
+        # (article URL) spreads new entries out across the file by where their key
+        # falls alphabetically, so two runs adding different articles usually touch
+        # different lines and rebase/merge cleanly.
+        json.dump(state, f, ensure_ascii=False, indent=2, sort_keys=True)
     os.replace(tmp, path)
 
 
 def build_geojson(state):
     features = []
-    for key, item in state.items():
+    # Sorted (by URL key), not raw dict-insertion order, for the same reason
+    # save_state() now uses sort_keys=True: a stable, content-independent ordering
+    # means two runs adding different new articles touch different parts of the file
+    # instead of both appending at the very end, which avoids spurious git merge
+    # conflicts on military.geojson (see save_state()'s comment for the full story).
+    for key, item in sorted(state.items()):
         if not item.get("military"):
             continue
         groups = item.get("groups") or []
