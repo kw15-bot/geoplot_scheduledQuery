@@ -1684,6 +1684,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "军事训练—琼航警155/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8e504b7444be4bf4a6e22debafd44570.html?hav=1jWj6r2hy3yfgFKeDzZTGLWyoK",
+        "date": "2026-08-10",
+        "bureau": "海南海事局",
+        "group_count": 1,
+        "raw_text": "南海，自8月12日0600时至8月14日1830时，在18-51.87N/110-30.65E、18-51.87N/110-36.35E、18-46.47N/110-36.35E和18-46.47N/110-30.65E四点连线水域范围内进行军事训练，禁止驶入。",
+        "valid_start": "2026-08-11T22:00:00+00:00",
+        "valid_end": "2026-08-14T10:30:00+00:00",
+        "valid_raw": [
+          "8月12日0600时至8月14日1830时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.51083333333334,
+              18.8645
+            ],
+            [
+              110.60583333333334,
+              18.8645
+            ],
+            [
+              110.60583333333334,
+              18.7745
+            ],
+            [
+              110.51083333333334,
+              18.7745
+            ],
+            [
+              110.51083333333334,
+              18.8645
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "军事任务—冀航警481/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/90de7334335745b8a7abea12e8a480b2.html?hav=1jWj6r2hy2JdKA8edzNpcbxNix",
         "date": "2026-07-27",
