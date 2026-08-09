@@ -13818,5 +13818,17 @@
     "cancels": [],
     "revoked": false,
     "own_id": "琼航警153/26"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/598b84b9c422495c82ac41026d6e7f2b.html": {
+    "title": "营口港设置14座临时虚拟AIS航标—辽航警340/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/598b84b9c422495c82ac41026d6e7f2b.html?hav=1jWj6r2hy3yfaPnAQOtNzfvXPs",
+    "date": "2026-08-09",
+    "bureau": "辽宁海事局",
+    "military": false,
+    "points": [],
+    "groups": [],
+    "detail_fetched": false,
+    "first_seen": "2026-08-09T02:16:30+00:00",
+    "revoked": false
   }
 }
