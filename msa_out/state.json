@@ -13947,11 +13947,15 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/feab9b77bcdf406eb3f85069bd9e5bba.html": {
     "bureau": "广东海事局",
+    "cancels": [
+      "粤航警540/26"
+    ],
     "date": "2026-08-09",
     "detail_fetched": false,
     "first_seen": "2026-08-09T15:17:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警546/26",
     "points": [],
     "revoked": false,
     "title": "撤销粤航警540/26—粤航警546/26",
@@ -13967,7 +13971,10 @@
     "military": false,
     "own_id": "粤航警540/26",
     "points": [],
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "粤航警546/26"
+    ],
     "title": "防范13号台风“白海豚”交通管制—粤航警540/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ff25784d665d4e9abfd836026e082891.html?hav=1jWj6r2hy3yfaLOupo7FpEL5T7"
   },
