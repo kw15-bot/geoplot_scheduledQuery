@@ -875,6 +875,18 @@
       "start": "2026-08-02T08:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0b8eab160e444d2196b09c38b225b1c3.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-10",
+    "detail_fetched": false,
+    "first_seen": "2026-08-10T03:56:34+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "渔船集中出港作业—浙航警709/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0b8eab160e444d2196b09c38b225b1c3.html?hav=1jWj6r2hy3yfgFKeJJazzdw5WW"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0bd4e66937ab42ebbc43bde716910a68.html": {
     "bureau": "天津海事局",
     "cancels": [],
@@ -1014,6 +1026,18 @@
     "revoked": false,
     "title": "水下检验—冀航警514/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0f4a3e87605e4fbf9ea4ec0624420350.html?hav=1jWj6r2hy3yfaMrfOSZl0yRvPU"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0fa7bcc34b7043988ff9636b9e26a26c.html": {
+    "bureau": "河北海事局",
+    "date": "2026-08-10",
+    "detail_fetched": false,
+    "first_seen": "2026-08-10T03:56:34+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "潜水作业—冀航警516/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0fa7bcc34b7043988ff9636b9e26a26c.html?hav=1jWj6r2hy3yfgFKeJKsvI9aJpY"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1021f06cb17c484d9023728cb4b4752d.html": {
     "bureau": "浙江海事局",
@@ -2981,11 +3005,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3a3855fdf3744be3b7559f5280716942.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-10",
     "detail_fetched": false,
     "first_seen": "2026-08-10T01:50:55+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警639/26",
     "points": [],
     "revoked": false,
     "title": "试航作业-SKIPANES—鲁航警639/26",
@@ -5959,6 +5985,7 @@
       ]
     ],
     "military": true,
+    "own_id": "粤航警547/26",
     "points": [
       {
         "end": 59,
@@ -9556,6 +9583,18 @@
       "start": "2026-07-28T04:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ab90bcfba2b348f7b5c9e4160fb06293.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-10",
+    "detail_fetched": false,
+    "first_seen": "2026-08-10T03:56:34+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "科学考察活动—粤航警548/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ab90bcfba2b348f7b5c9e4160fb06293.html?hav=1jWj6r2hy3yfgFKeJJazlYnxkm"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/abf1cc97cbea417e8c0dec2952879118.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -9639,6 +9678,18 @@
     "revoked": false,
     "title": "张家港福南水道ZF-01、ZF-11、ZF-12系船浮筒更换工程航行警告—苏航警9/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ad55805d801f4efd883f5114b45cdc6c.html?hav=1jWj6r2hxsLOgHghll0nTnfU5S"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/adee7914521447d89c005f2b1f1da8f4.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-10",
+    "detail_fetched": false,
+    "first_seen": "2026-08-10T03:56:34+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“华泉”轮拖带“南海五号”—粤航警549/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/adee7914521447d89c005f2b1f1da8f4.html?hav=1jWj6r2hy3yfgFKeJKsvICzVBx"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ae2fdbba55774a7fb72862054b23e319.html": {
     "bureau": "上海海事局",
@@ -11653,6 +11704,18 @@
     "title": "撤销粤航警461/26—粤航警523/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d06502ad11924a97a180bc2d72cdeb9a.html?hav=1jWj6r2hy2JdQ44OCrSwjpO8qm"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d080453dfbf3484b8c59bc8a6069d0eb.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-10",
+    "detail_fetched": false,
+    "first_seen": "2026-08-10T03:56:34+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航标动态-新设1座灯桩、4座灯浮标—鲁航警640/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d080453dfbf3484b8c59bc8a6069d0eb.html?hav=1jWj6r2hy3yfgFKeJJazzbfIkU"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d08623446cb244669c2d5e551e89af3f.html": {
     "bureau": "天津海事局",
     "cancels": [],
@@ -13452,6 +13515,18 @@
     "title": "拖带船队—沪航警575/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f068e05e03dd4b5c80c374f9cdb25882.html?hav=1jWj6r2hy2JdK7D9c5e3cJhGL9"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f270f89d19cc4f83aefe634831088467.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-10",
+    "detail_fetched": false,
+    "first_seen": "2026-08-10T03:56:34+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "船舶试航——SEATRADE NEDERLAND—鲁航警641/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f270f89d19cc4f83aefe634831088467.html?hav=1jWj6r2hy3yfgFKeJKsv8pf0jf"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f34432a2ff714bfbae0cc5f9643f719c.html": {
     "bureau": "长江海事局",
     "cancels": [],
@@ -13933,6 +14008,18 @@
     "revoked": false,
     "title": "6月8日“惠生浮式燃气发电装置”长江拖带作业—苏航警33/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f9d91a8bbe75449abf8978a01d40055b.html?hav=1jWj6r2hy0eafl5wD1bFkmACO4"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fa599b603a814185acaa593d8fd5e804.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-10",
+    "detail_fetched": false,
+    "first_seen": "2026-08-10T03:56:34+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“海洋石油684”轮拖带“南海六号”—粤航警550/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fa599b603a814185acaa593d8fd5e804.html?hav=1jWj6r2hy3yfgFKeJKsvMkZa9g"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fa6b53c7922c42c8b528e1ccae63659a.html": {
     "bureau": "福建海事局",
