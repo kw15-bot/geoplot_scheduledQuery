@@ -2085,6 +2085,18 @@
     "title": "中华人民共和国重庆海事局航行警告—渝航警379/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/222bdcd13bcd4111846c2e5d324397e2.html?hav=1jWj6r2hy3yfaE5A8BBBhpyvo0"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/224e7f7833794f65bc8c80370d61dfc9.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-10",
+    "detail_fetched": false,
+    "first_seen": "2026-08-10T11:15:53+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "岱油1号灯浮漂失—浙航警711/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/224e7f7833794f65bc8c80370d61dfc9.html?hav=1jWj6r2hy3yfgFKeJTuPxu47K3"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2257afa9eb0445b693d3ed1246167674.html": {
     "bureau": "广西海事局",
     "cancels": [],
@@ -3956,11 +3968,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4c395a1eb14b4f71b69213af0bcf04e6.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-08-10",
     "detail_fetched": false,
     "first_seen": "2026-08-10T09:59:16+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警522/26",
     "points": [],
     "revoked": false,
     "title": "扫海测量—冀航警522/26",
@@ -6925,6 +6939,7 @@
       ]
     ],
     "military": true,
+    "own_id": "琼航警156/26",
     "points": [
       {
         "end": 56,
@@ -10163,6 +10178,18 @@
     "title": "南海LW3-1-12井钻井作业—粤航警524/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b30102f2919c4a15b86edc2eb59f2fa4.html?hav=1jWj6r2hy2JdQ44OCrSwjpO8uv"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b36238c0df7748888662c8c605006031.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-10",
+    "detail_fetched": false,
+    "first_seen": "2026-08-10T11:15:53+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "HUANG ZE SHAN 1 AIS航标暂停工作—浙航警715/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b36238c0df7748888662c8c605006031.html?hav=1jWj6r2hy3yfgFKeJTuPxvCVm6"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b3b3510396d54d5fa7560d6ea80cac1c.html": {
     "bureau": "辽宁海事局",
     "cancels": [],
@@ -10428,6 +10455,18 @@
     "revoked": false,
     "title": "拖带作业—津航警219/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bbc5774a54114f77ac96d6302a79d30a.html?hav=1jWj6r2hy2JdE5xfLWl5jRONqn"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bc431b8bf5e149cc80d2b1e224e7004e.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-10",
+    "detail_fetched": false,
+    "first_seen": "2026-08-10T11:15:53+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "秀山岛东灯浮熄灭—浙航警714/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bc431b8bf5e149cc80d2b1e224e7004e.html?hav=1jWj6r2hy3yfgFKeJTuPxvCVhx"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bcada9fd2f5045d4964e26dd0e77d469.html": {
     "bureau": "天津海事局",
@@ -11919,11 +11958,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d2b813050a0c4852bc3fb685bda5d475.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-08-10",
     "detail_fetched": false,
     "first_seen": "2026-08-10T09:59:16+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警520/26",
     "points": [],
     "revoked": false,
     "title": "泊位水下检测—冀航警520/26",
@@ -12029,11 +12070,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d5a7725e1e9b4f00af4c73f8518551b4.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-08-10",
     "detail_fetched": false,
     "first_seen": "2026-08-10T09:59:16+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警521/26",
     "points": [],
     "revoked": false,
     "title": "扫测作业—冀航警521/26",
@@ -12052,6 +12095,18 @@
     "revoked": false,
     "title": "水下检验—冀航警509/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d6c386e170f148fdbd4b25834c5bb8d0.html?hav=1jWj6r2hy3yfaLOuplXP0FrGzb"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d6c42c2b213d4bb7b93051aa8930b1d6.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-10",
+    "detail_fetched": false,
+    "first_seen": "2026-08-10T11:15:53+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "大西寨2号灯浮漂失—浙航警712/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d6c42c2b213d4bb7b93051aa8930b1d6.html?hav=1jWj6r2hy3yfgFKeJTuPxu47O8"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d6cada1eaa1b4f1091fe8912af222264.html": {
     "bureau": "海南海事局",
@@ -12509,11 +12564,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dcfcf93e3c224afda566ede84a30e036.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-10",
     "detail_fetched": false,
     "first_seen": "2026-08-10T09:59:16+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警710/26",
     "points": [],
     "revoked": false,
     "title": "航标动态--温州水域3座航标漂移—浙航警710/26",
@@ -14134,6 +14191,18 @@
     "title": "装载大件船舶—沪航警594/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f63e2a7f92c2435f8e7bcd2ccb114496.html?hav=1jWj6r2hy2JdQ44O7TZdxg733g"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f64ddd59feff41e2b3ba205d0fd4c06b.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-10",
+    "detail_fetched": false,
+    "first_seen": "2026-08-10T11:15:53+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "蛇移门1号灯浮熄灭—浙航警713/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f64ddd59feff41e2b3ba205d0fd4c06b.html?hav=1jWj6r2hy3yfgFKeJTuPxu47SL"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f654e2f7196944b9814d062f34907009.html": {
     "bureau": "广西海事局",
     "cancels": [],
@@ -14357,6 +14426,18 @@
     "revoked": false,
     "title": "LNG船舶—沪航警570/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fb42c7484a1f4319a0a9abc7c85c66ec.html?hav=1jWj6r2hy2JdK1M9NjHBgXr5yi"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fb56418ba447411c98dc7f4698842110.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-10",
+    "detail_fetched": false,
+    "first_seen": "2026-08-10T11:15:53+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "香炉花瓶沉1号灯浮熄灭—浙航警716/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fb56418ba447411c98dc7f4698842110.html?hav=1jWj6r2hy3yfgFKeJTuPxvCVqG"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fc1e2e4696884eb5abd2fa326ce9abe7.html": {
     "bureau": "天津海事局",
