@@ -7958,11 +7958,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7e1e6387352648738fbd0c23f74a260a.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-11",
     "detail_fetched": false,
     "first_seen": "2026-08-11T11:28:47+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警721/26",
     "points": [],
     "revoked": false,
     "title": "航标动态—N3号灯浮、温州港N7号灯浮恢复正常—浙航警721/26",
@@ -9789,11 +9791,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a598066bc0b5410f8a1326c574c66356.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-11",
     "detail_fetched": false,
     "first_seen": "2026-08-11T11:28:47+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警719/26",
     "points": [],
     "revoked": false,
     "title": "LNG船SM GOLDEN EAGLE轮进港—浙航警719/26",
@@ -10824,6 +10828,7 @@
       ]
     ],
     "military": true,
+    "own_id": "浙航警718/26",
     "points": [
       {
         "end": 42,
@@ -10923,11 +10928,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bc12b039070d4e24bc7d2c10d8e391a6.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-11",
     "detail_fetched": false,
     "first_seen": "2026-08-11T11:28:47+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警720/26",
     "points": [],
     "revoked": false,
     "title": "COLOMBIA PROSPERITY、SEA PEARL和UQAB轮航经虾峙门外深水航槽—浙航警720/26",
