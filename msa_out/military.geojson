@@ -469,6 +469,46 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "实弹射击—粤航警552/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/347e0cf88ae74b2c94376c684059c7cd.html?hav=1jWj6r2hy3yfgGnOmllXuADnd6",
+        "date": "2026-08-11",
+        "bureau": "广东海事局",
+        "group_count": 1,
+        "raw_text": "南海，8月12日和14日每天0800时至1700时，在以下四点连线海域内进行实弹射击： （1）21-47.00N 113-38.00E； （2）21-47.00N 113-41.00E； （3）21-44.00N 113-41.00E; （4）21-44.00N 113-38.00E。禁止驶入。",
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              113.63333333333334,
+              21.783333333333335
+            ],
+            [
+              113.68333333333334,
+              21.783333333333335
+            ],
+            [
+              113.68333333333334,
+              21.733333333333334
+            ],
+            [
+              113.63333333333334,
+              21.733333333333334
+            ],
+            [
+              113.63333333333334,
+              21.783333333333335
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "渤海军事演习—辽航警321/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/377cb5fa56114462b6da6bc743ac39c0.html?hav=1jWj6r2hy2JdK7D9c4M8FFKYsa",
         "date": "2026-07-25",
@@ -551,6 +591,46 @@
             [
               119.22888888888889,
               39.40972222222222
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "实弹射击—粤航警551/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3d37d1c7647d472bb80f631fb2c3cce3.html?hav=1jWj6r2hy3yfgGnOmkTcEAyYi0",
+        "date": "2026-08-11",
+        "bureau": "广东海事局",
+        "group_count": 1,
+        "raw_text": "南海，8月12日和14日，每天0800时至1800时，以下四点连线海域内进行实弹射击： （1）23-14-12N117-20-42E； （2）23-14-12N117-40-00E； （3）23-01-00N117-40-00E; （4）23-01-00N117-20-42E。禁止驶入。",
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              20.7,
+              14.2
+            ],
+            [
+              40.0,
+              14.2
+            ],
+            [
+              40.0,
+              1.0
+            ],
+            [
+              20.7,
+              1.0
+            ],
+            [
+              20.7,
+              14.2
             ]
           ]
         ]
