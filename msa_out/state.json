@@ -727,11 +727,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/08cd5dc3221d4a8ea59702dab0977008.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-08-11",
     "detail_fetched": false,
     "first_seen": "2026-08-11T10:37:20+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警614/26",
     "points": [],
     "revoked": false,
     "title": "灯浮移位—沪航警614/26",
@@ -4587,11 +4589,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/50c9c1098fde4880a583fe610322d3a0.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-08-11",
     "detail_fetched": false,
     "first_seen": "2026-08-11T10:37:20+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警613/26",
     "points": [],
     "revoked": false,
     "title": "LNG船舶—沪航警613/26",
@@ -7952,6 +7956,18 @@
       "start": "2026-08-04T00:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7e1e6387352648738fbd0c23f74a260a.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-11",
+    "detail_fetched": false,
+    "first_seen": "2026-08-11T11:28:47+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航标动态—N3号灯浮、温州港N7号灯浮恢复正常—浙航警721/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7e1e6387352648738fbd0c23f74a260a.html?hav=1jWj6r2hy3yfgGnOs4V8a4KEUT"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7e3ef4a402574608ba9256654376237f.html": {
     "bureau": "广西海事局",
     "cancels": [],
@@ -9771,6 +9787,18 @@
     "title": "防波堤及护岸维修作业—津航警236/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a4b24747580c49f2986ca12fd6266482.html?hav=1jWj6r2hy2JdK5kP3STU1kDekT"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a598066bc0b5410f8a1326c574c66356.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-11",
+    "detail_fetched": false,
+    "first_seen": "2026-08-11T11:28:47+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "LNG船SM GOLDEN EAGLE轮进港—浙航警719/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a598066bc0b5410f8a1326c574c66356.html?hav=1jWj6r2hy3yfgGnOs4V8VOnNkP"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5afb3602d93489bb42142c76e7cf9bc.html": {
     "bureau": "天津海事局",
     "cancels": [],
@@ -10742,6 +10770,115 @@
     "title": "“COSGRACE LAKE”轮试航—浙航警684/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b9fb03fb0a084fb3b80215ec086a34cf.html?hav=1jWj6r2hy2JdKBbPHu04D2szQe"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bae7d75fef224272a3fe5d89011427d9.html": {
+    "bureau": "浙江海事局",
+    "cancels": [],
+    "date": "2026-08-11",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 14,
+    "first_seen": "2026-08-11T11:28:47+00:00",
+    "groups": [
+      [
+        {
+          "end": 42,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.652,
+          "lon": 122.00866666666667,
+          "raw": "29-39.12N 122-00.52E",
+          "start": 22
+        },
+        {
+          "end": 65,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.6675,
+          "lon": 122.03916666666667,
+          "raw": "29-40.05N 122-02.35E",
+          "start": 45
+        },
+        {
+          "end": 88,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.447166666666668,
+          "lon": 122.24283333333334,
+          "raw": "29-26.83N 122-14.57E",
+          "start": 68
+        },
+        {
+          "end": 111,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.414166666666667,
+          "lon": 122.24466666666666,
+          "raw": "29-24.85N 122-14.68E",
+          "start": 91
+        },
+        {
+          "end": 134,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.387833333333333,
+          "lon": 122.17583333333333,
+          "raw": "29-23.27N 122-10.55E",
+          "start": 114
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 42,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.652,
+        "lon": 122.00866666666667,
+        "raw": "29-39.12N 122-00.52E",
+        "start": 22
+      },
+      {
+        "end": 65,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.6675,
+        "lon": 122.03916666666667,
+        "raw": "29-40.05N 122-02.35E",
+        "start": 45
+      },
+      {
+        "end": 88,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.447166666666668,
+        "lon": 122.24283333333334,
+        "raw": "29-26.83N 122-14.57E",
+        "start": 68
+      },
+      {
+        "end": 111,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.414166666666667,
+        "lon": 122.24466666666666,
+        "raw": "29-24.85N 122-14.68E",
+        "start": 91
+      },
+      {
+        "end": 134,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.387833333333333,
+        "lon": 122.17583333333333,
+        "raw": "29-23.27N 122-10.55E",
+        "start": 114
+      }
+    ],
+    "raw_text": "东海，8月13日0700时至1000时在1）29-39.12N 122-00.52E，2）29-40.05N 122-02.35E，3）29-26.83N 122-14.57E，4）29-24.85N 122-14.68E，5）29-23.27N 122-10.55E五点连线水域范围内进行军事演练活动。禁止驶入。",
+    "revoked": false,
+    "title": "军事演练—浙航警718/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bae7d75fef224272a3fe5d89011427d9.html?hav=1jWj6r2hy3yfgGnOs4V8VOnNgM",
+    "validity": {
+      "end": "2026-08-13T02:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月13日0700时至1000时"
+      ],
+      "start": "2026-08-12T23:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bb3a9e734b594ce6b4230c5099209b05.html": {
     "bureau": "天津海事局",
     "cancels": [],
@@ -10783,6 +10920,18 @@
     "revoked": false,
     "title": "拖带作业—津航警219/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bbc5774a54114f77ac96d6302a79d30a.html?hav=1jWj6r2hy2JdE5xfLWl5jRONqn"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bc12b039070d4e24bc7d2c10d8e391a6.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-11",
+    "detail_fetched": false,
+    "first_seen": "2026-08-11T11:28:47+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "COLOMBIA PROSPERITY、SEA PEARL和UQAB轮航经虾峙门外深水航槽—浙航警720/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bc12b039070d4e24bc7d2c10d8e391a6.html?hav=1jWj6r2hy3yfgGnOs4V8VOnNoX"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bc431b8bf5e149cc80d2b1e224e7004e.html": {
     "bureau": "浙江海事局",
@@ -13460,11 +13609,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e33adadf58894266bea25e68fa0dc00b.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-08-11",
     "detail_fetched": false,
     "first_seen": "2026-08-11T10:37:20+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警615/26",
     "points": [],
     "revoked": false,
     "title": "LNG船舶—沪航警615/26",
