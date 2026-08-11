@@ -9511,6 +9511,18 @@
     "title": "中华人民共和国重庆海事局航行警告—渝航警376/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9e71974f97804947a72ae3f3a1434c60.html?hav=1jWj6r2hy2JdKD49qQj0TlphYN"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9e922151546f447aa34e1d4155ac80ef.html": {
+    "bureau": "河北海事局",
+    "date": "2026-08-11",
+    "detail_fetched": false,
+    "first_seen": "2026-08-11T13:54:37+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警525/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9e922151546f447aa34e1d4155ac80ef.html?hav=1jWj6r2hy3yfgGnOxEDEoEXPTn"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a00d6c7306714eb6a7f0ffb3d463b3a5.html": {
     "bureau": "连云港海事局",
     "cancels": [],
@@ -10773,6 +10785,18 @@
     "revoked": false,
     "title": "“COSGRACE LAKE”轮试航—浙航警684/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b9fb03fb0a084fb3b80215ec086a34cf.html?hav=1jWj6r2hy2JdKBbPHu04D2szQe"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ba08d4e63cb14216b3a21a13f434d326.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-11",
+    "detail_fetched": false,
+    "first_seen": "2026-08-11T13:54:37+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—粤航警555/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ba08d4e63cb14216b3a21a13f434d326.html?hav=1jWj6r2hy3yfgGnOxEDEennjfD"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bae7d75fef224272a3fe5d89011427d9.html": {
     "bureau": "浙江海事局",
@@ -12109,6 +12133,99 @@
     "revoked": false,
     "title": "拖带作业—闽航警112/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cbfd84eccea5445fab7ca4b7414b0936.html?hav=1jWj6r2hy0earrzAPsZUY34Tzi"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cc2d6488306041ebac932e9398225252.html": {
+    "bureau": "广东海事局",
+    "cancels": [],
+    "date": "2026-08-11",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 14,
+    "first_seen": "2026-08-11T13:54:37+00:00",
+    "groups": [
+      [
+        {
+          "end": 60,
+          "fmt": "DDM_HYPHEN",
+          "lat": 22.8055,
+          "lon": 115.923,
+          "raw": "22-48.33N 115-55.38E",
+          "start": 40
+        },
+        {
+          "end": 85,
+          "fmt": "DDM_HYPHEN",
+          "lat": 22.849666666666668,
+          "lon": 116.06033333333333,
+          "raw": "22-50.98N 116-03.62E",
+          "start": 65
+        },
+        {
+          "end": 110,
+          "fmt": "DDM_HYPHEN",
+          "lat": 22.748833333333334,
+          "lon": 116.0595,
+          "raw": "22-44.93N 116-03.57E",
+          "start": 90
+        },
+        {
+          "end": 135,
+          "fmt": "DDM_HYPHEN",
+          "lat": 22.730833333333333,
+          "lon": 115.91733333333333,
+          "raw": "22-43.85N 115-55.04E",
+          "start": 115
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 60,
+        "fmt": "DDM_HYPHEN",
+        "lat": 22.8055,
+        "lon": 115.923,
+        "raw": "22-48.33N 115-55.38E",
+        "start": 40
+      },
+      {
+        "end": 85,
+        "fmt": "DDM_HYPHEN",
+        "lat": 22.849666666666668,
+        "lon": 116.06033333333333,
+        "raw": "22-50.98N 116-03.62E",
+        "start": 65
+      },
+      {
+        "end": 110,
+        "fmt": "DDM_HYPHEN",
+        "lat": 22.748833333333334,
+        "lon": 116.0595,
+        "raw": "22-44.93N 116-03.57E",
+        "start": 90
+      },
+      {
+        "end": 135,
+        "fmt": "DDM_HYPHEN",
+        "lat": 22.730833333333333,
+        "lon": 115.91733333333333,
+        "raw": "22-43.85N 115-55.04E",
+        "start": 115
+      }
+    ],
+    "raw_text": "南海，8月12日0500时至1800时，以下四点连线海域内进行实弹射击： （1）22-48.33N 115-55.38E; （2）22-50.98N 116-03.62E; （3）22-44.93N 116-03.57E; （4）22-43.85N 115-55.04E。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—粤航警556/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cc2d6488306041ebac932e9398225252.html?hav=1jWj6r2hy3yfgGnOxEDEjZ0YwG",
+    "validity": {
+      "end": "2026-08-12T10:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月12日0500时至1800时"
+      ],
+      "start": "2026-08-11T21:00:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cc837b6469474c4bbe550d78d0d12766.html": {
     "bureau": "海南海事局",
