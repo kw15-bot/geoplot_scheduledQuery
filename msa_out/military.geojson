@@ -1944,6 +1944,53 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "温州瓯飞滩以东水域军事训练—浙航警724/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9908f97c33d549ed8f7ac87fef687ae5.html?hav=1jWj6r2hy3yfgIG9QbE4T8JySr",
+        "date": "2026-08-12",
+        "bureau": "浙江海事局",
+        "group_count": 1,
+        "raw_text": "东海，8月18日1330时至1530时、8月19日1430时至1630时、8月20日0900时至1630时，在27-48.00N 120-51.00E、27-48.00N 120-58.00E、27-44.00N 120-54.00E、27-44.00N 120-47.00E诸点连线范围内水域开展军事训练，禁止驶入。",
+        "valid_start": "2026-08-18T05:30:00+00:00",
+        "valid_end": "2026-08-20T08:30:00+00:00",
+        "valid_raw": [
+          "8月18日1330时至1530时",
+          "8月19日1430时至1630时",
+          "8月20日0900时至1630时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.85,
+              27.8
+            ],
+            [
+              120.96666666666667,
+              27.8
+            ],
+            [
+              120.9,
+              27.733333333333334
+            ],
+            [
+              120.78333333333333,
+              27.733333333333334
+            ],
+            [
+              120.85,
+              27.8
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "舟山中块岛水域军事活动—浙航警674/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/99fffeafe30d4b7d90a6d34d09e7c740.html?hav=1jWj6r2hy2JdKA8ejGpUqil4p4",
         "date": "2026-07-27",
