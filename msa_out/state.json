@@ -2549,11 +2549,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2abd8b83d24744459989f0d3084c1c15.html": {
     "bureau": "海南海事局",
+    "cancels": [],
     "date": "2026-08-14",
     "detail_fetched": false,
     "first_seen": "2026-08-13T22:11:24+00:00",
     "groups": [],
     "military": false,
+    "own_id": "琼航警161/26",
     "points": [],
     "revoked": false,
     "title": "人员落水—琼航警161/26",
