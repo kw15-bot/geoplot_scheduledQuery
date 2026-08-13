@@ -4641,6 +4641,18 @@
     "title": "南海科学考察活动—粤航警516/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/500b2208874742ba87ff362c7ecc8734.html?hav=1jWj6r2hy2JdQ44OCot5bxABEa"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5027e5be44b94c2bbb6a075569861645.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-13",
+    "detail_fetched": false,
+    "first_seen": "2026-08-13T02:02:24+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "帆船训练—粤航警558/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5027e5be44b94c2bbb6a075569861645.html?hav=1jWj6r2hy3yfgJittvf39kpoOr"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5060344a8e674db59a2512eed60b5e06.html": {
     "bureau": "长江海事局",
     "cancels": [],
@@ -10123,6 +10135,99 @@
     "title": "LNG加注作业—沪航警593/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a40a620c41b849ddafc1f510e947241c.html?hav=1jWj6r2hy2JdQ2bdeFaIttYEGP"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a40f297b22134e1b9ea7527f2ff8708d.html": {
+    "bureau": "海南海事局",
+    "cancels": [],
+    "date": "2026-08-13",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 14,
+    "first_seen": "2026-08-13T02:02:24+00:00",
+    "groups": [
+      [
+        {
+          "end": 71,
+          "fmt": "DDM_HYPHEN",
+          "lat": 19.785166666666665,
+          "lon": 111.136,
+          "raw": "19-47.11N 111-08.16E",
+          "start": 51
+        },
+        {
+          "end": 92,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.031666666666666,
+          "lon": 111.04166666666667,
+          "raw": "20-01.90N 111-02.50E",
+          "start": 72
+        },
+        {
+          "end": 113,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.012833333333333,
+          "lon": 110.9355,
+          "raw": "20-00.77N 110-56.13E",
+          "start": 93
+        },
+        {
+          "end": 134,
+          "fmt": "DDM_HYPHEN",
+          "lat": 19.66,
+          "lon": 111.06216666666667,
+          "raw": "19-39.60N 111-03.73E",
+          "start": 114
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 71,
+        "fmt": "DDM_HYPHEN",
+        "lat": 19.785166666666665,
+        "lon": 111.136,
+        "raw": "19-47.11N 111-08.16E",
+        "start": 51
+      },
+      {
+        "end": 92,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.031666666666666,
+        "lon": 111.04166666666667,
+        "raw": "20-01.90N 111-02.50E",
+        "start": 72
+      },
+      {
+        "end": 113,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.012833333333333,
+        "lon": 110.9355,
+        "raw": "20-00.77N 110-56.13E",
+        "start": 93
+      },
+      {
+        "end": 134,
+        "fmt": "DDM_HYPHEN",
+        "lat": 19.66,
+        "lon": 111.06216666666667,
+        "raw": "19-39.60N 111-03.73E",
+        "start": 114
+      }
+    ],
+    "raw_text": "南海，8月13日0900时至1200时、14日1000时至1130时、15日0900时至1200时，在19-47.11N 111-08.16E、20-01.90N 111-02.50E、20-00.77N 110-56.13E和19-39.60N 111-03.73E四点连线水域范围内进行军事训练，禁止驶入。",
+    "revoked": false,
+    "title": "军事训练—琼航警159/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a40f297b22134e1b9ea7527f2ff8708d.html?hav=1jWj6r2hy3yfgJittvf3EXB240",
+    "validity": {
+      "end": "2026-08-13T04:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月13日0900时至1200时"
+      ],
+      "start": "2026-08-13T01:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a4746a6e43ae42b88ae7d06cabd43fa8.html": {
     "bureau": "深圳海事局",
     "cancels": [],
@@ -14890,6 +14995,18 @@
     "revoked": false,
     "title": "拖带作业—沪航警617/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f1deba41a49f47e2af7113d1dddff7cd.html?hav=1jWj6r2hy3yfgIG9QgNme6QfhO"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f2399da94c1244f68dc6f6909527a803.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-13",
+    "detail_fetched": false,
+    "first_seen": "2026-08-13T02:02:24+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "南海开渔—粤航警559/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f2399da94c1244f68dc6f6909527a803.html?hav=1jWj6r2hy3yfgJittwwygMkYvi"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f270f89d19cc4f83aefe634831088467.html": {
     "bureau": "山东海事局",
