@@ -1489,11 +1489,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1942165beb1e41759f1b42f3b71d9e36.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-08-13",
     "detail_fetched": false,
     "first_seen": "2026-08-13T04:19:57+00:00",
     "groups": [],
     "military": false,
+    "own_id": "芜航警29/26",
     "points": [],
     "revoked": false,
     "title": "芜湖海事局关于实施防范13号台风“白海豚”临时交通管制的警告—芜航警29/26",
@@ -1718,6 +1720,18 @@
     "revoked": false,
     "title": "吊装作业—津航警253/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f54725033cb45bfaa7718eb52b3bafd.html?hav=1jWj6r2hy3yfaMrfOSZkwMKGMS"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1fa94d1f50894dc2b916b75e896510ca.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-13",
+    "detail_fetched": false,
+    "first_seen": "2026-08-13T05:53:09+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "海上拖带作业—粤航警561/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1fa94d1f50894dc2b916b75e896510ca.html?hav=1jWj6r2hy3yfgJitz7x0R0viwU"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1fb2fc581f4845698ed8ebcc76c3ca60.html": {
     "bureau": "辽宁海事局",
@@ -6451,6 +6465,18 @@
     "title": "关于“永恒2”载运船舶成品分段由慈湖河口至湖北武汉青山船厂的航行警告—芜航警23/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6838b5f0562f46879ae0fc426159d3c1.html?hav=1jWj6r2hy2JdE7QPosTzrnnmBW"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/684b924705ce4512a354a235238a4695.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-13",
+    "detail_fetched": false,
+    "first_seen": "2026-08-13T05:53:09+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "海上拖带作业—粤航警560/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/684b924705ce4512a354a235238a4695.html?hav=1jWj6r2hy3yfgJitz7x0QznKgr"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6896bfa64b504844b82385ebd8f4155d.html": {
     "bureau": "河北海事局",
     "cancels": [],
@@ -9414,11 +9440,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/96481f50aaa344a7b810e01c905efb91.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-08-13",
     "detail_fetched": false,
     "first_seen": "2026-08-13T04:19:57+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警526/26",
     "points": [],
     "revoked": false,
     "title": "超大型船舶（YUAN GU HAI）进港—冀航警526/26",
