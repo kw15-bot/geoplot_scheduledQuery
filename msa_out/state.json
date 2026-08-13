@@ -1487,6 +1487,18 @@
     "title": "“MSC JULIE”轮试航—浙航警687/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/18606327312742eeb4414109e852a945.html?hav=1jWj6r2hy2JdKD49qTIrbRZJJK"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1942165beb1e41759f1b42f3b71d9e36.html": {
+    "bureau": "长江海事局",
+    "date": "2026-08-13",
+    "detail_fetched": false,
+    "first_seen": "2026-08-13T04:19:57+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "芜湖海事局关于实施防范13号台风“白海豚”临时交通管制的警告—芜航警29/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1942165beb1e41759f1b42f3b71d9e36.html?hav=1jWj6r2hy3yfgJitz5N9JENk3w"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/19a0bd7180a54b0b8268dcc26d6ef393.html": {
     "bureau": "广西海事局",
     "cancels": [],
@@ -4643,11 +4655,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5027e5be44b94c2bbb6a075569861645.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-08-13",
     "detail_fetched": false,
     "first_seen": "2026-08-13T02:02:24+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警558/26",
     "points": [],
     "revoked": false,
     "title": "帆船训练—粤航警558/26",
@@ -9398,6 +9412,18 @@
     "title": "拖带作业—粤航警554/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/95c8435c0ad14408b28985bd218f9439.html?hav=1jWj6r2hy3yfgGnOs1vHX1qgMd"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/96481f50aaa344a7b810e01c905efb91.html": {
+    "bureau": "河北海事局",
+    "date": "2026-08-13",
+    "detail_fetched": false,
+    "first_seen": "2026-08-13T04:19:57+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "超大型船舶（YUAN GU HAI）进港—冀航警526/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/96481f50aaa344a7b810e01c905efb91.html?hav=1jWj6r2hy3yfgJitz6f4puq4o9"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9683606c8e2447d2ac2ce3f48cd97b20.html": {
     "bureau": "广西海事局",
     "cancels": [],
@@ -10181,6 +10207,7 @@
       ]
     ],
     "military": true,
+    "own_id": "琼航警159/26",
     "points": [
       {
         "end": 71,
@@ -14998,11 +15025,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f2399da94c1244f68dc6f6909527a803.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-08-13",
     "detail_fetched": false,
     "first_seen": "2026-08-13T02:02:24+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警559/26",
     "points": [],
     "revoked": false,
     "title": "南海开渔—粤航警559/26",
