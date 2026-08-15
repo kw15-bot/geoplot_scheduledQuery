@@ -1,0 +1,40 @@
+name: MSA scrape
+
+on:
+  # GitHubの schedule トリガーは廃止。GitHub Actions側のcronはbest-effort（努力目標）で
+  # 不安定なことが分かったため、外部の無料cronサービス(cron-job.org)からこの
+  # workflow_dispatch APIエンドポイントを30分おきに叩く運用に一本化した(詳細はHANDOFF.md)。
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: msa-scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      # 以前あった「前回の本実行から25分未満ならスキップ」ガードは撤廃。cron-job.org側の
+      # 30分間隔そのものが実質的な下限間隔になっているため、ワークフロー側で重ねて
+      # 制限する必要がなくなった(詳細はHANDOFF.md)。
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run scraper
+        run: python msa_scraper.py --once
+
+      - name: Commit updated geojson/state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          python commit_state.py --out-dir msa_out --branch main
