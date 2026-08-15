@@ -1582,11 +1582,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/145a262b8a414269b6485a40e552dc44.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-15",
     "detail_fetched": false,
     "first_seen": "2026-08-15T01:23:10+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警654/26",
     "points": [],
     "revoked": false,
     "title": "科学考察—鲁航警654/26",
@@ -5395,11 +5397,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4ef8d8ee60d3483fb9718497c37b75c8.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-08-15",
     "detail_fetched": false,
     "first_seen": "2026-08-15T01:23:10+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警534/26",
     "points": [],
     "revoked": false,
     "title": "拖带“海洋石油947”—冀航警534/26",
@@ -5768,11 +5772,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5246551cc4c54a4c92ad2fcaf86bf341.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-08-15",
     "detail_fetched": false,
     "first_seen": "2026-08-15T01:23:10+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警630/26",
     "points": [],
     "revoked": false,
     "title": "灯浮移位—沪航警630/26",
@@ -7008,6 +7014,99 @@
     "revoked": false,
     "title": "试航—冀航警504/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/64b9c84daf64478aa16afa04b8bd10ed.html?hav=1jWj6r2hy3yfaJwAByeixMUlgu"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/64eee861cd4f4bdaab528f36b23fbb19.html": {
+    "bureau": "广东海事局",
+    "cancels": [],
+    "date": "2026-08-15",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 15,
+    "first_seen": "2026-08-15T02:31:55+00:00",
+    "groups": [
+      [
+        {
+          "end": 66,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.3,
+          "lon": 112.88333333333334,
+          "raw": "20-18.0N 112-53.0E",
+          "start": 48
+        },
+        {
+          "end": 89,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.3,
+          "lon": 113.09666666666666,
+          "raw": "20-18.0N 113-05.8E",
+          "start": 71
+        },
+        {
+          "end": 112,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.1,
+          "lon": 113.09666666666666,
+          "raw": "20-06.0N 113-05.8E",
+          "start": 94
+        },
+        {
+          "end": 135,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.1,
+          "lon": 112.88333333333334,
+          "raw": "20-06.0N 112-53.0E",
+          "start": 117
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 66,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.3,
+        "lon": 112.88333333333334,
+        "raw": "20-18.0N 112-53.0E",
+        "start": 48
+      },
+      {
+        "end": 89,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.3,
+        "lon": 113.09666666666666,
+        "raw": "20-18.0N 113-05.8E",
+        "start": 71
+      },
+      {
+        "end": 112,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.1,
+        "lon": 113.09666666666666,
+        "raw": "20-06.0N 113-05.8E",
+        "start": 94
+      },
+      {
+        "end": 135,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.1,
+        "lon": 112.88333333333334,
+        "raw": "20-06.0N 112-53.0E",
+        "start": 117
+      }
+    ],
+    "raw_text": "南海，8月16日至17日，每日0000时至1200时，在以下四点连线海域内进行军事训练： （1）20-18.0N，112-53.0E； （2）20-18.0N，113-05.8E; （3）20-06.0N，113-05.8E； （4）20-06.0N，112-53.0E。 禁止驶入。",
+    "revoked": false,
+    "title": "军事训练—粤航警573/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/64eee861cd4f4bdaab528f36b23fbb19.html?hav=1jWj6r2hy3yfgMeP6GYaJRV3Fg",
+    "validity": {
+      "end": "2026-08-17T04:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月16日至17日，每日0000时至1200时"
+      ],
+      "start": "2026-08-15T16:00:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/64fad88cb4ab4b08a233aacaee496443.html": {
     "bureau": "长江海事局",
@@ -10197,11 +10296,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8f01cf4dff434a5a824e02d1e3e664e5.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-15",
     "detail_fetched": false,
     "first_seen": "2026-08-15T01:23:10+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警655/26",
     "points": [],
     "revoked": false,
     "title": "招商试012轮试航—鲁航警655/26",
@@ -12042,11 +12143,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/aff07bf46ec34e2eb54ca8af391be954.html": {
     "bureau": "福建海事局",
+    "cancels": [],
     "date": "2026-08-15",
     "detail_fetched": false,
     "first_seen": "2026-08-15T01:23:10+00:00",
     "groups": [],
     "military": false,
+    "own_id": "闽航警140/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—闽航警140/26",

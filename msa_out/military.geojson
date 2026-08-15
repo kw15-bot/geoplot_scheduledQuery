@@ -1424,6 +1424,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "军事训练—粤航警573/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/64eee861cd4f4bdaab528f36b23fbb19.html?hav=1jWj6r2hy3yfgMeP6GYaJRV3Fg",
+        "date": "2026-08-15",
+        "bureau": "广东海事局",
+        "group_count": 1,
+        "raw_text": "南海，8月16日至17日，每日0000时至1200时，在以下四点连线海域内进行军事训练： （1）20-18.0N，112-53.0E； （2）20-18.0N，113-05.8E; （3）20-06.0N，113-05.8E； （4）20-06.0N，112-53.0E。 禁止驶入。",
+        "valid_start": "2026-08-15T16:00:00+00:00",
+        "valid_end": "2026-08-17T04:00:00+00:00",
+        "valid_raw": [
+          "8月16日至17日，每日0000时至1200时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              112.88333333333334,
+              20.3
+            ],
+            [
+              113.09666666666666,
+              20.3
+            ],
+            [
+              113.09666666666666,
+              20.1
+            ],
+            [
+              112.88333333333334,
+              20.1
+            ],
+            [
+              112.88333333333334,
+              20.3
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "军事训练—琼航警145/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6721553d80bb407d960067352c2400e4.html?hav=1jWj6r2hy3yfaJwAHMY2GLYyUz",
         "date": "2026-08-05",
