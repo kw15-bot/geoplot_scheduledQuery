@@ -1,1 +1,0 @@
-# geoplot_scheduledQuery
