@@ -151,7 +151,20 @@ BUREAUS = [
 #     6月24日至7月8日。"), not just when immediately followed by 在/以下/如下 etc.
 # Bumping forces a one-time re-fetch of anything cached with a validity/coords gap
 # purely because of one of these three gaps.
-DETAIL_EXTRACTION_VERSION = 14
+# v15: two more fixes found via real-world notices (粤航警551/26, 粤航警552/26):
+#   - New DMS_HYPHEN coordinate pattern for degrees-minutes-seconds all hyphen-separated
+#     with no space before the hemisphere letter or the next coordinate (e.g.
+#     "23-14-12N117-20-42E"). Previously this silently fell through to DDM_HYPHEN
+#     partially matching starting at the *minutes* segment (e.g. "14-12N" inside
+#     "23-14-12N"), dropping the leading degrees and producing a wildly wrong position
+#     (551 ended up plotted in South Sudan instead of the South China Sea).
+#   - The date-list clause in _DATEPART_RE now also accepts "和"/"及"/"以及" ("and") as
+#     a separator between listed dates, not just "、"/","/"，" (e.g. "8月12日和14日，
+#     每天0800时至1800时"). Previously this failed to match at all, leaving the whole
+#     validity window undetected ("期間不明").
+# Bumping forces a one-time re-fetch of anything cached with a coords/validity gap
+# purely because of one of these two gaps.
+DETAIL_EXTRACTION_VERSION = 15
 
 # If an article's detail fetch keeps failing with a stale-access-token redirect (see
 # fetch()'s "想定外のURLへリダイレクトされました" check below), it usually means the
