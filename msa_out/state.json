@@ -4494,11 +4494,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/463fedff55ce42dbbf8f3c6a124d2165.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-08-16",
     "detail_fetched": false,
     "first_seen": "2026-08-15T18:20:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警636/26",
     "points": [],
     "revoked": false,
     "title": "人员落水—沪航警636/26",
