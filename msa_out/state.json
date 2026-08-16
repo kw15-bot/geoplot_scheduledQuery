@@ -4480,11 +4480,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/46341872258c4a9590a7ebeea7dd581b.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-16",
     "detail_fetched": false,
     "first_seen": "2026-08-16T02:20:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警742/26",
     "points": [],
     "revoked": false,
     "title": "航标动态-大门大桥3号灯浮漂移—浙航警742/26",
