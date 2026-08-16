@@ -877,11 +877,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/07a096dfa7584d74930a2ba677fd7014.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-08-16",
     "detail_fetched": false,
     "first_seen": "2026-08-16T14:50:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警640/26",
     "points": [],
     "revoked": false,
     "title": "灯浮移位—沪航警640/26",
