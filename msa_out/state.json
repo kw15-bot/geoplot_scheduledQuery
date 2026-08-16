@@ -875,6 +875,18 @@
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/075ae0a93ed14191a95dd68e2cf31ef4.html?hav=1jWj6r2hy2JdE5xfGHtHFnlDlg",
     "validity": null
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/07a096dfa7584d74930a2ba677fd7014.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-16",
+    "detail_fetched": false,
+    "first_seen": "2026-08-16T14:50:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "灯浮移位—沪航警640/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/07a096dfa7584d74930a2ba677fd7014.html?hav=1jWj6r2hy3yfgO79kDkgPGWQtS"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/07ab47ff47b843e3939eb90f11f25867.html": {
     "bureau": "山东海事局",
     "cancels": [],
