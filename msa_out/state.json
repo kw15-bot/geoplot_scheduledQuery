@@ -9386,11 +9386,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7e045ce96d484527b1261c1288164340.html": {
     "bureau": "江苏海事局",
+    "cancels": [],
     "date": "2026-08-16",
     "detail_fetched": false,
     "first_seen": "2026-08-16T04:00:42+00:00",
     "groups": [],
     "military": false,
+    "own_id": "苏航警51/26",
     "points": [],
     "revoked": false,
     "title": "8月17日半潜驳船“汉拿山”拖带作业—苏航警51/26",
