@@ -378,11 +378,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0320a279f03a4c59a2cd4a1b89e4087b.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-16",
     "detail_fetched": false,
     "first_seen": "2026-08-16T08:50:26+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警743/26",
     "points": [],
     "revoked": false,
     "title": "“宏祥26”轮试航—浙航警743/26",
