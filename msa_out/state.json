@@ -8201,11 +8201,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/69e95db390d54cdfa8e9e2ecdedacefb.html": {
     "bureau": "福建海事局",
+    "cancels": [],
     "date": "2026-08-17",
     "detail_fetched": false,
     "first_seen": "2026-08-17T08:20:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "闽航警141/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—闽航警141/26",
@@ -12452,6 +12454,7 @@
       ]
     ],
     "military": true,
+    "own_id": "辽航警345/26",
     "points": [
       {
         "end": 50,
