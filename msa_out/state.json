@@ -17162,11 +17162,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e9c33606c9154a82a728440252f87239.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-17",
     "detail_fetched": false,
     "first_seen": "2026-08-17T07:50:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警659/26",
     "points": [],
     "revoked": false,
     "title": "寰宇三号轮拖带三航工9轮—鲁航警659/26",
