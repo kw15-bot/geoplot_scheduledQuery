@@ -14896,6 +14896,99 @@
     "title": "黄海南部“昌裕3”轮试航—云航警104/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c5ac0702b6e3490c87877e0a60d28d51.html?hav=1jWj6r2hy2Jd7vvfeCjvH6WsI4"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c67266ef4d0340da8bdc1c73dd44d753.html": {
+    "bureau": "广东海事局",
+    "cancels": [],
+    "date": "2026-08-18",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 15,
+    "first_seen": "2026-08-17T23:20:31+00:00",
+    "groups": [
+      [
+        {
+          "end": 61,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.783333333333335,
+          "lon": 113.63333333333334,
+          "raw": "21-47.00N 113-38.00E",
+          "start": 41
+        },
+        {
+          "end": 86,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.783333333333335,
+          "lon": 113.68333333333334,
+          "raw": "21-47.00N 113-41.00E",
+          "start": 66
+        },
+        {
+          "end": 111,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.733333333333334,
+          "lon": 113.68333333333334,
+          "raw": "21-44.00N 113-41.00E",
+          "start": 91
+        },
+        {
+          "end": 136,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.733333333333334,
+          "lon": 113.63333333333334,
+          "raw": "21-44.00N 113-38.00E",
+          "start": 116
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 61,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.783333333333335,
+        "lon": 113.63333333333334,
+        "raw": "21-47.00N 113-38.00E",
+        "start": 41
+      },
+      {
+        "end": 86,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.783333333333335,
+        "lon": 113.68333333333334,
+        "raw": "21-47.00N 113-41.00E",
+        "start": 66
+      },
+      {
+        "end": 111,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.733333333333334,
+        "lon": 113.68333333333334,
+        "raw": "21-44.00N 113-41.00E",
+        "start": 91
+      },
+      {
+        "end": 136,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.733333333333334,
+        "lon": 113.63333333333334,
+        "raw": "21-44.00N 113-38.00E",
+        "start": 116
+      }
+    ],
+    "raw_text": "南海，8月21日0700时至1500时，在以下四点连线海域内进行实弹射击： （1）21-47.00N 113-38.00E； （2）21-47.00N 113-41.00E； （3）21-44.00N 113-41.00E； （4）21-44.00N 113-38.00E。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—粤航警579/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c67266ef4d0340da8bdc1c73dd44d753.html?hav=1jWj6r2hy3yfgR2egrKiFmoyVk",
+    "validity": {
+      "end": "2026-08-21T07:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月21日0700时至1500时"
+      ],
+      "start": "2026-08-20T23:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c7058f1440444ed0ad9cbd1c49d88e89.html": {
     "bureau": "天津海事局",
     "cancels": [],
