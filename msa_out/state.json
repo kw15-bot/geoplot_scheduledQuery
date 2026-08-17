@@ -6513,6 +6513,18 @@
       "start": "2026-07-04T08:30:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/542ada4668b34768ba117d3ffcd677b4.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-18",
+    "detail_fetched": false,
+    "first_seen": "2026-08-17T18:10:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "人员落水—沪航警644/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/542ada4668b34768ba117d3ffcd677b4.html?hav=1jWj6r2hy3yfgR2egjb9U2AyIL"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/54ed131f59444dd2b6fd1b535c469c6e.html": {
     "bureau": "山东海事局",
     "cancels": [],
