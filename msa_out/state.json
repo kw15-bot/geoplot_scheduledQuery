@@ -8051,11 +8051,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/69b839d9037f4d9eac6f5d5b874c20ed.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-08-17",
     "detail_fetched": false,
     "first_seen": "2026-08-17T02:20:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警576/26",
     "points": [],
     "revoked": false,
     "title": "“海洋石油678”轮拖带“南海二号”—粤航警576/26",
