@@ -8199,6 +8199,18 @@
     "title": "水下检验—冀航警497/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/69e6510061324647bc98bd612d54a527.html?hav=1jWj6r2hy2JdQ44OCnbAEtvsAA"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/69e95db390d54cdfa8e9e2ecdedacefb.html": {
+    "bureau": "福建海事局",
+    "date": "2026-08-17",
+    "detail_fetched": false,
+    "first_seen": "2026-08-17T08:20:27+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—闽航警141/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/69e95db390d54cdfa8e9e2ecdedacefb.html?hav=1jWj6r2hy3yfgPZuDYBfObQSAS"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6a14aa5228c4492cbdf7368effb8ad3d.html": {
     "bureau": "长江海事局",
     "cancels": [],
@@ -12393,6 +12405,99 @@
     "revoked": false,
     "title": "“南海救113””轮拖带“领航者”轮—琼航警122/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5be06294ca247259ff60b453b5cfff5.html?hav=1jWj6r2hy2Jd81mfsXorphBy8X"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5cf58bba0004d1380b920251befd368.html": {
+    "bureau": "辽宁海事局",
+    "cancels": [],
+    "date": "2026-08-17",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 15,
+    "first_seen": "2026-08-17T08:20:27+00:00",
+    "groups": [
+      [
+        {
+          "end": 50,
+          "fmt": "DDM_HYPHEN",
+          "lat": 40.49166666666667,
+          "lon": 121.95,
+          "raw": "40-29.50N 121-57.00E",
+          "start": 30
+        },
+        {
+          "end": 71,
+          "fmt": "DDM_HYPHEN",
+          "lat": 40.49166666666667,
+          "lon": 122.05,
+          "raw": "40-29.50N 122-03.00E",
+          "start": 51
+        },
+        {
+          "end": 92,
+          "fmt": "DDM_HYPHEN",
+          "lat": 40.416666666666664,
+          "lon": 121.95,
+          "raw": "40-25.00N 121-57.00E",
+          "start": 72
+        },
+        {
+          "end": 113,
+          "fmt": "DDM_HYPHEN",
+          "lat": 40.416666666666664,
+          "lon": 122.05,
+          "raw": "40-25.00N 122-03.00E",
+          "start": 93
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 50,
+        "fmt": "DDM_HYPHEN",
+        "lat": 40.49166666666667,
+        "lon": 121.95,
+        "raw": "40-29.50N 121-57.00E",
+        "start": 30
+      },
+      {
+        "end": 71,
+        "fmt": "DDM_HYPHEN",
+        "lat": 40.49166666666667,
+        "lon": 122.05,
+        "raw": "40-29.50N 122-03.00E",
+        "start": 51
+      },
+      {
+        "end": 92,
+        "fmt": "DDM_HYPHEN",
+        "lat": 40.416666666666664,
+        "lon": 121.95,
+        "raw": "40-25.00N 121-57.00E",
+        "start": 72
+      },
+      {
+        "end": 113,
+        "fmt": "DDM_HYPHEN",
+        "lat": 40.416666666666664,
+        "lon": 122.05,
+        "raw": "40-25.00N 122-03.00E",
+        "start": 93
+      }
+    ],
+    "raw_text": "渤海北部，自8月19日0800时至8月21日1800时,在 40-29.50N 121-57.00E、40-29.50N 122-03.00E、40-25.00N 121-57.00E和40-25.00N 122-03.00E 诸点连线范围内进行军事演习。禁止驶入。",
+    "revoked": false,
+    "title": "军事任务—辽航警345/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5cf58bba0004d1380b920251befd368.html?hav=1jWj6r2hy3yfgPZuDZTaXibnZ2",
+    "validity": {
+      "end": "2026-08-21T10:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月19日0800时至8月21日1800时"
+      ],
+      "start": "2026-08-19T00:00:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a623cd355b334fe29389cc4755a1b758.html": {
     "bureau": "江苏海事局",
@@ -17172,7 +17277,7 @@
     "points": [],
     "revoked": false,
     "title": "寰宇三号轮拖带三航工9轮—鲁航警659/26",
-    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e9c33606c9154a82a728440252f87239.html?hav=1jWj6r2hy3yfgPZuDYBfAZhVp3"
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e9c33606c9154a82a728440252f87239.html?hav=1jWj6r2hy3yfgPZuDYBfObQSEa"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/eaff8204765b4d4ab9fda8912a96839f.html": {
     "bureau": "广东海事局",
