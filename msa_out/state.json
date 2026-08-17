@@ -3558,6 +3558,31 @@
     "title": "LNG加注作业—沪航警582/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3307827b451549c4b1ac75cbc329a672.html?hav=1jWj6r2hy2JdKA8ejI7QDlzNxd"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3341a7c7ac364608ba4062fc2f17dd92.html": {
+    "bureau": "长江海事局",
+    "cancels": [],
+    "date": "2026-08-17",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 15,
+    "first_seen": "2026-08-17T10:40:29+00:00",
+    "groups": [],
+    "military": true,
+    "points": [],
+    "raw_text": "各有关单位、船舶： 现将“长江-洞庭湖”应急综合演习临时交通管制事宜通告如下： 一、管制时间 2026年8月18日8时至10时。 二、管制水域 岳阳七里山斜坡码头（湘江航道里程约3.5公里）至浩吉铁路大桥（湘江航道里程约1.5公里）。 三、管制对象 拟航经管制水域的所有船舶。 四、有关要求 （一）上行船舶在芦席洲锚地及以下抛锚等候，不得驶过浩吉铁路大桥。 （二）受管制上行船舶听从“海巡12263”现场指挥，下行船舶听从“水政2号”现场指挥。 （三）演习结束后不再另行通告。 岳阳海事局 2026年8月18日",
+    "revoked": false,
+    "title": "岳阳海事局关于“长江-洞庭湖”应急综合演习临时交通管制的航行警告—岳航警12/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3341a7c7ac364608ba4062fc2f17dd92.html?hav=1jWj6r2hy3yfgPZuDc3RfM4cDO",
+    "validity": {
+      "end": "2026-08-18T02:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "2026年8月18日8时至10时"
+      ],
+      "start": "2026-08-18T00:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/33fc7788aede42f8a1ea24c39cc60ac0.html": {
     "bureau": "广西海事局",
     "cancels": [
