@@ -317,6 +317,99 @@
     "title": "水下探摸—冀航警467/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/00f38c4273b146be86a5668dc59d9b8c.html?hav=1jWj6r2hy2JdJztOp7OXXtczvE"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0191e9c019cc45d1b1fafef17955f39f.html": {
+    "bureau": "广东海事局",
+    "cancels": [],
+    "date": "2026-08-17",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 15,
+    "first_seen": "2026-08-17T03:50:29+00:00",
+    "groups": [
+      [
+        {
+          "end": 65,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.42,
+          "lon": 110.97166666666666,
+          "raw": "21-25.2N 110-58.3E",
+          "start": 47
+        },
+        {
+          "end": 88,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.355,
+          "lon": 110.985,
+          "raw": "21-21.3N 110-59.1E",
+          "start": 70
+        },
+        {
+          "end": 111,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.37,
+          "lon": 111.01333333333334,
+          "raw": "21-22.2N 111-00.8E",
+          "start": 93
+        },
+        {
+          "end": 134,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.423333333333332,
+          "lon": 110.97833333333334,
+          "raw": "21-25.4N 110-58.7E",
+          "start": 116
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 65,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.42,
+        "lon": 110.97166666666666,
+        "raw": "21-25.2N 110-58.3E",
+        "start": 47
+      },
+      {
+        "end": 88,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.355,
+        "lon": 110.985,
+        "raw": "21-21.3N 110-59.1E",
+        "start": 70
+      },
+      {
+        "end": 111,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.37,
+        "lon": 111.01333333333334,
+        "raw": "21-22.2N 111-00.8E",
+        "start": 93
+      },
+      {
+        "end": 134,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.423333333333332,
+        "lon": 110.97833333333334,
+        "raw": "21-25.4N 110-58.7E",
+        "start": 116
+      }
+    ],
+    "raw_text": "南海，8月17日至18日，每日1300时至1800时，以下四点连线海域内进行射击训练： （1）21-25.2N 110-58.3E； （2）21-21.3N 110-59.1E； （3）21-22.2N 111-00.8E； （4）21-25.4N 110-58.7E。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—粤航警577/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0191e9c019cc45d1b1fafef17955f39f.html?hav=1jWj6r2hy3yfgPZuDT1x4QCpUY",
+    "validity": {
+      "end": "2026-08-18T10:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月17日至18日，每日1300时至1800时"
+      ],
+      "start": "2026-08-17T05:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/01dd83179780408997f2739566cf2dd1.html": {
     "bureau": "江苏海事局",
     "cancels": [],
@@ -1177,6 +1270,18 @@
     "revoked": false,
     "title": "中华人民共和国重庆海事局航行警告—渝航警385/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0af6b71b140d4e79b39b712d47e10340.html?hav=1jWj6r2hy3yfaLOuptGxzzxQi9"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0b617506b38b4e9ba11c918d04958d51.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-17",
+    "detail_fetched": false,
+    "first_seen": "2026-08-17T03:50:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "鲁航警-水工作业-荣港拖11—鲁航警658/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0b617506b38b4e9ba11c918d04958d51.html?hav=1jWj6r2hy3yfgPZuDT1x8yvIqR"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0b82a023af8a422a943aa55c61bb2bac.html": {
     "bureau": "辽宁海事局",
@@ -2079,6 +2184,18 @@
     "revoked": false,
     "title": "吊装作业—深航警23/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1cd75998bc5a446bbee63de04704ae0a.html?hav=1jWj6r2hxu0R2cyxUOjpxURoph"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1dfba6505b0d42f28da41359b786780d.html": {
+    "bureau": "长江海事局",
+    "date": "2026-08-17",
+    "detail_fetched": false,
+    "first_seen": "2026-08-17T03:50:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "船舶试航—荆海航警6/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1dfba6505b0d42f28da41359b786780d.html?hav=1jWj6r2hy3yfgPZuDT1x4RLE99"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1e4fb324aeb647bd915d934ab6e31166.html": {
     "bureau": "山东海事局",

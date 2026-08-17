@@ -49,6 +49,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "实弹射击—粤航警577/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0191e9c019cc45d1b1fafef17955f39f.html?hav=1jWj6r2hy3yfgPZuDT1x4QCpUY",
+        "date": "2026-08-17",
+        "bureau": "广东海事局",
+        "group_count": 1,
+        "raw_text": "南海，8月17日至18日，每日1300时至1800时，以下四点连线海域内进行射击训练： （1）21-25.2N 110-58.3E； （2）21-21.3N 110-59.1E； （3）21-22.2N 111-00.8E； （4）21-25.4N 110-58.7E。禁止驶入。",
+        "valid_start": "2026-08-17T05:00:00+00:00",
+        "valid_end": "2026-08-18T10:00:00+00:00",
+        "valid_raw": [
+          "8月17日至18日，每日1300时至1800时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.97166666666666,
+              21.42
+            ],
+            [
+              110.985,
+              21.355
+            ],
+            [
+              111.01333333333334,
+              21.37
+            ],
+            [
+              110.97833333333334,
+              21.423333333333332
+            ],
+            [
+              110.97166666666666,
+              21.42
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "军事活动-大竹山岛—鲁航警649/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/03e83d70b34d4ad783b35ec8431ccaea.html?hav=1jWj6r2hy3yfgLBeXmPVhQZPYi",
         "date": "2026-08-14",
