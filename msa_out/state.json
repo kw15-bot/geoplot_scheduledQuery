@@ -1508,11 +1508,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0f0634d76d824cb3a7fcc0355f0127ad.html": {
     "bureau": "江苏海事局",
+    "cancels": [],
     "date": "2026-08-17",
     "detail_fetched": false,
     "first_seen": "2026-08-17T09:10:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "苏航警52/26",
     "points": [],
     "revoked": false,
     "title": "8月18日江苏扬子鑫福造船有限公司“鑫福145”拖带—苏航警52/26",
@@ -4164,6 +4166,18 @@
     "title": "拖带作业—桂航警148/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3a6e4cba91ea416297a2664888b94c0c.html?hav=1jWj6r2hy2JdDxBA05ePy5qsGC"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3ac8037b3634457fb9304adc6120acc2.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-17",
+    "detail_fetched": false,
+    "first_seen": "2026-08-17T09:20:28+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "扫测作业-宝翔22和恒星99—鲁航警662/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3ac8037b3634457fb9304adc6120acc2.html?hav=1jWj6r2hy3yfgPZuDalW8ohRUw"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3b9056114b0241889ae85c82cfd70776.html": {
     "bureau": "福建海事局",
     "cancels": [],
@@ -6093,11 +6107,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/51616c7fae89424385bfde9341db3e43.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-17",
     "detail_fetched": false,
     "first_seen": "2026-08-17T09:10:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警661/26",
     "points": [],
     "revoked": false,
     "title": "吊装作业—鲁航警661/26",
@@ -8073,6 +8089,18 @@
     "title": "关于“永恒2”载运船舶成品分段由慈湖河口至湖北武汉青山船厂的航行警告—芜航警23/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6838b5f0562f46879ae0fc426159d3c1.html?hav=1jWj6r2hy2JdE7QPosTzrnnmBW"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6845ba5b264f4f33ae226ee4c53d6e40.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-17",
+    "detail_fetched": false,
+    "first_seen": "2026-08-17T09:20:28+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业-北海救118拖带护卫平台—鲁航警664/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6845ba5b264f4f33ae226ee4c53d6e40.html?hav=1jWj6r2hy3yfgPZuDalW8ohRlZ"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/684b924705ce4512a354a235238a4695.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -9584,6 +9612,18 @@
     "title": "水下检验—冀航警494/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/79a17e65a5b4489799362ad6c5f12c10.html?hav=1jWj6r2hy2JdQ2bde5GshX9g2i"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/79bb8040e19342ff94641f31b939d7f4.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-17",
+    "detail_fetched": false,
+    "first_seen": "2026-08-17T09:20:28+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航标动态-瓯江35号灯浮、大门大桥3号灯浮恢复正常—浙航警748/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/79bb8040e19342ff94641f31b939d7f4.html?hav=1jWj6r2hy3yfgPZuDalW4IFlFk"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7a225076b28b4878af9c1860637c7a49.html": {
     "bureau": "深圳海事局",
     "cancels": [],
@@ -10146,6 +10186,18 @@
     "title": "撤销航警—沪航警637/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8018c869f4f245d190771e8b84a83417.html?hav=1jWj6r2hy3yfgO79esRENTbUfA",
     "validity": null
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/80abcae717494a47a2b6cd09ce25c0bf.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-17",
+    "detail_fetched": false,
+    "first_seen": "2026-08-17T09:20:28+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "海水样品采集-黄测1103—鲁航警663/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/80abcae717494a47a2b6cd09ce25c0bf.html?hav=1jWj6r2hy3yfgPZuDalW8ohRlQ"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/80b9ab2bd3884ebda9f8865b1841e608.html": {
     "bureau": "深圳海事局",
@@ -18344,6 +18396,18 @@
     "revoked": false,
     "title": "黄海南部“海泰158”轮试航—云航警116/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f8edef7775b84663bf43babcc2d13342.html?hav=1jWj6r2hy2JdK1M9NhzGEnxXud"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f946074792534a3bbea1f818422c8af5.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-17",
+    "detail_fetched": false,
+    "first_seen": "2026-08-17T09:20:28+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—粤航警578/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f946074792534a3bbea1f818422c8af5.html?hav=1jWj6r2hy3yfgPZuDalW4IFkzF"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f9d91a8bbe75449abf8978a01d40055b.html": {
     "bureau": "江苏海事局",
