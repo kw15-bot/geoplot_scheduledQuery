@@ -1230,6 +1230,18 @@
     "title": "岳阳海事局关于南阳洲横驶区调整实船试验的航行警告—岳航警10/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/096e9cafd3ab47ceb7ea801d4e28ccad.html?hav=1jWj6r2hy3yfgIG9QbE4OXKhwE"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/09e548261ad44064843cce335a9fa2b5.html": {
+    "bureau": "长江海事局",
+    "date": "2026-08-17",
+    "detail_fetched": false,
+    "first_seen": "2026-08-17T10:20:33+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "岳阳海事局关于“中国渔政36064”轮拖带作业的航行警告—岳航警11/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/09e548261ad44064843cce335a9fa2b5.html?hav=1jWj6r2hy3yfgPZuDc3Rajwx6J"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0a187d45d4b2477a980a566a344e8b4e.html": {
     "bureau": "河北海事局",
     "cancels": [],
@@ -3768,11 +3780,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3622eaa80ede44df9dfc178e6e56df88.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-17",
     "detail_fetched": false,
     "first_seen": "2026-08-17T10:10:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警749/26",
     "points": [],
     "revoked": false,
     "title": "“WAN HAI V01”轮试航—浙航警749/26",
@@ -17464,11 +17478,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e971333eee864e7689883373b960307f.html": {
     "bureau": "连云港海事局",
+    "cancels": [],
     "date": "2026-08-17",
     "detail_fetched": false,
     "first_seen": "2026-08-17T10:10:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "云航警130/26",
     "points": [],
     "revoked": false,
     "title": "黄海南部“ZHU CHENG 01”轮试航—云航警130/26",
