@@ -1,0 +1,2452 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>GEOPLOT MIL — 座標プロッター / 航行警告モニター</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<!-- PDF export feature: html2canvas rasterizes the map (and a hidden title/body text
+     block, to sidestep jsPDF's lack of built-in CJK font support -- see the PDF export
+     section further down) into images, jsPDF assembles them into a single-page PDF. -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<style>
+:root{
+  --bg:#f4f3f0;
+  --bg-deep:#e9e7e0;
+  --panel:#faf9f7;
+  --panel-alt:#f1efe9;
+  --panel-raised:#ffffff;
+  --grid:#e4e1d8;
+  --border:#ddd9d2;
+  --border-bright:#c7c2b5;
+  --text:#2b2a27;
+  --text-dim:#5c594e;
+  --text-faint:#948f80;
+  --phosphor:#268056;
+  --phosphor-dim:#6ba884;
+  --amber:#a8681c;
+  --amber-dim:#d4a15c;
+  --red:#c94444;
+  --cyan:#1f7a8c;
+  --gray:#8a8880;
+  --gray-fill:#6b6960;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --sans:'游明朝体','Yu Mincho','YuMincho','游明朝','Hiragino Mincho ProN','Noto Serif JP',serif;
+}
+*{box-sizing:border-box;}
+html,body{
+  margin:0;padding:0;height:100%;background:var(--bg-deep);color:var(--text);
+  font-family:var(--sans);
+  overflow:hidden;
+}
+body{
+  background-image:
+    radial-gradient(ellipse at 20% -10%, rgba(79,214,224,0.06), transparent 55%),
+    radial-gradient(ellipse at 100% 110%, rgba(255,180,84,0.05), transparent 50%);
+}
+::selection{background:var(--phosphor-dim);color:#fff;}
+::-webkit-scrollbar{width:9px;height:9px;}
+::-webkit-scrollbar-track{background:var(--panel);}
+::-webkit-scrollbar-thumb{background:var(--border-bright);border-radius:4px;}
+::-webkit-scrollbar-thumb:hover{background:var(--text-faint);}
+
+.app{
+  display:none;
+  grid-template-rows:52px 1fr;
+  height:100vh;
+  width:100vw;
+}
+.app.mode-auto{display:grid;grid-template-columns:380px 1fr;}
+.app.mode-manual{display:grid;grid-template-columns:380px 1fr;}
+@media (max-width:1100px){
+  .app.mode-auto,.app.mode-manual{grid-template-columns:1fr;}
+  .app{grid-template-rows:52px auto 46vh auto; overflow-y:auto; height:auto; min-height:100vh;}
+  html,body{overflow:auto;}
+  .map-wrap{height:46vh;min-height:320px;}
+}
+
+/* ---------- Header ---------- */
+.header{
+  grid-column:1/-1;
+  display:flex;align-items:center;gap:14px;
+  padding:0 18px;
+  background:linear-gradient(180deg,var(--panel-raised),var(--panel));
+  border-bottom:1px solid var(--border);
+  position:relative;z-index:20;
+}
+.brand{
+  font-family:var(--mono);font-weight:700;font-size:15px;letter-spacing:.14em;color:var(--text);
+  display:flex;align-items:center;gap:9px;
+}
+.brand .dot{width:8px;height:8px;border-radius:50%;background:var(--phosphor);box-shadow:0 0 8px var(--phosphor);}
+.brand small{font-family:var(--sans);font-weight:400;letter-spacing:0;color:var(--text-dim);font-size:11px;margin-left:4px;}
+.header-spacer{flex:1;}
+.notif-wrap{position:relative;}
+.notif-bell{
+  position:relative;background:transparent;border:1px solid transparent;border-radius:8px;
+  font-size:17px;line-height:1;padding:6px 9px;cursor:pointer;color:var(--text-dim);
+}
+.notif-bell:hover{background:var(--panel-alt);border-color:var(--border);}
+.notif-bell.has-new{color:var(--amber);animation:notif-ring 2.4s ease-in-out infinite;}
+@keyframes notif-ring{
+  0%,84%,100%{transform:rotate(0deg);}
+  86%{transform:rotate(-12deg);}
+  88%{transform:rotate(10deg);}
+  90%{transform:rotate(-8deg);}
+  92%{transform:rotate(5deg);}
+  94%{transform:rotate(0deg);}
+}
+.notif-badge{
+  position:absolute;top:1px;right:1px;min-width:16px;height:16px;padding:0 4px;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--red);color:#fff;font-family:var(--mono);font-size:10px;font-weight:700;
+  border-radius:9px;line-height:1;
+}
+.notif-panel{
+  display:none;position:absolute;top:calc(100% + 8px);right:0;width:320px;max-height:420px;
+  overflow-y:auto;background:var(--panel-raised);border:1px solid var(--border-bright);
+  border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,.45);z-index:50;
+}
+.notif-panel-head{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  padding:10px 12px;border-bottom:1px solid var(--border);
+  font-size:12px;color:var(--text-dim);position:sticky;top:0;background:var(--panel-raised);
+}
+.notif-item{
+  display:flex;align-items:flex-start;gap:8px;padding:10px 12px;
+  border-bottom:1px solid var(--border);cursor:pointer;
+}
+.notif-item:hover{background:var(--panel-alt);}
+.notif-item-main{flex:1;min-width:0;}
+.notif-item-title{font-size:12.5px;color:var(--text);word-break:break-word;}
+.notif-item-meta{font-size:10.5px;color:var(--text-faint);margin-top:3px;font-family:var(--mono);}
+.notif-item-dismiss{
+  background:transparent;border:none;color:var(--text-faint);cursor:pointer;font-size:12px;
+  padding:2px 4px;flex-shrink:0;
+}
+.notif-item-dismiss:hover{color:var(--red);}
+.notif-panel .empty-hint{padding:16px 12px;font-size:11.5px;}
+.status-pill{
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;
+  display:flex;align-items:center;gap:7px;
+  padding:5px 11px;border:1px solid var(--border);border-radius:20px;background:var(--panel-alt);
+  color:var(--text-dim);
+}
+.status-pill.live{color:var(--amber);border-color:var(--amber-dim);}
+.status-pill .blink{width:6px;height:6px;border-radius:50%;background:var(--text-faint);}
+.status-pill.live .blink{background:var(--amber);animation:blink 1.4s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.25;}}
+
+/* ---------- Panels ---------- */
+.panel{
+  background:var(--panel);
+  border-right:1px solid var(--border);
+  overflow-y:auto;
+  display:flex;flex-direction:column;
+  min-height:0;
+}
+.panel.right{border-right:none;border-left:1px solid var(--border);}
+.section{
+  border-bottom:1px solid var(--border);
+  padding:14px 16px;
+}
+.section:last-child{border-bottom:none;flex:1;}
+.section-title{
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--text-dim);
+  text-transform:uppercase;margin:0 0 10px;display:flex;align-items:center;justify-content:space-between;
+}
+.section-title .n{color:var(--phosphor);font-weight:600;}
+
+textarea, input[type=text]{
+  width:100%;background:var(--bg-deep);border:1px solid var(--border);border-radius:6px;
+  color:var(--text);font-family:var(--mono);font-size:12.5px;padding:9px 10px;resize:vertical;
+  outline:none;transition:border-color .15s;
+}
+textarea:focus, input[type=text]:focus{border-color:var(--cyan);}
+textarea::placeholder{color:var(--text-faint);}
+
+.btn{
+  font-family:var(--sans);font-size:12.5px;font-weight:600;letter-spacing:.02em;
+  border:1px solid var(--border-bright);background:var(--panel-alt);color:var(--text);
+  padding:8px 12px;border-radius:6px;cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:6px;
+}
+.btn:hover{background:var(--panel-raised);border-color:var(--cyan);color:var(--text);}
+.btn:active{transform:translateY(1px);}
+.btn.primary{background:var(--phosphor-dim);border-color:var(--phosphor);color:#0a2818;}
+.btn.primary:hover{background:#5a9670;}
+.btn.amber{background:var(--amber-dim);border-color:var(--amber);color:#3a2408;}
+.btn.amber:hover{background:#c28f4a;}
+.btn.ghost{background:transparent;}
+.btn.small{padding:5px 9px;font-size:11px;}
+.btn:disabled{opacity:.4;cursor:not-allowed;}
+.btn-row{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px;}
+
+/* PDF export entry points (results card + popups) share this red accent + icon. */
+.btn-pdf{color:var(--red);border-color:var(--red);}
+.btn-pdf:hover{color:var(--red);border-color:var(--red);background:rgba(201,68,68,.08);}
+.pdf-ico{display:inline-block;vertical-align:-2px;color:var(--red);}
+
+.legend{
+  font-family:var(--mono);font-size:10.5px;color:var(--text-faint);line-height:1.9;margin-top:8px;
+}
+.legend b{color:var(--text-dim);font-weight:600;}
+
+.check-row{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--text-dim);margin-top:8px;user-select:none;cursor:pointer;width:fit-content;}
+.check-row input{accent-color:var(--phosphor);}
+
+.coord-list{list-style:none;margin:0;padding:0;font-family:var(--mono);font-size:11.5px;}
+.coord-list li{
+  padding:7px 8px;border-bottom:1px solid var(--border);cursor:pointer;
+  display:flex;justify-content:space-between;gap:6px;color:var(--text-dim);
+}
+.coord-list li:hover{background:var(--panel-alt);color:var(--text);}
+.coord-list li .idx{color:var(--phosphor);min-width:18px;}
+.empty-hint{font-size:11.5px;color:var(--text-faint);line-height:1.7;padding:6px 2px;}
+
+.history-item{
+  display:flex;align-items:flex-start;gap:8px;padding:8px 0;border-bottom:1px solid var(--border);font-size:11.5px;
+  cursor:pointer;
+}
+.history-item:hover{background:var(--panel-alt);}
+.history-item input{margin-top:2px;accent-color:var(--phosphor);cursor:pointer;}
+.history-item .meta{color:var(--text-faint);font-family:var(--mono);font-size:10px;}
+.history-item .lbl{color:var(--text);}
+
+/* ---------- Map ---------- */
+.map-wrap{position:relative;min-height:0;z-index:1;}
+#map{position:absolute;inset:0;background:#e5e3df;}
+.leaflet-container{font-family:var(--sans);background:#e5e3df;}
+.readout{
+  position:absolute;left:12px;bottom:12px;z-index:500;
+  font-family:var(--mono);font-size:12px;background:rgba(255,255,255,.88);
+  border:1px solid var(--border-bright);border-radius:6px;padding:7px 12px;color:var(--cyan);
+  backdrop-filter:blur(3px);letter-spacing:.03em;
+}
+.map-toolbar{
+  position:absolute;top:12px;left:12px;z-index:500;display:flex;gap:6px;flex-wrap:wrap;max-width:calc(100% - 24px);
+}
+.map-toolbar .btn{background:rgba(255,255,255,.88);backdrop-filter:blur(3px);}
+.scale-note{position:absolute;right:12px;bottom:12px;z-index:500;font-family:var(--mono);font-size:10px;color:var(--text-faint);background:rgba(255,255,255,.8);padding:4px 8px;border-radius:5px;border:1px solid var(--border);}
+
+.measure-control a{
+  background:rgba(255,255,255,.88)!important;color:var(--text)!important;border-color:var(--border)!important;
+  width:30px;height:30px;line-height:30px;font-size:15px;display:block;text-align:center;text-decoration:none;
+}
+.measure-control a:hover{color:var(--cyan)!important;}
+.measure-control a.active{color:#fff!important;background:var(--cyan)!important;}
+.measure-panel{
+  display:none;position:absolute;left:12px;bottom:44px;z-index:500;
+  background:rgba(255,255,255,.92);border:1px solid var(--border-bright);border-radius:8px;
+  padding:10px 12px;max-width:280px;backdrop-filter:blur(3px);
+}
+.measure-panel.show{display:block;}
+.measure-stats{font-family:var(--mono);font-size:11.5px;color:var(--cyan);line-height:1.6;white-space:pre-line;}
+.measure-actions{display:flex;gap:8px;margin-top:8px;}
+.measure-actions button{padding:5px 9px;font-size:11px;}
+
+
+/* custom markers */
+.mk{border-radius:50%;border:2px solid #06110b;box-shadow:0 0 6px rgba(0,0,0,.6);}
+.mk-normal{background:var(--phosphor);}
+.mk-mil{background:var(--red);}
+.mk-archive{background:var(--gray);}
+.mk-label{
+  font-family:var(--mono);font-size:10px;color:var(--text);background:rgba(255,255,255,.88);
+  padding:1px 6px;border-radius:4px;border:1px solid var(--border-bright);white-space:nowrap;
+}
+.poly-label{
+  background:none!important;border:none!important;box-shadow:none!important;padding:0!important;margin:0!important;
+  color:#0a0a0a!important;font-family:var(--sans);font-size:11px;font-weight:700;
+  text-shadow:0 1px 2px rgba(255,255,255,.25);white-space:nowrap;pointer-events:none;
+}
+.poly-label::before{display:none!important;}
+.leaflet-popup-content-wrapper{background:var(--panel-raised);color:var(--text);border-radius:8px;border:1px solid var(--border-bright);}
+.leaflet-popup-tip{background:var(--panel-raised);}
+.leaflet-popup-content{font-family:var(--sans);font-size:12px;line-height:1.6;}
+.leaflet-popup-content a{color:var(--cyan);}
+.leaflet-popup-content button.pop-link{
+  background:none;border:none;padding:0;margin-left:12px;color:var(--cyan);
+  font-family:inherit;font-size:inherit;cursor:pointer;text-decoration:none;
+}
+.leaflet-popup-content button.pop-link:hover{text-decoration:underline;}
+.leaflet-popup-content button.pop-link.pdf-pop-link{
+  color:var(--red);display:inline-flex;align-items:center;gap:4px;
+}
+.leaflet-popup-content .pop-title{font-weight:600;color:var(--text);margin-bottom:3px;}
+.leaflet-popup-content .pop-mono{font-family:var(--mono);font-size:11px;color:var(--text-dim);}
+.leaflet-bar a{background:var(--panel-raised)!important;color:var(--text)!important;border-color:var(--border)!important;}
+.leaflet-bar a:hover{background:var(--panel-alt)!important;}
+
+/* ---------- MSA monitor panel ---------- */
+.bureau-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 10px;margin-top:4px;}
+.bureau-item{display:flex;align-items:center;gap:6px;font-size:11.5px;color:var(--text-dim);}
+.bureau-item input{accent-color:var(--amber);}
+.kw-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;}
+.tag{
+  font-family:var(--mono);font-size:10.5px;background:var(--panel-alt);border:1px solid var(--border);
+  color:var(--text-dim);padding:3px 7px;border-radius:12px;display:flex;align-items:center;gap:5px;
+}
+.tag button{background:none;border:none;color:var(--text-faint);cursor:pointer;font-size:11px;padding:0;line-height:1;}
+.tag button:hover{color:var(--red);}
+
+.warn-item{
+  border:1px solid var(--border);border-radius:8px;padding:9px 10px;margin-bottom:8px;background:var(--panel-alt);
+}
+.tab-row{display:flex;gap:6px;margin-bottom:10px;}
+.tab-btn{
+  flex:1;font-family:var(--sans);font-size:12px;font-weight:600;padding:7px 8px;border-radius:6px;
+  border:1px solid var(--border);background:var(--panel-alt);color:var(--text-dim);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:6px;transition:.15s;
+}
+.tab-btn:hover{border-color:var(--border-bright);color:var(--text);}
+.tab-btn.active{background:var(--phosphor-dim);border-color:var(--phosphor);color:#0a2818;}
+.tab-btn .tab-n{font-family:var(--mono);font-size:10.5px;opacity:.85;}
+.validity-badge{font-family:var(--mono);font-size:10px;margin-top:5px;padding:2px 7px;border-radius:4px;display:inline-block;}
+.validity-badge.active{background:rgba(74,222,143,.12);color:var(--phosphor);border:1px solid var(--phosphor-dim);}
+.validity-badge.notice{background:rgba(217,194,46,.18);color:#6b5f0a;border:1px solid #e0d15c;}
+.validity-badge.archive{background:rgba(108,133,152,.12);color:var(--text-faint);border:1px solid var(--border);}
+.validity-badge.unknown{background:rgba(255,180,84,.1);color:var(--amber);border:1px solid var(--amber-dim);}
+.warn-item.clickable{cursor:pointer;transition:border-color .15s,transform .1s;}
+.warn-item.clickable:hover{border-color:var(--cyan);}
+.warn-item.clickable:active{transform:scale(.99);}
+.warn-item.mil{border-color:var(--amber-dim);background:linear-gradient(180deg,rgba(255,180,84,.06),transparent);}
+.warn-item .wtitle{font-size:12px;font-weight:600;color:var(--text);line-height:1.4;}
+.warn-item.mil .wtitle{color:#8a4f0f;}
+.warn-item .wmeta{font-family:var(--mono);font-size:10px;color:var(--text-faint);margin-top:4px;display:flex;gap:10px;flex-wrap:wrap;}
+.warn-item .wtag{display:inline-block;background:var(--amber-dim);color:#4a2e08;font-family:var(--mono);font-size:9.5px;padding:1px 6px;border-radius:4px;margin-right:6px;}
+.warn-item .wactions{margin-top:7px;display:flex;gap:6px;flex-wrap:wrap;}
+.warn-item .coords-found{font-family:var(--mono);font-size:10px;color:var(--phosphor);margin-top:6px;}
+.warn-item .coords-none{font-family:var(--mono);font-size:10px;color:var(--text-faint);margin-top:6px;}
+
+/* ---------- PDF export (layout-adjust panel + off-screen print template) ---------- */
+.pdf-panel{
+  display:none;position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:600;
+  background:rgba(255,255,255,.97);border:1px solid var(--border-bright);border-radius:10px;
+  padding:12px 14px;width:min(560px, calc(100% - 24px));backdrop-filter:blur(3px);
+  box-shadow:0 6px 20px rgba(0,0,0,.18);
+}
+.pdf-panel.show{display:block;}
+.pdf-panel .pdf-panel-title{font-size:12.5px;font-weight:600;color:var(--text);margin-bottom:8px;line-height:1.4;}
+.pdf-panel textarea{
+  width:100%;min-height:44px;height:44px;resize:vertical;background:var(--panel-alt);border:1px solid var(--border);
+  border-radius:6px;color:var(--text);font-family:var(--sans);font-size:12px;line-height:1.7;padding:8px;
+  box-sizing:border-box;
+}
+.pdf-panel .pdf-panel-actions{display:flex;gap:8px;margin-top:10px;justify-content:flex-end;}
+
+/* Rendered off-screen (never visible to the person) purely so html2canvas can rasterize
+   the title+body text as an image -- jsPDF has no built-in CJK font, so text drawn with
+   doc.text() would render as blank boxes for Chinese/Japanese. Rasterizing via the
+   browser's own font rendering sidesteps that entirely. */
+#pdfPrintTemplate{
+  position:fixed;top:-9999px;left:-9999px;width:700px;background:#ffffff;
+  padding:26px 34px;font-family:var(--sans);box-sizing:border-box;
+}
+#pdfPrintTitle{font-size:21px;font-weight:700;color:#1a1a1a;text-align:center;margin-bottom:18px;line-height:1.5;}
+#pdfPrintBody{font-size:14px;line-height:2;color:#222;white-space:pre-wrap;word-break:break-word;}
+
+.log{
+  font-family:var(--mono);font-size:10.5px;color:var(--text-faint);
+  background:var(--bg-deep);border:1px solid var(--border);border-radius:6px;padding:8px 10px;
+  max-height:110px;overflow-y:auto;line-height:1.7;
+}
+.log .l-err{color:var(--red);}
+.log .l-ok{color:var(--phosphor);}
+.log .l-warn{color:var(--amber);}
+
+.fallback-box{margin-top:10px;border-top:1px dashed var(--border);padding-top:10px;}
+.fallback-box summary{cursor:pointer;font-size:11.5px;color:var(--text-dim);font-family:var(--mono);}
+.fallback-box summary:hover{color:var(--cyan);}
+
+.field-row{display:flex;align-items:center;gap:8px;margin-top:8px;}
+.field-row label{font-size:11.5px;color:var(--text-dim);white-space:nowrap;}
+select{
+  background:var(--bg-deep);color:var(--text);border:1px solid var(--border);border-radius:6px;
+  font-family:var(--mono);font-size:11.5px;padding:6px 8px;flex:1;
+}
+
+.mode-tabs{
+  display:flex;gap:2px;background:var(--panel-alt);border:1px solid var(--border);
+  border-radius:10px;padding:2px;
+}
+.mode-tab{
+  font-family:var(--mono);font-size:11.5px;color:var(--text-dim);background:transparent;border:none;
+  border-radius:8px;padding:7px 14px;cursor:pointer;transition:.12s;white-space:nowrap;
+}
+.mode-tab:hover{color:var(--text);background:var(--panel-raised);}
+.mode-tab.active{background:var(--phosphor);color:#fff;font-weight:700;}
+.app-version{
+  font-family:var(--mono);font-size:10px;color:var(--text-faint);margin-right:10px;
+  user-select:all; /* easy to select+copy when reporting a bug */
+}
+[data-mode-section]{display:none;}
+.app.mode-auto [data-mode-section="auto"]{display:block;}
+.app.mode-manual [data-mode-section="manual"]{display:block;}
+.app.mode-manual .panel[data-mode-section="manual"]{display:flex;} /* .panel uses flex column, not block */
+.app.mode-manual #rightPanel{display:none;}
+
+/* ---------- Dark mode ----------
+   Toggled by clicking the small dot left of the brand text (see the brandDot click
+   handler) -- not exposed anywhere else on purpose. Most of the UI already reads colors
+   through the --* variables below, so redefining them here on body.dark-mode is enough;
+   only elements with a hardcoded (non-variable) light color need an explicit override,
+   listed after the palette. #pdfPrintTemplate/#pdfPrintTitle/#pdfPrintBody are
+   deliberately NOT touched -- that's the off-screen template rasterized into the actual
+   PDF file, which should always look like a normal white printed page regardless of
+   which theme the on-screen UI happens to be in. */
+body.dark-mode{
+  --bg:#1a1918;
+  --bg-deep:#121110;
+  --panel:#201f1c;
+  --panel-alt:#262521;
+  --panel-raised:#2b2a26;
+  --grid:#302f29;
+  --border:#3a3833;
+  --border-bright:#4c4a42;
+  --text:#e9e6dd;
+  --text-dim:#b3afa0;
+  --text-faint:#7d7a6c;
+  --phosphor:#4fd18a;
+  --phosphor-dim:#7fc9a3;
+  --amber:#e3a75c;
+  --amber-dim:#c98f47;
+  --red:#e2635f;
+  --cyan:#5fd8e6;
+  --gray:#9a978c;
+  --gray-fill:#77746a;
+  background-image:
+    radial-gradient(ellipse at 20% -10%, rgba(79,214,224,0.05), transparent 55%),
+    radial-gradient(ellipse at 100% 110%, rgba(255,180,84,0.04), transparent 50%);
+}
+body.dark-mode #map,
+body.dark-mode .leaflet-container{background:#10151b;}
+/* Fakes a dark basemap out of the plain OSM tiles (no separate dark tile server) via the
+   classic invert+hue-rotate CSS trick: inverting flips light ocean/land to dark, and the
+   180deg hue-rotate afterward rotates each inverted hue back to roughly its original hue
+   family (inverted-then-rotated blue stays blue, green stays green, red/pink borders stay
+   red/pink) but at the new, much darker lightness invert() produced. */
+body.dark-mode .leaflet-tile-pane{filter:invert(100%) hue-rotate(180deg) brightness(100%) contrast(80%) saturate(40%);}
+body.dark-mode .readout{background:rgba(18,17,15,.85);}
+body.dark-mode .map-toolbar .btn{background:rgba(18,17,15,.8);}
+body.dark-mode .scale-note{background:rgba(18,17,15,.75);}
+body.dark-mode .measure-control a{background:rgba(18,17,15,.85)!important;}
+body.dark-mode .measure-panel{background:rgba(24,23,20,.92);}
+body.dark-mode .mk-label{background:rgba(18,17,15,.85);}
+body.dark-mode .poly-label{color:#f1efe6!important;text-shadow:0 1px 3px rgba(0,0,0,.7);}
+body.dark-mode .pdf-panel{background:rgba(24,23,20,.97);}
+body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
+</style>
+</head>
+<body>
+
+<div class="app" id="mainApp">
+  <div class="header">
+    <div class="brand"><span class="dot" id="brandDot"></span><span id="brandLabel">GEOPLOT&nbsp;MIL</span></div>
+    <div class="mode-tabs" id="modeTabs">
+      <button class="mode-tab active" data-mode="auto">MAP（自動更新）</button>
+      <button class="mode-tab" data-mode="manual">MAP（手動）</button>
+    </div>
+    <div class="header-spacer"></div>
+    <span class="app-version" id="appVersion"></span>
+    <div class="notif-wrap">
+      <button id="btnNotifBell" class="notif-bell" title="新着の警告">🔔<span id="notifBadge" class="notif-badge" style="display:none;">0</span></button>
+      <div class="notif-panel" id="notifPanel">
+        <div class="notif-panel-head">
+          <span>新着の警告</span>
+          <button class="btn small ghost" id="btnNotifClearAll">全て既読</button>
+        </div>
+        <div id="notifList"></div>
+        <div class="empty-hint" id="notifEmptyHint">新着はありません。military.geojsonが自動更新されるたびにここへ追加されます。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEFT: coordinate plotter -->
+  <div class="panel left" id="leftPanel" data-mode-section="manual">
+    <div class="section">
+      <div class="section-title">座標を貼り付け</div>
+      <textarea id="coordInput" rows="5" placeholder="DD 35.6895N&#10;DMS 35°41'22&quot;N 139°45'30&quot;E&#10;DDM 35-41.5N&#10;NAVAREA 3541N 13945E&#10;NOTAM 354122N 1394530E&#10;中文 北纬22°10.5′ 东经113°35.2′"></textarea>
+      <div class="btn-row">
+        <button class="btn primary" id="btnPlot">▸ プロット</button>
+        <button class="btn ghost" id="btnClearInput">クリア</button>
+      </div>
+      <label class="check-row"><input type="checkbox" id="chkConnect" checked> 順に線で結ぶ</label>
+      <label class="check-row"><input type="checkbox" id="chkClose" checked> 始点に戻る（多角形）</label>
+    </div>
+
+    <div class="section">
+      <div class="section-title">検出された座標 <span class="n" id="coordCount">0</span> 点</div>
+      <ul class="coord-list" id="coordList"></ul>
+      <div class="empty-hint" id="coordEmptyHint">プロットすると、その時点の座標がここに一覧表示されます。クリックでその地点へ地図が移動します。</div>
+      <div class="btn-row">
+        <button class="btn small" id="btnCopyGeoJSON">GeoJSONをコピー</button>
+        <button class="btn small" id="btnCopyList">座標リストをコピー</button>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">履歴（見返し用） <span class="n" id="histCount">0</span> 件 <button class="btn small ghost" id="btnClearHist" style="margin-left:auto">全消去</button></div>
+      <div id="historyList"></div>
+      <div class="empty-hint" id="histEmptyHint">「プロット」を押すと、座標セットがここにチェックボックス付きで保存されます。ON/OFFで地図表示を切替できます。</div>
+    </div>
+  </div>
+
+  <!-- AUTO: file import + results. Hidden entirely in manual mode. Placed before
+       map-wrap (like leftPanel) so it renders on the left, consistent with the
+       other mode -- previously this was DOM-ordered after map-wrap and rendered on
+       the right, which was the one mode with a different panel side. -->
+  <div class="panel left" id="rightPanel">
+    <div class="section" id="resultsSection">
+      <div class="section-title">
+        軍事関連の抽出結果
+      </div>
+      <div class="tab-row" id="validityTabs">
+        <button class="tab-btn active" data-tab="active">Active <span class="tab-n" id="tabCountActive">0</span></button>
+        <button class="tab-btn" data-tab="notice">Notice <span class="tab-n" id="tabCountNotice">0</span></button>
+        <button class="tab-btn" data-tab="archive">Archive <span class="tab-n" id="tabCountArchive">0</span></button>
+        <button class="tab-btn" data-tab="all">全て <span class="tab-n" id="tabCountAll">0</span></button>
+      </div>
+      <div class="btn-row" id="bulkVisRow" style="margin-top:0;margin-bottom:10px;">
+        <button class="btn small ghost" id="btnBulkShow">このタブを全て表示</button>
+        <button class="btn small ghost" id="btnBulkHide">このタブを全て非表示</button>
+      </div>
+      <!-- Archiveタブでのみ表示。海事局ごとに件数が積み上がって見づらくなりやすいための絞り込み。
+           選択肢はstate内に実在する海事局だけを動的に列挙する(renderWarnList内)ので、
+           該当0件の局は選択肢に出てこない。 -->
+      <div id="archiveBureauFilterRow" style="display:none;margin-top:-2px;margin-bottom:10px;">
+        <select id="archiveBureauFilter" style="width:100%;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--mono);font-size:11.5px;padding:6px 8px;">
+          <option value="">海事局: すべて</option>
+        </select>
+      </div>
+      <div id="warnList"></div>
+      <div class="empty-hint" id="warnEmptyHint">GeoJSONの読み込み、または本文・一覧の貼り付け解析を行うと、ここに一覧が表示されます。</div>
+    </div>
+
+    <!-- start_msa_loop.bat経由の自動接続（?geojson=URL）が通常の入り口。ここは手動での
+         接続先変更・自動接続が失敗した際のリカバリ用なので、結果一覧より下に配置している。 -->
+    <div class="section" data-mode-section="auto">
+      <div class="section-title">military.geojson に接続</div>
+      <div class="url-connect-row" style="display:flex;gap:6px;">
+        <input type="text" id="geojsonUrlInput" placeholder="http://127.0.0.1:8743/msa_out/military.geojson"
+               style="flex:1;min-width:0;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--mono);font-size:11px;padding:6px 8px;">
+        <button class="btn small ghost" id="btnConnectUrl" type="button">URLで接続</button>
+      </div>
+      <div id="fileConnectionStatus" style="display:none;margin-top:10px;padding:8px 10px;background:var(--panel-alt);border:1px solid var(--border-bright);border-radius:8px;font-size:11.5px;color:var(--text-dim);"></div>
+      <div class="log" id="fetchLog" style="margin-top:14px;"></div>
+    </div>
+  </div>
+
+  <!-- CENTER: map -->
+  <div class="map-wrap">
+    <div id="map"></div>
+    <div class="map-toolbar">
+      <button class="btn small" id="btnFitAll">全体表示</button>
+      <button class="btn small" id="btnClearMap">地図クリア</button>
+    </div>
+    <div class="measure-panel" id="measurePanel">
+      <div class="measure-stats" id="measureStats">計測モード: 地図をクリックして頂点を追加</div>
+      <div class="measure-actions">
+        <button id="measureUndo" class="small">1点戻す</button>
+        <button id="measureClear" class="small">クリア</button>
+      </div>
+    </div>
+    <div class="readout" id="readout">-------N / --------E</div>
+    <div class="scale-note">OpenStreetMap / EPSG:4326</div>
+
+    <div class="pdf-panel" id="pdfPanel">
+      <div class="pdf-panel-title" id="pdfPanelTitle"></div>
+      <textarea id="pdfPanelText"></textarea>
+      <div class="pdf-panel-actions">
+        <button class="btn small ghost" id="btnPdfCancel">キャンセル</button>
+        <button class="btn small primary" id="btnPdfGenerate">PDFを生成</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Off-screen: see #pdfPrintTemplate CSS comment above for why this exists -->
+<div id="pdfPrintTemplate">
+  <div id="pdfPrintTitle"></div>
+  <div id="pdfPrintBody"></div>
+</div>
+
+<script>
+/* ============================================================
+   GEOPLOT MIL — app.js
+   ============================================================ */
+
+// Bump this on every edit to this file (format: vMAJOR.MINOR.PATCH, plain decimal --
+// no date encoding). Bump PATCH for a normal fix/tweak, MINOR for a new feature, MAJOR
+// for a breaking/large change. Shown in the header next to the notif bell so it's easy
+// to confirm at a glance (especially over screen-share / when reporting a bug) whether
+// the browser is actually running the latest file, rather than a stale cached copy --
+// this exact confusion has happened multiple times during development (see HANDOFF.md).
+// Formerly dated (vYYYYMMDD.N, N = that day's build count); switched to this scheme
+// starting at v1.1.7 (continuing on from where the dated scheme's build count left off,
+// not a reset to "new/early software").
+const APP_VERSION = 'v1.2.1';
+
+// Small folded-corner "PDF" document glyph used on every PDF-export entry point
+// (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
+// three call sites can't drift out of sync with each other. Colors are fixed
+// (not currentColor) -- this is a self-contained "file icon", independent of
+// whatever text color surrounds it.
+const PDF_ICON_SVG = '<svg class="pdf-ico" viewBox="0 0 100 120" width="14" height="17" aria-hidden="true" focusable="false">'
+  + '<path d="M14,3 H72 L97,28 V106 A11,11 0 0 1 86,117 H14 A11,11 0 0 1 3,106 V14 A11,11 0 0 1 14,3 Z" fill="#f5f4f2" stroke="#e2231a" stroke-width="6" stroke-linejoin="round"/>'
+  + '<path d="M72,3 L97,28 H79 A7,7 0 0 1 72,21 Z" fill="#e2231a"/>'
+  + '<text x="50" y="88" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800" fill="#2b2a27" text-anchor="middle">PDF</text>'
+  + '</svg>';
+
+/* ---------------------------------------------------------------
+   0. Small utilities
+--------------------------------------------------------------- */
+const $ = (sel) => document.querySelector(sel);
+const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+$('#appVersion').textContent = APP_VERSION;
+// Not documented anywhere on purpose -- no cursor change, no title attribute, nothing
+// that hints this is clickable. Toggles both the name and a dark theme together, in-
+// memory only (resets to GEOPLOT MIL / light on reload).
+let _brandToggled = false;
+$('#brandDot').addEventListener('click', ()=>{
+  _brandToggled = !_brandToggled;
+  $('#brandLabel').innerHTML = _brandToggled ? 'OSA&nbsp;MAP' : 'GEOPLOT&nbsp;MIL';
+  document.body.classList.toggle('dark-mode', _brandToggled);
+});
+function esc(s){
+  return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function nowStr(){
+  const d = new Date();
+  const p = n => String(n).padStart(2,'0');
+  return `${d.getFullYear()}-${p(d.getMonth()+1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}`;
+}
+function stripTags(html){
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  $$('script,style', doc).forEach(n => n.remove());
+  return (doc.body ? doc.body.textContent : html).replace(/\u00a0/g,' ').replace(/[ \t]+/g,' ');
+}
+
+// MSA article pages (and most Chinese gov-site CMS templates) wrap the actual warning
+// text in a specific content container, with navigation/sidebar/footer boilerplate
+// (bureau contact lists, related-article links, phone numbers, etc.) surrounding it.
+// If we blindly parse the whole page's text, that boilerplate can pollute coordinate
+// and list-marker detection. This narrows down to just the real article body.
+const ARTICLE_BODY_SELECTORS = ['#zoom', '.TRS_Editor', '.trs_editor', '.article-content', '.Article_content', '#content', '.detail-content', '.art-con', '.artCon', '.view', '.article'];
+const FOOTER_MARKERS = ['收藏','打印本页','关闭窗口','下载PDF','上一篇','下一篇','分享到','责任编辑','网站声明','主办单位','版权所有','网站地图','联系我们'];
+
+function extractArticleBody(html){
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  $$('script,style', doc).forEach(n => n.remove());
+
+  // 1) try a known content-container selector — most precise when it matches
+  for (const sel of ARTICLE_BODY_SELECTORS){
+    const el = doc.querySelector(sel);
+    if (el){
+      const t = el.textContent.replace(/\u00a0/g,' ').replace(/[ \t]+/g,' ').trim();
+      if (t.length > 20) return t;
+    }
+  }
+
+  // 2) fall back to a structural heuristic on the full page text: the body sits between
+  //    the "发布时间：YYYY-MM-DD" metadata line and the page-action footer (收藏/打印本页/...)
+  let text = (doc.body ? doc.body.textContent : html).replace(/\u00a0/g,' ').replace(/[ \t]+/g,' ');
+  const pub = text.match(/发布时间[：:]\s*\d{4}[-/]\d{1,2}[-/]\d{1,2}[^\n]{0,20}/);
+  if (pub) text = text.slice(pub.index + pub[0].length);
+  let endIdx = text.length;
+  for (const marker of FOOTER_MARKERS){
+    const idx = text.indexOf(marker);
+    if (idx !== -1 && idx < endIdx) endIdx = idx;
+  }
+  const body = text.slice(0, endIdx).trim();
+
+  // 3) if the heuristic collapsed to nothing usable, fall back to the raw full-page text
+  //    rather than losing the article entirely
+  return body.length > 20 ? body : text.trim();
+}
+
+/* ---------------------------------------------------------------
+   1. Coordinate parsing engine
+   Supports: DD, DMS, DDM (dot / hyphen), NAVAREA (DDMM), NOTAM (DDMMSS),
+   Chinese labelled (北纬/南纬/东经/西经), ICAO (small built-in table).
+--------------------------------------------------------------- */
+const ICAO_TABLE = {
+  RJTT:[35.5523,139.7798], RJAA:[35.7647,140.3864], RJOO:[34.7855,135.4382], RJBB:[34.4273,135.2440],
+  RJFF:[33.5859,130.4506], RJCC:[42.7752,141.6923], RJOA:[34.2578,133.8236], RJGG:[34.8584,136.8048],
+  RKSI:[37.4602,126.4407], RKPC:[33.5113,126.4930], RKPK:[35.1795,128.9382],
+  ZBAA:[40.0801,116.5846], ZBAD:[39.5098,116.4109], ZSPD:[31.1443,121.8083], ZSSS:[31.1979,121.3363],
+  ZGGG:[23.3924,113.2988], ZGSZ:[22.6393,113.8107], ZUUU:[30.5785,103.9468], ZPPP:[25.1019,102.9292],
+  VHHH:[22.3080,113.9185], RCTP:[25.0777,121.2328], RCSS:[25.0694,121.5519],
+  RPLL:[14.5086,121.0198], WSSS:[1.3644,103.9915], VTBS:[13.6900,100.7501],
+  VVNB:[21.2212,105.8072], VVTS:[10.8188,106.6520], EGLL:[51.4700,-0.4543],
+  KJFK:[40.6413,-73.7781], PANC:[61.1743,-149.9963], PGUM:[13.4834,144.7960]
+};
+
+function normalizeSymbols(t){
+  return t
+    .replace(/[°º˚]/g, '°')
+    .replace(/[′’']/g, "'")
+    .replace(/[″”"]/g, '"')
+    .replace(/[，]/g, ',')
+    .replace(/[－―—–‐‑‒−]/g, '-')
+    .replace(/[Ｎ]/g,'N').replace(/[Ｓ]/g,'S').replace(/[Ｅ]/g,'E').replace(/[Ｗ]/g,'W');
+}
+
+function convertChineseLabels(t){
+  t = t.replace(/(北纬|南纬)\s*(\d{1,2}(?:\.\d+)?)°?\s*(\d{1,2}(?:\.\d+)?)?'?\s*(\d{1,2}(?:\.\d+)?)?"?/g,
+    (m, dir, d, mm, ss) => {
+      const hemi = dir === '北纬' ? 'N' : 'S';
+      let str = d + '°';
+      if (mm) str += mm + "'";
+      if (ss) str += ss + '"';
+      return str + hemi;
+    });
+  t = t.replace(/(东经|西经)\s*(\d{1,3}(?:\.\d+)?)°?\s*(\d{1,2}(?:\.\d+)?)?'?\s*(\d{1,2}(?:\.\d+)?)?"?/g,
+    (m, dir, d, mm, ss) => {
+      const hemi = dir === '东经' ? 'E' : 'W';
+      let str = d + '°';
+      if (mm) str += mm + "'";
+      if (ss) str += ss + '"';
+      return str + hemi;
+    });
+  return t;
+}
+
+function dmsToDecimal(deg, min, sec, hemi){
+  let v = Number(deg||0) + Number(min||0)/60 + Number(sec||0)/3600;
+  if (hemi === 'S' || hemi === 'W') v = -v;
+  return v;
+}
+
+function validLat(v){ return v >= -90 && v <= 90; }
+function validLon(v){ return v >= -180 && v <= 180; }
+
+/** Returns array of {axis:'lat'|'lon', value, start, end, raw, format} */
+function extractTokens(text){
+  const patterns = [
+    // NOTAM lat DDMMSS + hemi
+    { axis:'auto', re:/(?<!\d)(\d{2})(\d{2})(\d{2})([NS])(?![A-Za-z])/g, fmt:'NOTAM',
+      build:(m)=> {
+        const deg=+m[1], min=+m[2], sec=+m[3];
+        if (deg>90||min>=60||sec>=60) return null;
+        return { axis:'lat', value: dmsToDecimal(deg,min,sec,m[4]) };
+      } },
+    { axis:'auto', re:/(?<!\d)(\d{3})(\d{2})(\d{2})([EW])(?![A-Za-z])/g, fmt:'NOTAM',
+      build:(m)=> {
+        const deg=+m[1], min=+m[2], sec=+m[3];
+        if (deg>180||min>=60||sec>=60) return null;
+        return { axis:'lon', value: dmsToDecimal(deg,min,sec,m[4]) };
+      } },
+    // NAVAREA lat DDMM + hemi
+    { axis:'auto', re:/(?<!\d)(\d{2})(\d{2})([NS])(?![A-Za-z])/g, fmt:'NAVAREA',
+      build:(m)=> {
+        const deg=+m[1], min=+m[2];
+        if (deg>90||min>=60) return null;
+        return { axis:'lat', value: dmsToDecimal(deg,min,0,m[3]) };
+      } },
+    { axis:'auto', re:/(?<!\d)(\d{3})(\d{2})([EW])(?![A-Za-z])/g, fmt:'NAVAREA',
+      build:(m)=> {
+        const deg=+m[1], min=+m[2];
+        if (deg>180||min>=60) return null;
+        return { axis:'lon', value: dmsToDecimal(deg,min,0,m[3]) };
+      } },
+    // DMS with symbols (suffix hemisphere: 35°41'22"N)
+    { axis:'auto', re:/(\d{1,3})°\s*(\d{1,2})'\s*(\d{1,2}(?:\.\d+)?)"?\s*([NSEW])/g, fmt:'DMS',
+      build:(m)=> {
+        const deg=+m[1], min=+m[2], sec=+m[3];
+        const isLat = (m[4]==='N'||m[4]==='S');
+        if (isLat && (deg>90||min>=60)) return null;
+        if (!isLat && (deg>180||min>=60)) return null;
+        return { axis: isLat?'lat':'lon', value: dmsToDecimal(deg,min,sec,m[4]) };
+      } },
+    // DMS with prefix hemisphere (N 35°41'22" — common in bilingual EN/CN warnings)
+    { axis:'auto', re:/([NSEW])\s*(\d{1,3})°\s*(\d{1,2})'\s*(\d{1,2}(?:\.\d+)?)"?/g, fmt:'DMS-P',
+      build:(m)=> {
+        const deg=+m[2], min=+m[3], sec=+m[4];
+        const isLat = (m[1]==='N'||m[1]==='S');
+        if (isLat && (deg>90||min>=60)) return null;
+        if (!isLat && (deg>180||min>=60)) return null;
+        return { axis: isLat?'lat':'lon', value: dmsToDecimal(deg,min,sec,m[1]) };
+      } },
+    // DDM with ° and ' (suffix hemisphere: 35°41.5'N)
+    { axis:'auto', re:/(\d{1,3})°\s*(\d{1,2}(?:\.\d+)?)'?\s*([NSEW])/g, fmt:'DDM',
+      build:(m)=> {
+        const deg=+m[1], min=+m[2];
+        const isLat = (m[3]==='N'||m[3]==='S');
+        if (isLat && (deg>90||min>=60)) return null;
+        if (!isLat && (deg>180||min>=60)) return null;
+        return { axis: isLat?'lat':'lon', value: dmsToDecimal(deg,min,0,m[3]) };
+      } },
+    // DDM with prefix hemisphere (N 35°41.5' — the previous version dropped the minutes here)
+    { axis:'auto', re:/([NSEW])\s*(\d{1,3})°\s*(\d{1,2}(?:\.\d+)?)'?/g, fmt:'DDM-P',
+      build:(m)=> {
+        const deg=+m[2], min=+m[3];
+        const isLat = (m[1]==='N'||m[1]==='S');
+        if (isLat && (deg>90||min>=60)) return null;
+        if (!isLat && (deg>180||min>=60)) return null;
+        return { axis: isLat?'lat':'lon', value: dmsToDecimal(deg,min,0,m[1]) };
+      } },
+    // DDM hyphen style 35-41.5N
+    { axis:'auto', re:/(?<!\d)(\d{1,3})-(\d{1,2}(?:\.\d+)?)\s*([NSEW])(?![A-Za-z])/g, fmt:'DDM-H',
+      build:(m)=> {
+        const deg=+m[1], min=+m[2];
+        const isLat = (m[3]==='N'||m[3]==='S');
+        if (isLat && (deg>90||min>=60)) return null;
+        if (!isLat && (deg>180||min>=60)) return null;
+        return { axis: isLat?'lat':'lon', value: dmsToDecimal(deg,min,0,m[3]) };
+      } },
+    // DD suffix  35.6895N
+    { axis:'auto', re:/(?<!\d)(\d{1,3}(?:\.\d+)?)°?\s*([NSEW])(?![A-Za-z])/g, fmt:'DD',
+      build:(m)=> {
+        const deg=+m[1];
+        const isLat = (m[2]==='N'||m[2]==='S');
+        if (isLat && deg>90) return null;
+        if (!isLat && deg>180) return null;
+        return { axis: isLat?'lat':'lon', value: dmsToDecimal(deg,0,0,m[2]) };
+      } },
+    // DD prefix N35.6895
+    { axis:'auto', re:/(?<![A-Za-z0-9])([NSEW])\s*(\d{1,3}(?:\.\d+)?)°?\b/g, fmt:'DD-P',
+      build:(m)=> {
+        const deg=+m[2];
+        const isLat = (m[1]==='N'||m[1]==='S');
+        if (isLat && deg>90) return null;
+        if (!isLat && deg>180) return null;
+        return { axis: isLat?'lat':'lon', value: dmsToDecimal(deg,0,0,m[1]) };
+      } },
+    // ICAO codes
+    { axis:'auto', re:/\b([A-Z]{4})\b/g, fmt:'ICAO',
+      build:(m)=> {
+        const code = m[1];
+        if (!ICAO_TABLE[code]) return null;
+        return { axis:'point', value: ICAO_TABLE[code], code };
+      } },
+  ];
+
+  const found = [];
+  for (const p of patterns){
+    let m;
+    p.re.lastIndex = 0;
+    while ((m = p.re.exec(text))){
+      const built = p.build(m);
+      if (!built) continue;
+      found.push({
+        start: m.index, end: m.index + m[0].length,
+        axis: built.axis, value: built.value, raw: m[0], fmt: p.fmt, code: built.code
+      });
+    }
+  }
+  // Overlap resolution: process candidates in left-to-right (start-position) order and
+  // greedily accept the first non-overlapping one. This (not pattern priority) is what
+  // correctly disambiguates prefix-style coordinates ("N 22°10.5' E 113°35.2'") from
+  // suffix-style ones ("22°10.5'N 113°35.2'E") — a hemisphere letter that starts a new
+  // prefix-style token earlier in the text wins over a later-starting suffix pattern
+  // that would otherwise swallow it as someone else's trailing hemisphere.
+  const order = {};
+  patterns.forEach((p,i)=> order[p.fmt] = i);
+  found.sort((a,b)=> (a.start - b.start) || (order[a.fmt]-order[b.fmt]) || ((b.end-b.start)-(a.end-a.start)));
+  const accepted = [];
+  for (const tok of found){
+    const overlaps = accepted.some(a => tok.start < a.end && tok.end > a.start);
+    if (!overlaps) accepted.push(tok);
+  }
+  accepted.sort((a,b)=> a.start - b.start);
+  return accepted;
+}
+
+function findMarkers(text){
+  // Detects list markers like "1、" "1." "(1)" "1）" "①" "A：" that typically precede
+  // each point in a Chinese maritime-warning point list. Used to tell apart multiple
+  // distinct polygons described in the same article (numbering restarts for each new area).
+  // NOTE: real warnings very commonly use the FULL-WIDTH "）" (not ASCII ")") — e.g. "1）23-41.31N".
+  const markers = [];
+  const re = /(?:^|[^0-9])([1-9]\d?)[、.．)）](?!\d)/g;
+  let m;
+  while ((m = re.exec(text))){
+    const numStr = m[1];
+    const idx = m.index + m[0].length - numStr.length - 1;
+    markers.push({ index: idx, num: parseInt(numStr,10) });
+  }
+  const circled = {'①':1,'②':2,'③':3,'④':4,'⑤':5,'⑥':6,'⑦':7,'⑧':8,'⑨':9,'⑩':10};
+  const re2 = /[①②③④⑤⑥⑦⑧⑨⑩]/g;
+  while ((m = re2.exec(text))){
+    markers.push({ index: m.index, num: circled[m[0]] });
+  }
+  // Letter markers, e.g. "A：18-42.60N/110-51.92E、B：19-45.38N..."
+  const re3 = /\b([A-Za-z])[：:](?=\d)/g;
+  while ((m = re3.exec(text))){
+    markers.push({ index: m.index, num: m[1].toUpperCase().charCodeAt(0) - 64 }); // A=1, B=2, ...
+  }
+  markers.sort((a,b)=> a.index - b.index);
+  return markers;
+}
+
+// Phrases that typically CLOSE a point list in MSA warning text, e.g.
+// "...21-31.17N 108-12.60E两点连线水域以及21-31.00N..." describes TWO separate
+// unnumbered 2-point lines back to back — the "点连线"/"连线水域" phrase between
+// them is the only signal that a new, unrelated point list is starting.
+const GROUP_BOUNDARY_RE = /(点连线|连线水域|连线范围|顺次连接|顺序连接|连线内|以及|另在|并在)/g;
+function findGroupBoundaries(text){
+  const ends = [];
+  let m;
+  GROUP_BOUNDARY_RE.lastIndex = 0;
+  while ((m = GROUP_BOUNDARY_RE.exec(text))){ ends.push(m.index + m[0].length); }
+  return ends;
+}
+
+function groupPoints(points, markers, boundaries){
+  const GAP_LIMIT = 400;  // chars; a big unrelated stretch of text between points implies unrelated points
+  const NEAR_LIMIT = 50;  // a list marker must be within this many chars before a point to "belong" to it
+  // NOTE: no distance-based sanity check here on purpose — real exercise/firing zones can
+  // legitimately span hundreds of km (a real 8-point Hainan warning spans ~400km), so any
+  // distance threshold ends up breaking legitimate large areas. Rely on marker/boundary/gap only.
+  const groups = [];
+  let current = [];
+  let lastMarkerNum = null;
+  let lastEnd = null;
+
+  for (const p of points){
+    let nearest = null;
+    for (const mk of markers){
+      if (mk.index <= p.start && p.start - mk.index <= NEAR_LIMIT){
+        if (!nearest || mk.index > nearest.index) nearest = mk;
+      }
+    }
+    const markerNum = nearest ? nearest.num : null;
+    let startNew = false;
+    if (current.length > 0){
+      if (markerNum !== null && lastMarkerNum !== null && markerNum <= lastMarkerNum){
+        startNew = true; // numbering restarted -> new polygon
+      } else if (lastEnd !== null && (p.start - lastEnd) > GAP_LIMIT){
+        startNew = true; // big gap of unrelated text -> likely unrelated points
+      } else if (lastEnd !== null && boundaries.some(b => b > lastEnd && b <= p.start)){
+        startNew = true; // a "点连线/连线水域/以及..." style closing phrase sits between these two points
+      }
+    }
+    if (startNew){ groups.push(current); current = []; lastMarkerNum = null; }
+    current.push(p);
+    if (markerNum !== null) lastMarkerNum = markerNum;
+    lastEnd = p.end;
+  }
+  if (current.length) groups.push(current);
+  return groups;
+}
+
+/** Returns an array of groups; each group is an array of {lat,lon,raw,fmt} points.
+ *  Multiple groups typically mean the source text describes multiple distinct
+ *  areas/lines (e.g. "禁航区一" and "禁航区二" in the same warning). */
+function parseCoordinateGroups(rawText){
+  let text = normalizeSymbols(rawText);
+  text = convertChineseLabels(text);
+  const tokens = extractTokens(text);
+  const markers = findMarkers(text);
+  const boundaries = findGroupBoundaries(text);
+
+  const points = [];
+  let pendingLat = null, pendingLon = null;
+  for (const tok of tokens){
+    if (tok.axis === 'point'){
+      points.push({ lat: tok.value[0], lon: tok.value[1], raw: tok.raw, fmt: tok.fmt, start: tok.start, end: tok.end });
+      continue;
+    }
+    if (tok.axis === 'lat'){
+      pendingLat = tok;
+    } else if (tok.axis === 'lon'){
+      pendingLon = tok;
+    }
+    if (pendingLat && pendingLon){
+      const lat = pendingLat.value, lon = pendingLon.value;
+      if (validLat(lat) && validLon(lon)){
+        points.push({
+          lat, lon, raw: pendingLat.raw + ' ' + pendingLon.raw, fmt: pendingLat.fmt,
+          start: Math.min(pendingLat.start, pendingLon.start),
+          end: Math.max(pendingLat.end, pendingLon.end)
+        });
+      }
+      pendingLat = null; pendingLon = null;
+    }
+  }
+  return groupPoints(points, markers, boundaries);
+}
+
+/** Flat point list (back-compat) — used by the manual left-panel plotter,
+ *  which always treats one pasted block as a single set of points. */
+function parseCoordinateText(rawText){
+  return parseCoordinateGroups(rawText).flat();
+}
+
+/* ---------------------------------------------------------------
+   1b. Validity-period extraction ("自...至..." / "YYYY年M月D日HHMM时至...")
+   MSA warnings always state a validity window in China Standard Time (UTC+8).
+   Real-world text uses many variations, e.g.:
+     "2026年7月24日0000时至2026年7月31日2400时"   (full date both sides)
+     "自7月24日0600时至7月29日1800时"              ("自" prefix, day-only end omits month)
+     "5月28日0730时至29日2350时"                    (cross-day, end has no month)
+     "5月26日，0800时至1600时"                      (single day, COMMA before time)
+     "5月27日至30日，每天0800时至1700时"            (day RANGE, separate daily time range)
+     "3月19日、3月21日，0900时至1500时"             (LIST of discrete dates, shared time)
+     "自11月23日16:00时至12月7日16：00时"           (colon-separated HH:MM, half/full width)
+     "7月28日至31日，在37-46.86N..."                (date range, NO time at all -> full days)
+   A single article can state several windows (e.g. one per day/zone), so this
+   returns ALL of them; callers typically care about the overall [min start, max end].
+--------------------------------------------------------------- */
+function parseTimeToken(raw, minuteSuffix){
+  if (raw.includes(':') || raw.includes('：')){
+    const [h, mi] = raw.replace('：',':').split(':').map(s=>parseInt(s,10));
+    return { h, mi };
+  }
+  if (minuteSuffix !== undefined && minuteSuffix !== null && minuteSuffix !== ''){
+    return { h: parseInt(raw,10), mi: parseInt(minuteSuffix,10) };
+  }
+  if (raw.length <= 2) return { h: parseInt(raw,10), mi: 0 };
+  const s = raw.padStart(4,'0');
+  return { h: parseInt(s.slice(0,-2),10), mi: parseInt(s.slice(-2),10) };
+}
+function mkDateCST(y, mo, d, h, mi){
+  let dayOffset = 0;
+  if (h >= 24){ dayOffset = 1; h -= 24; } // "2400时" means midnight of the next day
+  return new Date(Date.UTC(y, mo-1, d+dayOffset, h, mi) - 8*3600*1000); // CST (UTC+8) -> true UTC instant
+}
+
+const TIME_TOK = '(\\d{1,2}[:：]\\d{2}|\\d{1,4})时(?:(\\d{1,2})分)?';
+// The closing time of a range sometimes omits the trailing 时 in real MSA text
+// (e.g. "自7月29日0300时至1500在..." — should be "1500时" but isn't), so the
+// *final* time token in a range is more lenient than the others.
+const TIME_TOK_END = '(\\d{1,2}[:：]\\d{2}|\\d{1,4})时?(?:(\\d{1,2})分)?';
+// Pattern A: date and time written back-to-back with no separator, e.g. "7月24日0600时至29日1800时"
+const DIRECT_RE = new RegExp(
+  '(?:(\\d{4})年)?(\\d{1,2})月(\\d{1,2})日' + TIME_TOK +
+  '\\s*至\\s*(?:(\\d{4})年)?(?:(?:(\\d{1,2})月)?(\\d{1,2})日)?' + TIME_TOK_END, 'g'
+);
+// Pattern B: date part (single day / day range / list of days) separated from the time
+// part by a comma or "每天"/"每日", e.g. "5月27日至30日，每天0800时至1700时"
+const DATEPART_RE = /(?:自)?\s*(?:(\d{4})年)?(\d{1,2})月(\d{1,2})日((?:[、,，]\s*(?:\d{1,2}月)?\d{1,2}日)*)(?:至\s*(?:(\d{4})年)?(?:(\d{1,2})月)?(\d{1,2})日)?/g;
+const TIMEPART_RE = new RegExp('^\\s*[，,]?\\s*(?:每天|每日)?\\s*(\\d{1,2}[:：]\\d{2}|\\d{1,4})时?(?:(\\d{1,2})分)?\\s*[至\\-－]\\s*' + TIME_TOK_END);
+const LISTDATE_RE = /(\d{1,2})月(\d{1,2})日|(\d{1,2})日/g;
+
+function extractValidityPeriods(text){
+  const periods = [];
+  const usedSpans = [];
+  let lastYear = new Date().getFullYear();
+  let m;
+
+  DIRECT_RE.lastIndex = 0;
+  while ((m = DIRECT_RE.exec(text))){
+    const y1 = m[1] ? parseInt(m[1],10) : lastYear;
+    const mo1 = parseInt(m[2],10), d1 = parseInt(m[3],10);
+    const t1 = parseTimeToken(m[4], m[5]);
+    lastYear = y1;
+    const y2 = m[6] ? parseInt(m[6],10) : y1;
+    const mo2 = m[7] ? parseInt(m[7],10) : mo1;
+    const d2 = m[8] ? parseInt(m[8],10) : d1;
+    const t2 = parseTimeToken(m[9], m[10]);
+    periods.push({
+      start: mkDateCST(y1,mo1,d1,t1.h,t1.mi), end: mkDateCST(y2,mo2,d2,t2.h,t2.mi),
+      raw: m[0], start_idx: m.index, end_idx: m.index + m[0].length
+    });
+    usedSpans.push([m.index, m.index + m[0].length]);
+  }
+
+  DATEPART_RE.lastIndex = 0;
+  while ((m = DATEPART_RE.exec(text))){
+    if (m[0].trim() === ''){ DATEPART_RE.lastIndex++; continue; }
+    const dpStart = m.index, dpEnd = m.index + m[0].length;
+    if (usedSpans.some(([s,e]) => dpStart < e && dpEnd > s)) continue; // already matched by pattern A
+
+    const y1 = m[1] ? parseInt(m[1],10) : lastYear;
+    const mo1 = parseInt(m[2],10), d1 = parseInt(m[3],10);
+    const listSuffix = m[4] || '';
+    const rangeYear = m[5], rangeMonth = m[6], rangeDay = m[7];
+    lastYear = y1;
+
+    const rest = text.slice(dpEnd, dpEnd + 40);
+    const tm = rest.match(TIMEPART_RE);
+    let t1, t2, fullEnd;
+    if (!tm){
+      // No adjacent time clause. Real MSA text sometimes states only a bare date range
+      // with no times at all, e.g. "鲁航警602/26，渤海海峡，7月28日至31日，在37-46.86N
+      // ...", meaning "for these entire days" (interpreted as CST 0000 on the start day
+      // through 2400 on the end day). Only accept this as a validity window -- rather
+      // than some unrelated date mention elsewhere in the text -- when it's immediately
+      // followed by the warning's action clause (almost always "在..." or "将/拟在...",
+      // introducing the affected area).
+      const tail = rest.replace(/^[，,、 ]+/, '');
+      if (!/^(?:将|拟|将于)?在/.test(tail)) continue; // not adjacent to the action clause -> skip, as before
+      t1 = { h: 0, mi: 0 };
+      t2 = { h: 24, mi: 0 };
+      fullEnd = dpEnd;
+    } else {
+      t1 = parseTimeToken(tm[1], tm[2]);
+      t2 = parseTimeToken(tm[3], tm[4]);
+      fullEnd = dpEnd + tm[0].length;
+    }
+
+    let endYear = y1, endMonth = mo1, endDay = d1;
+    if (rangeDay){
+      endYear = rangeYear ? parseInt(rangeYear,10) : y1;
+      endMonth = rangeMonth ? parseInt(rangeMonth,10) : mo1;
+      endDay = parseInt(rangeDay,10);
+    } else if (listSuffix){
+      // take the LAST date mentioned in the list (e.g. "3月19日、3月21日" -> end = 21st)
+      let lm, lastMo = mo1, lastDay = d1;
+      LISTDATE_RE.lastIndex = 0;
+      while ((lm = LISTDATE_RE.exec(listSuffix))){
+        if (lm[1] && lm[2]){ lastMo = parseInt(lm[1],10); lastDay = parseInt(lm[2],10); }
+        else if (lm[3]){ lastDay = parseInt(lm[3],10); }
+      }
+      endMonth = lastMo; endDay = lastDay;
+    }
+
+    periods.push({
+      start: mkDateCST(y1, mo1, d1, t1.h, t1.mi),
+      end: mkDateCST(endYear, endMonth, endDay, t2.h, t2.mi),
+      raw: text.slice(dpStart, fullEnd), start_idx: dpStart, end_idx: fullEnd,
+    });
+    usedSpans.push([dpStart, fullEnd]);
+  }
+
+  periods.sort((a,b)=> a.start_idx - b.start_idx);
+  return periods;
+}
+
+/** Summarizes an article's validity window(s) into {start,end,periods} — start is the
+ *  earliest mentioned start, end is the latest mentioned end. Returns null if nothing
+ *  could be parsed (caller should treat that as "unknown", not "expired"). */
+function summarizeValidity(text){
+  const periods = extractValidityPeriods(text);
+  if (!periods.length) return null;
+  const start = new Date(Math.min(...periods.map(p=>p.start.getTime())));
+  const end = new Date(Math.max(...periods.map(p=>p.end.getTime())));
+  return { start, end, periods };
+}
+
+function decToDMS(v, isLat){
+  const hemi = isLat ? (v>=0?'N':'S') : (v>=0?'E':'W');
+  v = Math.abs(v);
+  const deg = Math.floor(v);
+  const minFull = (v-deg)*60;
+  const min = Math.floor(minFull);
+  const sec = Math.round((minFull-min)*60);
+  return `${String(deg).padStart(isLat?2:3,'0')}°${String(min).padStart(2,'0')}'${String(sec).padStart(2,'0')}"${hemi}`;
+}
+
+/* ---------------------------------------------------------------
+   2. Map setup
+--------------------------------------------------------------- */
+// renderer: L.canvas() -- draws polygons/markers/etc onto an HTML5 <canvas> instead of
+// SVG. This matters specifically for PDF export: html2canvas has a known, long-standing
+// incompatibility with how Leaflet positions its SVG overlay pane (confirmed against
+// multiple upstream bug reports), which reliably misaligned the exported polygon from
+// the map tiles underneath it. A <canvas> layer's content is just a pixel bitmap with no
+// DOM/SVG transform for html2canvas to misinterpret, so this sidesteps that bug class
+// entirely -- functionally a drop-in replacement (clicks/popups/tooltips all still work
+// the same way through Leaflet's own hit-detection, not CSS).
+// Fixed overview extent -- covers the coastal bureaus' warnings (Liaoning down to
+// Hainan/South China Sea) plus enough surrounding context (interior China, Japan,
+// Korea, Vietnam/Philippines) to read as a recognizable regional map. Used both as the
+// default view on load AND by the "全体表示" button (see below) -- both intentionally
+// fixed to this same extent rather than fitting to whatever's currently plotted, so the
+// view is predictable regardless of how many/few warnings happen to be on the map right
+// now. Same for both themes (GEOPLOT MIL / OSA MAP) -- the toggle only changes colors,
+// not the map's geographic extent.
+const FULL_VIEW_BOUNDS = [[12, 88], [46, 141]];
+
+// zoomSnap:1 (Leaflet's default) forces every zoom level -- including whatever
+// fitBounds() computes -- to round DOWN to the nearest whole number. Depending on the
+// exact size of the map pane (which varies with window width, side panel presence,
+// etc.), the ideal fractional zoom for FULL_VIEW_BOUNDS below can land just under an
+// integer and get rounded down a whole extra level, showing roughly 2x more area than
+// intended (this is why the "全体表示"/default view sometimes looked way more zoomed
+// out than expected, on some window sizes but not others). zoomSnap:0.25 lets it land
+// on the much closer actual fit instead. zoomDelta:1 keeps the +/- buttons/scroll-wheel
+// moving by a normal whole step, same as before -- only the fitBounds precision changes.
+const map = L.map('map', { zoomControl:false, worldCopyJump:true, renderer: L.canvas(), zoomSnap:0.25, zoomDelta:1 });
+// Best-effort initial view -- the map container is still 0x0 at this point (#mainApp is
+// display:none until enterMode() runs below), so this fitBounds call can't compute a
+// correct zoom yet. It just keeps the map in a valid state (some view is required before
+// tiles/layers can be added) until enterMode() corrects it once real layout exists.
+map.fitBounds(FULL_VIEW_BOUNDS);
+let _initialViewFitted = false; // enterMode() does the real fit exactly once, after layout settles
+L.control.zoom({ position:'bottomright' }).addTo(map);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  maxZoom: 19
+}).addTo(map);
+
+// manualLayerGroup wraps manualLayer + every history entry's layerGroup so the whole
+// manual-mode drawing set can be shown/hidden together (see enterMode) independently of
+// msaLayer (auto-mode results) -- previously both were left permanently on the map, so
+// switching modes didn't actually hide the other mode's shapes.
+const manualLayerGroup = L.layerGroup().addTo(map);
+const manualLayer = L.layerGroup().addTo(manualLayerGroup);
+const msaLayer = L.layerGroup().addTo(map);
+const historyLayers = new Map(); // id -> layerGroup
+const historyMeta = new Map(); // id -> { title, raw_text } -- used by manual-mode popups + PDF export
+
+map.on('mousemove', (e)=>{
+  $('#readout').textContent = `${decToDMS(e.latlng.lat,true)} / ${decToDMS(((e.latlng.lng+540)%360)-180,false)}`;
+});
+
+/* ---------------------------------------------------------------
+   2b. Distance measurement tool
+   Click the ruler control, then click the map to add vertices.
+   Shows cumulative great-circle distance (NM / km) and the bearing
+   of the last segment. Independent of the coordinate plotter.
+--------------------------------------------------------------- */
+const EARTH_R_NM = 3440.065;
+function toRad(d){ return d * Math.PI / 180; }
+function haversineNM(a, b){
+  const dLat = toRad(b.lat - a.lat), dLon = toRad(b.lng - a.lng);
+  const lat1 = toRad(a.lat), lat2 = toRad(b.lat);
+  const h = Math.sin(dLat/2)**2 + Math.cos(lat1)*Math.cos(lat2)*Math.sin(dLon/2)**2;
+  return 2 * EARTH_R_NM * Math.asin(Math.sqrt(h));
+}
+function bearingDeg(a, b){
+  const lat1 = toRad(a.lat), lat2 = toRad(b.lat), dLon = toRad(b.lng - a.lng);
+  const y = Math.sin(dLon) * Math.cos(lat2);
+  const x = Math.cos(lat1)*Math.sin(lat2) - Math.sin(lat1)*Math.cos(lat2)*Math.cos(dLon);
+  return (Math.atan2(y, x) * 180 / Math.PI + 360) % 360;
+}
+
+let measureActive = false;
+let measurePts = [];
+let measureLine = null;
+let measureVertices = [];
+const measurePanel = $('#measurePanel');
+const measureStats = $('#measureStats');
+
+const MeasureControl = L.Control.extend({
+  options: { position: 'bottomright' },
+  onAdd: function(){
+    const div = L.DomUtil.create('div', 'leaflet-bar measure-control');
+    const a = L.DomUtil.create('a', '', div);
+    a.href = '#';
+    a.title = '距離を計測（クリックで頂点を追加）';
+    a.innerHTML = '📏';
+    L.DomEvent.disableClickPropagation(div);
+    L.DomEvent.on(a, 'click', (e) => { e.preventDefault(); toggleMeasureMode(a); });
+    return div;
+  }
+});
+map.addControl(new MeasureControl());
+
+function toggleMeasureMode(btnEl){
+  measureActive = !measureActive;
+  const btn = btnEl || document.querySelector('.measure-control a');
+  btn.classList.toggle('active', measureActive);
+  map.getContainer().style.cursor = measureActive ? 'crosshair' : '';
+  if (!measureActive) clearMeasurePreview();
+  updateMeasurePanel();
+}
+
+function redrawMeasure(){
+  if (measureLine){ map.removeLayer(measureLine); measureLine = null; }
+  measureVertices.forEach(v => map.removeLayer(v));
+  measureVertices = [];
+  measurePts.forEach(p => {
+    measureVertices.push(L.circleMarker(p, {
+      radius: 4, color:'#4fd6e0', weight:2, fillColor:'#0a1119', fillOpacity:1
+    }).addTo(map));
+  });
+  if (measurePts.length > 1){
+    measureLine = L.polyline(measurePts, { color:'#4fd6e0', weight:2, opacity:0.9 }).addTo(map);
+  }
+}
+
+let measurePreviewLine = null;
+function clearMeasurePreview(){
+  if (measurePreviewLine){ map.removeLayer(measurePreviewLine); measurePreviewLine = null; }
+}
+function updateMeasurePreview(latlng){
+  clearMeasurePreview();
+  if (!measureActive || !measurePts.length || !latlng) return;
+  const last = measurePts[measurePts.length - 1];
+  measurePreviewLine = L.polyline([last, latlng], {
+    color:'#4fd6e0', weight:2, opacity:0.6, dashArray:'4,6'
+  }).addTo(map);
+}
+
+function updateMeasurePanel(hoverLatLng){
+  const hasContent = measureActive || measurePts.length > 0;
+  measurePanel.classList.toggle('show', hasContent);
+  if (!hasContent) return;
+
+  if (!measurePts.length){
+    measureStats.textContent = '計測モード: 地図をクリックして頂点を追加';
+    return;
+  }
+  let totalNM = 0;
+  for (let i = 1; i < measurePts.length; i++){
+    totalNM += haversineNM(measurePts[i-1], measurePts[i]);
+  }
+  const totalKm = totalNM * 1.852;
+  let lines = [`頂点数: ${measurePts.length}`, `合計距離: ${totalNM.toFixed(2)} NM (${totalKm.toFixed(2)} km)`];
+  if (measurePts.length >= 2){
+    const last = measurePts.length - 1;
+    const brg = bearingDeg(measurePts[last-1], measurePts[last]);
+    const legNM = haversineNM(measurePts[last-1], measurePts[last]);
+    lines.push(`最終区間: ${legNM.toFixed(2)} NM  方位 ${brg.toFixed(0)}°`);
+  }
+  if (measureActive && hoverLatLng){
+    const last = measurePts[measurePts.length - 1];
+    const previewNM = haversineNM(last, hoverLatLng);
+    const previewBrg = bearingDeg(last, hoverLatLng);
+    lines.push(`(プレビュー: ${previewNM.toFixed(2)} NM  方位 ${previewBrg.toFixed(0)}°)`);
+  }
+  if (!measureActive) lines.push('(クリックで再開できます)');
+  measureStats.textContent = lines.join('\n');
+}
+
+map.on('mousemove', (e) => {
+  if (!measureActive || !measurePts.length) return;
+  updateMeasurePreview(e.latlng);
+  updateMeasurePanel(e.latlng);
+});
+map.on('click', (e) => {
+  if (!measureActive) return;
+  measurePts.push(e.latlng);
+  clearMeasurePreview();
+  redrawMeasure();
+  updateMeasurePanel();
+});
+map.on('dblclick', (e) => {
+  if (!measureActive) return;
+  // a double-click fires two click events first, which can leave a near-duplicate
+  // vertex at the same spot — drop it if so
+  if (measurePts.length >= 2){
+    const last = measurePts[measurePts.length - 1];
+    const prev = measurePts[measurePts.length - 2];
+    if (haversineNM(last, prev) < 0.001) measurePts.pop();
+  }
+  clearMeasurePreview();
+  redrawMeasure();
+  measureActive = false;
+  const btn = document.querySelector('.measure-control a');
+  if (btn) btn.classList.remove('active');
+  map.getContainer().style.cursor = '';
+  updateMeasurePanel();
+});
+$('#measureUndo').addEventListener('click', () => {
+  measurePts.pop();
+  clearMeasurePreview();
+  redrawMeasure();
+  updateMeasurePanel();
+});
+$('#measureClear').addEventListener('click', () => {
+  measurePts = [];
+  clearMeasurePreview();
+  redrawMeasure();
+  measureActive = false;
+  const btn = document.querySelector('.measure-control a');
+  if (btn) btn.classList.remove('active');
+  map.getContainer().style.cursor = '';
+  updateMeasurePanel();
+});
+
+function dotIcon(cls){
+  return L.divIcon({ className:'', html:`<div class="mk ${cls}" style="width:11px;height:11px;"></div>`, iconSize:[11,11], iconAnchor:[5,5] });
+}
+function labelIcon(cls, text){
+  return L.divIcon({
+    className:'', html:`<div style="display:flex;flex-direction:column;align-items:center;"><div class="mk ${cls}" style="width:11px;height:11px;margin-bottom:2px;"></div><div class="mk-label">${esc(text)}</div></div>`,
+    iconSize:[0,0], iconAnchor:[5,16]
+  });
+}
+
+/* ---------------------------------------------------------------
+   3. Left panel: manual plotter + history
+--------------------------------------------------------------- */
+let plotSeq = 0;
+let currentPoints = [];
+
+function renderCoordList(points){
+  const ul = $('#coordList');
+  ul.innerHTML = '';
+  $('#coordCount').textContent = points.length;
+  $('#coordEmptyHint').style.display = points.length ? 'none' : 'block';
+  points.forEach((p, i)=>{
+    const li = document.createElement('li');
+    li.innerHTML = `<span><span class="idx">${i+1}</span>${decToDMS(p.lat,true)} ${decToDMS(p.lon,false)}</span><span style="color:var(--text-faint)">${esc(p.fmt||'')}</span>`;
+    li.addEventListener('click', ()=> map.setView([p.lat,p.lon], Math.max(map.getZoom(),8)));
+    ul.appendChild(li);
+  });
+}
+
+// Draws ONE group of points as a single shape (marker(s) / line / filled polygon,
+// depending on point count + connect/close opts). Does NOT clear the layer first --
+// callers decide when to clear (see plotPointsOnLayer / plotGroupsOnLayer below).
+// See plotOneGroupOnLayer's comment for why this exists. Pure JS port of
+// msa_scraper.py's _order_ring_points() -- same angle-around-centroid approach,
+// same tradeoff (correct for convex point sets, which covers essentially every
+// real-world MSA exclusion zone; a genuinely concave shape would come out wrong,
+// but that's judged far less likely and far less confusing than a bowtie).
+function orderRingPoints(points){
+  const lat0 = points.reduce((s,p)=>s+p.lat, 0) / points.length;
+  const lon0 = points.reduce((s,p)=>s+p.lon, 0) / points.length;
+  return points.slice().sort((a,b)=> Math.atan2(a.lat-lat0, a.lon-lon0) - Math.atan2(b.lat-lat0, b.lon-lon0));
+}
+
+function plotOneGroupOnLayer(points, layerGroup, opts={}){
+  // Reorders >=3 points into a simple, non-self-intersecting polygon ring by angle
+  // around their centroid, mirroring msa_scraper.py's _order_ring_points(). MSA
+  // notices usually list a zone's corners already going around the perimeter, but
+  // some list them in reading order instead (NW, NE, SW, SE) -- connecting THAT
+  // literally draws a self-intersecting "bowtie" instead of the intended rectangle
+  // (see 辽航警345/26). This only reorders the closed-polygon case; open lines/points
+  // are left in their original order since sequence can matter there.
+  const orderedPoints = (opts.close && points.length > 2) ? orderRingPoints(points) : points;
+  const latlngs = orderedPoints.map(p=>[p.lat,p.lon]);
+  const connect = opts.connect && points.length > 1;
+  const close = opts.close && points.length > 2;
+  const color = opts.color || '#ff5f5f';
+  const fill = opts.fill || '#b03a3a';
+
+  if (!connect){
+    // no connecting line requested — just show each point as a small dot
+    points.forEach((p,i)=>{
+      const m = L.circleMarker([p.lat,p.lon], { radius:3.5, color, weight:1.3, fillColor:fill, fillOpacity:.55 });
+      if (opts.popupFn) m.bindPopup(opts.popupFn(p,i));
+      m.addTo(layerGroup);
+    });
+  } else if (close){
+    // closed loop with 3+ points reads as an area — fill it, matching the MSA polygon style.
+    // lineJoin:'miter' keeps corners sharp (no separate vertex markers are drawn here —
+    // if corners ever look like they have a dot/pin on them, it's almost always an older
+    // history entry's point-only plot sitting underneath at the same coordinates, not
+    // this polygon; check the history list's checkboxes).
+    const poly = L.polygon(latlngs, { color, weight:1.5, fillColor:fill, fillOpacity:0.12, lineJoin:'miter' }).addTo(layerGroup);
+    if (opts.popupFn) poly.bindPopup(opts.popupFn(points[0],0));
+    // center label, matching the auto-mode style (see plotMsaItem's poly-label tooltip)
+    if (opts.label) poly.bindTooltip(opts.label, { permanent:true, direction:'center', className:'poly-label' });
+  } else {
+    // open path (2 points, or "close" unchecked) — a line/track, not an area
+    const line = L.polyline(latlngs, { color, weight:2, dashArray:'6,4', opacity:.9 }).addTo(layerGroup);
+    if (opts.popupFn) line.bindPopup(opts.popupFn(points[0],0));
+    if (opts.label) line.bindTooltip(opts.label, { permanent:true, direction:'center', className:'poly-label' });
+  }
+  return latlngs;
+}
+
+// Single-group entry point (back-compat: clears the layer, draws one shape).
+function plotPointsOnLayer(points, layerGroup, opts={}){
+  layerGroup.clearLayers();
+  return plotOneGroupOnLayer(points, layerGroup, opts);
+}
+
+// Multi-group entry point — draws each group from parseCoordinateGroups() as its OWN
+// separate shape (matching how auto-mode's plotMsaItem() handles it.groups). Without
+// this, a warning describing two distinct areas (e.g. a firing zone + a separate debris
+// zone) got drawn as one continuous connected shape spanning both, instead of two
+// independent shapes -- manual mode used to always flatten every detected coordinate
+// into a single list via parseCoordinateText() (points.flat()) before plotting.
+function plotGroupsOnLayer(groups, layerGroup, opts={}){
+  layerGroup.clearLayers();
+  let allLatLngs = [];
+  groups.forEach(grp => {
+    if (!grp.length) return;
+    allLatLngs = allLatLngs.concat(plotOneGroupOnLayer(grp, layerGroup, opts));
+  });
+  return allLatLngs;
+}
+
+// Lightweight, display-only label helper for history entries -- looks for something
+// that reads like an MSA warning number (e.g. "琼航警141/26", "鲁航警602/26") in the
+// pasted text so history entries are distinguishable at a glance instead of all saying
+// "プロット #1", "プロット #2", etc. This is NOT the body/validity analysis that was
+// deliberately removed from manual mode before -- it's just a label, so no coordinates,
+// dates, or other parsed fields are shown or stored anywhere.
+function extractPlotTitle(text){
+  const m = (text || '').match(/[\u4e00-\u9fa5]{1,4}航警\d+\/\d+/);
+  return m ? m[0] : null;
+}
+
+function addHistoryEntry(groups, connect, close, sourceText){
+  plotSeq += 1;
+  const id = 'h'+plotSeq;
+  const lg = L.layerGroup().addTo(manualLayerGroup);
+  const title = extractPlotTitle(sourceText);
+  const points = groups.flat();
+  const displayTitle = title || `プロット #${plotSeq}`;
+  // raw_text is exactly what the person pasted, unmodified -- manual mode never parses/
+  // reformats the body, so the PDF panel's text preview is just this verbatim.
+  historyMeta.set(id, { title: displayTitle, raw_text: sourceText });
+  plotGroupsOnLayer(groups, lg, {
+    connect, close, label: title ? shortLabel(title) : null,
+    popupFn: () => manualPopupHtml(id),
+  });
+  historyLayers.set(id, lg);
+
+  const container = $('#historyList');
+  $('#histEmptyHint').style.display = 'none';
+  const div = document.createElement('div');
+  div.className = 'history-item';
+  const label = title || `プロット #${plotSeq}`;
+  div.innerHTML = `
+    <input type="checkbox" checked data-hid="${id}">
+    <div>
+      <div class="lbl">${esc(label)}</div>
+      <div class="meta">${nowStr()}</div>
+    </div>`;
+  const chk = div.querySelector('input');
+  chk.addEventListener('change', ()=>{
+    if (chk.checked){ lg.addTo(manualLayerGroup); } else { manualLayerGroup.removeLayer(lg); }
+  });
+  div.addEventListener('click', (e)=>{
+    if (e.target.closest('input, a, button')) return; // don't hijack the checkbox
+    const b = L.latLngBounds(points.map(p=>[p.lat,p.lon]));
+    if (b.isValid()) map.fitBounds(b.pad(0.3));
+  });
+  container.prepend(div);
+  $('#histCount').textContent = historyLayers.size;
+}
+
+$('#btnPlot').addEventListener('click', ()=>{
+  const text = $('#coordInput').value;
+  const groups = parseCoordinateGroups(text);
+  const points = groups.flat();
+  currentPoints = points;
+  renderCoordList(points);
+  const connect = $('#chkConnect').checked;
+  const close = $('#chkClose').checked;
+  const title = extractPlotTitle(text);
+  plotGroupsOnLayer(groups, manualLayer, { connect, close, label: title ? shortLabel(title) : null });
+  if (points.length){
+    addHistoryEntry(groups, connect, close, text);
+    const b = L.latLngBounds(points.map(p=>[p.lat,p.lon]));
+    map.fitBounds(b.pad(0.35));
+  }
+});
+
+$('#btnClearInput').addEventListener('click', ()=>{ $('#coordInput').value=''; });
+
+$('#btnCopyGeoJSON').addEventListener('click', async ()=>{
+  const features = currentPoints.map((p,i)=>({
+    type:'Feature', properties:{ index:i+1, format:p.fmt||'' },
+    geometry:{ type:'Point', coordinates:[p.lon, p.lat] }
+  }));
+  if ($('#chkConnect').checked && currentPoints.length>1){
+    const coords = currentPoints.map(p=>[p.lon,p.lat]);
+    if ($('#chkClose').checked) coords.push(coords[0]);
+    features.push({ type:'Feature', properties:{ kind:'path' }, geometry:{ type:'LineString', coordinates:coords } });
+  }
+  const gj = JSON.stringify({ type:'FeatureCollection', features }, null, 2);
+  try{ await navigator.clipboard.writeText(gj); flashBtn('#btnCopyGeoJSON','コピーしました'); }
+  catch(e){ alert(gj); }
+});
+
+$('#btnCopyList').addEventListener('click', async ()=>{
+  const lines = currentPoints.map((p,i)=> `${i+1}: ${decToDMS(p.lat,true)} ${decToDMS(p.lon,false)}  (${p.lat.toFixed(5)}, ${p.lon.toFixed(5)})`);
+  try{ await navigator.clipboard.writeText(lines.join('\n')); flashBtn('#btnCopyList','コピーしました'); }
+  catch(e){ alert(lines.join('\n')); }
+});
+
+function flashBtn(sel, msg){
+  const b = $(sel); const orig = b.textContent;
+  b.textContent = msg; setTimeout(()=> b.textContent = orig, 1200);
+}
+
+$('#btnClearHist').addEventListener('click', ()=>{
+  historyLayers.forEach(lg => manualLayerGroup.removeLayer(lg));
+  historyLayers.clear();
+  historyMeta.clear();
+  $('#historyList').innerHTML = '';
+  $('#histCount').textContent = '0';
+  $('#histEmptyHint').style.display = 'block';
+});
+
+function isManualMode(){ return $('#mainApp').classList.contains('mode-manual'); }
+
+$('#btnFitAll').addEventListener('click', ()=>{
+  // Fixed extent (see FULL_VIEW_BOUNDS above), not a dynamic fit around whatever's
+  // currently plotted -- previously this fit tightly to only the plotted points/shapes,
+  // so the zoom/framing shifted depending on how many warnings happened to be on the
+  // map, which made "全体表示" unpredictable from one click to the next.
+  map.fitBounds(FULL_VIEW_BOUNDS);
+});
+$('#btnClearMap').addEventListener('click', ()=>{
+  if (isManualMode()){ manualLayer.clearLayers(); } else { msaLayer.clearLayers(); }
+});
+
+/* ---------------------------------------------------------------
+   4b. PDF export — combines a warning's title + body text (as a rasterized image,
+   since jsPDF has no built-in CJK font) with a screenshot of the map exactly as the
+   person has framed it (they're free to pan/zoom after opening the panel, same as
+   ArcGIS's print-layout idea: adjust the view, then export what you see).
+--------------------------------------------------------------- */
+let pdfTarget = null; // { kind:'auto', item } | { kind:'manual', id }
+
+// Matches just the reference-number portion of a title (e.g. "鲁航警629/26" out of
+// "火箭发射—鲁航警629/26") -- reused from extractPlotTitle()'s pattern.
+const REF_NUM_RE = /[\u4e00-\u9fa5]{1,4}航警\d+\/\d+/;
+
+function openPdfPanel(target){
+  pdfTarget = target;
+  const title = target.kind === 'auto' ? target.item.title : (historyMeta.get(target.id)?.title || '');
+  const rawText = target.kind === 'auto' ? target.item.raw_text : (historyMeta.get(target.id)?.raw_text || '');
+  $('#pdfPanelTitle').textContent = title;
+  // Real MSA warning text always leads with the bare reference number + a comma (e.g.
+  // "鲁航警629/26,黄海，自8月3日..."), not the fuller descriptive title shown in the
+  // heading above -- prepend just that part, directly against the body with no blank
+  // line, so it reads exactly like the source text would.
+  const refMatch = title.match(REF_NUM_RE);
+  const prefix = refMatch ? refMatch[0] + ',' : '';
+  $('#pdfPanelText').value = rawText ? `${prefix}${rawText}` : title;
+  $('#pdfPanel').classList.add('show');
+}
+
+// Delegated (not per-render) because these buttons appear in places that get rebuilt or
+// created fresh often: the auto-mode results list, both modes' map popups (Leaflet
+// creates popup content fresh each time one opens). A single document-level listener
+// covers all of them without needing to re-attach handlers on every rebuild.
+document.addEventListener('click', (e)=>{
+  const autoBtn = e.target.closest('button[data-pdf-btn]');
+  if (autoBtn){
+    e.stopPropagation();
+    const it = warningsByUrl.get(autoBtn.dataset.pdfBtn);
+    if (it) openPdfPanel({ kind:'auto', item: it });
+    return;
+  }
+  const manualBtn = e.target.closest('button[data-manual-pdf-btn]');
+  if (manualBtn){
+    e.stopPropagation();
+    const id = manualBtn.dataset.manualPdfBtn;
+    if (historyMeta.has(id)) openPdfPanel({ kind:'manual', id });
+  }
+});
+
+function closePdfPanel(){
+  $('#pdfPanel').classList.remove('show');
+  pdfTarget = null;
+}
+$('#btnPdfCancel').addEventListener('click', closePdfPanel);
+
+async function generatePdf(){
+  if (!pdfTarget) return;
+  if (typeof html2canvas === 'undefined' || !window.jspdf){
+    logLine('PDF出力に必要なライブラリを読み込めませんでした（ネットワーク接続を確認してください）', 'l-err');
+    return;
+  }
+  const isAuto = pdfTarget.kind === 'auto';
+  const title = isAuto ? pdfTarget.item.title : (historyMeta.get(pdfTarget.id)?.title || '');
+
+  const btn = $('#btnPdfGenerate');
+  const originalLabel = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = '生成中...';
+
+  // Hide every floating overlay on the map so the exported screenshot is clean (just
+  // tiles + plotted shapes), then restore them all afterward regardless of success/failure.
+  // OpenStreetMapの利用規約でクレジット表記が必須のため、attributionコントロールだけは
+  // 隠さずそのままキャプチャに含める（既定で右下・小さめ・半透明グレーなので目立たない）。
+  // .poly-label（ポリゴン上に浮かぶ警報タイトル）も、上のタイトル見出しと重複するため
+  // PDF出力時だけ非表示にする（通常のブラウズ時は引き続き表示される）。
+  const toHide = ['#pdfPanel', '.map-toolbar', '.readout', '.scale-note', '.measure-control', '.leaflet-control-zoom', '.leaflet-popup-pane', '.poly-label'];
+  const hidden = toHide.map(sel => Array.from(document.querySelectorAll(sel))).flat();
+  const prevDisplay = hidden.map(el => el.style.display);
+  hidden.forEach(el => el.style.display = 'none');
+
+  // Isolate the map to show ONLY the target's own shapes, so nothing else visible in the
+  // current view gets captured alongside it. Auto mode's shapes sit directly on msaLayer
+  // (a flat LayerGroup), so isolation works at the individual-shape level. Manual mode's
+  // shapes are nested one level deeper (manualLayerGroup contains manualLayer + one
+  // LayerGroup per history entry), and LayerGroup.hasLayer() isn't recursive, so
+  // isolation there works at the whole-sub-LayerGroup level instead. Either way, restored
+  // to its exact original state afterward; visibility/checkbox state for every other item
+  // is left untouched.
+  const removed = []; // [parentLayerGroup, childLayer] pairs to re-add afterward
+  const added = [];   // [parentLayerGroup, childLayer] pairs to remove afterward
+  if (isAuto){
+    warningsByUrl.forEach(it2 => {
+      if (it2 === pdfTarget.item || !it2._shapes) return;
+      it2._shapes.forEach(s => {
+        if (msaLayer.hasLayer(s)){ msaLayer.removeLayer(s); removed.push([msaLayer, s]); }
+      });
+    });
+    (pdfTarget.item._shapes || []).forEach(s => {
+      if (!msaLayer.hasLayer(s)){ msaLayer.addLayer(s); added.push([msaLayer, s]); }
+    });
+  } else {
+    if (manualLayerGroup.hasLayer(manualLayer)){
+      manualLayerGroup.removeLayer(manualLayer); removed.push([manualLayerGroup, manualLayer]);
+    }
+    historyLayers.forEach((lg, id) => {
+      if (id === pdfTarget.id) return;
+      if (manualLayerGroup.hasLayer(lg)){ manualLayerGroup.removeLayer(lg); removed.push([manualLayerGroup, lg]); }
+    });
+    const targetLg = historyLayers.get(pdfTarget.id);
+    if (targetLg && !manualLayerGroup.hasLayer(targetLg)){
+      manualLayerGroup.addLayer(targetLg); added.push([manualLayerGroup, targetLg]);
+    }
+  }
+
+  // Auto mode only: Notice (yellow) / Archive (gray) / Active (red) are a map-browsing
+  // aid, not something meaningful on a printed single-warning PDF -- temporarily restyle
+  // the target's shapes to the same pale red as Active regardless of actual status, then
+  // restore their real style afterward (captured from each shape's live .options so the
+  // restore is exact, not recomputed).
+  const restyled = []; // [shape, previousStyle] pairs to restore afterward
+  if (isAuto){
+    const activeColor = statusColor('active');
+    (pdfTarget.item._shapes || []).forEach(s => {
+      restyled.push([s, { color: s.options.color, fillColor: s.options.fillColor, opacity: s.options.opacity }]);
+      s.setStyle({ color: activeColor.line, fillColor: activeColor.fill, opacity: 0.9 });
+    });
+  }
+
+  const bodyText = $('#pdfPanelText').value.trim();
+  $('#pdfPrintTitle').textContent = title;
+  $('#pdfPrintBody').textContent = bodyText || '(本文なし)';
+
+  try {
+    // Wait for any in-progress pan/zoom animation to fully finish before capturing, so
+    // the screenshot reflects the final, settled view rather than a mid-transition frame.
+    await new Promise(resolve=>{
+      if (!map._animatingZoom && !(map._panAnim && map._panAnim._inProgress)) return resolve();
+      map.once('moveend', resolve);
+      setTimeout(resolve, 1000); // safety fallback in case moveend doesn't fire for some reason
+    });
+    await new Promise(r=>setTimeout(r, 200)); // let the DOM/tiles settle after hiding overlays
+
+    // Capturing #map directly (tiles + shapes together) now that shapes render via
+    // Leaflet's Canvas renderer (see the map's `renderer: L.canvas()` option) instead of
+    // SVG -- html2canvas has a confirmed, longstanding incompatibility with how Leaflet
+    // positions its SVG overlay pane during pan/zoom (multiple upstream bug reports),
+    // which is what caused earlier misalignment. A <canvas> layer is just a pixel bitmap
+    // with no DOM transform for html2canvas to misinterpret, so a direct screenshot is
+    // reliable again.
+    const [textCanvas, mapCanvas] = await Promise.all([
+      html2canvas($('#pdfPrintTemplate'), { backgroundColor:'#ffffff', logging:false, scale:2 }),
+      html2canvas($('#map'), { useCORS:true, backgroundColor:'#ffffff', logging:false, scale:2 }),
+    ]);
+
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({ orientation:'portrait', unit:'mm', format:'a4' });
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const margin = 16;
+    const contentWidth = pageWidth - margin*2;
+    let y = margin;
+
+    // Title + body block (rasterized, see #pdfPrintTemplate above)
+    const textImgH = contentWidth * (textCanvas.height / textCanvas.width);
+    doc.addImage(textCanvas.toDataURL('image/png'), 'PNG', margin, y, contentWidth, textImgH);
+    y += textImgH + 8;
+
+    // Map screenshot, scaled to fill whatever vertical space remains on the page
+    const mapImgH = contentWidth * (mapCanvas.height / mapCanvas.width);
+    const availH = pageHeight - margin - y;
+    const finalH = Math.min(mapImgH, availH);
+    const finalW = finalH === mapImgH ? contentWidth : contentWidth * (finalH / mapImgH);
+    doc.addImage(mapCanvas.toDataURL('image/jpeg', 0.92), 'JPEG', margin + (contentWidth-finalW)/2, y, finalW, finalH);
+
+    const safeTitle = title.replace(/[\\/:*?"<>|]/g, '_').slice(0, 60) || 'warning';
+    doc.save(`${safeTitle}.pdf`);
+    logLine(`PDFを生成しました: ${safeTitle}.pdf`, 'l-ok');
+    closePdfPanel();
+  } catch(err){
+    console.error(err);
+    logLine('PDF生成に失敗しました: ' + err.message +
+      '（地図タイルの読み込み元がCORSを許可していない可能性があります）', 'l-err');
+  } finally {
+    hidden.forEach((el, i) => el.style.display = prevDisplay[i]);
+    removed.forEach(([lg, s]) => lg.addLayer(s));
+    added.forEach(([lg, s]) => lg.removeLayer(s));
+    restyled.forEach(([s, prevStyle]) => s.setStyle(prevStyle));
+    btn.disabled = false;
+    btn.textContent = originalLabel;
+  }
+}
+$('#btnPdfGenerate').addEventListener('click', generatePdf);
+
+/* ---------------------------------------------------------------
+   5. Fetch (with CORS-proxy fallback chain) + HTML parsing
+--------------------------------------------------------------- */
+/* ---------------------------------------------------------------
+   6. Warning store + rendering
+--------------------------------------------------------------- */
+const warningsByUrl = new Map(); // url -> {title,url,date,bureau,military,points,detailFetched}
+
+/* ---------------------------------------------------------------
+   6a. New-warning notifications ("bell") — flags items that showed up in a
+   military.geojson import (initial load, drag&drop, or the 15-min auto-refresh)
+   that weren't there before, so the person doesn't have to eyeball the whole
+   Active/Archive list every 15 minutes to notice something new appeared.
+
+   Identity uses canonicalKey(), which strips the site's rotating WAF access
+   token (?hav=...) from the URL -- mirrors msa_scraper.py's
+   _canonical_article_key(). Without this, the exact same warning could look
+   "new" again on a later refresh just because its token happened to rotate.
+
+   State persists in localStorage (this is a plain local file the person runs
+   in their own browser, not a claude.ai artifact, so ordinary localStorage is
+   fine here — unlike Artifacts, there's no window.storage sandbox to use
+   instead) so closing/reopening the tab doesn't cause a flood of false
+   "new" notifications for things already seen in a previous session.
+--------------------------------------------------------------- */
+function canonicalKey(url){ return (url || '').split('?')[0]; }
+
+const SEEN_KEY = 'geoplotMil_seenWarningKeys';
+const PENDING_KEY = 'geoplotMil_pendingNotifications';
+let seenKeys = new Set();
+let pendingNotifications = new Map(); // canonicalKey -> {key,title,bureau,date,url,points}
+let hasImportedOnce = false; // first import just baselines "seen"; nothing is "new" yet
+
+try{ seenKeys = new Set(JSON.parse(localStorage.getItem(SEEN_KEY) || '[]')); }catch(e){ /* ignore corrupt storage */ }
+try{
+  (JSON.parse(localStorage.getItem(PENDING_KEY) || '[]')).forEach(p => pendingNotifications.set(p.key, p));
+}catch(e){ /* ignore corrupt storage */ }
+// if we're resuming with pending items already saved, this isn't a truly first import
+if (pendingNotifications.size || seenKeys.size) hasImportedOnce = true;
+
+function persistNotificationState(){
+  try{
+    localStorage.setItem(SEEN_KEY, JSON.stringify([...seenKeys].slice(-4000))); // cap growth
+    localStorage.setItem(PENDING_KEY, JSON.stringify([...pendingNotifications.values()]));
+  }catch(e){ /* storage full/unavailable — notifications still work for this session */ }
+}
+
+function updateNotifBadge(){
+  const n = pendingNotifications.size;
+  const badge = $('#notifBadge');
+  badge.textContent = n > 99 ? '99+' : String(n);
+  badge.style.display = n ? 'flex' : 'none';
+  $('#btnNotifBell').classList.toggle('has-new', n > 0);
+}
+
+function registerImportedItemsForNotifications(items){
+  // items: array of {title,url,date,bureau,points}. Called once per importGeoJSON() run.
+  if (!hasImportedOnce){
+    // First-ever import (or first import this session with no prior localStorage state):
+    // baseline everything as "already seen" rather than announcing the whole initial
+    // batch as new -- a wall of "new" notifications on first connect isn't useful.
+    items.forEach(it => seenKeys.add(canonicalKey(it.url)));
+    hasImportedOnce = true;
+    persistNotificationState();
+    updateNotifBadge();
+    return;
+  }
+  let addedAny = false;
+  items.forEach(it=>{
+    const ck = canonicalKey(it.url);
+    if (seenKeys.has(ck)) return;
+    seenKeys.add(ck);
+    if (!pendingNotifications.has(ck)){
+      pendingNotifications.set(ck, {
+        key: ck, title: it.title, bureau: it.bureau, date: it.date, url: it.url,
+        points: (it.points || []).map(p=>({lat:p.lat, lon:p.lon})),
+      });
+      addedAny = true;
+    }
+  });
+  if (addedAny) renderNotifPanel();
+  persistNotificationState();
+  updateNotifBadge();
+}
+
+function renderNotifPanel(){
+  const list = $('#notifList');
+  const items = [...pendingNotifications.values()];
+  $('#notifEmptyHint').style.display = items.length ? 'none' : 'block';
+  list.innerHTML = items.map(it => `
+    <div class="notif-item" data-key="${esc(it.key)}">
+      <div class="notif-item-main">
+        <div class="notif-item-title">${esc(it.title)}</div>
+        <div class="notif-item-meta">${esc(it.bureau)}　${esc(it.date||'')}</div>
+      </div>
+      <button class="notif-item-dismiss" data-dismiss="${esc(it.key)}" title="この通知を消す">✕</button>
+    </div>`).join('');
+  list.querySelectorAll('.notif-item-dismiss').forEach(btn=>{
+    btn.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      pendingNotifications.delete(btn.dataset.dismiss);
+      persistNotificationState(); updateNotifBadge(); renderNotifPanel();
+    });
+  });
+  list.querySelectorAll('.notif-item').forEach(div=>{
+    div.addEventListener('click', ()=>{
+      const it = pendingNotifications.get(div.dataset.key);
+      if (!it) return;
+      if (!$('#mainApp').classList.contains('mode-auto')) enterMode('auto');
+      $('#notifPanel').style.display = 'none';
+      if (it.points && it.points.length){
+        const b = L.latLngBounds(it.points.map(p=>[p.lat,p.lon]));
+        if (b.isValid()) map.fitBounds(b.pad(0.4));
+      }
+      pendingNotifications.delete(it.key);
+      persistNotificationState(); updateNotifBadge(); renderNotifPanel();
+    });
+  });
+}
+
+$('#btnNotifBell').addEventListener('click', (e)=>{
+  e.stopPropagation();
+  const panel = $('#notifPanel');
+  panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+});
+$('#btnNotifClearAll').addEventListener('click', ()=>{
+  pendingNotifications.clear();
+  persistNotificationState(); updateNotifBadge(); renderNotifPanel();
+});
+document.addEventListener('click', (e)=>{
+  const panel = $('#notifPanel');
+  if (panel.style.display === 'block' && !panel.contains(e.target) && e.target.id !== 'btnNotifBell'){
+    panel.style.display = 'none';
+  }
+});
+updateNotifBadge();
+renderNotifPanel();
+
+function logLine(msg, cls=''){
+  const log = $('#fetchLog');
+  const div = document.createElement('div');
+  if (cls) div.className = cls;
+  div.textContent = `[${new Date().toLocaleTimeString('ja-JP')}] ${msg}`;
+  log.appendChild(div);
+  log.scrollTop = log.scrollHeight;
+  while (log.childElementCount > 60) log.removeChild(log.firstChild);
+}
+
+let validityTab = 'active';
+let currentTabItems = []; // items currently shown under the active tab (active/archive/all) — used by the bulk show/hide buttons
+let archiveBureauFilter = ''; // '' = すべて。Archiveタブでのみ効く(他のタブでは無視される)
+// 海事局の絞り込みドロップダウンの並び順。msa_scraper.py の BUREAUS と同じ、
+// 公式サイト(https://www.msa.gov.cn/)のメニュー掲載順。
+const BUREAU_SITE_ORDER = [
+  '上海海事局','天津海事局','辽宁海事局','河北海事局','山东海事局','浙江海事局',
+  '福建海事局','广东海事局','广西海事局','海南海事局','长江海事局','江苏海事局',
+  '深圳海事局','连云港海事局',
+];
+
+function getValidityStatus(it){
+  // A later "撤销/撤消" (revocation) notice can end a warning before its stated
+  // validity window would -- see msa_scraper.py's extract_cancelled_ids(). This takes
+  // priority over the date-based check below even when validity is unknown, since
+  // "revoked" is a stronger, explicit signal than "we don't know when it ends".
+  if (it.revoked) return 'archive';
+  if (!it.validity) return 'unknown';
+  const now = Date.now();
+  if (it.validity.start && it.validity.start.getTime() > now) return 'notice'; // validity window hasn't started yet -- calling this "Active" would be wrong
+  return it.validity.end.getTime() >= now ? 'active' : 'archive';
+}
+function formatValidity(v){
+  // Show the original phrase(s) from the warning text as-is (e.g. "8月4日至5日，每天0600时至2000时")
+  // rather than a reformatted summary -- MSA warnings phrase their validity window in many
+  // different ways, and showing the source text verbatim avoids any reformatting ambiguity.
+  const raws = v.periods && v.periods.length ? v.periods.map(p=>p.raw) : [];
+  const text = raws.length ? raws.join(' ／ ') : '(原文表記を再構成できず)';
+  return `${text}（北京時間）`;
+}
+
+// Zooms/pans the map to frame a single item's plotted shapes -- shared by clicking a
+// warn-item card and by the "PDF出力" button (which needs the same framing before the
+// person fine-tunes zoom/pan for the export). animate:false is used by the PDF flow so
+// there's no animation left to still be running by the time a screenshot is taken.
+function focusItemOnMap(it, {animate=true}={}){
+  const b = L.latLngBounds(it.points.map(p=>[p.lat,p.lon]));
+  if (b.isValid()) map.fitBounds(b.pad(0.4), {animate});
+  (it.groups||[]).forEach(grp=>{
+    if (grp.length===1) map.setView([grp[0].lat,grp[0].lon], Math.max(map.getZoom(),9), {animate});
+  });
+}
+
+function renderWarnList(){
+  const container = $('#warnList');
+  container.innerHTML = '';
+  const base = Array.from(warningsByUrl.values()).filter(it => it.military);
+
+  const counts = { active:0, notice:0, archive:0, unknown:0 };
+  base.forEach(it => counts[getValidityStatus(it)]++);
+  $('#tabCountActive').textContent = counts.active + counts.unknown; // unknown-validity items surface under Active so nothing silently disappears
+  $('#tabCountNotice').textContent = counts.notice;
+  $('#tabCountArchive').textContent = counts.archive;
+  $('#tabCountAll').textContent = base.length;
+
+  // Archiveタブでのみ、海事局の絞り込みドロップダウンを出す。選択肢はArchive状態の
+  // 項目に実在する海事局名だけを毎回列挙し直す(件数の変化で選べる局が増減するため)。
+  // 並び順はmsa_scraper.py の BUREAUS と同じ、公式サイトの掲載順(上海→天津→…)。
+  // リストに無い局名が来た場合(将来局が追加された等)は末尾にそのまま追加する。
+  const archiveFilterRow = $('#archiveBureauFilterRow');
+  const archiveFilterSelect = $('#archiveBureauFilter');
+  if (validityTab === 'archive') {
+    archiveFilterRow.style.display = '';
+    const bureausInArchive = Array.from(new Set(
+      base.filter(it => getValidityStatus(it) === 'archive').map(it => it.bureau).filter(Boolean)
+    )).sort((a,b)=> {
+      const ia = BUREAU_SITE_ORDER.indexOf(a), ib = BUREAU_SITE_ORDER.indexOf(b);
+      if (ia === -1 && ib === -1) return a.localeCompare(b, 'ja');
+      if (ia === -1) return 1;  // 未知の局名は末尾へ
+      if (ib === -1) return -1;
+      return ia - ib;
+    });
+    const prevSelection = archiveFilterSelect.value;
+    archiveFilterSelect.innerHTML = '<option value="">海事局: すべて</option>'
+      + bureausInArchive.map(b => `<option value="${esc(b)}">${esc(b)}</option>`).join('');
+    // 選んでいた局がまだ選択肢に残っていれば維持、無くなっていれば「すべて」に戻す
+    archiveFilterSelect.value = bureausInArchive.includes(prevSelection) ? prevSelection : '';
+    archiveBureauFilter = archiveFilterSelect.value;
+  } else {
+    archiveFilterRow.style.display = 'none';
+  }
+
+  const items = base
+    .filter(it=>{
+      if (validityTab === 'all') return true;
+      const status = getValidityStatus(it);
+      if (validityTab === 'active') return status === 'active' || status === 'unknown';
+      if (validityTab === 'archive') return status === 'archive' && (!archiveBureauFilter || it.bureau === archiveBureauFilter);
+      return status === validityTab; // 'notice'
+    })
+    .sort((a,b)=> (b.date||'').localeCompare(a.date||''));
+  $('#warnEmptyHint').style.display = items.length ? 'none' : 'block';
+  currentTabItems = items; // remembered for the "このタブを全て表示/非表示" bulk buttons below
+
+  items.forEach(it=>{
+    const div = document.createElement('div');
+    div.className = 'warn-item' + (it.military ? ' mil' : '');
+    const hasPoints = it.points && it.points.length > 0;
+    if (hasPoints) div.classList.add('clickable');
+    const coordHtml = it.lastError
+      ? `<div class="coords-none" style="color:var(--red)">取得失敗: ${esc(it.lastError)}</div>`
+      : (it.detailFetched && !hasPoints ? `<div class="coords-none">座標未検出（本文に見つかりませんでした）</div>` : '');
+    const status = getValidityStatus(it);
+    const validityHtml = it.validity
+      ? `<div class="validity-badge ${status}">有効期間 ・ ${esc(formatValidity(it.validity))}</div>`
+      : (it.detailFetched ? `<div class="validity-badge unknown">期間不明</div>` : '');
+    const revokedHtml = it.revoked
+      ? `<div class="validity-badge archive">撤回済み${it.revoked_by && it.revoked_by.length ? ' ・ ' + esc(it.revoked_by.join('、')) + 'により撤回' : ''}</div>`
+      : '';
+    if (hasPoints && it._mapVisible === undefined) it._mapVisible = (status !== 'archive');
+    const mapToggleHtml = hasPoints
+      ? `<label class="check-row" style="margin-top:6px;"><input type="checkbox" data-map-toggle="${esc(canonicalKey(it.url))}" ${it._mapVisible ? 'checked' : ''}> 地図に表示</label>`
+      : '';
+    div.innerHTML = `
+      <span class="wtitle">${esc(it.title)}</span>
+      <div class="wmeta"><span>${esc(it.bureau)}</span><span>${esc(it.date||'')}</span></div>
+      ${coordHtml}
+      ${validityHtml}
+      ${revokedHtml}
+      ${mapToggleHtml}
+      <div class="wactions">
+        <a class="btn small ghost" href="${esc(it.url)}" target="_blank" rel="noopener">原文を開く</a>
+        ${hasPoints ? `<button class="btn small ghost btn-pdf" data-pdf-btn="${esc(canonicalKey(it.url))}">${PDF_ICON_SVG}PDF出力</button>` : ''}
+      </div>`;
+    if (hasPoints){
+      div.addEventListener('click', (e)=>{
+        if (e.target.closest('a, button, label')) return; // don't hijack the "原文を開く"/"PDF出力" buttons / visibility checkbox
+        focusItemOnMap(it);
+      });
+    }
+    container.appendChild(div);
+  });
+
+  $$('input[data-map-toggle]').forEach(chk=>{
+    chk.addEventListener('change', ()=>{
+      const it = warningsByUrl.get(chk.dataset.mapToggle);
+      if (it) setItemMapVisible(it, chk.checked);
+    });
+  });
+}
+
+function popupHtml(it, extra=''){
+  const validityNote = it.validity
+    ? `<div class="pop-mono">有効期間: ${esc(formatValidity(it.validity))}</div>`
+    : '';
+  const revokedNote = it.revoked
+    ? `<div class="pop-mono" style="color:var(--red);">撤回済み${it.revoked_by && it.revoked_by.length ? '（' + esc(it.revoked_by.join('、')) + 'により）' : ''}</div>`
+    : '';
+  const pdfBtn = (it.points && it.points.length)
+    ? `<button class="pop-link pdf-pop-link" data-pdf-btn="${esc(canonicalKey(it.url))}">${PDF_ICON_SVG}PDF出力</button>`
+    : '';
+  return `<div class="pop-title">${esc(it.title)}</div><div class="pop-mono">${esc(it.bureau)} / ${esc(it.date)}</div>${validityNote}${revokedNote}${extra}<a href="${esc(it.url)}" target="_blank" rel="noopener">原文を開く →</a>${pdfBtn}`;
+}
+
+// Manual-mode equivalent of popupHtml() -- there's no bureau/date/URL/validity here (that
+// analysis was deliberately removed from manual mode), just whatever title could be
+// guessed from the pasted text (see extractPlotTitle) plus a PDF export entry point.
+function manualPopupHtml(id){
+  const meta = historyMeta.get(id);
+  if (!meta) return '';
+  return `<div class="pop-title">${esc(meta.title)}</div><button class="pop-link pdf-pop-link" data-manual-pdf-btn="${esc(id)}" style="margin-top:6px;">${PDF_ICON_SVG}PDF出力</button>`;
+}
+
+// Extracts the short warning-number label from a full title, e.g.
+// "军事训练—琼航警141/26" -> "琼航警141/26", for the on-map polygon label.
+function shortLabel(title){
+  const parts = String(title||'').split(/[—–]/);
+  return (parts.length > 1 ? parts[parts.length-1] : title).trim();
+}
+
+function statusColor(status){
+  if (status === 'archive') return { line:'#8a94a3', fill:'#565f6b' }; // gray: past
+  if (status === 'notice') return { line:'#d9c22e', fill:'#8f7d0e' }; // lemon yellow: validity window hasn't started yet
+  return { line:'#ff5f5f', fill:'#b03a3a' }; // red: active / unknown
+}
+
+function plotMsaItem(it){
+  if (!it.groups || !it.groups.length) return;
+  // remove any shapes from a previous plot of this same item (e.g. re-plotted after retry)
+  if (it._shapes) it._shapes.forEach(s => msaLayer.removeLayer(s));
+  it._shapes = [];
+
+  const status = getValidityStatus(it);
+  const isArchive = status === 'archive';
+  if (it._mapVisible === undefined) it._mapVisible = !isArchive; // Active/Notice/unknown shown by default; Archive hidden until opted in
+  const c = statusColor(status);
+  const label = shortLabel(it.title);
+  it.groups.forEach(grp=>{
+    let shape;
+    if (grp.length === 1){
+      const p = grp[0];
+      shape = L.circleMarker([p.lat,p.lon], { radius:4, color:c.line, weight:1.3, fillColor:c.fill, fillOpacity:0.55 });
+      shape.bindPopup(popupHtml(it, `<div class="pop-mono">${decToDMS(p.lat,true)} ${decToDMS(p.lon,false)}</div>`));
+      shape.bindTooltip(label, { permanent:true, direction:'top', offset:[0,-6], className:'poly-label' });
+    } else if (grp.length === 2){
+      // two points: a line/track (e.g. cable, patrol line), not an enclosed area
+      const latlngs = grp.map(p=>[p.lat,p.lon]);
+      shape = L.polyline(latlngs, { color:c.line, weight:2, dashArray:'6,4', opacity:isArchive?.65:.9 });
+      shape.bindPopup(popupHtml(it));
+      shape.bindTooltip(label, { permanent:true, direction:'center', className:'poly-label' });
+    } else {
+      // 3+ points: closed restricted-area / exercise-zone polygon (matches MSA "各点连线内水域" style)
+      const latlngs = grp.map(p=>[p.lat,p.lon]);
+      shape = L.polygon(latlngs, { color:c.line, weight:1.5, fillColor:c.fill, fillOpacity:0.14 });
+      shape.bindPopup(popupHtml(it));
+      shape.bindTooltip(label, { permanent:true, direction:'center', className:'poly-label' });
+    }
+    it._shapes.push(shape);
+    if (it._mapVisible) shape.addTo(msaLayer);
+  });
+}
+
+function setItemMapVisible(it, visible){
+  it._mapVisible = visible;
+  if (!it._shapes) return;
+  it._shapes.forEach(s => {
+    if (visible) s.addTo(msaLayer);
+    else msaLayer.removeLayer(s);
+  });
+}
+
+
+$$('#validityTabs .tab-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    validityTab = btn.dataset.tab;
+    $$('#validityTabs .tab-btn').forEach(b=> b.classList.toggle('active', b===btn));
+    renderWarnList();
+  });
+});
+
+$('#archiveBureauFilter').addEventListener('change', ()=>{
+  archiveBureauFilter = $('#archiveBureauFilter').value;
+  renderWarnList();
+});
+
+// "このタブを全て表示/非表示" — bulk-toggles map visibility for every item with coordinates
+// that's currently listed under the selected tab (Active / Archive / 全て). Items without
+// coordinates have no map presence and are silently skipped.
+function bulkSetTabVisibility(visible){
+  currentTabItems.forEach(it=>{
+    if (it.points && it.points.length) setItemMapVisible(it, visible);
+  });
+  renderWarnList();
+}
+$('#btnBulkShow').addEventListener('click', ()=> bulkSetTabVisibility(true));
+$('#btnBulkHide').addEventListener('click', ()=> bulkSetTabVisibility(false));
+
+/* ---------------------------------------------------------------
+   8b. Import GeoJSON produced by msa_scraper.py (server-side, no CORS)
+--------------------------------------------------------------- */
+function geometryToGroup(geom){
+  if (geom.type === 'Point'){
+    const [lon,lat] = geom.coordinates;
+    return [{ lat, lon, fmt:'IMPORT' }];
+  }
+  if (geom.type === 'LineString'){
+    return geom.coordinates.map(([lon,lat]) => ({ lat, lon, fmt:'IMPORT' }));
+  }
+  if (geom.type === 'Polygon'){
+    let ring = geom.coordinates[0] || [];
+    if (ring.length > 1){
+      const first = ring[0], last = ring[ring.length - 1];
+      if (first[0] === last[0] && first[1] === last[1]) ring = ring.slice(0, -1); // drop auto-closing duplicate
+    }
+    return ring.map(([lon,lat]) => ({ lat, lon, fmt:'IMPORT' }));
+  }
+  return null;
+}
+
+function importGeoJSON(text, sourceLabel='インポート'){
+  let gj;
+  try{ gj = JSON.parse(text); }
+  catch(e){ logLine('インポート失敗: JSON解析エラー — '+e.message, 'l-err'); return; }
+
+  const features = gj.features;
+  if (!features){
+    logLine('インポート失敗: FeatureCollection形式のGeoJSONではありません', 'l-err');
+    return;
+  }
+
+  // group by url (so multiple areas/lines belonging to the same warning stay attached to
+  // it), and within that by group_index (so a redundant standalone Point sharing a
+  // group_index with a Polygon/LineString doesn't get rendered twice as both a pin and a shape)
+  const grouped = new Map();
+  features.forEach(f=>{
+    const props = f.properties || {};
+    // canonicalKey() strips the site's rotating WAF access token (?hav=...) so the same
+    // underlying warning keeps one stable identity across re-imports even though its
+    // token (and therefore the raw url) changes every time msa_scraper.py re-lists it.
+    // Using the raw url here would silently lose any per-item state (e.g. "地図に表示"
+    // visibility) on every 15-min auto-refresh once a token rotated.
+    const key = props.url ? canonicalKey(props.url) : (sourceLabel + '-' + (props.title || Math.random().toString(36).slice(2)));
+    if (!grouped.has(key)){
+      grouped.set(key, { title: props.title || '(無題)', url: props.url || '', date: props.date || '', bureau: props.bureau || sourceLabel, byIndex: new Map(), noIndex: [], validStart: props.valid_start || null, validEnd: props.valid_end || null, validRaw: props.valid_raw || null, rawText: props.raw_text || null, detailGaveUp: !!props.detail_gave_up, revoked: !!props.revoked, revokedBy: props.revoked_by || null });
+    }
+    if (!f.geometry) return; // metadata-only feature (no coordinates could be extracted) — already registered above
+    const grp = geometryToGroup(f.geometry);
+    if (!grp || !grp.length) return;
+    const entry = grouped.get(key);
+    const gi = props.group_index;
+    const rank = f.geometry.type === 'Polygon' ? 3 : f.geometry.type === 'LineString' ? 2 : 1;
+    if (gi === undefined || gi === null){
+      entry.noIndex.push(grp);
+    } else if (!entry.byIndex.has(gi) || rank > entry.byIndex.get(gi).rank){
+      entry.byIndex.set(gi, { grp, rank });
+    }
+  });
+
+  if (!grouped.size){
+    logLine('インポート: 座標を含むFeatureが見つかりませんでした', 'l-warn');
+    return;
+  }
+
+  let n = 0, totalPts = 0;
+  const allLatLngs = [];
+  const importedItems = [];
+  grouped.forEach((val, key)=>{
+    const groups = [...[...val.byIndex.values()].map(v=>v.grp), ...val.noIndex];
+    const validity = (val.validStart && val.validEnd)
+      ? { start: new Date(val.validStart), end: new Date(val.validEnd),
+          periods: (val.validRaw || []).map(r => ({ raw: r })) }
+      : null;
+    const it = { title: val.title, url: val.url, date: val.date, bureau: val.bureau, groups, points: groups.flat(), validity, military:true, detailFetched:true, lastError:null, raw_text: val.rawText, detail_gave_up: val.detailGaveUp, revoked: val.revoked, revoked_by: val.revokedBy };
+    // Re-imports (the 15-min auto-refresh, or a manual re-drop) build a brand-new `it`
+    // object every time. Two things must carry forward from the previous entry with the
+    // same canonicalKey (see above), or a rotated access token would reset/duplicate them:
+    //   - _mapVisible: the "地図に表示" checkbox / tab-level "全て非表示" choice
+    //   - _shapes: the actual Leaflet layers already on msaLayer for this item. Without
+    //     this, plotMsaItem()'s own "remove shapes from a previous plot" cleanup (it
+    //     checks `it._shapes`) has nothing to find on the fresh object, so the OLD
+    //     shapes never get removed and each re-import just draws another copy on top —
+    //     stacking duplicates every 15 minutes instead of replacing them.
+    const prev = warningsByUrl.get(key);
+    if (prev){
+      if (prev._mapVisible !== undefined) it._mapVisible = prev._mapVisible;
+      it._shapes = prev._shapes;
+    }
+    warningsByUrl.set(key, it);
+    plotMsaItem(it);
+    n++; totalPts += it.points.length;
+    it.points.forEach(p=> allLatLngs.push([p.lat, p.lon]));
+    if (it.url) importedItems.push(it); // items without a stable url can't be tracked for "new" notifications
+  });
+
+  registerImportedItemsForNotifications(importedItems);
+  logLine(`インポート完了: ${n}件の警告・${totalPts}点をプロットしました（${sourceLabel}）`, 'l-ok');
+  renderWarnList();
+  if (allLatLngs.length) map.fitBounds(L.latLngBounds(allLatLngs).pad(0.3));
+}
+
+function handleImportFile(file){
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => importGeoJSON(reader.result, file.name);
+  reader.onerror = () => logLine('ファイル読込エラー: ' + reader.error, 'l-err');
+  reader.readAsText(file);
+}
+
+/* ---------------------------------------------------------------
+   8c. Persistent connection — re-reads military.geojson every 15 minutes so the
+   user doesn't have to manually re-import after every msa_scraper.py run.
+   Two ways to connect, chosen automatically based on how the file was picked:
+     - File System Access API (showOpenFilePicker): re-reads the local file
+       straight off disk. Chrome/Edge only; needs a user click each session to
+       grant read permission (a real browser security gate that can't be
+       scripted around). Other browsers fall back to a one-shot file read
+       with no auto-refresh unless the URL method below is used instead.
+     - Plain HTTP fetch (connectUrl): re-fetches a URL every 15 minutes. Works
+       in any browser, and needs zero clicks if the page itself was loaded
+       over http(s) (not file://) with a `?geojson=<url>` query param -- e.g.
+       when opened via a local static file server (see start_msa_loop.bat),
+       which is what makes fully hands-off startup possible.
+--------------------------------------------------------------- */
+const FILE_REFRESH_MS = 30 * 60 * 1000; // 30 minutes, matching the scraper's typical cadence
+const supportsFSAccess = 'showOpenFilePicker' in window;
+let connectedFileHandle = null;
+let connectedUrl = null;
+let fileRefreshTimer = null;
+
+function fmtClock(d){ return `${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`; }
+
+function updateConnectionUI(){
+  const el = $('#fileConnectionStatus');
+  if (connectedFileHandle){
+    el.style.display = 'block';
+    el.innerHTML = `🔗 接続中: <b style="color:var(--text)">${esc(connectedFileHandle.name)}</b><br>30分ごとに自動再読込します（次回目安 ${fmtClock(new Date(Date.now()+FILE_REFRESH_MS))}）<div class="btn-row" style="margin-top:6px;"><button class="btn small ghost" id="btnDisconnectFile">接続を解除</button></div>`;
+    $('#btnDisconnectFile').addEventListener('click', disconnectFile);
+  } else if (connectedUrl){
+    el.style.display = 'block';
+    el.innerHTML = `🔗 接続中(URL): <b style="color:var(--text)">${esc(connectedUrl)}</b><br>30分ごとに自動再読込します（次回目安 ${fmtClock(new Date(Date.now()+FILE_REFRESH_MS))}）<div class="btn-row" style="margin-top:6px;"><button class="btn small ghost" id="btnDisconnectFile">接続を解除</button></div>`;
+    $('#btnDisconnectFile').addEventListener('click', disconnectFile);
+  } else {
+    el.style.display = 'none';
+    el.innerHTML = '';
+  }
+}
+
+async function ensureReadPermission(handle){
+  if (!handle.queryPermission) return true; // API not fully supported; proceed optimistically
+  let perm = await handle.queryPermission({ mode: 'read' });
+  if (perm !== 'granted' && handle.requestPermission){
+    perm = await handle.requestPermission({ mode: 'read' });
+  }
+  return perm === 'granted';
+}
+
+async function connectFileHandle(handle){
+  const ok = await ensureReadPermission(handle);
+  if (!ok){ logLine('ファイルの読み取り権限が許可されませんでした', 'l-err'); return; }
+  connectedUrl = null; // the two connection methods are mutually exclusive
+  connectedFileHandle = handle;
+  const file = await handle.getFile();
+  handleImportFile(file);
+  updateConnectionUI();
+  if (fileRefreshTimer) clearInterval(fileRefreshTimer);
+  fileRefreshTimer = setInterval(rereadConnectedFile, FILE_REFRESH_MS);
+  logLine(`フォルダ接続完了: ${handle.name}（30分ごとに自動再読込します）`, 'l-ok');
+}
+
+async function rereadConnectedFile(){
+  if (!connectedFileHandle) return;
+  try{
+    const file = await connectedFileHandle.getFile();
+    handleImportFile(file);
+    updateConnectionUI();
+    logLine(`自動再読込: ${connectedFileHandle.name}`, 'l-ok');
+  }catch(e){
+    logLine(`自動再読込に失敗しました: ${e.message}（ファイルが移動/削除された可能性があります）`, 'l-err');
+  }
+}
+
+async function connectUrl(url){
+  connectedFileHandle = null; // the two connection methods are mutually exclusive
+  connectedUrl = url;
+  try{
+    await rereadConnectedUrl();
+  }catch(e){
+    connectedUrl = null;
+    updateConnectionUI();
+    return;
+  }
+  updateConnectionUI();
+  if (fileRefreshTimer) clearInterval(fileRefreshTimer);
+  fileRefreshTimer = setInterval(rereadConnectedUrl, FILE_REFRESH_MS);
+  logLine(`URL接続完了: ${url}（30分ごとに自動再読込します）`, 'l-ok');
+}
+
+async function rereadConnectedUrl(){
+  if (!connectedUrl) return;
+  try{
+    const res = await fetch(connectedUrl, { cache: 'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const text = await res.text();
+    importGeoJSON(text, connectedUrl);
+    updateConnectionUI();
+    logLine(`自動再読込: ${connectedUrl}`, 'l-ok');
+  }catch(e){
+    logLine(`自動再読込に失敗しました: ${e.message}（サーバーが停止しているか、URLが誤っている可能性があります）`, 'l-err');
+    throw e;
+  }
+}
+
+function disconnectFile(){
+  connectedFileHandle = null;
+  connectedUrl = null;
+  if (fileRefreshTimer){ clearInterval(fileRefreshTimer); fileRefreshTimer = null; }
+  updateConnectionUI();
+  logLine('接続を解除しました');
+}
+
+$('#btnConnectUrl').addEventListener('click', ()=>{
+  const url = $('#geojsonUrlInput').value.trim();
+  if (!url){ logLine('URLを入力してください', 'l-err'); return; }
+  connectUrl(url);
+});
+$('#geojsonUrlInput').addEventListener('keydown', (e)=>{
+  if (e.key === 'Enter') $('#btnConnectUrl').click();
+});
+
+/* ---------------------------------------------------------------
+   9. Init
+--------------------------------------------------------------- */
+renderCoordList([]);
+renderWarnList();
+
+function enterMode(mode){
+  const app = $('#mainApp');
+  app.classList.remove('mode-auto','mode-manual');
+  app.classList.add(mode === 'manual' ? 'mode-manual' : 'mode-auto');
+  $$('#modeTabs .mode-tab').forEach(btn=> btn.classList.toggle('active', btn.dataset.mode === mode));
+  // Each mode only shows its own shapes on the map -- auto-mode results (msaLayer) vs.
+  // manual-mode plots (manualLayerGroup, which itself wraps manualLayer + every history
+  // entry) are mutually exclusive on the map. Without this, switching modes left the
+  // previous mode's shapes visibly on the map.
+  const wantLayer = mode === 'manual' ? manualLayerGroup : msaLayer;
+  [manualLayerGroup, msaLayer].forEach(lg=>{
+    const shouldShow = (lg === wantLayer);
+    if (shouldShow && !map.hasLayer(lg)) lg.addTo(map);
+    if (!shouldShow && map.hasLayer(lg)) map.removeLayer(lg);
+  });
+  // Leaflet measures its container on init; if the map was created while #mainApp was
+  // display:none (0x0), tiles render blank until it's told the real size now exists.
+  setTimeout(()=>{
+    map.invalidateSize();
+    // Now that #mainApp has real layout, redo the initial "frame the Chinese coastline"
+    // fit -- the one fired right after L.map() ran against a 0x0 container and produced
+    // a bogus (very zoomed-out) view. Only ever do this once, so switching modes later
+    // doesn't reset whatever the user has panned/zoomed to.
+    if (!_initialViewFitted){
+      _initialViewFitted = true;
+      map.fitBounds(FULL_VIEW_BOUNDS);
+    }
+  }, 50);
+  logLine(mode === 'manual'
+    ? '手動貼り付けモードで開始しました。座標を貼り付けてプロットしてください。'
+    : '自動収集モードで開始しました。military.geojsonをファイル選択・ドラッグ＆ドロップ・URL指定のいずれかで取り込んでください。URLを指定すれば30分ごとに自動再取込できます（ローカルサーバー経由推奨、start_msa_loop.bat参照）。'
+  );
+}
+$$('#modeTabs .mode-tab').forEach(btn=>{
+  btn.addEventListener('click', ()=> enterMode(btn.dataset.mode));
+});
+
+// Startup: no landing/mode-select screen anymore -- go straight into 自動収集モード
+// (MAP・自動更新), matching the other two modes' access via the header tabs at any time.
+enterMode('auto');
+
+// Zero-click connect: if the page was opened with ?geojson=<url> (e.g. by
+// start_msa_loop.bat opening http://127.0.0.1:8743/geoplot-mil.html?geojson=msa_out/military.geojson
+// via a local static file server), connect immediately -- no folder-picker click, no
+// permission dialog, works in any browser.
+(function autoStartFromUrl(){
+  const params = new URLSearchParams(location.search);
+  const geojsonUrl = params.get('geojson');
+  if (!geojsonUrl) return;
+  $('#geojsonUrlInput').value = geojsonUrl;
+  connectUrl(geojsonUrl);
+})();
+
+
+</script>
+</body>
+</html>
