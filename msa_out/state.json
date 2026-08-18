@@ -1553,11 +1553,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0e0565dd7d794274869d999fd1e6e7e3.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-08-18",
     "detail_fetched": false,
     "first_seen": "2026-08-18T08:20:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "安海航警30/26",
     "points": [],
     "revoked": false,
     "title": "关于“合兴7”轮水上试验活动的航行警告—安海航警30/26",
