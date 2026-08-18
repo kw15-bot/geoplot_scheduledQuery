@@ -2079,6 +2079,18 @@
       "start": "2026-08-04T07:50:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/178476bfdd384d758556e202abc08beb.html": {
+    "bureau": "河北海事局",
+    "date": "2026-08-18",
+    "detail_fetched": false,
+    "first_seen": "2026-08-18T13:00:46+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带平台—冀航警545/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/178476bfdd384d758556e202abc08beb.html?hav=1jWj6r2hy3yfgR2erMMGaPTwk3"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/179f513df99b4c87b031ebd9aecde7e3.html": {
     "bureau": "山东海事局",
     "cancels": [],
