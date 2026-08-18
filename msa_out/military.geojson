@@ -1060,19 +1060,6 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "军事训练—琼航警127/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4a1bd46c47eb4618a6d8f22d04af9519.html?hav=1jWj6r2hy2JdE4UusCK6yDtHJx",
-        "date": "2026-07-15",
-        "bureau": "海南海事局",
-        "group_count": 0,
-        "detail_gave_up": true,
-        "kind": "no_coords"
-      },
-      "geometry": null
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "title": "军事训练—琼航警146/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4c8d9f99c1b746ce9b6b299c772149fe.html?hav=1jWj6r2hy3yfaJwAHMY2BhAW51",
         "date": "2026-08-05",
@@ -1912,19 +1899,6 @@
           ]
         ]
       }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "title": "军事训练—琼航警132/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7744aceb0a14451aaaa1ba4fe60ae1d2.html?hav=1jWj6r2hy2JdK4Hea82VLJ3lws",
-        "date": "2026-07-23",
-        "bureau": "海南海事局",
-        "group_count": 0,
-        "detail_gave_up": true,
-        "kind": "no_coords"
-      },
-      "geometry": null
     },
     {
       "type": "Feature",
