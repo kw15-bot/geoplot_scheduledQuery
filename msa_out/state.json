@@ -4820,11 +4820,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/41d03fce8f424b2bbbe0d2d0a832d7a1.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-18",
     "detail_fetched": false,
     "first_seen": "2026-08-18T07:40:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警754/26",
     "points": [],
     "revoked": false,
     "title": "LNG船“CESI QINGDAO (中能青岛)”轮进港—浙航警754/26",
