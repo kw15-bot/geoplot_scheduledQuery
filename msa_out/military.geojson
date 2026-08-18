@@ -2801,6 +2801,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "实弹射击—粤航警582/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b35e6cadff814e81b13f7d50dca92dac.html?hav=1jWj6r2hy3yfgR2emCeACt4fsj",
+        "date": "2026-08-18",
+        "bureau": "广东海事局",
+        "group_count": 1,
+        "raw_text": "南海，8月19日至8月21日，每天0630时至1830时，以下四点连线海域内进行实弹射击： （1）23-04-33N 116-33-14E; （2）23-06-43N 116-37-11E; （3）23-01-10N 116-36-00E; （4）23-04-00N 116-33-05E。禁止驶入。",
+        "valid_start": "2026-08-18T22:30:00+00:00",
+        "valid_end": "2026-08-21T10:30:00+00:00",
+        "valid_raw": [
+          "8月19日至8月21日，每天0630时至1830时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              116.55138888888888,
+              23.066666666666666
+            ],
+            [
+              116.6,
+              23.019444444444442
+            ],
+            [
+              116.61972222222222,
+              23.111944444444447
+            ],
+            [
+              116.55388888888889,
+              23.075833333333332
+            ],
+            [
+              116.55138888888888,
+              23.066666666666666
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "军事演练—浙航警718/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bae7d75fef224272a3fe5d89011427d9.html?hav=1jWj6r2hy3yfgGnOs4V8VOnNgM",
         "date": "2026-08-11",
