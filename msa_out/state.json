@@ -2081,11 +2081,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/178476bfdd384d758556e202abc08beb.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-08-18",
     "detail_fetched": false,
     "first_seen": "2026-08-18T13:00:46+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警545/26",
     "points": [],
     "revoked": false,
     "title": "拖带平台—冀航警545/26",
