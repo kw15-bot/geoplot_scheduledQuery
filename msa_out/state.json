@@ -11665,7 +11665,7 @@
     "points": [],
     "revoked": false,
     "title": "水深测量—辽航警346/26",
-    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/91cc794eb62a41cf992fa373157cdaed.html?hav=1jWj6r2hy3yfgR2emA4J9rjW0l"
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/91cc794eb62a41cf992fa373157cdaed.html?hav=1jWj6r2hy3yfgR2emA4JNtSSkm"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/91d46a6047df4282acc826a3cbd83947.html": {
     "bureau": "长江海事局",
@@ -11769,11 +11769,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/93c5bc03463e4eaa8090b6b817a35fbc.html": {
     "bureau": "广西海事局",
+    "cancels": [],
     "date": "2026-08-18",
     "detail_fetched": false,
     "first_seen": "2026-08-18T08:50:36+00:00",
     "groups": [],
     "military": false,
+    "own_id": "桂航警186/26",
     "points": [],
     "revoked": false,
     "title": "航标动态-临时设置东兴港黄蠔墩灯桩—桂航警186/26",
@@ -12780,11 +12782,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a45f6d5c5c90474cb41d9e13082d064f.html": {
     "bureau": "广西海事局",
+    "cancels": [],
     "date": "2026-08-18",
     "detail_fetched": false,
     "first_seen": "2026-08-18T08:50:36+00:00",
     "groups": [],
     "military": false,
+    "own_id": "桂航警185/26",
     "points": [],
     "revoked": false,
     "title": "航标动态—防城港西湾航道维护清淤临时调整防城港22号灯浮位置—桂航警185/26",
