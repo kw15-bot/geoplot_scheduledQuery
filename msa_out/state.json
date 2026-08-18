@@ -580,7 +580,10 @@
       }
     ],
     "raw_text": "渤海海峡，大竹山岛，8月18日0600时至1800时，在38-03.0N 120-53.0E、38-03.0N 121-01.0E、37-58.0N 121-01.0E、37-58.0N 120-53.0E各点连线水域内进行军事活动。禁止驶入。",
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "鲁航警669/26"
+    ],
     "title": "军事活动-大竹山岛—鲁航警649/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/03e83d70b34d4ad783b35ec8431ccaea.html?hav=1jWj6r2hy3yfgLBeXmPVhQZPYi",
     "validity": {
@@ -3348,15 +3351,24 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2d9a14c007114c87aca8d5a853b21315.html": {
     "bureau": "山东海事局",
+    "cancels": [
+      "鲁航警649/26"
+    ],
     "date": "2026-08-18",
-    "detail_fetched": false,
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 15,
     "first_seen": "2026-08-18T03:20:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警669/26",
     "points": [],
+    "raw_text": "渤海海峡，撤销鲁航警649/26。希各航船注意。",
     "revoked": false,
     "title": "撤销航警—鲁航警669/26",
-    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2d9a14c007114c87aca8d5a853b21315.html?hav=1jWj6r2hy3yfgR2em3cfSPepox"
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2d9a14c007114c87aca8d5a853b21315.html?hav=1jWj6r2hy3yfgR2em3cfSPepox",
+    "validity": null
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2db2d317d3724ab6bc98806e0e65e658.html": {
     "bureau": "山东海事局",
@@ -4262,11 +4274,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3a18195d949444c3963e23a31f69d045.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-18",
     "detail_fetched": false,
     "first_seen": "2026-08-18T03:20:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警668/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业-烟港融合八号拖带秦航工2300—鲁航警668/26",
@@ -8109,6 +8123,18 @@
       ],
       "start": "2026-08-06T00:00:00+00:00"
     }
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/672a01a21f0f40cdb924671b38d20ddd.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-18",
+    "detail_fetched": false,
+    "first_seen": "2026-08-18T03:30:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航行拖带—鲁航警672/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/672a01a21f0f40cdb924671b38d20ddd.html?hav=1jWj6r2hy3yfgR2em3cfX5BgQd"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/67324a1728dd43dbad39f3a76c30e57c.html": {
     "bureau": "浙江海事局",
@@ -12696,6 +12722,18 @@
     "title": "防波堤及护岸维修作业—津航警236/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a4b24747580c49f2986ca12fd6266482.html?hav=1jWj6r2hy2JdK5kP3STU1kDekT"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a51d0b20d2534177a5e8b5a3c5c0b4ba.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-18",
+    "detail_fetched": false,
+    "first_seen": "2026-08-18T03:30:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航行拖带—鲁航警671/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a51d0b20d2534177a5e8b5a3c5c0b4ba.html?hav=1jWj6r2hy3yfgR2em3cfX43IF5"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a598066bc0b5410f8a1326c574c66356.html": {
     "bureau": "浙江海事局",
     "cancels": [],
@@ -15316,6 +15354,18 @@
     "revoked": false,
     "title": "南海HZ21-8-8d井钻井作业—粤航警544/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ca6f0cba12bc42f29c020ff3ea4f2d74.html?hav=1jWj6r2hy3yfaOKPwwipmJIrjM"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ca8f30dab6234b4c937346c70f59ebf2.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-18",
+    "detail_fetched": false,
+    "first_seen": "2026-08-18T03:30:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航行拖带—鲁航警670/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ca8f30dab6234b4c937346c70f59ebf2.html?hav=1jWj6r2hy3yfgR2em3cfX43IF0"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/caabf49db150425da3d567f9003143c4.html": {
     "bureau": "福建海事局",

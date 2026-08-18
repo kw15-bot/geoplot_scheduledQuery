@@ -105,6 +105,10 @@
         "valid_raw": [
           "8月18日0600时至1800时"
         ],
+        "revoked": true,
+        "revoked_by": [
+          "鲁航警669/26"
+        ],
         "group_index": 1,
         "kind": "area"
       },
