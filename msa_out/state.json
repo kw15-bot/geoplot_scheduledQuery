@@ -5153,6 +5153,100 @@
     "title": "大型船舶—沪航警627/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/475f55a78a15447b92493bc86114f28b.html?hav=1jWj6r2hy3yfgLBeXozMfvSseQ"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4760920a3d5b45be87ade08927fd8981.html": {
+    "bureau": "广东海事局",
+    "cancels": [],
+    "date": "2026-08-18",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 15,
+    "first_seen": "2026-08-18T10:00:41+00:00",
+    "groups": [
+      [
+        {
+          "end": 77,
+          "fmt": "DDM_HYPHEN",
+          "lat": 22.8055,
+          "lon": 115.923,
+          "raw": "22-48.33N 115-55.38E",
+          "start": 57
+        },
+        {
+          "end": 102,
+          "fmt": "DDM_HYPHEN",
+          "lat": 22.849666666666668,
+          "lon": 116.06033333333333,
+          "raw": "22-50.98N 116-03.62E",
+          "start": 82
+        },
+        {
+          "end": 127,
+          "fmt": "DDM_HYPHEN",
+          "lat": 22.748833333333334,
+          "lon": 116.0595,
+          "raw": "22-44.93N 116-03.57E",
+          "start": 107
+        },
+        {
+          "end": 152,
+          "fmt": "DDM_HYPHEN",
+          "lat": 22.730833333333333,
+          "lon": 115.92333333333333,
+          "raw": "22-43.85N 115-55.40E",
+          "start": 132
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 77,
+        "fmt": "DDM_HYPHEN",
+        "lat": 22.8055,
+        "lon": 115.923,
+        "raw": "22-48.33N 115-55.38E",
+        "start": 57
+      },
+      {
+        "end": 102,
+        "fmt": "DDM_HYPHEN",
+        "lat": 22.849666666666668,
+        "lon": 116.06033333333333,
+        "raw": "22-50.98N 116-03.62E",
+        "start": 82
+      },
+      {
+        "end": 127,
+        "fmt": "DDM_HYPHEN",
+        "lat": 22.748833333333334,
+        "lon": 116.0595,
+        "raw": "22-44.93N 116-03.57E",
+        "start": 107
+      },
+      {
+        "end": 152,
+        "fmt": "DDM_HYPHEN",
+        "lat": 22.730833333333333,
+        "lon": 115.92333333333333,
+        "raw": "22-43.85N 115-55.40E",
+        "start": 132
+      }
+    ],
+    "raw_text": "南海，8月19日0700时至2100时，8月20日0600时至1800时，以下四点连线海域内进行实弹射击： （1）22-48.33N 115-55.38E; （2）22-50.98N 116-03.62E; （3）22-44.93N 116-03.57E; （4）22-43.85N 115-55.40E。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—粤航警580/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4760920a3d5b45be87ade08927fd8981.html?hav=1jWj6r2hy3yfgR2emBMEz2xIFW",
+    "validity": {
+      "end": "2026-08-20T10:00:00+00:00",
+      "period_count": 2,
+      "raw": [
+        "8月19日0700时至2100时",
+        "8月20日0600时至1800时"
+      ],
+      "start": "2026-08-18T23:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4785aa4a2396415faa4e16c39fcc9802.html": {
     "bureau": "山东海事局",
     "cancels": [],
@@ -13693,11 +13787,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b1bc463cd75a4be9a80bbdcbd6f468ec.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-08-18",
     "detail_fetched": false,
     "first_seen": "2026-08-18T09:50:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警647/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—沪航警647/26",
@@ -18749,11 +18845,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f4a9d6e664f64cbf8b1d498a4dd79b6d.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-08-18",
     "detail_fetched": false,
     "first_seen": "2026-08-18T09:50:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警646/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—沪航警646/26",
@@ -19219,11 +19317,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fc09858f9e144d5095e2df67f00d73be.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-08-18",
     "detail_fetched": false,
     "first_seen": "2026-08-18T09:50:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警645/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—沪航警645/26",
