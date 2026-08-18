@@ -7363,6 +7363,18 @@
     "title": "海上拖带—粤航警571/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5c86dd280bb44d5fa1e2efcc0fdddd8e.html?hav=1jWj6r2hy3yfgLBeXmPVTTO3IO"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5c920dd168cc49688759a882d0902073.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-18",
+    "detail_fetched": false,
+    "first_seen": "2026-08-18T10:20:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "SPAIN B和NEW PARADISE轮航经虾峙门外深水航槽—浙航警756/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5c920dd168cc49688759a882d0902073.html?hav=1jWj6r2hy3yfgR2emCeA8Gx0lf"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5cf938ed8bf340b8b985c857bed2bfd9.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -15551,6 +15563,18 @@
       ],
       "start": "2026-07-22T22:00:00+00:00"
     }
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c95482a315d242418f9e8b12064df389.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-18",
+    "detail_fetched": false,
+    "first_seen": "2026-08-18T10:20:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "LNG船COOL RUNNER轮出港—浙航警755/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c95482a315d242418f9e8b12064df389.html?hav=1jWj6r2hy3yfgR2emCeA8Gx0hc"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c97318bcc4814ca3b363c9ba7b4e0640.html": {
     "bureau": "河北海事局",
