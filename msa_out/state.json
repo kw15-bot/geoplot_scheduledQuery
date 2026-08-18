@@ -1551,6 +1551,18 @@
     "title": "泊位水下检测—冀航警459/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0dd8b751255f4fffbf45c5e3ba6fc73e.html?hav=1jWj6r2hy2JdE5xfLacs0FRjOP"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0e0565dd7d794274869d999fd1e6e7e3.html": {
+    "bureau": "长江海事局",
+    "date": "2026-08-18",
+    "detail_fetched": false,
+    "first_seen": "2026-08-18T08:20:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "关于“合兴7”轮水上试验活动的航行警告—安海航警30/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0e0565dd7d794274869d999fd1e6e7e3.html?hav=1jWj6r2hy3yfgR2emA4J55OILb"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0e343e64c2f9468ab45fc6c11871a656.html": {
     "bureau": "河北海事局",
     "cancels": [],
@@ -13030,11 +13042,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a92f234715e74183a28a54e605dc5b73.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-08-18",
     "detail_fetched": false,
     "first_seen": "2026-08-18T08:10:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警542/26",
     "points": [],
     "revoked": false,
     "title": "水下检验—冀航警542/26",
@@ -17429,11 +17443,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e3d06ae4187c4e8bbdef8a1abe839884.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-08-18",
     "detail_fetched": false,
     "first_seen": "2026-08-18T08:10:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警543/26",
     "points": [],
     "revoked": false,
     "title": "水下检验—冀航警543/26",
