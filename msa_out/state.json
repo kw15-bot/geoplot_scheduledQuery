@@ -6606,11 +6606,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/516fadf42df440b29bfbdeb78cf0699c.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-19",
     "detail_fetched": false,
     "first_seen": "2026-08-19T10:50:33+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警758/26",
     "points": [],
     "revoked": false,
     "title": "BERGE SONG SHAN和INGENUITY轮航经虾峙门外深水航槽—浙航警758/26",
