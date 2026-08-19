@@ -4094,6 +4094,18 @@
       "start": "2026-08-12T00:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/34a0782739cb401888d549ae997da73d.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-20",
+    "detail_fetched": false,
+    "first_seen": "2026-08-19T16:20:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "灯浮灯光熄灭—沪航警651/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/34a0782739cb401888d549ae997da73d.html?hav=1jWj6r2hy3yfmI2t35BNPr6al6"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/34cddb0de08b4ff8b71687c107897ef9.html": {
     "bureau": "广东海事局",
     "cancels": [],
