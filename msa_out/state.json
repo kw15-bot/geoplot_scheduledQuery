@@ -3183,11 +3183,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/26be6eb624574597a37b4cf897bf4f0f.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-08-19",
     "detail_fetched": false,
     "first_seen": "2026-08-19T10:30:38+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警547/26",
     "points": [],
     "revoked": false,
     "title": "水下探摸—冀航警547/26",
