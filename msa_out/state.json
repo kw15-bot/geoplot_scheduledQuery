@@ -15555,11 +15555,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c8c945ec97dc4be7b2e1377f67e8ea1b.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-19",
     "detail_fetched": false,
     "first_seen": "2026-08-19T01:30:44+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警673/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业-交工63拖带中建半潜驳6—鲁航警673/26",
