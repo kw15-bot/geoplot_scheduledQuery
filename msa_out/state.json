@@ -3666,11 +3666,15 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/33ec018b6fdb43e58dca73379e0b2cce.html": {
     "bureau": "广东海事局",
+    "cancels": [
+      "粤航警460/26"
+    ],
     "date": "2026-08-19",
     "detail_fetched": false,
     "first_seen": "2026-08-19T02:20:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警584/26",
     "points": [],
     "revoked": false,
     "title": "撤销粤航警460/26—粤航警584/26",
@@ -16639,6 +16643,18 @@
     "revoked": false,
     "title": "拖带作业—闽航警133/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d494e75fe6594d9292f28d9b11138d11.html?hav=1jWj6r2hy3yfaE59xg9dkkKAYK"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d49ca5e797704e6b84b6b6d462f7e757.html": {
+    "bureau": "长江海事局",
+    "date": "2026-08-19",
+    "detail_fetched": false,
+    "first_seen": "2026-08-19T02:30:38+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "宜宾航警64/26—宜宾海航警64/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d49ca5e797704e6b84b6b6d462f7e757.html?hav=1jWj6r2hy3yfgSVPKcvScgwEcs"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d4ca8f1afda84173ac288ac7ae41640a.html": {
     "bureau": "上海海事局",
