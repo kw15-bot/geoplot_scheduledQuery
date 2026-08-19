@@ -897,11 +897,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/05f9f214b438407bae951bf8761d09f4.html": {
     "bureau": "深圳海事局",
+    "cancels": [],
     "date": "2026-08-19",
     "detail_fetched": false,
     "first_seen": "2026-08-19T09:02:18+00:00",
     "groups": [],
     "military": false,
+    "own_id": "深航警80/26",
     "points": [],
     "revoked": false,
     "title": "扫海测量—深航警80/26",
