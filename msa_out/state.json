@@ -17806,6 +17806,124 @@
     "title": "拖带作业—深航警35/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e28e91ee6ad043878d0c8cdeef44d43e.html?hav=1jWj6r2hxxKVlFBDFyHYOt8VQv"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e2d788a7e0c64ba8b789054bcb81b7f2.html": {
+    "bureau": "连云港海事局",
+    "cancels": [],
+    "date": "2026-08-19",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 15,
+    "first_seen": "2026-08-19T08:00:45+00:00",
+    "groups": [
+      [
+        {
+          "end": 50,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.021166666666666,
+          "lon": 120.37716666666667,
+          "raw": "34-01.27N 120-22.63E",
+          "start": 31
+        },
+        {
+          "end": 70,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.05916666666667,
+          "lon": 120.358,
+          "raw": "34-03.55N 120-21.48E",
+          "start": 51
+        },
+        {
+          "end": 90,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.158833333333334,
+          "lon": 120.4,
+          "raw": "34-09.53N 120-24.00E",
+          "start": 71
+        },
+        {
+          "end": 111,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.14833333333333,
+          "lon": 120.47166666666666,
+          "raw": "34-08.90N 120-28.30E",
+          "start": 92
+        },
+        {
+          "end": 132,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.095333333333336,
+          "lon": 120.51966666666667,
+          "raw": "34-05.72N 120-31.18E",
+          "start": 113
+        },
+        {
+          "end": 153,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.02333333333333,
+          "lon": 120.42083333333333,
+          "raw": "34-01.40N 120-25.25E",
+          "start": 134
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 50,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.021166666666666,
+        "lon": 120.37716666666667,
+        "raw": "34-01.27N 120-22.63E",
+        "start": 31
+      },
+      {
+        "end": 70,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.05916666666667,
+        "lon": 120.358,
+        "raw": "34-03.55N 120-21.48E",
+        "start": 51
+      },
+      {
+        "end": 90,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.158833333333334,
+        "lon": 120.4,
+        "raw": "34-09.53N 120-24.00E",
+        "start": 71
+      },
+      {
+        "end": 111,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.14833333333333,
+        "lon": 120.47166666666666,
+        "raw": "34-08.90N 120-28.30E",
+        "start": 92
+      },
+      {
+        "end": 132,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.095333333333336,
+        "lon": 120.51966666666667,
+        "raw": "34-05.72N 120-31.18E",
+        "start": 113
+      },
+      {
+        "end": 153,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.02333333333333,
+        "lon": 120.42083333333333,
+        "raw": "34-01.40N 120-25.25E",
+        "start": 134
+      }
+    ],
+    "raw_text": "黄海南部，自8月21日至24日每日0730时至次日0100时在34-01.27N120-22.63E，34-03.55N120-21.48E，34-09.53N120-24.00E ，34-08.90N120-28.30E ，34-05.72N120-31.18E ，34-01.40N120-25.25E诸点连线范围内进行实弹射击。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—云航警131/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e2d788a7e0c64ba8b789054bcb81b7f2.html?hav=1jWj6r2hy3yfgSVPKjN6TRnp7p",
+    "validity": null
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e307cf05d4834e1aa49421ad38b973eb.html": {
     "bureau": "连云港海事局",
     "cancels": [],
