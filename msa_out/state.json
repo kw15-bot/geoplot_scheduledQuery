@@ -18806,11 +18806,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/eef04e49fee44c0db736525e7cb5a612.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-08-19",
     "detail_fetched": false,
     "first_seen": "2026-08-19T07:20:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警348/26",
     "points": [],
     "revoked": false,
     "title": "渤海设置3座浮标—辽航警348/26",
