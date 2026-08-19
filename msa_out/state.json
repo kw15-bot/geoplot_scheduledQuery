@@ -2495,6 +2495,18 @@
     "title": "水深测量—辽航警337/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1fb2fc581f4845698ed8ebcc76c3ca60.html?hav=1jWj6r2hy3yfaH0fA6Csvw5dqf"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2000e84ac53443a68fa97cb7541524f5.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-19",
+    "detail_fetched": false,
+    "first_seen": "2026-08-19T09:22:22+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "LNG加注作业—沪航警650/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2000e84ac53443a68fa97cb7541524f5.html?hav=1jWj6r2hy3yfgSVPKlwx9DAhxQ"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/20165e62fbfc49bf9ff52fb5555a5333.html": {
     "bureau": "浙江海事局",
     "cancels": [],
@@ -16576,6 +16588,18 @@
     "title": "恒力石化海流观测—辽航警307/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d1bc8006ab4b476692d6ab12072a7633.html?hav=1jWj6r2hy2JdE4Uun029lgjOoa"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d22a396ec0ec48cb82f8e12d54dc5c75.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-19",
+    "detail_fetched": false,
+    "first_seen": "2026-08-19T09:22:22+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "装载大件船舶—沪航警648/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d22a396ec0ec48cb82f8e12d54dc5c75.html?hav=1jWj6r2hy3yfgSVPKlwx9C2JZT"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d26ef8c62c5c405e875d7bedf25f4803.html": {
     "bureau": "江苏海事局",
     "cancels": [
@@ -19978,6 +20002,18 @@
     "revoked": false,
     "title": "1月29日半潜驳船“汉拿山”拖带作业—苏航警7/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fdf379f561094a16a148b44ac8ce8e1f.html?hav=1jWj6r2hxsLOaPDiqnXvBD6pxQ"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fe4f0848e22b4b63a59a80c3d80386c7.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-19",
+    "detail_fetched": false,
+    "first_seen": "2026-08-19T09:22:22+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—沪航警649/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fe4f0848e22b4b63a59a80c3d80386c7.html?hav=1jWj6r2hy3yfgSVPKlwx9C2Jda"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fe6f764a499b427da91b642aaadbcb9e.html": {
     "bureau": "长江海事局",
