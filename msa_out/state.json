@@ -4320,11 +4320,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/368cb874acff4390a43c8272f125a46f.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-20",
     "detail_fetched": false,
     "first_seen": "2026-08-20T13:40:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警765/26",
     "points": [],
     "revoked": false,
     "title": "航标动态—新设远海风临1号灯浮—浙航警765/26",
