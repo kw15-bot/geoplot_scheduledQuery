@@ -425,6 +425,18 @@
     "title": "试航船舶“鑫福142”轮航行警告—苏航警49/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/01dd83179780408997f2739566cf2dd1.html?hav=1jWj6r2hy3yfgIG9QbE4Ju4eAc"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/01ea9854ac84407caad71bb523b69ccb.html": {
+    "bureau": "长江海事局",
+    "date": "2026-08-20",
+    "detail_fetched": false,
+    "first_seen": "2026-08-20T03:50:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "关于“远顺6”载运船舶成品分段由乌江河口至湖北武汉青山船厂的航行警告—芜航警31/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/01ea9854ac84407caad71bb523b69ccb.html?hav=1jWj6r2hy3yfmI2t8QUpawoRQj"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0298c8b749de4a64aa432ce7550a8214.html": {
     "bureau": "深圳海事局",
     "cancels": [],
@@ -4220,6 +4232,18 @@
     "title": "“WAN HAI V01”轮试航—浙航警749/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3622eaa80ede44df9dfc178e6e56df88.html?hav=1jWj6r2hy3yfgPZuDalWMzVYTD"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/365d71f360904133b55ed3f5e1a2b1bc.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-20",
+    "detail_fetched": false,
+    "first_seen": "2026-08-20T03:50:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "秀山岛东灯浮现已恢复正常—浙航警760/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/365d71f360904133b55ed3f5e1a2b1bc.html?hav=1jWj6r2hy3yfmI2t8QUpWIPzD5"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/36882851cba04d24936599149e4adfb5.html": {
     "bureau": "江苏海事局",
     "cancels": [],
@@ -5236,6 +5260,18 @@
     "title": "拖带中油海9钻井平台—辽航警314/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/430d39ec72ac47878881ed14fbd6ed7e.html?hav=1jWj6r2hy2JdE7QPu3U1XprHDc"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/437febea389a4b84953653067a0476ab.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-20",
+    "detail_fetched": false,
+    "first_seen": "2026-08-20T03:50:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "岱油1号灯浮现已恢复正常—浙航警763/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/437febea389a4b84953653067a0476ab.html?hav=1jWj6r2hy3yfmI2t8QUpWJYNrW"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/43c4775d227043f390cd66f2bdf43632.html": {
     "bureau": "深圳海事局",
     "cancels": [],
@@ -5280,11 +5316,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/44da8bca2818455c936371640a273284.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-20",
     "detail_fetched": false,
     "first_seen": "2026-08-20T03:40:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警678/26",
     "points": [],
     "revoked": false,
     "title": "水工作业-垚磊102、永丰1666和长鑫工839—鲁航警678/26",
@@ -9544,6 +9582,18 @@
     "revoked": false,
     "title": "“MAERSK FLINDERS”轮试航—浙航警688/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6f909048f2814bbc982e5dfca4b046a3.html?hav=1jWj6r2hy2JdKD49qTIrbRZJRb"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6fae1f7756d943128d4f365be6fddd5a.html": {
+    "bureau": "长江海事局",
+    "date": "2026-08-20",
+    "detail_fetched": false,
+    "first_seen": "2026-08-20T03:50:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "关于“惠佳6”载运船舶成品分段由乌江河口至湖北武汉青山船厂的航行警告—芜航警32/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6fae1f7756d943128d4f365be6fddd5a.html?hav=1jWj6r2hy3yfmI2t8QUpawoRUr"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7018127e66e94da59cd7449b8400b76c.html": {
     "bureau": "山东海事局",
@@ -14139,6 +14189,18 @@
     "title": "拓宽浚深作业—津航警273/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b06deef8c3634ff8af0e2510d1ba94f1.html?hav=1jWj6r2hy3yfgSVPKcvSqssjqu"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b07c3c12bbf34447b02ec358a5c81d65.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-20",
+    "detail_fetched": false,
+    "first_seen": "2026-08-20T03:50:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "蛇移门1号灯浮已恢复正常—浙航警761/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b07c3c12bbf34447b02ec358a5c81d65.html?hav=1jWj6r2hy3yfmI2t8QUpWIPzPM"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b0b022709e5f485dbbad53d897063a86.html": {
     "bureau": "河北海事局",
     "cancels": [],
@@ -14689,6 +14751,18 @@
     "revoked": false,
     "title": "拖带作业—粤航警538/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b7018738669e4b72b97dc70400fd5a3f.html?hav=1jWj6r2hy3yfaJwAHJyAphXdS4"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b7d46d8f8c9e468aad72f9ac91d5591b.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-20",
+    "detail_fetched": false,
+    "first_seen": "2026-08-20T03:50:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "大西寨沉2号灯浮已恢复正常—浙航警759/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b7d46d8f8c9e468aad72f9ac91d5591b.html?hav=1jWj6r2hy3yfmI2t8QUpWIPz8v"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b82564a77fdd492f88171dc0667e25b8.html": {
     "bureau": "福建海事局",
@@ -15863,6 +15937,18 @@
     "title": "黄海南部“昌裕3”轮试航—云航警104/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c5ac0702b6e3490c87877e0a60d28d51.html?hav=1jWj6r2hy2Jd7vvfeCjvH6WsI4"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c5acaa02c33f4defb410dd3ef82e4218.html": {
+    "bureau": "长江海事局",
+    "date": "2026-08-20",
+    "detail_fetched": false,
+    "first_seen": "2026-08-20T03:50:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "关于“振泰拖1”轮、“振泰拖2009”轮拖带“MDM3603”轮的航行警告—芜航警30/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c5acaa02c33f4defb410dd3ef82e4218.html?hav=1jWj6r2hy3yfmI2t8QUpawoRMa"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c5c9a43896c7499a8355fc0a8dd65c63.html": {
     "bureau": "山东海事局",
     "cancels": [],
@@ -16040,6 +16126,18 @@
     "revoked": false,
     "title": "大亚湾帆船比赛—深航警52/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c8549f25132b4ac3bd36621c16c80f9d.html?hav=1jWj6r2hxyzYJSjBbZ3eVLMVd9"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c8a26728679c449a95b5889243db03fb.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-20",
+    "detail_fetched": false,
+    "first_seen": "2026-08-20T03:50:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "香炉花瓶沉1号灯浮已恢复正常—浙航警762/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c8a26728679c449a95b5889243db03fb.html?hav=1jWj6r2hy3yfmI2t8QUpWJYNfC"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c8c945ec97dc4be7b2e1377f67e8ea1b.html": {
     "bureau": "山东海事局",
