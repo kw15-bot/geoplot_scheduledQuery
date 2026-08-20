@@ -16446,11 +16446,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c90601ad11224a01bdac77f7f936dcbf.html": {
     "bureau": "连云港海事局",
+    "cancels": [],
     "date": "2026-08-20",
     "detail_fetched": false,
     "first_seen": "2026-08-20T09:30:37+00:00",
     "groups": [],
     "military": false,
+    "own_id": "云航警134/26",
     "points": [],
     "revoked": false,
     "title": "黄海南部“拓海先锋”轮试航—云航警134/26",
