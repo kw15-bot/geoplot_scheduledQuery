@@ -7122,7 +7122,10 @@
     "military": false,
     "own_id": "沪航警644/26",
     "points": [],
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "沪航警652/26"
+    ],
     "title": "人员落水—沪航警644/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/542ada4668b34768ba117d3ffcd677b4.html?hav=1jWj6r2hy3yfgR2egjb9U2AyIL"
   },
@@ -13717,15 +13720,24 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/aa2b580309cb442d8b2f75f3fad12092.html": {
     "bureau": "上海海事局",
+    "cancels": [
+      "沪航警644/26"
+    ],
     "date": "2026-08-20",
-    "detail_fetched": false,
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 16,
     "first_seen": "2026-08-20T00:50:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警652/26",
     "points": [],
+    "raw_text": "长江口，沪航警644/26中所述2名失踪人员现已找到，撤销沪航警644/26",
     "revoked": false,
     "title": "撤销航警—沪航警652/26",
-    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/aa2b580309cb442d8b2f75f3fad12092.html?hav=1jWj6r2hy3yfmI2t3FUnqHUspV"
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/aa2b580309cb442d8b2f75f3fad12092.html?hav=1jWj6r2hy3yfmI2t3FUnqHUspV",
+    "validity": null
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/aa6670ef0710458da23affd0d2f24c57.html": {
     "bureau": "广东海事局",
@@ -15824,6 +15836,18 @@
     "revoked": false,
     "title": "黄海南部“昌裕3”轮试航—云航警104/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c5ac0702b6e3490c87877e0a60d28d51.html?hav=1jWj6r2hy2Jd7vvfeCjvH6WsI4"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c5c9a43896c7499a8355fc0a8dd65c63.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-20",
+    "detail_fetched": false,
+    "first_seen": "2026-08-20T01:00:44+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航行拖带—鲁航警677/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c5c9a43896c7499a8355fc0a8dd65c63.html?hav=1jWj6r2hy3yfmI2t3FUnv2hi2V"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c67266ef4d0340da8bdc1c73dd44d753.html": {
     "bureau": "广东海事局",
