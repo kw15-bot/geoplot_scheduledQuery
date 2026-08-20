@@ -733,11 +733,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/04c79f1370af40918a20004d8ad9a7da.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-08-20",
     "detail_fetched": false,
     "first_seen": "2026-08-20T11:50:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警654/26",
     "points": [],
     "revoked": false,
     "title": "LNG作业—沪航警654/26",
@@ -7368,6 +7370,18 @@
     "revoked": false,
     "title": "水下检验—冀航警507/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/558f902d68c94a77b70ddbf90a8be9cb.html?hav=1jWj6r2hy3yfaLOuplXP0FrGnD"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/55b068acc1fe42debfdab5025ef2c9da.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-20",
+    "detail_fetched": false,
+    "first_seen": "2026-08-20T12:00:43+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“高信66”轮试航—浙航警764/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/55b068acc1fe42debfdab5025ef2c9da.html?hav=1jWj6r2hy3yfmI2t8aoFs10dR1"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/563aa26f12fe4ba9b3ef79c97d8378ec.html": {
     "bureau": "江苏海事局",
@@ -15560,11 +15574,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c20b81774dc54065a966865a8de3a6e5.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-08-20",
     "detail_fetched": false,
     "first_seen": "2026-08-20T11:50:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警653/26",
     "points": [],
     "revoked": false,
     "title": "LNG船舶—沪航警653/26",
