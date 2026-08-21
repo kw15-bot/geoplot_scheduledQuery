@@ -10247,6 +10247,99 @@
     "title": "LNG船舶—沪航警567/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/740780f67a4b4a76a6b70ab9ea13efbf.html?hav=1jWj6r2hy2JdJztOp8gT9CCzqc"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/749327080c8049e18b302a601805d7d7.html": {
+    "bureau": "广东海事局",
+    "cancels": [],
+    "date": "2026-08-21",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 16,
+    "first_seen": "2026-08-21T10:00:42+00:00",
+    "groups": [
+      [
+        {
+          "end": 69,
+          "fmt": "DDM_HYPHEN",
+          "lat": 23.075833333333332,
+          "lon": 116.55383333333333,
+          "raw": "23-04.55N 116-33.23E",
+          "start": 49
+        },
+        {
+          "end": 94,
+          "fmt": "DDM_HYPHEN",
+          "lat": 23.112,
+          "lon": 116.61966666666666,
+          "raw": "23-06.72N 116-37.18E",
+          "start": 74
+        },
+        {
+          "end": 119,
+          "fmt": "DDM_HYPHEN",
+          "lat": 23.0195,
+          "lon": 116.6,
+          "raw": "23-01.17N 116-36.00E",
+          "start": 99
+        },
+        {
+          "end": 144,
+          "fmt": "DDM_HYPHEN",
+          "lat": 23.066666666666666,
+          "lon": 116.55133333333333,
+          "raw": "23-04.00N 116-33.08E",
+          "start": 124
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 69,
+        "fmt": "DDM_HYPHEN",
+        "lat": 23.075833333333332,
+        "lon": 116.55383333333333,
+        "raw": "23-04.55N 116-33.23E",
+        "start": 49
+      },
+      {
+        "end": 94,
+        "fmt": "DDM_HYPHEN",
+        "lat": 23.112,
+        "lon": 116.61966666666666,
+        "raw": "23-06.72N 116-37.18E",
+        "start": 74
+      },
+      {
+        "end": 119,
+        "fmt": "DDM_HYPHEN",
+        "lat": 23.0195,
+        "lon": 116.6,
+        "raw": "23-01.17N 116-36.00E",
+        "start": 99
+      },
+      {
+        "end": 144,
+        "fmt": "DDM_HYPHEN",
+        "lat": 23.066666666666666,
+        "lon": 116.55133333333333,
+        "raw": "23-04.00N 116-33.08E",
+        "start": 124
+      }
+    ],
+    "raw_text": "南海，8月24日至8月27日，每天0630时至1830时，以下四点连线海域内进行实弹射击： （1）23-04.55N 116-33.23E; （2）23-06.72N 116-37.18E; （3）23-01.17N 116-36.00E; （4）23-04.00N 116-33.08E。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—粤航警592/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/749327080c8049e18b302a601805d7d7.html?hav=1jWj6r2hy3yfmJVdh8p7HdVwJT",
+    "validity": {
+      "end": "2026-08-27T10:30:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月24日至8月27日，每天0630时至1830时"
+      ],
+      "start": "2026-08-23T22:30:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/758ce9ce829345aa9ea24a51c745d212.html": {
     "bureau": "上海海事局",
     "cancels": [],
