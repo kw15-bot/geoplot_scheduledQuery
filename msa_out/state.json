@@ -925,11 +925,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/05e2c4089bfa4327bd779f1e5c4ce983.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-08-21",
     "detail_fetched": false,
     "first_seen": "2026-08-21T00:50:40+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警349/26",
     "points": [],
     "revoked": false,
     "title": "水深测量—辽航警349/26",
