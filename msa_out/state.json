@@ -11920,6 +11920,18 @@
       "start": "2026-08-12T01:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/85fe41e1040a4d878e86d08560c915b2.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-21",
+    "detail_fetched": false,
+    "first_seen": "2026-08-21T07:00:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "有效航警简报—南部航警34/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/85fe41e1040a4d878e86d08560c915b2.html?hav=1jWj6r2hy3yfmJVdh4xKi3fDTI"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/86a5266d801d41f78de3d53069779ad0.html": {
     "bureau": "辽宁海事局",
     "cancels": [],
