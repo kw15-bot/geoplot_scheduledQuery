@@ -2663,6 +2663,18 @@
     "title": "扫测作业-海巡15062—鲁航警643/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1e4fb324aeb647bd915d934ab6e31166.html?hav=1jWj6r2hy3yfgIG9QcW096QorY"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1ee9f64a5f0f43a4a5b189a0e02c51e4.html": {
+    "bureau": "深圳海事局",
+    "date": "2026-08-21",
+    "detail_fetched": false,
+    "first_seen": "2026-08-21T08:20:34+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "盐田港大型构件到岸—深航警81/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1ee9f64a5f0f43a4a5b189a0e02c51e4.html?hav=1jWj6r2hy3yfmJVdh7XBSMcBL7"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f41dfde286a4cd291b853c547034df0.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -16059,6 +16071,99 @@
     "revoked": false,
     "title": "扫测作业—津航警215/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c2a3ef969d7140e8b6083b3d5f908483.html?hav=1jWj6r2hy2JdE4UumxSIiYZs1K"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c2e157de12554ce7b9f2d3f3aa5b7881.html": {
+    "bureau": "广东海事局",
+    "cancels": [],
+    "date": "2026-08-21",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 16,
+    "first_seen": "2026-08-21T08:20:34+00:00",
+    "groups": [
+      [
+        {
+          "end": 73,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.42,
+          "lon": 110.97333333333333,
+          "raw": "21-25.2N 110-58.4E",
+          "start": 55
+        },
+        {
+          "end": 96,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.33,
+          "lon": 110.99166666666666,
+          "raw": "21-19.8N 110-59.5E",
+          "start": 78
+        },
+        {
+          "end": 119,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.341666666666665,
+          "lon": 111.02833333333334,
+          "raw": "21-20.5N 111-01.7E",
+          "start": 101
+        },
+        {
+          "end": 142,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.423333333333332,
+          "lon": 110.98166666666667,
+          "raw": "21-25.4N 110-58.9E",
+          "start": 124
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 73,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.42,
+        "lon": 110.97333333333333,
+        "raw": "21-25.2N 110-58.4E",
+        "start": 55
+      },
+      {
+        "end": 96,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.33,
+        "lon": 110.99166666666666,
+        "raw": "21-19.8N 110-59.5E",
+        "start": 78
+      },
+      {
+        "end": 119,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.341666666666665,
+        "lon": 111.02833333333334,
+        "raw": "21-20.5N 111-01.7E",
+        "start": 101
+      },
+      {
+        "end": 142,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.423333333333332,
+        "lon": 110.98166666666667,
+        "raw": "21-25.4N 110-58.9E",
+        "start": 124
+      }
+    ],
+    "raw_text": "南海，8月24日、25日、27日、28日，每日1100时至1730时，以下四点连线海域内进行射击训练： （1）21-25.2N 110-58.4E； （2）21-19.8N 110-59.5E； （3）21-20.5N 111-01.7E； （4）21-25.4N 110-58.9E。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—粤航警590/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c2e157de12554ce7b9f2d3f3aa5b7881.html?hav=1jWj6r2hy3yfmJVdh7XBSSI9wM",
+    "validity": {
+      "end": "2026-08-28T09:30:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月24日、25日、27日、28日，每日1100时至1730时"
+      ],
+      "start": "2026-08-24T03:00:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c32ec484289347d98092378431077730.html": {
     "bureau": "长江海事局",
