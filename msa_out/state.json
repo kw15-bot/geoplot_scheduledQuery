@@ -775,11 +775,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/05032462bbe742ad9202ba9044a000e4.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-21",
     "detail_fetched": false,
     "first_seen": "2026-08-21T14:00:43+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警769/26",
     "points": [],
     "revoked": false,
     "title": "航标动态-苍电6号灯浮灯光熄灭—浙航警769/26",
