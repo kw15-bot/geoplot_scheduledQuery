@@ -2665,11 +2665,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1ee9f64a5f0f43a4a5b189a0e02c51e4.html": {
     "bureau": "深圳海事局",
+    "cancels": [],
     "date": "2026-08-21",
     "detail_fetched": false,
     "first_seen": "2026-08-21T08:20:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "深航警81/26",
     "points": [],
     "revoked": false,
     "title": "盐田港大型构件到岸—深航警81/26",
@@ -16118,6 +16120,7 @@
       ]
     ],
     "military": true,
+    "own_id": "粤航警590/26",
     "points": [
       {
         "end": 73,
