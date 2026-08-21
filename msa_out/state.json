@@ -1987,11 +1987,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/158133d2647e4554a98e4aebda0219a4.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-21",
     "detail_fetched": false,
     "first_seen": "2026-08-21T06:20:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警683/26",
     "points": [],
     "revoked": false,
     "title": "帆船比赛—鲁航警683/26",
