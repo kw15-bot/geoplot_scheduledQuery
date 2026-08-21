@@ -2606,6 +2606,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "实弹射击—粤航警593/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/94d116f85bb6435a8b0b86dae77c960c.html?hav=1jWj6r2hy3yfmJVdhA72a9AALr",
+        "date": "2026-08-21",
+        "bureau": "广东海事局",
+        "group_count": 1,
+        "raw_text": "南海，8月24日至28日，每天0800时至1800时，在以下四点连线海域内进行实弹射击： （1）20-53.0N，110-54.0E； （2）20-53.0N，110-59.0E； （3）20-48.0N，110-59.0E； （4）20-48.0N，110-54.0E。禁止驶入。",
+        "valid_start": "2026-08-24T00:00:00+00:00",
+        "valid_end": "2026-08-28T10:00:00+00:00",
+        "valid_raw": [
+          "8月24日至28日，每天0800时至1800时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              110.9,
+              20.8
+            ],
+            [
+              110.98333333333333,
+              20.8
+            ],
+            [
+              110.98333333333333,
+              20.883333333333333
+            ],
+            [
+              110.9,
+              20.883333333333333
+            ],
+            [
+              110.9,
+              20.8
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "温州瓯飞滩以东水域军事训练—浙航警724/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9908f97c33d549ed8f7ac87fef687ae5.html?hav=1jWj6r2hy3yfgIG9QbE4T8JySr",
         "date": "2026-08-12",

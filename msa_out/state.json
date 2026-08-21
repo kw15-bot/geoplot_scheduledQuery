@@ -1621,6 +1621,18 @@
     "title": "LNG试航船舶—沪航警581/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0cfaaa687cef464bbce59f3eb485b60a.html?hav=1jWj6r2hy2JdKBbPCZyYEgXWI1"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0d801c50913c45bfb65b397e0fdafde8.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-21",
+    "detail_fetched": false,
+    "first_seen": "2026-08-21T10:30:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "LNG船MUREX轮进港—浙航警768/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0d801c50913c45bfb65b397e0fdafde8.html?hav=1jWj6r2hy3yfmJVdhA72eoh0xU"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0dd8b751255f4fffbf45c5e3ba6fc73e.html": {
     "bureau": "河北海事局",
     "cancels": [],
@@ -1903,11 +1915,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/13591b8349e647cda8a25631cfef232c.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-21",
     "detail_fetched": false,
     "first_seen": "2026-08-21T10:20:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警695/26",
     "points": [],
     "revoked": false,
     "title": "船舶拖带——寰宇七号拖带起重29—鲁航警695/26",
@@ -13066,6 +13080,99 @@
     "revoked": false,
     "title": "7月17日半潜驳船“汉拿山”拖带作业—苏航警43/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/945962ebb6714304bc87f2b60c98b75c.html?hav=1jWj6r2hy2JdE32AES1I374lEZ"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/94d116f85bb6435a8b0b86dae77c960c.html": {
+    "bureau": "广东海事局",
+    "cancels": [],
+    "date": "2026-08-21",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 16,
+    "first_seen": "2026-08-21T10:30:35+00:00",
+    "groups": [
+      [
+        {
+          "end": 66,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.883333333333333,
+          "lon": 110.9,
+          "raw": "20-53.0N 110-54.0E",
+          "start": 48
+        },
+        {
+          "end": 89,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.883333333333333,
+          "lon": 110.98333333333333,
+          "raw": "20-53.0N 110-59.0E",
+          "start": 71
+        },
+        {
+          "end": 112,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.8,
+          "lon": 110.98333333333333,
+          "raw": "20-48.0N 110-59.0E",
+          "start": 94
+        },
+        {
+          "end": 135,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.8,
+          "lon": 110.9,
+          "raw": "20-48.0N 110-54.0E",
+          "start": 117
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 66,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.883333333333333,
+        "lon": 110.9,
+        "raw": "20-53.0N 110-54.0E",
+        "start": 48
+      },
+      {
+        "end": 89,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.883333333333333,
+        "lon": 110.98333333333333,
+        "raw": "20-53.0N 110-59.0E",
+        "start": 71
+      },
+      {
+        "end": 112,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.8,
+        "lon": 110.98333333333333,
+        "raw": "20-48.0N 110-59.0E",
+        "start": 94
+      },
+      {
+        "end": 135,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.8,
+        "lon": 110.9,
+        "raw": "20-48.0N 110-54.0E",
+        "start": 117
+      }
+    ],
+    "raw_text": "南海，8月24日至28日，每天0800时至1800时，在以下四点连线海域内进行实弹射击： （1）20-53.0N，110-54.0E； （2）20-53.0N，110-59.0E； （3）20-48.0N，110-59.0E； （4）20-48.0N，110-54.0E。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—粤航警593/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/94d116f85bb6435a8b0b86dae77c960c.html?hav=1jWj6r2hy3yfmJVdhA72a9AALr",
+    "validity": {
+      "end": "2026-08-28T10:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月24日至28日，每天0800时至1800时"
+      ],
+      "start": "2026-08-24T00:00:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/95181d890d0449fbb3c737519b00efee.html": {
     "bureau": "浙江海事局",
