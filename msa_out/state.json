@@ -455,11 +455,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/02c78e1774aa4e8bb1d6fb3c5fef8a1b.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-21",
     "detail_fetched": false,
     "first_seen": "2026-08-21T04:20:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警766/26",
     "points": [],
     "revoked": false,
     "title": "渔船集中回港—浙航警766/26",
