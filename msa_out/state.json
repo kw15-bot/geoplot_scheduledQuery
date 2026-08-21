@@ -15934,6 +15934,18 @@
     "title": "海底电缆敷设—闽航警129/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c52df9ce1191490b9505ba224dd5e663.html?hav=1jWj6r2hy2JdK4HeUx2ToavZXm"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c545f606de6b4b149c8dae6d97f20ded.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-21",
+    "detail_fetched": false,
+    "first_seen": "2026-08-21T02:30:37+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "有效航警简报—东部航警30/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c545f606de6b4b149c8dae6d97f20ded.html?hav=1jWj6r2hy3yfmJVdgzncNtZzFc"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c547c212bf0c430c8cbbbf29d3db443a.html": {
     "bureau": "广西海事局",
     "cancels": [],
@@ -20098,11 +20110,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f2d0bbc74e0b4c3cadb8da12c798cef5.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-08-21",
     "detail_fetched": false,
     "first_seen": "2026-08-21T02:20:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "宜航警69/26",
     "points": [],
     "revoked": false,
     "title": "中华人民共和国宜昌海事局航行警告—宜航警69/26",
