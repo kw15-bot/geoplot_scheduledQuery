@@ -938,19 +938,6 @@
     {
       "type": "Feature",
       "properties": {
-        "title": "军事活动结束—鲁航警696/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3c968a07486843ed8d7010f5791d0f2c.html?hav=1jWj6r2hy3yfmJVdmNgvEg78bv",
-        "date": "2026-08-21",
-        "bureau": "山东海事局",
-        "group_count": 0,
-        "raw_text": "黄海，军事活动结束，撤销鲁航警676/26。",
-        "kind": "no_coords"
-      },
-      "geometry": null
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "title": "实弹射击—粤航警551/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3d37d1c7647d472bb80f631fb2c3cce3.html?hav=1jWj6r2hy3yfgGnOmkTcEAyYi0",
         "date": "2026-08-11",
