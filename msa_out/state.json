@@ -11922,11 +11922,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/85fe41e1040a4d878e86d08560c915b2.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-08-21",
     "detail_fetched": false,
     "first_seen": "2026-08-21T07:00:45+00:00",
     "groups": [],
     "military": false,
+    "own_id": "南部航警34/26",
     "points": [],
     "revoked": false,
     "title": "有效航警简报—南部航警34/26",
