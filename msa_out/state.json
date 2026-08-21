@@ -1623,11 +1623,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0d801c50913c45bfb65b397e0fdafde8.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-21",
     "detail_fetched": false,
     "first_seen": "2026-08-21T10:30:35+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警768/26",
     "points": [],
     "revoked": false,
     "title": "LNG船MUREX轮进港—浙航警768/26",
@@ -13127,6 +13129,7 @@
       ]
     ],
     "military": true,
+    "own_id": "粤航警593/26",
     "points": [
       {
         "end": 66,
