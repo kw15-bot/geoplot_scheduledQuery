@@ -5766,11 +5766,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/444a971ae2bd491d99bc01c72cc4ebc1.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-22",
     "detail_fetched": false,
     "first_seen": "2026-08-22T08:30:39+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警770/26",
     "points": [],
     "revoked": false,
     "title": "航标动态-苍电6号灯浮恢复正常—浙航警770/26",
