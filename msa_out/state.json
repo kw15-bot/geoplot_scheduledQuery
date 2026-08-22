@@ -13841,11 +13841,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9b6969faf969426aa2bf978e583f71b5.html": {
     "bureau": "深圳海事局",
+    "cancels": [],
     "date": "2026-08-22",
     "detail_fetched": false,
     "first_seen": "2026-08-22T05:20:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "深航警82/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—深航警82/26",
