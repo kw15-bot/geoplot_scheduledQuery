@@ -9735,11 +9735,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6a0fbd838f5b49f4b006b3d2ccf17734.html": {
     "bureau": "天津海事局",
+    "cancels": [],
     "date": "2026-08-22",
     "detail_fetched": false,
     "first_seen": "2026-08-22T15:00:44+00:00",
     "groups": [],
     "military": false,
+    "own_id": "津航警278/26",
     "points": [],
     "revoked": false,
     "title": "扫测作业—津航警278/26",
