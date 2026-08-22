@@ -16272,6 +16272,163 @@
     "title": "帆船竞赛-芝罘湾港区—鲁航警689/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bd5c310f17d3414884ba9a1c2ebc3f6a.html?hav=1jWj6r2hy3yfmJVdh8p73ibMl1"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bd9d8122c64c48b4a89f1311dabb7a84.html": {
+    "bureau": "广东海事局",
+    "cancels": [],
+    "date": "2026-08-22",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 16,
+    "first_seen": "2026-08-22T12:20:30+00:00",
+    "groups": [
+      [
+        {
+          "end": 36,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.283333333333335,
+          "lon": 111.31333333333333,
+          "raw": "21-17.0N 111-18.8E",
+          "start": 18
+        },
+        {
+          "end": 55,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.13,
+          "lon": 111.35666666666667,
+          "raw": "21-07.8N 111-21.4E",
+          "start": 37
+        },
+        {
+          "end": 74,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.1,
+          "lon": 111.23,
+          "raw": "21-06.0N 111-13.8E",
+          "start": 56
+        },
+        {
+          "end": 93,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.2,
+          "lon": 111.22666666666667,
+          "raw": "21-12.0N 111-13.6E",
+          "start": 75
+        },
+        {
+          "end": 117,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.21,
+          "lon": 111.06333333333333,
+          "raw": "21-12.6N 111-03.8E",
+          "start": 99
+        },
+        {
+          "end": 136,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.133333333333333,
+          "lon": 111.09,
+          "raw": "21-08.0N 111-05.4E",
+          "start": 118
+        },
+        {
+          "end": 155,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.213333333333335,
+          "lon": 111.09,
+          "raw": "21-12.8N 111-05.4E",
+          "start": 137
+        },
+        {
+          "end": 174,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.133333333333333,
+          "lon": 111.06333333333333,
+          "raw": "21-08.0N 111-03.8E",
+          "start": 156
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 36,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.283333333333335,
+        "lon": 111.31333333333333,
+        "raw": "21-17.0N 111-18.8E",
+        "start": 18
+      },
+      {
+        "end": 55,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.13,
+        "lon": 111.35666666666667,
+        "raw": "21-07.8N 111-21.4E",
+        "start": 37
+      },
+      {
+        "end": 74,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.1,
+        "lon": 111.23,
+        "raw": "21-06.0N 111-13.8E",
+        "start": 56
+      },
+      {
+        "end": 93,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.2,
+        "lon": 111.22666666666667,
+        "raw": "21-12.0N 111-13.6E",
+        "start": 75
+      },
+      {
+        "end": 117,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.21,
+        "lon": 111.06333333333333,
+        "raw": "21-12.6N 111-03.8E",
+        "start": 99
+      },
+      {
+        "end": 136,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.133333333333333,
+        "lon": 111.09,
+        "raw": "21-08.0N 111-05.4E",
+        "start": 118
+      },
+      {
+        "end": 155,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.213333333333335,
+        "lon": 111.09,
+        "raw": "21-12.8N 111-05.4E",
+        "start": 137
+      },
+      {
+        "end": 174,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.133333333333333,
+        "lon": 111.06333333333333,
+        "raw": "21-08.0N 111-03.8E",
+        "start": 156
+      }
+    ],
+    "raw_text": "8月23日1200时至2000时，在21-17.0N 111-18.8E，21-07.8N 111-21.4E，21-06.0N 111-13.8E，21-12.0N 111-13.6E连线海域，及21-12.6N 111-03.8E，21-08.0N 111-05.4E，21-12.8N 111-05.4E，21-08.0N 111-03.8E进行军事活动。禁止驶入。",
+    "revoked": false,
+    "title": "军事活动—粤航警595/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bd9d8122c64c48b4a89f1311dabb7a84.html?hav=1jWj6r2hy3yfmKyOKuPrCNMwDZ",
+    "validity": {
+      "end": "2026-08-23T12:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月23日1200时至2000时"
+      ],
+      "start": "2026-08-23T04:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/be091775eb2841099105996000551eab.html": {
     "bureau": "河北海事局",
     "cancels": [],
