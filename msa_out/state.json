@@ -7036,11 +7036,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4fd2f65cbde448a68b4d9d4da0c96a25.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-23",
     "detail_fetched": false,
     "first_seen": "2026-08-23T09:50:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警697/26",
     "points": [],
     "revoked": false,
     "title": "航标动态-航标漂失—鲁航警697/26",
