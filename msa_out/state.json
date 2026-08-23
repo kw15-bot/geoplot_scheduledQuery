@@ -6650,6 +6650,18 @@
     "title": "扫海测量—冀航警522/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4c395a1eb14b4f71b69213af0bcf04e6.html?hav=1jWj6r2hy3yfgFKeJScUW15P1g"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4c6785b478e54481a4c50c41eb664eb1.html": {
+    "bureau": "连云港海事局",
+    "date": "2026-08-23",
+    "detail_fetched": false,
+    "first_seen": "2026-08-23T09:30:36+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“博洋拖2”拖带“裕盛006”从连云港灌河港至辽宁葫芦岛港—云航警137/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4c6785b478e54481a4c50c41eb664eb1.html?hav=1jWj6r2hy3yfmMR8oK0Y8WhwsK"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4c8d9f99c1b746ce9b6b299c772149fe.html": {
     "bureau": "海南海事局",
     "cancels": [],
@@ -16796,11 +16808,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c25336bb183a4133a92433bac5d85626.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-23",
     "detail_fetched": false,
     "first_seen": "2026-08-23T09:20:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警771/26",
     "points": [],
     "revoked": false,
     "title": "OTSL THETIS轮航经虾峙门外深水航槽—浙航警771/26",
@@ -20426,11 +20440,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e612660efc064bcb967cb72f6d6b9038.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-23",
     "detail_fetched": false,
     "first_seen": "2026-08-23T09:20:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警772/26",
     "points": [],
     "revoked": false,
     "title": "LNG船MUREX轮出港—浙航警772/26",
