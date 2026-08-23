@@ -22522,11 +22522,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fcfc315c95f14b93b34e3e7c24007991.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-23",
     "detail_fetched": false,
     "first_seen": "2026-08-23T14:10:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警773/26",
     "points": [],
     "revoked": false,
     "title": "虾峙5号灯浮漂失—浙航警773/26",
