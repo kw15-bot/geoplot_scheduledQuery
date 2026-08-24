@@ -554,6 +554,18 @@
     "title": "YUAN PENG YANG、SERIFOS和XIN RUN YANG轮航经虾峙门外深水航槽—浙航警697/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/03be932d1b2845cbbf3b8ce5e2d33f8e.html?hav=1jWj6r2hy2JdQ2bdeFaIb4LfTN"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/03c4a7232a9d4b1caf460aa634db7859.html": {
+    "bureau": "长江海事局",
+    "date": "2026-08-24",
+    "detail_fetched": false,
+    "first_seen": "2026-08-24T10:50:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "中华人民共和国宜昌海事局航行警告—宜航警70/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/03c4a7232a9d4b1caf460aa634db7859.html?hav=1jWj6r2hy3yfmNttMvtCLxHGWl"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/03e83d70b34d4ad783b35ec8431ccaea.html": {
     "bureau": "山东海事局",
     "cancels": [],
@@ -1889,11 +1901,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/11438e7d461d4dd6901ff6d0e9b666eb.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-24",
     "detail_fetched": false,
     "first_seen": "2026-08-24T10:40:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警774/26",
     "points": [],
     "revoked": false,
     "title": "IMPERATOR、ZJE OCEAN 1和STAR LYRA轮航经虾峙门外深水航槽—浙航警774/26",
@@ -3779,6 +3793,18 @@
     "revoked": false,
     "title": "中华人民共和国宜昌海事局航行警告—宜航警64/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/26fb66df05fe4a0a834275d892faf066.html?hav=1jWj6r2hy3yfgIG9QgNmUfgzgN"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/271c4476ebc643b89cfa667891300d10.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-24",
+    "detail_fetched": false,
+    "first_seen": "2026-08-24T10:50:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "超大型船舶—沪航警666/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/271c4476ebc643b89cfa667891300d10.html?hav=1jWj6r2hy3yfmNttMvtCHK1DE2"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/27de251411d243d39185a1569c370775.html": {
     "bureau": "上海海事局",
@@ -7168,6 +7194,18 @@
     "title": "拖带作业—粤航警568/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4ea9d28fd91741e1a4dfda0057044072.html?hav=1jWj6r2hy3yfgLBeXhFnWiMFoC"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4ecf86a15e50429facdda7956d5b1c20.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-24",
+    "detail_fetched": false,
+    "first_seen": "2026-08-24T10:50:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "LNG作业—沪航警667/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4ecf86a15e50429facdda7956d5b1c20.html?hav=1jWj6r2hy3yfmNttMvtCHK1DE8"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4ef8d8ee60d3483fb9718497c37b75c8.html": {
     "bureau": "河北海事局",
     "cancels": [],
@@ -8605,6 +8643,18 @@
     "revoked": false,
     "title": "烟港融合八号轮拖带滨港浚1轮—鲁航警687/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5ab85adb3806402180458217e8951e09.html?hav=1jWj6r2hy3yfmJVdh7XBgSshxn"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5ac6f497baf441ef97f692d5e8ed6a0b.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-24",
+    "detail_fetched": false,
+    "first_seen": "2026-08-24T10:50:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—沪航警664/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5ac6f497baf441ef97f692d5e8ed6a0b.html?hav=1jWj6r2hy3yfmNttMvtCHK1D5s"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5af13d627d6d48e7ba5981ac65e2b42b.html": {
     "bureau": "河北海事局",
@@ -10568,6 +10618,18 @@
     "revoked": false,
     "title": "“欣富78”轮试航—浙航警672/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6f3df2232019444e9ee060688661c1c2.html?hav=1jWj6r2hy2JdKA8ejGpUlwPr5s"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6f675e914f4249479c609f95d759c6ba.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-24",
+    "detail_fetched": false,
+    "first_seen": "2026-08-24T10:50:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "LNG船舶—沪航警669/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6f675e914f4249479c609f95d759c6ba.html?hav=1jWj6r2hy3yfmNttMvtCHL9bPl"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6f863c03dab24e8087220ed0aaf8b23d.html": {
     "bureau": "上海海事局",
@@ -12976,6 +13038,18 @@
     "revoked": false,
     "title": "拖带作业—粤航警574/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8a65645e3a254aa3b93a053303a783c5.html?hav=1jWj6r2hy3yfgMeP6Pa4zNKoHX"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b8683955de741d19a640fd4eee422de.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-24",
+    "detail_fetched": false,
+    "first_seen": "2026-08-24T10:50:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "超大型船舶—沪航警668/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b8683955de741d19a640fd4eee422de.html?hav=1jWj6r2hy3yfmNttMvtCHL9bPf"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b971324885b4e409782155411e8db16.html": {
     "bureau": "河北海事局",
@@ -23085,6 +23159,18 @@
     "revoked": false,
     "title": "“海洋石油678”轮拖带“海洋石油943”—粤航警528/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fd72fd0b74144a90844aecded3064ba4.html?hav=1jWj6r2hy3yfaFXubUKEdi2hLU"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fda58a6cd8114d06b030f8333b395cc4.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-24",
+    "detail_fetched": false,
+    "first_seen": "2026-08-24T10:50:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—沪航警665/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fda58a6cd8114d06b030f8333b395cc4.html?hav=1jWj6r2hy3yfmNttMvtCHK1D9y"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fdb06811b0684c3d9942c5a9150b457b.html": {
     "bureau": "河北海事局",
