@@ -14850,6 +14850,18 @@
     "title": "防波堤及护岸维修作业—津航警236/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a4b24747580c49f2986ca12fd6266482.html?hav=1jWj6r2hy2JdK5kP3STU1kDekT"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a4f8b3e1eee54798963e5664b7440233.html": {
+    "bureau": "河北海事局",
+    "date": "2026-08-24",
+    "detail_fetched": false,
+    "first_seen": "2026-08-24T09:20:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "扫海测量—冀航警564/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a4f8b3e1eee54798963e5664b7440233.html?hav=1jWj6r2hy3yfmNttMubGbN2l4y"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a51d0b20d2534177a5e8b5a3c5c0b4ba.html": {
     "bureau": "山东海事局",
     "cancels": [],
@@ -22289,6 +22301,147 @@
     "revoked": false,
     "title": "水下检验—冀航警492/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f4b79f088c8f4656875df90e51c4ee92.html?hav=1jWj6r2hy2JdQ2bdYvYmY0CYki"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f4d0b58ea36b447c963a4f6ca7eb3188.html": {
+    "bureau": "福建海事局",
+    "cancels": [],
+    "date": "2026-08-24",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 16,
+    "first_seen": "2026-08-24T09:20:29+00:00",
+    "groups": [
+      [
+        {
+          "end": 73,
+          "fmt": "DMS",
+          "lat": 25.435833333333335,
+          "lon": 119.34527777777777,
+          "raw": "25°26'9\"N 119°20'43\"E",
+          "start": 48
+        },
+        {
+          "end": 101,
+          "fmt": "DMS",
+          "lat": 25.415277777777778,
+          "lon": 119.43666666666667,
+          "raw": "25°24'55\"N 119°26'12\"E",
+          "start": 77
+        },
+        {
+          "end": 129,
+          "fmt": "DMS",
+          "lat": 25.366388888888892,
+          "lon": 119.49027777777778,
+          "raw": "25°21'59\"N 119°29'25\"E",
+          "start": 105
+        },
+        {
+          "end": 157,
+          "fmt": "DMS",
+          "lat": 25.27361111111111,
+          "lon": 119.51972222222223,
+          "raw": "25°16'25\"N 119°31'11\"E",
+          "start": 133
+        },
+        {
+          "end": 184,
+          "fmt": "DMS",
+          "lat": 25.255555555555556,
+          "lon": 119.4675,
+          "raw": "25°15'20\"N 119°28'3\"E",
+          "start": 161
+        },
+        {
+          "end": 212,
+          "fmt": "DMS",
+          "lat": 25.33222222222222,
+          "lon": 119.36166666666666,
+          "raw": "25°19'56\"N 119°21'42\"E",
+          "start": 188
+        },
+        {
+          "end": 240,
+          "fmt": "DMS",
+          "lat": 25.41361111111111,
+          "lon": 119.315,
+          "raw": "25°24'49\"N 119°18'54\"E",
+          "start": 216
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 73,
+        "fmt": "DMS",
+        "lat": 25.435833333333335,
+        "lon": 119.34527777777777,
+        "raw": "25°26'9\"N 119°20'43\"E",
+        "start": 48
+      },
+      {
+        "end": 101,
+        "fmt": "DMS",
+        "lat": 25.415277777777778,
+        "lon": 119.43666666666667,
+        "raw": "25°24'55\"N 119°26'12\"E",
+        "start": 77
+      },
+      {
+        "end": 129,
+        "fmt": "DMS",
+        "lat": 25.366388888888892,
+        "lon": 119.49027777777778,
+        "raw": "25°21'59\"N 119°29'25\"E",
+        "start": 105
+      },
+      {
+        "end": 157,
+        "fmt": "DMS",
+        "lat": 25.27361111111111,
+        "lon": 119.51972222222223,
+        "raw": "25°16'25\"N 119°31'11\"E",
+        "start": 133
+      },
+      {
+        "end": 184,
+        "fmt": "DMS",
+        "lat": 25.255555555555556,
+        "lon": 119.4675,
+        "raw": "25°15'20\"N 119°28'3\"E",
+        "start": 161
+      },
+      {
+        "end": 212,
+        "fmt": "DMS",
+        "lat": 25.33222222222222,
+        "lon": 119.36166666666666,
+        "raw": "25°19'56\"N 119°21'42\"E",
+        "start": 188
+      },
+      {
+        "end": 240,
+        "fmt": "DMS",
+        "lat": 25.41361111111111,
+        "lon": 119.315,
+        "raw": "25°24'49\"N 119°18'54\"E",
+        "start": 216
+      }
+    ],
+    "raw_text": "兴化湾江阴港海域，自8月26日0100时至1800时，在以下七点连线范围内进行实弹射击： (1)25°26′9″N ，   119°20′43″E (2)25°24′55″N ， 119°26′12″E (3)25°21′59″N ， 119°29′25″E (4)25°16′25″N ， 119°31′11″E (5)25°15′20″N ， 119°28′3″E (6)25°19′56″N ， 119°21′42″E (7)25°24′49″N ， 119°18′54″E 禁止进入。",
+    "revoked": false,
+    "title": "实弹射击—闽航警147/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f4d0b58ea36b447c963a4f6ca7eb3188.html?hav=1jWj6r2hy3yfmNttMubGbN2l51",
+    "validity": {
+      "end": "2026-08-26T10:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月26日0100时至1800时"
+      ],
+      "start": "2026-08-25T17:00:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f5325464396948c9ba53a63e2058f7fc.html": {
     "bureau": "浙江海事局",
