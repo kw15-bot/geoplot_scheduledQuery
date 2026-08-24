@@ -11442,11 +11442,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7bc5884ce4a946a1ac965fbd043b820d.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-08-24",
     "detail_fetched": false,
     "first_seen": "2026-08-24T01:40:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警351/26",
     "points": [],
     "revoked": false,
     "title": "水深测量—辽航警351/26",
@@ -19893,6 +19895,18 @@
     "revoked": false,
     "title": "拖带作业—桂航警136/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dd7b657efc9b4e80b3c95b0f92c97f74.html?hav=1jWj6r2hy0earuufX1B4xMq6Y4"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dda1b8e3f0d7443fabe889f2e12bf33b.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-24",
+    "detail_fetched": false,
+    "first_seen": "2026-08-24T01:50:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "试航作业-SILVER—鲁航警698/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dda1b8e3f0d7443fabe889f2e12bf33b.html?hav=1jWj6r2hy3yfmNttHd9bWjFX2T"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/de549c0318a14acebab61ebc9ab6d63d.html": {
     "bureau": "江苏海事局",
