@@ -3810,6 +3810,18 @@
     "title": "LH21-2-3钻井作业—粤航警530/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/28688d658c81442899e4548e95c7ca0d.html?hav=1jWj6r2hy3yfaH0fA6Csr6LEci"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/28c53f38c0f046f481bae9566e7f4a96.html": {
+    "bureau": "天津海事局",
+    "date": "2026-08-24",
+    "detail_fetched": false,
+    "first_seen": "2026-08-24T08:50:40+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—津航警280/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/28c53f38c0f046f481bae9566e7f4a96.html?hav=1jWj6r2hy3yfmNttMtJLIvw6vB"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2966806488d649e7a7d047b22ce01942.html": {
     "bureau": "连云港海事局",
     "cancels": [],
@@ -16490,6 +16502,18 @@
     "title": "拖带作业—闽航警132/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bb53a6b5734b4524b4a5959aba412175.html?hav=1jWj6r2hy2JdQ44OHzt7W6cbPc"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bb626f759a79413287f3ebb89158d82c.html": {
+    "bureau": "河北海事局",
+    "date": "2026-08-24",
+    "detail_fetched": false,
+    "first_seen": "2026-08-24T08:50:40+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "桥吊设备卸船作业—冀航警563/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bb626f759a79413287f3ebb89158d82c.html?hav=1jWj6r2hy3yfmNttMtJLIp7k8H"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bbc5774a54114f77ac96d6302a79d30a.html": {
     "bureau": "天津海事局",
     "cancels": [],
@@ -19615,11 +19639,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d715504eea444bb1afc77e044db95a72.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-24",
     "detail_fetched": false,
     "first_seen": "2026-08-24T08:40:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警702/26",
     "points": [],
     "revoked": false,
     "title": "科学考察—鲁航警702/26",
@@ -21594,6 +21620,18 @@
     "revoked": false,
     "title": "拖带作业-威港拖21拖带烟交工1号—鲁航警630/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/edbf84a64bbe498a890d6736e187a58c.html?hav=1jWj6r2hy3yfaH0fA4uxFxynNl"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ede6ea3e75284f2ba3a90f199079bb9c.html": {
+    "bureau": "河北海事局",
+    "date": "2026-08-24",
+    "detail_fetched": false,
+    "first_seen": "2026-08-24T08:50:40+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检测—冀航警562/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ede6ea3e75284f2ba3a90f199079bb9c.html?hav=1jWj6r2hy3yfmNttMtJLIp7k4D"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/edea2e11327a406a955610382047a198.html": {
     "bureau": "河北海事局",
