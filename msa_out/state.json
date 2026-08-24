@@ -7298,11 +7298,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4fe5f416f7f14913b9c15962b0f2e929.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-08-24",
     "detail_fetched": false,
     "first_seen": "2026-08-24T14:10:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警599/26",
     "points": [],
     "revoked": false,
     "title": "防范18号台风“沙德尔”交通管制—粤航警599/26",
