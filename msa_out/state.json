@@ -9264,11 +9264,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/60f23254642e4d1da81a5791f3a42a7c.html": {
     "bureau": "福建海事局",
+    "cancels": [],
     "date": "2026-08-24",
     "detail_fetched": false,
     "first_seen": "2026-08-24T12:50:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "闽航警148/26",
     "points": [],
     "revoked": false,
     "title": "台风预警—闽航警148/26",
