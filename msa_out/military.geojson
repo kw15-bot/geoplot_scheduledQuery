@@ -848,6 +848,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "军事活动-大竹山岛—鲁航警699/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/35acc9b44eb247de8a1e9d731178e47f.html?hav=1jWj6r2hy3yfmNttMqjUB9O82j",
+        "date": "2026-08-24",
+        "bureau": "山东海事局",
+        "group_count": 1,
+        "raw_text": "渤海海峡，大竹山岛，8月25日至26日每天0600时至1800时，在38-03.0N 120-53.0E、38-03.0N 121-01.0E、37-58.0N 121-01.0E、37-58.0N 120-53.0E各点连线水域内进行军事活动。禁止驶入。",
+        "valid_start": "2026-08-24T22:00:00+00:00",
+        "valid_end": "2026-08-26T10:00:00+00:00",
+        "valid_raw": [
+          "8月25日至26日每天0600时至1800时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.88333333333334,
+              37.96666666666667
+            ],
+            [
+              121.01666666666667,
+              37.96666666666667
+            ],
+            [
+              121.01666666666667,
+              38.05
+            ],
+            [
+              120.88333333333334,
+              38.05
+            ],
+            [
+              120.88333333333334,
+              37.96666666666667
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "渤海军事演习—辽航警321/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/377cb5fa56114462b6da6bc743ac39c0.html?hav=1jWj6r2hy2JdK7D9c4M8FFKYsa",
         "date": "2026-07-25",

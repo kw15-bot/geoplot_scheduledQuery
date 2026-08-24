@@ -4657,6 +4657,99 @@
     "title": "拖带作业—粤航警581/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/357cc10276844c8e848fed050dfd6941.html?hav=1jWj6r2hy3yfgR2emCeACqnsds"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/35acc9b44eb247de8a1e9d731178e47f.html": {
+    "bureau": "山东海事局",
+    "cancels": [],
+    "date": "2026-08-24",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 16,
+    "first_seen": "2026-08-24T06:50:31+00:00",
+    "groups": [
+      [
+        {
+          "end": 52,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.05,
+          "lon": 120.88333333333334,
+          "raw": "38-03.0N 120-53.0E",
+          "start": 34
+        },
+        {
+          "end": 71,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.05,
+          "lon": 121.01666666666667,
+          "raw": "38-03.0N 121-01.0E",
+          "start": 53
+        },
+        {
+          "end": 90,
+          "fmt": "DDM_HYPHEN",
+          "lat": 37.96666666666667,
+          "lon": 121.01666666666667,
+          "raw": "37-58.0N 121-01.0E",
+          "start": 72
+        },
+        {
+          "end": 109,
+          "fmt": "DDM_HYPHEN",
+          "lat": 37.96666666666667,
+          "lon": 120.88333333333334,
+          "raw": "37-58.0N 120-53.0E",
+          "start": 91
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 52,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.05,
+        "lon": 120.88333333333334,
+        "raw": "38-03.0N 120-53.0E",
+        "start": 34
+      },
+      {
+        "end": 71,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.05,
+        "lon": 121.01666666666667,
+        "raw": "38-03.0N 121-01.0E",
+        "start": 53
+      },
+      {
+        "end": 90,
+        "fmt": "DDM_HYPHEN",
+        "lat": 37.96666666666667,
+        "lon": 121.01666666666667,
+        "raw": "37-58.0N 121-01.0E",
+        "start": 72
+      },
+      {
+        "end": 109,
+        "fmt": "DDM_HYPHEN",
+        "lat": 37.96666666666667,
+        "lon": 120.88333333333334,
+        "raw": "37-58.0N 120-53.0E",
+        "start": 91
+      }
+    ],
+    "raw_text": "渤海海峡，大竹山岛，8月25日至26日每天0600时至1800时，在38-03.0N 120-53.0E、38-03.0N 121-01.0E、37-58.0N 121-01.0E、37-58.0N 120-53.0E各点连线水域内进行军事活动。禁止驶入。",
+    "revoked": false,
+    "title": "军事活动-大竹山岛—鲁航警699/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/35acc9b44eb247de8a1e9d731178e47f.html?hav=1jWj6r2hy3yfmNttMqjUB9O82j",
+    "validity": {
+      "end": "2026-08-26T10:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月25日至26日每天0600时至1800时"
+      ],
+      "start": "2026-08-24T22:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/35f5ecc8a035482dab909ad5bdb16621.html": {
     "bureau": "深圳海事局",
     "cancels": [],
