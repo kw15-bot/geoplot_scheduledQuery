@@ -6582,11 +6582,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4a299c99901940b4a1e90317de58f7e0.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-08-24",
     "detail_fetched": false,
     "first_seen": "2026-08-24T00:00:46+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警597/26",
     "points": [],
     "revoked": false,
     "title": "海底电缆维修作业—粤航警597/26",
