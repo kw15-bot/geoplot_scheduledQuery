@@ -1581,11 +1581,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0c156579573948c187c25f584af1bdb4.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-08-24",
     "detail_fetched": false,
     "first_seen": "2026-08-24T01:20:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警598/26",
     "points": [],
     "revoked": false,
     "title": "“南洋新船230”轮船舶试航—粤航警598/26",
