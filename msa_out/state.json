@@ -18766,11 +18766,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cd23179a6e1241948f47bc35739da7e8.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-08-24",
     "detail_fetched": false,
     "first_seen": "2026-08-24T11:20:39+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警565/26",
     "points": [],
     "revoked": false,
     "title": "拖带“长胜1200”—冀航警565/26",
