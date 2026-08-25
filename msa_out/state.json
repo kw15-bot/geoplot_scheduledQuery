@@ -3056,11 +3056,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/20c16ce29b7a402586ae2e50aebb7ab1.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-25",
     "detail_fetched": false,
     "first_seen": "2026-08-25T02:40:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警703/26",
     "points": [],
     "revoked": false,
     "title": "航行拖带—鲁航警703/26",
@@ -16209,6 +16211,99 @@
     "revoked": false,
     "title": "航标动态-瓯江35号灯浮损坏—浙航警734/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b36be90356e748aebc35da998e7d4488.html?hav=1jWj6r2hy3yfgJitzEOeD7OrLv"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b37964b9d611440bb4669c4aaf446b93.html": {
+    "bureau": "辽宁海事局",
+    "cancels": [],
+    "date": "2026-08-25",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 16,
+    "first_seen": "2026-08-25T02:50:27+00:00",
+    "groups": [
+      [
+        {
+          "end": 39,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.733333333333334,
+          "lon": 122.06666666666666,
+          "raw": "38-44N 122-04E",
+          "start": 26
+        },
+        {
+          "end": 53,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.733333333333334,
+          "lon": 122.13333333333334,
+          "raw": "38-44N 122-08E",
+          "start": 40
+        },
+        {
+          "end": 67,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.666666666666664,
+          "lon": 122.13333333333334,
+          "raw": "38-40N 122-08E",
+          "start": 54
+        },
+        {
+          "end": 81,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.666666666666664,
+          "lon": 122.06666666666666,
+          "raw": "38-40N 122-04E",
+          "start": 68
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 39,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.733333333333334,
+        "lon": 122.06666666666666,
+        "raw": "38-44N 122-04E",
+        "start": 26
+      },
+      {
+        "end": 53,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.733333333333334,
+        "lon": 122.13333333333334,
+        "raw": "38-44N 122-08E",
+        "start": 40
+      },
+      {
+        "end": 67,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.666666666666664,
+        "lon": 122.13333333333334,
+        "raw": "38-40N 122-08E",
+        "start": 54
+      },
+      {
+        "end": 81,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.666666666666664,
+        "lon": 122.06666666666666,
+        "raw": "38-40N 122-04E",
+        "start": 68
+      }
+    ],
+    "raw_text": "黄海北部，自8月26日1100时至28日1700时在38-44N122-04E、38-44N122-08E、38-40N122-08E、38-40N122-04E诸点连线范围内执行实弹射击。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—辽航警354/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b37964b9d611440bb4669c4aaf446b93.html?hav=1jWj6r2hy3yfmPMdvMAUh6kNW8",
+    "validity": {
+      "end": "2026-08-28T09:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月26日1100时至28日1700时"
+      ],
+      "start": "2026-08-26T03:00:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b3b3510396d54d5fa7560d6ea80cac1c.html": {
     "bureau": "辽宁海事局",
