@@ -20380,11 +20380,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/de6e917070874f4f953a78c7d0f04a0c.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-08-25",
     "detail_fetched": false,
     "first_seen": "2026-08-25T00:50:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警352/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—辽航警352/26",
