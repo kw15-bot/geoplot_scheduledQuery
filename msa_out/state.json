@@ -13427,11 +13427,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8e9cbce8d7764ffb86c3622e2304c5dd.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-25",
     "detail_fetched": false,
     "first_seen": "2026-08-25T04:50:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警704/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业-北海救118拖带中油海5—鲁航警704/26",
