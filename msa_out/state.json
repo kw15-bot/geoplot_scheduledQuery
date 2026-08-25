@@ -13177,6 +13177,18 @@
     "title": "超大型船舶—沪航警668/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b8683955de741d19a640fd4eee422de.html?hav=1jWj6r2hy3yfmNttMvtCHL9bPf"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b91abf1a23f4f6b82d9ebd0123a10dc.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-25",
+    "detail_fetched": false,
+    "first_seen": "2026-08-25T08:20:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "防范第18号台风“沙德尔”交通管制—鲁航警705/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b91abf1a23f4f6b82d9ebd0123a10dc.html?hav=1jWj6r2hy3yfmPMdvTu3cBJgd1"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b971324885b4e409782155411e8db16.html": {
     "bureau": "河北海事局",
     "cancels": [],
@@ -21978,11 +21990,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ec4bc6ec60e5413da219dbc8b4fc86bf.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-08-25",
     "detail_fetched": false,
     "first_seen": "2026-08-25T08:10:33+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警355/26",
     "points": [],
     "revoked": false,
     "title": "灯船更换为灯浮标—辽航警355/26",
