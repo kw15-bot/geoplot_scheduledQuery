@@ -4162,11 +4162,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2bb0fcf921374de3863217d939ffb799.html": {
     "bureau": "连云港海事局",
+    "cancels": [],
     "date": "2026-08-25",
     "detail_fetched": false,
     "first_seen": "2026-08-25T03:30:42+00:00",
     "groups": [],
     "military": false,
+    "own_id": "云航警138/26",
     "points": [],
     "revoked": false,
     "title": "防范18号台风“沙德尔”交通管制—云航警138/26",
