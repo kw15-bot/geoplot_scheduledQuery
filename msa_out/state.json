@@ -13107,11 +13107,15 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/89bebbbe18fd4785a8287ada6672e36c.html": {
     "bureau": "广东海事局",
+    "cancels": [
+      "粤航警593/26"
+    ],
     "date": "2026-08-25",
     "detail_fetched": false,
     "first_seen": "2026-08-25T04:00:47+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警601/26",
     "points": [],
     "revoked": false,
     "title": "撤销粤航警593/26—粤航警601/26",
@@ -13949,7 +13953,10 @@
       }
     ],
     "raw_text": "南海，8月24日至28日，每天0800时至1800时，在以下四点连线海域内进行实弹射击： （1）20-53.0N，110-54.0E； （2）20-53.0N，110-59.0E； （3）20-48.0N，110-59.0E； （4）20-48.0N，110-54.0E。禁止驶入。",
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "粤航警601/26"
+    ],
     "title": "实弹射击—粤航警593/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/94d116f85bb6435a8b0b86dae77c960c.html?hav=1jWj6r2hy3yfmJVdhA72a9AALr",
     "validity": {

@@ -2711,6 +2711,10 @@
         "valid_raw": [
           "8月24日至28日，每天0800时至1800时"
         ],
+        "revoked": true,
+        "revoked_by": [
+          "粤航警601/26"
+        ],
         "group_index": 1,
         "kind": "area"
       },
