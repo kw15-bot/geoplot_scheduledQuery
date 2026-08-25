@@ -1705,6 +1705,18 @@
     "title": "LNG试航船舶—沪航警581/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0cfaaa687cef464bbce59f3eb485b60a.html?hav=1jWj6r2hy2JdKBbPCZyYEgXWI1"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0d4f156813c54a148a84cbac891fb980.html": {
+    "bureau": "长江海事局",
+    "date": "2026-08-26",
+    "detail_fetched": false,
+    "first_seen": "2026-08-25T23:30:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "宜宾航警66/26—宜宾海航警66/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0d4f156813c54a148a84cbac891fb980.html?hav=1jWj6r2hy3yfmQpOOllBTqU6Xk"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0d801c50913c45bfb65b397e0fdafde8.html": {
     "bureau": "浙江海事局",
     "cancels": [],
@@ -18946,6 +18958,18 @@
     "revoked": false,
     "title": "吊装作业—深航警46/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cb7a3645b1fd4849b2b376036259e50e.html?hav=1jWj6r2hxxKVxJ8wLcmQMbU8zj"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cbcb6d5c50b140b39fe5333e0a036a06.html": {
+    "bureau": "长江海事局",
+    "date": "2026-08-26",
+    "detail_fetched": false,
+    "first_seen": "2026-08-25T23:30:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "中华人民共和国重庆海事局航行警告—渝航警395/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cbcb6d5c50b140b39fe5333e0a036a06.html?hav=1jWj6r2hy3yfmQpOOllBTko88s"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cbf324b5176945e5becd3c9e4df46959.html": {
     "bureau": "深圳海事局",
