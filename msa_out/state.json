@@ -6882,11 +6882,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4b5a8130a6234847b6fbe7f8582f6d6d.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-08-25",
     "detail_fetched": false,
     "first_seen": "2026-08-25T09:21:48+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警672/26",
     "points": [],
     "revoked": false,
     "title": "试航船—沪航警672/26",
