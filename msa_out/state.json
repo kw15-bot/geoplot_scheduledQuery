@@ -13179,15 +13179,17 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b91abf1a23f4f6b82d9ebd0123a10dc.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-25",
     "detail_fetched": false,
     "first_seen": "2026-08-25T08:20:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警705/26",
     "points": [],
     "revoked": false,
     "title": "防范第18号台风“沙德尔”交通管制—鲁航警705/26",
-    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b91abf1a23f4f6b82d9ebd0123a10dc.html?hav=1jWj6r2hy3yfmPMdvTu3cBJgd1"
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b91abf1a23f4f6b82d9ebd0123a10dc.html?hav=1jWj6r2hy3yfmPMdvTu3lc3Me9"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b971324885b4e409782155411e8db16.html": {
     "bureau": "河北海事局",
