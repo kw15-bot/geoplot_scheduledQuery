@@ -12666,11 +12666,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8476717711b0445b9e399bc9a6b3b7ff.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-08-25",
     "detail_fetched": false,
     "first_seen": "2026-08-25T03:10:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "宜宾海航警65/26",
     "points": [],
     "revoked": false,
     "title": "宜宾航警65/26—宜宾海航警65/26",
