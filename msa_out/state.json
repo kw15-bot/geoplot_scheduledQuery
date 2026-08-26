@@ -4414,11 +4414,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2f336ffc34244c8386f1204931b0cdd3.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-08-26",
     "detail_fetched": false,
     "first_seen": "2026-08-26T00:30:33+00:00",
     "groups": [],
     "military": false,
+    "own_id": "渝航警396/26",
     "points": [],
     "revoked": false,
     "title": "中华人民共和国重庆海事局航行警告—渝航警396/26",
