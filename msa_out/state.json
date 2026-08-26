@@ -12630,6 +12630,165 @@
     "title": "航标动态—N3号灯浮、温州港N7号灯浮恢复正常—浙航警721/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7e1e6387352648738fbd0c23f74a260a.html?hav=1jWj6r2hy3yfgGnOs4V8a4KEUT"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7e27a539d891482a838db53035940d89.html": {
+    "bureau": "连云港海事局",
+    "cancels": [],
+    "date": "2026-08-26",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 16,
+    "first_seen": "2026-08-26T11:40:29+00:00",
+    "groups": [
+      [
+        {
+          "end": 50,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.9315,
+          "lon": 119.44633333333333,
+          "raw": "34-55.89N 119-26.78E",
+          "start": 30
+        },
+        {
+          "end": 71,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.9315,
+          "lon": 119.46833333333333,
+          "raw": "34-55.89N 119-28.10E",
+          "start": 51
+        },
+        {
+          "end": 92,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.9135,
+          "lon": 119.46833333333333,
+          "raw": "34-54.81N 119-28.10E",
+          "start": 72
+        },
+        {
+          "end": 113,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.9135,
+          "lon": 119.44633333333333,
+          "raw": "34-54.81N 119-26.78E",
+          "start": 93
+        }
+      ],
+      [
+        {
+          "end": 143,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.9175,
+          "lon": 119.45983333333334,
+          "raw": "34-55.05N 119-27.59E",
+          "start": 123
+        },
+        {
+          "end": 164,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.9175,
+          "lon": 119.48183333333333,
+          "raw": "34-55.05N 119-28.91E",
+          "start": 144
+        },
+        {
+          "end": 185,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.89933333333333,
+          "lon": 119.48183333333333,
+          "raw": "34-53.96N 119-28.91E",
+          "start": 165
+        },
+        {
+          "end": 206,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.89933333333333,
+          "lon": 119.45983333333334,
+          "raw": "34-53.96N 119-27.59E",
+          "start": 186
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 50,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.9315,
+        "lon": 119.44633333333333,
+        "raw": "34-55.89N 119-26.78E",
+        "start": 30
+      },
+      {
+        "end": 71,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.9315,
+        "lon": 119.46833333333333,
+        "raw": "34-55.89N 119-28.10E",
+        "start": 51
+      },
+      {
+        "end": 92,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.9135,
+        "lon": 119.46833333333333,
+        "raw": "34-54.81N 119-28.10E",
+        "start": 72
+      },
+      {
+        "end": 113,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.9135,
+        "lon": 119.44633333333333,
+        "raw": "34-54.81N 119-26.78E",
+        "start": 93
+      },
+      {
+        "end": 143,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.9175,
+        "lon": 119.45983333333334,
+        "raw": "34-55.05N 119-27.59E",
+        "start": 123
+      },
+      {
+        "end": 164,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.9175,
+        "lon": 119.48183333333333,
+        "raw": "34-55.05N 119-28.91E",
+        "start": 144
+      },
+      {
+        "end": 185,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.89933333333333,
+        "lon": 119.48183333333333,
+        "raw": "34-53.96N 119-28.91E",
+        "start": 165
+      },
+      {
+        "end": 206,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.89933333333333,
+        "lon": 119.45983333333334,
+        "raw": "34-53.96N 119-27.59E",
+        "start": 186
+      }
+    ],
+    "raw_text": "黄海南部，8月28日至9月1日每日0800时至2000时，在34-55.89N 119-26.78E、34-55.89N 119-28.10E、34-54.81N 119-28.10E和34-54.81N 119-26.78E四点连线范围内，以及34-55.05N 119-27.59E、34-55.05N 119-28.91E、34-53.96N 119-28.91E和34-53.96N 119-27.59E四点连线范围内进行实弹射击，禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—云航警139/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7e27a539d891482a838db53035940d89.html?hav=1jWj6r2hy3yfmQpOU8MYo16VEp",
+    "validity": {
+      "end": "2026-09-01T12:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月28日至9月1日每日0800时至2000时"
+      ],
+      "start": "2026-08-28T00:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7e3ef4a402574608ba9256654376237f.html": {
     "bureau": "广西海事局",
     "cancels": [],
