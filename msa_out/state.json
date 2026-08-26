@@ -10253,6 +10253,99 @@
       "start": "2026-07-26T22:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6829459f33e34505af91bdf258352f95.html": {
+    "bureau": "海南海事局",
+    "cancels": [],
+    "date": "2026-08-26",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 16,
+    "first_seen": "2026-08-26T09:20:29+00:00",
+    "groups": [
+      [
+        {
+          "end": 44,
+          "fmt": "DDM_HYPHEN",
+          "lat": 19.958333333333332,
+          "lon": 110.95366666666666,
+          "raw": "19-57.50N 110-57.22E",
+          "start": 24
+        },
+        {
+          "end": 65,
+          "fmt": "DDM_HYPHEN",
+          "lat": 19.958333333333332,
+          "lon": 111.23333333333333,
+          "raw": "19-57.50N 111-14.00E",
+          "start": 45
+        },
+        {
+          "end": 86,
+          "fmt": "DDM_HYPHEN",
+          "lat": 19.825,
+          "lon": 111.23333333333333,
+          "raw": "19-49.50N 111-14.00E",
+          "start": 66
+        },
+        {
+          "end": 107,
+          "fmt": "DDM_HYPHEN",
+          "lat": 19.825,
+          "lon": 110.9965,
+          "raw": "19-49.50N 110-59.79E",
+          "start": 87
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 44,
+        "fmt": "DDM_HYPHEN",
+        "lat": 19.958333333333332,
+        "lon": 110.95366666666666,
+        "raw": "19-57.50N 110-57.22E",
+        "start": 24
+      },
+      {
+        "end": 65,
+        "fmt": "DDM_HYPHEN",
+        "lat": 19.958333333333332,
+        "lon": 111.23333333333333,
+        "raw": "19-57.50N 111-14.00E",
+        "start": 45
+      },
+      {
+        "end": 86,
+        "fmt": "DDM_HYPHEN",
+        "lat": 19.825,
+        "lon": 111.23333333333333,
+        "raw": "19-49.50N 111-14.00E",
+        "start": 66
+      },
+      {
+        "end": 107,
+        "fmt": "DDM_HYPHEN",
+        "lat": 19.825,
+        "lon": 110.9965,
+        "raw": "19-49.50N 110-59.79E",
+        "start": 87
+      }
+    ],
+    "raw_text": "南海，8月27日0600时至29日2200时，在19-57.50N/110-57.22E、19-57.50N/111-14.00E、19-49.50N/111-14.00E和19-49.50N/110-59.79E四点连线水域范围内进行军事训练，禁止驶入。",
+    "revoked": false,
+    "title": "军事训练—琼航警166/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6829459f33e34505af91bdf258352f95.html?hav=1jWj6r2hy3yfmQpOU5mhgCHjBU",
+    "validity": {
+      "end": "2026-08-29T14:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月27日0600时至29日2200时"
+      ],
+      "start": "2026-08-26T22:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6838b5f0562f46879ae0fc426159d3c1.html": {
     "bureau": "长江海事局",
     "cancels": [],
