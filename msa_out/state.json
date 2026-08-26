@@ -19733,11 +19733,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d234246f7f9a4def9edd2c9148bdf443.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-08-26",
     "detail_fetched": false,
     "first_seen": "2026-08-26T09:00:45+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警713/26",
     "points": [],
     "revoked": false,
     "title": "水工作业-勘探409和海洋石油707—鲁航警713/26",
