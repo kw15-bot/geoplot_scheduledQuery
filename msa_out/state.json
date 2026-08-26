@@ -1931,11 +1931,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/10e2305dcb2e4be2943d90016ecefe43.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-08-26",
     "detail_fetched": false,
     "first_seen": "2026-08-26T08:50:33+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警567/26",
     "points": [],
     "revoked": false,
     "title": "水下检验—冀航警567/26",
@@ -19728,6 +19730,18 @@
     "revoked": false,
     "title": "装载大件船舶—沪航警648/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d22a396ec0ec48cb82f8e12d54dc5c75.html?hav=1jWj6r2hy3yfgSVPKlwx9C2JZT"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d234246f7f9a4def9edd2c9148bdf443.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-26",
+    "detail_fetched": false,
+    "first_seen": "2026-08-26T09:00:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水工作业-勘探409和海洋石油707—鲁航警713/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d234246f7f9a4def9edd2c9148bdf443.html?hav=1jWj6r2hy3yfmQpOU4UmSYehbt"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d26ef8c62c5c405e875d7bedf25f4803.html": {
     "bureau": "江苏海事局",
