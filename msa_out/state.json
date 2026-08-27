@@ -15323,11 +15323,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9e309f676bb3403e96c893080727cbb4.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-08-27",
     "detail_fetched": false,
     "first_seen": "2026-08-27T09:30:37+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警570/26",
     "points": [],
     "revoked": false,
     "title": "潜水作业—冀航警570/26",
