@@ -16194,11 +16194,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/abdce7e5da7b4ae582bf1bb11bea9434.html": {
     "bureau": "连云港海事局",
+    "cancels": [],
     "date": "2026-08-27",
     "detail_fetched": false,
     "first_seen": "2026-08-27T03:00:46+00:00",
     "groups": [],
     "military": false,
+    "own_id": "云航警140/26",
     "points": [],
     "revoked": false,
     "title": "集装箱落海—云航警140/26",
