@@ -2978,6 +2978,18 @@
     "title": "盐田港大型构件到岸—深航警81/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1ee9f64a5f0f43a4a5b189a0e02c51e4.html?hav=1jWj6r2hy3yfmJVdh7XBSMcBL7"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f25c6e2caef4d58b842dc87abc8cd0e.html": {
+    "bureau": "长江海事局",
+    "date": "2026-08-27",
+    "detail_fetched": false,
+    "first_seen": "2026-08-27T09:00:47+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "武汉海事局关于“华航588”轮载运厦门第三东通道钢桁梁水上运输作业的航行警告—汉航警42/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f25c6e2caef4d58b842dc87abc8cd0e.html?hav=1jWj6r2hy3yfmSI92f5V4c6Rei"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f41dfde286a4cd291b853c547034df0.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -6912,11 +6924,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/49c8db56a0e14f2f9fd85229dfd2364b.html": {
     "bureau": "深圳海事局",
+    "cancels": [],
     "date": "2026-08-27",
     "detail_fetched": false,
     "first_seen": "2026-08-27T08:50:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "深航警83/26",
     "points": [],
     "revoked": false,
     "title": "倒缆作业—深航警83/26",
@@ -13746,6 +13760,18 @@
     "revoked": false,
     "title": "撤销粤航警593/26—粤航警601/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/89bebbbe18fd4785a8287ada6672e36c.html?hav=1jWj6r2hy3yfmPMdvNSQIN3aGj"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/89f18a45ea704e8687512a08677fa5d5.html": {
+    "bureau": "广西海事局",
+    "date": "2026-08-27",
+    "detail_fetched": false,
+    "first_seen": "2026-08-27T09:00:47+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—桂航警189/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/89f18a45ea704e8687512a08677fa5d5.html?hav=1jWj6r2hy3yfmSI92f5V4Zpec8"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8a23002420924308a9425f925ec3face.html": {
     "bureau": "山东海事局",
