@@ -374,6 +374,31 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "军事训练—粤航警603/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0bd2bb263ad347a489f4a92a213c982d.html?hav=1jWj6r2hy3yfmSI92dnZOcrCnl",
+        "date": "2026-08-27",
+        "bureau": "广东海事局",
+        "group_count": 1,
+        "raw_text": "北部湾，8月28日1000时至29日2000时，在以21-15.28N，109-32.68E为圆心，半径6千米的圆形水域进行军事训练。禁止驶入。",
+        "valid_start": "2026-08-28T02:00:00+00:00",
+        "valid_end": "2026-08-29T12:00:00+00:00",
+        "valid_raw": [
+          "8月28日1000时至29日2000时"
+        ],
+        "group_index": 1,
+        "kind": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          109.54466666666667,
+          21.254666666666665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "火箭发射—沪航警561/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/15c875ed4da0467fb3a818dea65a6a39.html?hav=1jWj6r2hy2JdE8tASn6EX7sywM",
         "date": "2026-07-18",
