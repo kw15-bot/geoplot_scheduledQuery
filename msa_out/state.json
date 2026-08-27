@@ -18019,11 +18019,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bec8574d54f1462087a01cba5a09ab10.html": {
     "bureau": "深圳海事局",
+    "cancels": [],
     "date": "2026-08-27",
     "detail_fetched": false,
     "first_seen": "2026-08-27T10:50:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "深航警84/26",
     "points": [],
     "revoked": false,
     "title": "深圳蛇口港区水域举办太子湾海上嘉年华活动—深航警84/26",
