@@ -6030,6 +6030,99 @@
     "title": "吊装作业—深航警23/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1cd75998bc5a446bbee63de04704ae0a.html?hav=1jWj6r2hxu0R2cyxUOjpxURoph"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1d00726765954805871b691bbae2d3dc.html": {
+    "bureau": "辽宁海事局",
+    "cancels": [],
+    "date": "2026-08-28",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 17,
+    "first_seen": "2026-08-28T08:10:35+00:00",
+    "groups": [
+      [
+        {
+          "end": 49,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.861666666666665,
+          "lon": 121.63666666666667,
+          "raw": "38-51.7N 121-38.2E",
+          "start": 32
+        },
+        {
+          "end": 67,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.57,
+          "lon": 121.63666666666667,
+          "raw": "38-34.2N 121-38.2E",
+          "start": 50
+        },
+        {
+          "end": 85,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.565,
+          "lon": 121.13166666666666,
+          "raw": "38-33.9N 121-07.9E",
+          "start": 68
+        },
+        {
+          "end": 103,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.803333333333335,
+          "lon": 121.235,
+          "raw": "38-48.2N 121-14.1E",
+          "start": 86
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 49,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.861666666666665,
+        "lon": 121.63666666666667,
+        "raw": "38-51.7N 121-38.2E",
+        "start": 32
+      },
+      {
+        "end": 67,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.57,
+        "lon": 121.63666666666667,
+        "raw": "38-34.2N 121-38.2E",
+        "start": 50
+      },
+      {
+        "end": 85,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.565,
+        "lon": 121.13166666666666,
+        "raw": "38-33.9N 121-07.9E",
+        "start": 68
+      },
+      {
+        "end": 103,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.803333333333335,
+        "lon": 121.235,
+        "raw": "38-48.2N 121-14.1E",
+        "start": 86
+      }
+    ],
+    "raw_text": "渤海海峡黄海北部，自8月30日1600时至9月13日1600时在38-51.7N121-38.2E、38-34.2N121-38.2E、38-33.9N121-07.9E、38-48.2N121-14.1E诸点连线范围内执行军事任务。禁止驶入。",
+    "revoked": false,
+    "title": "军事任务—辽航警362/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1d00726765954805871b691bbae2d3dc.html?hav=1jWj6r2hy3yfmTktbEOI0pO6oD",
+    "validity": {
+      "end": "2026-09-13T08:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "8月30日1600时至9月13日1600时"
+      ],
+      "start": "2026-08-30T08:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1dfba6505b0d42f28da41359b786780d.html": {
     "bureau": "长江海事局",
     "cancels": [],
@@ -24468,6 +24561,18 @@
     "revoked": false,
     "title": "试航船舶“鑫福139”轮航行警告—苏航警31/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a623cd355b334fe29389cc4755a1b758.html?hav=1jWj6r2hy0eafdmBQ7DWKbTV5P"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a6aec2a878af4c6899338766f8367695.html": {
+    "bureau": "辽宁海事局",
+    "date": "2026-08-28",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T08:10:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "灯浮标漂失—辽航警363/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a6aec2a878af4c6899338766f8367695.html?hav=1jWj6r2hy3yfmTktbEOI5W3M8W"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a6c110f62f534b6d8bcaf05323643f2d.html": {
     "bureau": "深圳海事局",
