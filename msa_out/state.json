@@ -6076,6 +6076,7 @@
       ]
     ],
     "military": true,
+    "own_id": "辽航警362/26",
     "points": [
       {
         "end": 49,
@@ -24564,11 +24565,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a6aec2a878af4c6899338766f8367695.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T08:10:35+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警363/26",
     "points": [],
     "revoked": false,
     "title": "灯浮标漂失—辽航警363/26",
