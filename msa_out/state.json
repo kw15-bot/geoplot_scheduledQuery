@@ -22304,11 +22304,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/885b471261684e3b8b44740c6efcfe4a.html": {
     "bureau": "广西海事局",
+    "cancels": [],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T12:10:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "桂航警194/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—桂航警194/26",
@@ -30588,6 +30590,18 @@
     "revoked": false,
     "title": "LNG船舶—沪航警597/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d4ca8f1afda84173ac288ac7ae41640a.html?hav=1jWj6r2hy2JdQ44OCot5gkdnYC"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d52ebfaea330421aa6f971accab8c366.html": {
+    "bureau": "河北海事局",
+    "date": "2026-08-28",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T12:20:33+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警577/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d52ebfaea330421aa6f971accab8c366.html?hav=1jWj6r2hy3yfmTktbJY0BixE1p"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d55febf73d7c42f7955630ae08aeea1d.html": {
     "bureau": "辽宁海事局",
