@@ -12624,7 +12624,10 @@
     "military": false,
     "own_id": "粤航警599/26",
     "points": [],
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "粤航警604/26"
+    ],
     "title": "防范18号台风“沙德尔”交通管制—粤航警599/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4fe5f416f7f14913b9c15962b0f2e929.html?hav=1jWj6r2hy3yfmNttS9T4vlICgL"
   },
@@ -15310,11 +15313,15 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5ec321d7c8ec485ab5e471d3b05c5339.html": {
     "bureau": "山东海事局",
+    "cancels": [
+      "鲁航警709/26"
+    ],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T02:30:43+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警721/26",
     "points": [],
     "revoked": false,
     "title": "撤销鲁航警709/26—鲁航警721/26",
@@ -19430,11 +19437,15 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/79c8830b2c914fd29fecd469e81dea0c.html": {
     "bureau": "广东海事局",
+    "cancels": [
+      "粤航警599/26"
+    ],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T02:30:43+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警604/26",
     "points": [],
     "revoked": false,
     "title": "撤销粤航警599/26—粤航警604/26",
@@ -29465,7 +29476,10 @@
     "military": false,
     "own_id": "鲁航警709/26",
     "points": [],
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "鲁航警721/26"
+    ],
     "title": "防范第18号台风“沙德尔”交通管制—鲁航警709/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d026c77e745e487480aca5311bc51dbe.html?hav=1jWj6r2hy3yfmPMdvTu3v1eeCu"
   },
