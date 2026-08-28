@@ -385,6 +385,10 @@
         "valid_raw": [
           "8月28日1000时至29日2000时"
         ],
+        "revoked": true,
+        "revoked_by": [
+          "粤航警624/26"
+        ],
         "group_index": 1,
         "kind": "area"
       },

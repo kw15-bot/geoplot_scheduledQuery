@@ -2691,7 +2691,10 @@
       }
     ],
     "raw_text": "北部湾，8月28日1000时至29日2000时，在以21-15.28N，109-32.68E为圆心，半径6千米的圆形水域进行军事训练。禁止驶入。",
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "粤航警624/26"
+    ],
     "title": "军事训练—粤航警603/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0bd2bb263ad347a489f4a92a213c982d.html?hav=1jWj6r2hy3yfmSI92dnZOcrCnl",
     "validity": {
@@ -22248,11 +22251,15 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/87a89267baf34b44b66c56226c5ff4ee.html": {
     "bureau": "广东海事局",
+    "cancels": [
+      "粤航警603/26"
+    ],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T13:40:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警624/26",
     "points": [],
     "revoked": false,
     "title": "撤销粤航警603/26—粤航警624/26",
