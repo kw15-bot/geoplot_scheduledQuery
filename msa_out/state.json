@@ -12165,6 +12165,18 @@
     "title": "“嵊山共富1”轮试航—浙航警731/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4849c27ad3e24085af4b65782775f1a0.html?hav=1jWj6r2hy3yfgJitzEOe8OSpNq"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/48a8fcb02db44281b1d8e4789ae62d28.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-28",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T10:40:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "有效航警简报—东部航警31/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/48a8fcb02db44281b1d8e4789ae62d28.html?hav=1jWj6r2hy3yfmTktbIG4MPmgHY"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/48e8b8ca8ab146f999bb1d058ce45ca9.html": {
     "bureau": "山东海事局",
     "cancels": [],
@@ -22150,11 +22162,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/865c23930d634501907cb5e90c5451b7.html": {
     "bureau": "广西海事局",
+    "cancels": [],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T10:30:40+00:00",
     "groups": [],
     "military": false,
+    "own_id": "桂航警193/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—桂航警193/26",
