@@ -16610,6 +16610,18 @@
       "start": "2026-07-05T12:30:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/60152b6a9e754a658ee36130f04d528b.html": {
+    "bureau": "河北海事局",
+    "date": "2026-08-28",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T02:00:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带—冀航警574/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/60152b6a9e754a658ee36130f04d528b.html?hav=1jWj6r2hy3yfmTktVzWTpqjwdZ"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6026b263cb364787acbbac1dce9c4566.html": {
     "bureau": "江苏海事局",
     "cancels": [],
@@ -27823,11 +27835,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c4a03456f715418e99c70157221255a3.html": {
     "bureau": "天津海事局",
+    "cancels": [],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T01:50:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "津航警284/26",
     "points": [],
     "revoked": false,
     "title": "海底电缆修理—津航警284/26",
