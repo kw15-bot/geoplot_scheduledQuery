@@ -1359,6 +1359,18 @@
     "title": "扫测作业—津航警229/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/08531b59f6f3479e947be62656ce45cf.html?hav=1jWj6r2hy2JdK2otwG07ZhWocd"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/08a93c9909d2401ba909261ea00b0cbe.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-28",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T03:20:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "海底电缆维修作业—粤航警616/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/08a93c9909d2401ba909261ea00b0cbe.html?hav=1jWj6r2hy3yfmTktb9EZc0uQMu"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/08cd5dc3221d4a8ea59702dab0977008.html": {
     "bureau": "上海海事局",
     "cancels": [],
@@ -3095,6 +3107,18 @@
     "title": "防御热带低压—闽航警128/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/11b739c3ad88409abcc14e45002ce4bb.html?hav=1jWj6r2hy2JdK4HeUlR8AQ5t6f"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1205105f7dc948c8ac7a8f93e617588c.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-28",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T03:20:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "撤销粤航警522/26—粤航警614/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1205105f7dc948c8ac7a8f93e617588c.html?hav=1jWj6r2hy3yfmTktb9EZbzm1iK"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1218fe675bf645b18b3105b262603eb4.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -3136,6 +3160,18 @@
     "revoked": false,
     "title": "1月28日半潜驳船“汉拿山”拖带作业—苏航警6/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/12464c482abd4c0bb9885af0755100a8.html?hav=1jWj6r2hxsLOaPDiqnXvBByRhl"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/12a5c32422404258853f0789f952d1b1.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-28",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T03:20:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "南海LH27-1-6d井钻井作业—粤航警612/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/12a5c32422404258853f0789f952d1b1.html?hav=1jWj6r2hy3yfmTktb9EZbvERpg"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/13591b8349e647cda8a25631cfef232c.html": {
     "bureau": "山东海事局",
@@ -5653,11 +5689,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/19e80dbc49ce47cbac61e24ef88234a3.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T03:10:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "南部航警35/26",
     "points": [],
     "revoked": false,
     "title": "有效航警简报—南部航警35/26",
@@ -6350,7 +6388,10 @@
     "military": false,
     "own_id": "粤航警570/26",
     "points": [],
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "粤航警608/26"
+    ],
     "title": "HZ25-6-1井钻井作业—粤航警570/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/210a47c80e3743faa5f547d4fa29c763.html?hav=1jWj6r2hy3yfgLBeXl7ZwpCVSY"
   },
@@ -15309,6 +15350,18 @@
     "title": "南海WC10-5-1d井钻井作业—粤航警526/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5def5b05b8a240d9846d02dba6452e56.html?hav=1jWj6r2hy2JdQ44OI1B2tFWtQ1"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5dffbcaf5577431ea8a6c9be0fe2258d.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-28",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T03:20:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "撤销粤航警524/26—粤航警611/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5dffbcaf5577431ea8a6c9be0fe2258d.html?hav=1jWj6r2hy3yfmTktb9EZbu63BA"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5ea88b3c52e04f53969519cc32863aa0.html": {
     "bureau": "深圳海事局",
     "cancels": [],
@@ -17485,6 +17538,18 @@
     "title": "撤销航警—辽航警327/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6770cf292dc34d7e80dc498fa5f33448.html?hav=1jWj6r2hy2JdKD49l9HL1giFwB",
     "validity": null
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/67b06d60f26442edb4e6661b82a1e1d5.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-28",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T03:20:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "撤销粤航警530/26—粤航警613/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/67b06d60f26442edb4e6661b82a1e1d5.html?hav=1jWj6r2hy3yfmTktb9EZbyddSa"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/680e466cd77c4fd9be353ed7fa3e0382.html": {
     "bureau": "辽宁海事局",
@@ -24693,6 +24758,18 @@
     "title": "水下检验—冀航警513/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ac223252de304c9ea1be2209d8f614e2.html?hav=1jWj6r2hy3yfaMrfOOhyW7XEnv"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ac94b5456a2e41a38ae840d649857baf.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-28",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T03:20:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "勘察作业—粤航警615/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ac94b5456a2e41a38ae840d649857baf.html?hav=1jWj6r2hy3yfmTktb9EZbzm1um"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/accddbd352af4268849976a35ccf5390.html": {
     "bureau": "福建海事局",
     "cancels": [],
@@ -25180,11 +25257,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b3120b3cfb5046f3b7eba3f709028166.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T03:10:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警607/26",
     "points": [],
     "revoked": false,
     "title": "“德泽”轮拖带“南海十号”—粤航警607/26",
@@ -28986,11 +29065,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cba87dc541e64ae9a5d45aef3f8a225c.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T03:10:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警605/26",
     "points": [],
     "revoked": false,
     "title": "南海EP21-6-2井钻井作业—粤航警605/26",
@@ -30498,6 +30579,18 @@
     "title": "“德深”拖带“南海五号”—粤航警600/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d9dcba89fa084cb3918088895043d474.html?hav=1jWj6r2hy3yfmPMdvMAUSx4f8C"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/da1edea9cb1c4a6a926ac53d6ed9db3d.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-28",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T03:20:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "EP23-12-1井钻井作业—粤航警610/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/da1edea9cb1c4a6a926ac53d6ed9db3d.html?hav=1jWj6r2hy3yfmTktb9EZbrpGL5"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/da62b75d85c84bf48704f04f269288ea.html": {
     "bureau": "山东海事局",
     "cancels": [],
@@ -31029,11 +31122,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dfd108f0091f4da8a605ad9c361d43c3.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T03:10:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警606/26",
     "points": [],
     "revoked": false,
     "title": "水上水下作业—粤航警606/26",
@@ -31816,11 +31911,15 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e6ea69885aea41cfa9e489e0f6415f0d.html": {
     "bureau": "广东海事局",
+    "cancels": [
+      "粤航警570/26"
+    ],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T03:10:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警608/26",
     "points": [],
     "revoked": false,
     "title": "撤销粤航警570/26—粤航警608/26",
@@ -33527,11 +33626,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f7fba6d1eb9244adb5ae22483739c6f1.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T03:10:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警609/26",
     "points": [],
     "revoked": false,
     "title": "“德深”轮拖带“南海六号”—粤航警609/26",
