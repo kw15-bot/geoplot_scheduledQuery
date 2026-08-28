@@ -8908,6 +8908,18 @@
     "title": "5月8日“汉拿山”轮拖带作业—苏航警25/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3c0fd18c2bf74d8fa0c0b8310a463ea0.html?hav=1jWj6r2hxyzYDRThKwItfJvusw"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3c433bcdc57044b484fff62ba8fc5725.html": {
+    "bureau": "广东海事局",
+    "date": "2026-08-28",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T10:50:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "科学调查—粤航警623/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3c433bcdc57044b484fff62ba8fc5725.html?hav=1jWj6r2hy3yfmTktbIG4R9r6u8"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3c8e4f4b8b1245e9a8aee715923a281d.html": {
     "bureau": "山东海事局",
     "cancels": [],
@@ -12167,11 +12179,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/48a8fcb02db44281b1d8e4789ae62d28.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T10:40:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "东部航警31/26",
     "points": [],
     "revoked": false,
     "title": "有效航警简报—东部航警31/26",
