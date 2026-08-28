@@ -15140,6 +15140,18 @@
     "title": "南海热带低压预警—琼航警118/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5b603d630acf4286b708c25f110ebced.html?hav=1jWj6r2hy2Jd7vvfjZLIg8253w"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5b7f7d52477e41aea12db9d4fe0c16e4.html": {
+    "bureau": "辽宁海事局",
+    "date": "2026-08-28",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T01:30:36+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "沉船警告—辽航警360/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5b7f7d52477e41aea12db9d4fe0c16e4.html?hav=1jWj6r2hy3yfmTktVzWTbp10MK"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5b9b30f5385044acb3f6d57a97916534.html": {
     "bureau": "深圳海事局",
     "cancels": [],
@@ -23997,6 +24009,7 @@
       ]
     ],
     "military": true,
+    "own_id": "冀航警573/26",
     "points": [
       {
         "end": 51,
@@ -31909,11 +31922,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e9ba520ded124b39a34f3bef6e7ec084.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T01:20:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "汉航警43/26",
     "points": [],
     "revoked": false,
     "title": "武汉海事局关于“SPIRIT OF TOULOUSE”轮拖带作业的航行警告—汉航警43/26",
