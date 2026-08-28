@@ -15142,11 +15142,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5b7f7d52477e41aea12db9d4fe0c16e4.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T01:30:36+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警360/26",
     "points": [],
     "revoked": false,
     "title": "沉船警告—辽航警360/26",
