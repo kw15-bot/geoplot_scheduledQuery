@@ -7200,6 +7200,18 @@
     "title": "超大型船舶—沪航警666/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/271c4476ebc643b89cfa667891300d10.html?hav=1jWj6r2hy3yfmNttMvtCHK1DE2"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/275fa9a507744558add313dd69f882a2.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-29",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T23:50:27+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "LNG船舶—沪航警678/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/275fa9a507744558add313dd69f882a2.html?hav=1jWj6r2hy3yfmVDe4XXLAvfAgR"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/27b805e834074a65b6c03c2b29fb6a1e.html": {
     "bureau": "河北海事局",
     "cancels": [],
@@ -12031,6 +12043,18 @@
       ],
       "start": "2026-08-03T06:00:00+00:00"
     }
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/47ac37a01c8841ccbe7d089e66c903c5.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-29",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T23:50:27+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "灯桩损坏—沪航警680/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/47ac37a01c8841ccbe7d089e66c903c5.html?hav=1jWj6r2hy3yfmVDe4XXLAvfAoe"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/47ec7d3dfd444220abc7bbab637ab63e.html": {
     "bureau": "天津海事局",
@@ -28032,6 +28056,18 @@
     "revoked": false,
     "title": "水深测量—津航警258/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bfe0265a9d9c479c8a65bf7e70bd0225.html?hav=1jWj6r2hy3yfgGnOruBiELjaCN"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bff05da06e364c449ee73c4a8e5d6958.html": {
+    "bureau": "上海海事局",
+    "date": "2026-08-29",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T23:50:27+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "LNG作业—沪航警679/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bff05da06e364c449ee73c4a8e5d6958.html?hav=1jWj6r2hy3yfmVDe4XXLAvfAkZ"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c14fbdaafc964a22942d2082a602261c.html": {
     "bureau": "上海海事局",
