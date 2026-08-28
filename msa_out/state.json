@@ -8904,6 +8904,18 @@
     "title": "航标动态—桂航警157/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3dde4bd0108e4bf3936a5a09ba40478b.html?hav=1jWj6r2hy2JdE7QPuBDacXec0D"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3e0eec1932704d1489497e04db708779.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-28",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T01:00:42+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "船舶试航——HONG DA—鲁航警719/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3e0eec1932704d1489497e04db708779.html?hav=1jWj6r2hy3yfmTktVyEYEg6iM0"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3ee597d1cf2e4565ad5a2a5dcfe3d871.html": {
     "bureau": "广西海事局",
     "cancels": [],
@@ -12574,11 +12586,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4fbedf692fef4200a3c53c73fd858109.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-08-28",
     "detail_fetched": false,
     "first_seen": "2026-08-28T00:50:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警359/26",
     "points": [],
     "revoked": false,
     "title": "拖带海洋石油923钻井平台—辽航警359/26",
@@ -22823,6 +22837,18 @@
     "revoked": false,
     "title": "超大型船舶（YUAN GU HAI）进港—冀航警526/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/96481f50aaa344a7b810e01c905efb91.html?hav=1jWj6r2hy3yfgJitz6f4puq4o9"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/967dae42130345fb9fae6c3e6c711354.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-28",
+    "detail_fetched": false,
+    "first_seen": "2026-08-28T01:00:42+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "科学考察—鲁航警720/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/967dae42130345fb9fae6c3e6c711354.html?hav=1jWj6r2hy3yfmTktVyEYEiNVjB"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9683606c8e2447d2ac2ce3f48cd97b20.html": {
     "bureau": "广西海事局",
