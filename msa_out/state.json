@@ -18490,6 +18490,18 @@
     "title": "关于“锦祥宏宇”轮水上试验活动的航行警告（安海航警〔2026〕0028号）—安海航警28/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6b530d6743da4df9a739ff96a18faa04.html?hav=1jWj6r2hy2JdQ2bdeEIN9LaVrN"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6b997d66ffcf4f9e952fe597c41d816c.html": {
+    "bureau": "天津海事局",
+    "date": "2026-08-29",
+    "detail_fetched": false,
+    "first_seen": "2026-08-29T08:20:28+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水深测量—津航警287/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6b997d66ffcf4f9e952fe597c41d816c.html?hav=1jWj6r2hy3yfmVDe9qGvm19aRE"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6beb6d0f55dd4aedadbb585eafe8c407.html": {
     "bureau": "长江海事局",
     "cancels": [],
@@ -29276,6 +29288,18 @@
       ],
       "start": "2026-07-22T22:00:00+00:00"
     }
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c8ee059536dd4a55ac52fd2dbf324b26.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-08-29",
+    "detail_fetched": false,
+    "first_seen": "2026-08-29T08:20:28+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航标动态—洞头峡桥警L4灯浮灯光熄灭—浙航警779/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c8ee059536dd4a55ac52fd2dbf324b26.html?hav=1jWj6r2hy3yfmVDe9qGvmAEkjd"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c90601ad11224a01bdac77f7f936dcbf.html": {
     "bureau": "连云港海事局",
