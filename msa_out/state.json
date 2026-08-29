@@ -19238,6 +19238,18 @@
       "start": "2026-08-23T22:30:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/751953fb792f463e9eb047c690eddf08.html": {
+    "bureau": "海南海事局",
+    "date": "2026-08-29",
+    "detail_fetched": false,
+    "first_seen": "2026-08-29T13:20:30+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“大航拖8”拖带船舶“长洋浚232”—琼航警167/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/751953fb792f463e9eb047c690eddf08.html?hav=1jWj6r2hy3yfmVDeF3qoVBMcKZ"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/758ce9ce829345aa9ea24a51c745d212.html": {
     "bureau": "上海海事局",
     "cancels": [],
