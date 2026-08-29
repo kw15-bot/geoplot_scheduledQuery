@@ -24958,11 +24958,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a9226874c43343e89e6d0555a238d848.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-29",
     "detail_fetched": false,
     "first_seen": "2026-08-29T03:00:42+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警778/26",
     "points": [],
     "revoked": false,
     "title": "“MSC LETICIA X”轮试航—浙航警778/26",
