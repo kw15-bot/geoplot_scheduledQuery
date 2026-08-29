@@ -15855,11 +15855,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5f51b6a0644d4df0a9f455633b887032.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-08-29",
     "detail_fetched": false,
     "first_seen": "2026-08-29T09:00:46+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警780/26",
     "points": [],
     "revoked": false,
     "title": "NAVE ELECTRON轮航经虾峙门外深水航槽—浙航警780/26",
