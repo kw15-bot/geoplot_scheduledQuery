@@ -5686,11 +5686,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/197f65b36daf43e0a8940605a5ef75cd.html": {
     "bureau": "福建海事局",
+    "cancels": [],
     "date": "2026-08-29",
     "detail_fetched": false,
     "first_seen": "2026-08-29T01:10:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "闽航警149/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—闽航警149/26",
