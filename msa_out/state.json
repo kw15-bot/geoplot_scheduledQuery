@@ -20631,11 +20631,15 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7dfa9cc4945d420c9afe6290d5b5aaa2.html": {
     "bureau": "天津海事局",
+    "cancels": [
+      "津航警283/26"
+    ],
     "date": "2026-08-31",
     "detail_fetched": false,
     "first_seen": "2026-08-31T07:50:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "津航警291/26",
     "points": [],
     "revoked": false,
     "title": "撤销津航警283/26—津航警291/26",
@@ -33714,7 +33718,10 @@
     "military": false,
     "own_id": "津航警283/26",
     "points": [],
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "津航警291/26"
+    ],
     "title": "拖带作业—津航警283/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ef14927733d74666b71084ceb776268e.html?hav=1jWj6r2hy3yfmSI92dnZTSbc1d"
   },
