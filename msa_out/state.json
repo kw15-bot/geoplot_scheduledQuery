@@ -30313,11 +30313,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ce375c8e04e447f89ab3467af984154f.html": {
     "bureau": "连云港海事局",
+    "cancels": [],
     "date": "2026-08-31",
     "detail_fetched": false,
     "first_seen": "2026-08-31T06:40:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "云航警141/26",
     "points": [],
     "revoked": false,
     "title": "黄海南部“鸿达鑫泉州”轮试航—云航警141/26",
