@@ -26603,11 +26603,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bad69e4e4e9a458ba02bb734101ec489.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-08-31",
     "detail_fetched": false,
     "first_seen": "2026-08-31T01:30:33+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警625/26",
     "points": [],
     "revoked": false,
     "title": "“伊尼亚斯燃气”轮船舶试航—粤航警625/26",
