@@ -25465,6 +25465,18 @@
     "title": "中华人民共和国重庆海事局航行警告—渝航警384/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/aab5abddb9ed4612b3effca500fac444.html?hav=1jWj6r2hy3yfaJwAHDWXVs98VR"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/aab8a71e0e15464ba94df6f1d962998c.html": {
+    "bureau": "山东海事局",
+    "date": "2026-08-31",
+    "detail_fetched": false,
+    "first_seen": "2026-08-31T08:50:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "开渔安全提醒—鲁航警730/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/aab8a71e0e15464ba94df6f1d962998c.html?hav=1jWj6r2hy3yfsMDsWD95pv38Xz"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/aaff25b7b3394118b1e13afc8782e3bc.html": {
     "bureau": "长江海事局",
     "cancels": [],
@@ -32301,6 +32313,18 @@
       ],
       "start": "2026-07-30T04:00:00+00:00"
     }
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e176dc4f088b4486bba898c8b36fbf8a.html": {
+    "bureau": "天津海事局",
+    "date": "2026-08-31",
+    "detail_fetched": false,
+    "first_seen": "2026-08-31T08:50:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "防范商渔船碰撞安全提醒—津航警292/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e176dc4f088b4486bba898c8b36fbf8a.html?hav=1jWj6r2hy3yfsMDsWD95pzaiMT"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e178718748814babb3f0eefa864e3cea.html": {
     "bureau": "山东海事局",
