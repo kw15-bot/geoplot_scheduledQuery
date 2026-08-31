@@ -34997,11 +34997,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f9b7f4a54e5d4b8ab5a653a79eb332b5.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-08-31",
     "detail_fetched": false,
     "first_seen": "2026-08-31T13:20:35+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警690/26",
     "points": [],
     "revoked": false,
     "title": "灯浮移位—沪航警690/26",
