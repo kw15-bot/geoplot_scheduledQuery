@@ -26891,11 +26891,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bbaa1d4b5d9d4f07b84dbb21d00180de.html": {
     "bureau": "海南海事局",
+    "cancels": [],
     "date": "2026-08-31",
     "detail_fetched": false,
     "first_seen": "2026-08-31T06:20:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "琼航警168/26",
     "points": [],
     "revoked": false,
     "title": "渔船沉没人员落水—琼航警168/26",
