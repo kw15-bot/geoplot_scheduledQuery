@@ -4263,6 +4263,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "实弹射击—桂航警196/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6dd5ee337c144159ae727564723d58a2.html?hav=1jWj6r2hy5di2WEeMLrIkSGCUy",
+        "date": "2026-09-01",
+        "bureau": "广西海事局",
+        "group_count": 1,
+        "raw_text": "北部湾，自9月2日1100时至1700时、3日1200时至1600时在21-15.00N 108-44.00E、21-15.00N 108-35.00E、21-22.00N 108-35.00E和21-22.00N 108-44.00E诸点连线范围内进行实弹射击。禁止驶入。",
+        "valid_start": "2026-09-02T03:00:00+00:00",
+        "valid_end": "2026-09-02T09:00:00+00:00",
+        "valid_raw": [
+          "9月2日1100时至1700时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.58333333333333,
+              21.25
+            ],
+            [
+              108.73333333333333,
+              21.25
+            ],
+            [
+              108.73333333333333,
+              21.366666666666667
+            ],
+            [
+              108.58333333333333,
+              21.366666666666667
+            ],
+            [
+              108.58333333333333,
+              21.25
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "军事训练—琼航警143/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6f2abe56be7f4d28ac5dd08de5bacbc9.html?hav=1jWj6r2hy3yfaITPiaLy01bZ56",
         "date": "2026-08-04",

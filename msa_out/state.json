@@ -6391,11 +6391,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1e811b02d93645f4af3d9007570ca937.html": {
     "bureau": "海南海事局",
+    "cancels": [],
     "date": "2026-09-01",
     "detail_fetched": false,
     "first_seen": "2026-09-01T08:08:22+00:00",
     "groups": [],
     "military": false,
+    "own_id": "琼航警172/26",
     "points": [],
     "revoked": false,
     "title": "“德厚”、“海洋石油685”拖带钻井平台“南海九号”—琼航警172/26",
@@ -19233,6 +19235,99 @@
     "revoked": false,
     "title": "拖带作业—粤航警511/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6d89f386f3224557a3b6efeac1b38b1c.html?hav=1jWj6r2hy2JdQ2bdeBiVwq6UoH"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6dd5ee337c144159ae727564723d58a2.html": {
+    "bureau": "广西海事局",
+    "cancels": [],
+    "date": "2026-09-01",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-01T08:20:30+00:00",
+    "groups": [
+      [
+        {
+          "end": 55,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.25,
+          "lon": 108.73333333333333,
+          "raw": "21-15.00N 108-44.00E",
+          "start": 35
+        },
+        {
+          "end": 76,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.25,
+          "lon": 108.58333333333333,
+          "raw": "21-15.00N 108-35.00E",
+          "start": 56
+        },
+        {
+          "end": 97,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.366666666666667,
+          "lon": 108.58333333333333,
+          "raw": "21-22.00N 108-35.00E",
+          "start": 77
+        },
+        {
+          "end": 118,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.366666666666667,
+          "lon": 108.73333333333333,
+          "raw": "21-22.00N 108-44.00E",
+          "start": 98
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 55,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.25,
+        "lon": 108.73333333333333,
+        "raw": "21-15.00N 108-44.00E",
+        "start": 35
+      },
+      {
+        "end": 76,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.25,
+        "lon": 108.58333333333333,
+        "raw": "21-15.00N 108-35.00E",
+        "start": 56
+      },
+      {
+        "end": 97,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.366666666666667,
+        "lon": 108.58333333333333,
+        "raw": "21-22.00N 108-35.00E",
+        "start": 77
+      },
+      {
+        "end": 118,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.366666666666667,
+        "lon": 108.73333333333333,
+        "raw": "21-22.00N 108-44.00E",
+        "start": 98
+      }
+    ],
+    "raw_text": "北部湾，自9月2日1100时至1700时、3日1200时至1600时在21-15.00N 108-44.00E、21-15.00N 108-35.00E、21-22.00N 108-35.00E和21-22.00N 108-44.00E诸点连线范围内进行实弹射击。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—桂航警196/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6dd5ee337c144159ae727564723d58a2.html?hav=1jWj6r2hy5di2WEeMLrIkSGCUy",
+    "validity": {
+      "end": "2026-09-02T09:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月2日1100时至1700时"
+      ],
+      "start": "2026-09-02T03:00:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6e0911a271fc44789df30bd7bd74e9a9.html": {
     "bureau": "河北海事局",
