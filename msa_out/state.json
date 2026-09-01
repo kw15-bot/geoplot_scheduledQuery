@@ -24589,6 +24589,99 @@
     "title": "拖带作业—深航警82/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9b6969faf969426aa2bf978e583f71b5.html?hav=1jWj6r2hy3yfmKyOFcyCHEqy8n"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9b90cbda709d4a6391adbc432b12bd97.html": {
+    "bureau": "海南海事局",
+    "cancels": [],
+    "date": "2026-09-01",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 17,
+    "first_seen": "2026-09-01T01:30:45+00:00",
+    "groups": [
+      [
+        {
+          "end": 44,
+          "fmt": "DMS_HYPHEN",
+          "lat": 17.90083333333333,
+          "lon": 109.51666666666667,
+          "raw": "17-54-03N 109-31-00E",
+          "start": 24
+        },
+        {
+          "end": 65,
+          "fmt": "DMS_HYPHEN",
+          "lat": 17.90083333333333,
+          "lon": 109.58333333333333,
+          "raw": "17-54-03N 109-35-00E",
+          "start": 45
+        },
+        {
+          "end": 86,
+          "fmt": "DMS_HYPHEN",
+          "lat": 17.834166666666665,
+          "lon": 109.58333333333333,
+          "raw": "17-50-03N 109-35-00E",
+          "start": 66
+        },
+        {
+          "end": 107,
+          "fmt": "DMS_HYPHEN",
+          "lat": 17.834166666666665,
+          "lon": 109.51666666666667,
+          "raw": "17-50-03N 109-31-00E",
+          "start": 87
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 44,
+        "fmt": "DMS_HYPHEN",
+        "lat": 17.90083333333333,
+        "lon": 109.51666666666667,
+        "raw": "17-54-03N 109-31-00E",
+        "start": 24
+      },
+      {
+        "end": 65,
+        "fmt": "DMS_HYPHEN",
+        "lat": 17.90083333333333,
+        "lon": 109.58333333333333,
+        "raw": "17-54-03N 109-35-00E",
+        "start": 45
+      },
+      {
+        "end": 86,
+        "fmt": "DMS_HYPHEN",
+        "lat": 17.834166666666665,
+        "lon": 109.58333333333333,
+        "raw": "17-50-03N 109-35-00E",
+        "start": 66
+      },
+      {
+        "end": 107,
+        "fmt": "DMS_HYPHEN",
+        "lat": 17.834166666666665,
+        "lon": 109.51666666666667,
+        "raw": "17-50-03N 109-31-00E",
+        "start": 87
+      }
+    ],
+    "raw_text": "南海，2026年9月4日0800至1800时，在17-54-03N 109-31-00E、17-54-03N 109-35-00E、17-50-03N 109-35-00E、17-50-03N 109-31-00E四点连线水域范围内进行军事训练，禁止驶入。",
+    "revoked": false,
+    "title": "军事训练—琼航警170/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9b90cbda709d4a6391adbc432b12bd97.html?hav=1jWj6r2hy5di2WEeH5hZ30mRtN",
+    "validity": {
+      "end": "2026-09-04T10:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "2026年9月4日0800至1800时"
+      ],
+      "start": "2026-09-04T00:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9bcae0a05e364272aa805d6804044719.html": {
     "bureau": "深圳海事局",
     "cancels": [],
@@ -34261,6 +34354,18 @@
     "revoked": false,
     "title": "灯浮熄灭—沪航警674/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f215d2bf4fde4fe6a6e0a381ebd3f7b1.html?hav=1jWj6r2hy3yfmSI8xIU7WNUJZn"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f2231a61af5e48329fbbfd54291d0cd5.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-01",
+    "detail_fetched": false,
+    "first_seen": "2026-09-01T01:30:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警584/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f2231a61af5e48329fbbfd54291d0cd5.html?hav=1jWj6r2hy5di2WEeH5hZ2yVeiX"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f2399da94c1244f68dc6f6909527a803.html": {
     "bureau": "广东海事局",
