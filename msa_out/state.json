@@ -23436,15 +23436,51 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/90597d8843bf468daec26dc473674449.html": {
     "bureau": "辽宁海事局",
+    "cancels": [
+      "辽航警363/26"
+    ],
     "date": "2026-09-01",
-    "detail_fetched": false,
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 17,
     "first_seen": "2026-09-01T00:30:38+00:00",
-    "groups": [],
+    "groups": [
+      [
+        {
+          "end": 41,
+          "fmt": "DDM_HYPHEN",
+          "lat": 40.29933333333334,
+          "lon": 122.04666666666667,
+          "raw": "40-17.96N 122-02.8E",
+          "start": 21
+        }
+      ]
+    ],
     "military": false,
-    "points": [],
+    "own_id": "辽航警366/26",
+    "points": [
+      {
+        "end": 41,
+        "fmt": "DDM_HYPHEN",
+        "lat": 40.29933333333334,
+        "lon": 122.04666666666667,
+        "raw": "40-17.96N 122-02.8E",
+        "start": 21
+      }
+    ],
+    "raw_text": "渤海北部，营口港鲅鱼圈港区，A4号灯浮标（40-17.96N  122-02.8E，CGCS2000）恢复正常。撤销辽航警363/26。本航警9月1日2400时撤销。希各航船注意。",
     "revoked": false,
     "title": "撤销航警—辽航警366/26",
-    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/90597d8843bf468daec26dc473674449.html?hav=1jWj6r2hy5di2WEeH4PdbBCuxQ"
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/90597d8843bf468daec26dc473674449.html?hav=1jWj6r2hy5di2WEeH4PdbBCuxQ",
+    "validity": {
+      "end": "2026-08-31T16:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月1日2400时"
+      ],
+      "start": "2026-08-31T18:40:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/908d56f9028c46b480f081beb3423551.html": {
     "bureau": "上海海事局",
@@ -25410,7 +25446,10 @@
     "military": false,
     "own_id": "辽航警363/26",
     "points": [],
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "辽航警366/26"
+    ],
     "title": "灯浮标漂失—辽航警363/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a6aec2a878af4c6899338766f8367695.html?hav=1jWj6r2hy3yfmTktbEOI5W3M8W"
   },
