@@ -12890,11 +12890,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4b1c401cb73c4eeab0cbdfe935730c2b.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-01",
     "detail_fetched": false,
     "first_seen": "2026-09-01T10:10:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警790/26",
     "points": [],
     "revoked": false,
     "title": "“XIA ZHI”轮试航—浙航警790/26",
@@ -14078,6 +14080,18 @@
       ],
       "start": "2026-08-07T10:00:00+00:00"
     }
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5223b0e2c294462394d85dfdc527c8b8.html": {
+    "bureau": "天津海事局",
+    "date": "2026-09-01",
+    "detail_fetched": false,
+    "first_seen": "2026-09-01T10:20:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "大港港区航标临时调整—津航警294/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5223b0e2c294462394d85dfdc527c8b8.html?hav=1jWj6r2hy5di2WEeMOR9nX0XfI"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5246551cc4c54a4c92ad2fcaf86bf341.html": {
     "bureau": "上海海事局",
@@ -25462,11 +25476,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a32987d3af89474e9d80939ef66b6c1c.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-01",
     "detail_fetched": false,
     "first_seen": "2026-09-01T10:10:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警791/26",
     "points": [],
     "revoked": false,
     "title": "杭州湾水域新建南通至宁波高速铁路杭州湾跨海大桥施工期临时北航道桥区航道交通管制—浙航警791/26",
@@ -34336,11 +34352,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ec8b23cee9844953901b0117a9245b34.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-01",
     "detail_fetched": false,
     "first_seen": "2026-09-01T10:10:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警792/26",
     "points": [],
     "revoked": false,
     "title": "MINERAL ZAMBIA、HUI YUE HAI和FRONT VEFSNA轮航经虾峙门外深水航槽—浙航警792/26",
