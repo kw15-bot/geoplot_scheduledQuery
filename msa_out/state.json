@@ -24635,6 +24635,7 @@
       ]
     ],
     "military": true,
+    "own_id": "琼航警170/26",
     "points": [
       {
         "end": 44,
@@ -34357,11 +34358,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f2231a61af5e48329fbbfd54291d0cd5.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-09-01",
     "detail_fetched": false,
     "first_seen": "2026-09-01T01:30:45+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警584/26",
     "points": [],
     "revoked": false,
     "title": "水下检验—冀航警584/26",
