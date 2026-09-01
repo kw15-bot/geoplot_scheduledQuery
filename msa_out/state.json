@@ -15983,11 +15983,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5c5c258c26e94efa9d4c8ecd4e19e937.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-09-01",
     "detail_fetched": false,
     "first_seen": "2026-09-01T02:30:37+00:00",
     "groups": [],
     "military": false,
+    "own_id": "芜航警45/26",
     "points": [],
     "revoked": false,
     "title": "关于“禹成拖001”轮拖带“益海嘉里01”的航行警告—芜航警45/26",
