@@ -568,6 +568,18 @@
     "title": "“宏祥26”轮试航—浙航警743/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0320a279f03a4c59a2cd4a1b89e4087b.html?hav=1jWj6r2hy3yfgO79eyssEJ0eyU"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/036b6bb306ae4532b030c6cf80b8ed9a.html": {
+    "bureau": "天津海事局",
+    "date": "2026-09-01",
+    "detail_fetched": false,
+    "first_seen": "2026-09-01T09:40:44+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—津航警293/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/036b6bb306ae4532b030c6cf80b8ed9a.html?hav=1jWj6r2hy5di2WEeMN9ELlyakF"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/03be932d1b2845cbbf3b8ce5e2d33f8e.html": {
     "bureau": "浙江海事局",
     "cancels": [],
@@ -16231,6 +16243,18 @@
     "title": "吊装作业—深航警71/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5d4e0fdd458846568f54daee60d25e85.html?hav=1jWj6r2hy2JdK7D9c6vzN0k8yV"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5ddd7752d8cd40b18775d175753169c6.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-01",
+    "detail_fetched": false,
+    "first_seen": "2026-09-01T09:40:44+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "扫测作业-任泰7—鲁航警734/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5ddd7752d8cd40b18775d175753169c6.html?hav=1jWj6r2hy5di2WEeMN9ELhR0re"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5def5b05b8a240d9846d02dba6452e56.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -19937,6 +19961,18 @@
       ],
       "start": "2026-08-23T22:30:00+00:00"
     }
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7511a1b7535f48fc8efd1683344a8bb0.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-01",
+    "detail_fetched": false,
+    "first_seen": "2026-09-01T09:40:44+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "扫测作业-众合3—鲁航警735/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7511a1b7535f48fc8efd1683344a8bb0.html?hav=1jWj6r2hy5di2WEeMN9ELiZPW7"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/751953fb792f463e9eb047c690eddf08.html": {
     "bureau": "海南海事局",
