@@ -188,7 +188,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -338,7 +338,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-17T03:50:29+00:00",
     "groups": [
       [
@@ -603,7 +603,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-14T07:02:10+00:00",
     "groups": [
       [
@@ -714,7 +714,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -920,7 +920,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-09T09:40:01+00:00",
     "groups": [
       [
@@ -1142,7 +1142,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [],
     "military": false,
@@ -1175,7 +1175,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-14T08:35:38+00:00",
     "groups": [
       [
@@ -1548,7 +1548,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -1656,7 +1656,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-27T07:50:29+00:00",
     "groups": [
       [
@@ -3261,7 +3261,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-31T02:00:45+00:00",
     "groups": [
       [
@@ -3523,7 +3523,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -4661,7 +4661,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -6011,7 +6011,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-19T11:10:30+00:00",
     "groups": [
       [
@@ -6274,7 +6274,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-28T08:10:35+00:00",
     "groups": [
       [
@@ -6389,6 +6389,18 @@
     "title": "扫测作业-海巡15062—鲁航警643/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1e4fb324aeb647bd915d934ab6e31166.html?hav=1jWj6r2hy3yfgIG9QcW096QorY"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1e811b02d93645f4af3d9007570ca937.html": {
+    "bureau": "海南海事局",
+    "date": "2026-09-01",
+    "detail_fetched": false,
+    "first_seen": "2026-09-01T08:08:22+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“德厚”、“海洋石油685”拖带钻井平台“南海九号”—琼航警172/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1e811b02d93645f4af3d9007570ca937.html?hav=1jWj6r2hy5di2WEeMKZNbOU340"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1ee9f64a5f0f43a4a5b189a0e02c51e4.html": {
     "bureau": "深圳海事局",
     "cancels": [],
@@ -6424,7 +6436,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-07T10:04:33+00:00",
     "groups": [
       [
@@ -6644,7 +6656,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -6811,7 +6823,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -6921,7 +6933,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-07T21:39:34+00:00",
     "groups": [
       [
@@ -7139,7 +7151,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-25T09:00:51+00:00",
     "groups": [],
     "military": false,
@@ -7441,7 +7453,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-09-01T03:20:29+00:00",
     "groups": [
       [
@@ -7636,7 +7648,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-21T03:00:42+00:00",
     "groups": [
       [
@@ -8016,7 +8028,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-18T03:20:29+00:00",
     "groups": [],
     "military": false,
@@ -8289,7 +8301,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-17T10:40:29+00:00",
     "groups": [],
     "military": true,
@@ -8375,7 +8387,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-11T02:24:09+00:00",
     "groups": [
       [
@@ -8539,7 +8551,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-24T06:50:31+00:00",
     "groups": [
       [
@@ -8848,7 +8860,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -8956,7 +8968,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -9332,7 +9344,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-21T15:20:35+00:00",
     "groups": [],
     "military": true,
@@ -9379,7 +9391,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-11T02:24:09+00:00",
     "groups": [
       [
@@ -9711,7 +9723,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -10933,78 +10945,80 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-09-01T01:00:45+00:00",
     "groups": [
       [
         {
           "end": 46,
-          "fmt": "DD",
-          "lat": 3.0,
-          "lon": 0.0,
-          "raw": "03N 00E",
-          "start": 31
+          "fmt": "DDM_PRIME_FRAC",
+          "lat": 17.9005,
+          "lon": 109.51666666666667,
+          "raw": "17°54'.03N 109°31'.00E",
+          "start": 24
         },
         {
           "end": 69,
-          "fmt": "DD",
-          "lat": 3.0,
-          "lon": 0.0,
-          "raw": "03N 00E",
-          "start": 54
+          "fmt": "DDM_PRIME_FRAC",
+          "lat": 17.9005,
+          "lon": 109.58333333333333,
+          "raw": "17°54'.03N 109°35'.00E",
+          "start": 47
         },
         {
           "end": 92,
-          "fmt": "DD",
-          "lat": 3.0,
-          "lon": 0.0,
-          "raw": "03N 00E",
-          "start": 77
+          "fmt": "DDM_PRIME_FRAC",
+          "lat": 17.833833333333335,
+          "lon": 109.58333333333333,
+          "raw": "17°50'.03N 109°35'.00E",
+          "start": 70
         },
         {
           "end": 115,
-          "fmt": "DD",
-          "lat": 3.0,
-          "lon": 0.0,
-          "raw": "03N 00E",
-          "start": 100
+          "fmt": "DDM_PRIME_FRAC",
+          "lat": 17.833833333333335,
+          "lon": 109.51666666666667,
+          "raw": "17°50'.03N 109°31'.00E",
+          "start": 93
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-01T08:08:22+00:00",
     "military": true,
     "own_id": "琼航警169/26",
     "points": [
       {
         "end": 46,
-        "fmt": "DD",
-        "lat": 3.0,
-        "lon": 0.0,
-        "raw": "03N 00E",
-        "start": 31
+        "fmt": "DDM_PRIME_FRAC",
+        "lat": 17.9005,
+        "lon": 109.51666666666667,
+        "raw": "17°54'.03N 109°31'.00E",
+        "start": 24
       },
       {
         "end": 69,
-        "fmt": "DD",
-        "lat": 3.0,
-        "lon": 0.0,
-        "raw": "03N 00E",
-        "start": 54
+        "fmt": "DDM_PRIME_FRAC",
+        "lat": 17.9005,
+        "lon": 109.58333333333333,
+        "raw": "17°54'.03N 109°35'.00E",
+        "start": 47
       },
       {
         "end": 92,
-        "fmt": "DD",
-        "lat": 3.0,
-        "lon": 0.0,
-        "raw": "03N 00E",
-        "start": 77
+        "fmt": "DDM_PRIME_FRAC",
+        "lat": 17.833833333333335,
+        "lon": 109.58333333333333,
+        "raw": "17°50'.03N 109°35'.00E",
+        "start": 70
       },
       {
         "end": 115,
-        "fmt": "DD",
-        "lat": 3.0,
-        "lon": 0.0,
-        "raw": "03N 00E",
-        "start": 100
+        "fmt": "DDM_PRIME_FRAC",
+        "lat": 17.833833333333335,
+        "lon": 109.51666666666667,
+        "raw": "17°50'.03N 109°31'.00E",
+        "start": 93
       }
     ],
     "raw_text": "南海，2026年9月4日0800至1800时，在17°54′.03N 109°31′.00E、17°54′.03N 109°35′.00E、17°50′.03N 109°35′.00E、17°50′.03N 109°31′.00E四点连线水域范围内进行军事训练，禁止驶入。",
@@ -11170,7 +11184,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -11278,7 +11292,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-18T10:00:41+00:00",
     "groups": [
       [
@@ -11376,7 +11390,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -12559,7 +12573,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-14T07:02:10+00:00",
     "groups": [
       [
@@ -12977,7 +12991,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -13579,7 +13593,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-16T16:20:31+00:00",
     "groups": [
       [
@@ -13856,7 +13870,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-07T10:04:33+00:00",
     "groups": [
       [
@@ -14058,7 +14072,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -14211,7 +14225,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -15265,7 +15279,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-24T03:40:29+00:00",
     "groups": [
       [
@@ -15513,7 +15527,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [],
     "military": false,
@@ -15602,7 +15616,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -15824,7 +15838,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-15T13:00:43+00:00",
     "groups": [
       [
@@ -15974,7 +15988,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-28T09:00:53+00:00",
     "groups": [
       [
@@ -16450,7 +16464,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -16544,7 +16558,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -17724,7 +17738,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-26T02:50:30+00:00",
     "groups": [
       [
@@ -17846,7 +17860,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -18122,7 +18136,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-15T02:31:55+00:00",
     "groups": [
       [
@@ -18314,7 +18328,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -18480,7 +18494,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [],
     "military": false,
@@ -18515,7 +18529,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -18609,7 +18623,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-26T09:20:29+00:00",
     "groups": [
       [
@@ -18759,7 +18773,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-10T01:50:55+00:00",
     "groups": [
       [
@@ -18937,7 +18951,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -19297,7 +19311,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -19713,7 +19727,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-21T10:00:42+00:00",
     "groups": [
       [
@@ -19891,7 +19905,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -20057,7 +20071,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-10T09:59:16+00:00",
     "groups": [
       [
@@ -20235,7 +20249,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -20480,7 +20494,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -20772,7 +20786,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -21022,7 +21036,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -21130,7 +21144,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-26T11:40:29+00:00",
     "groups": [
       [
@@ -21422,7 +21436,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-16T03:20:27+00:00",
     "groups": [],
     "military": false,
@@ -21569,7 +21583,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [],
     "military": false,
@@ -21630,7 +21644,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-07T10:04:33+00:00",
     "groups": [
       [
@@ -22810,7 +22824,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-13T11:10:18+00:00",
     "groups": [
       [
@@ -23074,7 +23088,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T09:23:38+00:00",
     "groups": [
       [
@@ -23451,7 +23465,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-09T16:36:06+00:00",
     "groups": [
       [
@@ -23659,7 +23673,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-09-01T00:30:38+00:00",
     "groups": [
       [
@@ -23733,7 +23747,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -24053,7 +24067,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-21T10:30:35+00:00",
     "groups": [
       [
@@ -24360,7 +24374,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-12T08:37:56+00:00",
     "groups": [
       [
@@ -24540,7 +24554,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -24718,7 +24732,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-09-01T01:30:45+00:00",
     "groups": [
       [
@@ -25137,7 +25151,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -25331,7 +25345,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-13T02:02:24+00:00",
     "groups": [
       [
@@ -25369,6 +25383,8 @@
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-01T08:08:22+00:00",
     "military": true,
     "own_id": "琼航警159/26",
     "points": [
@@ -25523,7 +25539,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-28T01:20:28+00:00",
     "groups": [
       [
@@ -25659,7 +25675,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-17T08:20:27+00:00",
     "groups": [
       [
@@ -25982,7 +25998,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-20T00:50:30+00:00",
     "groups": [],
     "military": false,
@@ -26057,7 +26073,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -26473,7 +26489,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -26765,7 +26781,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-18T10:40:32+00:00",
     "groups": [
       [
@@ -26887,7 +26903,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-25T02:50:27+00:00",
     "groups": [
       [
@@ -27359,7 +27375,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-11T11:28:47+00:00",
     "groups": [
       [
@@ -27611,7 +27627,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -27719,7 +27735,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-22T12:20:30+00:00",
     "groups": [
       [
@@ -28045,7 +28061,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-09T09:40:01+00:00",
     "groups": [
       [
@@ -29211,7 +29227,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-08T16:17:09+00:00",
     "groups": [
       [
@@ -29347,7 +29363,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-21T08:20:34+00:00",
     "groups": [
       [
@@ -29623,7 +29639,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -29904,7 +29920,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-17T23:20:31+00:00",
     "groups": [
       [
@@ -30110,7 +30126,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -30343,7 +30359,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-23T13:10:29+00:00",
     "groups": [
       [
@@ -30727,7 +30743,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-11T13:54:37+00:00",
     "groups": [
       [
@@ -30961,7 +30977,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -31352,7 +31368,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-19T11:10:30+00:00",
     "groups": [
       [
@@ -31540,7 +31556,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-14T07:02:10+00:00",
     "groups": [
       [
@@ -31886,7 +31902,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -31995,7 +32011,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -32341,7 +32357,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -32678,7 +32694,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -32800,7 +32816,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -33048,7 +33064,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-19T08:00:45+00:00",
     "groups": [
       [
@@ -33188,7 +33204,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -33520,7 +33536,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-17T02:50:29+00:00",
     "groups": [
       [
@@ -33661,7 +33677,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -34191,7 +34207,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -34765,7 +34781,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -34901,7 +34917,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-24T09:20:29+00:00",
     "groups": [
       [
@@ -35071,7 +35087,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 17,
+    "extraction_version": 18,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
