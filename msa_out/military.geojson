@@ -1625,6 +1625,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "军事任务—辽航警367/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/270bfce5dd364923bb94b963d2eb5e07.html?hav=1jWj6r2hy5di2WEeME7jym9m21",
+        "date": "2026-09-01",
+        "bureau": "辽宁海事局",
+        "group_count": 1,
+        "raw_text": "渤海北部，自9月2日至4日每天0830时至1630时，在 40-22.46N 121-56.38E、40-26.71N 122-00.15E、40-21.45N 122-09.82E和40-20.83N 122-09.82E 诸点连线范围内进行军事演习。禁止驶入。",
+        "valid_start": "2026-09-02T00:30:00+00:00",
+        "valid_end": "2026-09-04T08:30:00+00:00",
+        "valid_raw": [
+          "自9月2日至4日每天0830时至1630时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.93966666666667,
+              40.37433333333333
+            ],
+            [
+              122.16366666666667,
+              40.347166666666666
+            ],
+            [
+              122.16366666666667,
+              40.3575
+            ],
+            [
+              122.0025,
+              40.445166666666665
+            ],
+            [
+              121.93966666666667,
+              40.37433333333333
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "实弹射击—云航警135/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2966806488d649e7a7d047b22ce01942.html?hav=1jWj6r2hy3yfmJVdgzncbt28kr",
         "date": "2026-08-21",
