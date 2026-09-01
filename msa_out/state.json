@@ -10832,6 +10832,99 @@
     "title": "水工作业-垚磊102、永丰1666和长鑫工839—鲁航警678/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/44da8bca2818455c936371640a273284.html?hav=1jWj6r2hy3yfmI2t8QUpRf9vhy"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/45f661d974174c46a4d333f86b3b856e.html": {
+    "bureau": "海南海事局",
+    "cancels": [],
+    "date": "2026-09-01",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 17,
+    "first_seen": "2026-09-01T01:00:45+00:00",
+    "groups": [
+      [
+        {
+          "end": 46,
+          "fmt": "DD",
+          "lat": 3.0,
+          "lon": 0.0,
+          "raw": "03N 00E",
+          "start": 31
+        },
+        {
+          "end": 69,
+          "fmt": "DD",
+          "lat": 3.0,
+          "lon": 0.0,
+          "raw": "03N 00E",
+          "start": 54
+        },
+        {
+          "end": 92,
+          "fmt": "DD",
+          "lat": 3.0,
+          "lon": 0.0,
+          "raw": "03N 00E",
+          "start": 77
+        },
+        {
+          "end": 115,
+          "fmt": "DD",
+          "lat": 3.0,
+          "lon": 0.0,
+          "raw": "03N 00E",
+          "start": 100
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 46,
+        "fmt": "DD",
+        "lat": 3.0,
+        "lon": 0.0,
+        "raw": "03N 00E",
+        "start": 31
+      },
+      {
+        "end": 69,
+        "fmt": "DD",
+        "lat": 3.0,
+        "lon": 0.0,
+        "raw": "03N 00E",
+        "start": 54
+      },
+      {
+        "end": 92,
+        "fmt": "DD",
+        "lat": 3.0,
+        "lon": 0.0,
+        "raw": "03N 00E",
+        "start": 77
+      },
+      {
+        "end": 115,
+        "fmt": "DD",
+        "lat": 3.0,
+        "lon": 0.0,
+        "raw": "03N 00E",
+        "start": 100
+      }
+    ],
+    "raw_text": "南海，2026年9月4日0800至1800时，在17°54′.03N 109°31′.00E、17°54′.03N 109°35′.00E、17°50′.03N 109°35′.00E、17°50′.03N 109°31′.00E四点连线水域范围内进行军事训练，禁止驶入。",
+    "revoked": false,
+    "title": "军事训练—琼航警169/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/45f661d974174c46a4d333f86b3b856e.html?hav=1jWj6r2hy5di2WEeH4PdkYXPPi",
+    "validity": {
+      "end": "2026-09-04T10:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "2026年9月4日0800至1800时"
+      ],
+      "start": "2026-09-04T00:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/46341872258c4a9590a7ebeea7dd581b.html": {
     "bureau": "浙江海事局",
     "cancels": [],
