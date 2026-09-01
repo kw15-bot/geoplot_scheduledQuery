@@ -12862,11 +12862,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4a9a55492139466fbc78e8673600b57e.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-01",
     "detail_fetched": false,
     "first_seen": "2026-09-01T08:50:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警732/26",
     "points": [],
     "revoked": false,
     "title": "东海救101拖带海洋石油221—鲁航警732/26",
