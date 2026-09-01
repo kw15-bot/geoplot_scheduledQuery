@@ -19568,11 +19568,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/718740fdcd554485ad2cb3ee0c1d926c.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-01",
     "detail_fetched": false,
     "first_seen": "2026-09-01T07:10:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警731/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业-胜利281拖带中油海5—鲁航警731/26",
@@ -35535,6 +35537,18 @@
     "revoked": false,
     "title": "黄海南部“航丰”轮试航—云航警103/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fad93a34262b467fa12437d07670f535.html?hav=1jWj6r2hy0earuufX2T06PTrrc"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/faf15f7912ec49ec9e6c073cc51f017c.html": {
+    "bureau": "辽宁海事局",
+    "date": "2026-09-01",
+    "detail_fetched": false,
+    "first_seen": "2026-09-01T07:20:37+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "灯浮标移位—辽航警368/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/faf15f7912ec49ec9e6c073cc51f017c.html?hav=1jWj6r2hy5di2WEeMJHS4veScy"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fb13be815d394838aa1b08cb2ee71e0f.html": {
     "bureau": "浙江海事局",
