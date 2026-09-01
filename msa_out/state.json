@@ -25090,11 +25090,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a133999e3f654b77a8151954e6d03966.html": {
     "bureau": "海南海事局",
+    "cancels": [],
     "date": "2026-09-01",
     "detail_fetched": false,
     "first_seen": "2026-09-01T05:22:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "琼航警171/26",
     "points": [],
     "revoked": false,
     "title": "后水湾水域一风机塔筒落水—琼航警171/26",
