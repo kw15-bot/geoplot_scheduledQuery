@@ -7266,6 +7266,18 @@
     "title": "南海HZ21-8-9d井钻井作业—粤航警525/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/23b4e9d956f84514b079b308d325eab8.html?hav=1jWj6r2hy2JdQ44OCrSwjqWXEg"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/248961ffd9c8452fab9587bd622a351f.html": {
+    "bureau": "广西海事局",
+    "date": "2026-09-01",
+    "detail_fetched": false,
+    "first_seen": "2026-09-01T08:30:36+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "平台浮卸及拖带作业—桂航警197/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/248961ffd9c8452fab9587bd622a351f.html?hav=1jWj6r2hy5di2WEeMLrIp8vRtX"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/248b0251ce084f6296dfcf2a1394bed6.html": {
     "bureau": "河北海事局",
     "cancels": [],
@@ -19282,6 +19294,7 @@
       ]
     ],
     "military": true,
+    "own_id": "桂航警196/26",
     "points": [
       {
         "end": 55,
@@ -31765,6 +31778,18 @@
     "revoked": false,
     "title": "辽河航道临时移动灯浮标—辽航警353/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d30695c719f64969872f0b1b569402d0.html?hav=1jWj6r2hy3yfmPMdqDkJq22IZc"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d3509fca78cb480bbf8f436861afd89d.html": {
+    "bureau": "长江海事局",
+    "date": "2026-09-01",
+    "detail_fetched": false,
+    "first_seen": "2026-09-01T08:30:36+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "关于“长航货运019”轮开展试航作业的航行警告—芜航警46/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d3509fca78cb480bbf8f436861afd89d.html?hav=1jWj6r2hy5di2WEeMLrIpEbQUk"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d3d1941d4f9b4af5bb0ca662c4c641fc.html": {
     "bureau": "辽宁海事局",
