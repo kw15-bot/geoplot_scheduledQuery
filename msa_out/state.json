@@ -7324,11 +7324,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/24463daa1761488b9e04f55d7de9a1c0.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-02",
     "detail_fetched": false,
     "first_seen": "2026-09-02T10:50:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警695/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—沪航警695/26",
