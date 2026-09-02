@@ -7322,6 +7322,18 @@
     "title": "南海HZ21-8-9d井钻井作业—粤航警525/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/23b4e9d956f84514b079b308d325eab8.html?hav=1jWj6r2hy2JdQ44OCrSwjqWXEg"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/24463daa1761488b9e04f55d7de9a1c0.html": {
+    "bureau": "上海海事局",
+    "date": "2026-09-02",
+    "detail_fetched": false,
+    "first_seen": "2026-09-02T10:50:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—沪航警695/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/24463daa1761488b9e04f55d7de9a1c0.html?hav=1jWj6r2hy5di2XhOuz1sZ5jXwW"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/248961ffd9c8452fab9587bd622a351f.html": {
     "bureau": "广西海事局",
     "cancels": [],
@@ -23041,11 +23053,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/84169458fb364c058227e82111bbd71d.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-02",
     "detail_fetched": false,
     "first_seen": "2026-09-02T10:40:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警793/26",
     "points": [],
     "revoked": false,
     "title": "灯浮恢复—浙航警793/26",
