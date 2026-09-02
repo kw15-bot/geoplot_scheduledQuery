@@ -7250,6 +7250,8 @@
         "valid_raw": [
           "自8月21日至24日每日0730时至次日0100时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-02T08:50:33+00:00",
         "group_index": 1,
         "kind": "area"
       },
