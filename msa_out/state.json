@@ -20358,11 +20358,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/77ada01abe1f4beaac08a78d55901b69.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-09-02",
     "detail_fetched": false,
     "first_seen": "2026-09-02T09:10:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警590/26",
     "points": [],
     "revoked": false,
     "title": "扫测作业—冀航警590/26",
