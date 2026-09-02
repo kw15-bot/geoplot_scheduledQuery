@@ -29982,11 +29982,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c444cfa665e543d7b4d6983591e8e08f.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-09-02",
     "detail_fetched": false,
     "first_seen": "2026-09-02T09:40:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "安海航警31/26",
     "points": [],
     "revoked": false,
     "title": "关于“瀚洋之星”轮水上试验活动航行警告—安海航警31/26",
