@@ -32488,6 +32488,18 @@
     "title": "水下检验—冀航警579/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d86864ac145e4f12a1bbe60bbccfb845.html?hav=1jWj6r2hy3yfsMDsW6hRzEj8CM"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d88f91efcfe84143b439c5dd0cc56f7c.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-02",
+    "detail_fetched": false,
+    "first_seen": "2026-09-02T03:30:33+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航标动态-撤除烟台港西港区30万吨级码头堤头临时灯桩—鲁航警738/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d88f91efcfe84143b439c5dd0cc56f7c.html?hav=1jWj6r2hy5di2XhOuq0NobBJUn"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d90c943ec4fc482f8f78b5bfa60575c4.html": {
     "bureau": "深圳海事局",
     "cancels": [],
@@ -34116,11 +34128,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e8eae628da9b42359aca3599495dd505.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-02",
     "detail_fetched": false,
     "first_seen": "2026-09-02T03:20:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警737/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业-威港拖33拖带茂发2008—鲁航警737/26",
@@ -34436,11 +34450,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ec5c51ccd8764115a83b02ba4b5082eb.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-09-02",
     "detail_fetched": false,
     "first_seen": "2026-09-02T03:20:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警587/26",
     "points": [],
     "revoked": false,
     "title": "水下检验—冀航警587/26",
