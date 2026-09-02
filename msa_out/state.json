@@ -32490,11 +32490,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d88f91efcfe84143b439c5dd0cc56f7c.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-02",
     "detail_fetched": false,
     "first_seen": "2026-09-02T03:30:33+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警738/26",
     "points": [],
     "revoked": false,
     "title": "航标动态-撤除烟台港西港区30万吨级码头堤头临时灯桩—鲁航警738/26",
