@@ -27208,11 +27208,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b31efd603e204c1fb1374ef39df8f873.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-03",
     "detail_fetched": false,
     "first_seen": "2026-09-02T22:50:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警743/26",
     "points": [],
     "revoked": false,
     "title": "海洋运动比赛—鲁航警743/26",
