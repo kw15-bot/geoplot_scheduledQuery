@@ -23039,6 +23039,18 @@
       "start": "2026-08-16T03:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/84169458fb364c058227e82111bbd71d.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-02",
+    "detail_fetched": false,
+    "first_seen": "2026-09-02T10:40:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "灯浮恢复—浙航警793/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/84169458fb364c058227e82111bbd71d.html?hav=1jWj6r2hy5di2XhOuz1sPloEqb"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8451171d4d8f48f49acfb33c471e6b1f.html": {
     "bureau": "辽宁海事局",
     "cancels": [],
