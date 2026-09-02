@@ -15650,11 +15650,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/57495ade5c914bce9bab80efe88eadec.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-02",
     "detail_fetched": false,
     "first_seen": "2026-09-02T08:50:33+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警741/26",
     "points": [],
     "revoked": false,
     "title": "航行拖带—鲁航警741/26",
@@ -19911,6 +19913,18 @@
     "revoked": false,
     "title": "岳阳海事局关于防范应对第12号台风“红霞”的航行警告—岳航警9/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/72537fde62c94fcc96b4f4167435f7bf.html?hav=1jWj6r2hy2JdKA8ejANrDzcQbK"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7262477de1c346da9620dfb7fc3aba0e.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-02",
+    "detail_fetched": false,
+    "first_seen": "2026-09-02T09:00:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业-宁海拖8001拖带中油海9—鲁航警742/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7262477de1c346da9620dfb7fc3aba0e.html?hav=1jWj6r2hy5di2XhOuwS1anKQZX"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/727ae8927af043fc8f2eaceabae100d7.html": {
     "bureau": "上海海事局",
@@ -25352,11 +25366,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9ed5fa1e03504bf984f5adc40f51ad74.html": {
     "bureau": "连云港海事局",
+    "cancels": [],
     "date": "2026-09-02",
     "detail_fetched": false,
     "first_seen": "2026-09-02T08:50:33+00:00",
     "groups": [],
     "military": false,
+    "own_id": "云航警142/26",
     "points": [],
     "revoked": false,
     "title": "黄海南部“交航工608”轮试航—云航警142/26",
