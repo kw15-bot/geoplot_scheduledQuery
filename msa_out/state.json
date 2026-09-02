@@ -19916,11 +19916,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7262477de1c346da9620dfb7fc3aba0e.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-02",
     "detail_fetched": false,
     "first_seen": "2026-09-02T09:00:45+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警742/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业-宁海拖8001拖带中油海9—鲁航警742/26",
@@ -20353,6 +20355,18 @@
     "revoked": false,
     "title": "恒力石化海流观测—辽航警313/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/77867a610ed64309b2c10d116f502c05.html?hav=1jWj6r2hy2JdE7QPu3U1XprHDU"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/77ada01abe1f4beaac08a78d55901b69.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-02",
+    "detail_fetched": false,
+    "first_seen": "2026-09-02T09:10:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "扫测作业—冀航警590/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/77ada01abe1f4beaac08a78d55901b69.html?hav=1jWj6r2hy5di2XhOuwS1apbDTl"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/77d3f9e1c4fc4ae5a3e6ae28bd3049c5.html": {
     "bureau": "长江海事局",
