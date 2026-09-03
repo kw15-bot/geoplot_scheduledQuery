@@ -1723,6 +1723,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "军事任务—辽航警369/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/32ccb85ec03c42c3a7707e4977679e89.html?hav=1jWj6r2hy5di2ZA9TPJAkvHLhm",
+        "date": "2026-09-03",
+        "bureau": "辽宁海事局",
+        "group_count": 1,
+        "raw_text": "渤海北部，9月4日0700时至1700时，在 40-30.00N 121-58.00E、40-30.00N 122-05.00E、40-25.00N 121-58.00E和40-25.00N 122-05.00E 诸点连线范围内进行军事演习。禁止驶入。",
+        "valid_start": "2026-09-03T23:00:00+00:00",
+        "valid_end": "2026-09-04T09:00:00+00:00",
+        "valid_raw": [
+          "9月4日0700时至1700时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.96666666666667,
+              40.416666666666664
+            ],
+            [
+              122.08333333333333,
+              40.416666666666664
+            ],
+            [
+              122.08333333333333,
+              40.5
+            ],
+            [
+              121.96666666666667,
+              40.5
+            ],
+            [
+              121.96666666666667,
+              40.416666666666664
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "岳阳海事局关于“长江-洞庭湖”应急综合演习临时交通管制的航行警告—岳航警12/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3341a7c7ac364608ba4062fc2f17dd92.html?hav=1jWj6r2hy3yfgPZuDc3RfM4cDO",
         "date": "2026-08-17",
