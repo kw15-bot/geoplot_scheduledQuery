@@ -7109,6 +7109,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "渤海军事演习—辽航警371/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d31416f7d0184929aa8846f1c3207227.html?hav=1jWj6r2hy5di2ZA9YkccdBmdNr",
+        "date": "2026-09-03",
+        "bureau": "辽宁海事局",
+        "group_count": 1,
+        "raw_text": "渤海，自9月4日0600时至1800时在40-36.5N 121-06.0E、40-36.5N 121-15.9E、40-31.5N 121-15.9E和40-31.5N 121-06.0E诸点连线范围内进行军事演习。禁止驶入。",
+        "valid_start": "2026-09-03T22:00:00+00:00",
+        "valid_end": "2026-09-04T10:00:00+00:00",
+        "valid_raw": [
+          "9月4日0600时至1800时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.1,
+              40.525
+            ],
+            [
+              121.265,
+              40.525
+            ],
+            [
+              121.265,
+              40.608333333333334
+            ],
+            [
+              121.1,
+              40.608333333333334
+            ],
+            [
+              121.1,
+              40.525
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "军事训练—琼航警141/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d6cada1eaa1b4f1091fe8912af222264.html?hav=1jWj6r2hy3yfaE59xerhvSI0zU",
         "date": "2026-08-01",
