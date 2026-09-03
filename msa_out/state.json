@@ -36391,6 +36391,32 @@
     "title": "航道疏浚—深航警45/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f728adb9f083456eb1d896aa47580db0.html?hav=1jWj6r2hxxKVxHgBn0tmNKaXCC"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f732fce5746744a8a35b571b03f4109d.html": {
+    "bureau": "长江海事局",
+    "cancels": [],
+    "date": "2026-09-03",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-03T08:50:28+00:00",
+    "groups": [],
+    "military": true,
+    "points": [],
+    "raw_text": "各船舶、有关单位： 中国人民解放军某部队拟于2026年9月7日在长江下游黄冈公铁大桥上下游水域和黄石长江公路大桥上游水域进行军事活动。军事活动期间，黄石海事局将对上述附近水域实施临时交通管制，现将有关事项通告如下： 一、活动时间 2026年9月7日1630时至2030时。 二、活动水域范围 碛矶港#7红浮和碛矶港#5白危浮连线至路家湾侧面岸标和沙洲#8白浮连线之间围成的水域（长江下游航道里程约958-980KM处）；戴直#1红浮和回风矶上白浮连线至海观山塔形侧岸标和黄石#4白浮连线之间的水域（长江下游航道里程910-918.5KM处）。 三、管制要求 （一）军事活动期间禁止船舶驶入军事活动水域，相关船舶应提前选择安全水域锚泊。 （二）活动结束后，船舶应服从现场海巡艇指挥，有序通过。 （三）活动结束，不另行通告。",
+    "revoked": false,
+    "title": "黄石海事局关于军事活动期间实施临时交通管制的航行警告—黄海航警42/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f732fce5746744a8a35b571b03f4109d.html?hav=1jWj6r2hy5di2ZA9TX2k3Ua4gQ",
+    "validity": {
+      "end": "2026-09-07T16:00:00+00:00",
+      "period_count": 2,
+      "raw": [
+        "2026年9月7日1630时至2030时",
+        "2026年9月7日"
+      ],
+      "start": "2026-09-06T16:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f7476c30b97848d588ea57f8357c4a9b.html": {
     "bureau": "广东海事局",
     "cancels": [
