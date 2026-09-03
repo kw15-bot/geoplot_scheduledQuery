@@ -18807,11 +18807,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/67607a541b7d4ad2a70ce976f18c9bc1.html": {
     "bureau": "天津海事局",
+    "cancels": [],
     "date": "2026-09-03",
     "detail_fetched": false,
     "first_seen": "2026-09-03T04:00:42+00:00",
     "groups": [],
     "military": false,
+    "own_id": "津航警295/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—津航警295/26",
@@ -34880,6 +34882,7 @@
       ]
     ],
     "military": true,
+    "own_id": "鲁航警744/26",
     "points": [
       {
         "end": 43,
