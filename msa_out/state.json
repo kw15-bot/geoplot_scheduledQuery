@@ -13010,6 +13010,18 @@
     "title": "军事训练—琼航警127/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4a1bd46c47eb4618a6d8f22d04af9519.html?hav=1jWj6r2hy2JdE4UusCK6yDtHJx"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4a25cf6bcbbb4dfeaa153c28ffe1fe66.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-03",
+    "detail_fetched": false,
+    "first_seen": "2026-09-03T03:50:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警591/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4a25cf6bcbbb4dfeaa153c28ffe1fe66.html?hav=1jWj6r2hy5di2ZA9TQb6MASA8V"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4a299c99901940b4a1e90317de58f7e0.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -15783,6 +15795,18 @@
     "revoked": false,
     "title": "海管施工作业—津航警277/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/57665aaa50c3433fa67a2e95c483a43c.html?hav=1jWj6r2hy3yfmJVdh4xKYfCKd7"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/576c1cf2d8b74f57bf432dd3cba24525.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-03",
+    "detail_fetched": false,
+    "first_seen": "2026-09-03T03:50:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警592/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/576c1cf2d8b74f57bf432dd3cba24525.html?hav=1jWj6r2hy5di2ZA9TQb6MASACZ"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5789f1b718c8456fa1f40ae3da809db4.html": {
     "bureau": "深圳海事局",
@@ -26103,6 +26127,8 @@
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-03T03:50:29+00:00",
     "military": true,
     "own_id": "冀航警573/26",
     "points": [

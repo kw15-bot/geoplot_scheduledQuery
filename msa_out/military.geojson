@@ -5605,6 +5605,8 @@
         "valid_raw": [
           "8月30日0000时至8月31日2400时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-03T03:50:29+00:00",
         "group_index": 1,
         "kind": "area"
       },
