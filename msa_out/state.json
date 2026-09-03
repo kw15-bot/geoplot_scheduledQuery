@@ -21193,6 +21193,7 @@
       ]
     ],
     "military": true,
+    "own_id": "鲁航警746/26",
     "points": [
       {
         "end": 43,
@@ -35067,7 +35068,7 @@
     "raw_text": "黄海，自9月5日0800时至8日0800时，在35-45.00N 120-02.00E、35-28.50N 121-31.50E、35-20.00N 120-28.50E、35-20.00N 119-49.00E、35-27.50N 119-35.50E五点连线范围内进行军事演练。禁止驶入。",
     "revoked": true,
     "revoked_by": [
-      "军事演练—鲁航警746/26"
+      "鲁航警746/26"
     ],
     "title": "军事演练—鲁航警744/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ec5d125198c24fb9874de199ec9df15f.html?hav=1jWj6r2hy5di2ZA9TQb6VYv373",
