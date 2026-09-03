@@ -9594,11 +9594,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3cb58667b2ea44f08db4d26447cd6415.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-03",
     "detail_fetched": false,
     "first_seen": "2026-09-03T09:20:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警794/26",
     "points": [],
     "revoked": false,
     "title": "航标动态—永宁L2号、飞云江14号灯浮漂移—浙航警794/26",
