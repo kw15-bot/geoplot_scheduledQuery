@@ -7478,11 +7478,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/262d70a9bfac4a1cb8caa8703ad67ae5.html": {
     "bureau": "天津海事局",
+    "cancels": [],
     "date": "2026-09-03",
     "detail_fetched": false,
     "first_seen": "2026-09-03T06:40:26+00:00",
     "groups": [],
     "military": false,
+    "own_id": "津航警296/26",
     "points": [],
     "revoked": false,
     "title": "海管施工作业—津航警296/26",
@@ -36390,6 +36392,18 @@
     "revoked": false,
     "title": "“德深”轮拖带“南海六号”—粤航警609/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f7fba6d1eb9244adb5ae22483739c6f1.html?hav=1jWj6r2hy3yfmTktb7weSrSIGO"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f8666e183d36432b9d9bcbc3aaebe9a0.html": {
+    "bureau": "天津海事局",
+    "date": "2026-09-03",
+    "detail_fetched": false,
+    "first_seen": "2026-09-03T06:50:43+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "探井作业—津航警297/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f8666e183d36432b9d9bcbc3aaebe9a0.html?hav=1jWj6r2hy5di2ZA9TUSt0MQY1Q"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f8edef7775b84663bf43babcc2d13342.html": {
     "bureau": "连云港海事局",
