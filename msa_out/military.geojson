@@ -4670,6 +4670,55 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "军事演练—鲁航警746/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7a8c6985891541738aa78138394b8b94.html?hav=1jWj6r2hy5di2ZA9TUSsmKhbLW",
+        "date": "2026-09-03",
+        "bureau": "山东海事局",
+        "group_count": 1,
+        "raw_text": "黄海，自9月5日0800时至8日0800时，在35-45.00N 120-02.00E、35-28.50N 120-31.50E、35-20.00N 120-28.50E、35-20.00N 119-49.00E、35-27.50N 119-35.50E五点连线范围内进行军事演练。禁止驶入。撤销鲁航警744/26。",
+        "valid_start": "2026-09-05T00:00:00+00:00",
+        "valid_end": "2026-09-08T00:00:00+00:00",
+        "valid_raw": [
+          "9月5日0800时至8日0800时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.59166666666667,
+              35.458333333333336
+            ],
+            [
+              119.81666666666666,
+              35.333333333333336
+            ],
+            [
+              120.475,
+              35.333333333333336
+            ],
+            [
+              120.525,
+              35.475
+            ],
+            [
+              120.03333333333333,
+              35.75
+            ],
+            [
+              119.59166666666667,
+              35.458333333333336
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "火箭残骸掉落—琼航警121/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7cf84563af1a491f9603ba8177ad55ee.html?hav=1jWj6r2hy2Jd7yrAqgex6fcgfy",
         "date": "2026-07-03",
@@ -7489,6 +7538,10 @@
         "valid_end": "2026-09-08T00:00:00+00:00",
         "valid_raw": [
           "9月5日0800时至8日0800时"
+        ],
+        "revoked": true,
+        "revoked_by": [
+          "军事演练—鲁航警746/26"
         ],
         "group_index": 1,
         "kind": "area"

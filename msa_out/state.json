@@ -21137,6 +21137,117 @@
     "title": "蛇口集装箱码头护舷（维修）服务项目施工—深航警77/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7a225076b28b4878af9c1860637c7a49.html?hav=1jWj6r2hy3yfgJitzGyVBVTxSP"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7a8c6985891541738aa78138394b8b94.html": {
+    "bureau": "山东海事局",
+    "cancels": [
+      "鲁航警744/26"
+    ],
+    "date": "2026-09-03",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-03T06:20:31+00:00",
+    "groups": [
+      [
+        {
+          "end": 43,
+          "fmt": "DDM_HYPHEN",
+          "lat": 35.75,
+          "lon": 120.03333333333333,
+          "raw": "35-45.00N 120-02.00E",
+          "start": 23
+        },
+        {
+          "end": 64,
+          "fmt": "DDM_HYPHEN",
+          "lat": 35.475,
+          "lon": 120.525,
+          "raw": "35-28.50N 120-31.50E",
+          "start": 44
+        },
+        {
+          "end": 85,
+          "fmt": "DDM_HYPHEN",
+          "lat": 35.333333333333336,
+          "lon": 120.475,
+          "raw": "35-20.00N 120-28.50E",
+          "start": 65
+        },
+        {
+          "end": 106,
+          "fmt": "DDM_HYPHEN",
+          "lat": 35.333333333333336,
+          "lon": 119.81666666666666,
+          "raw": "35-20.00N 119-49.00E",
+          "start": 86
+        },
+        {
+          "end": 127,
+          "fmt": "DDM_HYPHEN",
+          "lat": 35.458333333333336,
+          "lon": 119.59166666666667,
+          "raw": "35-27.50N 119-35.50E",
+          "start": 107
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 43,
+        "fmt": "DDM_HYPHEN",
+        "lat": 35.75,
+        "lon": 120.03333333333333,
+        "raw": "35-45.00N 120-02.00E",
+        "start": 23
+      },
+      {
+        "end": 64,
+        "fmt": "DDM_HYPHEN",
+        "lat": 35.475,
+        "lon": 120.525,
+        "raw": "35-28.50N 120-31.50E",
+        "start": 44
+      },
+      {
+        "end": 85,
+        "fmt": "DDM_HYPHEN",
+        "lat": 35.333333333333336,
+        "lon": 120.475,
+        "raw": "35-20.00N 120-28.50E",
+        "start": 65
+      },
+      {
+        "end": 106,
+        "fmt": "DDM_HYPHEN",
+        "lat": 35.333333333333336,
+        "lon": 119.81666666666666,
+        "raw": "35-20.00N 119-49.00E",
+        "start": 86
+      },
+      {
+        "end": 127,
+        "fmt": "DDM_HYPHEN",
+        "lat": 35.458333333333336,
+        "lon": 119.59166666666667,
+        "raw": "35-27.50N 119-35.50E",
+        "start": 107
+      }
+    ],
+    "raw_text": "黄海，自9月5日0800时至8日0800时，在35-45.00N 120-02.00E、35-28.50N 120-31.50E、35-20.00N 120-28.50E、35-20.00N 119-49.00E、35-27.50N 119-35.50E五点连线范围内进行军事演练。禁止驶入。撤销鲁航警744/26。",
+    "revoked": false,
+    "title": "军事演练—鲁航警746/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7a8c6985891541738aa78138394b8b94.html?hav=1jWj6r2hy5di2ZA9TUSsmKhbLW",
+    "validity": {
+      "end": "2026-09-08T00:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月5日0800时至8日0800时"
+      ],
+      "start": "2026-09-05T00:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7b14c346ecdb4c83aed9e117fad578c5.html": {
     "bureau": "深圳海事局",
     "cancels": [],
@@ -34954,7 +35065,10 @@
       }
     ],
     "raw_text": "黄海，自9月5日0800时至8日0800时，在35-45.00N 120-02.00E、35-28.50N 121-31.50E、35-20.00N 120-28.50E、35-20.00N 119-49.00E、35-27.50N 119-35.50E五点连线范围内进行军事演练。禁止驶入。",
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "军事演练—鲁航警746/26"
+    ],
     "title": "军事演练—鲁航警744/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ec5d125198c24fb9874de199ec9df15f.html?hav=1jWj6r2hy5di2ZA9TQb6VYv373",
     "validity": {
