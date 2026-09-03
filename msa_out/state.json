@@ -1487,11 +1487,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0ab3eccb02b740a28ac58ed99053600e.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-09-03",
     "detail_fetched": false,
     "first_seen": "2026-09-03T07:20:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "黄海航警41/26",
     "points": [],
     "revoked": false,
     "title": "“鄂黄冈拖2699”拖带“鄂黄石油囤”、“鄂黄油囤2”作业航行警告—黄海航警41/26",
