@@ -8298,11 +8298,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/30369123b49b4801aab42edd290d9b2a.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-03",
     "detail_fetched": false,
     "first_seen": "2026-09-03T08:10:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警628/26",
     "points": [],
     "revoked": false,
     "title": "“埃尔布马斯特”轮船舶试航—粤航警628/26",
@@ -18488,6 +18490,18 @@
     "revoked": false,
     "title": "水下检验—冀航警583/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/646102cd26914e75a03e88ccd16c7a59.html?hav=1jWj6r2hy3yfsMDsWER1DFJNMF"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6491c5eb489f4372ba391565a3016cfe.html": {
+    "bureau": "广东海事局",
+    "date": "2026-09-03",
+    "detail_fetched": false,
+    "first_seen": "2026-09-03T08:20:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“海昌智慧”轮船舶试航—粤航警629/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6491c5eb489f4372ba391565a3016cfe.html?hav=1jWj6r2hy5di2ZA9TVkogNwZz6"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/64b9c84daf64478aa16afa04b8bd10ed.html": {
     "bureau": "河北海事局",
