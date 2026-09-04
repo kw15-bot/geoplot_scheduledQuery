@@ -16530,6 +16530,8 @@
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-04T07:10:29+00:00",
     "military": true,
     "own_id": "粤航警621/26",
     "points": [
@@ -27999,6 +28001,18 @@
     "title": "新辰海洋载运超宽货物航行出江—苏航警28/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b417ae75fae548ef94ae3f1993f57dce.html?hav=1jWj6r2hxyzYPYMvXkhHGFZjzY"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b41fa948e3cd4cc0ae3334c1bd931fe6.html": {
+    "bureau": "长江海事局",
+    "date": "2026-09-04",
+    "detail_fetched": false,
+    "first_seen": "2026-09-04T07:10:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "中华人民共和国泸州海事局航行警告—泸航警25/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b41fa948e3cd4cc0ae3334c1bd931fe6.html?hav=1jWj6r2hy5di2acu253bcedQZ6"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b462c26238ec44468bcf81fe3a3b2543.html": {
     "bureau": "浙江海事局",
     "cancels": [],
@@ -30186,6 +30200,18 @@
     "revoked": false,
     "title": "船舶沉没人员落水—琼航警134/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c1aab060e782403d804c39f20a08bc8e.html?hav=1jWj6r2hy2JdK8fu5DBlCsOhLL"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c1d50330288249d3865869460f4eb280.html": {
+    "bureau": "广东海事局",
+    "date": "2026-09-04",
+    "detail_fetched": false,
+    "first_seen": "2026-09-04T07:10:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "有效航警简报—南部航警36/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c1d50330288249d3865869460f4eb280.html?hav=1jWj6r2hy5di2acu253bcWgf7o"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c20b81774dc54065a966865a8de3a6e5.html": {
     "bureau": "上海海事局",

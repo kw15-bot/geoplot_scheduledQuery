@@ -3584,6 +3584,8 @@
         "valid_raw": [
           "8月31日至9月4日，每天0630时至1830时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-04T07:10:29+00:00",
         "group_index": 1,
         "kind": "area"
       },
