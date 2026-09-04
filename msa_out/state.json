@@ -19691,11 +19691,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6b6f76fc7e7c4019a8353e55d6071cbc.html": {
     "bureau": "江苏海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T09:00:43+00:00",
     "groups": [],
     "military": false,
+    "own_id": "苏航警53/26",
     "points": [],
     "revoked": false,
     "title": "9月5日“新振浮7”长江内拖带作业—苏航警53/26",
