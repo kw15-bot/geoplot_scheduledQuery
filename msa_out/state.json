@@ -455,11 +455,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0275ae781ef849a285bcf92524927cf0.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T08:50:39+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警632/26",
     "points": [],
     "revoked": false,
     "title": "“格洛唯视 传奇”轮船舶试航—粤航警632/26",
@@ -749,11 +751,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/03f8f1491f63443b9ceb9af993a81348.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T08:50:39+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警596/26",
     "points": [],
     "revoked": false,
     "title": "科研调查—冀航警596/26",
@@ -19684,6 +19688,18 @@
     "revoked": false,
     "title": "关于“锦祥宏宇”轮水上试验活动的航行警告（安海航警〔2026〕0028号）—安海航警28/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6b530d6743da4df9a739ff96a18faa04.html?hav=1jWj6r2hy2JdQ2bdeEIN9LaVrN"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6b6f76fc7e7c4019a8353e55d6071cbc.html": {
+    "bureau": "江苏海事局",
+    "date": "2026-09-04",
+    "detail_fetched": false,
+    "first_seen": "2026-09-04T09:00:43+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "9月5日“新振浮7”长江内拖带作业—苏航警53/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6b6f76fc7e7c4019a8353e55d6071cbc.html?hav=1jWj6r2hy5di2acu27dSfbR05Z"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6b997d66ffcf4f9e952fe597c41d816c.html": {
     "bureau": "天津海事局",
