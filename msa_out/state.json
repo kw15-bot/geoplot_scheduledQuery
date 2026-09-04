@@ -3128,11 +3128,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1149707f809f4e698ebf1fc31338abcc.html": {
     "bureau": "深圳海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T02:21:01+00:00",
     "groups": [],
     "military": false,
+    "own_id": "深航警85/26",
     "points": [],
     "revoked": false,
     "title": "大亚湾帆船比赛—深航警85/26",
@@ -8133,11 +8135,15 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2cd59fb2280d4e92b8f3f89dcd568d98.html": {
     "bureau": "山东海事局",
+    "cancels": [
+      "鲁航警747/26"
+    ],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T02:21:01+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警749/26",
     "points": [],
     "revoked": false,
     "title": "撤销鲁航警747/26—鲁航警749/26",
@@ -25914,7 +25920,10 @@
     "military": false,
     "own_id": "鲁航警747/26",
     "points": [],
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "鲁航警749/26"
+    ],
     "title": "船舶试航——PEAK SKARV 4—鲁航警747/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a0902ebf095c48af8b68a35fd46d9db6.html?hav=1jWj6r2hy5di2actwrTiosIjtY"
   },
