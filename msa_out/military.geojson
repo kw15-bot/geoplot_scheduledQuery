@@ -1362,6 +1362,8 @@
         "valid_raw": [
           "8月30日1600时至9月13日1600时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-04T07:40:29+00:00",
         "group_index": 1,
         "kind": "area"
       },

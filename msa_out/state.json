@@ -6438,6 +6438,8 @@
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-04T07:40:29+00:00",
     "military": true,
     "own_id": "辽航警362/26",
     "points": [
@@ -35959,6 +35961,18 @@
     "revoked": false,
     "title": "拖带船队—沪航警575/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f068e05e03dd4b5c80c374f9cdb25882.html?hav=1jWj6r2hy2JdK7D9c5e3cJhGL9"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f1be76346d2a441e95e8b3da2cc69248.html": {
+    "bureau": "辽宁海事局",
+    "date": "2026-09-04",
+    "detail_fetched": false,
+    "first_seen": "2026-09-04T07:40:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "撤销航警—辽航警374/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f1be76346d2a441e95e8b3da2cc69248.html?hav=1jWj6r2hy5di2acu26LWv3THPv"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f1deba41a49f47e2af7113d1dddff7cd.html": {
     "bureau": "上海海事局",
