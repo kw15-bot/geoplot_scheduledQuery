@@ -1373,6 +1373,18 @@
       "start": "2026-08-17T00:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/07db249b90424506b15553f8d064e7ad.html": {
+    "bureau": "辽宁海事局",
+    "date": "2026-09-04",
+    "detail_fetched": false,
+    "first_seen": "2026-09-04T07:20:36+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下探摸作业—辽航警373/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/07db249b90424506b15553f8d064e7ad.html?hav=1jWj6r2hy5di2acu253bhMR4Y1"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/083504e223094cb798c4287217e29fb9.html": {
     "bureau": "河北海事局",
     "cancels": [],
@@ -28003,11 +28015,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b41fa948e3cd4cc0ae3334c1bd931fe6.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T07:10:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "泸航警25/26",
     "points": [],
     "revoked": false,
     "title": "中华人民共和国泸州海事局航行警告—泸航警25/26",
@@ -30203,11 +30217,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c1d50330288249d3865869460f4eb280.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T07:10:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "南部航警36/26",
     "points": [],
     "revoked": false,
     "title": "有效航警简报—南部航警36/26",
