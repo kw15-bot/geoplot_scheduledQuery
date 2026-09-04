@@ -9407,11 +9407,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/38222945db2b40e48a742ad7bac945c8.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T06:50:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警372/26",
     "points": [],
     "revoked": false,
     "title": "拖带渤海4号钻井平台—辽航警372/26",
