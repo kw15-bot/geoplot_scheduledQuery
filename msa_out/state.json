@@ -6711,11 +6711,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f6a5b064211469fb287984a6f5a1f30.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T12:40:33+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警795/26",
     "points": [],
     "revoked": false,
     "title": "新设航标—浙航警795/26",
