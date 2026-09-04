@@ -30445,6 +30445,18 @@
       "start": "2026-08-24T03:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c300b21b5bb74c319dd1a7208110cee8.html": {
+    "bureau": "天津海事局",
+    "date": "2026-09-04",
+    "detail_fetched": false,
+    "first_seen": "2026-09-04T06:40:28+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "有效航警简报—北部航警36/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c300b21b5bb74c319dd1a7208110cee8.html?hav=1jWj6r2hy5di2acu253bOW66pp"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c32ec484289347d98092378431077730.html": {
     "bureau": "长江海事局",
     "cancels": [],
