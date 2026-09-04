@@ -9431,7 +9431,10 @@
     "military": false,
     "own_id": "辽航警372/26",
     "points": [],
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "辽航警374/26"
+    ],
     "title": "拖带渤海4号钻井平台—辽航警372/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/38222945db2b40e48a742ad7bac945c8.html?hav=1jWj6r2hy5di2acu253bXr9oNl"
   },
@@ -35964,15 +35967,24 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f1be76346d2a441e95e8b3da2cc69248.html": {
     "bureau": "辽宁海事局",
+    "cancels": [
+      "辽航警372/26"
+    ],
     "date": "2026-09-04",
-    "detail_fetched": false,
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
     "first_seen": "2026-09-04T07:40:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警374/26",
     "points": [],
+    "raw_text": "渤海，撤销辽航警372/26。 收藏 打印本页 关闭窗口 下载PDF文件 分享到微信朋友圈 x 打开微信，点击底部的“发现”， 使用“扫一扫”即可将网页分享至朋友圈。",
     "revoked": false,
     "title": "撤销航警—辽航警374/26",
-    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f1be76346d2a441e95e8b3da2cc69248.html?hav=1jWj6r2hy5di2acu26LWv3THPv"
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f1be76346d2a441e95e8b3da2cc69248.html?hav=1jWj6r2hy5di2acu26LWv3THPv",
+    "validity": null
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f1deba41a49f47e2af7113d1dddff7cd.html": {
     "bureau": "上海海事局",
