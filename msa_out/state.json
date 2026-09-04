@@ -1375,11 +1375,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/07db249b90424506b15553f8d064e7ad.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T07:20:36+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警373/26",
     "points": [],
     "revoked": false,
     "title": "水下探摸作业—辽航警373/26",
