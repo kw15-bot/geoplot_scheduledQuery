@@ -9494,6 +9494,166 @@
     "title": "水下检验—冀航警508/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3829008893a5411f95f2a51f3e5375ae.html?hav=1jWj6r2hy3yfaLOuplXP0FrGvW"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/38aba7d40f2342f8af307bb0bb047653.html": {
+    "bureau": "山东海事局",
+    "cancels": [],
+    "date": "2026-09-04",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-04T10:00:44+00:00",
+    "groups": [
+      [
+        {
+          "end": 43,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.079166666666666,
+          "lon": 121.332,
+          "raw": "39-04.75N 121-19.92E",
+          "start": 23
+        },
+        {
+          "end": 64,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.04716666666667,
+          "lon": 121.362,
+          "raw": "39-02.83N 121-21.72E",
+          "start": 44
+        },
+        {
+          "end": 85,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.98616666666667,
+          "lon": 121.28383333333333,
+          "raw": "38-59.17N 121-17.03E",
+          "start": 65
+        },
+        {
+          "end": 106,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.016333333333336,
+          "lon": 121.24783333333333,
+          "raw": "39-00.98N 121-14.87E",
+          "start": 86
+        }
+      ],
+      [
+        {
+          "end": 146,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.104166666666664,
+          "lon": 121.30833333333334,
+          "raw": "39-06.25N 121-18.50E",
+          "start": 126
+        },
+        {
+          "end": 167,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.131166666666665,
+          "lon": 121.35383333333333,
+          "raw": "39-07.87N 121-21.23E",
+          "start": 147
+        },
+        {
+          "end": 188,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.05716666666667,
+          "lon": 121.42416666666666,
+          "raw": "39-03.43N 121-25.45E",
+          "start": 168
+        },
+        {
+          "end": 209,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.0305,
+          "lon": 121.37866666666666,
+          "raw": "39-01.83N 121-22.72E",
+          "start": 189
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 43,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.079166666666666,
+        "lon": 121.332,
+        "raw": "39-04.75N 121-19.92E",
+        "start": 23
+      },
+      {
+        "end": 64,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.04716666666667,
+        "lon": 121.362,
+        "raw": "39-02.83N 121-21.72E",
+        "start": 44
+      },
+      {
+        "end": 85,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.98616666666667,
+        "lon": 121.28383333333333,
+        "raw": "38-59.17N 121-17.03E",
+        "start": 65
+      },
+      {
+        "end": 106,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.016333333333336,
+        "lon": 121.24783333333333,
+        "raw": "39-00.98N 121-14.87E",
+        "start": 86
+      },
+      {
+        "end": 146,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.104166666666664,
+        "lon": 121.30833333333334,
+        "raw": "39-06.25N 121-18.50E",
+        "start": 126
+      },
+      {
+        "end": 167,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.131166666666665,
+        "lon": 121.35383333333333,
+        "raw": "39-07.87N 121-21.23E",
+        "start": 147
+      },
+      {
+        "end": 188,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.05716666666667,
+        "lon": 121.42416666666666,
+        "raw": "39-03.43N 121-25.45E",
+        "start": 168
+      },
+      {
+        "end": 209,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.0305,
+        "lon": 121.37866666666666,
+        "raw": "39-01.83N 121-22.72E",
+        "start": 189
+      }
+    ],
+    "raw_text": "渤海，9月7日至10日，9月12日至21日，在39-04.75N 121-19.92E、39-02.83N 121-21.72E、38-59.17N 121-17.03E、39-00.98N 121-14.87E各点连线水域内进行实弹射击。9月11日在39-06.25N 121-18.50E、39-07.87N 121-21.23E、39-03.43N 121-25.45E、39-01.83N 121-22.72E各点连线水域内进行实弹射击。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击-渤海—鲁航警750/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/38aba7d40f2342f8af307bb0bb047653.html?hav=1jWj6r2hy5di2acu28vOGssbYs",
+    "validity": {
+      "end": "2026-09-21T16:00:00+00:00",
+      "period_count": 2,
+      "raw": [
+        "9月12日至21日",
+        "9月11日"
+      ],
+      "start": "2026-09-10T16:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/39116019f85f427996e7875b042c2c24.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -28372,11 +28532,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b95c83d69f104927a3f037e9fde6505d.html": {
     "bureau": "深圳海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T09:50:36+00:00",
     "groups": [],
     "military": false,
+    "own_id": "深航警87/26",
     "points": [],
     "revoked": false,
     "title": "香港北环线支线接入新皇岗口岸配套工程地质勘探—深航警87/26",
@@ -33131,11 +33293,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d5be548aa8fa41c39c38669408130e38.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T09:50:36+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警633/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—粤航警633/26",
