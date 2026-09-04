@@ -33511,11 +33511,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dbe39b95ea034d91bee230978cb563ab.html": {
     "bureau": "天津海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T06:00:43+00:00",
     "groups": [],
     "military": false,
+    "own_id": "津航警299/26",
     "points": [],
     "revoked": false,
     "title": "吊装作业—津航警299/26",
