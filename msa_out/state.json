@@ -11498,11 +11498,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/444dcb1fb99a4935b143ceb3ca2456e3.html": {
     "bureau": "江苏海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T11:10:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "苏航警54/26",
     "points": [],
     "revoked": false,
     "title": "9月5日江苏新韩通船舶重工有限公司“韩通359”轮出坞作业—苏航警54/26",
