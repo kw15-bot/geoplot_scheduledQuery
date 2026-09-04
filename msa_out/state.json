@@ -453,6 +453,18 @@
     "title": "关于“远顺6”载运船舶成品分段由乌江河口至湖北武汉青山船厂的航行警告—芜航警31/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/01ea9854ac84407caad71bb523b69ccb.html?hav=1jWj6r2hy3yfmI2t8QUpawoRQj"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0275ae781ef849a285bcf92524927cf0.html": {
+    "bureau": "广东海事局",
+    "date": "2026-09-04",
+    "detail_fetched": false,
+    "first_seen": "2026-09-04T08:50:39+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“格洛唯视 传奇”轮船舶试航—粤航警632/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0275ae781ef849a285bcf92524927cf0.html?hav=1jWj6r2hy5di2acu27dSb3qvFx"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0298c8b749de4a64aa432ce7550a8214.html": {
     "bureau": "深圳海事局",
     "cancels": [],
@@ -734,6 +746,18 @@
     "revoked": false,
     "title": "拖带作业—桂航警184/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/03f678ee938e424fb86b25bd977e0644.html?hav=1jWj6r2hy3yfgLBeSWFllzdVVw"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/03f8f1491f63443b9ceb9af993a81348.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-04",
+    "detail_fetched": false,
+    "first_seen": "2026-09-04T08:50:39+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "科研调查—冀航警596/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/03f8f1491f63443b9ceb9af993a81348.html?hav=1jWj6r2hy5di2acu27dSWIe5yq"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/04129b6efa20410d85aa9eba4b384d0c.html": {
     "bureau": "广西海事局",
@@ -3030,11 +3054,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0f7a16efb23943a5acaefc847326af56.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T08:40:36+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警375/26",
     "points": [],
     "revoked": false,
     "title": "拖带渤海12号钻井平台—辽航警375/26",
