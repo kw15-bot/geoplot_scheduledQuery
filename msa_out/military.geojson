@@ -7290,6 +7290,47 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "军事任务—冀航警595/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dceb54cb9a0d4bb395fa81342cee6e99.html?hav=1jWj6r2hy5di2acu21BotcudWR",
+        "date": "2026-09-04",
+        "bureau": "河北海事局",
+        "group_count": 1,
+        "raw_text": "渤海，9月6日0000时至9月7日2400时， 以N 39°24′35″、E 119°13′44″为顶点，正东方向至正南偏西6°、圆心角为96°的扇形区域。该扇形区域所对应圆弧的2个端点坐标分别为N 39°24′14″、E 119°28′24″和N 39°13′13″、E 119°11′51″。该扇形区域内进行实弹射击活动。禁止驶入。",
+        "valid_start": "2026-09-05T16:00:00+00:00",
+        "valid_end": "2026-09-07T16:00:00+00:00",
+        "valid_raw": [
+          "9月6日0000时至9月7日2400时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.1975,
+              39.22027777777778
+            ],
+            [
+              119.47333333333333,
+              39.403888888888886
+            ],
+            [
+              119.22888888888889,
+              39.40972222222222
+            ],
+            [
+              119.1975,
+              39.22027777777778
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "渤海军事演习—辽航警309/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/df805fe2a88944b1b577952b207af61c.html?hav=1jWj6r2hy2JdE4Uun1K4uiElTX",
         "date": "2026-07-15",

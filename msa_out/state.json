@@ -13322,11 +13322,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4bcffd646dad4f4a8b0c430d9d444d90.html": {
     "bureau": "广西海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T03:40:26+00:00",
     "groups": [],
     "military": false,
+    "own_id": "桂航警199/26",
     "points": [],
     "revoked": false,
     "title": "航标动态-恢复防城港22号灯浮设计位置—桂航警199/26",
@@ -33645,6 +33647,83 @@
     "revoked": false,
     "title": "拖带作业—粤航警594/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dcb391bf83624e03b683029233c802e6.html?hav=1jWj6r2hy3yfmJVdmL74GA5Gvh"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dceb54cb9a0d4bb395fa81342cee6e99.html": {
+    "bureau": "河北海事局",
+    "cancels": [],
+    "date": "2026-09-04",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-04T03:50:26+00:00",
+    "groups": [
+      [
+        {
+          "end": 49,
+          "fmt": "DMS_PREFIX",
+          "lat": 39.40972222222222,
+          "lon": 119.22888888888889,
+          "raw": "N 39°24'35\" E 119°13'44\"",
+          "start": 25
+        },
+        {
+          "end": 122,
+          "fmt": "DMS_PREFIX",
+          "lat": 39.403888888888886,
+          "lon": 119.47333333333333,
+          "raw": "N 39°24'14\" E 119°28'24\"",
+          "start": 98
+        },
+        {
+          "end": 147,
+          "fmt": "DMS_PREFIX",
+          "lat": 39.22027777777778,
+          "lon": 119.1975,
+          "raw": "N 39°13'13\" E 119°11'51\"",
+          "start": 123
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 49,
+        "fmt": "DMS_PREFIX",
+        "lat": 39.40972222222222,
+        "lon": 119.22888888888889,
+        "raw": "N 39°24'35\" E 119°13'44\"",
+        "start": 25
+      },
+      {
+        "end": 122,
+        "fmt": "DMS_PREFIX",
+        "lat": 39.403888888888886,
+        "lon": 119.47333333333333,
+        "raw": "N 39°24'14\" E 119°28'24\"",
+        "start": 98
+      },
+      {
+        "end": 147,
+        "fmt": "DMS_PREFIX",
+        "lat": 39.22027777777778,
+        "lon": 119.1975,
+        "raw": "N 39°13'13\" E 119°11'51\"",
+        "start": 123
+      }
+    ],
+    "raw_text": "渤海，9月6日0000时至9月7日2400时， 以N 39°24′35″、E 119°13′44″为顶点，正东方向至正南偏西6°、圆心角为96°的扇形区域。该扇形区域所对应圆弧的2个端点坐标分别为N 39°24′14″、E 119°28′24″和N 39°13′13″、E 119°11′51″。该扇形区域内进行实弹射击活动。禁止驶入。",
+    "revoked": false,
+    "title": "军事任务—冀航警595/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dceb54cb9a0d4bb395fa81342cee6e99.html?hav=1jWj6r2hy5di2acu21BotcudWR",
+    "validity": {
+      "end": "2026-09-07T16:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月6日0000时至9月7日2400时"
+      ],
+      "start": "2026-09-05T16:00:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dcfcf93e3c224afda566ede84a30e036.html": {
     "bureau": "浙江海事局",
