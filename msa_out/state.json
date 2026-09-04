@@ -20124,11 +20124,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/700229b463cb4f5eb6de6279bcb74cad.html": {
     "bureau": "连云港海事局",
+    "cancels": [],
     "date": "2026-09-04",
     "detail_fetched": false,
     "first_seen": "2026-09-04T05:30:39+00:00",
     "groups": [],
     "military": false,
+    "own_id": "云航警145/26",
     "points": [],
     "revoked": false,
     "title": "“泓顺达7”主机故障—云航警145/26",
