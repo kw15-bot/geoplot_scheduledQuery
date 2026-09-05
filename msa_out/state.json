@@ -3182,6 +3182,18 @@
     "title": "水下检验—冀航警567/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/10e2305dcb2e4be2943d90016ecefe43.html?hav=1jWj6r2hy3yfmQpOU4UmJABopd"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/110f8a3d5b154569b144afc650848228.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-05",
+    "detail_fetched": false,
+    "first_seen": "2026-09-05T12:01:18+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "扫测作业-滨海66—鲁航警756/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/110f8a3d5b154569b144afc650848228.html?hav=1jWj6r2hy5di2c5eam5xmh9Nk8"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/11438e7d461d4dd6901ff6d0e9b666eb.html": {
     "bureau": "浙江海事局",
     "cancels": [],
@@ -9710,6 +9722,18 @@
     "revoked": false,
     "title": "有效航警简报—北部航警33/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/394f2804c89d43c98a7880f67fe3254b.html?hav=1jWj6r2hy3yfgLBeXl7ZsEDEvx"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/39732fe26c514b52947ce194f4b4667d.html": {
+    "bureau": "福建海事局",
+    "date": "2026-09-05",
+    "detail_fetched": false,
+    "first_seen": "2026-09-05T12:01:18+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "试航作业—闽航警153/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/39732fe26c514b52947ce194f4b4667d.html?hav=1jWj6r2hy5di2c5eam5xrQ5Q2t"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/39bc84d86764440db83687a081aeceed.html": {
     "bureau": "长江海事局",
