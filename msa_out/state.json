@@ -22748,11 +22748,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/83226ec569864d97b61480e0ed320fea.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-05",
     "detail_fetched": false,
     "first_seen": "2026-09-05T00:20:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警754/26",
     "points": [],
     "revoked": false,
     "title": "游泳比赛注意避让—鲁航警754/26",
