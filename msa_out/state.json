@@ -33692,11 +33692,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d53b363d88b04ba399e522cea1ac6a1f.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-05",
     "detail_fetched": false,
     "first_seen": "2026-09-05T16:00:42+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警797/26",
     "points": [],
     "revoked": false,
     "title": "航标动态—苍电4号、鳌江10号灯浮灯光熄灭—浙航警797/26",
