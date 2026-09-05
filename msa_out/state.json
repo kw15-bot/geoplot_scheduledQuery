@@ -21963,11 +21963,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7a99af9cd2754a6bae379190b7398fb2.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-05",
     "detail_fetched": false,
     "first_seen": "2026-09-05T13:10:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警700/26",
     "points": [],
     "revoked": false,
     "title": "装载大件船舶—沪航警700/26",
