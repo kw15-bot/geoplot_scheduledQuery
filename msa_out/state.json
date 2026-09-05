@@ -20970,11 +20970,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/752db10518a74ebcaa1e3b7fa256bc88.html": {
     "bureau": "福建海事局",
+    "cancels": [],
     "date": "2026-09-05",
     "detail_fetched": false,
     "first_seen": "2026-09-05T13:00:42+00:00",
     "groups": [],
     "military": false,
+    "own_id": "闽航警154/26",
     "points": [],
     "revoked": false,
     "title": "科考作业—闽航警154/26",
@@ -21958,6 +21960,18 @@
     "revoked": false,
     "title": "水下检验—冀航警593/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7a905e55ffdb46e2a4d907c48c843658.html?hav=1jWj6r2hy5di2acu1zttN8weZA"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7a99af9cd2754a6bae379190b7398fb2.html": {
+    "bureau": "上海海事局",
+    "date": "2026-09-05",
+    "detail_fetched": false,
+    "first_seen": "2026-09-05T13:10:27+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "装载大件船舶—沪航警700/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7a99af9cd2754a6bae379190b7398fb2.html?hav=1jWj6r2hy5di2c5efuW8Pk8WPY"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7b14c346ecdb4c83aed9e117fad578c5.html": {
     "bureau": "深圳海事局",
