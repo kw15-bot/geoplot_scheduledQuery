@@ -10246,6 +10246,99 @@
     "title": "中华人民共和国重庆海事局航行警告—渝航警387/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3fa47bee97314c0d99db0baad8b728b6.html?hav=1jWj6r2hy3yfaOKPx8KBsk4nJR"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4048e1ae24df4f22b5565ca5b1860f87.html": {
+    "bureau": "山东海事局",
+    "cancels": [],
+    "date": "2026-09-05",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-05T06:20:29+00:00",
+    "groups": [
+      [
+        {
+          "end": 43,
+          "fmt": "DDM_HYPHEN",
+          "lat": 37.165,
+          "lon": 119.29533333333333,
+          "raw": "37-09.90N 119-17.72E",
+          "start": 23
+        },
+        {
+          "end": 64,
+          "fmt": "DDM_HYPHEN",
+          "lat": 37.165,
+          "lon": 119.34333333333333,
+          "raw": "37-09.90N 119-20.60E",
+          "start": 44
+        },
+        {
+          "end": 85,
+          "fmt": "DDM_HYPHEN",
+          "lat": 37.1125,
+          "lon": 119.34333333333333,
+          "raw": "37-06.75N 119-20.60E",
+          "start": 65
+        },
+        {
+          "end": 106,
+          "fmt": "DDM_HYPHEN",
+          "lat": 37.1125,
+          "lon": 119.29533333333333,
+          "raw": "37-06.75N 119-17.72E",
+          "start": 86
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 43,
+        "fmt": "DDM_HYPHEN",
+        "lat": 37.165,
+        "lon": 119.29533333333333,
+        "raw": "37-09.90N 119-17.72E",
+        "start": 23
+      },
+      {
+        "end": 64,
+        "fmt": "DDM_HYPHEN",
+        "lat": 37.165,
+        "lon": 119.34333333333333,
+        "raw": "37-09.90N 119-20.60E",
+        "start": 44
+      },
+      {
+        "end": 85,
+        "fmt": "DDM_HYPHEN",
+        "lat": 37.1125,
+        "lon": 119.34333333333333,
+        "raw": "37-06.75N 119-20.60E",
+        "start": 65
+      },
+      {
+        "end": 106,
+        "fmt": "DDM_HYPHEN",
+        "lat": 37.1125,
+        "lon": 119.29533333333333,
+        "raw": "37-06.75N 119-17.72E",
+        "start": 86
+      }
+    ],
+    "raw_text": "渤海 潍坊港，9月6日0000时至2400时在37-09.90N 119-17.72E、37-09.90N 119-20.60E、37-06.75N 119-20.60E、37-06.75N 119-17.72E诸点连线范围内进行实弹射击。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—鲁航警755/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4048e1ae24df4f22b5565ca5b1860f87.html?hav=1jWj6r2hy5di2c5eafeJrLIWeb",
+    "validity": {
+      "end": "2026-09-06T16:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月6日0000时至2400时"
+      ],
+      "start": "2026-09-05T16:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/405622cc6e5d485d97979d82cfca5d6f.html": {
     "bureau": "上海海事局",
     "cancels": [],

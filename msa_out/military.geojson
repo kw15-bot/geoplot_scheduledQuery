@@ -2109,6 +2109,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "实弹射击—鲁航警755/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4048e1ae24df4f22b5565ca5b1860f87.html?hav=1jWj6r2hy5di2c5eafeJrLIWeb",
+        "date": "2026-09-05",
+        "bureau": "山东海事局",
+        "group_count": 1,
+        "raw_text": "渤海 潍坊港，9月6日0000时至2400时在37-09.90N 119-17.72E、37-09.90N 119-20.60E、37-06.75N 119-20.60E、37-06.75N 119-17.72E诸点连线范围内进行实弹射击。禁止驶入。",
+        "valid_start": "2026-09-05T16:00:00+00:00",
+        "valid_end": "2026-09-06T16:00:00+00:00",
+        "valid_raw": [
+          "9月6日0000时至2400时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              119.29533333333333,
+              37.1125
+            ],
+            [
+              119.34333333333333,
+              37.1125
+            ],
+            [
+              119.34333333333333,
+              37.165
+            ],
+            [
+              119.29533333333333,
+              37.165
+            ],
+            [
+              119.29533333333333,
+              37.1125
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "火箭发射—琼航警138/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4118c13d0ce447e5b14e4a931f481684.html?hav=1jWj6r2hy2JdKBbPHsi8zKiO2P",
         "date": "2026-07-28",
