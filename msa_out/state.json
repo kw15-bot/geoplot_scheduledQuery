@@ -13412,11 +13412,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/48612c9565214035885c537136107ae7.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-05",
     "detail_fetched": false,
     "first_seen": "2026-09-05T10:20:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警796/26",
     "points": [],
     "revoked": false,
     "title": "CARAMELLO、HUI SHENG HAI、SANAM和DOMINICA PROSPERITY轮航经虾峙门外深水航槽—浙航警796/26",
