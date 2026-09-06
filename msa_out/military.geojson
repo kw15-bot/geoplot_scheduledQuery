@@ -8002,6 +8002,8 @@
         "valid_raw": [
           "8月26日0100时至1800时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-06T14:20:28+00:00",
         "group_index": 1,
         "kind": "area"
       },

@@ -22431,6 +22431,18 @@
     "title": "吊装作业—深航警49/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7d2e0787d18b4a2e84d7d7ce3105f541.html?hav=1jWj6r2hxxKVxKbguDN8yjTTK2"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7d392295e3dc4eeb8a35265b88d05e73.html": {
+    "bureau": "福建海事局",
+    "date": "2026-09-06",
+    "detail_fetched": false,
+    "first_seen": "2026-09-06T14:20:28+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—闽航警157/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7d392295e3dc4eeb8a35265b88d05e73.html?hav=1jWj6r2hy5di2dYPEXghhUPZD9"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7d746b1efd03486181409906f23b215f.html": {
     "bureau": "深圳海事局",
     "cancels": [],
@@ -37546,6 +37558,8 @@
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-06T14:20:28+00:00",
     "military": true,
     "own_id": "闽航警147/26",
     "points": [
