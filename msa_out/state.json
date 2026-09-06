@@ -34992,11 +34992,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/debb88a9c16048f8a812b0f233e8c867.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-06",
     "detail_fetched": false,
     "first_seen": "2026-09-06T12:20:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警805/26",
     "points": [],
     "revoked": false,
     "title": "航标动态—鳌江10号灯浮恢复正常—浙航警805/26",
