@@ -15040,11 +15040,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/54daca086fb2499488e670a2aeeae693.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-06",
     "detail_fetched": false,
     "first_seen": "2026-09-06T03:50:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警798/26",
     "points": [],
     "revoked": false,
     "title": "渔船集中出港作业—浙航警798/26",
@@ -38367,6 +38369,7 @@
       ]
     ],
     "military": true,
+    "own_id": "粤航警635/26",
     "points": [
       {
         "end": 76,
