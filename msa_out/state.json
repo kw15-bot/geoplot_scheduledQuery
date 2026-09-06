@@ -13670,6 +13670,7 @@
       ]
     ],
     "military": true,
+    "own_id": "粤航警636/26",
     "points": [
       {
         "end": 65,
@@ -28084,11 +28085,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ae058d2ee8fc4d3db4c5d8d9cb251126.html": {
     "bureau": "福建海事局",
+    "cancels": [],
     "date": "2026-09-06",
     "detail_fetched": false,
     "first_seen": "2026-09-06T07:20:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "闽航警156/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—闽航警156/26",
