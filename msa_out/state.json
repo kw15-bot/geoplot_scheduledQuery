@@ -3439,6 +3439,8 @@
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-06T07:20:30+00:00",
     "military": true,
     "own_id": "粤航警626/26",
     "points": [
@@ -13621,6 +13623,99 @@
     "revoked": false,
     "title": "探井作业—津航警223/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4a6ea3475a6d4dad944b88a7bd19f482.html?hav=1jWj6r2hy2JdE7QPu8djUipqDL"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4a7860b885e04aac8225f54a3781f85e.html": {
+    "bureau": "广东海事局",
+    "cancels": [],
+    "date": "2026-09-06",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-06T07:20:30+00:00",
+    "groups": [
+      [
+        {
+          "end": 65,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.883333333333333,
+          "lon": 110.9,
+          "raw": "20-53.0N 110-54.0E",
+          "start": 47
+        },
+        {
+          "end": 88,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.883333333333333,
+          "lon": 110.98333333333333,
+          "raw": "20-53.0N 110-59.0E",
+          "start": 70
+        },
+        {
+          "end": 111,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.8,
+          "lon": 110.98333333333333,
+          "raw": "20-48.0N 110-59.0E",
+          "start": 93
+        },
+        {
+          "end": 134,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.8,
+          "lon": 110.9,
+          "raw": "20-48.0N 110-54.0E",
+          "start": 116
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 65,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.883333333333333,
+        "lon": 110.9,
+        "raw": "20-53.0N 110-54.0E",
+        "start": 47
+      },
+      {
+        "end": 88,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.883333333333333,
+        "lon": 110.98333333333333,
+        "raw": "20-53.0N 110-59.0E",
+        "start": 70
+      },
+      {
+        "end": 111,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.8,
+        "lon": 110.98333333333333,
+        "raw": "20-48.0N 110-59.0E",
+        "start": 93
+      },
+      {
+        "end": 134,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.8,
+        "lon": 110.9,
+        "raw": "20-48.0N 110-54.0E",
+        "start": 116
+      }
+    ],
+    "raw_text": "南海，9月8日至11日，每天0800时至1800时，在以下四点连线海域内进行实弹射击： （1）20-53.0N，110-54.0E； （2）20-53.0N，110-59.0E； （3）20-48.0N，110-59.0E； （4）20-48.0N，110-54.0E。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—粤航警636/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4a7860b885e04aac8225f54a3781f85e.html?hav=1jWj6r2hy5di2dYP9HWxvDBP2u",
+    "validity": {
+      "end": "2026-09-11T10:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月8日至11日，每天0800时至1800时"
+      ],
+      "start": "2026-09-08T00:00:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4a9a55492139466fbc78e8673600b57e.html": {
     "bureau": "山东海事局",
@@ -27986,6 +28081,18 @@
     "revoked": false,
     "title": "“华泉”轮拖带“南海五号”—粤航警549/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/adee7914521447d89c005f2b1f1da8f4.html?hav=1jWj6r2hy3yfgFKeJMAqjvkew4"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ae058d2ee8fc4d3db4c5d8d9cb251126.html": {
+    "bureau": "福建海事局",
+    "date": "2026-09-06",
+    "detail_fetched": false,
+    "first_seen": "2026-09-06T07:20:30+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—闽航警156/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ae058d2ee8fc4d3db4c5d8d9cb251126.html?hav=1jWj6r2hy5di2dYP9HWxvEJnpk"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ae2fdbba55774a7fb72862054b23e319.html": {
     "bureau": "上海海事局",
