@@ -24720,6 +24720,18 @@
       "start": "2026-08-06T23:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8909b2df764440f58f0076a2bdcbe19f.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-06",
+    "detail_fetched": false,
+    "first_seen": "2026-09-06T09:00:41+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航行拖带—鲁航警758/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8909b2df764440f58f0076a2bdcbe19f.html?hav=1jWj6r2hy5di2dYP9IotkfR7Du"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8987e603cd234f70a04119a1d817ae05.html": {
     "bureau": "江苏海事局",
     "cancels": [],
