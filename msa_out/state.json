@@ -15038,6 +15038,18 @@
     "title": "人员落水—沪航警644/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/542ada4668b34768ba117d3ffcd677b4.html?hav=1jWj6r2hy3yfgR2egjb9U2AyIL"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/54daca086fb2499488e670a2aeeae693.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-06",
+    "detail_fetched": false,
+    "first_seen": "2026-09-06T03:50:27+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "渔船集中出港作业—浙航警798/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/54daca086fb2499488e670a2aeeae693.html?hav=1jWj6r2hy5di2dYP9CNG37gSIf"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/54ed131f59444dd2b6fd1b535c469c6e.html": {
     "bureau": "山东海事局",
     "cancels": [],
@@ -38308,6 +38320,99 @@
     "revoked": false,
     "title": "“博洋拖5”拖带“顺达169”从连云港赣榆港至大连长兴岛港—云航警128/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ff83aa2db0c84e128d9f3278c4f6f368.html?hav=1jWj6r2hy3yfgJitzFgZaGJ91d"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ff9fea771875401ea78058af720e932a.html": {
+    "bureau": "广东海事局",
+    "cancels": [],
+    "date": "2026-09-06",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-06T03:50:27+00:00",
+    "groups": [
+      [
+        {
+          "end": 76,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.416666666666668,
+          "lon": 110.96666666666667,
+          "raw": "21-25.0N 110-58.0E",
+          "start": 58
+        },
+        {
+          "end": 99,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.421666666666667,
+          "lon": 110.97666666666667,
+          "raw": "21-25.3N 110-58.6E",
+          "start": 81
+        },
+        {
+          "end": 122,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.371666666666666,
+          "lon": 111.06166666666667,
+          "raw": "21-22.3N 111-03.7E",
+          "start": 104
+        },
+        {
+          "end": 145,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.323333333333334,
+          "lon": 110.98166666666667,
+          "raw": "21-19.4N 110-58.9E",
+          "start": 127
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 76,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.416666666666668,
+        "lon": 110.96666666666667,
+        "raw": "21-25.0N 110-58.0E",
+        "start": 58
+      },
+      {
+        "end": 99,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.421666666666667,
+        "lon": 110.97666666666667,
+        "raw": "21-25.3N 110-58.6E",
+        "start": 81
+      },
+      {
+        "end": 122,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.371666666666666,
+        "lon": 111.06166666666667,
+        "raw": "21-22.3N 111-03.7E",
+        "start": 104
+      },
+      {
+        "end": 145,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.323333333333334,
+        "lon": 110.98166666666667,
+        "raw": "21-19.4N 110-58.9E",
+        "start": 127
+      }
+    ],
+    "raw_text": "南海，9月7日至11日，每日0830时至1130时和1330时至1730时，以下四点连线海域内进行射击训练： （1）21-25.0N 110-58.0E； （2）21-25.3N 110-58.6E； （3）21-22.3N 111-03.7E； （4）21-19.4N 110-58.9E。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—粤航警635/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ff9fea771875401ea78058af720e932a.html?hav=1jWj6r2hy5di2dYP9CNFyYxykS",
+    "validity": {
+      "end": "2026-09-11T03:30:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月7日至11日，每日0830时至1130时"
+      ],
+      "start": "2026-09-07T00:30:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ffd118e8ac0a43758f8ce82569126866.html": {
     "bureau": "天津海事局",
