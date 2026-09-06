@@ -25478,11 +25478,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/91d0d9f0882f47bcb3c63773fcd6fc8c.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-09-06",
     "detail_fetched": false,
     "first_seen": "2026-09-06T08:10:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警377/26",
     "points": [],
     "revoked": false,
     "title": "营口港临时设置14座虚拟AIS航标—辽航警377/26",
