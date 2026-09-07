@@ -25336,11 +25336,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9054d6f18f8e401289f36a64e9763e41.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-09-07",
     "detail_fetched": false,
     "first_seen": "2026-09-07T03:10:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "黄海航警43/26",
     "points": [],
     "revoked": false,
     "title": "关于“宁腾荣耀01”轮试航作业的航行警告—黄海航警43/26",
