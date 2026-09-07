@@ -2988,11 +2988,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0e1ac4861d01434fb5686eb5db303598.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-07",
     "detail_fetched": false,
     "first_seen": "2026-09-07T09:40:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警810/26",
     "points": [],
     "revoked": false,
     "title": "“PASSIONATE WARRIOR”轮试航—浙航警810/26",
@@ -10748,6 +10750,18 @@
     "title": "超大型船舶—沪航警578/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/40a4cea1835f4f31ad52fb70c1e719ff.html?hav=1jWj6r2hy2JdK8fuAhWhbcreyt"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/40d29abfe610458998e6004e19f203b4.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-07",
+    "detail_fetched": false,
+    "first_seen": "2026-09-07T09:50:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警598/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/40d29abfe610458998e6004e19f203b4.html?hav=1jWj6r2hy5di2f19huhXfFfU1q"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/40e7cafcc9394119a3b899728b7beff7.html": {
     "bureau": "上海海事局",
     "cancels": [],
@@ -13750,11 +13764,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4817b122243149b4a15fa341955d30d7.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-07",
     "detail_fetched": false,
     "first_seen": "2026-09-07T09:40:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警809/26",
     "points": [],
     "revoked": false,
     "title": "“SANTA ROSA”轮试航—浙航警809/26",
@@ -31877,11 +31893,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c32f03c006364800925576feac67af7f.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-07",
     "detail_fetched": false,
     "first_seen": "2026-09-07T09:40:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警811/26",
     "points": [],
     "revoked": false,
     "title": "“沪油98”轮试航—浙航警811/26",
@@ -32471,6 +32489,18 @@
     "revoked": false,
     "title": "拖带中南院520—辽航警358/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c6a71d41a5c142babe3fbf3e267433a5.html?hav=1jWj6r2hy3yfmSI92dnZAdP3Mf"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c6e4e0d5b52e4cdb9a98db56091e5444.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-07",
+    "detail_fetched": false,
+    "first_seen": "2026-09-07T09:50:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警597/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c6e4e0d5b52e4cdb9a98db56091e5444.html?hav=1jWj6r2hy5di2f19huhXfFfTxm"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c7058f1440444ed0ad9cbd1c49d88e89.html": {
     "bureau": "天津海事局",
@@ -34883,11 +34913,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d9b4a63e7d3a427ba824954b6d394c4a.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-07",
     "detail_fetched": false,
     "first_seen": "2026-09-07T09:40:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警808/26",
     "points": [],
     "revoked": false,
     "title": "“岭兴102”轮试航—浙航警808/26",
