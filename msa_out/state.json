@@ -6260,6 +6260,7 @@
       ]
     ],
     "military": true,
+    "own_id": "浙航警807/26",
     "points": [
       {
         "end": 40,
@@ -28024,6 +28025,18 @@
     "revoked": false,
     "title": "吊装作业—深航警58/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a6c110f62f534b6d8bcaf05323643f2d.html?hav=1jWj6r2hxyzYPWuAzDyLILpb3p"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a6de9d15d8a1415d86c8bc9d68cf0620.html": {
+    "bureau": "长江海事局",
+    "date": "2026-09-07",
+    "detail_fetched": false,
+    "first_seen": "2026-09-07T09:00:47+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "中华人民共和国宜昌海事局航行警告—宜航警72/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a6de9d15d8a1415d86c8bc9d68cf0620.html?hav=1jWj6r2hy5di2f19htPcI6lC9j"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a6e520a269e54fdca42bd2e5922ac378.html": {
     "bureau": "上海海事局",
