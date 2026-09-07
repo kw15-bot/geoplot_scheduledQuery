@@ -6214,6 +6214,99 @@
     "title": "船舶试航—荆海航警7/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1a7cdcebd66043bdba05176a81ea3ea8.html?hav=1jWj6r2hy5di2f19hqpkwIUGfJ"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1b3912fce94a44f3992284b9aa7948b2.html": {
+    "bureau": "浙江海事局",
+    "cancels": [],
+    "date": "2026-09-07",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-07T08:50:28+00:00",
+    "groups": [
+      [
+        {
+          "end": 40,
+          "fmt": "DDM_HYPHEN",
+          "lat": 30.311,
+          "lon": 125.397,
+          "raw": "30-18.66N 125-23.82E",
+          "start": 20
+        },
+        {
+          "end": 61,
+          "fmt": "DDM_HYPHEN",
+          "lat": 30.761,
+          "lon": 125.746,
+          "raw": "30-45.66N 125-44.76E",
+          "start": 41
+        },
+        {
+          "end": 82,
+          "fmt": "DDM_HYPHEN",
+          "lat": 30.253,
+          "lon": 126.607,
+          "raw": "30-15.18N 126-36.42E",
+          "start": 62
+        },
+        {
+          "end": 103,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.806,
+          "lon": 126.256,
+          "raw": "29-48.36N 126-15.36E",
+          "start": 83
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 40,
+        "fmt": "DDM_HYPHEN",
+        "lat": 30.311,
+        "lon": 125.397,
+        "raw": "30-18.66N 125-23.82E",
+        "start": 20
+      },
+      {
+        "end": 61,
+        "fmt": "DDM_HYPHEN",
+        "lat": 30.761,
+        "lon": 125.746,
+        "raw": "30-45.66N 125-44.76E",
+        "start": 41
+      },
+      {
+        "end": 82,
+        "fmt": "DDM_HYPHEN",
+        "lat": 30.253,
+        "lon": 126.607,
+        "raw": "30-15.18N 126-36.42E",
+        "start": 62
+      },
+      {
+        "end": 103,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.806,
+        "lon": 126.256,
+        "raw": "29-48.36N 126-15.36E",
+        "start": 83
+      }
+    ],
+    "raw_text": "东海，9月10日1600时至1900时在30-18.66N 125-23.82E，30-45.66N 125-44.76E，30-15.18N 126-36.42E和29-48.36N 126-15.36E诸点连线范围内水域，有火箭残骸掉落，禁止驶入。",
+    "revoked": false,
+    "title": "火箭残骸掉落—浙航警807/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1b3912fce94a44f3992284b9aa7948b2.html?hav=1jWj6r2hy5di2f19htPcDQ5wtV",
+    "validity": {
+      "end": "2026-09-10T11:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月10日1600时至1900时"
+      ],
+      "start": "2026-09-10T08:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1baccb97f467442abb0fcedb75587781.html": {
     "bureau": "上海海事局",
     "cancels": [],
