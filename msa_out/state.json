@@ -20916,11 +20916,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/71e02aeaaee34c6bac102c1559a4ce3c.html": {
     "bureau": "福建海事局",
+    "cancels": [],
     "date": "2026-09-07",
     "detail_fetched": false,
     "first_seen": "2026-09-07T01:50:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "闽航警158/26",
     "points": [],
     "revoked": false,
     "title": "试航作业—闽航警158/26",
