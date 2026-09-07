@@ -23339,11 +23339,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7f9ce1cfdb8e4023ba9d6b5173fef5c3.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-07",
     "detail_fetched": false,
     "first_seen": "2026-09-07T12:40:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警812/26",
     "points": [],
     "revoked": false,
     "title": "虾峙5号灯浮恢复—浙航警812/26",
