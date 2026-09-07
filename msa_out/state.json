@@ -6188,11 +6188,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1a7cdcebd66043bdba05176a81ea3ea8.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-09-07",
     "detail_fetched": false,
     "first_seen": "2026-09-07T06:20:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "荆海航警7/26",
     "points": [],
     "revoked": false,
     "title": "船舶试航—荆海航警7/26",
