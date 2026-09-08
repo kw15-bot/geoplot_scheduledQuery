@@ -9941,6 +9941,8 @@
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-08T06:50:31+00:00",
     "military": true,
     "own_id": "鲁航警750/26",
     "points": [
@@ -17169,6 +17171,18 @@
       "start": "2026-08-05T00:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/58c8070a7fff4cdabba05d3637a6fae3.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-08",
+    "detail_fetched": false,
+    "first_seen": "2026-09-08T06:50:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航行拖带—鲁航警760/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/58c8070a7fff4cdabba05d3637a6fae3.html?hav=1jWj6r2hy5di2gTuGRQThgzi7z"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/58ef3a2b95aa44fb9faf1ea1e093c410.html": {
     "bureau": "长江海事局",
     "cancels": [],
@@ -19332,6 +19346,18 @@
     "revoked": false,
     "title": "6月4日江苏扬子鑫福造船有限公司“鑫福142”拖带—苏航警32/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/61af397702a04380963bf214135657c8.html?hav=1jWj6r2hy0eafghgXIOxG7vZDN"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/61bcfc1758704ae395886655fe3aec10.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-08",
+    "detail_fetched": false,
+    "first_seen": "2026-09-08T06:50:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航行拖带—鲁航警761/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/61bcfc1758704ae395886655fe3aec10.html?hav=1jWj6r2hy5di2gTuGRQThi86Vx"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/61be0d57580a46f38555ff6ee1b29108.html": {
     "bureau": "广东海事局",
