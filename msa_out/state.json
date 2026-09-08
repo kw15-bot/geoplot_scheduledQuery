@@ -6587,6 +6587,18 @@
     "title": "拖带作业—闽航警142/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1c7fe0f06dd7420f8f6ed0eb9d378183.html?hav=1jWj6r2hy3yfgR2em2Kk5MQWsq"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1c81c1535f4a47baa61d0af970fc7522.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-08",
+    "detail_fetched": false,
+    "first_seen": "2026-09-08T10:40:34+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航标动态--平屿灯塔主灯灯器故障—浙航警817/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1c81c1535f4a47baa61d0af970fc7522.html?hav=1jWj6r2hy5di2gTuGWaBeS1VgN"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1c9cb50e667e47128146b32e17ce4ad7.html": {
     "bureau": "上海海事局",
     "cancels": [],
@@ -12193,6 +12205,18 @@
     "revoked": false,
     "title": "水工作业-垚磊102、永丰1666和长鑫工839—鲁航警678/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/44da8bca2818455c936371640a273284.html?hav=1jWj6r2hy3yfmI2t8QUpRf9vhy"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/45ee109023944cd9a03efe2d87da7482.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-08",
+    "detail_fetched": false,
+    "first_seen": "2026-09-08T10:40:34+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航标动态--飞云江 14号灯浮恢复正常—浙航警816/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/45ee109023944cd9a03efe2d87da7482.html?hav=1jWj6r2hy5di2gTuGWaBeS1VY5"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/45f661d974174c46a4d333f86b3b856e.html": {
     "bureau": "海南海事局",
@@ -37627,6 +37651,102 @@
     "revoked": false,
     "title": "水深测量作业—深航警75/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ecfe9018308a4b729f6083a9905bc19c.html?hav=1jWj6r2hy3yfgGnOruBiXC4XZu"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ed8c30e2391f4de998a85959e862663d.html": {
+    "bureau": "浙江海事局",
+    "cancels": [],
+    "date": "2026-09-08",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-08T10:40:34+00:00",
+    "groups": [
+      [
+        {
+          "end": 92,
+          "fmt": "DDM_HYPHEN",
+          "lat": 27.8,
+          "lon": 120.85,
+          "raw": "27-48.00N 120-51.00E",
+          "start": 72
+        },
+        {
+          "end": 113,
+          "fmt": "DDM_HYPHEN",
+          "lat": 27.8,
+          "lon": 120.96666666666667,
+          "raw": "27-48.00N 120-58.00E",
+          "start": 93
+        },
+        {
+          "end": 134,
+          "fmt": "DDM_HYPHEN",
+          "lat": 27.733333333333334,
+          "lon": 120.9,
+          "raw": "27-44.00N 120-54.00E",
+          "start": 114
+        },
+        {
+          "end": 155,
+          "fmt": "DDM_HYPHEN",
+          "lat": 27.733333333333334,
+          "lon": 120.78333333333333,
+          "raw": "27-44.00N 120-47.00E",
+          "start": 135
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 92,
+        "fmt": "DDM_HYPHEN",
+        "lat": 27.8,
+        "lon": 120.85,
+        "raw": "27-48.00N 120-51.00E",
+        "start": 72
+      },
+      {
+        "end": 113,
+        "fmt": "DDM_HYPHEN",
+        "lat": 27.8,
+        "lon": 120.96666666666667,
+        "raw": "27-48.00N 120-58.00E",
+        "start": 93
+      },
+      {
+        "end": 134,
+        "fmt": "DDM_HYPHEN",
+        "lat": 27.733333333333334,
+        "lon": 120.9,
+        "raw": "27-44.00N 120-54.00E",
+        "start": 114
+      },
+      {
+        "end": 155,
+        "fmt": "DDM_HYPHEN",
+        "lat": 27.733333333333334,
+        "lon": 120.78333333333333,
+        "raw": "27-44.00N 120-47.00E",
+        "start": 135
+      }
+    ],
+    "raw_text": "东海，9月14日1400时至1700时、9月15日1030时至1230时、9月16日1130时至1330时、9月17日1300时至1400时，在27-48.00N 120-51.00E、27-48.00N 120-58.00E、27-44.00N 120-54.00E和27-44.00N 120-47.00E诸点连线范围内水域开展军事训练，禁止驶入。",
+    "revoked": false,
+    "title": "温州瓯飞滩以东水域军事训练—浙航警815/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ed8c30e2391f4de998a85959e862663d.html?hav=1jWj6r2hy5di2gTuGWaBeQt7A4",
+    "validity": {
+      "end": "2026-09-17T06:00:00+00:00",
+      "period_count": 4,
+      "raw": [
+        "9月14日1400时至1700时",
+        "9月15日1030时至1230时",
+        "9月16日1130时至1330时",
+        "9月17日1300时至1400时"
+      ],
+      "start": "2026-09-14T06:00:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/edbf84a64bbe498a890d6736e187a58c.html": {
     "bureau": "山东海事局",
