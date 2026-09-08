@@ -27559,11 +27559,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9b8a5d911dfb4a80b6ee13239dee02be.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-08",
     "detail_fetched": false,
     "first_seen": "2026-09-08T14:20:35+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警822/26",
     "points": [],
     "revoked": false,
     "title": "杭州湾水域新建南通至宁波高速铁路杭州湾跨海大桥施工期临时北航道桥区航道交通管制—浙航警822/26",
