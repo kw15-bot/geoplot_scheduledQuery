@@ -3632,11 +3632,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/14709b6164fb4d119c5ea9d3c314a2a0.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-08",
     "detail_fetched": false,
     "first_seen": "2026-09-08T11:10:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警819/26",
     "points": [],
     "revoked": false,
     "title": "DEGAS和PACIFIC VOYAGER轮航经虾峙门外深水航槽—浙航警819/26",
@@ -15726,11 +15728,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5434dcb77ae048aebf57eda0d70199f2.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-08",
     "detail_fetched": false,
     "first_seen": "2026-09-08T11:10:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警818/26",
     "points": [],
     "revoked": false,
     "title": "“坦途凯美浪”轮试航—浙航警818/26",
@@ -20556,6 +20560,7 @@
       ]
     ],
     "military": true,
+    "own_id": "浙航警821/26",
     "points": [
       {
         "end": 40,
@@ -21639,11 +21644,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/71f017c2fb4746e9b9685493cc117d90.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-09-08",
     "detail_fetched": false,
     "first_seen": "2026-09-08T11:10:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "宜航警73/26",
     "points": [],
     "revoked": false,
     "title": "中华人民共和国宜昌海事局航行警告—宜航警73/26",
@@ -37134,11 +37141,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e857dad96232472da6147f939062f8ff.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-08",
     "detail_fetched": false,
     "first_seen": "2026-09-08T11:10:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警820/26",
     "points": [],
     "revoked": false,
     "title": "“东和01”轮试航—浙航警820/26",
