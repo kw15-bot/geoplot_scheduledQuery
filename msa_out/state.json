@@ -8475,6 +8475,99 @@
     "title": "碍航物已打捞清除—桂航警187/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2b4ec26c297348c3aa573d6a9edf0f14.html?hav=1jWj6r2hy3yfgR2emDw5o3hu65"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2b56cecd1a0a4d6282cc8a880b3d6bdd.html": {
+    "bureau": "浙江海事局",
+    "cancels": [],
+    "date": "2026-09-08",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-08T07:30:40+00:00",
+    "groups": [
+      [
+        {
+          "end": 41,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.4245,
+          "lon": 122.17966666666666,
+          "raw": "29-25.47N 122-10.78E",
+          "start": 21
+        },
+        {
+          "end": 64,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.455333333333332,
+          "lon": 122.23033333333333,
+          "raw": "29-27.32N 122-13.82E",
+          "start": 44
+        },
+        {
+          "end": 87,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.722166666666666,
+          "lon": 122.02466666666666,
+          "raw": "29-43.33N 122-01.48E",
+          "start": 67
+        },
+        {
+          "end": 110,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.691666666666666,
+          "lon": 121.973,
+          "raw": "29-41.50N 121-58.38E",
+          "start": 90
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 41,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.4245,
+        "lon": 122.17966666666666,
+        "raw": "29-25.47N 122-10.78E",
+        "start": 21
+      },
+      {
+        "end": 64,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.455333333333332,
+        "lon": 122.23033333333333,
+        "raw": "29-27.32N 122-13.82E",
+        "start": 44
+      },
+      {
+        "end": 87,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.722166666666666,
+        "lon": 122.02466666666666,
+        "raw": "29-43.33N 122-01.48E",
+        "start": 67
+      },
+      {
+        "end": 110,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.691666666666666,
+        "lon": 121.973,
+        "raw": "29-41.50N 121-58.38E",
+        "start": 90
+      }
+    ],
+    "raw_text": "东海，9月9日1000时至1300时在1）29-25.47N 122-10.78E，2）29-27.32N 122-13.82E，3）29-43.33N 122-01.48E，4）29-41.50N 121-58.38E四点连线水域范围内进行实弹射击。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—浙航警813/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2b56cecd1a0a4d6282cc8a880b3d6bdd.html?hav=1jWj6r2hy5di2gTuGSiP4wiMmz",
+    "validity": {
+      "end": "2026-09-09T05:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月9日1000时至1300时"
+      ],
+      "start": "2026-09-09T02:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2b5e6016796a40c49c2274f1f51410ff.html": {
     "bureau": "天津海事局",
     "cancels": [],
