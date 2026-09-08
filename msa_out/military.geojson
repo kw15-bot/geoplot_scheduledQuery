@@ -1291,6 +1291,8 @@
         "valid_raw": [
           "9月10日1600时至1900时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-08T11:10:32+00:00",
         "group_index": 1,
         "kind": "area"
       },
@@ -1456,6 +1458,8 @@
         "valid_raw": [
           "9月8日1100时至1200时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-08T11:10:32+00:00",
         "group_index": 1,
         "kind": "area"
       },
@@ -1501,6 +1505,8 @@
         "valid_raw": [
           "9月8日1100时至1200时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-08T11:10:32+00:00",
         "group_index": 2,
         "kind": "area"
       },
@@ -4582,6 +4588,51 @@
             [
               110.9965,
               19.825
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "军事任务—浙航警821/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/69191b75b566433286511f6031b5e79e.html?hav=1jWj6r2hy5di2gTuGWaBsW1F44",
+        "date": "2026-09-08",
+        "bureau": "浙江海事局",
+        "group_count": 1,
+        "raw_text": "东海，9月9日0900时至1800时，在28-29.82N 121-36.78E、28-29.33N 121-36.90E、28-29.48N 121-37.52E、28-30.17N 121-37.68E四点连线水域范围内执行军事任务。禁止驶入。",
+        "valid_start": "2026-09-09T01:00:00+00:00",
+        "valid_end": "2026-09-09T10:00:00+00:00",
+        "valid_raw": [
+          "9月9日0900时至1800时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.615,
+              28.488833333333332
+            ],
+            [
+              121.62533333333333,
+              28.491333333333333
+            ],
+            [
+              121.628,
+              28.502833333333335
+            ],
+            [
+              121.613,
+              28.497
+            ],
+            [
+              121.615,
+              28.488833333333332
             ]
           ]
         ]

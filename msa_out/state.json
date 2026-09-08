@@ -3630,6 +3630,18 @@
     "title": "科学考察—鲁航警654/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/145a262b8a414269b6485a40e552dc44.html?hav=1jWj6r2hy3yfgMeP16qUJS5z6I"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/14709b6164fb4d119c5ea9d3c314a2a0.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-08",
+    "detail_fetched": false,
+    "first_seen": "2026-09-08T11:10:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "DEGAS和PACIFIC VOYAGER轮航经虾峙门外深水航槽—浙航警819/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/14709b6164fb4d119c5ea9d3c314a2a0.html?hav=1jWj6r2hy5di2gTuGWaBsUsqgB"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/14cb315eee5e48e8b09f90886ad8e206.html": {
     "bureau": "浙江海事局",
     "cancels": [],
@@ -6273,6 +6285,8 @@
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-08T11:10:32+00:00",
     "military": true,
     "own_id": "浙航警807/26",
     "points": [
@@ -6888,6 +6902,8 @@
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-08T11:10:32+00:00",
     "military": true,
     "own_id": "浙航警806/26",
     "points": [
@@ -15708,6 +15724,18 @@
     "title": "人员落水—沪航警644/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/542ada4668b34768ba117d3ffcd677b4.html?hav=1jWj6r2hy3yfgR2egjb9U2AyIL"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5434dcb77ae048aebf57eda0d70199f2.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-08",
+    "detail_fetched": false,
+    "first_seen": "2026-09-08T11:10:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“坦途凯美浪”轮试航—浙航警818/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5434dcb77ae048aebf57eda0d70199f2.html?hav=1jWj6r2hy5di2gTuGWaBsUsqc4"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/54daca086fb2499488e670a2aeeae693.html": {
     "bureau": "浙江海事局",
     "cancels": [],
@@ -20482,6 +20510,99 @@
     "title": "拖带作业—闽航警155/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/68e200503d684b369067e47fdc2e7b8a.html?hav=1jWj6r2hy5di2c5efvo3rU24kJ"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/69191b75b566433286511f6031b5e79e.html": {
+    "bureau": "浙江海事局",
+    "cancels": [],
+    "date": "2026-09-08",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-08T11:10:32+00:00",
+    "groups": [
+      [
+        {
+          "end": 40,
+          "fmt": "DDM_HYPHEN",
+          "lat": 28.497,
+          "lon": 121.613,
+          "raw": "28-29.82N 121-36.78E",
+          "start": 20
+        },
+        {
+          "end": 61,
+          "fmt": "DDM_HYPHEN",
+          "lat": 28.488833333333332,
+          "lon": 121.615,
+          "raw": "28-29.33N 121-36.90E",
+          "start": 41
+        },
+        {
+          "end": 82,
+          "fmt": "DDM_HYPHEN",
+          "lat": 28.491333333333333,
+          "lon": 121.62533333333333,
+          "raw": "28-29.48N 121-37.52E",
+          "start": 62
+        },
+        {
+          "end": 103,
+          "fmt": "DDM_HYPHEN",
+          "lat": 28.502833333333335,
+          "lon": 121.628,
+          "raw": "28-30.17N 121-37.68E",
+          "start": 83
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 40,
+        "fmt": "DDM_HYPHEN",
+        "lat": 28.497,
+        "lon": 121.613,
+        "raw": "28-29.82N 121-36.78E",
+        "start": 20
+      },
+      {
+        "end": 61,
+        "fmt": "DDM_HYPHEN",
+        "lat": 28.488833333333332,
+        "lon": 121.615,
+        "raw": "28-29.33N 121-36.90E",
+        "start": 41
+      },
+      {
+        "end": 82,
+        "fmt": "DDM_HYPHEN",
+        "lat": 28.491333333333333,
+        "lon": 121.62533333333333,
+        "raw": "28-29.48N 121-37.52E",
+        "start": 62
+      },
+      {
+        "end": 103,
+        "fmt": "DDM_HYPHEN",
+        "lat": 28.502833333333335,
+        "lon": 121.628,
+        "raw": "28-30.17N 121-37.68E",
+        "start": 83
+      }
+    ],
+    "raw_text": "东海，9月9日0900时至1800时，在28-29.82N 121-36.78E、28-29.33N 121-36.90E、28-29.48N 121-37.52E、28-30.17N 121-37.68E四点连线水域范围内执行军事任务。禁止驶入。",
+    "revoked": false,
+    "title": "军事任务—浙航警821/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/69191b75b566433286511f6031b5e79e.html?hav=1jWj6r2hy5di2gTuGWaBsW1F44",
+    "validity": {
+      "end": "2026-09-09T10:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月9日0900时至1800时"
+      ],
+      "start": "2026-09-09T01:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/695aa19416fb44b0b2d0ef7fb9da3333.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -21515,6 +21636,18 @@
     "revoked": false,
     "title": "试航作业—闽航警158/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/71e02aeaaee34c6bac102c1559a4ce3c.html?hav=1jWj6r2hy5di2f19cdFsRFgABW"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/71f017c2fb4746e9b9685493cc117d90.html": {
+    "bureau": "长江海事局",
+    "date": "2026-09-08",
+    "detail_fetched": false,
+    "first_seen": "2026-09-08T11:10:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "中华人民共和国宜昌海事局航行警告—宜航警73/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/71f017c2fb4746e9b9685493cc117d90.html?hav=1jWj6r2hy5di2gTuGWaBsUsqoR"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/72537fde62c94fcc96b4f4167435f7bf.html": {
     "bureau": "长江海事局",
@@ -36998,6 +37131,18 @@
     "revoked": false,
     "title": "拖带作业—闽航警115/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e79b9c5c3176495ea3c6a70cb8799c2b.html?hav=1jWj6r2hy2Jd7vvfjadELvvMqW"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e857dad96232472da6147f939062f8ff.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-08",
+    "detail_fetched": false,
+    "first_seen": "2026-09-08T11:10:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“东和01”轮试航—浙航警820/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e857dad96232472da6147f939062f8ff.html?hav=1jWj6r2hy5di2gTuGWaBsUsqkI"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e87615213a934ecc8048267320987b4b.html": {
     "bureau": "广东海事局",
