@@ -14856,6 +14856,7 @@
       ]
     ],
     "military": true,
+    "own_id": "沪航警707/26",
     "points": [
       {
         "end": 42,
@@ -21815,11 +21816,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7455a626f5c44d7bb3c5e24e2ef8d27d.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-08",
     "detail_fetched": false,
     "first_seen": "2026-09-08T12:20:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警706/26",
     "points": [],
     "revoked": false,
     "title": "LNG船舶—沪航警706/26",
@@ -26880,11 +26883,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/95fbea5cf96741b2b3ff84a33752af43.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-08",
     "detail_fetched": false,
     "first_seen": "2026-09-08T12:20:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警708/26",
     "points": [],
     "revoked": false,
     "title": "灯浮移位—沪航警708/26",
