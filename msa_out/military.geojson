@@ -3317,6 +3317,31 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "搜救演习—沪航警707/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4efca11eeb0643348fa46640db7fbf14.html?hav=1jWj6r2hy5di2gTuLgIHjLiZXM",
+        "date": "2026-09-08",
+        "bureau": "上海海事局",
+        "group_count": 1,
+        "raw_text": "长江口，9月9日0730时至1900时，在以31-24.54N/121-48.16E为圆心1海里范围内开展搜救演习，请各航船听从现场巡逻艇指挥，注意航行安全。",
+        "valid_start": "2026-09-08T23:30:00+00:00",
+        "valid_end": "2026-09-09T11:00:00+00:00",
+        "valid_raw": [
+          "9月9日0730时至1900时"
+        ],
+        "group_index": 1,
+        "kind": "point"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.80266666666667,
+          31.409
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "军事活动—鲁航警657/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/50a938b04e7e43499a5505ebe8554a49.html?hav=1jWj6r2hy3yfgPZu87iV2YkIym",
         "date": "2026-08-17",

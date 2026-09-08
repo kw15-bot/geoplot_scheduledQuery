@@ -14834,6 +14834,51 @@
     "title": "拖带“海洋石油947”—冀航警534/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4ef8d8ee60d3483fb9718497c37b75c8.html?hav=1jWj6r2hy3yfgMeP16qUXO8x2i"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4efca11eeb0643348fa46640db7fbf14.html": {
+    "bureau": "上海海事局",
+    "cancels": [],
+    "date": "2026-09-08",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-08T12:20:31+00:00",
+    "groups": [
+      [
+        {
+          "end": 42,
+          "fmt": "DDM_HYPHEN",
+          "lat": 31.409,
+          "lon": 121.80266666666667,
+          "raw": "31-24.54N 121-48.16E",
+          "start": 22
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 42,
+        "fmt": "DDM_HYPHEN",
+        "lat": 31.409,
+        "lon": 121.80266666666667,
+        "raw": "31-24.54N 121-48.16E",
+        "start": 22
+      }
+    ],
+    "raw_text": "长江口，9月9日0730时至1900时，在以31-24.54N/121-48.16E为圆心1海里范围内开展搜救演习，请各航船听从现场巡逻艇指挥，注意航行安全。",
+    "revoked": false,
+    "title": "搜救演习—沪航警707/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4efca11eeb0643348fa46640db7fbf14.html?hav=1jWj6r2hy5di2gTuLgIHjLiZXM",
+    "validity": {
+      "end": "2026-09-09T11:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月9日0730时至1900时"
+      ],
+      "start": "2026-09-08T23:30:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4f5440591a1648b59e7c357461302e3f.html": {
     "bureau": "浙江海事局",
     "cancels": [],
@@ -21768,6 +21813,18 @@
     "title": "LNG船舶—沪航警567/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/740780f67a4b4a76a6b70ab9ea13efbf.html?hav=1jWj6r2hy2JdJztOp8gT9CCzqc"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7455a626f5c44d7bb3c5e24e2ef8d27d.html": {
+    "bureau": "上海海事局",
+    "date": "2026-09-08",
+    "detail_fetched": false,
+    "first_seen": "2026-09-08T12:20:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "LNG船舶—沪航警706/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7455a626f5c44d7bb3c5e24e2ef8d27d.html?hav=1jWj6r2hy5di2gTuLgIHjLiZP7"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/749327080c8049e18b302a601805d7d7.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -26820,6 +26877,18 @@
     "revoked": false,
     "title": "拖带作业—粤航警554/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/95c8435c0ad14408b28985bd218f9439.html?hav=1jWj6r2hy3yfgGnOs1vHX1qgMd"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/95fbea5cf96741b2b3ff84a33752af43.html": {
+    "bureau": "上海海事局",
+    "date": "2026-09-08",
+    "detail_fetched": false,
+    "first_seen": "2026-09-08T12:20:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "灯浮移位—沪航警708/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/95fbea5cf96741b2b3ff84a33752af43.html?hav=1jWj6r2hy5di2gTuLgIHjLiZfd"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/96481f50aaa344a7b810e01c905efb91.html": {
     "bureau": "河北海事局",
