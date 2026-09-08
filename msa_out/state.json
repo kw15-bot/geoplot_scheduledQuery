@@ -6589,11 +6589,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1c81c1535f4a47baa61d0af970fc7522.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-08",
     "detail_fetched": false,
     "first_seen": "2026-09-08T10:40:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警817/26",
     "points": [],
     "revoked": false,
     "title": "航标动态--平屿灯塔主灯灯器故障—浙航警817/26",
@@ -12208,11 +12210,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/45ee109023944cd9a03efe2d87da7482.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-08",
     "detail_fetched": false,
     "first_seen": "2026-09-08T10:40:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警816/26",
     "points": [],
     "revoked": false,
     "title": "航标动态--飞云江 14号灯浮恢复正常—浙航警816/26",
@@ -37698,6 +37702,7 @@
       ]
     ],
     "military": true,
+    "own_id": "浙航警815/26",
     "points": [
       {
         "end": 92,
