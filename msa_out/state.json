@@ -10454,11 +10454,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3bd7b4870b8e4cf8b2d24e5c0bd8554d.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T12:00:48+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警824/26",
     "points": [],
     "revoked": false,
     "title": "“晟洲3”轮试航—浙航警824/26",
