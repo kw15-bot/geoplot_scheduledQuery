@@ -35433,11 +35433,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cf4209fd17084fb98c76a5edca2dfb13.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T11:20:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警771/26",
     "points": [],
     "revoked": false,
     "title": "寰宇七号轮拖带三航工9轮—鲁航警771/26",
