@@ -17639,11 +17639,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/59cd49ebefaf4f5cb80c50c755df322e.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T07:50:33+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警604/26",
     "points": [],
     "revoked": false,
     "title": "潜水作业—冀航警604/26",
