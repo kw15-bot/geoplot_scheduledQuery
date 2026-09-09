@@ -3016,11 +3016,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0e24ddb874c042e1aa832dab4586b41b.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T08:40:38+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警605/26",
     "points": [],
     "revoked": false,
     "title": "水下检验—冀航警605/26",
@@ -6839,11 +6841,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f18769b679646cb828e99600ab7d329.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T08:40:38+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警606/26",
     "points": [],
     "revoked": false,
     "title": "拖带“中天068”—冀航警606/26",
@@ -31129,6 +31133,18 @@
     "revoked": false,
     "title": "大西寨沉2号灯浮已恢复正常—浙航警759/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b7d46d8f8c9e468aad72f9ac91d5591b.html?hav=1jWj6r2hy3yfmI2t8QUpWIPz8v"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b7eceb892fce4f4db11794c9b51fc63f.html": {
+    "bureau": "江苏海事局",
+    "date": "2026-09-09",
+    "detail_fetched": false,
+    "first_seen": "2026-09-09T08:50:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "试航船舶“南通川崎457”轮航行警告—苏航警57/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b7eceb892fce4f4db11794c9b51fc63f.html?hav=1jWj6r2hy5di2hwep4b3DfU37r"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b82564a77fdd492f88171dc0667e25b8.html": {
     "bureau": "福建海事局",
