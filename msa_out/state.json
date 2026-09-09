@@ -25773,6 +25773,7 @@
       ]
     ],
     "military": true,
+    "own_id": "辽航警380/26",
     "points": [
       {
         "end": 46,
@@ -33824,11 +33825,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c5f44ce8ac44417fb315c8b210c434bd.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T06:40:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警641/26",
     "points": [],
     "revoked": false,
     "title": "“勇敢的男人”轮船舶试航—粤航警641/26",
