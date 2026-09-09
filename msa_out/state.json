@@ -10228,7 +10228,7 @@
     "raw_text": "渤海，9月7日至10日，9月12日至21日，在39-04.75N 121-19.92E、39-02.83N 121-21.72E、38-59.17N 121-17.03E、39-00.98N 121-14.87E各点连线水域内进行实弹射击。9月11日在39-06.25N 121-18.50E、39-07.87N 121-21.23E、39-03.43N 121-25.45E、39-01.83N 121-22.72E各点连线水域内进行实弹射击。禁止驶入。",
     "revoked": true,
     "revoked_by": [
-      "实弹射击-渤海—鲁航警769/26"
+      "鲁航警769/26"
     ],
     "title": "实弹射击-渤海—鲁航警750/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/38aba7d40f2342f8af307bb0bb047653.html?hav=1jWj6r2hy5di2acu28vOGssbYs",
@@ -11071,6 +11071,7 @@
       ]
     ],
     "military": true,
+    "own_id": "鲁航警769/26",
     "points": [
       {
         "end": 43,
@@ -12513,6 +12514,18 @@
     "revoked": false,
     "title": "岱油1号灯浮现已恢复正常—浙航警763/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/437febea389a4b84953653067a0476ab.html?hav=1jWj6r2hy3yfmI2t8QUpWJYNrW"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/43b0f6c523a2445787d5c800e7f5f624.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-09",
+    "detail_fetched": false,
+    "first_seen": "2026-09-09T09:50:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "船舶试航——招商309—鲁航警770/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/43b0f6c523a2445787d5c800e7f5f624.html?hav=1jWj6r2hy5di2hwep5sykCrDuL"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/43bb99a17a5d41bea213c08fd6c217aa.html": {
     "bureau": "河北海事局",
@@ -16021,11 +16034,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/52dfc02995394286a37d1202f8d554d6.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T09:40:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警767/26",
     "points": [],
     "revoked": false,
     "title": "水工作业-渤海—鲁航警767/26",
@@ -20019,11 +20034,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/616e009e9bc84f31bbbc49c3e6ac0a4f.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T09:40:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警766/26",
     "points": [],
     "revoked": false,
     "title": "水工作业-渤海—鲁航警766/26",
@@ -20209,11 +20226,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/62eb1116c18d403b9c846ebe4604f154.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T09:40:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警768/26",
     "points": [],
     "revoked": false,
     "title": "水工作业-勘探409和滨海66—鲁航警768/26",
@@ -26989,11 +27008,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b7a4187f9e8463a96859d0db0a30e88.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T09:40:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警765/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业-德滨拖带津航浚407—鲁航警765/26",
@@ -39966,6 +39987,18 @@
     "revoked": false,
     "title": "船舶拖带——交工3拖带半潜驳2—鲁航警686/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f30b3cc5909d488196f7a5729084f8c6.html?hav=1jWj6r2hy3yfmJVdh6FG0YB33b"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f331ebcec055452e908a55bdfc3eafc9.html": {
+    "bureau": "长江海事局",
+    "date": "2026-09-09",
+    "detail_fetched": false,
+    "first_seen": "2026-09-09T09:50:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "中华人民共和国宜昌海事局航行警告—宜航警74/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f331ebcec055452e908a55bdfc3eafc9.html?hav=1jWj6r2hy5di2hwep5syk9S2LY"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f34432a2ff714bfbae0cc5f9643f719c.html": {
     "bureau": "长江海事局",
