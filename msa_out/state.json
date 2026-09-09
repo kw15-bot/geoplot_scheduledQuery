@@ -2946,11 +2946,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0db265a2909d4f8cb3160fe4a818b4c8.html": {
     "bureau": "福建海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T04:20:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "闽航警161/26",
     "points": [],
     "revoked": false,
     "title": "大风预警—闽航警161/26",
