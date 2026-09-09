@@ -33669,11 +33669,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ca296b1a3996478ba206244d6908bb2a.html": {
     "bureau": "江苏海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T05:10:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "苏航警56/26",
     "points": [],
     "revoked": false,
     "title": "9月10日张靖皋长江大桥南航道桥先导索过江施工作业—苏航警56/26",
