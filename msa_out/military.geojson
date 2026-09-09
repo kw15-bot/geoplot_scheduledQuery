@@ -7096,6 +7096,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "温州以东海域军事活动—浙航警825/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b6879faec45d4a959b0b9633aa8e949d.html?hav=1jWj6r2hy5di2hweuIAw1RokKW",
+        "date": "2026-09-09",
+        "bureau": "浙江海事局",
+        "group_count": 1,
+        "raw_text": "东海，9月10日1800时至9月12日1800时，在27-32.00N 121-55.00E、27-32.00N 123-25.00E、28-00.00N 123-25.00E和28-00.00N 122-15.00E诸点连线范围内海域开展实弹射击训练，禁止驶入。",
+        "valid_start": "2026-09-10T10:00:00+00:00",
+        "valid_end": "2026-09-12T10:00:00+00:00",
+        "valid_raw": [
+          "9月10日1800时至9月12日1800时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.91666666666667,
+              27.533333333333335
+            ],
+            [
+              123.41666666666667,
+              27.533333333333335
+            ],
+            [
+              123.41666666666667,
+              28.0
+            ],
+            [
+              122.25,
+              28.0
+            ],
+            [
+              121.91666666666667,
+              27.533333333333335
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "军事演练—浙航警718/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bae7d75fef224272a3fe5d89011427d9.html?hav=1jWj6r2hy3yfgGnOs4V8VOnNgM",
         "date": "2026-08-11",

@@ -31437,6 +31437,99 @@
     "title": "中华人民共和国宜昌海事局航行警告—宜航警58/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b67f7ed3d3594f7690eb9a7de2e6d6a0.html?hav=1jWj6r2hy2JdK7D9Whkklbhh3u"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b6879faec45d4a959b0b9633aa8e949d.html": {
+    "bureau": "浙江海事局",
+    "cancels": [],
+    "date": "2026-09-09",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-09T13:50:32+00:00",
+    "groups": [
+      [
+        {
+          "end": 46,
+          "fmt": "DDM_HYPHEN",
+          "lat": 27.533333333333335,
+          "lon": 121.91666666666667,
+          "raw": "27-32.00N 121-55.00E",
+          "start": 26
+        },
+        {
+          "end": 67,
+          "fmt": "DDM_HYPHEN",
+          "lat": 27.533333333333335,
+          "lon": 123.41666666666667,
+          "raw": "27-32.00N 123-25.00E",
+          "start": 47
+        },
+        {
+          "end": 88,
+          "fmt": "DDM_HYPHEN",
+          "lat": 28.0,
+          "lon": 123.41666666666667,
+          "raw": "28-00.00N 123-25.00E",
+          "start": 68
+        },
+        {
+          "end": 109,
+          "fmt": "DDM_HYPHEN",
+          "lat": 28.0,
+          "lon": 122.25,
+          "raw": "28-00.00N 122-15.00E",
+          "start": 89
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 46,
+        "fmt": "DDM_HYPHEN",
+        "lat": 27.533333333333335,
+        "lon": 121.91666666666667,
+        "raw": "27-32.00N 121-55.00E",
+        "start": 26
+      },
+      {
+        "end": 67,
+        "fmt": "DDM_HYPHEN",
+        "lat": 27.533333333333335,
+        "lon": 123.41666666666667,
+        "raw": "27-32.00N 123-25.00E",
+        "start": 47
+      },
+      {
+        "end": 88,
+        "fmt": "DDM_HYPHEN",
+        "lat": 28.0,
+        "lon": 123.41666666666667,
+        "raw": "28-00.00N 123-25.00E",
+        "start": 68
+      },
+      {
+        "end": 109,
+        "fmt": "DDM_HYPHEN",
+        "lat": 28.0,
+        "lon": 122.25,
+        "raw": "28-00.00N 122-15.00E",
+        "start": 89
+      }
+    ],
+    "raw_text": "东海，9月10日1800时至9月12日1800时，在27-32.00N 121-55.00E、27-32.00N 123-25.00E、28-00.00N 123-25.00E和28-00.00N 122-15.00E诸点连线范围内海域开展实弹射击训练，禁止驶入。",
+    "revoked": false,
+    "title": "温州以东海域军事活动—浙航警825/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b6879faec45d4a959b0b9633aa8e949d.html?hav=1jWj6r2hy5di2hweuIAw1RokKW",
+    "validity": {
+      "end": "2026-09-12T10:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月10日1800时至9月12日1800时"
+      ],
+      "start": "2026-09-10T10:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b6abeef0073048c8be37b80a56223648.html": {
     "bureau": "浙江海事局",
     "cancels": [],
