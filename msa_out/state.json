@@ -17389,11 +17389,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/57947b3f7a404375aea2a27709702163.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T09:01:21+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警381/26",
     "points": [],
     "revoked": false,
     "title": "灯浮标灯光熄灭—辽航警381/26",
