@@ -10226,7 +10226,10 @@
       }
     ],
     "raw_text": "渤海，9月7日至10日，9月12日至21日，在39-04.75N 121-19.92E、39-02.83N 121-21.72E、38-59.17N 121-17.03E、39-00.98N 121-14.87E各点连线水域内进行实弹射击。9月11日在39-06.25N 121-18.50E、39-07.87N 121-21.23E、39-03.43N 121-25.45E、39-01.83N 121-22.72E各点连线水域内进行实弹射击。禁止驶入。",
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "实弹射击-渤海—鲁航警769/26"
+    ],
     "title": "实弹射击-渤海—鲁航警750/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/38aba7d40f2342f8af307bb0bb047653.html?hav=1jWj6r2hy5di2acu28vOGssbYs",
     "validity": {
@@ -10950,6 +10953,235 @@
         "9月6日0000时至2400时"
       ],
       "start": "2026-09-05T16:00:00+00:00"
+    }
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4053ca0fe65744ab874269e86d6382dc.html": {
+    "bureau": "山东海事局",
+    "cancels": [
+      "鲁航警750/26"
+    ],
+    "date": "2026-09-09",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-09T09:40:30+00:00",
+    "groups": [
+      [
+        {
+          "end": 43,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.079166666666666,
+          "lon": 121.332,
+          "raw": "39-04.75N 121-19.92E",
+          "start": 23
+        },
+        {
+          "end": 64,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.04716666666667,
+          "lon": 121.362,
+          "raw": "39-02.83N 121-21.72E",
+          "start": 44
+        },
+        {
+          "end": 85,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.98616666666667,
+          "lon": 121.28383333333333,
+          "raw": "38-59.17N 121-17.03E",
+          "start": 65
+        },
+        {
+          "end": 106,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.016333333333336,
+          "lon": 121.24783333333333,
+          "raw": "39-00.98N 121-14.87E",
+          "start": 86
+        }
+      ],
+      [
+        {
+          "end": 158,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.12616666666667,
+          "lon": 121.2895,
+          "raw": "39-07.57N 121-17.37E",
+          "start": 138
+        },
+        {
+          "end": 179,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.1725,
+          "lon": 121.373,
+          "raw": "39-10.35N 121-22.38E",
+          "start": 159
+        },
+        {
+          "end": 200,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.0705,
+          "lon": 121.44216666666667,
+          "raw": "39-04.23N 121-26.53E",
+          "start": 180
+        },
+        {
+          "end": 221,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.042833333333334,
+          "lon": 121.37883333333333,
+          "raw": "39-02.57N 121-22.73E",
+          "start": 201
+        }
+      ],
+      [
+        {
+          "end": 273,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.023666666666664,
+          "lon": 121.19116666666666,
+          "raw": "39-01.42N 121-11.47E",
+          "start": 253
+        },
+        {
+          "end": 294,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.0925,
+          "lon": 121.24033333333334,
+          "raw": "39-05.55N 121-14.42E",
+          "start": 274
+        },
+        {
+          "end": 315,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.0325,
+          "lon": 121.34083333333334,
+          "raw": "39-01.95N 121-20.45E",
+          "start": 295
+        },
+        {
+          "end": 336,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.00116666666667,
+          "lon": 121.32166666666667,
+          "raw": "39-00.07N 121-19.30E",
+          "start": 316
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 43,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.079166666666666,
+        "lon": 121.332,
+        "raw": "39-04.75N 121-19.92E",
+        "start": 23
+      },
+      {
+        "end": 64,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.04716666666667,
+        "lon": 121.362,
+        "raw": "39-02.83N 121-21.72E",
+        "start": 44
+      },
+      {
+        "end": 85,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.98616666666667,
+        "lon": 121.28383333333333,
+        "raw": "38-59.17N 121-17.03E",
+        "start": 65
+      },
+      {
+        "end": 106,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.016333333333336,
+        "lon": 121.24783333333333,
+        "raw": "39-00.98N 121-14.87E",
+        "start": 86
+      },
+      {
+        "end": 158,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.12616666666667,
+        "lon": 121.2895,
+        "raw": "39-07.57N 121-17.37E",
+        "start": 138
+      },
+      {
+        "end": 179,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.1725,
+        "lon": 121.373,
+        "raw": "39-10.35N 121-22.38E",
+        "start": 159
+      },
+      {
+        "end": 200,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.0705,
+        "lon": 121.44216666666667,
+        "raw": "39-04.23N 121-26.53E",
+        "start": 180
+      },
+      {
+        "end": 221,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.042833333333334,
+        "lon": 121.37883333333333,
+        "raw": "39-02.57N 121-22.73E",
+        "start": 201
+      },
+      {
+        "end": 273,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.023666666666664,
+        "lon": 121.19116666666666,
+        "raw": "39-01.42N 121-11.47E",
+        "start": 253
+      },
+      {
+        "end": 294,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.0925,
+        "lon": 121.24033333333334,
+        "raw": "39-05.55N 121-14.42E",
+        "start": 274
+      },
+      {
+        "end": 315,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.0325,
+        "lon": 121.34083333333334,
+        "raw": "39-01.95N 121-20.45E",
+        "start": 295
+      },
+      {
+        "end": 336,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.00116666666667,
+        "lon": 121.32166666666667,
+        "raw": "39-00.07N 121-19.30E",
+        "start": 316
+      }
+    ],
+    "raw_text": "渤海，9月9日至10日，9月12日至21日，在39-04.75N 121-19.92E、39-02.83N 121-21.72E、38-59.17N 121-17.03E、39-00.98N 121-14.87E各点连线水域内进行实弹射击。9月11日0600时至0800时，在39-07.57N 121-17.37E、39-10.35N 121-22.38E、39-04.23N 121-26.53E、39-02.57N 121-22.73E各点连线水域内进行实弹射击。9月11日0800时至1100时，在39-01.42N 121-11.47E、39-05.55N 121-14.42E、39-01.95N 121-20.45E、39-00.07N 121-19.30E各点连线水域内进行实弹射击。禁止驶入。撤销鲁航警750/26。",
+    "revoked": false,
+    "title": "实弹射击-渤海—鲁航警769/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4053ca0fe65744ab874269e86d6382dc.html?hav=1jWj6r2hy5di2hwep5syfReOQv",
+    "validity": {
+      "end": "2026-09-21T16:00:00+00:00",
+      "period_count": 3,
+      "raw": [
+        "9月11日0600时至0800时",
+        "9月11日0800时至1100时",
+        "9月12日至21日"
+      ],
+      "start": "2026-09-10T22:00:00+00:00"
     }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/405622cc6e5d485d97979d82cfca5d6f.html": {
@@ -15787,6 +16019,18 @@
     "title": "灯浮移位—沪航警630/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5246551cc4c54a4c92ad2fcaf86bf341.html?hav=1jWj6r2hy3yfgMeP188PgXb5DK"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/52dfc02995394286a37d1202f8d554d6.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-09",
+    "detail_fetched": false,
+    "first_seen": "2026-09-09T09:40:30+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水工作业-渤海—鲁航警767/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/52dfc02995394286a37d1202f8d554d6.html?hav=1jWj6r2hy5di2hwep5syfQW02v"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/53613fbdce124f53817d7f2d9907e14d.html": {
     "bureau": "河北海事局",
     "cancels": [],
@@ -19773,6 +20017,18 @@
       "start": "2026-08-27T04:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/616e009e9bc84f31bbbc49c3e6ac0a4f.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-09",
+    "detail_fetched": false,
+    "first_seen": "2026-09-09T09:40:30+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水工作业-渤海—鲁航警766/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/616e009e9bc84f31bbbc49c3e6ac0a4f.html?hav=1jWj6r2hy5di2hwep5syfQVzym"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/61af397702a04380963bf214135657c8.html": {
     "bureau": "江苏海事局",
     "cancels": [],
@@ -19950,6 +20206,18 @@
     "revoked": false,
     "title": "关于“振泰拖2009”轮、“振泰拖1”轮拖带“MDM3604”轮的航行警告—芜航警37/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6266f8641b154de2b353cccfb4119a02.html?hav=1jWj6r2hy3yfmI2t8QUpaxwpx3"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/62eb1116c18d403b9c846ebe4604f154.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-09",
+    "detail_fetched": false,
+    "first_seen": "2026-09-09T09:40:30+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水工作业-勘探409和滨海66—鲁航警768/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/62eb1116c18d403b9c846ebe4604f154.html?hav=1jWj6r2hy5di2hwep5syfReOMl"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/63282bc1999f4507986af507b556f225.html": {
     "bureau": "上海海事局",
@@ -26718,6 +26986,18 @@
     "revoked": false,
     "title": "LNG船舶—沪航警688/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b75d9d92f93482fb03a5c80e7e7938d.html?hav=1jWj6r2hy3yfsMDsWFiwey4WyH"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b7a4187f9e8463a96859d0db0a30e88.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-09",
+    "detail_fetched": false,
+    "first_seen": "2026-09-09T09:40:30+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业-德滨拖带津航浚407—鲁航警765/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b7a4187f9e8463a96859d0db0a30e88.html?hav=1jWj6r2hy5di2hwep5syfPNbOS"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b8683955de741d19a640fd4eee422de.html": {
     "bureau": "上海海事局",
