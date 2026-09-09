@@ -29153,11 +29153,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ab46cd41fa73448f867e0ade3e6871f5.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T01:20:43+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警640/26",
     "points": [],
     "revoked": false,
     "title": "“南洋新船267”轮船舶试航—粤航警640/26",
