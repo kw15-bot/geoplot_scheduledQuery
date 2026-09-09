@@ -7821,11 +7821,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/23927f1d1af9454fb371454be57aad15.html": {
     "bureau": "天津海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T02:20:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "津航警302/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—津航警302/26",
@@ -12462,6 +12464,18 @@
     "revoked": false,
     "title": "中华人民共和国宜昌海事局航行警告—宜航警60/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/46d89deac1904ea1abe9aea7efdd0d22.html?hav=1jWj6r2hy2JdKD49qS0vhU0JTX"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/46e81c65a3b74a2ca4d1573677fcd7af.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-09",
+    "detail_fetched": false,
+    "first_seen": "2026-09-09T02:30:39+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警601/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/46e81c65a3b74a2ca4d1573677fcd7af.html?hav=1jWj6r2hy5di2hweowrTzdlPVw"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4702130105424148b64e4dbc3bb4a415.html": {
     "bureau": "长江海事局",
@@ -38199,6 +38213,83 @@
     "revoked": false,
     "title": "拖带作业—深航警40/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ee11900d75354cf691647a703e1c3b31.html?hav=1jWj6r2hxxKVrC2Rqk6RRkQvvL"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ee3deea82d5b435d8bec6d2ec98ea1c7.html": {
+    "bureau": "河北海事局",
+    "cancels": [],
+    "date": "2026-09-09",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-09T02:30:39+00:00",
+    "groups": [
+      [
+        {
+          "end": 51,
+          "fmt": "DMS_PREFIX",
+          "lat": 39.40972222222222,
+          "lon": 119.22888888888889,
+          "raw": "N 39°24'35\" E 119°13'44\"",
+          "start": 27
+        },
+        {
+          "end": 124,
+          "fmt": "DMS_PREFIX",
+          "lat": 39.403888888888886,
+          "lon": 119.47333333333333,
+          "raw": "N 39°24'14\" E 119°28'24\"",
+          "start": 100
+        },
+        {
+          "end": 149,
+          "fmt": "DMS_PREFIX",
+          "lat": 39.22027777777778,
+          "lon": 119.1975,
+          "raw": "N 39°13'13\" E 119°11'51\"",
+          "start": 125
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 51,
+        "fmt": "DMS_PREFIX",
+        "lat": 39.40972222222222,
+        "lon": 119.22888888888889,
+        "raw": "N 39°24'35\" E 119°13'44\"",
+        "start": 27
+      },
+      {
+        "end": 124,
+        "fmt": "DMS_PREFIX",
+        "lat": 39.403888888888886,
+        "lon": 119.47333333333333,
+        "raw": "N 39°24'14\" E 119°28'24\"",
+        "start": 100
+      },
+      {
+        "end": 149,
+        "fmt": "DMS_PREFIX",
+        "lat": 39.22027777777778,
+        "lon": 119.1975,
+        "raw": "N 39°13'13\" E 119°11'51\"",
+        "start": 125
+      }
+    ],
+    "raw_text": "渤海，9月11日0000时至9月12日2400时， 以N 39°24′35″、E 119°13′44″为顶点，正东方向至正南偏西6°、圆心角为96°的扇形区域。该扇形区域所对应圆弧的2个端点坐标分别为N 39°24′14″、E 119°28′24″和N 39°13′13″、E 119°11′51″。该扇形区域内进行实弹射击活动。禁止驶入。",
+    "revoked": false,
+    "title": "军事任务—冀航警600/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ee3deea82d5b435d8bec6d2ec98ea1c7.html?hav=1jWj6r2hy5di2hweowrTzdlPVq",
+    "validity": {
+      "end": "2026-09-12T16:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月11日0000时至9月12日2400时"
+      ],
+      "start": "2026-09-10T16:00:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/eeb1adc3d1144264b09a06e1c4ba3cff.html": {
     "bureau": "浙江海事局",
