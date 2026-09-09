@@ -14092,11 +14092,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/49102a7e846b4fadbaa0d13701101e51.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T03:30:38+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警603/26",
     "points": [],
     "revoked": false,
     "title": "水下检验—冀航警603/26",
@@ -30305,11 +30307,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b7a223c4cc94467da4b1d417f3bcc6d2.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-09-09",
     "detail_fetched": false,
     "first_seen": "2026-09-09T03:30:38+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警602/26",
     "points": [],
     "revoked": false,
     "title": "水下检验—冀航警602/26",
@@ -36660,6 +36664,7 @@
       ]
     ],
     "military": true,
+    "own_id": "辽航警378/26",
     "points": [
       {
         "end": 40,
