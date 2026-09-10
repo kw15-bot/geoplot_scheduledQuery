@@ -30214,11 +30214,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a9535915244e4588980aa1ed4b2cf75d.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-10",
     "detail_fetched": false,
     "first_seen": "2026-09-10T03:30:40+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警774/26",
     "points": [],
     "revoked": false,
     "title": "前湾港池疏浚—鲁航警774/26",
