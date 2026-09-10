@@ -17584,6 +17584,7 @@
       ]
     ],
     "military": true,
+    "own_id": "辽航警383/26",
     "points": [
       {
         "end": 60,
@@ -18432,11 +18433,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5c1cdae5c5a4466da79c69415c9e0aba.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-09-10",
     "detail_fetched": false,
     "first_seen": "2026-09-10T07:10:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "荆海航警8/26",
     "points": [],
     "revoked": false,
     "title": "船舶试航—荆海航警8/26",
@@ -27196,11 +27199,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b74ac61da134d09aaa386b9f8b07e90.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-09-10",
     "detail_fetched": false,
     "first_seen": "2026-09-10T07:10:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警607/26",
     "points": [],
     "revoked": false,
     "title": "水下检验—冀航警607/26",
