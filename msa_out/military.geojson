@@ -4078,6 +4078,52 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "军事任务—辽航警383/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/56303e913ae34b9ea077ba3d9805c170.html?hav=1jWj6r2hy5di8XU8coIdgwUnwp",
+        "date": "2026-09-10",
+        "bureau": "辽宁海事局",
+        "group_count": 1,
+        "raw_text": "黄海北部，自9月15日1030时至1400时、9月16日1200时至1400时在38-45.50N 122-08.50E、38-51.00N 122-08.50E、38-51.00N 122-15.50E、38-45.50N 122-15.50E诸点连线范围内执行军事任务。禁止驶入。",
+        "valid_start": "2026-09-15T02:30:00+00:00",
+        "valid_end": "2026-09-16T06:00:00+00:00",
+        "valid_raw": [
+          "9月15日1030时至1400时",
+          "9月16日1200时至1400时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              122.14166666666667,
+              38.75833333333333
+            ],
+            [
+              122.25833333333334,
+              38.75833333333333
+            ],
+            [
+              122.25833333333334,
+              38.85
+            ],
+            [
+              122.14166666666667,
+              38.85
+            ],
+            [
+              122.14166666666667,
+              38.75833333333333
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "实弹射击-芝罘湾港区—鲁航警628/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/58b767f5292a421a9844fdef3195e25c.html?hav=1jWj6r2hy3yfaH0fA4uxBJaL1q",
         "date": "2026-08-03",
