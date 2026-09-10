@@ -3658,6 +3658,18 @@
     "title": "水深测量—辽航警364/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/13a1efa5633f4adb9298c3975be742ed.html?hav=1jWj6r2hy3yfsMDsWER1D9dOks"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/13aea543884b4215b3ddcea816e26ee7.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-10",
+    "detail_fetched": false,
+    "first_seen": "2026-09-10T13:20:33+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "ELLINIS和MINERAL POLSKA轮航经虾峙门外深水航槽—浙航警831/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/13aea543884b4215b3ddcea816e26ee7.html?hav=1jWj6r2hy5di8XU8i3ARwe50Hy"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/13beafb152284498a8a7c02b6d6dc658.html": {
     "bureau": "山东海事局",
     "cancels": [],
@@ -6852,6 +6864,99 @@
     "revoked": false,
     "title": "船舶试航—荆海航警6/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1dfba6505b0d42f28da41359b786780d.html?hav=1jWj6r2hy3yfgPZuDT1x4RLE99"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1e28e4500cf24907b210b9619cfc448d.html": {
+    "bureau": "浙江海事局",
+    "cancels": [],
+    "date": "2026-09-10",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-10T13:20:33+00:00",
+    "groups": [
+      [
+        {
+          "end": 54,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.4245,
+          "lon": 122.17966666666666,
+          "raw": "29-25.47N 122-10.78E",
+          "start": 34
+        },
+        {
+          "end": 77,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.455333333333332,
+          "lon": 122.23033333333333,
+          "raw": "29-27.32N 122-13.82E",
+          "start": 57
+        },
+        {
+          "end": 100,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.647833333333335,
+          "lon": 122.07716666666667,
+          "raw": "29-38.87N 122-04.63E",
+          "start": 80
+        },
+        {
+          "end": 123,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.616666666666667,
+          "lon": 122.02616666666667,
+          "raw": "29-37.00N 122-01.57E",
+          "start": 103
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 54,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.4245,
+        "lon": 122.17966666666666,
+        "raw": "29-25.47N 122-10.78E",
+        "start": 34
+      },
+      {
+        "end": 77,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.455333333333332,
+        "lon": 122.23033333333333,
+        "raw": "29-27.32N 122-13.82E",
+        "start": 57
+      },
+      {
+        "end": 100,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.647833333333335,
+        "lon": 122.07716666666667,
+        "raw": "29-38.87N 122-04.63E",
+        "start": 80
+      },
+      {
+        "end": 123,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.616666666666667,
+        "lon": 122.02616666666667,
+        "raw": "29-37.00N 122-01.57E",
+        "start": 103
+      }
+    ],
+    "raw_text": "东海，9月11日0630时至1000时和1300时至1600时在1）29-25.47N 122-10.78E，2）29-27.32N 122-13.82E，3）29-38.87N 122-04.63E，4）29-37.00N 122-01.57E四点连线水域范围内进行实弹射击。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—浙航警832/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1e28e4500cf24907b210b9619cfc448d.html?hav=1jWj6r2hy5di8XU8i3ARwe50I3",
+    "validity": {
+      "end": "2026-09-11T02:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月11日0630时至1000时"
+      ],
+      "start": "2026-09-10T22:30:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1e4fb324aeb647bd915d934ab6e31166.html": {
     "bureau": "山东海事局",
@@ -18008,6 +18113,18 @@
     "revoked": false,
     "title": "防波堤水下检测—冀航警465/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/58032ca0cbbf44efb0d3d26642637a3f.html?hav=1jWj6r2hy2JdEALv1DNXFkx6Tp"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/58339b395a85442baf261b22c91ef278.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-10",
+    "detail_fetched": false,
+    "first_seen": "2026-09-10T13:20:33+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“宏润冷7”轮试航—浙航警830/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/58339b395a85442baf261b22c91ef278.html?hav=1jWj6r2hy5di8XU8i3ARwe50Dx"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/583e7a1865614adc987b6316bd503dc0.html": {
     "bureau": "天津海事局",
