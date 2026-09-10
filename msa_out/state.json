@@ -31688,11 +31688,15 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b38990e19401493a93fd9265edcc7fd7.html": {
     "bureau": "浙江海事局",
+    "cancels": [
+      "浙航警815/26"
+    ],
     "date": "2026-09-10",
     "detail_fetched": false,
     "first_seen": "2026-09-10T11:40:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警829/26",
     "points": [],
     "revoked": false,
     "title": "撤销浙航警815/26—浙航警829/26",
@@ -40051,7 +40055,10 @@
       }
     ],
     "raw_text": "东海，9月14日1400时至1700时、9月15日1030时至1230时、9月16日1130时至1330时、9月17日1300时至1400时，在27-48.00N 120-51.00E、27-48.00N 120-58.00E、27-44.00N 120-54.00E和27-44.00N 120-47.00E诸点连线范围内水域开展军事训练，禁止驶入。",
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "浙航警829/26"
+    ],
     "title": "温州瓯飞滩以东水域军事训练—浙航警815/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ed8c30e2391f4de998a85959e862663d.html?hav=1jWj6r2hy5di2gTuGWaBeQt7A4",
     "validity": {
