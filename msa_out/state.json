@@ -7319,6 +7319,18 @@
     "title": "航行拖带—鲁航警703/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/20c16ce29b7a402586ae2e50aebb7ab1.html?hav=1jWj6r2hy3yfmPMdvMAUXh95t7"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/20e1fc1a6e304f59be015290d107c607.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-10",
+    "detail_fetched": false,
+    "first_seen": "2026-09-10T09:10:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "试航作业- WECO ISABELLA—鲁航警780/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/20e1fc1a6e304f59be015290d107c607.html?hav=1jWj6r2hy5di8XU8cqsUk1F8qW"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/20ec68f4bd2146d180e29523b56b562e.html": {
     "bureau": "长江海事局",
     "cancels": [],
@@ -11168,6 +11180,8 @@
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-10T09:10:32+00:00",
     "military": true,
     "own_id": "鲁航警769/26",
     "points": [
@@ -15601,6 +15615,18 @@
     "revoked": false,
     "title": "帆船训练—粤航警558/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5027e5be44b94c2bbb6a075569861645.html?hav=1jWj6r2hy3yfgJittvf39kpoOr"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/502bdc30524041f78b88122f601f04c0.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-10",
+    "detail_fetched": false,
+    "first_seen": "2026-09-10T09:10:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业-凯和拖1拖带芝罘岛—鲁航警779/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/502bdc30524041f78b88122f601f04c0.html?hav=1jWj6r2hy5di8XU8cqsUfP7Tnd"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5060344a8e674db59a2512eed60b5e06.html": {
     "bureau": "长江海事局",
@@ -21059,6 +21085,18 @@
     "revoked": false,
     "title": "撤销粤航警530/26—粤航警613/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/67b06d60f26442edb4e6661b82a1e1d5.html?hav=1jWj6r2hy3yfmTktb9EZbyddSa"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/67b588e8f25e42948cf96ef0257cabdc.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-10",
+    "detail_fetched": false,
+    "first_seen": "2026-09-10T09:10:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "招商试011回航试航—鲁航警778/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/67b588e8f25e42948cf96ef0257cabdc.html?hav=1jWj6r2hy5di8XU8cqsUfIJ6gC"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/680e466cd77c4fd9be353ed7fa3e0382.html": {
     "bureau": "辽宁海事局",
