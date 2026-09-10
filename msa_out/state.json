@@ -31686,6 +31686,18 @@
       "start": "2026-08-26T03:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b38990e19401493a93fd9265edcc7fd7.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-10",
+    "detail_fetched": false,
+    "first_seen": "2026-09-10T11:40:30+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "撤销浙航警815/26—浙航警829/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b38990e19401493a93fd9265edcc7fd7.html?hav=1jWj6r2hy5di8XU8cukH0oA60C"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b3b3510396d54d5fa7560d6ea80cac1c.html": {
     "bureau": "辽宁海事局",
     "cancels": [],
@@ -40000,6 +40012,8 @@
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-10T11:40:30+00:00",
     "military": true,
     "own_id": "浙航警815/26",
     "points": [
