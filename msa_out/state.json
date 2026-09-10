@@ -3660,11 +3660,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/13aea543884b4215b3ddcea816e26ee7.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-10",
     "detail_fetched": false,
     "first_seen": "2026-09-10T13:20:33+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警831/26",
     "points": [],
     "revoked": false,
     "title": "ELLINIS和MINERAL POLSKA轮航经虾峙门外深水航槽—浙航警831/26",
@@ -6911,6 +6913,7 @@
       ]
     ],
     "military": true,
+    "own_id": "浙航警832/26",
     "points": [
       {
         "end": 54,
@@ -18116,11 +18119,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/58339b395a85442baf261b22c91ef278.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-10",
     "detail_fetched": false,
     "first_seen": "2026-09-10T13:20:33+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警830/26",
     "points": [],
     "revoked": false,
     "title": "“宏润冷7”轮试航—浙航警830/26",
