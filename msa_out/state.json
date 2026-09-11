@@ -9780,6 +9780,165 @@
     "title": "拖带作业—粤航警572/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/34cddb0de08b4ff8b71687c107897ef9.html?hav=1jWj6r2hy3yfgLBeXqHHyNhvGN"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3522ced847f2426a8016e8841f5584e9.html": {
+    "bureau": "辽宁海事局",
+    "cancels": [],
+    "date": "2026-09-11",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-11T08:10:34+00:00",
+    "groups": [
+      [
+        {
+          "end": 41,
+          "fmt": "DDM_HYPHEN",
+          "lat": 40.27133333333333,
+          "lon": 120.57333333333334,
+          "raw": "40-16.28N 120-34.40E",
+          "start": 21
+        },
+        {
+          "end": 62,
+          "fmt": "DDM_HYPHEN",
+          "lat": 40.11416666666667,
+          "lon": 120.85333333333334,
+          "raw": "40-06.85N 120-51.20E",
+          "start": 42
+        },
+        {
+          "end": 83,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.80866666666667,
+          "lon": 120.57116666666667,
+          "raw": "39-48.52N 120-34.27E",
+          "start": 63
+        },
+        {
+          "end": 104,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.968666666666664,
+          "lon": 120.29083333333334,
+          "raw": "39-58.12N 120-17.45E",
+          "start": 84
+        }
+      ],
+      [
+        {
+          "end": 132,
+          "fmt": "DDM_HYPHEN",
+          "lat": 40.361333333333334,
+          "lon": 120.58233333333334,
+          "raw": "40-21.68N 120-34.94E",
+          "start": 112
+        },
+        {
+          "end": 153,
+          "fmt": "DDM_HYPHEN",
+          "lat": 40.353833333333334,
+          "lon": 120.58233333333334,
+          "raw": "40-21.23N 120-34.94E",
+          "start": 133
+        },
+        {
+          "end": 174,
+          "fmt": "DDM_HYPHEN",
+          "lat": 40.353833333333334,
+          "lon": 120.599,
+          "raw": "40-21.23N 120-35.94E",
+          "start": 154
+        },
+        {
+          "end": 195,
+          "fmt": "DDM_HYPHEN",
+          "lat": 40.361333333333334,
+          "lon": 120.599,
+          "raw": "40-21.68N 120-35.94E",
+          "start": 175
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 41,
+        "fmt": "DDM_HYPHEN",
+        "lat": 40.27133333333333,
+        "lon": 120.57333333333334,
+        "raw": "40-16.28N 120-34.40E",
+        "start": 21
+      },
+      {
+        "end": 62,
+        "fmt": "DDM_HYPHEN",
+        "lat": 40.11416666666667,
+        "lon": 120.85333333333334,
+        "raw": "40-06.85N 120-51.20E",
+        "start": 42
+      },
+      {
+        "end": 83,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.80866666666667,
+        "lon": 120.57116666666667,
+        "raw": "39-48.52N 120-34.27E",
+        "start": 63
+      },
+      {
+        "end": 104,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.968666666666664,
+        "lon": 120.29083333333334,
+        "raw": "39-58.12N 120-17.45E",
+        "start": 84
+      },
+      {
+        "end": 132,
+        "fmt": "DDM_HYPHEN",
+        "lat": 40.361333333333334,
+        "lon": 120.58233333333334,
+        "raw": "40-21.68N 120-34.94E",
+        "start": 112
+      },
+      {
+        "end": 153,
+        "fmt": "DDM_HYPHEN",
+        "lat": 40.353833333333334,
+        "lon": 120.58233333333334,
+        "raw": "40-21.23N 120-34.94E",
+        "start": 133
+      },
+      {
+        "end": 174,
+        "fmt": "DDM_HYPHEN",
+        "lat": 40.353833333333334,
+        "lon": 120.599,
+        "raw": "40-21.23N 120-35.94E",
+        "start": 154
+      },
+      {
+        "end": 195,
+        "fmt": "DDM_HYPHEN",
+        "lat": 40.361333333333334,
+        "lon": 120.599,
+        "raw": "40-21.68N 120-35.94E",
+        "start": 175
+      }
+    ],
+    "raw_text": "渤海，自9月14日0600时至1800时在40-16.28N 120-34.40E、40-06.85N 120-51.20E、39-48.52N 120-34.27E、39-58.12N 120-17.45E诸点连线范围内和40-21.68N 120-34.94E、40-21.23N 120-34.94E、40-21.23N 120-35.94E、40-21.68N 120-35.94E诸点连线范围内进行军事演习。禁止驶入。",
+    "revoked": false,
+    "title": "渤海军事演习—辽航警384/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3522ced847f2426a8016e8841f5584e9.html?hav=1jWj6r2hy5di8YwtBQBHkybExU",
+    "validity": {
+      "end": "2026-09-14T10:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月14日0600时至1800时"
+      ],
+      "start": "2026-09-13T22:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3543a8f6ccc34cbfac6da5b156425233.html": {
     "bureau": "广西海事局",
     "cancels": [],
@@ -20887,6 +21046,18 @@
     "title": "水工作业-勘探409和滨海66—鲁航警768/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/62eb1116c18d403b9c846ebe4604f154.html?hav=1jWj6r2hy5di2hwep5syfReOMl"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/62f4232a25b745189f5197f4d7834ba7.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-11",
+    "detail_fetched": false,
+    "first_seen": "2026-09-11T08:10:34+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "船舶试航——ISRA—鲁航警783/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/62f4232a25b745189f5197f4d7834ba7.html?hav=1jWj6r2hy5di8YwtBQBHgLLB7m"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/63282bc1999f4507986af507b556f225.html": {
     "bureau": "上海海事局",
     "cancels": [],
@@ -25093,6 +25264,18 @@
     "revoked": false,
     "title": "拖带作业—闽航警110/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/80ff77041bab49898c16e7663f08483d.html?hav=1jWj6r2hy0earnaupHnMgPYCW7"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/812cc0a87d3f4efbb7f5b223868373ad.html": {
+    "bureau": "辽宁海事局",
+    "date": "2026-09-11",
+    "detail_fetched": false,
+    "first_seen": "2026-09-11T08:10:34+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带天达—辽航警385/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/812cc0a87d3f4efbb7f5b223868373ad.html?hav=1jWj6r2hy5di8YwtBQBHl0s1zz"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/81fea514435040a580a5ef25437132e1.html": {
     "bureau": "长江海事局",
@@ -40715,6 +40898,18 @@
     "revoked": false,
     "title": "泊位水下检测—冀航警539/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/eecc38c00a764f6dbb47bb745bb6b5ec.html?hav=1jWj6r2hy3yfgPZuDalWDfaFdx"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/eeeef125681d4ae69f209cb4f0520920.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-11",
+    "detail_fetched": false,
+    "first_seen": "2026-09-11T08:10:34+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "船舶试航——PEAK SKARV 4—鲁航警784/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/eeeef125681d4ae69f209cb4f0520920.html?hav=1jWj6r2hy5di8YwtBQBHgLLBBs"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/eef04e49fee44c0db736525e7cb5a612.html": {
     "bureau": "辽宁海事局",
