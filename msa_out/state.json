@@ -22602,11 +22602,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7143fd31dbd448b5bc54a9ca37103700.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-09-11",
     "detail_fetched": false,
     "first_seen": "2026-09-11T03:00:52+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警610/26",
     "points": [],
     "revoked": false,
     "title": "水下检验—冀航警610/26",
