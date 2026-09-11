@@ -7399,6 +7399,99 @@
     "title": "百亩暗礁灯浮和其上附设的AIS航标现已恢复正常—浙航警669/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/20165e62fbfc49bf9ff52fb5555a5333.html?hav=1jWj6r2hy2JdKA8ejFXZFLdUsi"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/209c73b9bad24f78ae0d79adf6ba4727.html": {
+    "bureau": "山东海事局",
+    "cancels": [],
+    "date": "2026-09-11",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-11T03:30:38+00:00",
+    "groups": [
+      [
+        {
+          "end": 45,
+          "fmt": "DDM_HYPHEN",
+          "lat": 35.5,
+          "lon": 120.20833333333333,
+          "raw": "35-30.00N 120-12.50E",
+          "start": 25
+        },
+        {
+          "end": 66,
+          "fmt": "DDM_HYPHEN",
+          "lat": 35.5,
+          "lon": 120.55,
+          "raw": "35-30.00N 120-33.00E",
+          "start": 46
+        },
+        {
+          "end": 87,
+          "fmt": "DDM_HYPHEN",
+          "lat": 35.166666666666664,
+          "lon": 120.55,
+          "raw": "35-10.00N 120-33.00E",
+          "start": 67
+        },
+        {
+          "end": 108,
+          "fmt": "DDM_HYPHEN",
+          "lat": 35.166666666666664,
+          "lon": 120.20833333333333,
+          "raw": "35-10.00N 120-12.50E",
+          "start": 88
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 45,
+        "fmt": "DDM_HYPHEN",
+        "lat": 35.5,
+        "lon": 120.20833333333333,
+        "raw": "35-30.00N 120-12.50E",
+        "start": 25
+      },
+      {
+        "end": 66,
+        "fmt": "DDM_HYPHEN",
+        "lat": 35.5,
+        "lon": 120.55,
+        "raw": "35-30.00N 120-33.00E",
+        "start": 46
+      },
+      {
+        "end": 87,
+        "fmt": "DDM_HYPHEN",
+        "lat": 35.166666666666664,
+        "lon": 120.55,
+        "raw": "35-10.00N 120-33.00E",
+        "start": 67
+      },
+      {
+        "end": 108,
+        "fmt": "DDM_HYPHEN",
+        "lat": 35.166666666666664,
+        "lon": 120.20833333333333,
+        "raw": "35-10.00N 120-12.50E",
+        "start": 88
+      }
+    ],
+    "raw_text": "黄海，自9月15日1500时至18日2000时，在35-30.00N 120-12.50E、35-30.00N 120-33.00E、35-10.00N 120-33.00E和35-10.00N 120-12.50E四点连线范围内进行实弹射击。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—鲁航警781/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/209c73b9bad24f78ae0d79adf6ba4727.html?hav=1jWj6r2hy5di8YwtBL1ZQl6p6p",
+    "validity": {
+      "end": "2026-09-18T12:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月15日1500时至18日2000时"
+      ],
+      "start": "2026-09-15T07:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/20a7239c2f1240aa8fbc3c70caee6084.html": {
     "bureau": "河北海事局",
     "cancels": [],

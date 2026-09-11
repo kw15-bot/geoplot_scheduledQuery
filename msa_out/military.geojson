@@ -1631,6 +1631,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "实弹射击—鲁航警781/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/209c73b9bad24f78ae0d79adf6ba4727.html?hav=1jWj6r2hy5di8YwtBL1ZQl6p6p",
+        "date": "2026-09-11",
+        "bureau": "山东海事局",
+        "group_count": 1,
+        "raw_text": "黄海，自9月15日1500时至18日2000时，在35-30.00N 120-12.50E、35-30.00N 120-33.00E、35-10.00N 120-33.00E和35-10.00N 120-12.50E四点连线范围内进行实弹射击。禁止驶入。",
+        "valid_start": "2026-09-15T07:00:00+00:00",
+        "valid_end": "2026-09-18T12:00:00+00:00",
+        "valid_raw": [
+          "9月15日1500时至18日2000时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              120.20833333333333,
+              35.166666666666664
+            ],
+            [
+              120.55,
+              35.166666666666664
+            ],
+            [
+              120.55,
+              35.5
+            ],
+            [
+              120.20833333333333,
+              35.5
+            ],
+            [
+              120.20833333333333,
+              35.166666666666664
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "军事训练—桂航警159/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/21071fb9bb3d426bb6a8f7585548d89a.html?hav=1jWj6r2hy2JdEALv1DNXFjoi1Z",
         "date": "2026-07-19",
