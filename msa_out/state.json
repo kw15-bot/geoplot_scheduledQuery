@@ -9278,6 +9278,147 @@
     "title": "“中交海工001”拖带钻井平台“南海七号”—琼航警140/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2e1a03cff171425c9613b2f93d4e2bd7.html?hav=1jWj6r2hy2JdQ44O7XRQc3RODM"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2e8bf52585784d489a1a1d3b636d2230.html": {
+    "bureau": "广东海事局",
+    "cancels": [],
+    "date": "2026-09-11",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-11T10:30:38+00:00",
+    "groups": [
+      [
+        {
+          "end": 68,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.410333333333334,
+          "lon": 110.5345,
+          "raw": "20-24.62N 110-32.07E",
+          "start": 48
+        },
+        {
+          "end": 93,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.5065,
+          "lon": 111.01516666666667,
+          "raw": "20-30.39N 111-00.91E",
+          "start": 73
+        },
+        {
+          "end": 118,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.421666666666667,
+          "lon": 111.01983333333334,
+          "raw": "20-25.30N 111-01.19E",
+          "start": 98
+        },
+        {
+          "end": 143,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.417833333333334,
+          "lon": 110.98183333333333,
+          "raw": "20-25.07N 110-58.91E",
+          "start": 123
+        },
+        {
+          "end": 168,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.463333333333335,
+          "lon": 110.97533333333334,
+          "raw": "20-27.80N 110-58.52E",
+          "start": 148
+        },
+        {
+          "end": 193,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.385,
+          "lon": 110.64816666666667,
+          "raw": "20-23.10N 110-38.89E",
+          "start": 173
+        },
+        {
+          "end": 218,
+          "fmt": "DDM_HYPHEN",
+          "lat": 20.3745,
+          "lon": 110.53866666666667,
+          "raw": "20-22.47N 110-32.32E",
+          "start": 198
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 68,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.410333333333334,
+        "lon": 110.5345,
+        "raw": "20-24.62N 110-32.07E",
+        "start": 48
+      },
+      {
+        "end": 93,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.5065,
+        "lon": 111.01516666666667,
+        "raw": "20-30.39N 111-00.91E",
+        "start": 73
+      },
+      {
+        "end": 118,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.421666666666667,
+        "lon": 111.01983333333334,
+        "raw": "20-25.30N 111-01.19E",
+        "start": 98
+      },
+      {
+        "end": 143,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.417833333333334,
+        "lon": 110.98183333333333,
+        "raw": "20-25.07N 110-58.91E",
+        "start": 123
+      },
+      {
+        "end": 168,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.463333333333335,
+        "lon": 110.97533333333334,
+        "raw": "20-27.80N 110-58.52E",
+        "start": 148
+      },
+      {
+        "end": 193,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.385,
+        "lon": 110.64816666666667,
+        "raw": "20-23.10N 110-38.89E",
+        "start": 173
+      },
+      {
+        "end": 218,
+        "fmt": "DDM_HYPHEN",
+        "lat": 20.3745,
+        "lon": 110.53866666666667,
+        "raw": "20-22.47N 110-32.32E",
+        "start": 198
+      }
+    ],
+    "raw_text": "南海，9月14日至20日，每天0200时至0600时，在以下七点连线海域内进行实弹射击： （1）20-24.62N，110-32.07E； （2）20-30.39N，111-00.91E； （3）20-25.30N，111-01.19E； （4）20-25.07N，110-58.91E； （5）20-27.80N，110-58.52E； （6）20-23.10N，110-38.89E； （7）20-22.47N，110-32.32E。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—粤航警646/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2e8bf52585784d489a1a1d3b636d2230.html?hav=1jWj6r2hy5di8YwtBU341rCAJZ",
+    "validity": {
+      "end": "2026-09-19T22:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月14日至20日，每天0200时至0600时"
+      ],
+      "start": "2026-09-13T18:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2ea2a60767da45bc9db26ccc1603d6f7.html": {
     "bureau": "天津海事局",
     "cancels": [],
@@ -40251,6 +40392,18 @@
     "revoked": false,
     "title": "扫测作业-航瑞运维588—鲁航警690/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ea2d8c357ec64f8e911a1adefd877400.html?hav=1jWj6r2hy3yfmJVdh8p73ibMpA"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ea7892dce704447aad2f59ba3eef5362.html": {
+    "bureau": "江苏海事局",
+    "date": "2026-09-11",
+    "detail_fetched": false,
+    "first_seen": "2026-09-11T10:30:38+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "9月13日“新振浮7”拖带作业—苏航警58/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ea7892dce704447aad2f59ba3eef5362.html?hav=1jWj6r2hy5di8YwtBU341tSxcf"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/eaa693b153a742f7881e597f9fff61d9.html": {
     "bureau": "福建海事局",
