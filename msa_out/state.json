@@ -5006,6 +5006,18 @@
     "title": "有效航警简报—东部航警29/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1716fa368ea6402db0828cdeea9673cc.html?hav=1jWj6r2hy3yfgLBeSXXh99gBm8"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/171bd761b0f242d79cfee307c495b4a3.html": {
+    "bureau": "广东海事局",
+    "date": "2026-09-11",
+    "detail_fetched": false,
+    "first_seen": "2026-09-11T09:40:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "海上拖带作业—粤航警645/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/171bd761b0f242d79cfee307c495b4a3.html?hav=1jWj6r2hy5di8YwtBSl8VHYCtM"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/172484fe65824f95aeedea2f3d41cb71.html": {
     "bureau": "海南海事局",
     "cancels": [],
@@ -21131,6 +21143,18 @@
     "title": "灯浮灯光熄灭—沪航警671/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/63377f7813d54db3b54482327a558a51.html?hav=1jWj6r2hy3yfmPMdqBASrf5avI"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/636aafbad22a4be9abe8c557b684b8b2.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-11",
+    "detail_fetched": false,
+    "first_seen": "2026-09-11T09:40:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“DENIA”轮试航—浙航警834/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/636aafbad22a4be9abe8c557b684b8b2.html?hav=1jWj6r2hy5di8YwtBSl8a0UFBz"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/637c27b5b0df485fbeffe9b7a090d300.html": {
     "bureau": "连云港海事局",
     "cancels": [],
@@ -21981,6 +22005,8 @@
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-11T09:40:31+00:00",
     "military": true,
     "own_id": "浙航警821/26",
     "points": [
@@ -26622,6 +26648,18 @@
     "revoked": false,
     "title": "宜宾航警65/26—宜宾海航警65/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8476717711b0445b9e399bc9a6b3b7ff.html?hav=1jWj6r2hy3yfmPMdvMAUqPXHpD"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/84996fc4ff704ecc86df7078faafd743.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-11",
+    "detail_fetched": false,
+    "first_seen": "2026-09-11T09:40:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“莱德6”轮试航—浙航警835/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/84996fc4ff704ecc86df7078faafd743.html?hav=1jWj6r2hy5di8YwtBSl8a2l2EW"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/84b45bf072a84ae28288f7e01754f854.html": {
     "bureau": "浙江海事局",
@@ -42893,6 +42931,8 @@
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-11T09:40:31+00:00",
     "military": true,
     "own_id": "粤航警635/26",
     "points": [

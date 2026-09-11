@@ -5064,6 +5064,8 @@
         "valid_raw": [
           "9月9日0900时至1800时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-11T09:40:31+00:00",
         "group_index": 1,
         "kind": "area"
       },
@@ -9459,6 +9461,8 @@
         "valid_raw": [
           "9月7日至11日，每日0830时至1130时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-11T09:40:31+00:00",
         "group_index": 1,
         "kind": "area"
       },
