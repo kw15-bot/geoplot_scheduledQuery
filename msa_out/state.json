@@ -6104,11 +6104,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/185b41ee5f0246589c7844ff78990882.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-11",
     "detail_fetched": false,
     "first_seen": "2026-09-11T03:40:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警716/26",
     "points": [],
     "revoked": false,
     "title": "人员落水—沪航警716/26",
@@ -20636,6 +20638,18 @@
     "revoked": false,
     "title": "6月4日江苏扬子鑫福造船有限公司“鑫福142”拖带—苏航警32/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/61af397702a04380963bf214135657c8.html?hav=1jWj6r2hy0eafghgXIOxG7vZDN"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/61af91c96c6e4c7c9170930f058afb07.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-11",
+    "detail_fetched": false,
+    "first_seen": "2026-09-11T03:50:30+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "打捞作业-渤海海峡—鲁航警782/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/61af91c96c6e4c7c9170930f058afb07.html?hav=1jWj6r2hy5di8YwtBL1ZVOMsXg"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/61bcfc1758704ae395886655fe3aec10.html": {
     "bureau": "山东海事局",
