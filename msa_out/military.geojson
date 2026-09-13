@@ -5481,6 +5481,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "火箭残骸掉落—浙航警841/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/68af3b00f445451593edf141cda86499.html?hav=1jWj6r2hy5di8bsOIgWQdILtLj",
+        "date": "2026-09-13",
+        "bureau": "浙江海事局",
+        "group_count": 1,
+        "raw_text": "东海，9月16日0000时至0800时，在28-29.06N 123-25.66E、28-28.50N 123-50.18E、27-45.40N 123-48.83E、27-45.95N 123-24.48E诸点连线水域范围内有火箭残骸掉落，禁止驶入。",
+        "valid_start": "2026-09-15T16:00:00+00:00",
+        "valid_end": "2026-09-16T00:00:00+00:00",
+        "valid_raw": [
+          "9月16日0000时至0800时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              123.408,
+              27.765833333333333
+            ],
+            [
+              123.81383333333333,
+              27.756666666666668
+            ],
+            [
+              123.83633333333333,
+              28.475
+            ],
+            [
+              123.42766666666667,
+              28.484333333333332
+            ],
+            [
+              123.408,
+              27.765833333333333
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "军事任务—浙航警821/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/69191b75b566433286511f6031b5e79e.html?hav=1jWj6r2hy5di2gTuGWaBsW1F44",
         "date": "2026-09-08",

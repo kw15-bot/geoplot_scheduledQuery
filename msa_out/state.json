@@ -8339,6 +8339,18 @@
     "title": "拖带作业—深航警29/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/234ed142cffa4288b33410a48864b9a6.html?hav=1jWj6r2hxvfTUpHRUD35WWHaA0"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/236ec4edcbc344ecb55a9cb7096a05f3.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-13",
+    "detail_fetched": false,
+    "first_seen": "2026-09-13T11:30:36+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“长扬明珠”轮试航—浙航警842/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/236ec4edcbc344ecb55a9cb7096a05f3.html?hav=1jWj6r2hy5di8bsOIgWQdJUHno"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/238d6994a35f4eada0d93ac934bd4cbf.html": {
     "bureau": "上海海事局",
     "cancels": [],
@@ -11082,11 +11094,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/38f354e7815b48ff9883fcdd5d20fe4c.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-13",
     "detail_fetched": false,
     "first_seen": "2026-09-13T11:20:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警840/26",
     "points": [],
     "revoked": false,
     "title": "玉环大麦屿能源（LNG）中转储运项目外输管线工程（玉环支线）一期（台州段）施工期临时桥区航道交通管制—浙航警840/26",
@@ -23457,6 +23471,99 @@
     "revoked": false,
     "title": "“SANTA ROSA”轮试航—浙航警837/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/68a54575a28541319d87202f82ee6948.html?hav=1jWj6r2hy5di8aPdeluBoc4aiz"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/68af3b00f445451593edf141cda86499.html": {
+    "bureau": "浙江海事局",
+    "cancels": [],
+    "date": "2026-09-13",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-13T11:30:36+00:00",
+    "groups": [
+      [
+        {
+          "end": 41,
+          "fmt": "DDM_HYPHEN",
+          "lat": 28.484333333333332,
+          "lon": 123.42766666666667,
+          "raw": "28-29.06N 123-25.66E",
+          "start": 21
+        },
+        {
+          "end": 62,
+          "fmt": "DDM_HYPHEN",
+          "lat": 28.475,
+          "lon": 123.83633333333333,
+          "raw": "28-28.50N 123-50.18E",
+          "start": 42
+        },
+        {
+          "end": 83,
+          "fmt": "DDM_HYPHEN",
+          "lat": 27.756666666666668,
+          "lon": 123.81383333333333,
+          "raw": "27-45.40N 123-48.83E",
+          "start": 63
+        },
+        {
+          "end": 104,
+          "fmt": "DDM_HYPHEN",
+          "lat": 27.765833333333333,
+          "lon": 123.408,
+          "raw": "27-45.95N 123-24.48E",
+          "start": 84
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 41,
+        "fmt": "DDM_HYPHEN",
+        "lat": 28.484333333333332,
+        "lon": 123.42766666666667,
+        "raw": "28-29.06N 123-25.66E",
+        "start": 21
+      },
+      {
+        "end": 62,
+        "fmt": "DDM_HYPHEN",
+        "lat": 28.475,
+        "lon": 123.83633333333333,
+        "raw": "28-28.50N 123-50.18E",
+        "start": 42
+      },
+      {
+        "end": 83,
+        "fmt": "DDM_HYPHEN",
+        "lat": 27.756666666666668,
+        "lon": 123.81383333333333,
+        "raw": "27-45.40N 123-48.83E",
+        "start": 63
+      },
+      {
+        "end": 104,
+        "fmt": "DDM_HYPHEN",
+        "lat": 27.765833333333333,
+        "lon": 123.408,
+        "raw": "27-45.95N 123-24.48E",
+        "start": 84
+      }
+    ],
+    "raw_text": "东海，9月16日0000时至0800时，在28-29.06N 123-25.66E、28-28.50N 123-50.18E、27-45.40N 123-48.83E、27-45.95N 123-24.48E诸点连线水域范围内有火箭残骸掉落，禁止驶入。",
+    "revoked": false,
+    "title": "火箭残骸掉落—浙航警841/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/68af3b00f445451593edf141cda86499.html?hav=1jWj6r2hy5di8bsOIgWQdILtLj",
+    "validity": {
+      "end": "2026-09-16T00:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月16日0000时至0800时"
+      ],
+      "start": "2026-09-15T16:00:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/68e200503d684b369067e47fdc2e7b8a.html": {
     "bureau": "福建海事局",
