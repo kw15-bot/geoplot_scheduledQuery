@@ -45141,11 +45141,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f99fa720949c4ba29aed28de18683d0b.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-13",
     "detail_fetched": false,
     "first_seen": "2026-09-13T12:20:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警843/26",
     "points": [],
     "revoked": false,
     "title": "航标动态-新设8座灯浮—浙航警843/26",
