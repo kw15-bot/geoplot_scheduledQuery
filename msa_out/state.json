@@ -12165,11 +12165,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/40f5ebeb7fdf496cb59798ca12ca5585.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-13",
     "detail_fetched": false,
     "first_seen": "2026-09-13T01:20:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警838/26",
     "points": [],
     "revoked": false,
     "title": "“KYPROS ISLAND”轮试航—浙航警838/26",
