@@ -45379,11 +45379,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fbaf6741bee54ac29d563000c698bf45.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-14",
     "detail_fetched": false,
     "first_seen": "2026-09-13T20:50:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警725/26",
     "points": [],
     "revoked": false,
     "title": "灯浮移位—沪航警725/26",
