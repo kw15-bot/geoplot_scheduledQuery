@@ -20175,11 +20175,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/58f8865029484306bdcdb2a11831a069.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-13",
     "detail_fetched": false,
     "first_seen": "2026-09-13T09:40:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警723/26",
     "points": [],
     "revoked": false,
     "title": "渔船作业—沪航警723/26",
@@ -27197,6 +27199,7 @@
       ]
     ],
     "military": true,
+    "own_id": "沪航警722/26",
     "points": [
       {
         "end": 50,
@@ -34562,11 +34565,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b0b54016d90f413ba044c5ccab25f357.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-13",
     "detail_fetched": false,
     "first_seen": "2026-09-13T09:40:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警724/26",
     "points": [],
     "revoked": false,
     "title": "LNG加注作业—沪航警724/26",
