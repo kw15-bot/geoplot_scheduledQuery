@@ -8341,11 +8341,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/236ec4edcbc344ecb55a9cb7096a05f3.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-13",
     "detail_fetched": false,
     "first_seen": "2026-09-13T11:30:36+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警842/26",
     "points": [],
     "revoked": false,
     "title": "“长扬明珠”轮试航—浙航警842/26",
@@ -23518,6 +23520,7 @@
       ]
     ],
     "military": true,
+    "own_id": "浙航警841/26",
     "points": [
       {
         "end": 41,
