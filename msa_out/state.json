@@ -31629,11 +31629,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9151d1449a544007a3652f7543d6413c.html": {
     "bureau": "深圳海事局",
+    "cancels": [],
     "date": "2026-09-14",
     "detail_fetched": false,
     "first_seen": "2026-09-14T08:50:33+00:00",
     "groups": [],
     "military": false,
+    "own_id": "深航警91/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—深航警91/26",
@@ -40905,6 +40907,7 @@
       ]
     ],
     "military": true,
+    "own_id": "鲁航警788/26",
     "points": [
       {
         "end": 35,
