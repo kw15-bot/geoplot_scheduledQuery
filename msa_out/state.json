@@ -33732,6 +33732,18 @@
     "title": "“南海救113””轮拖带“领航者”轮—琼航警122/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5be06294ca247259ff60b453b5cfff5.html?hav=1jWj6r2hy2Jd81mfsXorphBy8X"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5caeaaf3a254683ad827fccb7655ce8.html": {
+    "bureau": "辽宁海事局",
+    "date": "2026-09-14",
+    "detail_fetched": false,
+    "first_seen": "2026-09-14T06:10:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带链航浚752—辽航警388/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5caeaaf3a254683ad827fccb7655ce8.html?hav=1jWj6r2hy5di8dL8r9NaFZQgV8"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5cf58bba0004d1380b920251befd368.html": {
     "bureau": "辽宁海事局",
     "cancels": [],
@@ -41981,6 +41993,18 @@
       "start": "2026-07-30T04:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e085dbc3073f4da3b0840d6d47c56993.html": {
+    "bureau": "天津海事局",
+    "date": "2026-09-14",
+    "detail_fetched": false,
+    "first_seen": "2026-09-14T06:10:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "勘察作业—津航警308/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e085dbc3073f4da3b0840d6d47c56993.html?hav=1jWj6r2hy5di8dL8r9NaKG5vlI"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e176dc4f088b4486bba898c8b36fbf8a.html": {
     "bureau": "天津海事局",
     "cancels": [],
@@ -42100,6 +42124,8 @@
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-14T06:10:32+00:00",
     "military": true,
     "own_id": "辽航警378/26",
     "points": [
