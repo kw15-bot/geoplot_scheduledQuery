@@ -22663,6 +22663,18 @@
     "title": "水工作业-渤海—鲁航警766/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/616e009e9bc84f31bbbc49c3e6ac0a4f.html?hav=1jWj6r2hy5di2hwep5syfQVzym"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6187da1fd33741c0bb21cf6819ee1acd.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-14",
+    "detail_fetched": false,
+    "first_seen": "2026-09-14T13:30:43+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "漂移船—浙航警848/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6187da1fd33741c0bb21cf6819ee1acd.html?hav=1jWj6r2hy5di8dL8wQpFOxILEX"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/61af397702a04380963bf214135657c8.html": {
     "bureau": "江苏海事局",
     "cancels": [],
@@ -32106,11 +32118,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/960fb6bafcf947beb33566fcd3556455.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-14",
     "detail_fetched": false,
     "first_seen": "2026-09-14T13:20:51+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警847/26",
     "points": [],
     "revoked": false,
     "title": "“菲泓达86”轮试航—浙航警847/26",
@@ -42475,11 +42489,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e198b010ca0745eba27c7938e3a1337d.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-14",
     "detail_fetched": false,
     "first_seen": "2026-09-14T13:20:51+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警846/26",
     "points": [],
     "revoked": false,
     "title": "GREAT ZHOU、SAO INDIGO、XIN HUI YANG和CAPE CANARY轮航经虾峙门外深水航槽—浙航警846/26",
