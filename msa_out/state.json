@@ -40849,11 +40849,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d622ad49a6b44329936e8e0cdeaf3d42.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-14",
     "detail_fetched": false,
     "first_seen": "2026-09-14T06:40:36+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警787/26",
     "points": [],
     "revoked": false,
     "title": "航行拖带—鲁航警787/26",
