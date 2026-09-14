@@ -6314,11 +6314,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1964c021fa084735aa4a89c7f157f20b.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-14",
     "detail_fetched": false,
     "first_seen": "2026-09-14T14:00:47+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警849/26",
     "points": [],
     "revoked": false,
     "title": "“圣顺62”轮试航—浙航警849/26",
