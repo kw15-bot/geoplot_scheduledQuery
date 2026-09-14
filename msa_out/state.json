@@ -31403,11 +31403,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8ee634b40f3f426fbe049a87d002fade.html": {
     "bureau": "江苏海事局",
+    "cancels": [],
     "date": "2026-09-14",
     "detail_fetched": false,
     "first_seen": "2026-09-14T10:20:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "苏航警59/26",
     "points": [],
     "revoked": false,
     "title": "9月15日半潜船“四航永兴”轮拖带作业—苏航警59/26",
