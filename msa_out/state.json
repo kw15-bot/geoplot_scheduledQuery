@@ -41667,11 +41667,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/de7d61cb9da64aa7b681fa7b1ec2403b.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-14",
     "detail_fetched": false,
     "first_seen": "2026-09-14T04:50:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警649/26",
     "points": [],
     "revoked": false,
     "title": "“普陀海”轮船舶试航—粤航警649/26",
