@@ -31401,6 +31401,18 @@
     "title": "LNG船舶—沪航警601/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8ece30ac9fd14156a58fdbdad935524b.html?hav=1jWj6r2hy3yfaFXubZTwtIH3xe"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8ee634b40f3f426fbe049a87d002fade.html": {
+    "bureau": "江苏海事局",
+    "date": "2026-09-14",
+    "detail_fetched": false,
+    "first_seen": "2026-09-14T10:20:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "9月15日半潜船“四航永兴”轮拖带作业—苏航警59/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8ee634b40f3f426fbe049a87d002fade.html?hav=1jWj6r2hy5di8dL8rFpDZPxa6L"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8f01cf4dff434a5a824e02d1e3e664e5.html": {
     "bureau": "山东海事局",
     "cancels": [],
@@ -43406,11 +43418,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e802a0e4584c4e7a93bd66ec56f23faa.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-14",
     "detail_fetched": false,
     "first_seen": "2026-09-14T10:10:41+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警729/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—沪航警729/26",
