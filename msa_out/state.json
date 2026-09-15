@@ -10597,11 +10597,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/361deecb274f4bf9bfd06a04066c9775.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-15",
     "detail_fetched": false,
     "first_seen": "2026-09-15T08:00:47+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警651/26",
     "points": [],
     "revoked": false,
     "title": "“本亚帕普姆”轮船舶试航—粤航警651/26",
