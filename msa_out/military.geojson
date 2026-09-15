@@ -6967,6 +6967,8 @@
           "9月10日1600时至11日1200时",
           "9月11日0300时至0800时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-15T05:50:37+00:00",
         "group_index": 1,
         "kind": "area"
       },
@@ -7017,6 +7019,8 @@
           "9月10日1600时至11日1200时",
           "9月11日0300时至0800时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-15T05:50:37+00:00",
         "group_index": 2,
         "kind": "area"
       },
@@ -7063,6 +7067,8 @@
           "9月10日1600时至11日1200时",
           "9月11日0300时至0800时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-15T05:50:37+00:00",
         "group_index": 3,
         "kind": "area"
       },
@@ -7113,6 +7119,8 @@
           "9月10日1600时至11日1200时",
           "9月11日0300时至0800时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-15T05:50:37+00:00",
         "group_index": 4,
         "kind": "area"
       },
@@ -7159,6 +7167,8 @@
           "9月10日1600时至11日1200时",
           "9月11日0300时至0800时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-15T05:50:37+00:00",
         "group_index": 5,
         "kind": "area"
       },
@@ -7205,6 +7215,8 @@
           "9月10日1600时至11日1200时",
           "9月11日0300时至0800时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-15T05:50:37+00:00",
         "group_index": 6,
         "kind": "area"
       },
@@ -7263,6 +7275,8 @@
           "9月10日1600时至11日1200时",
           "9月11日0300时至0800时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-15T05:50:37+00:00",
         "group_index": 7,
         "kind": "area"
       },
@@ -7305,6 +7319,8 @@
           "9月10日1600时至11日1200时",
           "9月11日0300时至0800时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-15T05:50:37+00:00",
         "group_index": 8,
         "kind": "area"
       },
@@ -10388,6 +10404,51 @@
         "kind": "no_coords"
       },
       "geometry": null
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "军事任务—辽航警390/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f8c61253379145f5889a5530f70cc372.html?hav=1jWj6r2hy5di8entPjyIiK5W2X",
+        "date": "2026-09-15",
+        "bureau": "辽宁海事局",
+        "group_count": 1,
+        "raw_text": "渤海北部，9月17日0700时至1700时，在 40-17.05N 121-58.05E、40-15.00N 121-58.05E、40-15.00N 122-02.00E和40-17.05N 122-02.00E 诸点连线范围内进行军事演习。禁止驶入。",
+        "valid_start": "2026-09-16T23:00:00+00:00",
+        "valid_end": "2026-09-17T09:00:00+00:00",
+        "valid_raw": [
+          "9月17日0700时至1700时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.9675,
+              40.25
+            ],
+            [
+              122.03333333333333,
+              40.25
+            ],
+            [
+              122.03333333333333,
+              40.284166666666664
+            ],
+            [
+              121.9675,
+              40.284166666666664
+            ],
+            [
+              121.9675,
+              40.25
+            ]
+          ]
+        ]
+      }
     },
     {
       "type": "Feature",
