@@ -10064,11 +10064,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/34383b6b585640c0b92549d318220edb.html": {
     "bureau": "天津海事局",
+    "cancels": [],
     "date": "2026-09-15",
     "detail_fetched": false,
     "first_seen": "2026-09-15T03:20:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "津航警309/26",
     "points": [],
     "revoked": false,
     "title": "探井作业—津航警309/26",
@@ -25594,11 +25596,15 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/778d069feaf340c2a8dd326a328bf724.html": {
     "bureau": "天津海事局",
+    "cancels": [
+      "津航警297/26"
+    ],
     "date": "2026-09-15",
     "detail_fetched": false,
     "first_seen": "2026-09-15T03:20:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "津航警310/26",
     "points": [],
     "revoked": false,
     "title": "撤销津航警297/26—津航警310/26",
@@ -37976,11 +37982,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bfece7956f944c84bf8d4eaad0c4ae36.html": {
     "bureau": "天津海事局",
+    "cancels": [],
     "date": "2026-09-15",
     "detail_fetched": false,
     "first_seen": "2026-09-15T03:20:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "津航警311/26",
     "points": [],
     "revoked": false,
     "title": "扫测作业—津航警311/26",
@@ -45920,7 +45928,10 @@
     "military": false,
     "own_id": "津航警297/26",
     "points": [],
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "津航警310/26"
+    ],
     "title": "探井作业—津航警297/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f8666e183d36432b9d9bcbc3aaebe9a0.html?hav=1jWj6r2hy5di2ZA9TUSt0MQY1Q"
   },
