@@ -3252,6 +3252,18 @@
     "title": "中华人民共和国重庆海事局航行警告—渝航警388/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0fc5df6769354e39a8abbb2d82cb71f8.html?hav=1jWj6r2hy3yfgGnOmhtlBGRmA4"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0fe3fb05209a43b5910ce6ac2fe98492.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-15",
+    "detail_fetched": false,
+    "first_seen": "2026-09-15T06:00:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "试航作业- PACIFIC FALCON 127—鲁航警795/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0fe3fb05209a43b5910ce6ac2fe98492.html?hav=1jWj6r2hy5di8entPjyIn1t9gn"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1021f06cb17c484d9023728cb4b4752d.html": {
     "bureau": "浙江海事局",
     "cancels": [],
@@ -36886,6 +36898,18 @@
     "title": "拖带作业—桂航警149/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/be99d2de31b44af1826664824e0cfbd7.html?hav=1jWj6r2hy2JdDydudpxEoLmaXK"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/be9a0eaeece745578f209e36cb69bc9e.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-15",
+    "detail_fetched": false,
+    "first_seen": "2026-09-15T06:00:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航行拖带—鲁航警798/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/be9a0eaeece745578f209e36cb69bc9e.html?hav=1jWj6r2hy5di8entPjyIn1t9xA"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bec8574d54f1462087a01cba5a09ab10.html": {
     "bureau": "深圳海事局",
     "cancels": [],
@@ -39023,11 +39047,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c6c5d35d7f1346ba99f74a58afa60187.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-15",
     "detail_fetched": false,
     "first_seen": "2026-09-15T05:50:37+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警794/26",
     "points": [],
     "revoked": false,
     "title": "寰宇七号轮拖带三航工9轮—鲁航警794/26",
@@ -41955,6 +41981,18 @@
     "revoked": false,
     "title": "吊装作业—津航警299/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dbe39b95ea034d91bee230978cb563ab.html?hav=1jWj6r2hy5di2acu23lgAiFWqN"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dc0cfeea14cd4d90a95b49c541ab17f7.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-15",
+    "detail_fetched": false,
+    "first_seen": "2026-09-15T06:00:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航行拖带—鲁航警797/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dc0cfeea14cd4d90a95b49c541ab17f7.html?hav=1jWj6r2hy5di8entPjyIn1t9t5"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dc18780440494586a069d5d27266fb91.html": {
     "bureau": "广西海事局",
@@ -46037,6 +46075,7 @@
       ]
     ],
     "military": true,
+    "own_id": "辽航警390/26",
     "points": [
       {
         "end": 44,
@@ -46447,6 +46486,18 @@
     "revoked": false,
     "title": "拖带作业—闽航警103/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fc3f7112acaa4a098883cb3164d86129.html?hav=1jWj6r2hy0ealksfuybZx5xeTq"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fc4b442f35d9435aba31cf58612b66c8.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-15",
+    "detail_fetched": false,
+    "first_seen": "2026-09-15T06:00:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航行拖带—鲁航警796/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fc4b442f35d9435aba31cf58612b66c8.html?hav=1jWj6r2hy5di8entPjyIn1t9ov"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fc85d1bc6c2148c78894862235910d78.html": {
     "bureau": "海南海事局",
