@@ -5008,11 +5008,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1627173fd4f547fb9bd0357ff3c87ab7.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-15",
     "detail_fetched": false,
     "first_seen": "2026-09-15T06:40:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警800/26",
     "points": [],
     "revoked": false,
     "title": "凯和拖1轮拖带利航9轮—鲁航警800/26",
