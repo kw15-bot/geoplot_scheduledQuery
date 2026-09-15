@@ -42471,6 +42471,18 @@
     "title": "LNG加注作业—沪航警704/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ddde8b1bec5745708d473d56b35361e9.html?hav=1jWj6r2hy5di2dYP9K6p38oY5g"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/de180e27002d4a888b295099f50e016b.html": {
+    "bureau": "辽宁海事局",
+    "date": "2026-09-15",
+    "detail_fetched": false,
+    "first_seen": "2026-09-15T09:50:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水深测量—辽航警391/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/de180e27002d4a888b295099f50e016b.html?hav=1jWj6r2hy5di8entPp80oRJPWr"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/de549c0318a14acebab61ebc9ab6d63d.html": {
     "bureau": "江苏海事局",
     "cancels": [],
@@ -45345,6 +45357,18 @@
     "revoked": false,
     "title": "水深测量作业—深航警39/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f3619d1f7de94321871ccb81a17b0f19.html?hav=1jWj6r2hxxKVrC2Rqk6RRkQvrA"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f378c6fb011144f783407478eec34089.html": {
+    "bureau": "福建海事局",
+    "date": "2026-09-15",
+    "detail_fetched": false,
+    "first_seen": "2026-09-15T09:50:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—闽航警164/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f378c6fb011144f783407478eec34089.html?hav=1jWj6r2hy5di8entPp80oSRnqn"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f389a9643e08454cb5aba8c8d3935d9f.html": {
     "bureau": "上海海事局",
