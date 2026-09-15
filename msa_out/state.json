@@ -34331,11 +34331,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/aa0c5b4736554dc28ba9a31828ff21c4.html": {
     "bureau": "江苏海事局",
+    "cancels": [],
     "date": "2026-09-15",
     "detail_fetched": false,
     "first_seen": "2026-09-15T00:30:37+00:00",
     "groups": [],
     "military": false,
+    "own_id": "苏航警60/26",
     "points": [],
     "revoked": false,
     "title": "9月15日“N1346”艉部总段拖带作业—苏航警60/26",
