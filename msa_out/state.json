@@ -32460,11 +32460,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/98c83d63e58e4330a0dbf671a26f7534.html": {
     "bureau": "福建海事局",
+    "cancels": [],
     "date": "2026-09-15",
     "detail_fetched": false,
     "first_seen": "2026-09-15T08:20:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "闽航警163/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—闽航警163/26",
