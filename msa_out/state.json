@@ -3448,6 +3448,18 @@
     "title": "拖带“渤海8号”—冀航警476/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/11676531e4a049d0b452f3c6ee14e674.html?hav=1jWj6r2hy2JdK5kP3STTxDlyEd"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/118517b07a01406e9f88840670efa30d.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-15",
+    "detail_fetched": false,
+    "first_seen": "2026-09-15T09:10:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "青岛拖带以及半潜作业—鲁航警801/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/118517b07a01406e9f88840670efa30d.html?hav=1jWj6r2hy5di8entPnq5RHGjGj"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/11acdd3296bb4886bb0c9a828bbb5409.html": {
     "bureau": "广西海事局",
     "cancels": [],
@@ -11022,6 +11034,18 @@
     "revoked": false,
     "title": "航标动态—冀航警594/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/37dca22303bd4873990d6964ed845ab4.html?hav=1jWj6r2hy5di2acu1zttRfOKoR"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/38034f27d3f44f0f95319510a4339c82.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-15",
+    "detail_fetched": false,
+    "first_seen": "2026-09-15T09:10:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "扫海测量—冀航警622/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/38034f27d3f44f0f95319510a4339c82.html?hav=1jWj6r2hy5di8entPp80aL2sdc"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3803e4941525472d842ec6382e922b48.html": {
     "bureau": "天津海事局",
@@ -40370,11 +40394,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cfd5b9b8e8414d7eb21a0d69acbdde42.html": {
     "bureau": "海南海事局",
+    "cancels": [],
     "date": "2026-09-15",
     "detail_fetched": false,
     "first_seen": "2026-09-15T09:00:44+00:00",
     "groups": [],
     "military": false,
+    "own_id": "琼航警176/26",
     "points": [],
     "revoked": false,
     "title": "“大航拖8”轮拖带“海湾神龙”轮—琼航警176/26",
