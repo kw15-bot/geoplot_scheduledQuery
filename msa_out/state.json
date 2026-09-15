@@ -34966,11 +34966,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/afb073fb9e5246a1a041407813d2a3ca.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-09-15",
     "detail_fetched": false,
     "first_seen": "2026-09-15T04:30:35+00:00",
     "groups": [],
     "military": false,
+    "own_id": "宜航警76/26",
     "points": [],
     "revoked": false,
     "title": "中华人民共和国宜昌海事局航行警告—宜航警76/26",
