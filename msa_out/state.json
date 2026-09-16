@@ -24490,11 +24490,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6a6275cfd98d4eab9ed2c2948deb2730.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-09-16",
     "detail_fetched": false,
     "first_seen": "2026-09-16T06:10:33+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警624/26",
     "points": [],
     "revoked": false,
     "title": "试航—冀航警624/26",
