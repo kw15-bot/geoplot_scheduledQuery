@@ -11003,6 +11003,7 @@
       ]
     ],
     "military": true,
+    "own_id": "浙航警853/26",
     "points": [
       {
         "end": 42,
@@ -45181,11 +45182,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ec3bb71566ac4dd2857fe51ba05cf804.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-16",
     "detail_fetched": false,
     "first_seen": "2026-09-16T10:31:02+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警854/26",
     "points": [],
     "revoked": false,
     "title": "CAPE SUCCESS和NEW VICTORY轮航经虾峙门外深水航槽—浙航警854/26",
