@@ -1527,6 +1527,99 @@
     "title": "扫测作业—津航警229/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/08531b59f6f3479e947be62656ce45cf.html?hav=1jWj6r2hy2JdK2otwG07ZhWocd"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0889a0520c1845be8274876897a25864.html": {
+    "bureau": "广东海事局",
+    "cancels": [],
+    "date": "2026-09-16",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-16T01:00:47+00:00",
+    "groups": [
+      [
+        {
+          "end": 64,
+          "fmt": "DDM_HYPHEN",
+          "lat": 22.05666666666667,
+          "lon": 113.65166666666667,
+          "raw": "22-03.40N 113-39.10E",
+          "start": 44
+        },
+        {
+          "end": 89,
+          "fmt": "DDM_HYPHEN",
+          "lat": 22.05666666666667,
+          "lon": 113.68833333333333,
+          "raw": "22-03.40N 113-41.30E",
+          "start": 69
+        },
+        {
+          "end": 114,
+          "fmt": "DDM_HYPHEN",
+          "lat": 22.013333333333332,
+          "lon": 113.68833333333333,
+          "raw": "22-00.80N 113-41.30E",
+          "start": 94
+        },
+        {
+          "end": 139,
+          "fmt": "DDM_HYPHEN",
+          "lat": 22.013333333333332,
+          "lon": 113.65166666666667,
+          "raw": "22-00.80N 113-39.10E",
+          "start": 119
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 64,
+        "fmt": "DDM_HYPHEN",
+        "lat": 22.05666666666667,
+        "lon": 113.65166666666667,
+        "raw": "22-03.40N 113-39.10E",
+        "start": 44
+      },
+      {
+        "end": 89,
+        "fmt": "DDM_HYPHEN",
+        "lat": 22.05666666666667,
+        "lon": 113.68833333333333,
+        "raw": "22-03.40N 113-41.30E",
+        "start": 69
+      },
+      {
+        "end": 114,
+        "fmt": "DDM_HYPHEN",
+        "lat": 22.013333333333332,
+        "lon": 113.68833333333333,
+        "raw": "22-00.80N 113-41.30E",
+        "start": 94
+      },
+      {
+        "end": 139,
+        "fmt": "DDM_HYPHEN",
+        "lat": 22.013333333333332,
+        "lon": 113.65166666666667,
+        "raw": "22-00.80N 113-39.10E",
+        "start": 119
+      }
+    ],
+    "raw_text": "珠江口，9月17日0500时至1800时，在四点连线水域范围内进行实弹射击训练： （1）22-03.40N 113-39.10E； （2）22-03.40N 113-41.30E； （3）22-00.80N 113-41.30E； （4）22-00.80N 113-39.10E。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—粤航警652/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0889a0520c1845be8274876897a25864.html?hav=1jWj6r2hy5di8gGdt6z8g4D2Cj",
+    "validity": {
+      "end": "2026-09-17T10:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月17日0500时至1800时"
+      ],
+      "start": "2026-09-16T21:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/08a93c9909d2401ba909261ea00b0cbe.html": {
     "bureau": "广东海事局",
     "cancels": [],
