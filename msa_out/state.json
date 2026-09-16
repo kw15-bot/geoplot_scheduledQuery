@@ -7335,6 +7335,99 @@
     "title": "武汉海事局关于“华航588”轮载运厦门第三东通道钢桁梁水上运输作业的航行警告—汉航警42/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f25c6e2caef4d58b842dc87abc8cd0e.html?hav=1jWj6r2hy3yfmSI92f5V4c6Rei"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f260871f76c489381d4fa745616a953.html": {
+    "bureau": "山东海事局",
+    "cancels": [],
+    "date": "2026-09-16",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-16T08:20:33+00:00",
+    "groups": [
+      [
+        {
+          "end": 33,
+          "fmt": "DDM_HYPHEN",
+          "lat": 37.6325,
+          "lon": 121.34666666666666,
+          "raw": "37-37.95N 121-20.80E",
+          "start": 13
+        },
+        {
+          "end": 53,
+          "fmt": "DDM_HYPHEN",
+          "lat": 37.66866666666667,
+          "lon": 121.38166666666666,
+          "raw": "37-40.12N 121-22.9E",
+          "start": 34
+        },
+        {
+          "end": 74,
+          "fmt": "DDM_HYPHEN",
+          "lat": 37.64116666666666,
+          "lon": 121.46333333333334,
+          "raw": "37-38.47N 121-27.80E",
+          "start": 54
+        },
+        {
+          "end": 95,
+          "fmt": "DDM_HYPHEN",
+          "lat": 37.5975,
+          "lon": 121.427,
+          "raw": "37-35.85N 121-25.62E",
+          "start": 75
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 33,
+        "fmt": "DDM_HYPHEN",
+        "lat": 37.6325,
+        "lon": 121.34666666666666,
+        "raw": "37-37.95N 121-20.80E",
+        "start": 13
+      },
+      {
+        "end": 53,
+        "fmt": "DDM_HYPHEN",
+        "lat": 37.66866666666667,
+        "lon": 121.38166666666666,
+        "raw": "37-40.12N 121-22.9E",
+        "start": 34
+      },
+      {
+        "end": 74,
+        "fmt": "DDM_HYPHEN",
+        "lat": 37.64116666666666,
+        "lon": 121.46333333333334,
+        "raw": "37-38.47N 121-27.80E",
+        "start": 54
+      },
+      {
+        "end": 95,
+        "fmt": "DDM_HYPHEN",
+        "lat": 37.5975,
+        "lon": 121.427,
+        "raw": "37-35.85N 121-25.62E",
+        "start": 75
+      }
+    ],
+    "raw_text": "黄海，9月18日至19日在37-37.95N 121-20.80E、37-40.12N 121-22.9E、37-38.47N 121-27.80E、37-35.85N 121-25.62E各点连线围成的水域内进行实弹射击。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击-黄海—鲁航警803/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f260871f76c489381d4fa745616a953.html?hav=1jWj6r2hy5di8gGdyOQnbG8BVY",
+    "validity": {
+      "end": "2026-09-19T16:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月18日至19日"
+      ],
+      "start": "2026-09-17T16:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f2f45911cb045699ff35b9abb2e627d.html": {
     "bureau": "浙江海事局",
     "cancels": [],
@@ -38467,6 +38560,18 @@
     "revoked": false,
     "title": "LNG作业—沪航警679/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bff05da06e364c449ee73c4a8e5d6958.html?hav=1jWj6r2hy3yfmVDe4XXLAvfAkZ"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c0810cdb725348b6942fab0f374a5100.html": {
+    "bureau": "福建海事局",
+    "date": "2026-09-16",
+    "detail_fetched": false,
+    "first_seen": "2026-09-16T08:20:33+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "关于调整中文NAVTEX台站B1识别码的通知—闽航警165/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c0810cdb725348b6942fab0f374a5100.html?hav=1jWj6r2hy5di8gGdyOQnfxvpI4"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c14fbdaafc964a22942d2082a602261c.html": {
     "bureau": "上海海事局",

@@ -1537,6 +1537,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "实弹射击-黄海—鲁航警803/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f260871f76c489381d4fa745616a953.html?hav=1jWj6r2hy5di8gGdyOQnbG8BVY",
+        "date": "2026-09-16",
+        "bureau": "山东海事局",
+        "group_count": 1,
+        "raw_text": "黄海，9月18日至19日在37-37.95N 121-20.80E、37-40.12N 121-22.9E、37-38.47N 121-27.80E、37-35.85N 121-25.62E各点连线围成的水域内进行实弹射击。禁止驶入。",
+        "valid_start": "2026-09-17T16:00:00+00:00",
+        "valid_end": "2026-09-19T16:00:00+00:00",
+        "valid_raw": [
+          "9月18日至19日"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.34666666666666,
+              37.6325
+            ],
+            [
+              121.427,
+              37.5975
+            ],
+            [
+              121.46333333333334,
+              37.64116666666666
+            ],
+            [
+              121.38166666666666,
+              37.66866666666667
+            ],
+            [
+              121.34666666666666,
+              37.6325
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "实弹射击—浙航警806/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1f2f45911cb045699ff35b9abb2e627d.html?hav=1jWj6r2hy5di2f19hs7gqEusBM",
         "date": "2026-09-07",
