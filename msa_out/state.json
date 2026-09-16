@@ -25958,11 +25958,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7820f7584a9743ce88088868f9260a18.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-16",
     "detail_fetched": false,
     "first_seen": "2026-09-16T07:20:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警654/26",
     "points": [],
     "revoked": false,
     "title": "“德深”轮拖带“南海五号”—粤航警654/26",
