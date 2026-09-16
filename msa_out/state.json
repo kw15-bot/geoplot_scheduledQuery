@@ -39945,11 +39945,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c83b0fe672d84b64b99fb1917b3bab11.html": {
     "bureau": "海南海事局",
+    "cancels": [],
     "date": "2026-09-16",
     "detail_fetched": false,
     "first_seen": "2026-09-16T10:00:47+00:00",
     "groups": [],
     "military": false,
+    "own_id": "琼航警177/26",
     "points": [],
     "revoked": false,
     "title": "“安工拖1”轮拖带“建基3001”轮—琼航警177/26",
