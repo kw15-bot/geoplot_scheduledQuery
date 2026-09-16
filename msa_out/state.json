@@ -1283,6 +1283,7 @@
       ]
     ],
     "military": true,
+    "own_id": "辽航警392/26",
     "points": [
       {
         "end": 41,
@@ -23058,11 +23059,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6038031049f24113a2afb3e1803c2424.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-16",
     "detail_fetched": false,
     "first_seen": "2026-09-16T09:20:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警851/26",
     "points": [],
     "revoked": false,
     "title": "航标动态--ZW3号灯浮位置调整—浙航警851/26",
@@ -27201,6 +27204,18 @@
     "revoked": false,
     "title": "潜水作业—冀航警614/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7cdc7f9e08cf46c59348504fc07098e7.html?hav=1jWj6r2hy5di8YwtBVKzYMIXvK"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7cf5fab58e294a37b35acc447304d38c.html": {
+    "bureau": "广东海事局",
+    "date": "2026-09-16",
+    "detail_fetched": false,
+    "first_seen": "2026-09-16T09:30:37+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—粤航警656/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7cf5fab58e294a37b35acc447304d38c.html?hav=1jWj6r2hy5di8gGdyPijCayyfo"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7cf84563af1a491f9603ba8177ad55ee.html": {
     "bureau": "海南海事局",
@@ -32169,6 +32184,18 @@
     "revoked": false,
     "title": "招商试012轮试航—鲁航警655/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8f01cf4dff434a5a824e02d1e3e664e5.html?hav=1jWj6r2hy3yfgMeP16qUXTovRh"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8f6213216f524089897ad5efc2f221f4.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-16",
+    "detail_fetched": false,
+    "first_seen": "2026-09-16T09:30:37+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "中文NAVTEX台站（486kHz）B1码调整—浙航警852/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8f6213216f524089897ad5efc2f221f4.html?hav=1jWj6r2hy5di8gGdyPijCc7Mzm"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8f6778b0296c45a7955096168b042209.html": {
     "bureau": "山东海事局",
