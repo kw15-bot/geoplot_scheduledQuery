@@ -1437,6 +1437,7 @@
       ]
     ],
     "military": true,
+    "own_id": "粤航警658/26",
     "points": [
       {
         "end": 60,
@@ -12458,11 +12459,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3eb90fa2b81b4d90bd852dc880612e1a.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-17",
     "detail_fetched": false,
     "first_seen": "2026-09-17T09:50:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警659/26",
     "points": [],
     "revoked": false,
     "title": "海上拖带作业—粤航警659/26",
@@ -41411,11 +41414,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cef0ea6a88a6478ebc26787083eaaa7e.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-09-17",
     "detail_fetched": false,
     "first_seen": "2026-09-17T09:50:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警393/26",
     "points": [],
     "revoked": false,
     "title": "拖带南海一号钻井平台—辽航警393/26",
