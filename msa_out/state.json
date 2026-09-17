@@ -37738,6 +37738,18 @@
       "start": "2026-08-12T23:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/baebb7e1541440c7b116a93a8820c963.html": {
+    "bureau": "福建海事局",
+    "date": "2026-09-17",
+    "detail_fetched": false,
+    "first_seen": "2026-09-17T14:30:38+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—闽航警172/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/baebb7e1541440c7b116a93a8820c963.html?hav=1jWj6r2hy5di8hjOcDtKXmMxRG"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bb3a9e734b594ce6b4230c5099209b05.html": {
     "bureau": "天津海事局",
     "cancels": [],
