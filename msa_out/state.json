@@ -12133,11 +12133,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3cdb82dbf0c64b669259553528e4dde8.html": {
     "bureau": "天津海事局",
+    "cancels": [],
     "date": "2026-09-17",
     "detail_fetched": false,
     "first_seen": "2026-09-17T06:20:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "津航警319/26",
     "points": [],
     "revoked": false,
     "title": "海管回填作业—津航警319/26",
