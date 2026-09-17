@@ -18076,6 +18076,18 @@
     "title": "潜水作业—冀航警506/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4d5d52f237724abe81018fa4b60fde94.html?hav=1jWj6r2hy3yfaJwAHJyApkwp0s"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4dbb12f123564fa68eed19c61f2d16ff.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-17",
+    "detail_fetched": false,
+    "first_seen": "2026-09-17T09:40:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "船舶试航——ARANOA—鲁航警807/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4dbb12f123564fa68eed19c61f2d16ff.html?hav=1jWj6r2hy5di8hjOX0JRk4ZqRs"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4de825297e9347ab8b13507ae9cd5338.html": {
     "bureau": "福建海事局",
     "cancels": [],
@@ -32550,6 +32562,18 @@
       ],
       "start": "2026-08-31T18:40:00+00:00"
     }
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9089a77d87d4446b83b5a89ffb60d2cc.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-17",
+    "detail_fetched": false,
+    "first_seen": "2026-09-17T09:40:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航标动态—鲁航警808/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9089a77d87d4446b83b5a89ffb60d2cc.html?hav=1jWj6r2hy5di8hjOX0JRk4Zqa4"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/908d56f9028c46b480f081beb3423551.html": {
     "bureau": "上海海事局",
