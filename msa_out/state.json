@@ -483,11 +483,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0222df0d4a4f41a09664a427c9896d99.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-17",
     "detail_fetched": false,
     "first_seen": "2026-09-17T13:00:50+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警861/26",
     "points": [],
     "revoked": false,
     "title": "XIN AN YANG轮航经虾峙门外深水航槽—浙航警861/26",
@@ -43290,6 +43292,7 @@
       ]
     ],
     "military": true,
+    "own_id": "浙航警863/26",
     "points": [
       {
         "end": 42,
@@ -43353,11 +43356,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d851e6ce059641a297836b953e794783.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-17",
     "detail_fetched": false,
     "first_seen": "2026-09-17T13:00:50+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警862/26",
     "points": [],
     "revoked": false,
     "title": "LNG船ORION SINEAD轮出港—浙航警862/26",
