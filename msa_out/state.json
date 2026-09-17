@@ -481,6 +481,18 @@
     "title": "关于“远顺6”载运船舶成品分段由乌江河口至湖北武汉青山船厂的航行警告—芜航警31/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/01ea9854ac84407caad71bb523b69ccb.html?hav=1jWj6r2hy3yfmI2t8QUpawoRQj"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0222df0d4a4f41a09664a427c9896d99.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-17",
+    "detail_fetched": false,
+    "first_seen": "2026-09-17T13:00:50+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "XIN AN YANG轮航经虾峙门外深水航槽—浙航警861/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0222df0d4a4f41a09664a427c9896d99.html?hav=1jWj6r2hy5di8hjOcBJTiq9vns"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0275ae781ef849a285bcf92524927cf0.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -43232,6 +43244,99 @@
     "title": "泊位水下检测—冀航警626/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d7ddad581a9c44cdbb8cb34b05e0d67f.html?hav=1jWj6r2hy5di8gGdyOQng70zNw"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d80ed3f4e0584e19a279e8613a99989e.html": {
+    "bureau": "浙江海事局",
+    "cancels": [],
+    "date": "2026-09-17",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-17T13:00:50+00:00",
+    "groups": [
+      [
+        {
+          "end": 42,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.45,
+          "lon": 122.04166666666667,
+          "raw": "29-27.00N 122-02.50E",
+          "start": 22
+        },
+        {
+          "end": 65,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.4,
+          "lon": 122.04166666666667,
+          "raw": "29-24.00N 122-02.50E",
+          "start": 45
+        },
+        {
+          "end": 88,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.383333333333333,
+          "lon": 122.21666666666667,
+          "raw": "29-23.00N 122-13.00E",
+          "start": 68
+        },
+        {
+          "end": 111,
+          "fmt": "DDM_HYPHEN",
+          "lat": 29.466666666666665,
+          "lon": 122.21666666666667,
+          "raw": "29-28.00N 122-13.00E",
+          "start": 91
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 42,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.45,
+        "lon": 122.04166666666667,
+        "raw": "29-27.00N 122-02.50E",
+        "start": 22
+      },
+      {
+        "end": 65,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.4,
+        "lon": 122.04166666666667,
+        "raw": "29-24.00N 122-02.50E",
+        "start": 45
+      },
+      {
+        "end": 88,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.383333333333333,
+        "lon": 122.21666666666667,
+        "raw": "29-23.00N 122-13.00E",
+        "start": 68
+      },
+      {
+        "end": 111,
+        "fmt": "DDM_HYPHEN",
+        "lat": 29.466666666666665,
+        "lon": 122.21666666666667,
+        "raw": "29-28.00N 122-13.00E",
+        "start": 91
+      }
+    ],
+    "raw_text": "东海，9月18日0730时至2300时在1）29-27.00N 122-02.50E，2）29-24.00N 122-02.50E，3）29-23.00N 122-13.00E，4）29-28.00N 122-13.00E四点连线水域范围内进行实弹射击。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—浙航警863/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d80ed3f4e0584e19a279e8613a99989e.html?hav=1jWj6r2hy5di8hjOcBJTiq9w4U",
+    "validity": {
+      "end": "2026-09-18T15:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月18日0730时至2300时"
+      ],
+      "start": "2026-09-17T23:30:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d82503fe347143499f09c734f26990b5.html": {
     "bureau": "山东海事局",
     "cancels": [],
@@ -43245,6 +43350,18 @@
     "revoked": false,
     "title": "航行拖带—鲁航警680/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d82503fe347143499f09c734f26990b5.html?hav=1jWj6r2hy3yfmI2t8UMbwbkamZ"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d851e6ce059641a297836b953e794783.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-17",
+    "detail_fetched": false,
+    "first_seen": "2026-09-17T13:00:50+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "LNG船ORION SINEAD轮出港—浙航警862/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d851e6ce059641a297836b953e794783.html?hav=1jWj6r2hy5di8hjOcBJTiq9vs0"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d86864ac145e4f12a1bbe60bbccfb845.html": {
     "bureau": "河北海事局",

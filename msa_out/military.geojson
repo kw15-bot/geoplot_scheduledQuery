@@ -9925,6 +9925,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "实弹射击—浙航警863/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d80ed3f4e0584e19a279e8613a99989e.html?hav=1jWj6r2hy5di8hjOcBJTiq9w4U",
+        "date": "2026-09-17",
+        "bureau": "浙江海事局",
+        "group_count": 1,
+        "raw_text": "东海，9月18日0730时至2300时在1）29-27.00N 122-02.50E，2）29-24.00N 122-02.50E，3）29-23.00N 122-13.00E，4）29-28.00N 122-13.00E四点连线水域范围内进行实弹射击。禁止驶入。",
+        "valid_start": "2026-09-17T23:30:00+00:00",
+        "valid_end": "2026-09-18T15:00:00+00:00",
+        "valid_raw": [
+          "9月18日0730时至2300时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              122.04166666666667,
+              29.4
+            ],
+            [
+              122.21666666666667,
+              29.383333333333333
+            ],
+            [
+              122.21666666666667,
+              29.466666666666665
+            ],
+            [
+              122.04166666666667,
+              29.45
+            ],
+            [
+              122.04166666666667,
+              29.4
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "军事训练—桂航警171/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dc18780440494586a069d5d27266fb91.html?hav=1jWj6r2hy2JdKBbPHrQDXRjfbm",
         "date": "2026-07-28",
