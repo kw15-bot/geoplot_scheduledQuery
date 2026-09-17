@@ -18256,11 +18256,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4ea4dacbd4af4fcda3d05c8e0fe90ae6.html": {
     "bureau": "广西海事局",
+    "cancels": [],
     "date": "2026-09-17",
     "detail_fetched": false,
     "first_seen": "2026-09-17T10:30:43+00:00",
     "groups": [],
     "military": false,
+    "own_id": "桂航警205/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—桂航警205/26",
