@@ -44427,11 +44427,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e456646be50d44fea042946a08b2cb09.html": {
     "bureau": "广西海事局",
+    "cancels": [],
     "date": "2026-09-17",
     "detail_fetched": false,
     "first_seen": "2026-09-17T01:30:42+00:00",
     "groups": [],
     "military": false,
+    "own_id": "桂航警204/26",
     "points": [],
     "revoked": false,
     "title": "“MERATUS LANGSA”轮试航—桂航警204/26",
