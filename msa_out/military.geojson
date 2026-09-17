@@ -8047,6 +8047,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "应急演习—津航警318/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a30edede7ce346e6ba39087c3ff3a1c0.html?hav=1jWj6r2hy5di8hjOWrHxN2UEpF",
+        "date": "2026-09-17",
+        "bureau": "天津海事局",
+        "group_count": 1,
+        "raw_text": "天津港，定于9月18日0800时至1200时，在一港池附近水域进行应急演习，演习区域为以下各点依次连线范围：38-59.26N 117-44.65E;38-59.19N 117-44.86E;38-58.81N 117-44.73E;38-58.92N 117-44.43E。希各船舶注意。",
+        "valid_start": "2026-09-18T00:00:00+00:00",
+        "valid_end": "2026-09-18T04:00:00+00:00",
+        "valid_raw": [
+          "9月18日0800时至1200时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              117.7405,
+              38.982
+            ],
+            [
+              117.7455,
+              38.98016666666667
+            ],
+            [
+              117.74766666666666,
+              38.9865
+            ],
+            [
+              117.74416666666667,
+              38.98766666666667
+            ],
+            [
+              117.7405,
+              38.982
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "军事训练—琼航警159/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a40f297b22134e1b9ea7527f2ff8708d.html?hav=1jWj6r2hy3yfgJittvf3EXB240",
         "date": "2026-08-13",

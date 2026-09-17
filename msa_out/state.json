@@ -34488,6 +34488,99 @@
     "title": "撤销鲁航警587/26—鲁航警619/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a25fdae52aff4ab0bf3825f5ccc4984b.html?hav=1jWj6r2hy2JdQ44OCmJEdcUGtF"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a30edede7ce346e6ba39087c3ff3a1c0.html": {
+    "bureau": "天津海事局",
+    "cancels": [],
+    "date": "2026-09-17",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-17T03:10:38+00:00",
+    "groups": [
+      [
+        {
+          "end": 74,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.98766666666667,
+          "lon": 117.74416666666667,
+          "raw": "38-59.26N 117-44.65E",
+          "start": 54
+        },
+        {
+          "end": 95,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.9865,
+          "lon": 117.74766666666666,
+          "raw": "38-59.19N 117-44.86E",
+          "start": 75
+        },
+        {
+          "end": 116,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.98016666666667,
+          "lon": 117.7455,
+          "raw": "38-58.81N 117-44.73E",
+          "start": 96
+        },
+        {
+          "end": 137,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.982,
+          "lon": 117.7405,
+          "raw": "38-58.92N 117-44.43E",
+          "start": 117
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 74,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.98766666666667,
+        "lon": 117.74416666666667,
+        "raw": "38-59.26N 117-44.65E",
+        "start": 54
+      },
+      {
+        "end": 95,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.9865,
+        "lon": 117.74766666666666,
+        "raw": "38-59.19N 117-44.86E",
+        "start": 75
+      },
+      {
+        "end": 116,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.98016666666667,
+        "lon": 117.7455,
+        "raw": "38-58.81N 117-44.73E",
+        "start": 96
+      },
+      {
+        "end": 137,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.982,
+        "lon": 117.7405,
+        "raw": "38-58.92N 117-44.43E",
+        "start": 117
+      }
+    ],
+    "raw_text": "天津港，定于9月18日0800时至1200时，在一港池附近水域进行应急演习，演习区域为以下各点依次连线范围：38-59.26N 117-44.65E;38-59.19N 117-44.86E;38-58.81N 117-44.73E;38-58.92N 117-44.43E。希各船舶注意。",
+    "revoked": false,
+    "title": "应急演习—津航警318/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a30edede7ce346e6ba39087c3ff3a1c0.html?hav=1jWj6r2hy5di8hjOWrHxN2UEpF",
+    "validity": {
+      "end": "2026-09-18T04:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月18日0800时至1200时"
+      ],
+      "start": "2026-09-18T00:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a32987d3af89474e9d80939ef66b6c1c.html": {
     "bureau": "浙江海事局",
     "cancels": [],
