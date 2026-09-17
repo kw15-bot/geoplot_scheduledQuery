@@ -3931,8 +3931,6 @@
         }
       ]
     ],
-    "list_missing": true,
-    "list_missing_since": "2026-09-06T07:20:30+00:00",
     "military": true,
     "own_id": "粤航警626/26",
     "points": [
@@ -10521,6 +10519,18 @@
     "revoked": false,
     "title": "探井作业—津航警309/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/34383b6b585640c0b92549d318220edb.html?hav=1jWj6r2hy5di8entPhORVpjtNV"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/34548425b50b401ea91590633e64d2d7.html": {
+    "bureau": "广东海事局",
+    "date": "2026-09-17",
+    "detail_fetched": false,
+    "first_seen": "2026-09-17T07:50:34+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—粤航警657/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/34548425b50b401ea91590633e64d2d7.html?hav=1jWj6r2hy5di8hjOWxjaqKtClS"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/346fb38b0bc24e99a92dc2fbdbc7dcb7.html": {
     "bureau": "上海海事局",
@@ -21378,8 +21388,6 @@
         }
       ]
     ],
-    "list_missing": true,
-    "list_missing_since": "2026-09-04T07:10:29+00:00",
     "military": true,
     "own_id": "粤航警621/26",
     "points": [
@@ -37886,6 +37894,18 @@
     "title": "水下检验—冀航警568/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bdc0cb1646b243cbbc0c90a623149a4a.html?hav=1jWj6r2hy3yfmSI8xOvlIRgesV"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/be08f149f2fe4c3cbba846d9909247d3.html": {
+    "bureau": "连云港海事局",
+    "date": "2026-09-17",
+    "detail_fetched": false,
+    "first_seen": "2026-09-17T07:50:34+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "黄海南部“神洋188”轮试航—云航警153/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/be08f149f2fe4c3cbba846d9909247d3.html?hav=1jWj6r2hy5di8hjOWxjauvsTQO"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/be091775eb2841099105996000551eab.html": {
     "bureau": "河北海事局",
     "cancels": [],
@@ -48117,8 +48137,6 @@
         }
       ]
     ],
-    "list_missing": true,
-    "list_missing_since": "2026-09-11T09:40:31+00:00",
     "military": true,
     "own_id": "粤航警635/26",
     "points": [
