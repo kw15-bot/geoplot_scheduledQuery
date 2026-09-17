@@ -25392,11 +25392,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6e342e2d78c0420dbf37d26fbf82d68d.html": {
     "bureau": "连云港海事局",
+    "cancels": [],
     "date": "2026-09-17",
     "detail_fetched": false,
     "first_seen": "2026-09-17T03:20:35+00:00",
     "groups": [],
     "military": false,
+    "own_id": "云航警152/26",
     "points": [],
     "revoked": false,
     "title": "渔船群捕捞作业—云航警152/26",
