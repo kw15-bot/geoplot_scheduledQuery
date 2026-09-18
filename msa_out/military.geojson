@@ -2637,6 +2637,8 @@
         "valid_raw": [
           "9月17日0730时至1630时"
         ],
+        "list_missing": true,
+        "list_missing_since": "2026-09-18T12:20:30+00:00",
         "group_index": 1,
         "kind": "area"
       },
