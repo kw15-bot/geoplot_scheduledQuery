@@ -9745,6 +9745,18 @@
       "start": "2026-08-27T23:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/299c27b4f6924488a5299968ca91514c.html": {
+    "bureau": "上海海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T11:50:33+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—沪航警739/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/299c27b4f6924488a5299968ca91514c.html?hav=1jWj6r2hy5di8jC95dU1YYy1ay"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/29a34378df55419ba610882d878eec54.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -15819,6 +15831,18 @@
     "title": "“Wira Elaine”轮试航—浙航警856/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4569961ac35645c2bda4ca0a63de992b.html?hav=1jWj6r2hy5di8gGe3ail6aDqIp"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4570b039f6014e6e852c49f74f7ca88a.html": {
+    "bureau": "上海海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T11:50:33+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—沪航警740/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4570b039f6014e6e852c49f74f7ca88a.html?hav=1jWj6r2hy5di8jC95dU1YYy1f2"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4577a986f0e04d78beef425bd446607c.html": {
     "bureau": "浙江海事局",
     "cancels": [],
@@ -16029,6 +16053,18 @@
     "revoked": false,
     "title": "“NUGGET”轮试航—浙航警833/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4678478efb514034b5f834a1f8fc4886.html?hav=1jWj6r2hy5di8YwtBOtM50UOML"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/46bb25dd6cd342e2b7773165a4a1610d.html": {
+    "bureau": "上海海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T11:50:33+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "LNG船舶—沪航警741/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/46bb25dd6cd342e2b7773165a4a1610d.html?hav=1jWj6r2hy5di8jC95dU1YYy1j6"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/46c97f939f014a2d9060fcf72c001190.html": {
     "bureau": "山东海事局",
@@ -20779,6 +20815,8 @@
         }
       ]
     ],
+    "list_missing": true,
+    "list_missing_since": "2026-09-18T11:50:33+00:00",
     "military": true,
     "own_id": "冀航警560/26",
     "points": [
@@ -36024,8 +36062,6 @@
         }
       ]
     ],
-    "list_missing": true,
-    "list_missing_since": "2026-09-03T03:50:29+00:00",
     "military": true,
     "own_id": "冀航警573/26",
     "points": [
@@ -37832,6 +37868,18 @@
     "revoked": false,
     "title": "LNG船PAN EUROPE轮进港—浙航警690/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b462c26238ec44468bcf81fe3a3b2543.html?hav=1jWj6r2hy2JdKD49qUamyhHyN6"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b4669fb5f0e44d7e827cb5041335527f.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T11:50:33+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警636/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b4669fb5f0e44d7e827cb5041335527f.html?hav=1jWj6r2hy5di8jC95dU1TtRAqy"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b4f1e4a5d6eb4dd78afcef511b713a12.html": {
     "bureau": "天津海事局",
@@ -42445,6 +42493,18 @@
     "title": "航标动态—永宁L2号灯浮恢复正常—浙航警723/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cc4dd9e6a23643749445a701dd15671b.html?hav=1jWj6r2hy3yfgIG9QbE4ObsI1B"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cc4fa41a7c6b4d928f53d780c5bc7a6b.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T11:50:33+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "泊位水下检测—冀航警637/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cc4fa41a7c6b4d928f53d780c5bc7a6b.html?hav=1jWj6r2hy5di8jC95dU1TtRAv2"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/cc837b6469474c4bbe550d78d0d12766.html": {
     "bureau": "海南海事局",
     "cancels": [],
@@ -44885,8 +44945,6 @@
         }
       ]
     ],
-    "list_missing": true,
-    "list_missing_since": "2026-09-11T07:20:38+00:00",
     "military": true,
     "own_id": "冀航警595/26",
     "points": [
@@ -46840,6 +46898,18 @@
     "title": "拖带作业-威港拖33拖带茂发2008—鲁航警737/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e8eae628da9b42359aca3599495dd505.html?hav=1jWj6r2hy5di2XhOuq0NfMvz4G"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e91a03855bb84c0ab3b001d84b4ae57a.html": {
+    "bureau": "上海海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T11:50:33+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "LNG作业—沪航警742/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e91a03855bb84c0ab3b001d84b4ae57a.html?hav=1jWj6r2hy5di8jC95dU1YYy1jB"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e93b9e56ec5544f2921de8f446f21407.html": {
     "bureau": "山东海事局",
     "cancels": [],
@@ -47691,8 +47761,6 @@
         }
       ]
     ],
-    "list_missing": true,
-    "list_missing_since": "2026-09-15T01:20:30+00:00",
     "military": true,
     "own_id": "冀航警600/26",
     "points": [
