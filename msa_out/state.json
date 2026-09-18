@@ -26736,6 +26736,18 @@
     "title": "撤销津航警297/26—津航警310/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/778d069feaf340c2a8dd326a328bf724.html?hav=1jWj6r2hy5di8entPhORVpjtRg"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7795c79f7cce403da96655a15180549f.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T07:20:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "帆船比赛—鲁航警810/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7795c79f7cce403da96655a15180549f.html?hav=1jWj6r2hy5di8jC95YKJEKLDMP"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/77ada01abe1f4beaac08a78d55901b69.html": {
     "bureau": "河北海事局",
     "cancels": [],
@@ -42691,11 +42703,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d39cbba2a20e4d50aba4c91b09a31b60.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-09-18",
     "detail_fetched": false,
     "first_seen": "2026-09-18T07:10:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警635/26",
     "points": [],
     "revoked": false,
     "title": "扫海测量—冀航警635/26",
@@ -44426,6 +44440,18 @@
     "revoked": false,
     "title": "水上水下作业—粤航警606/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dfd108f0091f4da8a605ad9c361d43c3.html?hav=1jWj6r2hy3yfmTktb7weSqJtg3"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e033fc0299fb4d54b3621a040342006e.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T07:20:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "招商试014轮试航—鲁航警809/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e033fc0299fb4d54b3621a040342006e.html?hav=1jWj6r2hy5di8jC95YKJ9ntWmU"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e03a56f7875a44e9b426680f44cd2653.html": {
     "bureau": "辽宁海事局",
