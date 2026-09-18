@@ -12204,11 +12204,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3c078f55edc741eb904219a59ab17422.html": {
     "bureau": "天津海事局",
+    "cancels": [],
     "date": "2026-09-18",
     "detail_fetched": false,
     "first_seen": "2026-09-18T07:00:48+00:00",
     "groups": [],
     "military": false,
+    "own_id": "北部航警38/26",
     "points": [],
     "revoked": false,
     "title": "有效航警简报—北部航警38/26",
@@ -34684,11 +34686,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a09b5510520544219c3530b0e3c330f0.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-18",
     "detail_fetched": false,
     "first_seen": "2026-09-18T07:00:48+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警661/26",
     "points": [],
     "revoked": false,
     "title": "“宇航托8”轮拖带“海恩2”—粤航警661/26",
@@ -42684,6 +42688,18 @@
     "revoked": false,
     "title": "关于“长航货运019”轮开展试航作业的航行警告—芜航警46/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d3509fca78cb480bbf8f436861afd89d.html?hav=1jWj6r2hy5di2WEeMLrIpEbQUk"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d39cbba2a20e4d50aba4c91b09a31b60.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T07:10:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "扫海测量—冀航警635/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d39cbba2a20e4d50aba4c91b09a31b60.html?hav=1jWj6r2hy5di8jC95YKJ9dfxpf"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d3d1941d4f9b4af5bb0ca662c4c641fc.html": {
     "bureau": "辽宁海事局",
