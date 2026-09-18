@@ -2001,6 +2001,18 @@
     "title": "台风预警—闽航警136/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0a19822e525f4dd0a6759d4d1de649b7.html?hav=1jWj6r2hy3yfaLOukd7ERsOyvo"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0a2e340559da4a2fb6f664a2ef5a90ba.html": {
+    "bureau": "天津海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T10:50:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "扫测作业—津航警320/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0a2e340559da4a2fb6f664a2ef5a90ba.html?hav=1jWj6r2hy5di8jC95cC5xM40L3"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0a978cf5baa949fd81e954b9a57918f9.html": {
     "bureau": "广西海事局",
     "cancels": [],
@@ -32991,11 +33003,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8e929d5eef5b43d99c94846abc8b0040.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-18",
     "detail_fetched": false,
     "first_seen": "2026-09-18T10:40:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警815/26",
     "points": [],
     "revoked": false,
     "title": "青港拖25拖带友联青岛—鲁航警815/26",
