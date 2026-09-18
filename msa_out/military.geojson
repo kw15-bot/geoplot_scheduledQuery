@@ -888,6 +888,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "军事训练—琼航警179/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/14f6f46dc13249309f7810e93d8e5f5d.html?hav=1jWj6r2hy5di8jC95YKJJ28qk1",
+        "date": "2026-09-18",
+        "bureau": "海南海事局",
+        "group_count": 1,
+        "raw_text": "北部湾，自9月19日至20日每天0900时至1200时，将在1）109-13.18E 19-52.62N；2）109-15.14E 19-52.63N；3）109-14.69E 19-59.12N；4）109-12.81E 19-59.03N诸点连线水域范围内进行军事训练。禁止驶入。",
+        "valid_start": "2026-09-19T01:00:00+00:00",
+        "valid_end": "2026-09-20T04:00:00+00:00",
+        "valid_raw": [
+          "自9月19日至20日每天0900时至1200时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              109.21966666666667,
+              19.877
+            ],
+            [
+              109.25233333333334,
+              19.877166666666668
+            ],
+            [
+              109.24483333333333,
+              19.985333333333333
+            ],
+            [
+              109.2135,
+              19.983833333333333
+            ],
+            [
+              109.21966666666667,
+              19.877
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "火箭发射—沪航警561/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/15c875ed4da0467fb3a818dea65a6a39.html?hav=1jWj6r2hy2JdE8tASn6EX7sywM",
         "date": "2026-07-18",
