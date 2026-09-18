@@ -927,6 +927,18 @@
     "title": "拖带作业—沪航警564/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/04403854a2834537be883fab7e2e3b14.html?hav=1jWj6r2hy2JdEALv1Oysp8JAjT"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/044294ce92b249908d2063e851dba71b.html": {
+    "bureau": "广东海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T09:00:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "XJ26-2-1井场勘察作业—粤航警668/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/044294ce92b249908d2063e851dba71b.html?hav=1jWj6r2hy5di8jC95ZcF3guwT5"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/04c79f1370af40918a20004d8ad9a7da.html": {
     "bureau": "上海海事局",
     "cancels": [],
@@ -13199,11 +13211,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/40fa22a9e96e48888dcceadb311c4308.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-18",
     "detail_fetched": false,
     "first_seen": "2026-09-18T08:50:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警663/26",
     "points": [],
     "revoked": false,
     "title": "海底电缆维修作业—粤航警663/26",
@@ -27064,11 +27078,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/78b413ab017a45eabff390a1c80314e7.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-18",
     "detail_fetched": false,
     "first_seen": "2026-09-18T08:50:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警662/26",
     "points": [],
     "revoked": false,
     "title": "勘察作业—粤航警662/26",
@@ -32010,6 +32026,99 @@
     "title": "LNG加注作业—沪航警635/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/86abb6bdf55a4eaf8e58342c7d29e86b.html?hav=1jWj6r2hy3yfgMeP6S9wGTo5vM"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/86ecf24828194d57938e09a424200a6c.html": {
+    "bureau": "广东海事局",
+    "cancels": [],
+    "date": "2026-09-18",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-18T09:00:45+00:00",
+    "groups": [
+      [
+        {
+          "end": 61,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.783333333333335,
+          "lon": 113.63333333333334,
+          "raw": "21-47.00N 113-38.00E",
+          "start": 41
+        },
+        {
+          "end": 86,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.783333333333335,
+          "lon": 113.68333333333334,
+          "raw": "21-47.00N 113-41.00E",
+          "start": 66
+        },
+        {
+          "end": 111,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.733333333333334,
+          "lon": 113.68333333333334,
+          "raw": "21-44.00N 113-41.00E",
+          "start": 91
+        },
+        {
+          "end": 136,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.733333333333334,
+          "lon": 113.63333333333334,
+          "raw": "21-44.00N 113-38.00E",
+          "start": 116
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 61,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.783333333333335,
+        "lon": 113.63333333333334,
+        "raw": "21-47.00N 113-38.00E",
+        "start": 41
+      },
+      {
+        "end": 86,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.783333333333335,
+        "lon": 113.68333333333334,
+        "raw": "21-47.00N 113-41.00E",
+        "start": 66
+      },
+      {
+        "end": 111,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.733333333333334,
+        "lon": 113.68333333333334,
+        "raw": "21-44.00N 113-41.00E",
+        "start": 91
+      },
+      {
+        "end": 136,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.733333333333334,
+        "lon": 113.63333333333334,
+        "raw": "21-44.00N 113-38.00E",
+        "start": 116
+      }
+    ],
+    "raw_text": "南海，9月21日0800时至1300时，在以下四点连线海域内进行实弹射击： （1）21-47.00N 113-38.00E； （2）21-47.00N 113-41.00E； （3）21-44.00N 113-41.00E； （4）21-44.00N 113-38.00E。禁止驶入。",
+    "revoked": false,
+    "title": "实弹射击—粤航警664/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/86ecf24828194d57938e09a424200a6c.html?hav=1jWj6r2hy5di8jC95ZcEz4nHM8",
+    "validity": {
+      "end": "2026-09-21T05:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月21日0800时至1300时"
+      ],
+      "start": "2026-09-21T00:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/86fad8ec60d74809baa3fe95f0768cb6.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -34561,6 +34670,30 @@
     "title": "关于“永恒6”载运船舶成品分段由慈湖河口至湖北武汉青山船厂的航行警告—芜航警19/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9c345204416545d6a4eb761580c0132a.html?hav=1jWj6r2hy2JdE7QPosTzrnnlv1"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9c5432e7f2af41da80c158f80437dec2.html": {
+    "bureau": "广东海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T09:00:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "XJ27-8-1井场勘察作业—粤航警666/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9c5432e7f2af41da80c158f80437dec2.html?hav=1jWj6r2hy5di8jC95ZcF3fmXwu"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9c60402959b34b048928ec3fa4db2ba7.html": {
+    "bureau": "广东海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T09:00:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "南海KP11-4-12井钻井作业—粤航警665/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9c60402959b34b048928ec3fa4db2ba7.html?hav=1jWj6r2hy5di8jC95ZcF3dVkyX"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9c77a34262a3471fb93360969d1c2560.html": {
     "bureau": "长江海事局",
     "cancels": [],
@@ -34770,6 +34903,18 @@
     "revoked": false,
     "title": "武汉海事局关于厦门第三东通道钢桁梁水上运输作业的航行警告—汉航警44/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9ee4724e6e6a4cdcb703f1b9efbf0fce.html?hav=1jWj6r2hy3yfsMDsQwzMD7xppP"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9f5e5182db084063a1a847906446a84a.html": {
+    "bureau": "广东海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T09:00:45+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "南海KP18-1-10d井钻井作业—粤航警667/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9f5e5182db084063a1a847906446a84a.html?hav=1jWj6r2hy5di8jC95ZcF3fmY9F"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9ff966054a784cffb8ec832015b0fb4e.html": {
     "bureau": "天津海事局",
