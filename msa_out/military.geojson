@@ -9237,6 +9237,10 @@
         "valid_raw": [
           "9月19日0700时至1700时"
         ],
+        "revoked": true,
+        "revoked_by": [
+          "浙航警869/26"
+        ],
         "group_index": 1,
         "kind": "area"
       },
