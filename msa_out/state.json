@@ -4330,6 +4330,7 @@
       ]
     ],
     "military": true,
+    "own_id": "琼航警179/26",
     "points": [
       {
         "end": 52,
@@ -25044,6 +25045,18 @@
       ],
       "start": "2026-09-15T16:00:00+00:00"
     }
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/68c4bfcf5c5a4c4e998b21012fecc98c.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T07:40:30+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航标漂失—鲁航警811/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/68c4bfcf5c5a4c4e998b21012fecc98c.html?hav=1jWj6r2hy5di8jC95YKJNhfhU1"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/68e200503d684b369067e47fdc2e7b8a.html": {
     "bureau": "福建海事局",
