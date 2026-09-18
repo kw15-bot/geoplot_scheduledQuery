@@ -25046,6 +25046,18 @@
       "start": "2026-09-09T01:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/694912dc763141a28ced51208a81572c.html": {
+    "bureau": "广东海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T06:50:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—粤航警660/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/694912dc763141a28ced51208a81572c.html?hav=1jWj6r2hy5di8jC95X2NvtEZCV"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/695aa19416fb44b0b2d0ef7fb9da3333.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -39551,6 +39563,18 @@
     "revoked": false,
     "title": "LNG作业—沪航警679/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bff05da06e364c449ee73c4a8e5d6958.html?hav=1jWj6r2hy3yfmVDe4XXLAvfAkZ"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c06b11917e5c41a1b3c06244b20c920d.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-18",
+    "detail_fetched": false,
+    "first_seen": "2026-09-18T06:50:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警634/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c06b11917e5c41a1b3c06244b20c920d.html?hav=1jWj6r2hy5di8jC95X2NrH6uHs"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c0810cdb725348b6942fab0f374a5100.html": {
     "bureau": "福建海事局",
