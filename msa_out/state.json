@@ -44622,6 +44622,83 @@
     "title": "拖带作业—津航警240/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d730505c66304b3a9b34144d7d2c78ba.html?hav=1jWj6r2hy2JdKA8ejEFdsLoNN8"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d730945f8fc040bb94e2356e45141f44.html": {
+    "bureau": "河北海事局",
+    "cancels": [],
+    "date": "2026-09-19",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-19T12:40:28+00:00",
+    "groups": [
+      [
+        {
+          "end": 51,
+          "fmt": "DMS_PREFIX",
+          "lat": 39.40972222222222,
+          "lon": 119.22888888888889,
+          "raw": "N 39°24'35\" E 119°13'44\"",
+          "start": 27
+        },
+        {
+          "end": 124,
+          "fmt": "DMS_PREFIX",
+          "lat": 39.403888888888886,
+          "lon": 119.47333333333333,
+          "raw": "N 39°24'14\" E 119°28'24\"",
+          "start": 100
+        },
+        {
+          "end": 149,
+          "fmt": "DMS_PREFIX",
+          "lat": 39.22027777777778,
+          "lon": 119.1975,
+          "raw": "N 39°13'13\" E 119°11'51\"",
+          "start": 125
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 51,
+        "fmt": "DMS_PREFIX",
+        "lat": 39.40972222222222,
+        "lon": 119.22888888888889,
+        "raw": "N 39°24'35\" E 119°13'44\"",
+        "start": 27
+      },
+      {
+        "end": 124,
+        "fmt": "DMS_PREFIX",
+        "lat": 39.403888888888886,
+        "lon": 119.47333333333333,
+        "raw": "N 39°24'14\" E 119°28'24\"",
+        "start": 100
+      },
+      {
+        "end": 149,
+        "fmt": "DMS_PREFIX",
+        "lat": 39.22027777777778,
+        "lon": 119.1975,
+        "raw": "N 39°13'13\" E 119°11'51\"",
+        "start": 125
+      }
+    ],
+    "raw_text": "渤海，9月21日0000时至9月24日2400时， 以N 39°24′35″、E 119°13′44″为顶点，正东方向至正南偏西6°、圆心角为96°的扇形区域。该扇形区域所对应圆弧的2个端点坐标分别为N 39°24′14″、E 119°28′24″和N 39°13′13″、E 119°11′51″。该扇形区域内进行实弹射击活动。禁止驶入。",
+    "revoked": false,
+    "title": "军事任务—冀航警641/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d730945f8fc040bb94e2356e45141f44.html?hav=1jWj6r2hy5di8ketjMUuZkUKgb",
+    "validity": {
+      "end": "2026-09-24T16:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月21日0000时至9月24日2400时"
+      ],
+      "start": "2026-09-20T16:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d781fd14a53e4a9d8129bc21ae0c4f97.html": {
     "bureau": "山东海事局",
     "cancels": [],
