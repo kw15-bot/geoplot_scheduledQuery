@@ -18706,6 +18706,18 @@
       "start": "2026-09-08T23:30:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4f087e41d2164d47b612f6a3f0dfeb94.html": {
+    "bureau": "广东海事局",
+    "date": "2026-09-19",
+    "detail_fetched": false,
+    "first_seen": "2026-09-19T04:00:42+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "沉船警告—粤航警674/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4f087e41d2164d47b612f6a3f0dfeb94.html?hav=1jWj6r2hy5di8kete3lJtqNu1n"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4f5440591a1648b59e7c357461302e3f.html": {
     "bureau": "浙江海事局",
     "cancels": [],
