@@ -22029,6 +22029,18 @@
     "title": "关于“禹成拖001”轮拖带“益海嘉里01”的航行警告—芜航警45/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5c5c258c26e94efa9d4c8ecd4e19e937.html?hav=1jWj6r2hy5di2WEeME7jkdcSV5"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5c5d58f748144651bcf1e64c1322a313.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-19",
+    "detail_fetched": false,
+    "first_seen": "2026-09-19T10:30:36+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“经典太平”轮试航—浙航警875/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5c5d58f748144651bcf1e64c1322a313.html?hav=1jWj6r2hy5di8keteCmoQA81dV"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5c76d61117884ba681fcfe23358ac528.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -39140,6 +39152,18 @@
       ],
       "start": "2026-07-08T09:00:00+00:00"
     }
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bce932b9c2e34dd88a799818046ac5b2.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-19",
+    "detail_fetched": false,
+    "first_seen": "2026-09-19T10:30:36+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“巨杰12001”轮试航—浙航警874/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bce932b9c2e34dd88a799818046ac5b2.html?hav=1jWj6r2hy5di8keteCmoQ8zd7H"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bd5c310f17d3414884ba9a1c2ebc3f6a.html": {
     "bureau": "山东海事局",
