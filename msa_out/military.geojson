@@ -5009,8 +5009,6 @@
           "9月15日1030时至1400时",
           "9月16日1200时至1400时"
         ],
-        "list_missing": true,
-        "list_missing_since": "2026-09-17T09:50:31+00:00",
         "group_index": 1,
         "kind": "area"
       },
@@ -10014,8 +10012,6 @@
         "valid_raw": [
           "9月4日0600时至1800时"
         ],
-        "list_missing": true,
-        "list_missing_since": "2026-09-09T09:01:21+00:00",
         "group_index": 1,
         "kind": "area"
       },
