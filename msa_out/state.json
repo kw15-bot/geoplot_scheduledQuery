@@ -24403,11 +24403,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/64b16962cb0b4181a134f322e377b2b6.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-19",
     "detail_fetched": false,
     "first_seen": "2026-09-19T09:20:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警873/26",
     "points": [],
     "revoked": false,
     "title": "HARBOUR SPLENDOR轮航经虾峙门外深水航槽—浙航警873/26",
