@@ -18708,11 +18708,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4f087e41d2164d47b612f6a3f0dfeb94.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-19",
     "detail_fetched": false,
     "first_seen": "2026-09-19T04:00:42+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警674/26",
     "points": [],
     "revoked": false,
     "title": "沉船警告—粤航警674/26",
