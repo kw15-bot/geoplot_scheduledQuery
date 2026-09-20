@@ -15915,11 +15915,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/458c92fd0dd342f99838695d645bce7d.html": {
     "bureau": "连云港海事局",
+    "cancels": [],
     "date": "2026-09-20",
     "detail_fetched": false,
     "first_seen": "2026-09-20T07:30:37+00:00",
     "groups": [],
     "military": false,
+    "own_id": "云航警155/26",
     "points": [],
     "revoked": false,
     "title": "黄海南部“KASAGANAHAN 1”轮试航—云航警155/26",
@@ -46757,7 +46759,7 @@
     "points": [],
     "revoked": false,
     "title": "航行拖带—鲁航警818/26",
-    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e2f0779e6fbb43ecacd3b63f93101bba.html?hav=1jWj6r2hy5diEaCNRtuXcRTrXO"
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e2f0779e6fbb43ecacd3b63f93101bba.html?hav=1jWj6r2hy5diEaCNRvCT4JKBa2"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e307cf05d4834e1aa49421ad38b973eb.html": {
     "bureau": "连云港海事局",
