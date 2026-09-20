@@ -14597,6 +14597,18 @@
       "start": "2026-09-10T01:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/42aa573404d84daa8715c0600ae6b6f2.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-20",
+    "detail_fetched": false,
+    "first_seen": "2026-09-20T09:50:30+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“HORIZON LETO”轮试航—浙航警876/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/42aa573404d84daa8715c0600ae6b6f2.html?hav=1jWj6r2hy5diEaCNRxmKGfj2bH"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/42b92e093b1a481893f3b91edb6f1f23.html": {
     "bureau": "辽宁海事局",
     "cancels": [],
