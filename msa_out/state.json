@@ -51000,6 +51000,99 @@
     "title": "吊装作业—津航警224/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fc1e2e4696884eb5abd2fa326ce9abe7.html?hav=1jWj6r2hy2JdE7QPu8djZPV5Xh"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fc30c99115b64ea890646f858db4608b.html": {
+    "bureau": "海南海事局",
+    "cancels": [],
+    "date": "2026-09-20",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-20T14:20:28+00:00",
+    "groups": [
+      [
+        {
+          "end": 46,
+          "fmt": "DDM_HYPHEN",
+          "lat": 19.355,
+          "lon": 110.89,
+          "raw": "19-21.30N 110-53.40E",
+          "start": 26
+        },
+        {
+          "end": 67,
+          "fmt": "DDM_HYPHEN",
+          "lat": 19.355,
+          "lon": 110.94,
+          "raw": "19-21.30N 110-56.40E",
+          "start": 47
+        },
+        {
+          "end": 88,
+          "fmt": "DDM_HYPHEN",
+          "lat": 19.305,
+          "lon": 110.94,
+          "raw": "19-18.30N 110-56.40E",
+          "start": 68
+        },
+        {
+          "end": 109,
+          "fmt": "DDM_HYPHEN",
+          "lat": 19.305,
+          "lon": 110.89,
+          "raw": "19-18.30N 110-53.40E",
+          "start": 89
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 46,
+        "fmt": "DDM_HYPHEN",
+        "lat": 19.355,
+        "lon": 110.89,
+        "raw": "19-21.30N 110-53.40E",
+        "start": 26
+      },
+      {
+        "end": 67,
+        "fmt": "DDM_HYPHEN",
+        "lat": 19.355,
+        "lon": 110.94,
+        "raw": "19-21.30N 110-56.40E",
+        "start": 47
+      },
+      {
+        "end": 88,
+        "fmt": "DDM_HYPHEN",
+        "lat": 19.305,
+        "lon": 110.94,
+        "raw": "19-18.30N 110-56.40E",
+        "start": 68
+      },
+      {
+        "end": 109,
+        "fmt": "DDM_HYPHEN",
+        "lat": 19.305,
+        "lon": 110.89,
+        "raw": "19-18.30N 110-53.40E",
+        "start": 89
+      }
+    ],
+    "raw_text": "南海，9月21日0800时至9月22日1800时，在19-21.30N 110-53.40E、19-21.30N 110-56.40E、19-18.30N 110-56.40E和19-18.30N 110-53.40E四点连线水域范围内进行军事训练，禁止驶入。",
+    "revoked": false,
+    "title": "军事训练—琼航警183/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fc30c99115b64ea890646f858db4608b.html?hav=1jWj6r2hy5diEaCNXBMCljfXvw",
+    "validity": {
+      "end": "2026-09-22T10:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月21日0800时至9月22日1800时"
+      ],
+      "start": "2026-09-21T00:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fc3f7112acaa4a098883cb3164d86129.html": {
     "bureau": "福建海事局",
     "cancels": [],
