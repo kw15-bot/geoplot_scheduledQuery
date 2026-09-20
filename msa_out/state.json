@@ -26486,11 +26486,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7051a2a85f264c159821a507dd55ff49.html": {
     "bureau": "天津海事局",
+    "cancels": [],
     "date": "2026-09-20",
     "detail_fetched": false,
     "first_seen": "2026-09-20T06:20:35+00:00",
     "groups": [],
     "military": false,
+    "own_id": "津航警322/26",
     "points": [],
     "revoked": false,
     "title": "水深测量—津航警322/26",
@@ -46717,6 +46719,18 @@
     "title": "关于“太江1007”轮试航作业的航行警告—黄海航警48/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e2e787e1b20a4321a7cf43c7c0cdfdb4.html?hav=1jWj6r2hy5di8YwtBRTD3Pht34"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e2f0779e6fbb43ecacd3b63f93101bba.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-20",
+    "detail_fetched": false,
+    "first_seen": "2026-09-20T06:30:41+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航行拖带—鲁航警818/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e2f0779e6fbb43ecacd3b63f93101bba.html?hav=1jWj6r2hy5diEaCNRtuXcRTrXO"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e307cf05d4834e1aa49421ad38b973eb.html": {
     "bureau": "连云港海事局",
     "cancels": [],
@@ -49861,6 +49875,18 @@
     "revoked": false,
     "title": "LNG加注作业—沪航警628/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f6d3fa7066cd4441b158fb1996951d3c.html?hav=1jWj6r2hy3yfgLBeXozMfvSseX"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f6fe7e62f7fe420ab92231c9648a53ec.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-20",
+    "detail_fetched": false,
+    "first_seen": "2026-09-20T06:30:41+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航行拖带—鲁航警819/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f6fe7e62f7fe420ab92231c9648a53ec.html?hav=1jWj6r2hy5diEaCNRtuXcRTrbZ"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f728adb9f083456eb1d896aa47580db0.html": {
     "bureau": "深圳海事局",
