@@ -652,6 +652,99 @@
     "title": "拖带作业—津航警293/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/036b6bb306ae4532b030c6cf80b8ed9a.html?hav=1jWj6r2hy5di2WEeMN9ELlyakF"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0396fba1a50b476898db53c005fec123.html": {
+    "bureau": "海南海事局",
+    "cancels": [],
+    "date": "2026-09-20",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-20T10:30:37+00:00",
+    "groups": [
+      [
+        {
+          "end": 41,
+          "fmt": "DDM_HYPHEN",
+          "lat": 18.384,
+          "lon": 111.908,
+          "raw": "18-23.04N 111-54.48E",
+          "start": 21
+        },
+        {
+          "end": 62,
+          "fmt": "DDM_HYPHEN",
+          "lat": 18.397,
+          "lon": 112.476,
+          "raw": "18-23.82N 112-28.56E",
+          "start": 42
+        },
+        {
+          "end": 83,
+          "fmt": "DDM_HYPHEN",
+          "lat": 17.223,
+          "lon": 112.503,
+          "raw": "17-13.38N 112-30.18E",
+          "start": 63
+        },
+        {
+          "end": 104,
+          "fmt": "DDM_HYPHEN",
+          "lat": 17.21,
+          "lon": 111.939,
+          "raw": "17-12.60N 111-56.34E",
+          "start": 84
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 41,
+        "fmt": "DDM_HYPHEN",
+        "lat": 18.384,
+        "lon": 111.908,
+        "raw": "18-23.04N 111-54.48E",
+        "start": 21
+      },
+      {
+        "end": 62,
+        "fmt": "DDM_HYPHEN",
+        "lat": 18.397,
+        "lon": 112.476,
+        "raw": "18-23.82N 112-28.56E",
+        "start": 42
+      },
+      {
+        "end": 83,
+        "fmt": "DDM_HYPHEN",
+        "lat": 17.223,
+        "lon": 112.503,
+        "raw": "17-13.38N 112-30.18E",
+        "start": 63
+      },
+      {
+        "end": 104,
+        "fmt": "DDM_HYPHEN",
+        "lat": 17.21,
+        "lon": 111.939,
+        "raw": "17-12.60N 111-56.34E",
+        "start": 84
+      }
+    ],
+    "raw_text": "南海，9月24日1600时至1800时，在18-23.04N/111-54.48E、18-23.82N/112-28.56E、17-13.38N/112-30.18E和17-12.60N/111-56.34E 诸点连线水域范围内有火箭残骸掉落，禁止驶入。",
+    "revoked": false,
+    "title": "火箭残骸掉落—琼航警182/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0396fba1a50b476898db53c005fec123.html?hav=1jWj6r2hy5diEaCNRz4FiZq9Ty",
+    "validity": {
+      "end": "2026-09-24T10:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月24日1600时至1800时"
+      ],
+      "start": "2026-09-24T08:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/03b68b9ead7a46d592bf5cb1046bec0b.html": {
     "bureau": "长江海事局",
     "cancels": [],
@@ -50580,11 +50673,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fbfe2409da88474589d40918c0187def.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-20",
     "detail_fetched": false,
     "first_seen": "2026-09-20T10:20:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警822/26",
     "points": [],
     "revoked": false,
     "title": "海上试验——黄海拖01—鲁航警822/26",

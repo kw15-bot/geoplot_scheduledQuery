@@ -94,6 +94,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "火箭残骸掉落—琼航警182/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0396fba1a50b476898db53c005fec123.html?hav=1jWj6r2hy5diEaCNRz4FiZq9Ty",
+        "date": "2026-09-20",
+        "bureau": "海南海事局",
+        "group_count": 1,
+        "raw_text": "南海，9月24日1600时至1800时，在18-23.04N/111-54.48E、18-23.82N/112-28.56E、17-13.38N/112-30.18E和17-12.60N/111-56.34E 诸点连线水域范围内有火箭残骸掉落，禁止驶入。",
+        "valid_start": "2026-09-24T08:00:00+00:00",
+        "valid_end": "2026-09-24T10:00:00+00:00",
+        "valid_raw": [
+          "9月24日1600时至1800时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              111.939,
+              17.21
+            ],
+            [
+              112.503,
+              17.223
+            ],
+            [
+              112.476,
+              18.397
+            ],
+            [
+              111.908,
+              18.384
+            ],
+            [
+              111.939,
+              17.21
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "军事活动-大竹山岛—鲁航警649/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/03e83d70b34d4ad783b35ec8431ccaea.html?hav=1jWj6r2hy3yfgLBeXmPVhQZPYi",
         "date": "2026-08-14",
