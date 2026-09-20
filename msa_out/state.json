@@ -14599,11 +14599,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/42aa573404d84daa8715c0600ae6b6f2.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-20",
     "detail_fetched": false,
     "first_seen": "2026-09-20T09:50:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警876/26",
     "points": [],
     "revoked": false,
     "title": "“HORIZON LETO”轮试航—浙航警876/26",
@@ -37321,6 +37323,18 @@
     "title": "拖带作业—粤航警535/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/aa6670ef0710458da23affd0d2f24c57.html?hav=1jWj6r2hy3yfaITPijNSILtXK5"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/aa8ddac490bf4ff2b036e0d48f40f5d5.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-20",
+    "detail_fetched": false,
+    "first_seen": "2026-09-20T10:00:46+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警643/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/aa8ddac490bf4ff2b036e0d48f40f5d5.html?hav=1jWj6r2hy5diEaCNRxmKQ0mk0w"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/aab5abddb9ed4612b3effca500fac444.html": {
     "bureau": "长江海事局",
     "cancels": [],
@@ -49262,6 +49276,18 @@
     "revoked": false,
     "title": "吊装作业—深航警48/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f38f646e79f04fe099f70c28704f2a46.html?hav=1jWj6r2hxxKVxKbguDN8yjTTFq"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f3dd6cc9e30c4119aa6a72b370898b80.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-20",
+    "detail_fetched": false,
+    "first_seen": "2026-09-20T10:00:46+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "寰宇七号轮拖带三航工9轮—鲁航警821/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f3dd6cc9e30c4119aa6a72b370898b80.html?hav=1jWj6r2hy5diEaCNRxmKQ0mjsh"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f3e1f48bbc6643f49f345e05d694bbc1.html": {
     "bureau": "河北海事局",
