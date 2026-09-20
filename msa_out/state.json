@@ -8535,11 +8535,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/20d5210bdfb24b248120239a4bbeff67.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-20",
     "detail_fetched": false,
     "first_seen": "2026-09-20T10:50:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警745/26",
     "points": [],
     "revoked": false,
     "title": "装载大件船舶—沪航警745/26",
@@ -21357,6 +21359,18 @@
     "title": "拖带作业—津航警257/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/567e4ce153214a87b89758342f5cf447.html?hav=1jWj6r2hy3yfgFKeJRKYlOa6LA"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/56880b2ac186443480f4a3471e9c1365.html": {
+    "bureau": "天津海事局",
+    "date": "2026-09-20",
+    "detail_fetched": false,
+    "first_seen": "2026-09-20T11:00:43+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "勘察作业—津航警323/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/56880b2ac186443480f4a3471e9c1365.html?hav=1jWj6r2hy5diEaCNRz4FweyHmq"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/56cc9f1a1b6747ff9ab07605a9210606.html": {
     "bureau": "上海海事局",
     "cancels": [],
@@ -25775,6 +25789,18 @@
       ],
       "start": "2026-08-10T01:00:00+00:00"
     }
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/696cc5dcaeb14814a25577a957e75379.html": {
+    "bureau": "上海海事局",
+    "date": "2026-09-20",
+    "detail_fetched": false,
+    "first_seen": "2026-09-20T11:00:43+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "LNG加注船舶—沪航警747/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/696cc5dcaeb14814a25577a957e75379.html?hav=1jWj6r2hy5diEaCNRz4FrtlSF9"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/69b839d9037f4d9eac6f5d5b874c20ed.html": {
     "bureau": "广东海事局",
@@ -33109,11 +33135,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8a0a55bc1335413fb22543ea40578149.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-20",
     "detail_fetched": false,
     "first_seen": "2026-09-20T10:50:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警744/26",
     "points": [],
     "revoked": false,
     "title": "装载大件船舶—沪航警744/26",
@@ -46183,11 +46211,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dec73f35d406454ca616928b59553b79.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-20",
     "detail_fetched": false,
     "first_seen": "2026-09-20T10:50:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警746/26",
     "points": [],
     "revoked": false,
     "title": "超大型船舶—沪航警746/26",
