@@ -36103,11 +36103,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a35dc2e9a58441bfbf8f725c8fca6bf0.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-20",
     "detail_fetched": false,
     "first_seen": "2026-09-20T03:50:28+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警817/26",
     "points": [],
     "revoked": false,
     "title": "试航作业- WECO ISABELLA—鲁航警817/26",
@@ -36673,6 +36675,99 @@
         "8月19日0800时至8月21日1800时"
       ],
       "start": "2026-08-19T00:00:00+00:00"
+    }
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5e35828c456408d993172f71abd5866.html": {
+    "bureau": "海南海事局",
+    "cancels": [],
+    "date": "2026-09-20",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-20T04:00:44+00:00",
+    "groups": [
+      [
+        {
+          "end": 68,
+          "fmt": "DMS_HYPHEN",
+          "lat": 18.764166666666668,
+          "lon": 108.61416666666666,
+          "raw": "18-45-51N 108-36-51E",
+          "start": 48
+        },
+        {
+          "end": 89,
+          "fmt": "DMS_HYPHEN",
+          "lat": 18.746666666666666,
+          "lon": 108.69,
+          "raw": "18-44-48N 108-41-24E",
+          "start": 69
+        },
+        {
+          "end": 110,
+          "fmt": "DMS_HYPHEN",
+          "lat": 18.58138888888889,
+          "lon": 108.68527777777778,
+          "raw": "18-34-53N 108-41-07E",
+          "start": 90
+        },
+        {
+          "end": 131,
+          "fmt": "DMS_HYPHEN",
+          "lat": 18.58138888888889,
+          "lon": 108.68527777777778,
+          "raw": "18-34-53N 108-41-07E",
+          "start": 111
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 68,
+        "fmt": "DMS_HYPHEN",
+        "lat": 18.764166666666668,
+        "lon": 108.61416666666666,
+        "raw": "18-45-51N 108-36-51E",
+        "start": 48
+      },
+      {
+        "end": 89,
+        "fmt": "DMS_HYPHEN",
+        "lat": 18.746666666666666,
+        "lon": 108.69,
+        "raw": "18-44-48N 108-41-24E",
+        "start": 69
+      },
+      {
+        "end": 110,
+        "fmt": "DMS_HYPHEN",
+        "lat": 18.58138888888889,
+        "lon": 108.68527777777778,
+        "raw": "18-34-53N 108-41-07E",
+        "start": 90
+      },
+      {
+        "end": 131,
+        "fmt": "DMS_HYPHEN",
+        "lat": 18.58138888888889,
+        "lon": 108.68527777777778,
+        "raw": "18-34-53N 108-41-07E",
+        "start": 111
+      }
+    ],
+    "raw_text": "南海，2026年9月21日0600至1200时乐东县尖峰镇龙沐湾附近海域组织对海实弹射击训练，在18-45-51N 108-36-51E、18-44-48N 108-41-24E、18-34-53N 108-41-07E、18-34-53N 108-41-07E四点连线水域范围内进行军事训练，禁止驶入。",
+    "revoked": false,
+    "title": "军事训练—琼航警180/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5e35828c456408d993172f71abd5866.html?hav=1jWj6r2hy5diEaCNRq2lC9Hewz",
+    "validity": {
+      "end": "2026-09-21T04:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "2026年9月21日0600至1200时"
+      ],
+      "start": "2026-09-20T22:00:00+00:00"
     }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a623cd355b334fe29389cc4755a1b758.html": {

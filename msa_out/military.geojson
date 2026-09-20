@@ -8527,6 +8527,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "军事训练—琼航警180/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5e35828c456408d993172f71abd5866.html?hav=1jWj6r2hy5diEaCNRq2lC9Hewz",
+        "date": "2026-09-20",
+        "bureau": "海南海事局",
+        "group_count": 1,
+        "raw_text": "南海，2026年9月21日0600至1200时乐东县尖峰镇龙沐湾附近海域组织对海实弹射击训练，在18-45-51N 108-36-51E、18-44-48N 108-41-24E、18-34-53N 108-41-07E、18-34-53N 108-41-07E四点连线水域范围内进行军事训练，禁止驶入。",
+        "valid_start": "2026-09-20T22:00:00+00:00",
+        "valid_end": "2026-09-21T04:00:00+00:00",
+        "valid_raw": [
+          "2026年9月21日0600至1200时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              108.68527777777778,
+              18.58138888888889
+            ],
+            [
+              108.68527777777778,
+              18.58138888888889
+            ],
+            [
+              108.69,
+              18.746666666666666
+            ],
+            [
+              108.61416666666666,
+              18.764166666666668
+            ],
+            [
+              108.68527777777778,
+              18.58138888888889
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "实弹射击—粤航警676/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a62ec28dd14e4868a4904c88c51a9961.html?hav=1jWj6r2hy5diEaCNMf2jDI1aeu",
         "date": "2026-09-20",
