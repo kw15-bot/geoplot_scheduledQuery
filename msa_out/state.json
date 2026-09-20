@@ -19690,6 +19690,99 @@
     "title": "人员落水—沪航警644/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/542ada4668b34768ba117d3ffcd677b4.html?hav=1jWj6r2hy3yfgR2egjb9U2AyIL"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/542d17fe314b4cb19042990171eee6f4.html": {
+    "bureau": "山东海事局",
+    "cancels": [],
+    "date": "2026-09-20",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-20T02:00:42+00:00",
+    "groups": [
+      [
+        {
+          "end": 43,
+          "fmt": "DDM_HYPHEN",
+          "lat": 36.833333333333336,
+          "lon": 122.0,
+          "raw": "36-50.00N 122-00.00E",
+          "start": 23
+        },
+        {
+          "end": 64,
+          "fmt": "DDM_HYPHEN",
+          "lat": 36.833333333333336,
+          "lon": 122.63333333333334,
+          "raw": "36-50.00N 122-38.00E",
+          "start": 44
+        },
+        {
+          "end": 85,
+          "fmt": "DDM_HYPHEN",
+          "lat": 36.0,
+          "lon": 122.63333333333334,
+          "raw": "36-00.00N 122-38.00E",
+          "start": 65
+        },
+        {
+          "end": 106,
+          "fmt": "DDM_HYPHEN",
+          "lat": 36.0,
+          "lon": 122.0,
+          "raw": "36-00.00N 122-00.00E",
+          "start": 86
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 43,
+        "fmt": "DDM_HYPHEN",
+        "lat": 36.833333333333336,
+        "lon": 122.0,
+        "raw": "36-50.00N 122-00.00E",
+        "start": 23
+      },
+      {
+        "end": 64,
+        "fmt": "DDM_HYPHEN",
+        "lat": 36.833333333333336,
+        "lon": 122.63333333333334,
+        "raw": "36-50.00N 122-38.00E",
+        "start": 44
+      },
+      {
+        "end": 85,
+        "fmt": "DDM_HYPHEN",
+        "lat": 36.0,
+        "lon": 122.63333333333334,
+        "raw": "36-00.00N 122-38.00E",
+        "start": 65
+      },
+      {
+        "end": 106,
+        "fmt": "DDM_HYPHEN",
+        "lat": 36.0,
+        "lon": 122.0,
+        "raw": "36-00.00N 122-00.00E",
+        "start": 86
+      }
+    ],
+    "raw_text": "黄海，9月21日1200时至23日2200时在36-50.00N 122-00.00E、36-50.00N 122-38.00E、36-00.00N 122-38.00E、36-00.00N 122-00.00E四点连线范围内开展军事演习，禁止驶入。",
+    "revoked": false,
+    "title": "军事演习——禁止驶入—鲁航警816/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/542d17fe314b4cb19042990171eee6f4.html?hav=1jWj6r2hy5diEaCNMgKf7HrNw7",
+    "validity": {
+      "end": "2026-09-23T14:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月21日1200时至23日2200时"
+      ],
+      "start": "2026-09-21T04:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5434dcb77ae048aebf57eda0d70199f2.html": {
     "bureau": "浙江海事局",
     "cancels": [],

@@ -4667,6 +4667,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "军事演习——禁止驶入—鲁航警816/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/542d17fe314b4cb19042990171eee6f4.html?hav=1jWj6r2hy5diEaCNMgKf7HrNw7",
+        "date": "2026-09-20",
+        "bureau": "山东海事局",
+        "group_count": 1,
+        "raw_text": "黄海，9月21日1200时至23日2200时在36-50.00N 122-00.00E、36-50.00N 122-38.00E、36-00.00N 122-38.00E、36-00.00N 122-00.00E四点连线范围内开展军事演习，禁止驶入。",
+        "valid_start": "2026-09-21T04:00:00+00:00",
+        "valid_end": "2026-09-23T14:00:00+00:00",
+        "valid_raw": [
+          "9月21日1200时至23日2200时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              122.0,
+              36.0
+            ],
+            [
+              122.63333333333334,
+              36.0
+            ],
+            [
+              122.63333333333334,
+              36.833333333333336
+            ],
+            [
+              122.0,
+              36.833333333333336
+            ],
+            [
+              122.0,
+              36.0
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "火箭发射—琼航警120/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5551b3a9773d4c38ab81d4bd91e1f85e.html?hav=1jWj6r2hy2Jd7yrAqbVFEefKHE",
         "date": "2026-07-03",
