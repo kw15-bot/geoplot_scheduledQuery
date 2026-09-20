@@ -24569,11 +24569,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/654da9abf9c74aec95ef8340f7980b5c.html": {
     "bureau": "福建海事局",
+    "cancels": [],
     "date": "2026-09-20",
     "detail_fetched": false,
     "first_seen": "2026-09-20T01:30:35+00:00",
     "groups": [],
     "military": false,
+    "own_id": "闽航警175/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—闽航警175/26",
