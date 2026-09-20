@@ -35032,11 +35032,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9aade07141cf46c28cd12b0357922578.html": {
     "bureau": "天津海事局",
+    "cancels": [],
     "date": "2026-09-20",
     "detail_fetched": false,
     "first_seen": "2026-09-20T03:20:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "津航警321/26",
     "points": [],
     "revoked": false,
     "title": "海河施工作业—津航警321/26",
