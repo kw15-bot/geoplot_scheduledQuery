@@ -16602,6 +16602,18 @@
       "start": "2026-07-27T00:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4720b7ba92db4d97a1abeccccd6b1ca7.html": {
+    "bureau": "天津海事局",
+    "date": "2026-09-21",
+    "detail_fetched": false,
+    "first_seen": "2026-09-21T07:20:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航标撤除—津航警324/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4720b7ba92db4d97a1abeccccd6b1ca7.html?hav=1jWj6r2hy5diEbf80VnBWw2FXc"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/475f55a78a15447b92493bc86114f28b.html": {
     "bureau": "上海海事局",
     "cancels": [],
