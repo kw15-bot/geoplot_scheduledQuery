@@ -2053,11 +2053,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/08d4253f7f9a412aa277de4999cc6e10.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-21",
     "detail_fetched": false,
     "first_seen": "2026-09-21T00:30:38+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警683/26",
     "points": [],
     "revoked": false,
     "title": "科学调查—粤航警683/26",
