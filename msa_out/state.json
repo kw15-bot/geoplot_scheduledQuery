@@ -28277,6 +28277,18 @@
     "title": "中华人民共和国泸州海事局航行警告—泸航警27/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/79f74debd4b344c1aa18bc7dd4599aa3.html?hav=1jWj6r2hy5diEaCNRwUOorHuBb"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7a1667c56c614e9aa08987591b0ffd5f.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-21",
+    "detail_fetched": false,
+    "first_seen": "2026-09-21T03:50:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警646/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7a1667c56c614e9aa08987591b0ffd5f.html?hav=1jWj6r2hy5diEbf80QdTjZTLMY"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7a225076b28b4878af9c1860637c7a49.html": {
     "bureau": "深圳海事局",
     "cancels": [],
@@ -34660,11 +34672,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9628ec826d854a8cbdea2d5d5213ba63.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-09-21",
     "detail_fetched": false,
     "first_seen": "2026-09-21T03:40:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警400/26",
     "points": [],
     "revoked": false,
     "title": "拖带渤海12号钻井平台—辽航警400/26",
@@ -36374,6 +36388,18 @@
     "revoked": false,
     "title": "撤销鲁航警587/26—鲁航警619/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a25fdae52aff4ab0bf3825f5ccc4984b.html?hav=1jWj6r2hy2JdQ44OCmJEdcUGtF"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a2881a7a1b0c484ca8dd0c61dfa44f28.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-21",
+    "detail_fetched": false,
+    "first_seen": "2026-09-21T03:50:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警647/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a2881a7a1b0c484ca8dd0c61dfa44f28.html?hav=1jWj6r2hy5diEbf80QdTjZTLMd"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a30edede7ce346e6ba39087c3ff3a1c0.html": {
     "bureau": "天津海事局",
