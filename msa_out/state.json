@@ -16604,11 +16604,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4720b7ba92db4d97a1abeccccd6b1ca7.html": {
     "bureau": "天津海事局",
+    "cancels": [],
     "date": "2026-09-21",
     "detail_fetched": false,
     "first_seen": "2026-09-21T07:20:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "津航警324/26",
     "points": [],
     "revoked": false,
     "title": "航标撤除—津航警324/26",
@@ -47100,6 +47102,18 @@
     "revoked": false,
     "title": "拖带作业—深航警35/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e28e91ee6ad043878d0c8cdeef44d43e.html?hav=1jWj6r2hxxKVlFBDFyHYOt8VQv"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e294f88f6ab0417e9ab2d49432ededec.html": {
+    "bureau": "连云港海事局",
+    "date": "2026-09-21",
+    "detail_fetched": false,
+    "first_seen": "2026-09-21T07:30:37+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "黄海南部“航润7”轮试航—云航警157/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e294f88f6ab0417e9ab2d49432ededec.html?hav=1jWj6r2hy5diEbf80VnBbkeGZw"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e2978cbf63a2462381f0db1c3d128b96.html": {
     "bureau": "河北海事局",
