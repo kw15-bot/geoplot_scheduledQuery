@@ -7839,6 +7839,18 @@
       "start": "2026-08-30T08:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1d07e23f62874ecc9912af879d8a7896.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-21",
+    "detail_fetched": false,
+    "first_seen": "2026-09-21T02:30:39+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警644/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1d07e23f62874ecc9912af879d8a7896.html?hav=1jWj6r2hy5diEbf80PLXz63CVO"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1d98a61661d94ea28ff4b68e00612e77.html": {
     "bureau": "浙江海事局",
     "cancels": [],
@@ -10424,6 +10436,18 @@
     "revoked": false,
     "title": "撤销鲁航警747/26—鲁航警749/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2cd59fb2280d4e92b8f3f89dcd568d98.html?hav=1jWj6r2hy5di2acu1zttDdfOT6"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2d2498249e9846e3a4cffd57761fb625.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-21",
+    "detail_fetched": false,
+    "first_seen": "2026-09-21T02:30:39+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警645/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2d2498249e9846e3a4cffd57761fb625.html?hav=1jWj6r2hy5diEbf80PLXz63CVU"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2d59bbb9e31b49c4bfc318cc11d13ee2.html": {
     "bureau": "山东海事局",
