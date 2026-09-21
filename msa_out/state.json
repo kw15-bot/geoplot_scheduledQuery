@@ -27148,6 +27148,163 @@
     "title": "拖带作业—沪航警750/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/72cf218b8cd94619b16e16a40b0bf303.html?hav=1jWj6r2hy5diEbf80YN2ekr1Wv"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/72f51ffae5c348b780c196b46e0059a4.html": {
+    "bureau": "海南海事局",
+    "cancels": [],
+    "date": "2026-09-21",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-21T11:00:47+00:00",
+    "groups": [
+      [
+        {
+          "end": 46,
+          "fmt": "DMS_HYPHEN",
+          "lat": 18.122222222222224,
+          "lon": 109.63055555555555,
+          "raw": "18-07-20N 109-37-50E",
+          "start": 26
+        },
+        {
+          "end": 67,
+          "fmt": "DMS_HYPHEN",
+          "lat": 18.122222222222224,
+          "lon": 109.6888888888889,
+          "raw": "18-07-20N 109-41-20E",
+          "start": 47
+        },
+        {
+          "end": 88,
+          "fmt": "DMS_HYPHEN",
+          "lat": 18.080555555555556,
+          "lon": 109.63055555555555,
+          "raw": "18-04-50N 109-37-50E",
+          "start": 68
+        },
+        {
+          "end": 109,
+          "fmt": "DMS_HYPHEN",
+          "lat": 18.080555555555556,
+          "lon": 109.6888888888889,
+          "raw": "18-04-50N 109-41-20E",
+          "start": 89
+        },
+        {
+          "end": 136,
+          "fmt": "DMS_HYPHEN",
+          "lat": 17.90833333333333,
+          "lon": 109.825,
+          "raw": "17-54-30N 109-49-30E",
+          "start": 116
+        },
+        {
+          "end": 157,
+          "fmt": "DMS_HYPHEN",
+          "lat": 17.90833333333333,
+          "lon": 109.88333333333334,
+          "raw": "17-54-30N 109-53-00E",
+          "start": 137
+        },
+        {
+          "end": 178,
+          "fmt": "DMS_HYPHEN",
+          "lat": 17.866666666666667,
+          "lon": 109.825,
+          "raw": "17-52-00N 109-49-30E",
+          "start": 158
+        },
+        {
+          "end": 199,
+          "fmt": "DMS_HYPHEN",
+          "lat": 17.866666666666667,
+          "lon": 109.88333333333334,
+          "raw": "17-52-00N 109-53-00E",
+          "start": 179
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 46,
+        "fmt": "DMS_HYPHEN",
+        "lat": 18.122222222222224,
+        "lon": 109.63055555555555,
+        "raw": "18-07-20N 109-37-50E",
+        "start": 26
+      },
+      {
+        "end": 67,
+        "fmt": "DMS_HYPHEN",
+        "lat": 18.122222222222224,
+        "lon": 109.6888888888889,
+        "raw": "18-07-20N 109-41-20E",
+        "start": 47
+      },
+      {
+        "end": 88,
+        "fmt": "DMS_HYPHEN",
+        "lat": 18.080555555555556,
+        "lon": 109.63055555555555,
+        "raw": "18-04-50N 109-37-50E",
+        "start": 68
+      },
+      {
+        "end": 109,
+        "fmt": "DMS_HYPHEN",
+        "lat": 18.080555555555556,
+        "lon": 109.6888888888889,
+        "raw": "18-04-50N 109-41-20E",
+        "start": 89
+      },
+      {
+        "end": 136,
+        "fmt": "DMS_HYPHEN",
+        "lat": 17.90833333333333,
+        "lon": 109.825,
+        "raw": "17-54-30N 109-49-30E",
+        "start": 116
+      },
+      {
+        "end": 157,
+        "fmt": "DMS_HYPHEN",
+        "lat": 17.90833333333333,
+        "lon": 109.88333333333334,
+        "raw": "17-54-30N 109-53-00E",
+        "start": 137
+      },
+      {
+        "end": 178,
+        "fmt": "DMS_HYPHEN",
+        "lat": 17.866666666666667,
+        "lon": 109.825,
+        "raw": "17-52-00N 109-49-30E",
+        "start": 158
+      },
+      {
+        "end": 199,
+        "fmt": "DMS_HYPHEN",
+        "lat": 17.866666666666667,
+        "lon": 109.88333333333334,
+        "raw": "17-52-00N 109-53-00E",
+        "start": 179
+      }
+    ],
+    "raw_text": "南海，2026年9月18日至9月30日，在S2海域（18-07-20N 109-37-50E;18-07-20N 109-41-20E;18-04-50N 109-37-50E;18-04-50N 109-41-20E）、S3海域（17-54-30N 109-49-30E;17-54-30N 109-53-00E;17-52-00N 109-49-30E;17-52-00N 109-53-00E）组织军事训练。训练期间该水域需实施管控，禁止无关船舶、人员驶入。",
+    "revoked": false,
+    "title": "军事训练—琼航警184/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/72f51ffae5c348b780c196b46e0059a4.html?hav=1jWj6r2hy5diEbf80ZeyPRtuMf",
+    "validity": {
+      "end": "2026-09-30T16:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "2026年9月18日至9月30日"
+      ],
+      "start": "2026-09-17T16:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/731ec6a9ddc84ce69cd6d082b214b170.html": {
     "bureau": "浙江海事局",
     "cancels": [],
