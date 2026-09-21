@@ -11526,6 +11526,46 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "军事任务—辽航警399/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fbece8b98d894ece9ddd5e5283781004.html?hav=1jWj6r2hy5diEbf80QdTQpwl6b",
+        "date": "2026-09-21",
+        "bureau": "辽宁海事局",
+        "group_count": 1,
+        "raw_text": "渤海北部，9月22日、9月24日、9月29日，自0800时至1900时，在 40-20.75N 122-04.00E、40-20.75N 122-05.75E、40-19.75N 122-05.75E和40-19.75N 122-04.00E 诸点连线范围内进行军事演习。禁止驶入。",
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              122.06666666666666,
+              40.329166666666666
+            ],
+            [
+              122.09583333333333,
+              40.329166666666666
+            ],
+            [
+              122.09583333333333,
+              40.34583333333333
+            ],
+            [
+              122.06666666666666,
+              40.34583333333333
+            ],
+            [
+              122.06666666666666,
+              40.329166666666666
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "军事训练—琼航警183/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fc30c99115b64ea890646f858db4608b.html?hav=1jWj6r2hy5diEaCNXBMCljfXvw",
         "date": "2026-09-20",

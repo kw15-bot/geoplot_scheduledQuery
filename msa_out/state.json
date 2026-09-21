@@ -51000,6 +51000,92 @@
     "title": "灯浮移位—沪航警725/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fbaf6741bee54ac29d563000c698bf45.html?hav=1jWj6r2hy5di8dL8lqdzLfs68k"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fbece8b98d894ece9ddd5e5283781004.html": {
+    "bureau": "辽宁海事局",
+    "cancels": [],
+    "date": "2026-09-21",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 18,
+    "first_seen": "2026-09-21T03:20:32+00:00",
+    "groups": [
+      [
+        {
+          "end": 58,
+          "fmt": "DDM_HYPHEN",
+          "lat": 40.34583333333333,
+          "lon": 122.06666666666666,
+          "raw": "40-20.75N 122-04.00E",
+          "start": 38
+        },
+        {
+          "end": 79,
+          "fmt": "DDM_HYPHEN",
+          "lat": 40.34583333333333,
+          "lon": 122.09583333333333,
+          "raw": "40-20.75N 122-05.75E",
+          "start": 59
+        },
+        {
+          "end": 100,
+          "fmt": "DDM_HYPHEN",
+          "lat": 40.329166666666666,
+          "lon": 122.09583333333333,
+          "raw": "40-19.75N 122-05.75E",
+          "start": 80
+        },
+        {
+          "end": 121,
+          "fmt": "DDM_HYPHEN",
+          "lat": 40.329166666666666,
+          "lon": 122.06666666666666,
+          "raw": "40-19.75N 122-04.00E",
+          "start": 101
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 58,
+        "fmt": "DDM_HYPHEN",
+        "lat": 40.34583333333333,
+        "lon": 122.06666666666666,
+        "raw": "40-20.75N 122-04.00E",
+        "start": 38
+      },
+      {
+        "end": 79,
+        "fmt": "DDM_HYPHEN",
+        "lat": 40.34583333333333,
+        "lon": 122.09583333333333,
+        "raw": "40-20.75N 122-05.75E",
+        "start": 59
+      },
+      {
+        "end": 100,
+        "fmt": "DDM_HYPHEN",
+        "lat": 40.329166666666666,
+        "lon": 122.09583333333333,
+        "raw": "40-19.75N 122-05.75E",
+        "start": 80
+      },
+      {
+        "end": 121,
+        "fmt": "DDM_HYPHEN",
+        "lat": 40.329166666666666,
+        "lon": 122.06666666666666,
+        "raw": "40-19.75N 122-04.00E",
+        "start": 101
+      }
+    ],
+    "raw_text": "渤海北部，9月22日、9月24日、9月29日，自0800时至1900时，在 40-20.75N 122-04.00E、40-20.75N 122-05.75E、40-19.75N 122-05.75E和40-19.75N 122-04.00E 诸点连线范围内进行军事演习。禁止驶入。",
+    "revoked": false,
+    "title": "军事任务—辽航警399/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fbece8b98d894ece9ddd5e5283781004.html?hav=1jWj6r2hy5diEbf80QdTQpwl6b",
+    "validity": null
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fbfe2409da88474589d40918c0187def.html": {
     "bureau": "山东海事局",
     "cancels": [],
