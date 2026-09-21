@@ -38241,11 +38241,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ac0ec6247613497491def52404aaa8a1.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-21",
     "detail_fetched": false,
     "first_seen": "2026-09-21T11:20:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警877/26",
     "points": [],
     "revoked": false,
     "title": "“海上共富”轮试航—浙航警877/26",
