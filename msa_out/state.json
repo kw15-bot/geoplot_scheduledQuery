@@ -38265,11 +38265,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b00e67f12f244e57b1413345782a2112.html": {
     "bureau": "连云港海事局",
+    "cancels": [],
     "date": "2026-09-21",
     "detail_fetched": false,
     "first_seen": "2026-09-21T07:00:48+00:00",
     "groups": [],
     "military": false,
+    "own_id": "云航警156/26",
     "points": [],
     "revoked": false,
     "title": "黄海南部“KASAGANAHAN 1”轮试航—云航警156/26",
