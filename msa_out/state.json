@@ -51225,7 +51225,14 @@
     "revoked": false,
     "title": "军事任务—辽航警399/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fbece8b98d894ece9ddd5e5283781004.html?hav=1jWj6r2hy5diEbf80QdTQpwl6b",
-    "validity": null
+    "validity": {
+      "end": "2026-09-29T11:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月22日、9月24日、9月29日，自0800时至1900时"
+      ],
+      "start": "2026-09-22T00:00:00+00:00"
+    }
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fbfe2409da88474589d40918c0187def.html": {
     "bureau": "山东海事局",
@@ -51547,11 +51554,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fdf51e9912274dc78f38a9643d846b81.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-21",
     "detail_fetched": false,
     "first_seen": "2026-09-21T08:10:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警825/26",
     "points": [],
     "revoked": false,
     "title": "民祥拖28轮拖带建国88轮—鲁航警825/26",
