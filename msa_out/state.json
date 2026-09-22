@@ -10121,11 +10121,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/29ba237759024cbf8faab0159cd987f2.html": {
     "bureau": "连云港海事局",
+    "cancels": [],
     "date": "2026-09-22",
     "detail_fetched": false,
     "first_seen": "2026-09-22T08:50:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "云航警159/26",
     "points": [],
     "revoked": false,
     "title": "黄海南部“OLIVE 9”轮试航—云航警159/26",
@@ -10910,6 +10912,18 @@
     "title": "“埃尔布马斯特”轮船舶试航—粤航警628/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/30369123b49b4801aab42edd290d9b2a.html?hav=1jWj6r2hy5di2ZA9TVkogMoBGQ"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3065bb842b1d485388ff2c5dfe84e600.html": {
+    "bureau": "广西海事局",
+    "date": "2026-09-22",
+    "detail_fetched": false,
+    "first_seen": "2026-09-22T09:00:50+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—桂航警209/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3065bb842b1d485388ff2c5dfe84e600.html?hav=1jWj6r2hy5diEd7sZ7fptqkR2W"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3079c6fa4549439385106d3e3cd4f5a5.html": {
     "bureau": "浙江海事局",
     "cancels": [],
@@ -10923,6 +10937,18 @@
     "revoked": false,
     "title": "人员落水—浙航警722/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3079c6fa4549439385106d3e3cd4f5a5.html?hav=1jWj6r2hy3yfgIG9LAkuLGRvqp"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/30b26ba7760749ab862c855b8cc543fb.html": {
+    "bureau": "上海海事局",
+    "date": "2026-09-22",
+    "detail_fetched": false,
+    "first_seen": "2026-09-22T09:00:50+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—沪航警754/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/30b26ba7760749ab862c855b8cc543fb.html?hav=1jWj6r2hy5diEd7sZ7fpyRjhtg"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/30bd690af80a47ec83de44b842eb1a44.html": {
     "bureau": "河北海事局",
@@ -13906,6 +13932,18 @@
     "title": "军事活动结束—鲁航警696/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3c968a07486843ed8d7010f5791d0f2c.html?hav=1jWj6r2hy3yfmJVdmNgvEg78bv",
     "validity": null
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3cab26b591ef4582b4fb59d780d3357e.html": {
+    "bureau": "上海海事局",
+    "date": "2026-09-22",
+    "detail_fetched": false,
+    "first_seen": "2026-09-22T09:00:50+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—沪航警755/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3cab26b591ef4582b4fb59d780d3357e.html?hav=1jWj6r2hy5diEd7sZ7fpyRjhto"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3cb58667b2ea44f08db4d26447cd6415.html": {
     "bureau": "浙江海事局",
@@ -26181,6 +26219,18 @@
     "title": "交通管制—沪航警748/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/650019208d75428fb97dc8e0bc1e30de.html?hav=1jWj6r2hy5diEbf80TDKmhcrpB"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/652b042a02144316bf401d63541a7c70.html": {
+    "bureau": "上海海事局",
+    "date": "2026-09-22",
+    "detail_fetched": false,
+    "first_seen": "2026-09-22T09:00:50+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "超大型船舶—沪航警753/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/652b042a02144316bf401d63541a7c70.html?hav=1jWj6r2hy5diEd7sZ7fpyRjhpb"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/652c10f66e3149fda560a6a4213351d2.html": {
     "bureau": "福建海事局",
     "cancels": [],
@@ -34291,6 +34341,18 @@
     "revoked": false,
     "title": "LNG加注作业—沪航警635/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/86abb6bdf55a4eaf8e58342c7d29e86b.html?hav=1jWj6r2hy3yfgMeP6S9wGTo5vM"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/86c6d34533354cf686adc12e69ae0660.html": {
+    "bureau": "上海海事局",
+    "date": "2026-09-22",
+    "detail_fetched": false,
+    "first_seen": "2026-09-22T09:00:50+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "LNG船舶—沪航警756/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/86c6d34533354cf686adc12e69ae0660.html?hav=1jWj6r2hy5diEd7sZ7fpyRjhxs"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/86ecf24828194d57938e09a424200a6c.html": {
     "bureau": "广东海事局",
