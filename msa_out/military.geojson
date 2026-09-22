@@ -11504,6 +11504,51 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "军事任务—辽航警401/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ed3da4f736604444997a8f298a81972c.html?hav=1jWj6r2hy5diEd7sZ55yqcuw2k",
+        "date": "2026-09-22",
+        "bureau": "辽宁海事局",
+        "group_count": 1,
+        "raw_text": "渤海海峡黄海北部，自9月23日0000时至24日2400时在38-42.33N121-06.85E、38-35.60N121-06.85E、38-35.60N121-25.95E、38-42.33N121-25.95E诸点连线范围内执行军事任务。禁止驶入。",
+        "valid_start": "2026-09-22T16:00:00+00:00",
+        "valid_end": "2026-09-24T16:00:00+00:00",
+        "valid_raw": [
+          "9月23日0000时至24日2400时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              121.11416666666666,
+              38.593333333333334
+            ],
+            [
+              121.4325,
+              38.593333333333334
+            ],
+            [
+              121.4325,
+              38.7055
+            ],
+            [
+              121.11416666666666,
+              38.7055
+            ],
+            [
+              121.11416666666666,
+              38.593333333333334
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "温州瓯飞滩以东水域军事训练—浙航警815/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ed8c30e2391f4de998a85959e862663d.html?hav=1jWj6r2hy5di2gTuGWaBeQt7A4",
         "date": "2026-09-08",
