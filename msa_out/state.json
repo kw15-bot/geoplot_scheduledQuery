@@ -37743,6 +37743,18 @@
       "start": "2026-07-23T22:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a1ae56920d764cbdba5ecc5fad9ee3f9.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-22",
+    "detail_fetched": false,
+    "first_seen": "2026-09-22T03:10:31+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警650/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a1ae56920d764cbdba5ecc5fad9ee3f9.html?hav=1jWj6r2hy5diEd7sYzwGpJAejp"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a2066b278019447b846624af0a22be70.html": {
     "bureau": "深圳海事局",
     "cancels": [],
