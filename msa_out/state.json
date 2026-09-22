@@ -12469,6 +12469,7 @@
       ]
     ],
     "military": true,
+    "own_id": "琼航警185/26",
     "points": [
       {
         "end": 52,
@@ -19506,11 +19507,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4aab829528254aa4a2e3c4812612ce5b.html": {
     "bureau": "连云港海事局",
+    "cancels": [],
     "date": "2026-09-22",
     "detail_fetched": false,
     "first_seen": "2026-09-22T02:20:36+00:00",
     "groups": [],
     "military": false,
+    "own_id": "云航警158/26",
     "points": [],
     "revoked": false,
     "title": "渔船群捕捞作业—云航警158/26",
