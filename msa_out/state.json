@@ -14426,11 +14426,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3f45b408b0f748369e0aeea83ece3f08.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-23",
     "detail_fetched": false,
     "first_seen": "2026-09-23T10:10:35+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警758/26",
     "points": [],
     "revoked": false,
     "title": "撤除虚拟AIS标—沪航警758/26",
@@ -38169,6 +38171,18 @@
     "title": "南海KP18-1-10d井钻井作业—粤航警667/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9f5e5182db084063a1a847906446a84a.html?hav=1jWj6r2hy5di8jC95ZcF3fmY9F"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9f807aed77c6483e95bb173fc4b769d6.html": {
+    "bureau": "广东海事局",
+    "date": "2026-09-23",
+    "detail_fetched": false,
+    "first_seen": "2026-09-23T10:20:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—粤航警689/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9f807aed77c6483e95bb173fc4b769d6.html?hav=1jWj6r2hy5diEead7kqPBVLVEm"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/9ff966054a784cffb8ec832015b0fb4e.html": {
     "bureau": "天津海事局",
     "cancels": [],
@@ -47409,11 +47423,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d46a41c4a8314a63bbcce0e4a097d98d.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-23",
     "detail_fetched": false,
     "first_seen": "2026-09-23T10:10:35+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警757/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—沪航警757/26",
