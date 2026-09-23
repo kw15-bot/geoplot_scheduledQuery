@@ -202,7 +202,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -394,7 +394,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-17T03:50:29+00:00",
     "groups": [
       [
@@ -687,7 +687,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-20T10:30:37+00:00",
     "groups": [
       [
@@ -837,7 +837,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-14T07:02:10+00:00",
     "groups": [
       [
@@ -962,7 +962,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -1182,7 +1182,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-09T09:40:01+00:00",
     "groups": [
       [
@@ -1388,8 +1388,20 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-16T09:20:27+00:00",
+    "group_validity": [
+      {
+        "end": "2026-09-18T08:00:00+00:00",
+        "raw": "9月18日0200时至1600时",
+        "start": "2026-09-17T18:00:00+00:00"
+      },
+      {
+        "end": "2026-09-18T08:00:00+00:00",
+        "raw": "9月18日0200时至1600时",
+        "start": "2026-09-17T18:00:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -1576,7 +1588,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-17T09:50:31+00:00",
     "groups": [
       [
@@ -1686,7 +1698,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [],
     "military": false,
@@ -1733,7 +1745,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-14T08:35:38+00:00",
     "group_validity": [
       {
@@ -1978,7 +1990,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-16T01:00:47+00:00",
     "groups": [
       [
@@ -2296,7 +2308,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -2404,7 +2416,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-27T07:50:29+00:00",
     "groups": [
       [
@@ -4233,7 +4245,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-31T02:00:45+00:00",
     "groups": [
       [
@@ -4425,7 +4437,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-20T12:30:40+00:00",
     "groups": [
       [
@@ -4617,7 +4629,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-18T07:30:40+00:00",
     "groups": [
       [
@@ -4753,7 +4765,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -5933,7 +5945,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -7379,7 +7391,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-07T08:50:28+00:00",
     "groups": [
       [
@@ -7517,7 +7529,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-19T11:10:30+00:00",
     "groups": [
       [
@@ -7822,7 +7834,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-28T08:10:35+00:00",
     "groups": [
       [
@@ -7958,7 +7970,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-10T13:20:33+00:00",
     "groups": [
       [
@@ -8122,7 +8134,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-16T08:20:33+00:00",
     "groups": [
       [
@@ -8216,8 +8228,20 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-07T08:20:27+00:00",
+    "group_validity": [
+      {
+        "end": "2026-09-08T04:00:00+00:00",
+        "raw": "9月8日1100时至1200时",
+        "start": "2026-09-08T03:00:00+00:00"
+      },
+      {
+        "end": "2026-09-08T04:00:00+00:00",
+        "raw": "9月8日1100时至1200时",
+        "start": "2026-09-08T03:00:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -8376,7 +8400,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-07T10:04:33+00:00",
     "groups": [
       [
@@ -8624,7 +8648,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-11T03:30:38+00:00",
     "groups": [
       [
@@ -8788,7 +8812,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -8955,7 +8979,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -9065,7 +9089,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-11T23:20:30+00:00",
     "groups": [
       [
@@ -9159,8 +9183,20 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-07T21:39:34+00:00",
+    "group_validity": [
+      {
+        "end": "2026-08-09T04:00:00+00:00",
+        "raw": "2026年8月9日0500时至2026年8月9日1200时",
+        "start": "2026-08-08T21:00:00+00:00"
+      },
+      {
+        "end": "2026-08-09T04:00:00+00:00",
+        "raw": "2026年8月9日0500时至2026年8月9日1200时",
+        "start": "2026-08-08T21:00:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -9377,7 +9413,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-25T09:00:51+00:00",
     "groups": [],
     "military": false,
@@ -9819,7 +9855,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-01T03:20:29+00:00",
     "groups": [
       [
@@ -10014,7 +10050,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-21T03:00:42+00:00",
     "groups": [
       [
@@ -10336,7 +10372,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-08T07:30:40+00:00",
     "groups": [
       [
@@ -10630,7 +10666,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-18T03:20:29+00:00",
     "groups": [],
     "military": false,
@@ -10719,7 +10755,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-11T10:30:38+00:00",
     "groups": [
       [
@@ -11115,7 +11151,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-03T02:40:32+00:00",
     "groups": [
       [
@@ -11223,7 +11259,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-17T10:40:29+00:00",
     "groups": [],
     "military": true,
@@ -11351,7 +11387,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-11T02:24:09+00:00",
     "groups": [
       [
@@ -11487,8 +11523,20 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-11T08:10:34+00:00",
+    "group_validity": [
+      {
+        "end": "2026-09-14T10:00:00+00:00",
+        "raw": "9月14日0600时至1800时",
+        "start": "2026-09-13T22:00:00+00:00"
+      },
+      {
+        "end": "2026-09-14T10:00:00+00:00",
+        "raw": "9月14日0600时至1800时",
+        "start": "2026-09-13T22:00:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -11703,7 +11751,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-24T06:50:31+00:00",
     "groups": [
       [
@@ -11800,7 +11848,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-16T10:31:02+00:00",
     "groups": [
       [
@@ -12062,7 +12110,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-22T02:20:36+00:00",
     "groups": [
       [
@@ -13188,7 +13236,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -13296,7 +13344,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -13477,7 +13525,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-04T10:00:44+00:00",
     "group_validity": [
       {
@@ -14004,7 +14052,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-21T15:20:35+00:00",
     "groups": [],
     "military": true,
@@ -14121,7 +14169,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-11T02:24:09+00:00",
     "groups": [
       [
@@ -14439,7 +14487,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-05T06:20:29+00:00",
     "groups": [
       [
@@ -14535,7 +14583,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-09T09:40:30+00:00",
     "group_validity": [
       {
@@ -14903,7 +14951,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -16027,7 +16075,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-09T07:30:43+00:00",
     "groups": [
       [
@@ -16149,7 +16197,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-11T16:50:28+00:00",
     "groups": [
       [
@@ -16383,7 +16431,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-11T23:20:30+00:00",
     "groups": [
       [
@@ -17521,7 +17569,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-01T01:00:45+00:00",
     "groups": [
       [
@@ -17802,7 +17850,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -17924,7 +17972,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-18T10:00:41+00:00",
     "groups": [
       [
@@ -18022,8 +18070,25 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
+    "group_validity": [
+      {
+        "end": "2026-08-05T04:00:00+00:00",
+        "raw": "8月3日1400时至5日1200时",
+        "start": "2026-08-03T06:00:00+00:00"
+      },
+      {
+        "end": "2026-08-05T04:00:00+00:00",
+        "raw": "8月3日1400时至5日1200时",
+        "start": "2026-08-03T06:00:00+00:00"
+      },
+      {
+        "end": "2026-08-05T03:10:00+00:00",
+        "raw": "8月5日0910时至1110",
+        "start": "2026-08-05T01:10:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -19205,7 +19270,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-14T07:02:10+00:00",
     "groups": [
       [
@@ -19595,7 +19660,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-06T07:20:30+00:00",
     "groups": [
       [
@@ -19901,7 +19966,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-10T06:00:45+00:00",
     "groups": [],
     "military": false,
@@ -19920,8 +19985,20 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
+    "group_validity": [
+      {
+        "end": "2026-08-07T06:00:00+00:00",
+        "raw": "8月6日1700时至8月7日1400时",
+        "start": "2026-08-06T09:00:00+00:00"
+      },
+      {
+        "end": "2026-08-07T06:00:00+00:00",
+        "raw": "8月6日1700时至8月7日1400时",
+        "start": "2026-08-06T09:00:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -20332,7 +20409,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-08T12:20:31+00:00",
     "groups": [
       [
@@ -20666,7 +20743,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-16T16:20:31+00:00",
     "groups": [
       [
@@ -20957,8 +21034,20 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-07T10:04:33+00:00",
+    "group_validity": [
+      {
+        "end": "2026-08-08T06:00:00+00:00",
+        "raw": "8月7日1800时至8月8日1400时",
+        "start": "2026-08-07T10:00:00+00:00"
+      },
+      {
+        "end": "2026-08-08T06:00:00+00:00",
+        "raw": "8月7日1800时至8月8日1400时",
+        "start": "2026-08-07T10:00:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -21243,7 +21332,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -21354,7 +21443,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-20T02:00:42+00:00",
     "groups": [
       [
@@ -21518,7 +21607,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -22572,7 +22661,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-24T03:40:29+00:00",
     "groups": [
       [
@@ -22708,7 +22797,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-10T07:10:30+00:00",
     "groups": [
       [
@@ -22971,7 +23060,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [],
     "military": false,
@@ -23105,7 +23194,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-14T01:50:30+00:00",
     "groups": [
       [
@@ -23197,7 +23286,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -23503,7 +23592,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-15T13:00:43+00:00",
     "groups": [
       [
@@ -23681,7 +23770,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-28T09:00:53+00:00",
     "groups": [
       [
@@ -23887,7 +23976,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-14T06:20:29+00:00",
     "groups": [
       [
@@ -24363,7 +24452,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -24457,7 +24546,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -25665,7 +25754,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-26T02:50:30+00:00",
     "groups": [
       [
@@ -25843,7 +25932,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -26231,7 +26320,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-15T02:31:55+00:00",
     "groups": [
       [
@@ -26495,7 +26584,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -26675,7 +26764,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [],
     "military": false,
@@ -26724,7 +26813,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -26818,7 +26907,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-26T09:20:29+00:00",
     "groups": [
       [
@@ -26982,7 +27071,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-13T11:30:36+00:00",
     "groups": [
       [
@@ -27104,7 +27193,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-08T11:10:32+00:00",
     "groups": [
       [
@@ -27212,7 +27301,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-10T01:50:55+00:00",
     "groups": [
       [
@@ -27446,7 +27535,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -27778,7 +27867,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-01T08:20:30+00:00",
     "groups": [
       [
@@ -27970,7 +28059,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -28442,8 +28531,20 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-21T11:00:47+00:00",
+    "group_validity": [
+      {
+        "end": "2026-09-30T16:00:00+00:00",
+        "raw": "2026年9月18日至9月30日",
+        "start": "2026-09-17T16:00:00+00:00"
+      },
+      {
+        "end": "2026-09-30T16:00:00+00:00",
+        "raw": "2026年9月18日至9月30日",
+        "start": "2026-09-17T16:00:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -28686,7 +28787,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-21T10:00:42+00:00",
     "groups": [
       [
@@ -28920,7 +29021,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -29186,7 +29287,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-10T09:59:16+00:00",
     "groups": [
       [
@@ -29434,7 +29535,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "group_validity": [
       {
@@ -29705,7 +29806,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -29901,7 +30002,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-03T06:20:31+00:00",
     "groups": [
       [
@@ -30235,7 +30336,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -30527,7 +30628,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -30635,8 +30736,20 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-26T11:40:29+00:00",
+    "group_validity": [
+      {
+        "end": "2026-09-01T12:00:00+00:00",
+        "raw": "8月28日至9月1日每日0800时至2000时",
+        "start": "2026-08-28T00:00:00+00:00"
+      },
+      {
+        "end": "2026-09-01T12:00:00+00:00",
+        "raw": "8月28日至9月1日每日0800时至2000时",
+        "start": "2026-08-28T00:00:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -30853,7 +30966,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-13T09:40:34+00:00",
     "groups": [
       [
@@ -32037,7 +32150,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-16T03:20:27+00:00",
     "groups": [],
     "military": false,
@@ -32268,7 +32381,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [],
     "military": false,
@@ -32343,7 +32456,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-07T10:04:33+00:00",
     "groups": [
       [
@@ -33551,7 +33664,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-19T08:00:49+00:00",
     "groups": [
       [
@@ -33707,7 +33820,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-13T11:10:18+00:00",
     "groups": [
       [
@@ -33815,8 +33928,50 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-09T06:40:30+00:00",
+    "group_validity": [
+      {
+        "end": "2026-09-11T04:00:00+00:00",
+        "raw": "9月10日1600时至11日1200时",
+        "start": "2026-09-10T08:00:00+00:00"
+      },
+      {
+        "end": "2026-09-11T04:00:00+00:00",
+        "raw": "9月10日1600时至11日1200时",
+        "start": "2026-09-10T08:00:00+00:00"
+      },
+      {
+        "end": "2026-09-11T04:00:00+00:00",
+        "raw": "9月10日1600时至11日1200时",
+        "start": "2026-09-10T08:00:00+00:00"
+      },
+      {
+        "end": "2026-09-11T04:00:00+00:00",
+        "raw": "9月10日1600时至11日1200时",
+        "start": "2026-09-10T08:00:00+00:00"
+      },
+      {
+        "end": "2026-09-11T04:00:00+00:00",
+        "raw": "9月10日1600时至11日1200时",
+        "start": "2026-09-10T08:00:00+00:00"
+      },
+      {
+        "end": "2026-09-11T04:00:00+00:00",
+        "raw": "9月10日1600时至11日1200时",
+        "start": "2026-09-10T08:00:00+00:00"
+      },
+      {
+        "end": "2026-09-11T04:00:00+00:00",
+        "raw": "9月10日1600时至11日1200时",
+        "start": "2026-09-10T08:00:00+00:00"
+      },
+      {
+        "end": "2026-09-11T00:00:00+00:00",
+        "raw": "9月11日0300时至0800时",
+        "start": "2026-09-10T19:00:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -34492,7 +34647,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-18T09:00:45+00:00",
     "groups": [
       [
@@ -34700,7 +34855,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T09:23:38+00:00",
     "groups": [
       [
@@ -34937,7 +35092,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-08T06:30:39+00:00",
     "groups": [
       [
@@ -35315,7 +35470,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-09T16:36:06+00:00",
     "groups": [
       [
@@ -35621,7 +35776,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-01T00:30:38+00:00",
     "groups": [
       [
@@ -35709,7 +35864,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -36099,7 +36254,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-21T10:30:35+00:00",
     "groups": [
       [
@@ -36504,7 +36659,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-12T08:37:56+00:00",
     "groups": [
       [
@@ -36628,7 +36783,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-05T09:50:28+00:00",
     "groups": [
       [
@@ -36806,7 +36961,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -36914,7 +37069,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-18T10:20:30+00:00",
     "groups": [
       [
@@ -37162,7 +37317,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-01T01:30:45+00:00",
     "groups": [
       [
@@ -37651,7 +37806,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-18T10:20:30+00:00",
     "groups": [
       [
@@ -37889,7 +38044,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -38041,7 +38196,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-17T03:10:38+00:00",
     "groups": [
       [
@@ -38135,7 +38290,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-22T21:40:29+00:00",
     "groups": [
       [
@@ -38405,7 +38560,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-13T02:02:24+00:00",
     "groups": [
       [
@@ -38653,7 +38808,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-28T01:20:28+00:00",
     "groups": [
       [
@@ -38817,7 +38972,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-17T08:20:27+00:00",
     "groups": [
       [
@@ -38911,7 +39066,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-20T04:00:44+00:00",
     "groups": [
       [
@@ -39019,7 +39174,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-20T00:20:28+00:00",
     "groups": [
       [
@@ -39440,7 +39595,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-20T00:50:30+00:00",
     "groups": [],
     "military": false,
@@ -39543,7 +39698,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -40141,8 +40296,20 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
+    "group_validity": [
+      {
+        "end": "2026-07-29T07:00:00+00:00",
+        "raw": "7月29日0300时至1500",
+        "start": "2026-07-28T19:00:00+00:00"
+      },
+      {
+        "end": "2026-07-29T07:00:00+00:00",
+        "raw": "7月29日0300时至1500",
+        "start": "2026-07-28T19:00:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -40489,7 +40656,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-18T10:40:32+00:00",
     "groups": [
       [
@@ -40611,7 +40778,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-25T02:50:27+00:00",
     "groups": [
       [
@@ -40987,7 +41154,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-09T13:50:32+00:00",
     "groups": [
       [
@@ -41207,7 +41374,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-18T09:30:39+00:00",
     "groups": [
       [
@@ -41525,7 +41692,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-11T11:28:47+00:00",
     "groups": [
       [
@@ -41833,7 +42000,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -41955,7 +42122,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-22T12:20:30+00:00",
     "groups": [
       [
@@ -42309,7 +42476,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-09T09:40:01+00:00",
     "groups": [
       [
@@ -43447,7 +43614,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-18T10:20:30+00:00",
     "groups": [
       [
@@ -43642,7 +43809,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-08T16:17:09+00:00",
     "groups": [
       [
@@ -43806,7 +43973,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-21T08:20:34+00:00",
     "groups": [
       [
@@ -44180,8 +44347,20 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
+    "group_validity": [
+      {
+        "end": "2026-07-26T12:00:00+00:00",
+        "raw": "7月23日0600时至26日2000时",
+        "start": "2026-07-22T22:00:00+00:00"
+      },
+      {
+        "end": "2026-07-26T12:00:00+00:00",
+        "raw": "7月23日0600时至26日2000时",
+        "start": "2026-07-22T22:00:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -44489,7 +44668,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-17T23:20:31+00:00",
     "groups": [
       [
@@ -44779,7 +44958,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "group_validity": [
       {
@@ -45080,8 +45259,20 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-23T13:10:29+00:00",
+    "group_validity": [
+      {
+        "end": "2026-08-26T10:00:00+00:00",
+        "raw": "8月24日1200时至8月26日1800时",
+        "start": "2026-08-24T04:00:00+00:00"
+      },
+      {
+        "end": "2026-08-26T10:00:00+00:00",
+        "raw": "8月24日1200时至8月26日1800时",
+        "start": "2026-08-24T04:00:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -45478,7 +45669,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-11T13:54:37+00:00",
     "groups": [
       [
@@ -45810,8 +46001,20 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
+    "group_validity": [
+      {
+        "end": "2026-08-06T12:00:00+00:00",
+        "raw": "8月6日0800时至2000时",
+        "start": "2026-08-06T00:00:00+00:00"
+      },
+      {
+        "end": "2026-08-06T12:00:00+00:00",
+        "raw": "8月6日0800时至2000时",
+        "start": "2026-08-06T00:00:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -46285,8 +46488,20 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-19T11:10:30+00:00",
+    "group_validity": [
+      {
+        "end": "2026-08-25T12:00:00+00:00",
+        "raw": "8月21日至25日每日0800时至2000时",
+        "start": "2026-08-21T00:00:00+00:00"
+      },
+      {
+        "end": "2026-08-25T12:00:00+00:00",
+        "raw": "8月21日至25日每日0800时至2000时",
+        "start": "2026-08-21T00:00:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -46473,7 +46688,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-14T07:02:10+00:00",
     "groups": [
       [
@@ -46595,7 +46810,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-03T13:40:30+00:00",
     "groups": [
       [
@@ -46913,8 +47128,20 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-14T08:50:33+00:00",
+    "group_validity": [
+      {
+        "end": "2026-09-18T16:00:00+00:00",
+        "raw": "9月15日至18日",
+        "start": "2026-09-14T16:00:00+00:00"
+      },
+      {
+        "end": "2026-09-18T16:00:00+00:00",
+        "raw": "9月15日至18日",
+        "start": "2026-09-14T16:00:00+00:00"
+      }
+    ],
     "groups": [
       [
         {
@@ -47229,7 +47456,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -47338,7 +47565,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -47446,7 +47673,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-19T12:40:28+00:00",
     "groups": [
       [
@@ -47594,7 +47821,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-17T13:00:50+00:00",
     "groups": [
       [
@@ -47968,7 +48195,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -48135,7 +48362,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-04T03:50:26+00:00",
     "groups": [
       [
@@ -48453,7 +48680,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -48589,7 +48816,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -48753,7 +48980,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-09T03:30:38+00:00",
     "groups": [
       [
@@ -49065,7 +49292,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-19T08:00:45+00:00",
     "groups": [
       [
@@ -49233,7 +49460,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -49607,7 +49834,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-17T02:50:29+00:00",
     "groups": [
       [
@@ -49776,7 +50003,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-18T05:50:32+00:00",
     "group_validity": [
       {
@@ -50009,7 +50236,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -50637,7 +50864,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-03T04:00:42+00:00",
     "groups": [
       [
@@ -50806,7 +51033,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-22T06:50:38+00:00",
     "groups": [
       [
@@ -50900,7 +51127,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-08T10:40:34+00:00",
     "groups": [
       [
@@ -51074,7 +51301,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -51183,7 +51410,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-09T02:30:39+00:00",
     "groups": [
       [
@@ -51518,7 +51745,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-04T07:40:29+00:00",
     "groups": [],
     "military": false,
@@ -51904,7 +52131,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -52040,7 +52267,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-24T09:20:29+00:00",
     "groups": [
       [
@@ -52238,7 +52465,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-08-06T06:05:29+00:00",
     "groups": [
       [
@@ -52556,7 +52783,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-03T08:50:28+00:00",
     "groups": [],
     "military": true,
@@ -52672,7 +52899,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-15T05:50:37+00:00",
     "groups": [
       [
@@ -52766,7 +52993,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-20T12:30:40+00:00",
     "groups": [
       [
@@ -53196,7 +53423,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-21T03:20:32+00:00",
     "groups": [
       [
@@ -53332,7 +53559,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-20T14:20:28+00:00",
     "groups": [
       [
@@ -53781,7 +54008,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-06T03:50:27+00:00",
     "groups": [
       [
@@ -53875,7 +54102,7 @@
     "detail_fail_count": 0,
     "detail_fetched": true,
     "detail_gave_up": false,
-    "extraction_version": 19,
+    "extraction_version": 20,
     "first_seen": "2026-09-11T16:50:28+00:00",
     "groups": [
       [

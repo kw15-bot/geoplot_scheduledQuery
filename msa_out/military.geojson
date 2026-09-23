@@ -290,6 +290,9 @@
           "9月18日0200时至1600时"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-09-17T18:00:00+00:00",
+        "group_valid_end": "2026-09-18T08:00:00+00:00",
+        "group_valid_raw": "9月18日0200时至1600时",
         "kind": "area"
       },
       "geometry": {
@@ -335,6 +338,9 @@
           "9月18日0200时至1600时"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-09-17T18:00:00+00:00",
+        "group_valid_end": "2026-09-18T08:00:00+00:00",
+        "group_valid_raw": "9月18日0200时至1600时",
         "kind": "area"
       },
       "geometry": {
@@ -1864,6 +1870,9 @@
           "9月8日1100时至1200时"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-09-08T03:00:00+00:00",
+        "group_valid_end": "2026-09-08T04:00:00+00:00",
+        "group_valid_raw": "9月8日1100时至1200时",
         "kind": "area"
       },
       "geometry": {
@@ -1909,6 +1918,9 @@
           "9月8日1100时至1200时"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-09-08T03:00:00+00:00",
+        "group_valid_end": "2026-09-08T04:00:00+00:00",
+        "group_valid_raw": "9月8日1100时至1200时",
         "kind": "area"
       },
       "geometry": {
@@ -2183,6 +2195,9 @@
           "2026年8月9日0500时至2026年8月9日1200时"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-08-08T21:00:00+00:00",
+        "group_valid_end": "2026-08-09T04:00:00+00:00",
+        "group_valid_raw": "2026年8月9日0500时至2026年8月9日1200时",
         "kind": "area"
       },
       "geometry": {
@@ -2228,6 +2243,9 @@
           "2026年8月9日0500时至2026年8月9日1200时"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-08-08T21:00:00+00:00",
+        "group_valid_end": "2026-08-09T04:00:00+00:00",
+        "group_valid_raw": "2026年8月9日0500时至2026年8月9日1200时",
         "kind": "area"
       },
       "geometry": {
@@ -2581,6 +2599,9 @@
           "9月14日0600时至1800时"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-09-13T22:00:00+00:00",
+        "group_valid_end": "2026-09-14T10:00:00+00:00",
+        "group_valid_raw": "9月14日0600时至1800时",
         "kind": "area"
       },
       "geometry": {
@@ -2626,6 +2647,9 @@
           "9月14日0600时至1800时"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-09-13T22:00:00+00:00",
+        "group_valid_end": "2026-09-14T10:00:00+00:00",
+        "group_valid_raw": "9月14日0600时至1800时",
         "kind": "area"
       },
       "geometry": {
@@ -3153,12 +3177,12 @@
         "group_valid_raw": "9月7日至10日 ／ 9月12日至21日",
         "group_valid_windows": [
           {
-            "end": "2026-09-10T16:00:00+00:00",
-            "start": "2026-09-06T16:00:00+00:00"
+            "start": "2026-09-06T16:00:00+00:00",
+            "end": "2026-09-10T16:00:00+00:00"
           },
           {
-            "end": "2026-09-21T16:00:00+00:00",
-            "start": "2026-09-11T16:00:00+00:00"
+            "start": "2026-09-11T16:00:00+00:00",
+            "end": "2026-09-21T16:00:00+00:00"
           }
         ],
         "kind": "area"
@@ -3360,12 +3384,12 @@
         "group_valid_raw": "9月9日至10日 ／ 9月12日至21日",
         "group_valid_windows": [
           {
-            "end": "2026-09-10T16:00:00+00:00",
-            "start": "2026-09-08T16:00:00+00:00"
+            "start": "2026-09-08T16:00:00+00:00",
+            "end": "2026-09-10T16:00:00+00:00"
           },
           {
-            "end": "2026-09-21T16:00:00+00:00",
-            "start": "2026-09-11T16:00:00+00:00"
+            "start": "2026-09-11T16:00:00+00:00",
+            "end": "2026-09-21T16:00:00+00:00"
           }
         ],
         "kind": "area"
@@ -4318,6 +4342,9 @@
           "8月5日0910时至1110"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-08-03T06:00:00+00:00",
+        "group_valid_end": "2026-08-05T04:00:00+00:00",
+        "group_valid_raw": "8月3日1400时至5日1200时",
         "kind": "area"
       },
       "geometry": {
@@ -4604,6 +4631,9 @@
           "8月5日0910时至1110"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-08-03T06:00:00+00:00",
+        "group_valid_end": "2026-08-05T04:00:00+00:00",
+        "group_valid_raw": "8月3日1400时至5日1200时",
         "kind": "line"
       },
       "geometry": {
@@ -4636,6 +4666,9 @@
           "8月5日0910时至1110"
         ],
         "group_index": 3,
+        "group_valid_start": "2026-08-05T01:10:00+00:00",
+        "group_valid_end": "2026-08-05T03:10:00+00:00",
+        "group_valid_raw": "8月5日0910时至1110",
         "kind": "area"
       },
       "geometry": {
@@ -4771,6 +4804,9 @@
           "8月6日1700时至8月7日1400时"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-08-06T09:00:00+00:00",
+        "group_valid_end": "2026-08-07T06:00:00+00:00",
+        "group_valid_raw": "8月6日1700时至8月7日1400时",
         "kind": "area"
       },
       "geometry": {
@@ -4816,6 +4852,9 @@
           "8月6日1700时至8月7日1400时"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-08-06T09:00:00+00:00",
+        "group_valid_end": "2026-08-07T06:00:00+00:00",
+        "group_valid_raw": "8月6日1700时至8月7日1400时",
         "kind": "area"
       },
       "geometry": {
@@ -4959,6 +4998,9 @@
           "8月7日1800时至8月8日1400时"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-08-07T10:00:00+00:00",
+        "group_valid_end": "2026-08-08T06:00:00+00:00",
+        "group_valid_raw": "8月7日1800时至8月8日1400时",
         "kind": "area"
       },
       "geometry": {
@@ -5004,6 +5046,9 @@
           "8月7日1800时至8月8日1400时"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-08-07T10:00:00+00:00",
+        "group_valid_end": "2026-08-08T06:00:00+00:00",
+        "group_valid_raw": "8月7日1800时至8月8日1400时",
         "kind": "area"
       },
       "geometry": {
@@ -6610,6 +6655,9 @@
           "2026年9月18日至9月30日"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-09-17T16:00:00+00:00",
+        "group_valid_end": "2026-09-30T16:00:00+00:00",
+        "group_valid_raw": "2026年9月18日至9月30日",
         "kind": "area"
       },
       "geometry": {
@@ -6655,6 +6703,9 @@
           "2026年9月18日至9月30日"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-09-17T16:00:00+00:00",
+        "group_valid_end": "2026-09-30T16:00:00+00:00",
+        "group_valid_raw": "2026年9月18日至9月30日",
         "kind": "area"
       },
       "geometry": {
@@ -7117,6 +7168,9 @@
           "8月28日至9月1日每日0800时至2000时"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-08-28T00:00:00+00:00",
+        "group_valid_end": "2026-09-01T12:00:00+00:00",
+        "group_valid_raw": "8月28日至9月1日每日0800时至2000时",
         "kind": "area"
       },
       "geometry": {
@@ -7162,6 +7216,9 @@
           "8月28日至9月1日每日0800时至2000时"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-08-28T00:00:00+00:00",
+        "group_valid_end": "2026-09-01T12:00:00+00:00",
+        "group_valid_raw": "8月28日至9月1日每日0800时至2000时",
         "kind": "area"
       },
       "geometry": {
@@ -7880,6 +7937,9 @@
           "9月11日0300时至0800时"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-09-10T08:00:00+00:00",
+        "group_valid_end": "2026-09-11T04:00:00+00:00",
+        "group_valid_raw": "9月10日1600时至11日1200时",
         "kind": "area"
       },
       "geometry": {
@@ -7930,6 +7990,9 @@
           "9月11日0300时至0800时"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-09-10T08:00:00+00:00",
+        "group_valid_end": "2026-09-11T04:00:00+00:00",
+        "group_valid_raw": "9月10日1600时至11日1200时",
         "kind": "area"
       },
       "geometry": {
@@ -7976,6 +8039,9 @@
           "9月11日0300时至0800时"
         ],
         "group_index": 3,
+        "group_valid_start": "2026-09-10T08:00:00+00:00",
+        "group_valid_end": "2026-09-11T04:00:00+00:00",
+        "group_valid_raw": "9月10日1600时至11日1200时",
         "kind": "area"
       },
       "geometry": {
@@ -8026,6 +8092,9 @@
           "9月11日0300时至0800时"
         ],
         "group_index": 4,
+        "group_valid_start": "2026-09-10T08:00:00+00:00",
+        "group_valid_end": "2026-09-11T04:00:00+00:00",
+        "group_valid_raw": "9月10日1600时至11日1200时",
         "kind": "area"
       },
       "geometry": {
@@ -8072,6 +8141,9 @@
           "9月11日0300时至0800时"
         ],
         "group_index": 5,
+        "group_valid_start": "2026-09-10T08:00:00+00:00",
+        "group_valid_end": "2026-09-11T04:00:00+00:00",
+        "group_valid_raw": "9月10日1600时至11日1200时",
         "kind": "area"
       },
       "geometry": {
@@ -8118,6 +8190,9 @@
           "9月11日0300时至0800时"
         ],
         "group_index": 6,
+        "group_valid_start": "2026-09-10T08:00:00+00:00",
+        "group_valid_end": "2026-09-11T04:00:00+00:00",
+        "group_valid_raw": "9月10日1600时至11日1200时",
         "kind": "area"
       },
       "geometry": {
@@ -8176,6 +8251,9 @@
           "9月11日0300时至0800时"
         ],
         "group_index": 7,
+        "group_valid_start": "2026-09-10T08:00:00+00:00",
+        "group_valid_end": "2026-09-11T04:00:00+00:00",
+        "group_valid_raw": "9月10日1600时至11日1200时",
         "kind": "area"
       },
       "geometry": {
@@ -8218,6 +8296,9 @@
           "9月11日0300时至0800时"
         ],
         "group_index": 8,
+        "group_valid_start": "2026-09-10T19:00:00+00:00",
+        "group_valid_end": "2026-09-11T00:00:00+00:00",
+        "group_valid_raw": "9月11日0300时至0800时",
         "kind": "area"
       },
       "geometry": {
@@ -9244,6 +9325,9 @@
           "辽航警327/26"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-07-28T19:00:00+00:00",
+        "group_valid_end": "2026-07-29T07:00:00+00:00",
+        "group_valid_raw": "7月29日0300时至1500",
         "kind": "area"
       },
       "geometry": {
@@ -9293,6 +9377,9 @@
           "辽航警327/26"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-07-28T19:00:00+00:00",
+        "group_valid_end": "2026-07-29T07:00:00+00:00",
+        "group_valid_raw": "7月29日0300时至1500",
         "kind": "area"
       },
       "geometry": {
@@ -10101,6 +10188,9 @@
           "桂航警170/26"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-07-22T22:00:00+00:00",
+        "group_valid_end": "2026-07-26T12:00:00+00:00",
+        "group_valid_raw": "7月23日0600时至26日2000时",
         "kind": "area"
       },
       "geometry": {
@@ -10162,6 +10252,9 @@
           "桂航警170/26"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-07-22T22:00:00+00:00",
+        "group_valid_end": "2026-07-26T12:00:00+00:00",
+        "group_valid_raw": "7月23日0600时至26日2000时",
         "kind": "area"
       },
       "geometry": {
@@ -10354,6 +10447,9 @@
           "8月24日1200时至8月26日1800时"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-08-24T04:00:00+00:00",
+        "group_valid_end": "2026-08-26T10:00:00+00:00",
+        "group_valid_raw": "8月24日1200时至8月26日1800时",
         "kind": "area"
       },
       "geometry": {
@@ -10399,6 +10495,9 @@
           "8月24日1200时至8月26日1800时"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-08-24T04:00:00+00:00",
+        "group_valid_end": "2026-08-26T10:00:00+00:00",
+        "group_valid_raw": "8月24日1200时至8月26日1800时",
         "kind": "area"
       },
       "geometry": {
@@ -10489,6 +10588,9 @@
           "8月6日0800时至2000时"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-08-06T00:00:00+00:00",
+        "group_valid_end": "2026-08-06T12:00:00+00:00",
+        "group_valid_raw": "8月6日0800时至2000时",
         "kind": "area"
       },
       "geometry": {
@@ -10534,6 +10636,9 @@
           "8月6日0800时至2000时"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-08-06T00:00:00+00:00",
+        "group_valid_end": "2026-08-06T12:00:00+00:00",
+        "group_valid_raw": "8月6日0800时至2000时",
         "kind": "area"
       },
       "geometry": {
@@ -10579,6 +10684,9 @@
           "8月21日至25日每日0800时至2000时"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-08-21T00:00:00+00:00",
+        "group_valid_end": "2026-08-25T12:00:00+00:00",
+        "group_valid_raw": "8月21日至25日每日0800时至2000时",
         "kind": "area"
       },
       "geometry": {
@@ -10624,6 +10732,9 @@
           "8月21日至25日每日0800时至2000时"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-08-21T00:00:00+00:00",
+        "group_valid_end": "2026-08-25T12:00:00+00:00",
+        "group_valid_raw": "8月21日至25日每日0800时至2000时",
         "kind": "area"
       },
       "geometry": {
@@ -10759,6 +10870,9 @@
           "9月15日至18日"
         ],
         "group_index": 1,
+        "group_valid_start": "2026-09-14T16:00:00+00:00",
+        "group_valid_end": "2026-09-18T16:00:00+00:00",
+        "group_valid_raw": "9月15日至18日",
         "kind": "area"
       },
       "geometry": {
@@ -10804,6 +10918,9 @@
           "9月15日至18日"
         ],
         "group_index": 2,
+        "group_valid_start": "2026-09-14T16:00:00+00:00",
+        "group_valid_end": "2026-09-18T16:00:00+00:00",
+        "group_valid_raw": "9月15日至18日",
         "kind": "area"
       },
       "geometry": {
