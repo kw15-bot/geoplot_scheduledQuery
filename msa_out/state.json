@@ -8972,6 +8972,18 @@
     "title": "LNG船“CESI QINGDAO (中能青岛)”轮出港—浙航警757/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/21ddb5399bfb4d40ae8b460cdf6e8a99.html?hav=1jWj6r2hy3yfgSVPKkf1qZZiTh"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/21efbd2f739b4b4b9742983ff31c532f.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-23",
+    "detail_fetched": false,
+    "first_seen": "2026-09-23T09:30:38+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "日照—帆船比赛—鲁航警833/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/21efbd2f739b4b4b9742983ff31c532f.html?hav=1jWj6r2hy5diEead7jYToPqPOC"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/21f62c8a94e8423383f089cc109eac97.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -32240,6 +32252,18 @@
       ],
       "start": "2026-09-13T22:00:00+00:00"
     }
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7eedaf344f194b8ba33eac5f42fdcd9b.html": {
+    "bureau": "天津海事局",
+    "date": "2026-09-23",
+    "detail_fetched": false,
+    "first_seen": "2026-09-23T09:30:38+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "拖带作业—津航警329/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7eedaf344f194b8ba33eac5f42fdcd9b.html?hav=1jWj6r2hy5diEead7jYTji2lbr"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7ef0e95bdd43414b89064890df9e2087.html": {
     "bureau": "深圳海事局",
