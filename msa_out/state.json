@@ -20248,6 +20248,177 @@
     "title": "招商试013轮试航—鲁航警724/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4d282bd4b7e54066a0cd3765d79233b1.html?hav=1jWj6r2hy3yfmTktbBoQxrS925"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4d3eef6400ef43ffb763516aff6bf45c.html": {
+    "bureau": "连云港海事局",
+    "cancels": [],
+    "date": "2026-09-23",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 20,
+    "first_seen": "2026-09-23T07:50:29+00:00",
+    "group_validity": [
+      {
+        "end": "2026-10-23T10:30:00+00:00",
+        "raw": "9月24日至10月23日每日0500时至1830时",
+        "start": "2026-09-23T21:00:00+00:00"
+      },
+      {
+        "end": "2026-10-23T10:30:00+00:00",
+        "raw": "9月24日至10月23日每日0500时至1830时",
+        "start": "2026-09-23T21:00:00+00:00"
+      }
+    ],
+    "groups": [
+      [
+        {
+          "end": 54,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.925,
+          "lon": 119.24833333333333,
+          "raw": "34-55.500N 119-14.900E",
+          "start": 32
+        },
+        {
+          "end": 77,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.925,
+          "lon": 119.285,
+          "raw": "34-55.500N 119-17.100E",
+          "start": 55
+        },
+        {
+          "end": 100,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.88,
+          "lon": 119.285,
+          "raw": "34-52.800N 119-17.100E",
+          "start": 78
+        },
+        {
+          "end": 123,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.88,
+          "lon": 119.24833333333333,
+          "raw": "34-52.800N 119-14.900E",
+          "start": 101
+        }
+      ],
+      [
+        {
+          "end": 154,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.94493333333333,
+          "lon": 119.44473333333333,
+          "raw": "34-56.696N 119-26.684E",
+          "start": 132
+        },
+        {
+          "end": 177,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.94006666666667,
+          "lon": 119.54263333333333,
+          "raw": "34-56.404N 119-32.558E",
+          "start": 155
+        },
+        {
+          "end": 200,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.90971666666667,
+          "lon": 119.54393333333333,
+          "raw": "34-54.583N 119-32.636E",
+          "start": 178
+        },
+        {
+          "end": 223,
+          "fmt": "DDM_HYPHEN",
+          "lat": 34.893433333333334,
+          "lon": 119.44893333333333,
+          "raw": "34-53.606N 119-26.936E",
+          "start": 201
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 54,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.925,
+        "lon": 119.24833333333333,
+        "raw": "34-55.500N 119-14.900E",
+        "start": 32
+      },
+      {
+        "end": 77,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.925,
+        "lon": 119.285,
+        "raw": "34-55.500N 119-17.100E",
+        "start": 55
+      },
+      {
+        "end": 100,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.88,
+        "lon": 119.285,
+        "raw": "34-52.800N 119-17.100E",
+        "start": 78
+      },
+      {
+        "end": 123,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.88,
+        "lon": 119.24833333333333,
+        "raw": "34-52.800N 119-14.900E",
+        "start": 101
+      },
+      {
+        "end": 154,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.94493333333333,
+        "lon": 119.44473333333333,
+        "raw": "34-56.696N 119-26.684E",
+        "start": 132
+      },
+      {
+        "end": 177,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.94006666666667,
+        "lon": 119.54263333333333,
+        "raw": "34-56.404N 119-32.558E",
+        "start": 155
+      },
+      {
+        "end": 200,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.90971666666667,
+        "lon": 119.54393333333333,
+        "raw": "34-54.583N 119-32.636E",
+        "start": 178
+      },
+      {
+        "end": 223,
+        "fmt": "DDM_HYPHEN",
+        "lat": 34.893433333333334,
+        "lon": 119.44893333333333,
+        "raw": "34-53.606N 119-26.936E",
+        "start": 201
+      }
+    ],
+    "raw_text": "黄海南部，9月24日至10月23日每日0500时至1830时，在34-55.500N 119-14.900E、34-55.500N 119-17.100E、34-52.800N 119-17.100E和34-52.800N 119-14.900E四点连线范围内以及34-56.696N 119-26.684E、34-56.404N 119-32.558E、34-54.583N 119-32.636E和34-53.606N 119-26.936E四点连线范围内进行军事活动，禁止驶入。",
+    "revoked": false,
+    "title": "军事活动—云航警160/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4d3eef6400ef43ffb763516aff6bf45c.html?hav=1jWj6r2hy5diEead7gycpyM7vP",
+    "validity": {
+      "end": "2026-10-23T10:30:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月24日至10月23日每日0500时至1830时"
+      ],
+      "start": "2026-09-23T21:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4d5d52f237724abe81018fa4b60fde94.html": {
     "bureau": "河北海事局",
     "cancels": [],
@@ -26913,6 +27084,18 @@
       ],
       "start": "2026-07-26T22:00:00+00:00"
     }
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6824d4e69b074ea3b0849baf0daef5d6.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-23",
+    "detail_fetched": false,
+    "first_seen": "2026-09-23T07:50:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航行拖带—鲁航警830/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6824d4e69b074ea3b0849baf0daef5d6.html?hav=1jWj6r2hy5diEead7gycudsyKn"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6829459f33e34505af91bdf258352f95.html": {
     "bureau": "海南海事局",
