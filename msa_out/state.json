@@ -23543,6 +23543,18 @@
     "title": "吊装作业—深航警92/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5a286ebbebe545b2a035c4d55d96d9e0.html?hav=1jWj6r2hy5di8jC95ZcEl0nY6W"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5a51c824851140bdbf104e3fe5abf52f.html": {
+    "bureau": "辽宁海事局",
+    "date": "2026-09-23",
+    "detail_fetched": false,
+    "first_seen": "2026-09-23T06:30:37+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "宁海拖8001拖轮拖带中油海19平台—辽航警405/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5a51c824851140bdbf104e3fe5abf52f.html?hav=1jWj6r2hy5diEead7fghA8C2y7"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5aac9dc0a8d04875ab408234c78e623b.html": {
     "bureau": "天津海事局",
     "cancels": [],
@@ -50513,11 +50525,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e8af2be749ab4c75a1beb884ae2f3389.html": {
     "bureau": "江苏海事局",
+    "cancels": [],
     "date": "2026-09-23",
     "detail_fetched": false,
     "first_seen": "2026-09-23T06:20:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "苏航警65/26",
     "points": [],
     "revoked": false,
     "title": "江阴中船澄西修造船厂新造船下水作业—苏航警65/26",
