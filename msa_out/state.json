@@ -38675,11 +38675,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a308d4f2edb74ff4a499a5ad82c46ab4.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-24",
     "detail_fetched": false,
     "first_seen": "2026-09-24T02:32:27+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警834/26",
     "points": [],
     "revoked": false,
     "title": "烟港融合七号轮拖带大地英豪轮—鲁航警834/26",
