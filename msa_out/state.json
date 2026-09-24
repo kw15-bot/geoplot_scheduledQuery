@@ -44674,11 +44674,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c1bb3d31aa4b448f8142f62b732a2af3.html": {
     "bureau": "广西海事局",
+    "cancels": [],
     "date": "2026-09-24",
     "detail_fetched": false,
     "first_seen": "2026-09-24T09:01:23+00:00",
     "groups": [],
     "military": false,
+    "own_id": "桂航警210/26",
     "points": [],
     "revoked": false,
     "title": "“长大海航”拖带“重任 3000”拖带作业—桂航警210/26",
