@@ -4196,6 +4196,18 @@
     "title": "1月28日半潜驳船“汉拿山”拖带作业—苏航警6/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/12464c482abd4c0bb9885af0755100a8.html?hav=1jWj6r2hxsLOaPDiqnXvBByRhl"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/125b55f6bd5c4d0d875c691b8506c66b.html": {
+    "bureau": "海南海事局",
+    "date": "2026-09-24",
+    "detail_fetched": false,
+    "first_seen": "2026-09-24T07:10:30+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "“南海七号”钻井平台拖航作业—琼航警187/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/125b55f6bd5c4d0d875c691b8506c66b.html"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1277753a67d24ab99a3069072872712a.html": {
     "bureau": "浙江海事局",
     "cancels": [],
@@ -37122,11 +37134,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/96fdb6e60faf4b7b9071ed1415a6acc5.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-24",
     "detail_fetched": false,
     "first_seen": "2026-09-24T07:00:48+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警692/26",
     "points": [],
     "revoked": false,
     "title": "海上拖带作业—粤航警692/26",
