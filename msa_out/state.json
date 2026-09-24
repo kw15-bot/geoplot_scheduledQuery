@@ -14660,11 +14660,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3f9bacfd4fe745c993042fdae976de32.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-09-24",
     "detail_fetched": false,
     "first_seen": "2026-09-24T10:50:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警407/26",
     "points": [],
     "revoked": false,
     "title": "水深测量—辽航警407/26",
@@ -40947,6 +40949,18 @@
     "title": "集装箱落海—沪航警611/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ad4920abfb2b49eda275ae148f8a364a.html?hav=1jWj6r2hy3yfaPnAQDI1y2dEHv"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ad50c5a96c444950a271e30724d8bf4b.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-24",
+    "detail_fetched": false,
+    "first_seen": "2026-09-24T11:00:50+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警664/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ad50c5a96c444950a271e30724d8bf4b.html"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ad55805d801f4efd883f5114b45cdc6c.html": {
     "bureau": "江苏海事局",
     "cancels": [],
@@ -46274,6 +46288,18 @@
     "title": "黄海南部“拓海先锋”轮试航—云航警134/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c90601ad11224a01bdac77f7f936dcbf.html?hav=1jWj6r2hy3yfmI2t8YEOWBbJMD"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c915a528b3224fe8bf9ef64673188fbb.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-24",
+    "detail_fetched": false,
+    "first_seen": "2026-09-24T11:00:50+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "杭州湾水域新建南通至宁波高速铁路杭州湾跨海大桥施工期临时北航道桥区航道交通管制—浙航警883/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c915a528b3224fe8bf9ef64673188fbb.html"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c94c457d9c5c405796fa134149a0468d.html": {
     "bureau": "上海海事局",
     "cancels": [],
@@ -47458,6 +47484,18 @@
     "revoked": false,
     "title": "水深测量—津航警220/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d08623446cb244669c2d5e551e89af3f.html?hav=1jWj6r2hy2JdE5xfLbunS51G3k"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d0eef73774704aa09e48aa63af8ffe08.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-24",
+    "detail_fetched": false,
+    "first_seen": "2026-09-24T11:00:50+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警663/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d0eef73774704aa09e48aa63af8ffe08.html"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d114592d0c334d9fb9cf745cf0970f89.html": {
     "bureau": "广西海事局",
