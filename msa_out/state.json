@@ -14111,11 +14111,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3a3ca661c7ed496f9e144c13e55b08fa.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-24",
     "detail_fetched": false,
     "first_seen": "2026-09-24T13:20:34+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警885/26",
     "points": [],
     "revoked": false,
     "title": "航标动态--平屿灯塔恢复正常—浙航警885/26",
