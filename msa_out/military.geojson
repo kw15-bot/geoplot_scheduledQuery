@@ -95,7 +95,7 @@
       "type": "Feature",
       "properties": {
         "title": "火箭残骸掉落—琼航警182/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0396fba1a50b476898db53c005fec123.html?hav=1jWj6r2hy5diEaCNRz4FiZq9Ty",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0396fba1a50b476898db53c005fec123.html",
         "date": "2026-09-20",
         "bureau": "海南海事局",
         "group_count": 1,
@@ -946,7 +946,7 @@
       "type": "Feature",
       "properties": {
         "title": "渤海军事演习—辽航警398/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/13ed95bea0ac4286904db1dae67fcc7d.html?hav=1jWj6r2hy5diEaCNX8mLs3O5Th",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/13ed95bea0ac4286904db1dae67fcc7d.html",
         "date": "2026-09-20",
         "bureau": "辽宁海事局",
         "group_count": 1,
@@ -991,7 +991,7 @@
       "type": "Feature",
       "properties": {
         "title": "军事训练—琼航警179/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/14f6f46dc13249309f7810e93d8e5f5d.html?hav=1jWj6r2hy5di8jC95YKJJ28qk1",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/14f6f46dc13249309f7810e93d8e5f5d.html",
         "date": "2026-09-18",
         "bureau": "海南海事局",
         "group_count": 1,
@@ -2778,7 +2778,7 @@
       "type": "Feature",
       "properties": {
         "title": "火箭发射—琼航警185/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/36cc7d481ff14b7b8316bfb24c7ec36d.html?hav=1jWj6r2hy5diEd7sYzwGRhcs52",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/36cc7d481ff14b7b8316bfb24c7ec36d.html",
         "date": "2026-09-22",
         "bureau": "海南海事局",
         "group_count": 1,
@@ -4889,7 +4889,7 @@
       "type": "Feature",
       "properties": {
         "title": "军事活动—云航警160/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4d3eef6400ef43ffb763516aff6bf45c.html?hav=1jWj6r2hy5diEead7gycpyM7vP",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4d3eef6400ef43ffb763516aff6bf45c.html",
         "date": "2026-09-23",
         "bureau": "连云港海事局",
         "group_count": 2,
@@ -4937,7 +4937,7 @@
       "type": "Feature",
       "properties": {
         "title": "军事活动—云航警160/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4d3eef6400ef43ffb763516aff6bf45c.html?hav=1jWj6r2hy5diEead7gycpyM7vP",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4d3eef6400ef43ffb763516aff6bf45c.html",
         "date": "2026-09-23",
         "bureau": "连云港海事局",
         "group_count": 2,
@@ -6740,7 +6740,7 @@
       "type": "Feature",
       "properties": {
         "title": "军事训练—琼航警184/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/72f51ffae5c348b780c196b46e0059a4.html?hav=1jWj6r2hy5diEbf80ZeyPRtuMf",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/72f51ffae5c348b780c196b46e0059a4.html",
         "date": "2026-09-21",
         "bureau": "海南海事局",
         "group_count": 2,
@@ -6788,7 +6788,7 @@
       "type": "Feature",
       "properties": {
         "title": "军事训练—琼航警184/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/72f51ffae5c348b780c196b46e0059a4.html?hav=1jWj6r2hy5diEbf80ZeyPRtuMf",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/72f51ffae5c348b780c196b46e0059a4.html",
         "date": "2026-09-21",
         "bureau": "海南海事局",
         "group_count": 2,
@@ -8573,7 +8573,7 @@
       "type": "Feature",
       "properties": {
         "title": "军事任务—辽航警404/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8be88d19ac724d7ca589e887f4e4d4e9.html?hav=1jWj6r2hy5diEead7d6qPjZ6Qy",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8be88d19ac724d7ca589e887f4e4d4e9.html",
         "date": "2026-09-23",
         "bureau": "辽宁海事局",
         "group_count": 1,
@@ -9091,7 +9091,7 @@
       "type": "Feature",
       "properties": {
         "title": "应急演习—津航警318/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a30edede7ce346e6ba39087c3ff3a1c0.html?hav=1jWj6r2hy5di8hjOWrHxN2UEpF",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a30edede7ce346e6ba39087c3ff3a1c0.html",
         "date": "2026-09-17",
         "bureau": "天津海事局",
         "group_count": 1,
@@ -9136,7 +9136,7 @@
       "type": "Feature",
       "properties": {
         "title": "渤海军事演习—辽航警403/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a31c0ea8475843daa84f493c1be44f57.html?hav=1jWj6r2hy5diEead2Mx6PU1BDg",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a31c0ea8475843daa84f493c1be44f57.html",
         "date": "2026-09-23",
         "bureau": "辽宁海事局",
         "group_count": 1,
@@ -9332,7 +9332,7 @@
       "type": "Feature",
       "properties": {
         "title": "军事训练—琼航警180/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5e35828c456408d993172f71abd5866.html?hav=1jWj6r2hy5diEaCNRq2lC9Hewz",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5e35828c456408d993172f71abd5866.html",
         "date": "2026-09-20",
         "bureau": "海南海事局",
         "group_count": 1,
@@ -9706,7 +9706,7 @@
       "type": "Feature",
       "properties": {
         "title": "军事训练—桂航警206/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b7d44ca08c2c42e2bf65d1046c5e761f.html?hav=1jWj6r2hy5di8jC95auAHZJ78l",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/b7d44ca08c2c42e2bf65d1046c5e761f.html",
         "date": "2026-09-18",
         "bureau": "广西海事局",
         "group_count": 1,
@@ -10191,7 +10191,7 @@
       "type": "Feature",
       "properties": {
         "title": "实弹射击—浙航警867/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c09c9335cec44b42b08fdeeb29a6af30.html?hav=1jWj6r2hy5di8jC95cC5jFnTe7",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c09c9335cec44b42b08fdeeb29a6af30.html",
         "date": "2026-09-18",
         "bureau": "浙江海事局",
         "group_count": 1,
@@ -11207,7 +11207,7 @@
       "type": "Feature",
       "properties": {
         "title": "军事任务—冀航警641/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d730945f8fc040bb94e2356e45141f44.html?hav=1jWj6r2hy5di8ketjMUuZkUKgb",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/d730945f8fc040bb94e2356e45141f44.html",
         "date": "2026-09-19",
         "bureau": "河北海事局",
         "group_count": 1,
@@ -11880,7 +11880,7 @@
       "type": "Feature",
       "properties": {
         "title": "军事任务—辽航警401/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ed3da4f736604444997a8f298a81972c.html?hav=1jWj6r2hy5diEd7sZ55yqcuw2k",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ed3da4f736604444997a8f298a81972c.html",
         "date": "2026-09-22",
         "bureau": "辽宁海事局",
         "group_count": 1,
@@ -12277,7 +12277,7 @@
       "type": "Feature",
       "properties": {
         "title": "渤海军事演习—辽航警397/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f8d39aa64a374e49b222ab232750bad5.html?hav=1jWj6r2hy5diEaCNX8mLryqVb1",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f8d39aa64a374e49b222ab232750bad5.html",
         "date": "2026-09-20",
         "bureau": "辽宁海事局",
         "group_count": 1,
@@ -12322,7 +12322,7 @@
       "type": "Feature",
       "properties": {
         "title": "军事任务—辽航警399/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fbece8b98d894ece9ddd5e5283781004.html?hav=1jWj6r2hy5diEbf80QdTQpwl6b",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fbece8b98d894ece9ddd5e5283781004.html",
         "date": "2026-09-21",
         "bureau": "辽宁海事局",
         "group_count": 1,
@@ -12367,7 +12367,7 @@
       "type": "Feature",
       "properties": {
         "title": "军事训练—琼航警183/26",
-        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fc30c99115b64ea890646f858db4608b.html?hav=1jWj6r2hy5diEaCNXBMCljfXvw",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/fc30c99115b64ea890646f858db4608b.html",
         "date": "2026-09-20",
         "bureau": "海南海事局",
         "group_count": 1,
