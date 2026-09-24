@@ -7038,6 +7038,7 @@
       ]
     ],
     "military": true,
+    "own_id": "粤航警690/26",
     "points": [
       {
         "end": 67,
@@ -16313,11 +16314,15 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/425cedb86e884e15b82c34092ff6d953.html": {
     "bureau": "广东海事局",
+    "cancels": [
+      "粤航警504/26"
+    ],
     "date": "2026-09-24",
     "detail_fetched": false,
     "first_seen": "2026-09-24T06:51:09+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警691/26",
     "points": [],
     "revoked": false,
     "title": "沉船“惠澳3280”打捞完毕，撤销粤航警504/26—粤航警691/26",
@@ -37115,6 +37120,18 @@
     "title": "施工作业—津航警246/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/96f95b07a3b549be9932a75c52d305a9.html?hav=1jWj6r2hy2JdQ2bdeD0RhSbnIQ"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/96fdb6e60faf4b7b9071ed1415a6acc5.html": {
+    "bureau": "广东海事局",
+    "date": "2026-09-24",
+    "detail_fetched": false,
+    "first_seen": "2026-09-24T07:00:48+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "海上拖带作业—粤航警692/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/96fdb6e60faf4b7b9071ed1415a6acc5.html"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/975bd495f4c944e9a41bd56261f36750.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -38390,11 +38407,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a016aa19b63346fba976a21d977a1a97.html": {
     "bureau": "天津海事局",
+    "cancels": [],
     "date": "2026-09-24",
     "detail_fetched": false,
     "first_seen": "2026-09-24T06:51:09+00:00",
     "groups": [],
     "military": false,
+    "own_id": "津航警331/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—津航警331/26",
