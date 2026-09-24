@@ -10078,6 +10078,18 @@
       "start": "2026-09-02T00:30:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2715215fa88c43b784a8578457e55fd1.html": {
+    "bureau": "天津海事局",
+    "date": "2026-09-24",
+    "detail_fetched": false,
+    "first_seen": "2026-09-24T07:50:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "注意渔船—津航警332/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2715215fa88c43b784a8578457e55fd1.html"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/271c4476ebc643b89cfa667891300d10.html": {
     "bureau": "上海海事局",
     "cancels": [],
@@ -29323,6 +29335,18 @@
     "revoked": false,
     "title": "科考作业—闽航警154/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/752db10518a74ebcaa1e3b7fa256bc88.html?hav=1jWj6r2hy5di2c5efuW8PcBkyC"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/757b3cbe959547399811f546e4fec8d8.html": {
+    "bureau": "天津海事局",
+    "date": "2026-09-24",
+    "detail_fetched": false,
+    "first_seen": "2026-09-24T07:50:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "海河施工作业—津航警333/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/757b3cbe959547399811f546e4fec8d8.html"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/758ce9ce829345aa9ea24a51c745d212.html": {
     "bureau": "上海海事局",
