@@ -36858,11 +36858,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/960759a4aac34f13b2d09d50705a6f41.html": {
     "bureau": "连云港海事局",
+    "cancels": [],
     "date": "2026-09-24",
     "detail_fetched": false,
     "first_seen": "2026-09-24T04:00:44+00:00",
     "groups": [],
     "military": false,
+    "own_id": "云航警161/26",
     "points": [],
     "revoked": false,
     "title": "“风顺118”轮试航—云航警161/26",
