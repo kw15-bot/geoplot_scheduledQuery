@@ -1107,11 +1107,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/04cd807d9271431f95afff258d304809.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-25",
     "detail_fetched": false,
     "first_seen": "2026-09-25T09:50:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警762/26",
     "points": [],
     "revoked": false,
     "title": "装载大件船舶—沪航警762/26",
@@ -39972,6 +39974,18 @@
     "revoked": false,
     "title": "吊装作业—津航警245/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5afb3602d93489bb42142c76e7cf9bc.html?hav=1jWj6r2hy2JdQ2bdeD0RciXMbp"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5b0f303353c42b5acab92cd2030f506.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-25",
+    "detail_fetched": false,
+    "first_seen": "2026-09-25T10:00:48+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "船舶拖带—冀航警667/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5b0f303353c42b5acab92cd2030f506.html"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5bc06cda9ed4377892e864193b6d240.html": {
     "bureau": "广东海事局",
