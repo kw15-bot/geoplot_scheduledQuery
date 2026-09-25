@@ -50895,11 +50895,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e351bfe7dcdc4064b9d43360e3759333.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-25",
     "detail_fetched": false,
     "first_seen": "2026-09-25T10:50:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警886/26",
     "points": [],
     "revoked": false,
     "title": "XIN RUN YANG和CHINA FORTUNE轮航经虾峙门外深水航槽—浙航警886/26",
