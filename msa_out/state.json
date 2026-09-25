@@ -7921,6 +7921,18 @@
     "title": "中华人民共和国宜昌海事局航行警告—宜航警56/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1c46f395b6f44244a46bf2b7dbd04b8c.html?hav=1jWj6r2hy2JdJztOuKyQ2vIhsp"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1c4f99c0d9ba45678625e8e8ca2ebd02.html": {
+    "bureau": "上海海事局",
+    "date": "2026-09-26",
+    "detail_fetched": false,
+    "first_seen": "2026-09-25T23:20:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "交通管制—沪航警763/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1c4f99c0d9ba45678625e8e8ca2ebd02.html"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1c595bba162f4abcaaad664bb67d2fa5.html": {
     "bureau": "广东海事局",
     "cancels": [],
