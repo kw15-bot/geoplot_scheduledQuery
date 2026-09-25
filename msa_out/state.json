@@ -36241,11 +36241,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8c93365184cc4005ae7e33bd4a2099db.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-09-25",
     "detail_fetched": false,
     "first_seen": "2026-09-25T09:30:38+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警695/26",
     "points": [],
     "revoked": false,
     "title": "专用标灯光熄灭—粤航警695/26",
