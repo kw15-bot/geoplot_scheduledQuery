@@ -7923,11 +7923,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1c4f99c0d9ba45678625e8e8ca2ebd02.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-09-26",
     "detail_fetched": false,
     "first_seen": "2026-09-25T23:20:35+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警763/26",
     "points": [],
     "revoked": false,
     "title": "交通管制—沪航警763/26",
