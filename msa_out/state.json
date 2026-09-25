@@ -39977,11 +39977,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a5b0f303353c42b5acab92cd2030f506.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-09-25",
     "detail_fetched": false,
     "first_seen": "2026-09-25T10:00:48+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警667/26",
     "points": [],
     "revoked": false,
     "title": "船舶拖带—冀航警667/26",
