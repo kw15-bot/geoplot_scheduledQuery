@@ -3636,11 +3636,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/0cfb4e17c7e842bb9cfa82197fb19916.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-26",
     "detail_fetched": false,
     "first_seen": "2026-09-26T11:00:44+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警842/26",
     "points": [],
     "revoked": false,
     "title": "德涞轮拖带徳渡轮—鲁航警842/26",
