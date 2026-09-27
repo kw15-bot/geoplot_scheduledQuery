@@ -1,0 +1,49 @@
+name: NOTAM daily report
+
+# notam_out/ の収集データを1日1回集計し、Qコードの主題(種別)ごとにまとめたレポートを
+# notam_out/reports/notam_report_YYYY-MM-DD.md と latest.md に書き出す(notam_daily_report.py)。
+#
+# 毎日 23:52 UTC(= 08:52 JST)。GitHub Actionsのscheduleはbest-effortで数分〜数十分遅れる
+# ことがあるが、日次レポートなので許容する。手動実行(workflow_dispatch)も可。
+on:
+  schedule:
+    - cron: "52 23 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: notam-report
+  cancel-in-progress: false
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Build report
+        run: python notam_daily_report.py --out-dir notam_out
+
+      # reports/ はこのワークフローしか書かないので、収集側(notam-collect / MSA scrape)の
+      # pushと競合しても rebase で必ず解消できる。
+      - name: Commit report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add notam_out/reports
+          if git diff --staged --quiet; then
+            echo "no changes"; exit 0
+          fi
+          git commit -m "NOTAM daily report $(date -u +%Y-%m-%d) [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
