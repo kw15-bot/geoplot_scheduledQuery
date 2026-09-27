@@ -6,11 +6,16 @@ name: NOTAM collect (CN/HK/MO/TW + REF FIR)
 #
 # 必要な設定(NMS-APIへの実接続を使う場合):
 #   Secrets   NMS_CLIENT_ID / NMS_CLIENT_SECRET
-#   Variables NMS_ENV (prod | staging | fit)  ※未設定なら prod
+#   Variables NMS_ENV (prod | staging | fit)  ※未設定なら staging(取得済み認証情報はstaging用)
 # NMS-API側の実運用(prod接続・再配布条件)が未確定な間は、Secretsを設定しなければ
 # このジョブは失敗する(＝データは書き換わらない)だけなので、安全側に倒れる。
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      env:
+        description: "NMS環境 (prod | staging | fit)。空ならVariables NMS_ENV、未設定ならstaging"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -33,7 +38,7 @@ jobs:
 
       - name: Collect NOTAMs
         env:
-          NMS_ENV: ${{ vars.NMS_ENV || 'prod' }}
+          NMS_ENV: ${{ inputs.env || vars.NMS_ENV || 'staging' }}
           NMS_CLIENT_ID: ${{ secrets.NMS_CLIENT_ID }}
           NMS_CLIENT_SECRET: ${{ secrets.NMS_CLIENT_SECRET }}
         # 取得失敗時は終了コード2でジョブが赤くなり、以降のコミットは行われない(last_successも進まない)
