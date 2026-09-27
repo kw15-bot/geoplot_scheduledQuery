@@ -202,7 +202,9 @@ def q_focus_tag(q):
 # 注意: CLSD/CLOSED は誘導路・滑走路・駐機場閉鎖など空港運用の事務連絡(focus_tag=admin)にも
 # 非常に高い頻度でヒットする(実データでの内訳は§?参照)。keyword_hitだけを唯一の絞り込みに
 # せず、必ずarea_group/focus_tagの絞り込みと併用すること。
-KEYWORD_LIST = ["DANGER", "TEMPORARY", "CLSD", "FORBIDDEN", "PROHIBITED", "DNG", "CLOSED"]
+# 2026-09-27: SPECIALを追加(B3231/26 "SPECIAL OPS (AEROSPACE FLT ACT) ..." 等。HANDOFF_NOTAM.md §16)。
+# ビューアでの語句フィルタはまだ使っていない(TEMPORARY・SPECIALを採用する予定)。
+KEYWORD_LIST = ["DANGER", "TEMPORARY", "CLSD", "FORBIDDEN", "PROHIBITED", "DNG", "CLOSED", "SPECIAL"]
 
 
 def keyword_hits(text):
