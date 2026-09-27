@@ -326,6 +326,8 @@ class Fixture(unittest.TestCase):
         )
         # CLSD/CLOSEDは空港運用の事務連絡にもヒットする(既知の仕様。focus_tagと併用が前提)
         self.assertEqual(C.keyword_hits("TWY F CLSD BTN TWY Z2 AND TWY M3"), ["CLSD"])
+        # 2026-09-27追加: SPECIAL(B3231/26の書き出し)
+        self.assertEqual(C.keyword_hits("SPECIAL OPS (AEROSPACE FLT ACT) WILL BE CONDUCTED BY CHINA."), ["SPECIAL"])
 
     def test_keyword_hit_in_feature_properties(self):
         self.put(BASE)
