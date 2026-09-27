@@ -28612,11 +28612,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/6bd8dc8c65574ac4905e93b0e298c354.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-27",
     "detail_fetched": false,
     "first_seen": "2026-09-27T14:11:07+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警889/26",
     "points": [],
     "revoked": false,
     "title": "鼠浪湖东灯浮漂失—浙航警889/26",
