@@ -61,6 +61,7 @@
 | リポジトリ公開範囲 | **Private**（再配布条件が未確認のため。§2・§8-10・§12） |
 | データ収集の当面の方針 | **2026-09-24〜: NMS-APIの自動収集は保留し、FAA NOTAM SearchのArchiveから個別に集めたサンプルを軸に進める**（§0・§9・§10.7） |
 | 目的別分類 | Qコード主題による粗いタグ`focus_tag`（§5.4）＋本文語句一致`keyword_hit`（§5.4・§10.5）の2層。どちらも**軍事かどうかの自動判定ではない**、あくまで人間が見る優先順位付け |
+| 語句フィルタの採用語句（2026-09-27決定、**未適用**） | 将来ビューアに語句フィルタを適用するときは **`TEMPORARY`・`SPECIAL`** を採用する（これまでのサンプルで軍事関連に多用されているため。§16）。それまではビューアに種別・語句一致を一切表示しない |
 
 > 用語: 台湾・香港・マカオは、ICAO地名指標の先頭2文字で機械的にグループ分けしているだけ（`area_group` = CN/HK/MO/TW）。表示ラベルは「中国本土/香港/マカオ/台湾」。
 
@@ -660,3 +661,25 @@ FAA公式の公開ツール(`notams.aim.faa.gov`)には「Archive Search」機�
 **未着手のまま残っていること**(§9参照): 実リポジトリへのpush、GitHub Secrets設定、
 `notam-collect.yml`の実運用での初回実行確認、cron-job.orgへの登録、`pages-deploy.yml`と
 リポジトリ公開範囲の整理。
+
+---
+
+## 16. 語句フィルタで採用する語句（2026-09-27決定、未適用）
+
+ユーザー決定: **語句フィルタはまだ適用しない**。将来適用するときは **`TEMPORARY`・`SPECIAL`** を
+採用する（これまでのサンプルで軍事関連に多用されているため）。
+
+根拠にしたサンプル（ビューアで多角形として表示されるもの。DOMとA4957/26・A4958/26は除く）:
+- 中国本土の29件（すべてFAA NOTAM Searchから手動で取り込んだArchive分）のうち28件が、E項の
+  書き出しが `A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY: ...`（Qコードは全件`QRDCA`）。
+  例外は A0799/26（`QARLC`、エリア内の航空路区間の閉鎖）だけ。
+- B3231/26（RPHI、2026-07）は `SPECIAL OPS (AEROSPACE FLT ACT) WILL BE CONDUCTED BY CHINA.
+  EST FALL AREA OF UNBURNED DEBRIS ...`。同じ期間の A2575/26（ZSHA ZYSH、TEMPORARY DANGER AREA）と
+  同じ打ち上げに関するものと思われる。
+
+注意:
+- サンプルは手動で選んだものに偏っている。自動収集分で中国の多角形は A4957/26・A4958/26
+  （臨時ウェイポイントの誤検出で除外済み）しか無く、自動収集データでの裏付けはまだ無い。
+- 収集側の既存`KEYWORD_LIST`（DANGER/TEMPORARY/CLSD/FORBIDDEN/PROHIBITED/DNG/CLOSED）に
+  `SPECIAL`は入っていない。適用するときに、この2語で`KEYWORD_LIST`を置き換えるか追加するかを決める
+  （`keyword_hit`/`matched_keywords`は今も収集データに出力されているが、ビューアでは使っていない）。
