@@ -3291,8 +3291,15 @@ function notamHasRealPolygon(f){
   return !!(f.geometry && (f.geometry.type === 'Polygon' || f.geometry.type === 'MultiPolygon')
     && f.properties && f.properties.geometry_source === 'text-polygon');
 }
+// 見出し・FIRドロップダウンに使うFIRコード。Q項のFIR(fir)を使うが、複数FIRにまたがる
+// NOTAMはQ項が国コード+XX(例: ZXXX)になり、代わりにA項に各FIRが並ぶ決まりなので、
+// その場合だけA項の地名指標(notamDedupeで集約した_notamLocations)を使う。
+// firが無いもの(SNOWTAM等)もA項で代用する。
 function notamFirTokens(f){
-  return ((f.properties||{}).fir || '').split(/\s+/).filter(Boolean);
+  const p = f.properties || {};
+  const firs = (p.fir || '').split(/\s+/).filter(Boolean);
+  if (firs.length && !firs.some(v => /^[A-Z]{2}XX$/.test(v))) return firs;
+  return (f._notamLocations || (p.icao_location || '').split(/\s+/)).filter(Boolean);
 }
 function notamPassesFilter(f){
   if (!notamHasRealPolygon(f)) return false;
@@ -3324,12 +3331,11 @@ function notamPointToLayer(f, latlng){
   const st = notamStyle(f);
   return L.circleMarker(latlng, { radius:4, color:st.color, weight:st.weight, fillColor:st.fillColor, fillOpacity:st.fillOpacity, dashArray:st.dashArray });
 }
-// 一覧・ポップアップの見出しは「A項の地名指標 + NOTAM番号」だけ(例: RJOO K2356/26)。
+// 一覧・ポップアップの見出しは「FIRコード + NOTAM番号」だけ(例: RJJJ K2356/26、notamFirTokens参照)。
 // 地域名(周辺国FIR(参考)等)や種別(focus_tag・語句一致)は出さない(判定は人間が本文を読んで行う)。
 function notamHeading(f){
   const p = f.properties || {};
-  const locs = f._notamLocations || [p.icao_location];
-  return [...locs, p.number].filter(Boolean).join(' ') || p.title || 'NOTAM';
+  return [...notamFirTokens(f), p.number].filter(Boolean).join(' ') || p.title || 'NOTAM';
 }
 // A項に地名指標が複数あるNOTAM(例: A)ZGZU ZHWH)は、NMS-APIから地名指標ごとに別レコード
 // (nms_idが別、本文・期間・図形は同一)として届く。一覧・地図・件数で重複しないよう、
