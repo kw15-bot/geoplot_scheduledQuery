@@ -643,11 +643,6 @@ body.dark-mode .notam-item.tag-flag .wtitle{color:#e3a75c;}
         <button class="btn small ghost" id="notamBtnBulkShow">このタブを全て表示</button>
         <button class="btn small ghost" id="notamBtnBulkHide">このタブを全て非表示</button>
       </div>
-      <div id="notamArchiveRow" style="display:none;gap:6px;margin-top:0;margin-bottom:10px;">
-        <input type="month" id="notamArchiveMonth" style="flex:1;min-width:0;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--mono);font-size:11px;padding:5px 6px;">
-        <button class="btn small ghost" id="btnLoadNotamArchive" type="button">月を読み込み</button>
-        <label class="check-row" style="margin:0;"><input type="checkbox" id="chkNotamArchiveOnMap"> ArchiveもMAPに表示</label>
-      </div>
       <div class="notam-filters">
         <div id="notamFirFilterRow" style="margin-top:0;margin-bottom:4px;">
           <select id="notamFirFilter" style="width:100%;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--mono);font-size:11.5px;padding:6px 8px;">
@@ -3168,21 +3163,35 @@ const NOTAM_FOCUS_COLOR = { restriction:'#c94444', flag:'#a8681c', watch:'#1f7a8
 const NOTAM_REFRESH_MS = 10 * 60 * 1000; // 10分。notam-collect.ymlの収集間隔に合わせる
 
 let notamActiveFeatures = [];             // 接続中URL(notam_cn.geojson)の features。active/upcomingのみを含む想定
-let notamArchiveFeatures = new Map();     // 'YYYY-MM' -> features[]。読み込んだArchive月ぶんだけ蓄積される
+let notamArchiveFeatures = new Map();     // 'YYYY-MM' -> features[]。接続時・再読込時に全月ぶんを一括で読み込む
+// Archiveファイル(archive/notam_YYYY-MM.geojson)の一覧を取る手段が無いため、この月から
+// 現在月(UTC)までを順に取りに行き、存在しない月(404)は黙って飛ばす。
+// 手動取り込み分(notam_paste_import.py)で最も古いのが2026-01。
+const NOTAM_ARCHIVE_START_MONTH = '2026-01';
 // 表示条件は「E項の実座標から作ったポリゴン(notamHasRealPolygon)」かつ「FIRドロップダウンの
 // 選択(notamFirFilter、''=すべて)」のみ。area_group/focus_tag/keyword_hitでの絞り込みは行わない
 // (収集条件(CN/HK/MO/TW/REF)に合致するものは全部ビューワに出す方針)。
 let notamFirFilter = ''; // '' = すべて
 let notamTab = 'active';
 let notamLayerVisibleOnMap = true;        // 手動トグルは無し(常時true)。enterMode()の3モード排他表示で制御する
-let notamArchiveOnMap = false;            // Archiveは既定では地図に出さない(件数が多く、蓄積されるほど肥大するため)
 let connectedNotamUrl = null;
 let notamRefreshTimer = null;
 // 個々のNOTAMの「地図に表示」チェックボックス(航行警報側の_mapVisibleと同じ役割)。
 // notamActiveFeatures/notamArchiveFeaturesは10分おきの再取得で配列ごと差し替わり、
 // 同じfeatureオブジェクトが残り続ける保証がないため、状態はfeature自体ではなく
 // notamFeatureKey()の安定キーで持つ(OFFにしたものだけをSetに記録。既定は全件ON)。
+// Archiveだけは逆に既定OFF(件数が多く、蓄積されるほど肥大するため)で、ONにしたものを
+// notamShownArchiveIdsに記録する。Archive由来のfeatureには読み込み時に_notamArchiveを付ける。
 let notamHiddenMapIds = new Set();
+let notamShownArchiveIds = new Set();
+function notamIsOnMap(f){
+  const k = notamFeatureKey(f);
+  return f._notamArchive ? notamShownArchiveIds.has(k) : !notamHiddenMapIds.has(k);
+}
+function notamSetOnMap(key, isArchive, visible){
+  if (isArchive){ if (visible) notamShownArchiveIds.add(key); else notamShownArchiveIds.delete(key); }
+  else { if (visible) notamHiddenMapIds.delete(key); else notamHiddenMapIds.add(key); }
+}
 let currentNotamTabItems = []; // 直近renderNotamList()で描画したタブの一覧(一括表示/非表示ボタン用)
 function notamFeatureKey(f){
   const p = f.properties || {};
@@ -3193,6 +3202,16 @@ function notamFeatureKey(f){
 function notamBaseDir(url){
   const i = url.lastIndexOf('/');
   return i === -1 ? '' : url.slice(0, i + 1);
+}
+function notamArchiveMonths(){
+  const out = [];
+  let [y, m] = NOTAM_ARCHIVE_START_MONTH.split('-').map(Number);
+  const now = new Date(), ey = now.getUTCFullYear(), em = now.getUTCMonth() + 1;
+  while (y < ey || (y === ey && m <= em)){
+    out.push(`${y}-${String(m).padStart(2,'0')}`);
+    if (++m > 12){ m = 1; y++; }
+  }
+  return out;
 }
 function notamArchiveUrl(month){
   if (!connectedNotamUrl) return null;
@@ -3262,8 +3281,8 @@ function notamPopupHtml(f){
 }
 
 // タブ(Active/Upcoming/Archive/All)ごとの一覧対象。Active/Upcomingは接続中URLのfeaturesの
-// statusで判定、Archiveは読み込んだArchive月ぶんのfeatures(そもそも失効・取消のみが
-// 入っている)、Allはこれまでに読み込んだもの全部。
+// statusで判定、Archiveは全月ぶんのArchive features(そもそも失効・取消のみが
+// 入っている)、Allはその両方。
 function notamFeaturesForTab(tab){
   if (tab === 'active') return notamActiveFeatures.filter(f => notamStatusOf(f) === 'active');
   if (tab === 'upcoming') return notamActiveFeatures.filter(f => notamStatusOf(f) === 'upcoming');
@@ -3277,8 +3296,8 @@ function rebuildNotamMapLayer(){
   notamLayer.clearLayers();
   if (!notamLayerVisibleOnMap) return;
   let feats = notamActiveFeatures.slice();
-  if (notamArchiveOnMap) notamArchiveFeatures.forEach(arr => { feats = feats.concat(arr); });
-  feats = feats.filter(f => f.geometry && notamPassesFilter(f) && !notamHiddenMapIds.has(notamFeatureKey(f)));
+  notamArchiveFeatures.forEach(arr => { feats = feats.concat(arr); });
+  feats = feats.filter(f => f.geometry && notamPassesFilter(f) && notamIsOnMap(f));
   if (!feats.length) return;
   L.geoJSON({ type:'FeatureCollection', features: feats }, {
     style: notamStyle,
@@ -3300,7 +3319,6 @@ function renderNotamList(){
   $('#notamCountUpcoming').textContent = upcomingCount;
   $('#notamCountArchive').textContent = archiveCount;
   $('#notamCountAll').textContent = activeCount + upcomingCount + archiveCount;
-  $('#notamArchiveRow').style.display = (notamTab === 'archive') ? 'flex' : 'none';
 
   // ポリゴン条件は満たすがFIR絞り込み前、という段階でFIRドロップダウンの選択肢を作る
   // (航行警報側のArchive/All局ドロップダウンと同じ「今のスコープに実在する値だけ出す」方式)。
@@ -3338,7 +3356,7 @@ function renderNotamList(){
     const badgeClass = STATUS_BADGE_CLASS[notamStatusOf(f)] || 'unknown';
     const hasGeom = !!f.geometry;
     const mapToggleHtml = hasGeom
-      ? `<label class="check-row" style="margin-top:6px;"><input type="checkbox" data-notam-map-toggle="${esc(key)}" ${notamHiddenMapIds.has(key) ? '' : 'checked'}> 地図に表示</label>`
+      ? `<label class="check-row" style="margin-top:6px;"><input type="checkbox" data-notam-map-toggle="${esc(key)}" data-notam-archive="${f._notamArchive ? '1' : ''}" ${notamIsOnMap(f) ? 'checked' : ''}> 地図に表示</label>`
       : '';
     div.innerHTML = `
       <span class="wtitle">${esc(p.title || p.number || 'NOTAM')}</span>
@@ -3365,8 +3383,7 @@ function renderNotamList(){
 
   $$('input[data-notam-map-toggle]').forEach(chk=>{
     chk.addEventListener('change', ()=>{
-      const k = chk.dataset.notamMapToggle;
-      if (chk.checked) notamHiddenMapIds.delete(k); else notamHiddenMapIds.add(k);
+      notamSetOnMap(chk.dataset.notamMapToggle, chk.dataset.notamArchive === '1', chk.checked);
       rebuildNotamMapLayer();
     });
   });
@@ -3379,8 +3396,7 @@ function renderNotamList(){
 function bulkSetNotamTabVisibility(visible){
   currentNotamTabItems.forEach(f=>{
     if (!f.geometry) return;
-    const k = notamFeatureKey(f);
-    if (visible) notamHiddenMapIds.delete(k); else notamHiddenMapIds.add(k);
+    notamSetOnMap(notamFeatureKey(f), !!f._notamArchive, visible);
   });
   renderNotamList();
 }
@@ -3409,6 +3425,7 @@ async function rereadNotamUrl(){
   renderNotamList();
   updateNotamConnectionUI();
   logLine(`NOTAM自動再読込: ${connectedNotamUrl}（${notamActiveFeatures.length}件）`, 'l-ok');
+  await loadAllNotamArchives();
 }
 
 async function connectNotamUrl(url){
@@ -3430,26 +3447,45 @@ async function connectNotamUrl(url){
 function disconnectNotam(){
   connectedNotamUrl = null;
   notamActiveFeatures = [];
+  notamArchiveFeatures = new Map();
   if (notamRefreshTimer){ clearInterval(notamRefreshTimer); notamRefreshTimer = null; }
   updateNotamConnectionUI();
   renderNotamList();
   logLine('NOTAM接続を解除しました');
 }
 
-async function loadNotamArchiveMonth(month){
-  if (!month){ logLine('NOTAM Archive: 年月を選択してください', 'l-err'); return; }
-  const url = notamArchiveUrl(month);
-  if (!url){ logLine('NOTAM Archive: 先にNOTAMのURLに接続してください（接続先URLと同じ場所のarchive/フォルダから読み込みます）', 'l-err'); return; }
-  try{
-    const res = await fetch(url, { cache:'no-store' });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const gj = JSON.parse(await res.text());
-    notamArchiveFeatures.set(month, gj.features || []);
-    renderNotamList();
-    logLine(`NOTAM Archive読み込み完了: ${month}（${(gj.features||[]).length}件）`, 'l-ok');
-  }catch(e){
-    logLine(`NOTAM Archive読み込みに失敗しました(${month}): ${e.message}（その月のファイルがまだ存在しない可能性があります）`, 'l-err');
-  }
+// Archiveは月ごとに選ばせず、全月ぶんを一括で読み込む(絞り込みはFIRドロップダウンで行う)。
+// 取得に失敗した月(404以外)は、前回読み込めた内容をそのまま残す。
+async function loadAllNotamArchives(){
+  if (!connectedNotamUrl) return;
+  const months = notamArchiveMonths();
+  const results = await Promise.all(months.map(async month => {
+    try{
+      const res = await fetch(notamArchiveUrl(month), { cache:'no-store' });
+      if (res.status === 404) return { month, features: null };
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const gj = JSON.parse(await res.text());
+      const features = gj.features || [];
+      features.forEach(f => { f._notamArchive = true; });
+      return { month, features };
+    }catch(e){
+      return { month, error: e };
+    }
+  }));
+  const next = new Map();
+  let total = 0, loaded = 0;
+  results.forEach(r => {
+    if (r.error){
+      if (notamArchiveFeatures.has(r.month)) next.set(r.month, notamArchiveFeatures.get(r.month));
+      logLine(`NOTAM Archive読み込みに失敗しました(${r.month}): ${r.error.message}`, 'l-err');
+    } else if (r.features){
+      next.set(r.month, r.features);
+      total += r.features.length; loaded++;
+    }
+  });
+  notamArchiveFeatures = next;
+  renderNotamList();
+  logLine(`NOTAM Archive読み込み完了: ${loaded}か月分（${total}件）`, 'l-ok');
 }
 
 $$('#notamValidityTabs .tab-btn').forEach(btn=>{
@@ -3463,14 +3499,12 @@ $('#notamFirFilter').addEventListener('change', ()=>{
   notamFirFilter = $('#notamFirFilter').value;
   renderNotamList();
 });
-$('#chkNotamArchiveOnMap').addEventListener('change', (e)=>{ notamArchiveOnMap = e.target.checked; rebuildNotamMapLayer(); });
 $('#btnConnectNotamUrl').addEventListener('click', ()=>{
   const url = $('#notamUrlInput').value.trim();
   if (!url){ logLine('NOTAMのURLを入力してください', 'l-err'); return; }
   connectNotamUrl(url);
 });
 $('#notamUrlInput').addEventListener('keydown', (e)=>{ if (e.key === 'Enter') $('#btnConnectNotamUrl').click(); });
-$('#btnLoadNotamArchive').addEventListener('click', ()=> loadNotamArchiveMonth($('#notamArchiveMonth').value));
 
 renderNotamList();
 
