@@ -427,6 +427,34 @@ class RealNotams(unittest.TestCase):
         self.assertEqual(C.parse_text_polygons("CENTRE N230636E1162812 RADIUS 5KM"), [])   # 1点だけは面にしない
         self.assertEqual(C.parse_text_polygons("N239999E1162812-N230636E1162812-N234042E1174425"), [])  # 分60超は無効
 
+    def test_digit_first_coordinate_format_supported(self):
+        # 2026-09-27追加: 「数字が先」の座標書式2種の取りこぼしを修正。
+        # (a) K2356/26等の無人機エリア通知: DDMMSS[NS]DDDMMSS[EW]、ハイフン区切りで先頭点に明示的に戻る
+        uas = ("AREA: BOUNDED BY FLW POINTS\n"
+               "344747N1352608E - 344745N1352611E - 344744N1352610E - 344746N1352607E"
+               "\n- 344747N1352608E \n(IKEDA-SHI IN OSAKA)")
+        rings = C.parse_text_polygons(uas)
+        self.assertEqual(len(rings), 1)
+        self.assertEqual(len(rings[0]), 5)
+        self.assertEqual(rings[0][0], rings[0][-1])
+        # 344747N = 34°47'47"N
+        self.assertAlmostEqual(rings[0][0][1], 34 + 47 / 60 + 47 / 3600, places=5)
+        self.assertAlmostEqual(rings[0][0][0], 135 + 26 / 60 + 8 / 3600, places=5)
+
+        # (b) A4705/26等のTO区切り(区切り語は無関係、明示的な先頭点の反復も無し。末尾で自動的に閉じる)
+        to_sep = ("AN AREA DEFINED AS 331300N1222400W TO 325400N1233300W TO "
+                  "344600N1244000W TO 351300N1233400W TO POINT OF ORIGIN")
+        rings2 = C.parse_text_polygons(to_sep)
+        self.assertEqual(len(rings2), 1)
+        self.assertEqual(len(rings2[0]), 5)      # 4頂点+自動で閉じた終点
+        self.assertEqual(rings2[0][0], rings2[0][-1])
+        self.assertAlmostEqual(rings2[0][0][1], 33 + 13 / 60, places=5)
+        self.assertAlmostEqual(rings2[0][0][0], -(122 + 24 / 60), places=5)
+
+        # 従来の「記号が先」書式と混在しても両方拾えること
+        mixed = "N2300E11600-2310N11610E-N2400E11700-N2300E11600"
+        self.assertEqual(len(C.parse_text_polygons(mixed)[0]), 4)
+
 
 # ----------------------------------------------------------------------------- APIモード（同一プロセス内モック）
 class MockState:
