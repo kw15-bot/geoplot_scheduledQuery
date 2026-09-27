@@ -336,6 +336,12 @@ class Fixture(unittest.TestCase):
         self.assertIn("matched_keywords", p["A0101/26"])
         self.assertIsInstance(p["A0101/26"]["matched_keywords"], list)
 
+    def test_classification_in_feature_properties(self):
+        # ビューアが米国国内書式(DOM)を除外するのに使う
+        self.put(BASE)
+        self.go()
+        self.assertEqual(props(self.out)["A0101/26"]["classification"], "INTERNATIONAL")
+
 
 
 # ----------------------------------------------------------------------------- 実NOTAM（ユーザー提供の本文。APIの包み方は仕様書からの推定）
