@@ -3416,15 +3416,23 @@ function rebuildNotamMapLayer(){
   notamArchiveFeatures.forEach(arr => { feats = feats.concat(arr); });
   feats = feats.filter(f => f.geometry && notamPassesFilter(f) && notamIsOnMap(f));
   if (!feats.length) return;
-  L.geoJSON({ type:'FeatureCollection', features: feats }, {
+  // エリアが複数あるNOTAM(MultiPolygon、例: L1539/26のAREA 1/AREA 2)は、エリアごとに別の図形に
+  // 分けて描く。Leafletは1図形に1つしかツールチップを出せないので、こうしないとNOTAM番号が
+  // 片方のエリアにしか付かない。ポップアップ等は元のfeature(_notamOrig)から作る。
+  const parts = feats.flatMap(f => f.geometry.type === 'MultiPolygon'
+    ? f.geometry.coordinates.map(coords => ({ type:'Feature', properties: f.properties,
+        geometry: { type:'Polygon', coordinates: coords }, _notamOrig: f }))
+    : [f]);
+  L.geoJSON({ type:'FeatureCollection', features: parts }, {
     style: notamStyle,
     pointToLayer: notamPointToLayer,
-    onEachFeature: (f, layer) => {
+    onEachFeature: (part, layer) => {
+      const f = part._notamOrig || part;
       layer.bindPopup(notamPopupHtml(f));
       // 航行警報側と同じく、図形の上にNOTAM番号(例: A3757/26)を常時表示する
       const label = (f.properties || {}).number;
       if (label){
-        const isPoint = f.geometry.type === 'Point';
+        const isPoint = part.geometry.type === 'Point';
         layer.bindTooltip(label, isPoint
           ? { permanent:true, direction:'top', offset:[0,-6], className:'poly-label' }
           : { permanent:true, direction:'center', className:'poly-label' });
