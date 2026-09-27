@@ -3201,8 +3201,9 @@ function notamArchiveUrl(month){
 // MSA側 (…/msa_out/military.geojson) から、同じリポジトリ直下に並ぶ notam_out/notam_cn.geojson
 // の位置を機械的に推測する。推測できない配置なら null。
 function guessNotamUrl(geojsonUrl){
-  if (!geojsonUrl || !geojsonUrl.includes('/msa_out/')) return null;
-  return geojsonUrl.replace('/msa_out/', '/notam_out/').replace(/[^/]+$/, 'notam_cn.geojson');
+  // 相対パス(?geojson=msa_out/military.geojson)と絶対URLの両方に対応する
+  if (!geojsonUrl || !/(^|\/)msa_out\//.test(geojsonUrl)) return null;
+  return geojsonUrl.replace(/(^|\/)msa_out\//, '$1notam_out/').replace(/[^/]+$/, 'notam_cn.geojson');
 }
 function notamStatusOf(f){ return (f.properties && f.properties.status) || 'active'; }
 // E項に実座標があるポリゴン系のみを表示する。Q項の座標/半径から作った円・点
@@ -3535,7 +3536,7 @@ enterMode('auto');
 // NOTAM側の自動接続。?notam=<url> があればそれを、無ければ ?geojson=<url>(MSA側の自動接続先)
 // から notam_out/notam_cn.geojson の位置を推測、それも無ければ本リポジトリのGitHub Pages上の
 // notam_cn.geojson(notam-collect.ymlが10分おきに更新する)に既定で自動接続する。
-const DEFAULT_NOTAM_URL = 'https://kw15-bot.github.io/-notam/notam_out/notam_cn.geojson';
+const DEFAULT_NOTAM_URL = 'https://kw15-bot.github.io/geoplot_scheduledQuery/notam_out/notam_cn.geojson';
 (function autoStartNotamFromUrl(){
   const params = new URLSearchParams(location.search);
   const notamUrl = params.get('notam') || guessNotamUrl(params.get('geojson')) || DEFAULT_NOTAM_URL;
