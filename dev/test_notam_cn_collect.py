@@ -463,6 +463,26 @@ class RealNotams(unittest.TestCase):
         mixed = "N2300E11600-2310N11610E-N2400E11700-N2300E11600"
         self.assertEqual(len(C.parse_text_polygons(mixed)[0]), 4)
 
+    def test_space_inside_latitude_digits(self):
+        # 2026-09-27追加: FAA NOTAM SearchのPDF由来で、緯度の数字の途中に空白が入った表記(A0330/26等)
+        e = ("BOUNDED BY: N400248E1055030-N400242E1052403-N39 5808E1012905-"
+             "N390822E1013520-N39345 0E1052608, BACK TO START.")
+        rings = C.parse_text_polygons(e)
+        self.assertEqual(len(rings), 1)
+        self.assertEqual(len(rings[0]), 6)       # 5頂点すべて+自動で閉じた終点
+        self.assertAlmostEqual(rings[0][2][1], 39 + 58 / 60 + 8 / 3600, places=5)
+        self.assertAlmostEqual(rings[0][4][1], 39 + 34 / 60 + 50 / 3600, places=5)
+
+    def test_areas_listed_without_returning_to_start_are_split(self):
+        # 2026-09-27追加: L1539/26のように、AREA 1/AREA 2 がそれぞれ先頭点に戻らず列挙される書式
+        e = ("AREA 1:\r\nN391708E1073820-N385943E1075634-N390009E1073154- \r\nN383824E1070506.\r\n"
+             "AREA 2:\r\nN375258E1062300-N375301E1064141-   \r\nN372418E1065906.")
+        rings = C.parse_text_polygons(e)
+        self.assertEqual([len(r) for r in rings], [5, 4])
+        self.assertEqual(rings[1][0], rings[1][-1])
+        # "TO" 区切りやカンマ区切りは同じ多角形の続きとして扱う
+        self.assertEqual(len(C.parse_text_polygons("N2300E11600 TO N2300E11700, N2400E11700")), 1)
+
     def test_named_waypoint_coords_in_parens_are_not_polygon_vertices(self):
         # 2026-09-27追加: A4957/26等の航空路変更NOTAMで、迂回路の臨時ウェイポイント定義
         # 'CG1(N253957E1095707)' のような座標が、実在しないエリア境界として誤検出されていたのを修正。

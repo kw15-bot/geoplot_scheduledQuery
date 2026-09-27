@@ -222,8 +222,10 @@ _REF = re.compile(r"(\S+/\d+)\s+NOTAM([NRC])(?:\s+(\S+/\d+))?")
 #   (b) 数字が先: 344747N1352608E（無人機エリア通知等で確認）、331300N1222400W（"TO"区切りの
 #       航空路上NOTAMで確認、区切り自体は finditer が無視するので影響しない）
 # 2026-09-27追加: 実データで(b)を取りこぼし、より粗い円・点にフォールバックしていたのを修正。
+# 2026-09-27追加: (a)の緯度の数字の途中に空白が1つ入った表記(N39 5808E1012905、N39345 0E1052608。
+#   FAA NOTAM SearchのPDFで確認)も読む。空白は緯度の桁の間だけ・1文字ずつ許し、読み取り後に取り除く。
 _TEXT_COORD = re.compile(
-    r"(?:(?P<ns1>[NS])(?P<lat1>\d{4}(?:\d{2})?)\s*(?P<ew1>[EW])(?P<lon1>\d{5}(?:\d{2})?))"
+    r"(?:(?P<ns1>[NS])(?P<lat1>\d(?:[ \t]?\d){3}(?:(?:[ \t]?\d){2})?)\s*(?P<ew1>[EW])(?P<lon1>\d{5}(?:\d{2})?))"
     r"|(?:(?P<lat2>\d{4}(?:\d{2})?)(?P<ns2>[NS])\s*(?P<lon2>\d{5}(?:\d{2})?)(?P<ew2>[EW]))"
 )
 
@@ -262,16 +264,29 @@ def _is_named_waypoint_coord(e_text, start, end):
     return j < len(e_text) and e_text[j] == ")"
 
 
+# 座標と座標の間がこれ(空白・ハイフン・カンマ・TO)だけなら、同じ多角形の続きとみなす。
+# それ以外(ピリオドや "AREA 2:" のような見出し)が挟まっていたら、そこで多角形を区切る。
+_RING_CONTINUES = re.compile(r"(?:[\s,\-]|\bTO\b)*", re.I)
+
+
 def parse_text_polygons(e_text):
     """E項の座標列を多角形リング(GeoJSON順 [lon,lat])のリストにする。
     先頭点に戻ったところでリングを閉じ、複数エリアの列挙にも対応。3点未満は捨てる。
+    座標の間に区切り記号以外(ピリオド・"AREA 2:"等)が挟まったところでも多角形を区切る
+    (2026-09-27追加: L1539/26のように各エリアが先頭点に戻らず列挙される書式への対応)。
     括弧内に単独で書かれた座標(臨時ウェイポイント定義)は頂点として数えない。"""
     rings, cur = [], []
+    prev_end = None
     for m in _TEXT_COORD.finditer(e_text or ""):
         if _is_named_waypoint_coord(e_text, m.start(), m.end()):
             continue
+        if cur and prev_end is not None and not _RING_CONTINUES.fullmatch(e_text[prev_end:m.start()]):
+            if len(cur) >= 3:
+                rings.append(cur + [cur[0]])
+            cur = []
+        prev_end = m.end()
         if m["ns1"] is not None:
-            ns, lat_digits, ew, lon_digits = m["ns1"], m["lat1"], m["ew1"], m["lon1"]
+            ns, lat_digits, ew, lon_digits = m["ns1"], re.sub(r"[ \t]", "", m["lat1"]), m["ew1"], m["lon1"]
         else:
             ns, lat_digits, ew, lon_digits = m["ns2"], m["lat2"], m["ew2"], m["lon2"]
         lat, lon = _dms(lat_digits, 2), _dms(lon_digits, 3)
