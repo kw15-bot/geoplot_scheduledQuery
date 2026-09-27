@@ -71,8 +71,9 @@ body{
 }
 .app.mode-auto{display:grid;grid-template-columns:380px 1fr;}
 .app.mode-manual{display:grid;grid-template-columns:380px 1fr;}
+.app.mode-notam{display:grid;grid-template-columns:380px 1fr;}
 @media (max-width:1100px){
-  .app.mode-auto,.app.mode-manual{grid-template-columns:1fr;}
+  .app.mode-auto,.app.mode-manual,.app.mode-notam{grid-template-columns:1fr;}
   .app{grid-template-rows:52px auto 46vh auto; overflow-y:auto; height:auto; min-height:100vh;}
   html,body{overflow:auto;}
   .map-wrap{height:46vh;min-height:320px;}
@@ -110,8 +111,9 @@ body{
 /* 手動モードでは警報一覧そのものを扱わないので、ティッカーは表示しない(旧
    header-spacerと同じ、見た目には何も無いflex:1の空き領域に戻す。レイアウト用に
    要素自体は両モードで存在させたまま、枠と中身だけをCSSで消す)。 */
-.app.mode-manual .header-ticker{background:transparent;border-color:transparent;}
-.app.mode-manual .header-ticker-track,.app.mode-manual .header-ticker-empty{display:none;}
+.app.mode-manual .header-ticker,.app.mode-notam .header-ticker{background:transparent;border-color:transparent;}
+.app.mode-manual .header-ticker-track,.app.mode-manual .header-ticker-empty,
+.app.mode-notam .header-ticker-track,.app.mode-notam .header-ticker-empty{display:none;}
 .notif-wrap{position:relative;}
 .notif-bell{
   position:relative;background:transparent;border:1px solid transparent;border-radius:8px;
@@ -157,6 +159,36 @@ body{
 }
 .notif-item-dismiss:hover{color:var(--red);}
 .notif-panel .empty-hint{padding:16px 12px;font-size:11.5px;}
+
+/* ---------- NOTAM mode (専用の第3モード。MAP（自動更新）のrightPanelと同じ構成) ---------- */
+.notam-filters{font-family:var(--mono);font-size:10.5px;color:var(--text-faint);margin-top:10px;}
+.notam-filters .flabel{color:var(--text-dim);font-weight:600;margin:8px 0 4px;}
+.notam-filters .flabel:first-child{margin-top:0;}
+.notam-filters label.check-row{display:inline-flex;margin:2px 10px 2px 0;font-size:11px;}
+/* 航行警報側(.warn-item)とカードの見た目を揃える(枠線・角丸・余白・背景)。
+   focus_tagごとの色分けは.notam-tagの配色を流用し、restriction/flag/watchは
+   .warn-item.milと同じ要領で枠線・タイトル色にも反映する(HANDOFF_NOTAM.md参照)。 */
+.notam-item{border:1px solid var(--border);border-radius:8px;padding:9px 10px;margin-bottom:8px;background:var(--panel-alt);}
+.notam-item.clickable{cursor:pointer;transition:border-color .15s,transform .1s;}
+.notam-item.clickable:hover{border-color:var(--cyan);}
+.notam-item.clickable:active{transform:scale(.99);}
+.notam-item.tag-restriction{border-color:var(--red);background:linear-gradient(180deg,rgba(201,68,68,.07),transparent);}
+.notam-item.tag-restriction .wtitle{color:var(--red);}
+.notam-item.tag-flag{border-color:var(--amber-dim);background:linear-gradient(180deg,rgba(255,180,84,.06),transparent);}
+.notam-item.tag-flag .wtitle{color:#8a4f0f;}
+.notam-item.tag-watch{border-color:var(--cyan);background:linear-gradient(180deg,rgba(31,122,140,.06),transparent);}
+.notam-item.tag-watch .wtitle{color:var(--cyan);}
+.notam-item .wtitle{font-size:12px;font-weight:600;color:var(--text);line-height:1.4;}
+.notam-item .wmeta{font-family:var(--mono);font-size:10px;color:var(--text-faint);margin-top:4px;display:flex;gap:10px;flex-wrap:wrap;}
+.notam-item .wactions{margin-top:7px;display:flex;gap:6px;flex-wrap:wrap;}
+.notam-tag{font-family:var(--mono);font-size:9.5px;padding:1px 6px;border-radius:4px;display:inline-block;margin-top:6px;margin-right:4px;}
+.notam-tag.restriction{background:rgba(201,68,68,.14);color:var(--red);border:1px solid var(--red);}
+.notam-tag.flag{background:rgba(168,104,28,.14);color:var(--amber);border:1px solid var(--amber-dim);}
+.notam-tag.watch{background:rgba(31,122,140,.12);color:var(--cyan);border:1px solid var(--cyan);}
+.notam-tag.leisure{background:rgba(138,136,128,.14);color:var(--gray-fill);border:1px solid var(--gray);}
+.notam-tag.plaintext{background:rgba(138,136,128,.1);color:var(--text-faint);border:1px solid var(--border-bright);}
+.notam-tag.admin{background:rgba(138,136,128,.08);color:var(--text-faint);border:1px solid var(--border);}
+.notam-tag.qline{background:transparent;color:var(--text-faint);border:1px dashed var(--border-bright);}
 .status-pill{
   font-family:var(--mono);font-size:11px;letter-spacing:.06em;
   display:flex;align-items:center;gap:7px;
@@ -359,6 +391,7 @@ body.dark-mode .toolbar-sep{background:rgba(255,255,255,.18);}
 .validity-badge.notice{background:rgba(217,194,46,.18);color:#6b5f0a;border:1px solid #e0d15c;}
 .validity-badge.archive{background:rgba(108,133,152,.12);color:var(--text-faint);border:1px solid var(--border);}
 .validity-badge.unknown{background:rgba(255,180,84,.1);color:var(--amber);border:1px solid var(--amber-dim);}
+.validity-badge.upcoming{background:rgba(31,122,140,.1);color:var(--cyan);border:1px solid var(--cyan);}
 .warn-item.clickable{cursor:pointer;transition:border-color .15s,transform .1s;}
 .warn-item.clickable:hover{border-color:var(--cyan);}
 .warn-item.clickable:active{transform:scale(.99);}
@@ -432,6 +465,7 @@ select{
 }
 .mode-tab:hover{color:var(--text);background:var(--panel-raised);}
 .mode-tab.active{background:var(--phosphor);color:#fff;font-weight:700;}
+.mode-tab .tab-n{margin-left:4px;opacity:.8;}
 .app-version{
   font-family:var(--mono);font-size:10px;color:var(--text-faint);margin-right:10px;
   user-select:all; /* easy to select+copy when reporting a bug */
@@ -440,7 +474,9 @@ select{
 .app.mode-auto [data-mode-section="auto"]{display:block;}
 .app.mode-manual [data-mode-section="manual"]{display:block;}
 .app.mode-manual .panel[data-mode-section="manual"]{display:flex;} /* .panel uses flex column, not block */
-.app.mode-manual #rightPanel{display:none;}
+.app.mode-notam [data-mode-section="notam"]{display:block;}
+.app.mode-notam .panel[data-mode-section="notam"]{display:flex;}
+.app.mode-manual #rightPanel,.app.mode-notam #rightPanel{display:none;}
 
 /* ---------- Dark mode ----------
    Toggled by clicking the small dot left of the brand text (see the brandDot click
@@ -496,6 +532,7 @@ body.dark-mode .mk-label{background:rgba(18,17,15,.85);}
 body.dark-mode .poly-label{color:#f1efe6!important;text-shadow:0 1px 3px rgba(0,0,0,.7);}
 body.dark-mode .pdf-panel{background:rgba(24,23,20,.97);}
 body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
+body.dark-mode .notam-item.tag-flag .wtitle{color:#e3a75c;}
 </style>
 </head>
 <body>
@@ -506,6 +543,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
     <div class="mode-tabs" id="modeTabs">
       <button class="mode-tab active" data-mode="auto">MAP（自動更新）</button>
       <button class="mode-tab" data-mode="manual">MAP（手動）</button>
+      <button class="mode-tab" data-mode="notam">NOTAM <span class="tab-n" id="notamModeBadge"></span></button>
     </div>
     <div class="header-ticker" id="headerTicker">
       <div class="header-ticker-track" id="headerTickerTrack"></div>
@@ -587,6 +625,50 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       </div>
       <div id="warnList"></div>
       <div class="empty-hint" id="warnEmptyHint">GeoJSONの読み込み、または本文・一覧の貼り付け解析を行うと、ここに一覧が表示されます。</div>
+    </div>
+  </div>
+
+  <!-- NOTAM: MAP（自動更新）のrightPanelと同じ構成（tab-row→絞り込み→一覧）で作った専用モード。
+       他モードと排他（enterMode参照）。収集はnotam_cn_collect.py(notam-collect.yml)が別途
+       GitHub Pages上のnotam_out/notam_cn.geojsonへ書き出す。自動接続のみ(手動接続欄は非表示)。 -->
+  <div class="panel left" id="notamModePanel" data-mode-section="notam">
+    <div class="section" id="notamResultsSection">
+      <div class="tab-row" id="notamValidityTabs">
+        <button class="tab-btn active" data-tab="active">Active <span class="tab-n" id="notamCountActive">0</span></button>
+        <button class="tab-btn" data-tab="upcoming">Upcoming <span class="tab-n" id="notamCountUpcoming">0</span></button>
+        <button class="tab-btn" data-tab="archive">Archive <span class="tab-n" id="notamCountArchive">0</span></button>
+        <button class="tab-btn" data-tab="all">All <span class="tab-n" id="notamCountAll">0</span></button>
+      </div>
+      <div class="btn-row" id="notamBulkVisRow" style="margin-top:0;margin-bottom:8px;">
+        <button class="btn small ghost" id="notamBtnBulkShow">このタブを全て表示</button>
+        <button class="btn small ghost" id="notamBtnBulkHide">このタブを全て非表示</button>
+      </div>
+      <div id="notamArchiveRow" style="display:none;gap:6px;margin-top:0;margin-bottom:10px;">
+        <input type="month" id="notamArchiveMonth" style="flex:1;min-width:0;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--mono);font-size:11px;padding:5px 6px;">
+        <button class="btn small ghost" id="btnLoadNotamArchive" type="button">月を読み込み</button>
+        <label class="check-row" style="margin:0;"><input type="checkbox" id="chkNotamArchiveOnMap"> ArchiveもMAPに表示</label>
+      </div>
+      <div class="notam-filters">
+        <div id="notamFirFilterRow" style="margin-top:0;margin-bottom:4px;">
+          <select id="notamFirFilter" style="width:100%;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--mono);font-size:11.5px;padding:6px 8px;">
+            <option value="">FIR: すべて</option>
+          </select>
+        </div>
+      </div>
+      <div id="notamList"></div>
+      <div class="empty-hint" id="notamEmptyHint">NOTAMのURL（notam_out/notam_cn.geojson）に接続すると、ここに一覧が表示されます。</div>
+    </div>
+    <!-- 手動URL接続欄はMSA側と同じ理由(v1.8.8)で非表示。#notamUrlInput/#btnConnectNotamUrl/
+         #notamConnectionStatusはJSから引き続き参照されるのでDOMは残す(connectNotamUrl等の
+         関数自体はnull-safeにもしてある)。 -->
+    <div class="section" style="display:none;">
+      <div class="section-title">notam_cn.geojson に接続</div>
+      <div class="url-connect-row" style="display:flex;gap:6px;">
+        <input type="text" id="notamUrlInput" placeholder="http://127.0.0.1:8743/notam_out/notam_cn.geojson"
+               style="flex:1;min-width:0;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--mono);font-size:11px;padding:6px 8px;">
+        <button class="btn small ghost" id="btnConnectNotamUrl" type="button">接続</button>
+      </div>
+      <div id="notamConnectionStatus" style="display:none;margin-top:10px;padding:8px 10px;background:var(--panel-alt);border:1px solid var(--border-bright);border-radius:8px;font-size:11.5px;color:var(--text-dim);"></div>
     </div>
   </div>
 
@@ -672,7 +754,15 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v1.8.9';
+const APP_VERSION = 'v1.9.0';
+// v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
+// 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
+// (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
+// が定期収集してGitHub Pages上に置くnotam_out/notam_cn.geojsonを読み込んで地図化する。
+// MSA側(msa_scraper.py/scrape.yml/military.geojson)とは完全に独立したデータ・ワークフローで、
+// このv1.8.9までのMSA機能そのものには変更を加えていない(既存挙動を維持したままの追加)。
+// 表示条件はE項の実座標ポリゴンのみ(Q項由来の円・点は除外、収集自体には残る)。詳細は
+// HANDOFF_NOTAM.md参照。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -1427,6 +1517,10 @@ $('#btnBaseToggle').addEventListener('click', ()=> setBasemap(currentBase === 'o
 const manualLayerGroup = L.layerGroup().addTo(map);
 const manualLayer = L.layerGroup().addTo(manualLayerGroup);
 const msaLayer = L.layerGroup().addTo(map);
+// NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR)レイヤー。MSA(msaLayer)/手動(manualLayerGroup)
+// とは完全に別データソース(notam_cn_collect.pyの出力)で、専用モード(data-mode-section="notam")
+// としてenterMode()で他の2つと排他的に表示切替される。
+const notamLayer = L.layerGroup().addTo(map);
 const historyLayers = new Map(); // id -> layerGroup
 const historyMeta = new Map(); // id -> { title, raw_text } -- used by manual-mode popups + PDF export
 
@@ -3057,6 +3151,334 @@ function disconnectFile(){
 // connect panel -- autoStartFromUrl() below is now the only entry point into connectUrl().
 
 /* ---------------------------------------------------------------
+   8c. NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR) — notam_cn_collect.py の出力
+   (notam_out/notam_cn.geojson + notam_out/archive/notam_YYYY-MM.geojson)を読み込んで
+   地図化する。MSA側(warningsByUrl/msaLayer)とは完全に独立したデータモデル・レイヤー・
+   パネルで、MAP(自動更新)/MAP(手動)と同格の第3のモード(data-mode-section="notam")として
+   enterMode()で排他的に切り替わる。収集自体はGitHub Actions(notam-collect.yml)が
+   notam_cn_collect.pyを定期実行し、同じリポジトリのnotam_out/以下に書き出す(このHTML自身は
+   収集を行わず、公開済みのGeoJSONを読みに行くだけ)。
+--------------------------------------------------------------- */
+const NOTAM_AREA_LABEL = { CN:'中国本土', HK:'香港', MO:'マカオ', TW:'台湾', REF:'周辺国FIR(参考)' };
+// focus_tag はQコード(主題)による絞り込み用の粗いタグであって、軍事かどうかの自動判定
+// ではない(notam_cn_collect.py の q_focus_tag() 参照)。バッジとしての表示にのみ使う
+// (絞り込みそのものはポリゴン条件とFIR選択のみ。下のnotamPassesFilter参照)。
+const NOTAM_FOCUS_LABEL = { restriction:'空域制限', flag:'要注意', watch:'要確認', leisure:'レジャー/民間', plaintext:'未分類(平文)', admin:'施設事務連絡' };
+const NOTAM_FOCUS_COLOR = { restriction:'#c94444', flag:'#a8681c', watch:'#1f7a8c', leisure:'#8a8880', plaintext:'#8a8880', admin:'#8a8880' };
+const NOTAM_REFRESH_MS = 10 * 60 * 1000; // 10分。notam-collect.ymlの収集間隔に合わせる
+
+let notamActiveFeatures = [];             // 接続中URL(notam_cn.geojson)の features。active/upcomingのみを含む想定
+let notamArchiveFeatures = new Map();     // 'YYYY-MM' -> features[]。読み込んだArchive月ぶんだけ蓄積される
+// 表示条件は「E項の実座標から作ったポリゴン(notamHasRealPolygon)」かつ「FIRドロップダウンの
+// 選択(notamFirFilter、''=すべて)」のみ。area_group/focus_tag/keyword_hitでの絞り込みは行わない
+// (収集条件(CN/HK/MO/TW/REF)に合致するものは全部ビューワに出す方針)。
+let notamFirFilter = ''; // '' = すべて
+let notamTab = 'active';
+let notamLayerVisibleOnMap = true;        // 手動トグルは無し(常時true)。enterMode()の3モード排他表示で制御する
+let notamArchiveOnMap = false;            // Archiveは既定では地図に出さない(件数が多く、蓄積されるほど肥大するため)
+let connectedNotamUrl = null;
+let notamRefreshTimer = null;
+// 個々のNOTAMの「地図に表示」チェックボックス(航行警報側の_mapVisibleと同じ役割)。
+// notamActiveFeatures/notamArchiveFeaturesは10分おきの再取得で配列ごと差し替わり、
+// 同じfeatureオブジェクトが残り続ける保証がないため、状態はfeature自体ではなく
+// notamFeatureKey()の安定キーで持つ(OFFにしたものだけをSetに記録。既定は全件ON)。
+let notamHiddenMapIds = new Set();
+let currentNotamTabItems = []; // 直近renderNotamList()で描画したタブの一覧(一括表示/非表示ボタン用)
+function notamFeatureKey(f){
+  const p = f.properties || {};
+  return p.nms_id || (p.series && p.number ? `${p.series}${p.number}/${p.year||''}` : null)
+    || p.title || JSON.stringify((f.geometry||{}).coordinates||'');
+}
+
+function notamBaseDir(url){
+  const i = url.lastIndexOf('/');
+  return i === -1 ? '' : url.slice(0, i + 1);
+}
+function notamArchiveUrl(month){
+  if (!connectedNotamUrl) return null;
+  return notamBaseDir(connectedNotamUrl) + `archive/notam_${month}.geojson`;
+}
+// MSA側 (…/msa_out/military.geojson) から、同じリポジトリ直下に並ぶ notam_out/notam_cn.geojson
+// の位置を機械的に推測する。推測できない配置なら null。
+function guessNotamUrl(geojsonUrl){
+  if (!geojsonUrl || !geojsonUrl.includes('/msa_out/')) return null;
+  return geojsonUrl.replace('/msa_out/', '/notam_out/').replace(/[^/]+$/, 'notam_cn.geojson');
+}
+function notamStatusOf(f){ return (f.properties && f.properties.status) || 'active'; }
+// E項に実座標があるポリゴン系のみを表示する。Q項の座標/半径から作った円・点
+// (geometry_source: qline-circle/qline-point)や図形なしは、「参考として意味のある形状情報が
+// 本文に無い」ため一覧・地図の両方から除外する(収集自体はnotam_cn_collect.py側で継続し、
+// notam_out系ファイルには残る。除外はこのビューワの表示範囲に限定される)。
+function notamHasRealPolygon(f){
+  return !!(f.geometry && (f.geometry.type === 'Polygon' || f.geometry.type === 'MultiPolygon')
+    && f.properties && f.properties.geometry_source === 'text-polygon');
+}
+function notamFirTokens(f){
+  return ((f.properties||{}).fir || '').split(/\s+/).filter(Boolean);
+}
+function notamPassesFilter(f){
+  if (!notamHasRealPolygon(f)) return false;
+  if (notamFirFilter && !notamFirTokens(f).includes(notamFirFilter)) return false;
+  return true;
+}
+// 航行警報側のupdateBureauFilterOptions()と同じ考え方: 今スコープにある値だけを選択肢にする。
+function updateNotamFirFilterOptions(selectEl, itemsInScope, currentValue){
+  const firsPresent = Array.from(new Set(itemsInScope.flatMap(notamFirTokens))).sort();
+  selectEl.innerHTML = '<option value="">FIR: すべて</option>'
+    + firsPresent.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join('');
+  selectEl.value = firsPresent.includes(currentValue) ? currentValue : '';
+  return selectEl.value;
+}
+function notamStyle(f){
+  const p = f.properties || {};
+  const color = NOTAM_FOCUS_COLOR[p.focus_tag] || '#8a8880';
+  const isPoint = f.geometry && f.geometry.type === 'Point';
+  return {
+    color, weight: isPoint ? 1.3 : 1.6, fillColor: color, fillOpacity: isPoint ? 0.55 : 0.12,
+    // geometry_source が qline-circle/qline-point (Q項からの推定図形) の場合は破線にして、
+    // E項座標列から得た確度の高い図形(実線)と見た目で区別する。
+    dashArray: (p.geometry_source || '').startsWith('qline') ? '5,4' : null,
+  };
+}
+function notamPointToLayer(f, latlng){
+  const st = notamStyle(f);
+  return L.circleMarker(latlng, { radius:4, color:st.color, weight:st.weight, fillColor:st.fillColor, fillOpacity:st.fillOpacity, dashArray:st.dashArray });
+}
+function notamPopupHtml(f){
+  const p = f.properties || {};
+  const label = NOTAM_AREA_LABEL[p.area_group] || p.area_group || '';
+  const tag = NOTAM_FOCUS_LABEL[p.focus_tag] || p.focus_tag || '';
+  const period = (p.valid_start || p.valid_end)
+    ? `<div class="pop-mono">${esc((p.valid_start||'?').replace('T',' ').replace('Z',''))} 〜 ${esc((p.valid_end||'?').replace('T',' ').replace('Z',''))}</div>` : '';
+  const srcNote = (p.geometry_source || '').startsWith('qline')
+    ? `<div class="pop-mono" style="color:var(--amber);">図形はQ項からの推定（${esc(p.geometry_source)}${p.qline_offset_nm ? `・中心ずれ約${Math.round(p.qline_offset_nm)}NM` : ''}）</div>` : '';
+  const rawText = p.raw_text ? `<div class="pop-mono" style="white-space:pre-wrap;max-height:160px;overflow-y:auto;margin-top:6px;">${esc(p.raw_text)}</div>` : '';
+  const kwHtml = (p.matched_keywords && p.matched_keywords.length)
+    ? `<span class="notam-tag flag">語句一致: ${esc(p.matched_keywords.join(', '))}</span>` : '';
+  return `<div class="pop-title">${esc(p.title || p.number || 'NOTAM')}</div>`
+    + `<div class="pop-mono">${esc(label)} / ${esc(p.icao_location||'')} / ${esc(p.q_code||'')}</div>`
+    + `<div class="notam-tag ${esc(p.focus_tag||'admin')}">${esc(tag)}</div>${kwHtml}${period}${srcNote}${rawText}`;
+}
+
+// タブ(Active/Upcoming/Archive/All)ごとの一覧対象。Active/Upcomingは接続中URLのfeaturesの
+// statusで判定、Archiveは読み込んだArchive月ぶんのfeatures(そもそも失効・取消のみが
+// 入っている)、Allはこれまでに読み込んだもの全部。
+function notamFeaturesForTab(tab){
+  if (tab === 'active') return notamActiveFeatures.filter(f => notamStatusOf(f) === 'active');
+  if (tab === 'upcoming') return notamActiveFeatures.filter(f => notamStatusOf(f) === 'upcoming');
+  let archived = [];
+  notamArchiveFeatures.forEach(arr => { archived = archived.concat(arr); });
+  if (tab === 'archive') return archived;
+  return notamActiveFeatures.concat(archived); // all
+}
+
+function rebuildNotamMapLayer(){
+  notamLayer.clearLayers();
+  if (!notamLayerVisibleOnMap) return;
+  let feats = notamActiveFeatures.slice();
+  if (notamArchiveOnMap) notamArchiveFeatures.forEach(arr => { feats = feats.concat(arr); });
+  feats = feats.filter(f => f.geometry && notamPassesFilter(f) && !notamHiddenMapIds.has(notamFeatureKey(f)));
+  if (!feats.length) return;
+  L.geoJSON({ type:'FeatureCollection', features: feats }, {
+    style: notamStyle,
+    pointToLayer: notamPointToLayer,
+    onEachFeature: (f, layer) => layer.bindPopup(notamPopupHtml(f)),
+  }).addTo(notamLayer);
+}
+
+function updateNotamBadge(){
+  const n = notamActiveFeatures.filter(f => notamStatusOf(f) === 'active' && notamPassesFilter(f)).length;
+  const badge = $('#notamModeBadge');
+  if (badge) badge.textContent = n;
+}
+
+function renderNotamList(){
+  const container = $('#notamList');
+  container.innerHTML = '';
+
+  const activeCount = notamActiveFeatures.filter(f => notamStatusOf(f) === 'active').length;
+  const upcomingCount = notamActiveFeatures.filter(f => notamStatusOf(f) === 'upcoming').length;
+  let archiveCount = 0; notamArchiveFeatures.forEach(arr => archiveCount += arr.length);
+  $('#notamCountActive').textContent = activeCount;
+  $('#notamCountUpcoming').textContent = upcomingCount;
+  $('#notamCountArchive').textContent = archiveCount;
+  $('#notamCountAll').textContent = activeCount + upcomingCount + archiveCount;
+  $('#notamArchiveRow').style.display = (notamTab === 'archive') ? 'flex' : 'none';
+
+  // ポリゴン条件は満たすがFIR絞り込み前、という段階でFIRドロップダウンの選択肢を作る
+  // (航行警報側のArchive/All局ドロップダウンと同じ「今のスコープに実在する値だけ出す」方式)。
+  const polyItemsInTab = notamFeaturesForTab(notamTab).filter(notamHasRealPolygon);
+  notamFirFilter = updateNotamFirFilterOptions($('#notamFirFilter'), polyItemsInTab, notamFirFilter);
+
+  const items = notamFeaturesForTab(notamTab).filter(notamPassesFilter)
+    .sort((a,b) => ((b.properties||{}).valid_start||'').localeCompare((a.properties||{}).valid_start||''));
+  currentNotamTabItems = items; // 「このタブを全て表示/非表示」ボタン用
+
+  $('#notamEmptyHint').style.display = (items.length || !connectedNotamUrl) ? (items.length ? 'none' : 'block') : 'none';
+  if (connectedNotamUrl && !items.length){
+    $('#notamEmptyHint').style.display = 'block';
+    $('#notamEmptyHint').textContent = 'この条件に一致するNOTAMはありません（タブや絞り込みを確認してください）';
+  } else if (!connectedNotamUrl){
+    $('#notamEmptyHint').textContent = 'NOTAMのURL（notam_out/notam_cn.geojson）に接続すると、ここに一覧が表示されます。';
+  }
+
+  // 枠線・タイトル色の強調は空域制限(restriction)/要注意(flag)/要確認(watch)のみ
+  // (航行警報側の.warn-item.milと同じ考え方。leisure/plaintext/adminは既定色のまま)。
+  const EMPHASIZED_TAGS = new Set(['restriction','flag','watch']);
+  // 有効期間バッジの色分け(航行警報側の.validity-badgeと揃える)
+  const STATUS_BADGE_CLASS = { active:'active', upcoming:'upcoming', expired:'archive', cancelled:'archive', 'cancel-notice':'archive' };
+
+  items.forEach(f=>{
+    const p = f.properties || {};
+    const key = notamFeatureKey(f);
+    const div = document.createElement('div');
+    const tagKey = p.focus_tag || 'admin';
+    div.className = 'notam-item' + (f.geometry ? ' clickable' : '') + (EMPHASIZED_TAGS.has(tagKey) ? ` tag-${tagKey}` : '');
+    const label = NOTAM_AREA_LABEL[p.area_group] || p.area_group || '';
+    const period = (p.valid_start || p.valid_end)
+      ? `${esc((p.valid_start||'?').slice(0,16).replace('T',' '))} 〜 ${esc((p.valid_end||'?').slice(0,16).replace('T',' '))}`
+      : '期間不明';
+    const badgeClass = STATUS_BADGE_CLASS[notamStatusOf(f)] || 'unknown';
+    const hasGeom = !!f.geometry;
+    const mapToggleHtml = hasGeom
+      ? `<label class="check-row" style="margin-top:6px;"><input type="checkbox" data-notam-map-toggle="${esc(key)}" ${notamHiddenMapIds.has(key) ? '' : 'checked'}> 地図に表示</label>`
+      : '';
+    div.innerHTML = `
+      <span class="wtitle">${esc(p.title || p.number || 'NOTAM')}</span>
+      <div class="wmeta"><span>${esc(label)}</span><span>${esc(p.icao_location||'')}</span><span>${esc(p.q_code||'')}</span></div>
+      <div class="validity-badge ${badgeClass}">有効期間 ・ ${esc(period)}</div>
+      <div class="notam-tag ${esc(tagKey)}">${esc(NOTAM_FOCUS_LABEL[tagKey] || tagKey)}</div>
+      ${(p.matched_keywords && p.matched_keywords.length) ? `<span class="notam-tag flag">語句一致: ${esc(p.matched_keywords.join(', '))}</span>` : ''}
+      ${(p.geometry_source||'').startsWith('qline') ? `<span class="notam-tag qline">Q項推定図形</span>` : ''}
+      ${mapToggleHtml}`;
+    if (f.geometry){
+      div.addEventListener('click', (e)=>{
+        if (e.target.closest('a, button, label')) return; // 「地図に表示」チェックボックスのクリックはハイジャックしない
+        if (f.geometry.type === 'Point'){
+          const [lon,lat] = f.geometry.coordinates;
+          map.setView([lat,lon], Math.max(map.getZoom(), 7));
+        } else {
+          const b = L.geoJSON(f).getBounds();
+          if (b.isValid()) map.fitBounds(b.pad(0.3));
+        }
+      });
+    }
+    container.appendChild(div);
+  });
+
+  $$('input[data-notam-map-toggle]').forEach(chk=>{
+    chk.addEventListener('change', ()=>{
+      const k = chk.dataset.notamMapToggle;
+      if (chk.checked) notamHiddenMapIds.delete(k); else notamHiddenMapIds.add(k);
+      rebuildNotamMapLayer();
+    });
+  });
+
+  rebuildNotamMapLayer();
+  updateNotamBadge();
+}
+
+// 「このタブを全て表示/非表示」: 現在のタブに表示されている(絞り込みを通過した)NOTAMだけを
+// 対象に一括で地図表示ON/OFFする(航行警報側のbulkSetTabVisibilityと同じ考え方)。
+function bulkSetNotamTabVisibility(visible){
+  currentNotamTabItems.forEach(f=>{
+    if (!f.geometry) return;
+    const k = notamFeatureKey(f);
+    if (visible) notamHiddenMapIds.delete(k); else notamHiddenMapIds.add(k);
+  });
+  renderNotamList();
+}
+$('#notamBtnBulkShow').addEventListener('click', ()=> bulkSetNotamTabVisibility(true));
+$('#notamBtnBulkHide').addEventListener('click', ()=> bulkSetNotamTabVisibility(false));
+
+function updateNotamConnectionUI(){
+  const el = $('#notamConnectionStatus');
+  if (!el) return;
+  if (connectedNotamUrl){
+    el.style.display = 'block';
+    el.innerHTML = `🔗 接続中(URL): <b style="color:var(--text)">${esc(connectedNotamUrl)}</b><br>10分ごとに自動再読込します（次回目安 ${fmtClock(new Date(Date.now()+NOTAM_REFRESH_MS))}）<div class="btn-row" style="margin-top:6px;"><button class="btn small ghost" id="btnDisconnectNotam">接続を解除</button></div>`;
+    $('#btnDisconnectNotam').addEventListener('click', disconnectNotam);
+  } else {
+    el.style.display = 'none';
+    el.innerHTML = '';
+  }
+}
+
+async function rereadNotamUrl(){
+  if (!connectedNotamUrl) return;
+  const res = await fetch(connectedNotamUrl, { cache:'no-store' });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const gj = JSON.parse(await res.text());
+  notamActiveFeatures = gj.features || [];
+  renderNotamList();
+  updateNotamConnectionUI();
+  logLine(`NOTAM自動再読込: ${connectedNotamUrl}（${notamActiveFeatures.length}件）`, 'l-ok');
+}
+
+async function connectNotamUrl(url){
+  connectedNotamUrl = url;
+  try{
+    await rereadNotamUrl();
+  }catch(e){
+    logLine(`NOTAM接続に失敗しました: ${e.message}（notam-collectワークフローがまだ一度も投入していない可能性があります）`, 'l-err');
+    connectedNotamUrl = null;
+    updateNotamConnectionUI();
+    return;
+  }
+  updateNotamConnectionUI();
+  if (notamRefreshTimer) clearInterval(notamRefreshTimer);
+  notamRefreshTimer = setInterval(()=> rereadNotamUrl().catch(e=> logLine(`NOTAM自動再読込に失敗しました: ${e.message}`, 'l-err')), NOTAM_REFRESH_MS);
+  logLine(`NOTAM URL接続完了: ${url}（10分ごとに自動再読込します）`, 'l-ok');
+}
+
+function disconnectNotam(){
+  connectedNotamUrl = null;
+  notamActiveFeatures = [];
+  if (notamRefreshTimer){ clearInterval(notamRefreshTimer); notamRefreshTimer = null; }
+  updateNotamConnectionUI();
+  renderNotamList();
+  logLine('NOTAM接続を解除しました');
+}
+
+async function loadNotamArchiveMonth(month){
+  if (!month){ logLine('NOTAM Archive: 年月を選択してください', 'l-err'); return; }
+  const url = notamArchiveUrl(month);
+  if (!url){ logLine('NOTAM Archive: 先にNOTAMのURLに接続してください（接続先URLと同じ場所のarchive/フォルダから読み込みます）', 'l-err'); return; }
+  try{
+    const res = await fetch(url, { cache:'no-store' });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const gj = JSON.parse(await res.text());
+    notamArchiveFeatures.set(month, gj.features || []);
+    renderNotamList();
+    logLine(`NOTAM Archive読み込み完了: ${month}（${(gj.features||[]).length}件）`, 'l-ok');
+  }catch(e){
+    logLine(`NOTAM Archive読み込みに失敗しました(${month}): ${e.message}（その月のファイルがまだ存在しない可能性があります）`, 'l-err');
+  }
+}
+
+$$('#notamValidityTabs .tab-btn').forEach(btn=>{
+  btn.addEventListener('click', ()=>{
+    notamTab = btn.dataset.tab;
+    $$('#notamValidityTabs .tab-btn').forEach(b=> b.classList.toggle('active', b===btn));
+    renderNotamList();
+  });
+});
+$('#notamFirFilter').addEventListener('change', ()=>{
+  notamFirFilter = $('#notamFirFilter').value;
+  renderNotamList();
+});
+$('#chkNotamArchiveOnMap').addEventListener('change', (e)=>{ notamArchiveOnMap = e.target.checked; rebuildNotamMapLayer(); });
+$('#btnConnectNotamUrl').addEventListener('click', ()=>{
+  const url = $('#notamUrlInput').value.trim();
+  if (!url){ logLine('NOTAMのURLを入力してください', 'l-err'); return; }
+  connectNotamUrl(url);
+});
+$('#notamUrlInput').addEventListener('keydown', (e)=>{ if (e.key === 'Enter') $('#btnConnectNotamUrl').click(); });
+$('#btnLoadNotamArchive').addEventListener('click', ()=> loadNotamArchiveMonth($('#notamArchiveMonth').value));
+
+renderNotamList();
+
+/* ---------------------------------------------------------------
    9. Init
 --------------------------------------------------------------- */
 renderCoordList([]);
@@ -3064,15 +3486,14 @@ renderWarnList();
 
 function enterMode(mode){
   const app = $('#mainApp');
-  app.classList.remove('mode-auto','mode-manual');
-  app.classList.add(mode === 'manual' ? 'mode-manual' : 'mode-auto');
+  app.classList.remove('mode-auto','mode-manual','mode-notam');
+  app.classList.add(mode === 'manual' ? 'mode-manual' : mode === 'notam' ? 'mode-notam' : 'mode-auto');
   $$('#modeTabs .mode-tab').forEach(btn=> btn.classList.toggle('active', btn.dataset.mode === mode));
-  // Each mode only shows its own shapes on the map -- auto-mode results (msaLayer) vs.
-  // manual-mode plots (manualLayerGroup, which itself wraps manualLayer + every history
-  // entry) are mutually exclusive on the map. Without this, switching modes left the
+  // 3モードとも地図上の表示は排他 -- auto(msaLayer) / manual(manualLayerGroup) / notam(notamLayer)。
+  // Each mode only shows its own shapes on the map. Without this, switching modes left the
   // previous mode's shapes visibly on the map.
-  const wantLayer = mode === 'manual' ? manualLayerGroup : msaLayer;
-  [manualLayerGroup, msaLayer].forEach(lg=>{
+  const wantLayer = mode === 'manual' ? manualLayerGroup : mode === 'notam' ? notamLayer : msaLayer;
+  [manualLayerGroup, msaLayer, notamLayer].forEach(lg=>{
     const shouldShow = (lg === wantLayer);
     if (shouldShow && !map.hasLayer(lg)) lg.addTo(map);
     if (!shouldShow && map.hasLayer(lg)) map.removeLayer(lg);
@@ -3092,6 +3513,8 @@ function enterMode(mode){
   }, 50);
   logLine(mode === 'manual'
     ? '手動貼り付けモードで開始しました。座標を貼り付けてプロットしてください。'
+    : mode === 'notam'
+    ? 'NOTAMモードで開始しました。notam_out/notam_cn.geojsonへ自動接続します（10分ごとに自動再取込）。'
     : '自動収集モードで開始しました。?geojson=<URL> 付きで開くとmilitary.geojsonへ自動接続し、30分ごとに自動再取込します。'
   );
 }
@@ -3112,6 +3535,18 @@ enterMode('auto');
   const geojsonUrl = params.get('geojson');
   if (!geojsonUrl) return;
   connectUrl(geojsonUrl);
+})();
+
+// NOTAM側の自動接続。?notam=<url> があればそれを、無ければ ?geojson=<url>(MSA側の自動接続先)
+// から notam_out/notam_cn.geojson の位置を推測、それも無ければ本リポジトリのGitHub Pages上の
+// notam_cn.geojson(notam-collect.ymlが10分おきに更新する)に既定で自動接続する。
+const DEFAULT_NOTAM_URL = 'https://kw15-bot.github.io/-notam/notam_out/notam_cn.geojson';
+(function autoStartNotamFromUrl(){
+  const params = new URLSearchParams(location.search);
+  const notamUrl = params.get('notam') || guessNotamUrl(params.get('geojson')) || DEFAULT_NOTAM_URL;
+  const input = $('#notamUrlInput');
+  if (input) input.value = notamUrl;
+  connectNotamUrl(notamUrl);
 })();
 
 
