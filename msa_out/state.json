@@ -24639,6 +24639,99 @@
     "title": "“经典太平”轮试航—浙航警875/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5c5d58f748144651bcf1e64c1322a313.html"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5c68864cdfd145a386116692a59d9c49.html": {
+    "bureau": "广西海事局",
+    "cancels": [],
+    "date": "2026-09-27",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 20,
+    "first_seen": "2026-09-27T13:30:37+00:00",
+    "groups": [
+      [
+        {
+          "end": 42,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.383333333333333,
+          "lon": 108.79,
+          "raw": "21-23.00N 108-47.40E",
+          "start": 22
+        },
+        {
+          "end": 63,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.383333333333333,
+          "lon": 108.96666666666667,
+          "raw": "21-23.00N 108-58.00E",
+          "start": 43
+        },
+        {
+          "end": 84,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.206666666666667,
+          "lon": 108.96666666666667,
+          "raw": "21-12.40N 108-58.00E",
+          "start": 64
+        },
+        {
+          "end": 105,
+          "fmt": "DDM_HYPHEN",
+          "lat": 21.206666666666667,
+          "lon": 108.79,
+          "raw": "21-12.40N 108-47.40E",
+          "start": 85
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 42,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.383333333333333,
+        "lon": 108.79,
+        "raw": "21-23.00N 108-47.40E",
+        "start": 22
+      },
+      {
+        "end": 63,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.383333333333333,
+        "lon": 108.96666666666667,
+        "raw": "21-23.00N 108-58.00E",
+        "start": 43
+      },
+      {
+        "end": 84,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.206666666666667,
+        "lon": 108.96666666666667,
+        "raw": "21-12.40N 108-58.00E",
+        "start": 64
+      },
+      {
+        "end": 105,
+        "fmt": "DDM_HYPHEN",
+        "lat": 21.206666666666667,
+        "lon": 108.79,
+        "raw": "21-12.40N 108-47.40E",
+        "start": 85
+      }
+    ],
+    "raw_text": "北部湾，9月28日1100时至1300时，在21-23.00N 108-47.40E；21-23.00N 108-58.00E；21-12.40N 108-58.00E；21-12.40N 108-47.40E连线海域范围内进行军事训练，禁止船舶驶入。",
+    "revoked": false,
+    "title": "军事训练—桂航警212/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5c68864cdfd145a386116692a59d9c49.html",
+    "validity": {
+      "end": "2026-09-28T05:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月28日1100时至1300时"
+      ],
+      "start": "2026-09-28T03:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5c76d61117884ba681fcfe23358ac528.html": {
     "bureau": "广东海事局",
     "cancels": [],
