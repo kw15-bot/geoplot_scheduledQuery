@@ -472,6 +472,8 @@ def to_feature(rec, now):
             "nms_id": rec["id"], "number": rec.get("number"), "series": rec.get("series"),
             "notam_type": rec.get("type"), "area_group": rec["area_group"],
             "icao_location": rec.get("icao_location"), "fir": rec.get("fir"),
+            # INTL(ICAO書式) / DOM(米国国内書式) / MIL。ビューアはDOMを表示しない(同じ告示のICAO書式版が別にある)
+            "classification": rec.get("classification"),
             "q_code": rec.get("q_code"), "category": q_category(rec.get("q_code")),
             "focus_tag": q_focus_tag(rec.get("q_code")),
             "keyword_hit": bool(hits), "matched_keywords": hits,

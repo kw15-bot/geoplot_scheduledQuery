@@ -3302,6 +3302,9 @@ function notamFirTokens(f){
   return (f._notamLocations || (p.icao_location || '').split(/\s+/)).filter(Boolean);
 }
 function notamPassesFilter(f){
+  // 米国の国内書式(classification: DOM、例: !CARF 09/332 ZAK ...)は、同じ告示がICAO書式
+  // (INTL、例: A4705/26)でも発行されていて重複になるので表示しない。
+  if ((f.properties || {}).classification === 'DOM') return false;
   if (!notamHasRealPolygon(f)) return false;
   if (notamFirFilterActive() && notamFirFilter && !notamFirTokens(f).includes(notamFirFilter)) return false;
   return true;
