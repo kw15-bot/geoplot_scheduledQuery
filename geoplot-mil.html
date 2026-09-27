@@ -3376,14 +3376,21 @@ function notamActionButtonsHtml(f, popup){
         ${hasGeom ? `<button class="btn small ghost btn-shp" data-notam-shp-btn="${k}">${SHP_ICON_SVG}Export to Shp</button>` : ''}
       </div>`;
 }
+// NOTAMのB項・C項はUTCで発行される(収集データのvalid_start/valid_endも+00:00)。
+// 表示は「YYYY-MM-DD HH:MM 〜 YYYY-MM-DD HH:MM」で、見出し側に(UTC)と明記する。
+function notamPeriodUtc(p){
+  const fmt = v => v ? String(v).slice(0,16).replace('T',' ') : '?';
+  return `${fmt(p.valid_start)} 〜 ${fmt(p.valid_end)}`;
+}
 function notamPopupHtml(f){
   const p = f.properties || {};
   const period = (p.valid_start || p.valid_end)
-    ? `<div class="pop-mono">${esc((p.valid_start||'?').replace('T',' ').replace('Z',''))} 〜 ${esc((p.valid_end||'?').replace('T',' ').replace('Z',''))}</div>` : '';
+    ? `<div class="pop-mono">有効期間 (UTC): ${esc(notamPeriodUtc(p))}</div>` : '';
   const srcNote = (p.geometry_source || '').startsWith('qline')
     ? `<div class="pop-mono" style="color:var(--amber);">図形はQ項からの推定（${esc(p.geometry_source)}${p.qline_offset_nm ? `・中心ずれ約${Math.round(p.qline_offset_nm)}NM` : ''}）</div>` : '';
   const rawText = p.raw_text ? `<div class="pop-mono" style="white-space:pre-wrap;max-height:160px;overflow-y:auto;margin-top:6px;">${esc(p.raw_text)}</div>` : '';
-  return `<div class="pop-title">${esc(notamHeading(f))}</div>`
+  return `<div class="pop-title">${esc(p.number || notamHeading(f))}</div>`
+    + `<div class="pop-mono">FIR: ${esc(notamFirTokens(f).join(' '))}</div>`
     + `${period}${srcNote}${rawText}${notamActionButtonsHtml(f, true)}`;
 }
 
@@ -3465,17 +3472,16 @@ function renderNotamList(){
     const div = document.createElement('div');
     // カードの見た目は航行警報側の軍事関連カード(.warn-item.mil)と揃える
     div.className = 'warn-item mil' + (f.geometry ? ' clickable' : '');
-    const period = (p.valid_start || p.valid_end)
-      ? `${esc((p.valid_start||'?').slice(0,16).replace('T',' '))} 〜 ${esc((p.valid_end||'?').slice(0,16).replace('T',' '))}`
-      : '期間不明';
+    const period = (p.valid_start || p.valid_end) ? notamPeriodUtc(p) : '期間不明';
     const badgeClass = STATUS_BADGE_CLASS[notamStatusOf(f)] || 'unknown';
     const hasGeom = !!f.geometry;
     const mapToggleHtml = hasGeom
       ? `<label class="check-row" style="margin-top:6px;"><input type="checkbox" data-notam-map-toggle="${esc(key)}" data-notam-archive="${f._notamArchive ? '1' : ''}" ${notamIsOnMap(f) ? 'checked' : ''}> 地図に表示</label>`
       : '';
     div.innerHTML = `
-      <span class="wtitle">${esc(notamHeading(f))}</span>
-      <div class="validity-badge ${badgeClass}">有効期間 ・ ${esc(period)}</div>
+      <span class="wtitle">${esc(p.number || notamHeading(f))}</span>
+      <div class="wmeta"><span>FIR: ${esc(notamFirTokens(f).join(' '))}</span></div>
+      <div class="validity-badge ${badgeClass}">有効期間 (UTC) ・ ${esc(period)}</div>
       ${(p.geometry_source||'').startsWith('qline') ? `<span class="notam-tag qline">Q項推定図形</span>` : ''}
       ${mapToggleHtml}
       ${notamActionButtonsHtml(f, false)}`;
