@@ -215,8 +215,15 @@ def keyword_hits(text):
 _REF = re.compile(r"(\S+/\d+)\s+NOTAM([NRC])(?:\s+(\S+/\d+))?")
 
 
-# E項の座標: N230636E1162812（度分秒 DDMMSS/DDDMMSS）や N2306E11628（度分）
-_TEXT_COORD = re.compile(r"([NS])(\d{4}(?:\d{2})?)\s*([EW])(\d{5}(?:\d{2})?)")
+# E項の座標: 2つの書式に対応する。
+#   (a) 記号が先: N230636E1162812（度分秒 DDMMSS/DDDMMSS）や N2306E11628（度分）
+#   (b) 数字が先: 344747N1352608E（無人機エリア通知等で確認）、331300N1222400W（"TO"区切りの
+#       航空路上NOTAMで確認、区切り自体は finditer が無視するので影響しない）
+# 2026-09-27追加: 実データで(b)を取りこぼし、より粗い円・点にフォールバックしていたのを修正。
+_TEXT_COORD = re.compile(
+    r"(?:(?P<ns1>[NS])(?P<lat1>\d{4}(?:\d{2})?)\s*(?P<ew1>[EW])(?P<lon1>\d{5}(?:\d{2})?))"
+    r"|(?:(?P<lat2>\d{4}(?:\d{2})?)(?P<ns2>[NS])\s*(?P<lon2>\d{5}(?:\d{2})?)(?P<ew2>[EW]))"
+)
 
 
 def _dms(digits, deg_len):
@@ -242,10 +249,14 @@ def parse_text_polygons(e_text):
     先頭点に戻ったところでリングを閉じ、複数エリアの列挙にも対応。3点未満は捨てる。"""
     rings, cur = [], []
     for m in _TEXT_COORD.finditer(e_text or ""):
-        lat, lon = _dms(m[2], 2), _dms(m[4], 3)
+        if m["ns1"] is not None:
+            ns, lat_digits, ew, lon_digits = m["ns1"], m["lat1"], m["ew1"], m["lon1"]
+        else:
+            ns, lat_digits, ew, lon_digits = m["ns2"], m["lat2"], m["ew2"], m["lon2"]
+        lat, lon = _dms(lat_digits, 2), _dms(lon_digits, 3)
         if lat is None or lon is None or lat > 90 or lon > 180:
             continue
-        pt = [round(lon if m[3] == "E" else -lon, 6), round(lat if m[1] == "N" else -lat, 6)]
+        pt = [round(lon if ew == "E" else -lon, 6), round(lat if ns == "N" else -lat, 6)]
         if cur and pt == cur[0] and len(cur) >= 3:
             rings.append(cur + [pt])
             cur = []
