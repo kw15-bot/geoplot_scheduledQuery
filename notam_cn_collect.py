@@ -244,11 +244,30 @@ def e_section(icao_text, text):
     return text or ""
 
 
+def _is_named_waypoint_coord(e_text, start, end):
+    """'CG1(N253957E1095707)' のような、迂回路上の臨時ウェイポイント定義に出てくる座標かどうか。
+    括弧の中に単独で座標が収まっている(前後が空白のみを挟んで'('/')')場合はそう判断し、
+    境界ポリゴンの頂点としては数えない。2026-09-27追加: 航空路変更NOTAM(A4957/26等)で、
+    複数の臨時ウェイポイント座標が実在しないエリア境界として誤認されていたのを修正。"""
+    i = start - 1
+    while i >= 0 and e_text[i] in " \t\r\n":
+        i -= 1
+    if i < 0 or e_text[i] != "(":
+        return False
+    j = end
+    while j < len(e_text) and e_text[j] in " \t\r\n":
+        j += 1
+    return j < len(e_text) and e_text[j] == ")"
+
+
 def parse_text_polygons(e_text):
     """E項の座標列を多角形リング(GeoJSON順 [lon,lat])のリストにする。
-    先頭点に戻ったところでリングを閉じ、複数エリアの列挙にも対応。3点未満は捨てる。"""
+    先頭点に戻ったところでリングを閉じ、複数エリアの列挙にも対応。3点未満は捨てる。
+    括弧内に単独で書かれた座標(臨時ウェイポイント定義)は頂点として数えない。"""
     rings, cur = [], []
     for m in _TEXT_COORD.finditer(e_text or ""):
+        if _is_named_waypoint_coord(e_text, m.start(), m.end()):
+            continue
         if m["ns1"] is not None:
             ns, lat_digits, ew, lon_digits = m["ns1"], m["lat1"], m["ew1"], m["lon1"]
         else:
