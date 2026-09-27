@@ -1,7 +1,7 @@
 # NOTAM 日次レポート 2026-09-27（UTC）
 
-- 集計時刻: 2026-09-27 21:49 UTC（対象期間: 2026-09-26 21:49 〜 2026-09-27 21:49 UTC）
-- 最終収集成功: 2026-09-27 21:40 UTC
+- 集計時刻: 2026-09-27 21:51 UTC（対象期間: 2026-09-26 21:51 〜 2026-09-27 21:51 UTC）
+- 最終収集成功: 2026-09-27 21:50 UTC
 - 種別は Qコードの主題（2〜3文字目、ICAO Doc 8126 の定義）。軍事かどうかの判定はしていない。
 - 同じ NOTAM が地名指標ごとに別レコードで届くものは1件にまとめて数えた。「地図」はビューアで多角形として表示されるもの。
 
@@ -9,20 +9,20 @@
 
 | 区分 | 件数 |
 |---|---|
-| 有効（Active） | 25 |
+| 有効（Active） | 26 |
 | 有効前（Upcoming） | 65 |
 | 　うち地図に表示 | 3 |
-| 　うち地図に表示されない（理由は §7） | 87 |
-| 過去24時間の新規 | 147 |
-| 過去24時間の失効・取消 | 56 |
-| Archive 累計 | 88 |
+| 　うち地図に表示されない（理由は §7） | 88 |
+| 過去24時間の新規 | 148 |
+| 過去24時間の失効・取消 | 57 |
+| Archive 累計 | 89 |
 
 ## 2. 種別ごとの件数（有効・有効前）
 
 | 種別（Qコード主題） | 大分類 | 計 | 有効 | 有効前 | 24h新規 | 地図 | FIR |
 |---|---|---|---|---|---|---|---|
 | AR ATS経路(航空路) | 空域の構成 | 20 | 3 | 17 | 20 | 0 | KZAK、RJJJ、RKRR、ZGZU、ZHWH、ZLHW、ZPKM、ZSHA、ZWUQ |
-| MX 誘導路 | 移動区域(滑走路・誘導路等) | 19 | 1 | 18 | 19 | 0 | RJJJ、ZBPE、ZHWH、ZWUQ |
+| MX 誘導路 | 移動区域(滑走路・誘導路等) | 20 | 2 | 18 | 20 | 0 | RJJJ、ZBPE、ZHWH、ZWUQ |
 | MR 滑走路 | 移動区域(滑走路・誘導路等) | 7 | 4 | 3 | 7 | 0 | RJJJ、ZBPE、ZWUQ |
 | FA 飛行場 | 飛行場の施設 | 4 | 1 | 3 | 4 | 1 | ZLHW、ZSHA、ZWUQ |
 | RA 空域の留保 | 空域の制限 | 4 | 0 | 4 | 4 | 1 | KZAK |
@@ -51,7 +51,7 @@
 
 | FIR | 地域 | 件数 |
 |---|---|---|
-| RJJJ | 周辺国FIR(参考) | 41 |
+| RJJJ | 周辺国FIR(参考) | 42 |
 | KZAK | 周辺国FIR(参考) | 10 |
 | ZWUQ | 中国本土 | 9 |
 | ZLHW | 中国本土 | 7 |
@@ -133,6 +133,7 @@
 | E5186/26 | RJJJ | QMXLC（誘導路） | 2026-09-27 15:00 〜 2026-09-27 19:32 |  | TWY P(BTN P3 AND P8),P(INT OF P3),P3,P4,L(BTN L3 AND L4),L(INT OF L3) CLSD DUE TO CONST |
 | L3816/26 | RJJJ | QMXLC（誘導路） | 2026-09-27 17:00 〜 2026-09-27 07:47 |  | ALL TWY CLSD DUE TO MAINT EXC ACFT WITH PRIOR PERMISSION AT LEAST 1HR BFR |
 | G4343/26 | ZHWH | QMXLC（誘導路） | 2026-09-27 18:30 〜 2026-09-27 22:30 |  | FLW TWY CLSD DUE TO EMERGENCY REPAIR: 1.TWY D BTN TWY D6 AND TWY D9. 2.TWY D7,D8. |
+| H3647/26 | RJJJ | QMXLC（誘導路） | 2026-09-27 21:42 〜 2026-09-27 23:30 |  | TWY J1(BTN B AND R) CLSD DUE TO REPAIR |
 | E3871/26 | ZBPE | QMXLC（誘導路） | 2026-09-28 17:20 〜 2026-09-28 21:30 |  | TWY L03 CLSD DUE TO WIP. |
 | W1335/26 | ZWUQ | QMXLC（誘導路） | 2026-09-28 17:30 〜 2026-09-28 23:30 |  | TWY Y CLSD DUE TO MAINT. |
 | G2378/26 | RJJJ | QMXLC（誘導路） | 2026-10-01 15:00 〜 2026-10-01 20:10 |  | ACFT STAND TXL E,E2 THRU E6,P,J,K3 CLSD DUE TO MAINT EXC ACFT WITH PRIOR PERMISSION AT LEA… |
@@ -240,6 +241,7 @@
 | E5186/26 | RJJJ | QMXLC（誘導路） | 2026-09-27 15:00 〜 2026-09-27 19:32 |  | TWY P(BTN P3 AND P8),P(INT OF P3),P3,P4,L(BTN L3 AND L4),L(INT OF L3) CLSD DUE TO CONST |
 | L3816/26 | RJJJ | QMXLC（誘導路） | 2026-09-27 17:00 〜 2026-09-27 07:47 |  | ALL TWY CLSD DUE TO MAINT EXC ACFT WITH PRIOR PERMISSION AT LEAST 1HR BFR |
 | A4948/26 | ZSHA | QNMCT（VOR/DME） | 2026-09-25 04:00 〜 2026-09-27 07:45 |  | WEIFANG VOR/DME 'WFG' 116.6MHZ/CH113X ON TEST, DO NOT USE, DUE TO FLTCK. |
+| J2001/26 | RJJJ | QOBCE（障害物） | 2026-09-27 21:45 〜 2026-09-27 21:48 |  | OBST(VESSEL) PASS ACROSS BENEATH THE APCH SFC BTN POINT A AND B(FOR RWY 05/23) ELEV: 185FT… |
 | B1672/26 | RJJJ | QOLAS（障害物灯） | 2026-07-02 00:16 〜 2026-09-27 12:31 |  | OBST LGT U/S TYPE: CHIMNEY PSN: 343251.8N1352556.8E ELEV: 325FT AMSL (SAKAI-SHI IN OSAKA) |
 | X6067/26 | RJJJ | QPFCA（交通流制御の方式） | 2026-09-26 22:55 〜 2026-09-27 06:41 |  | FLOW CTL AS FLWS, AREA: SECTOR F15 PROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTO… |
 | X6082/26 | RJJJ | QPFCA（交通流制御の方式） | 2026-09-27 03:50 〜 2026-09-27 08:13 |  | FLOW CTL AS FLWS, AREA: SECTOR F07 PROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTO… |
@@ -290,7 +292,7 @@
 
 | 理由 | 件数 |
 |---|---|
-| Q項の中心座標・半径から作った円/点のみ(E項に多角形の座標なし) | 64 |
+| Q項の中心座標・半径から作った円/点のみ(E項に多角形の座標なし) | 65 |
 | 位置情報なし(本文にもQ項にも座標なし) | 14 |
 | APIが返した点のみ(E項に多角形の座標なし) | 5 |
 | 米国国内書式(DOM) | 4 |
@@ -331,6 +333,7 @@
 | W1334/26 | ZWUQ | QMRLC（滑走路） | 2026-09-28 17:30 〜 2026-09-28 23:30 | Q項の中心座標・半径から作った円/点のみ(E項に多角形の座標なし) | RWY08L/26R CLSD DUE TO MAINT. |
 | G2376/26 | RJJJ | QMRLC（滑走路） | 2026-10-01 17:50 〜 2026-10-01 20:10 | Q項の中心座標・半径から作った円/点のみ(E項に多角形の座標なし) | RWY 18/36 CLSD DUE TO MAINT EXC ACFT WITH PRIOR PERMISSION AT LEAST 1HR BFR |
 | G4343/26 | ZHWH | QMXLC（誘導路） | 2026-09-27 18:30 〜 2026-09-27 22:30 | Q項の中心座標・半径から作った円/点のみ(E項に多角形の座標なし) | FLW TWY CLSD DUE TO EMERGENCY REPAIR: 1.TWY D BTN TWY D6 AND TWY D9. 2.TWY D7,D8. |
+| H3647/26 | RJJJ | QMXLC（誘導路） | 2026-09-27 21:42 〜 2026-09-27 23:30 | Q項の中心座標・半径から作った円/点のみ(E項に多角形の座標なし) | TWY J1(BTN B AND R) CLSD DUE TO REPAIR |
 | E3871/26 | ZBPE | QMXLC（誘導路） | 2026-09-28 17:20 〜 2026-09-28 21:30 | Q項の中心座標・半径から作った円/点のみ(E項に多角形の座標なし) | TWY L03 CLSD DUE TO WIP. |
 | W1335/26 | ZWUQ | QMXLC（誘導路） | 2026-09-28 17:30 〜 2026-09-28 23:30 | Q項の中心座標・半径から作った円/点のみ(E項に多角形の座標なし) | TWY Y CLSD DUE TO MAINT. |
 | G2378/26 | RJJJ | QMXLC（誘導路） | 2026-10-01 15:00 〜 2026-10-01 20:10 | Q項の中心座標・半径から作った円/点のみ(E項に多角形の座標なし) | ACFT STAND TXL E,E2 THRU E6,P,J,K3 CLSD DUE TO MAINT EXC ACFT WITH PRIOR PERMISSION AT LEA… |
