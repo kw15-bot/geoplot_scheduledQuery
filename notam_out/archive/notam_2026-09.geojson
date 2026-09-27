@@ -708,6 +708,309 @@
   {
    "geometry": {
     "coordinates": [
+     [
+      [
+       137.916667,
+       36.24985
+      ],
+      [
+       137.926766,
+       36.24945
+      ],
+      [
+       137.936769,
+       36.248252
+      ],
+      [
+       137.946577,
+       36.246268
+      ],
+      [
+       137.956098,
+       36.243518
+      ],
+      [
+       137.965239,
+       36.240028
+      ],
+      [
+       137.973912,
+       36.235831
+      ],
+      [
+       137.982034,
+       36.230968
+      ],
+      [
+       137.989526,
+       36.225486
+      ],
+      [
+       137.996317,
+       36.219438
+      ],
+      [
+       138.00234,
+       36.212881
+      ],
+      [
+       138.007539,
+       36.205879
+      ],
+      [
+       138.011862,
+       36.1985
+      ],
+      [
+       138.015269,
+       36.190814
+      ],
+      [
+       138.017726,
+       36.182895
+      ],
+      [
+       138.019209,
+       36.17482
+      ],
+      [
+       138.019705,
+       36.166667
+      ],
+      [
+       138.019209,
+       36.158513
+      ],
+      [
+       138.017726,
+       36.150438
+      ],
+      [
+       138.015269,
+       36.14252
+      ],
+      [
+       138.011862,
+       36.134834
+      ],
+      [
+       138.007539,
+       36.127454
+      ],
+      [
+       138.00234,
+       36.120452
+      ],
+      [
+       137.996317,
+       36.113896
+      ],
+      [
+       137.989526,
+       36.107847
+      ],
+      [
+       137.982034,
+       36.102365
+      ],
+      [
+       137.973912,
+       36.097502
+      ],
+      [
+       137.965239,
+       36.093305
+      ],
+      [
+       137.956098,
+       36.089815
+      ],
+      [
+       137.946577,
+       36.087065
+      ],
+      [
+       137.936769,
+       36.085081
+      ],
+      [
+       137.926766,
+       36.083884
+      ],
+      [
+       137.916667,
+       36.083483
+      ],
+      [
+       137.906567,
+       36.083884
+      ],
+      [
+       137.896565,
+       36.085081
+      ],
+      [
+       137.886756,
+       36.087065
+      ],
+      [
+       137.877235,
+       36.089815
+      ],
+      [
+       137.868095,
+       36.093305
+      ],
+      [
+       137.859421,
+       36.097502
+      ],
+      [
+       137.8513,
+       36.102365
+      ],
+      [
+       137.843807,
+       36.107847
+      ],
+      [
+       137.837017,
+       36.113896
+      ],
+      [
+       137.830993,
+       36.120452
+      ],
+      [
+       137.825795,
+       36.127454
+      ],
+      [
+       137.821471,
+       36.134834
+      ],
+      [
+       137.818065,
+       36.14252
+      ],
+      [
+       137.815608,
+       36.150438
+      ],
+      [
+       137.814124,
+       36.158513
+      ],
+      [
+       137.813628,
+       36.166667
+      ],
+      [
+       137.814124,
+       36.17482
+      ],
+      [
+       137.815608,
+       36.182895
+      ],
+      [
+       137.818065,
+       36.190814
+      ],
+      [
+       137.821471,
+       36.1985
+      ],
+      [
+       137.825795,
+       36.205879
+      ],
+      [
+       137.830993,
+       36.212881
+      ],
+      [
+       137.837017,
+       36.219438
+      ],
+      [
+       137.843807,
+       36.225486
+      ],
+      [
+       137.8513,
+       36.230968
+      ],
+      [
+       137.859421,
+       36.235831
+      ],
+      [
+       137.868095,
+       36.240028
+      ],
+      [
+       137.877235,
+       36.243518
+      ],
+      [
+       137.886756,
+       36.246268
+      ],
+      [
+       137.896565,
+       36.248252
+      ],
+      [
+       137.906567,
+       36.24945
+      ],
+      [
+       137.916667,
+       36.24985
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "properties": {
+    "area_group": "REF",
+    "category": "other",
+    "date": "2026-09-26",
+    "ended_by": "N3886/26",
+    "estimated_end": false,
+    "fir": "RJJJ",
+    "first_seen": "2026-09-27T12:19:30+00:00",
+    "focus_tag": "admin",
+    "geometry_source": "qline-circle",
+    "icao_location": "RJAF",
+    "issuer": "RJAAYNYX",
+    "keyword_hit": false,
+    "kind": "area",
+    "last_updated": "2026-09-27T12:07:00Z",
+    "lower": null,
+    "matched_keywords": [],
+    "nms_id": "1790424963150000",
+    "notam_type": "N",
+    "number": "N3884/26",
+    "q_code": "QGAXX",
+    "qline_offset_nm": null,
+    "radius_nm": 5.0,
+    "raw_text": "N3884/26 NOTAMN\r\nQ)RJJJ/QGAXX/I/NBO/A/000/999/3610N13755E005\r\nA)RJAF B)2609261500 C)2609281500\r\nE)GPS RAIM OUTAGES PREDICTED FOR APCH (RNP AR 0.20) AS FLW\r\n2609270753/2609270758",
+    "series": "N",
+    "source": "nms",
+    "status": "cancelled",
+    "title": "周辺国FIR(参考) RJAF N3884/26",
+    "upper": null,
+    "valid_end": "2026-09-27T12:06:00+00:00",
+    "valid_raw": [],
+    "valid_start": "2026-09-26T15:00:00+00:00"
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
      141.3,
      33.166667
     ],
@@ -1390,6 +1693,49 @@
     "valid_end": "2026-09-27T11:50:00+00:00",
     "valid_raw": [],
     "valid_start": "2026-09-27T09:45:00+00:00"
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     141.3,
+     33.166667
+    ],
+    "type": "Point"
+   },
+   "properties": {
+    "area_group": "REF",
+    "category": "other",
+    "date": "2026-09-27",
+    "ended_by": null,
+    "estimated_end": false,
+    "fir": "RJJJ",
+    "first_seen": "2026-09-27T12:01:24+00:00",
+    "focus_tag": "admin",
+    "geometry_source": "qline-point",
+    "icao_location": "RJJJ",
+    "issuer": "RJAAYNYX",
+    "keyword_hit": false,
+    "kind": "point",
+    "last_updated": "2026-09-27T09:47:00.000Z",
+    "lower": null,
+    "matched_keywords": [],
+    "nms_id": "1790502431839000",
+    "notam_type": "R",
+    "number": "X6101/26",
+    "q_code": "QPFCA",
+    "qline_offset_nm": null,
+    "radius_nm": 999.0,
+    "raw_text": "X6101/26 NOTAMR X6098/26\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609270946 C)2609271210\r\nE)FLOW CTL AS FLWS, \r\n AREA: SECTOR N50 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR N50\r\nRMK: REF AIP ENR1.9-1",
+    "series": "X",
+    "source": "nms",
+    "status": "expired",
+    "title": "周辺国FIR(参考) RJJJ X6101/26",
+    "upper": null,
+    "valid_end": "2026-09-27T12:10:00+00:00",
+    "valid_raw": [],
+    "valid_start": "2026-09-27T09:46:00+00:00"
    },
    "type": "Feature"
   },
@@ -2697,6 +3043,49 @@
     "valid_end": "2026-09-27T11:48:00+00:00",
     "valid_raw": [],
     "valid_start": "2026-09-27T11:18:00+00:00"
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     127.633333,
+     26.2
+    ],
+    "type": "Point"
+   },
+   "properties": {
+    "area_group": "REF",
+    "category": "other",
+    "date": "2026-09-27",
+    "ended_by": "H3644/26",
+    "estimated_end": true,
+    "fir": "RJJJ",
+    "first_seen": "2026-09-27T12:19:30+00:00",
+    "focus_tag": "plaintext",
+    "geometry_source": "qline-point",
+    "icao_location": "ROAH",
+    "issuer": "RJAAYNYX",
+    "keyword_hit": false,
+    "kind": "point",
+    "last_updated": "2026-09-27T12:07:00.000Z",
+    "lower": null,
+    "matched_keywords": [],
+    "nms_id": "1790482784485000",
+    "notam_type": "R",
+    "number": "H3640/26",
+    "q_code": "QXXXX",
+    "qline_offset_nm": null,
+    "radius_nm": null,
+    "raw_text": "H3640/26 NOTAMR H3634/26\r\nQ)RJJJ/QXXXX/IV/M/AW/000/999/2612N12738E005\r\nA)ROAH B)2609270419 C)2609281300EST\r\nE)NAHA AIR BASE TYPH COND NR 1 AS OF 2609270300",
+    "series": "H",
+    "source": "nms",
+    "status": "cancelled",
+    "title": "周辺国FIR(参考) ROAH H3640/26",
+    "upper": null,
+    "valid_end": "2026-09-27T12:07:00+00:00",
+    "valid_raw": [],
+    "valid_start": "2026-09-27T04:19:00+00:00"
    },
    "type": "Feature"
   }
