@@ -684,3 +684,18 @@ FAA公式の公開ツール(`notams.aim.faa.gov`)には「Archive Search」機�
   DANGER/TEMPORARY/CLSD/FORBIDDEN/PROHIBITED/DNG/CLOSED/SPECIAL）。`keyword_hit`/`matched_keywords`は
   収集データに出力されるが、ビューアではまだ使っていない。Activeは収集のたびに再計算されるので自動で
   反映される。Archiveは再計算されないため、該当する B3231/26（2026-07）だけ手で更新した。
+
+---
+
+## 17. 日次レポート（2026-09-28追加）
+
+- `notam_daily_report.py`: `notam_out/` の収集データ（state_active.json と archive）を集計し、
+  `notam_out/reports/notam_report_YYYY-MM-DD.md`（日付はUTC）と `latest.md` に書き出す。
+- `.github/workflows/notam-report.yml`: 毎日 23:52 UTC（08:52 JST）に実行（GitHub Actions の schedule。
+  best-effort なので遅れることがある）。手動実行も可。`notam_out/reports/` だけをコミットする。
+- 種別は Qコードの主題（2〜3文字目、ICAO Doc 8126 の定義を和訳した表 `Q_SUBJECT`）。軍事かどうかの判定はしない。
+- 地図に表示されなかったもの（ビューアの表示条件で落ちたもの）も、理由付きで §7 に全件載せる
+  （Q項の円・点のみ／位置情報なし／APIの点のみ／DOM／取消通知）。
+- 既知: E項が「NNNNM RADIUS OF 座標」の円で定義されている NOTAM（例: A4697/26）は、多角形として読めないので
+  地図に出ない（レポートでは「APIが返した点のみ」等に分類される）。
+
