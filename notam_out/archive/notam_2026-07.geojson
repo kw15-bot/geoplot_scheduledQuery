@@ -1,0 +1,136 @@
+{
+ "features": [
+  {
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       121.283333,
+       38.783333
+      ],
+      [
+       122.366667,
+       38.366667
+      ],
+      [
+       122.15,
+       38.0
+      ],
+      [
+       121.05,
+       38.416667
+      ],
+      [
+       121.283333,
+       38.783333
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "properties": {
+    "area_group": "CN",
+    "category": "restriction",
+    "classification": null,
+    "date": "2026-07-06",
+    "ended_by": null,
+    "estimated_end": false,
+    "fir": "ZXXX",
+    "first_seen": "2026-09-27T13:45:16+00:00",
+    "focus_tag": "restriction",
+    "geometry_source": "text-polygon",
+    "icao_location": "ZSHA ZYSH",
+    "issuer": null,
+    "keyword_hit": true,
+    "kind": "area",
+    "last_updated": "2026-07-06T04:00:00+00:00",
+    "lower": "000",
+    "matched_keywords": [
+     "DANGER",
+     "TEMPORARY"
+    ],
+    "nms_id": "PASTE-A2575-26",
+    "notam_type": "N",
+    "number": "A2575/26",
+    "q_code": "QRDCA",
+    "qline_offset_nm": 0.5,
+    "radius_nm": 31.0,
+    "raw_text": "A2575/26 NOTAMN Q)ZXXX/QRDCA/IV/BO/W/000/999/3823N12143E031 A)ZSHA ZYSH B)2607060400 C)2607080538 E) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY: N384700E1211700-N382200E1222200-N380000E1220900-N382500E1210300, BACK TO START.VERTICAL LIMITS:SFC-UNL. ALL ACFT SHALL FLW ATC INSTRUCTION.",
+    "series": "A",
+    "source": "nms",
+    "status": "expired",
+    "title": "中国本土 ZSHA A2575/26",
+    "upper": "999",
+    "valid_end": "2026-07-08T05:38:00+00:00",
+    "valid_raw": [],
+    "valid_start": "2026-07-06T04:00:00+00:00"
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       124.783333,
+       18.05
+      ],
+      [
+       126.05,
+       17.433333
+      ],
+      [
+       125.733333,
+       16.766667
+      ],
+      [
+       124.466667,
+       17.4
+      ],
+      [
+       124.783333,
+       18.05
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "properties": {
+    "area_group": "REF",
+    "category": "warning",
+    "classification": null,
+    "date": "2026-07-06",
+    "ended_by": null,
+    "estimated_end": false,
+    "fir": "RPHI",
+    "first_seen": "2026-09-27T13:45:16+00:00",
+    "focus_tag": "flag",
+    "geometry_source": "text-polygon",
+    "icao_location": "RPHI",
+    "issuer": null,
+    "keyword_hit": false,
+    "kind": "area",
+    "last_updated": "2026-07-06T04:00:00+00:00",
+    "lower": "000",
+    "matched_keywords": [],
+    "nms_id": "PASTE-B3231-26",
+    "notam_type": "N",
+    "number": "B3231/26",
+    "q_code": "QWMLW",
+    "qline_offset_nm": 0.5,
+    "radius_nm": 49.0,
+    "raw_text": "B3231/26 NOTAMN Q)RPHI/QWMLW/IV/BO/W/000/999/1725N12516E049 A)RPHI B)2607060400 C)2607080538 E) SPECIAL OPS (AEROSPACE FLT ACT) WILL BE CONDUCTED BY CHINA. EST FALL AREA OF UNBURNED DEBRIS WI: 180300N 1244700E - 172600N 1260300E - 164600N 1254400E - 172400N 1242800E - 180300N 1244700E (157NM EAST OF TUGUEGARAO AP).",
+    "series": "B",
+    "source": "nms",
+    "status": "expired",
+    "title": "周辺国FIR(参考) RPHI B3231/26",
+    "upper": "999",
+    "valid_end": "2026-07-08T05:38:00+00:00",
+    "valid_raw": [],
+    "valid_start": "2026-07-06T04:00:00+00:00"
+   },
+   "type": "Feature"
+  }
+ ],
+ "type": "FeatureCollection"
+}
