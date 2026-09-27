@@ -1,0 +1,338 @@
+{
+ "features": [
+  {
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       103.529444,
+       39.923333
+      ],
+      [
+       102.268611,
+       39.933333
+      ],
+      [
+       102.260833,
+       39.413333
+      ],
+      [
+       103.553611,
+       39.433333
+      ],
+      [
+       103.529444,
+       39.923333
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "properties": {
+    "area_group": "CN",
+    "category": "restriction",
+    "date": "2026-03-24",
+    "ended_by": null,
+    "estimated_end": false,
+    "fir": "ZLHW",
+    "first_seen": "2026-09-27T12:00:00+00:00",
+    "focus_tag": "restriction",
+    "geometry_source": "text-polygon",
+    "icao_location": "ZLHW",
+    "issuer": null,
+    "keyword_hit": true,
+    "kind": "area",
+    "last_updated": "2026-03-24T02:13:00+00:00",
+    "lower": "000",
+    "matched_keywords": [
+     "DANGER",
+     "TEMPORARY",
+     "FORBIDDEN"
+    ],
+    "nms_id": "PASTE-A0760-26",
+    "notam_type": "N",
+    "number": "A0760/26",
+    "q_code": "QRDCA",
+    "qline_offset_nm": 0.6,
+    "radius_nm": 34.0,
+    "raw_text": "A0760/26 NOTAMN Q)ZLHW/QRDCA/IV/BO/W/000/999/3940N10254E034 A)ZLHW B)2603240213 C)2603240323 E) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY: N395524E1033146-N395600E1021607-N392448E1021539-N392600E1033313,BAC K TO START.VERTICAL LIMITS:SFC-UNL. AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.",
+    "series": "A",
+    "source": "nms",
+    "status": "expired",
+    "title": "中国本土 ZLHW A0760/26",
+    "upper": "999",
+    "valid_end": "2026-03-24T03:23:00+00:00",
+    "valid_raw": [],
+    "valid_start": "2026-03-24T02:13:00+00:00"
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       93.109167,
+       39.548056
+      ],
+      [
+       91.591389,
+       39.378611
+      ],
+      [
+       91.699722,
+       38.890278
+      ],
+      [
+       93.158611,
+       39.026111
+      ],
+      [
+       93.109167,
+       39.548056
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "properties": {
+    "area_group": "CN",
+    "category": "restriction",
+    "date": "2026-03-24",
+    "ended_by": null,
+    "estimated_end": false,
+    "fir": "ZLHW",
+    "first_seen": "2026-09-27T12:00:00+00:00",
+    "focus_tag": "restriction",
+    "geometry_source": "text-polygon",
+    "icao_location": "ZLHW",
+    "issuer": null,
+    "keyword_hit": true,
+    "kind": "area",
+    "last_updated": "2026-03-24T02:13:00+00:00",
+    "lower": "000",
+    "matched_keywords": [
+     "DANGER",
+     "TEMPORARY",
+     "FORBIDDEN"
+    ],
+    "nms_id": "PASTE-A0761-26",
+    "notam_type": "N",
+    "number": "A0761/26",
+    "q_code": "QRDCA",
+    "qline_offset_nm": 0.6,
+    "radius_nm": 39.0,
+    "raw_text": "A0761/26 NOTAMN Q)ZLHW/QRDCA/IV/BO/W/000/999/3913N09224E039 A)ZLHW B)2603240213 C)2603240323 E) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY: N393253E0930633-N392243E0913529-N385325E0914159-N390134E0930931 BACK TO START.VERTICAL LIMITS:SFC-UNL. AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.",
+    "series": "A",
+    "source": "nms",
+    "status": "expired",
+    "title": "中国本土 ZLHW A0761/26",
+    "upper": "999",
+    "valid_end": "2026-03-24T03:23:00+00:00",
+    "valid_raw": [],
+    "valid_start": "2026-03-24T02:13:00+00:00"
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       102.309167,
+       39.936944
+      ],
+      [
+       105.543889,
+       39.873889
+      ],
+      [
+       105.582222,
+       39.4125
+      ],
+      [
+       102.150556,
+       39.409722
+      ],
+      [
+       102.309167,
+       39.936944
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "properties": {
+    "area_group": "CN",
+    "category": "other",
+    "date": "2026-03-24",
+    "ended_by": null,
+    "estimated_end": false,
+    "fir": "ZLHW",
+    "first_seen": "2026-09-27T12:00:00+00:00",
+    "focus_tag": "admin",
+    "geometry_source": "text-polygon",
+    "icao_location": "ZLHW",
+    "issuer": null,
+    "keyword_hit": true,
+    "kind": "area",
+    "last_updated": "2026-03-24T02:13:00+00:00",
+    "lower": "000",
+    "matched_keywords": [
+     "CLSD"
+    ],
+    "nms_id": "PASTE-A0799-26",
+    "notam_type": "N",
+    "number": "A0799/26",
+    "q_code": "QARLC",
+    "qline_offset_nm": null,
+    "radius_nm": null,
+    "raw_text": "A0799/26 NOTAMN Q)ZLHW/QARLC/IV/NBO/E/000/999/ A)ZLHW B)2603240213 C)2603240333 E) SEGMENT WI THE AREA (BOUNDED BY:N395613E1021833-N395226E1053238-N392445E1053456-N392435E1020902) CLSD.",
+    "series": "A",
+    "source": "nms",
+    "status": "expired",
+    "title": "中国本土 ZLHW A0799/26",
+    "upper": "999",
+    "valid_end": "2026-03-24T03:33:00+00:00",
+    "valid_raw": [],
+    "valid_start": "2026-03-24T02:13:00+00:00"
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       99.666667,
+       33.15
+      ],
+      [
+       100.233333,
+       33.15
+      ],
+      [
+       100.2,
+       32.316667
+      ],
+      [
+       99.65,
+       32.333333
+      ],
+      [
+       99.666667,
+       33.15
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "properties": {
+    "area_group": "CN",
+    "category": "restriction",
+    "date": "2026-03-23",
+    "ended_by": null,
+    "estimated_end": false,
+    "fir": "ZXXX",
+    "first_seen": "2026-09-27T12:00:00+00:00",
+    "focus_tag": "restriction",
+    "geometry_source": "text-polygon",
+    "icao_location": "ZPKM ZLHW",
+    "issuer": null,
+    "keyword_hit": true,
+    "kind": "area",
+    "last_updated": "2026-03-23T10:52:00+00:00",
+    "lower": "000",
+    "matched_keywords": [
+     "DANGER",
+     "TEMPORARY",
+     "FORBIDDEN"
+    ],
+    "nms_id": "PASTE-A0699-26",
+    "notam_type": "N",
+    "number": "A0699/26",
+    "q_code": "QRDCA",
+    "qline_offset_nm": 0.3,
+    "radius_nm": 29.0,
+    "raw_text": "A0699/26 NOTAMN Q)ZXXX/QRDCA/IV/BO/W/000/999/3244N09956E029 A)ZPKM ZLHW B)2603231052 C)2603231314 E) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY: N330900E0994000-N330900E1001400-N321900E1001200-N322000E0993900, BACK TO START.VERTICAL LIMITS:SFC-UNL. AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.",
+    "series": "A",
+    "source": "nms",
+    "status": "expired",
+    "title": "中国本土 ZPKM A0699/26",
+    "upper": "999",
+    "valid_end": "2026-03-23T13:14:00+00:00",
+    "valid_raw": [],
+    "valid_start": "2026-03-23T10:52:00+00:00"
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       88.461111,
+       39.014444
+      ],
+      [
+       87.384167,
+       38.856111
+      ],
+      [
+       87.474444,
+       38.1625
+      ],
+      [
+       88.530556,
+       38.738889
+      ],
+      [
+       88.461111,
+       39.014444
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "properties": {
+    "area_group": "CN",
+    "category": "restriction",
+    "date": "2026-03-24",
+    "ended_by": null,
+    "estimated_end": false,
+    "fir": "ZWUQ",
+    "first_seen": "2026-09-27T12:00:00+00:00",
+    "focus_tag": "restriction",
+    "geometry_source": "text-polygon",
+    "icao_location": "ZWUQ",
+    "issuer": null,
+    "keyword_hit": true,
+    "kind": "area",
+    "last_updated": "2026-03-24T02:25:00+00:00",
+    "lower": "000",
+    "matched_keywords": [
+     "DANGER",
+     "TEMPORARY",
+     "FORBIDDEN"
+    ],
+    "nms_id": "PASTE-A0762-26",
+    "notam_type": "N",
+    "number": "A0762/26",
+    "q_code": "QRDCA",
+    "qline_offset_nm": 6.6,
+    "radius_nm": 35.0,
+    "raw_text": "A0762/26 NOTAMN Q)ZWUQ/QRDCA/IV/BO/W/000/999/3835N08758E035 A)ZWUQ B)2603240225 C)2603240553 E) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY: N390052E0882740-N385122E0872303-N380945E0872828-N384420E0883150 BACK TO START.VERTICAL LIMITS:SFC-UNL. AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.",
+    "series": "A",
+    "source": "nms",
+    "status": "expired",
+    "title": "中国本土 ZWUQ A0762/26",
+    "upper": "999",
+    "valid_end": "2026-03-24T05:53:00+00:00",
+    "valid_raw": [],
+    "valid_start": "2026-03-24T02:25:00+00:00"
+   },
+   "type": "Feature"
+  }
+ ],
+ "type": "FeatureCollection"
+}

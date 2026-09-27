@@ -556,11 +556,11 @@ def http(method, url, headers=None, data=None, timeout=HTTP_TIMEOUT, raw=False):
 
 class Nms:
     def __init__(self):
-        env = os.environ.get("NMS_ENV", "prod").lower()
+        env = (os.environ.get("NMS_ENV") or "prod").strip().lower()
         self.base = (os.environ.get("NMS_HOST") or HOSTS.get(env) or "").rstrip("/")
         if not self.base:
             raise ApiError(f"NMS_ENV は {sorted(HOSTS)} のいずれか")
-        cid, sec = os.environ.get("NMS_CLIENT_ID"), os.environ.get("NMS_CLIENT_SECRET")
+        cid, sec = (os.environ.get("NMS_CLIENT_ID") or "").strip(), (os.environ.get("NMS_CLIENT_SECRET") or "").strip()
         if not cid or not sec:
             raise ApiError("NMS_CLIENT_ID / NMS_CLIENT_SECRET が未設定")
         basic = base64.b64encode(f"{cid}:{sec}".encode()).decode()

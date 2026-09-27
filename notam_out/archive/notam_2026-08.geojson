@@ -1,0 +1,155 @@
+{
+ "features": [
+  {
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       120.908333,
+       35.875
+      ],
+      [
+       121.933333,
+       36.683333
+      ],
+      [
+       122.225,
+       36.683333
+      ],
+      [
+       123.008333,
+       37.183333
+      ],
+      [
+       123.241667,
+       37.008333
+      ],
+      [
+       123.1,
+       36.85
+      ],
+      [
+       123.1,
+       35.766667
+      ],
+      [
+       121.233333,
+       35.233333
+      ],
+      [
+       120.908333,
+       35.875
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "properties": {
+    "area_group": "CN",
+    "category": "restriction",
+    "date": "2026-08-21",
+    "ended_by": null,
+    "estimated_end": false,
+    "fir": "ZSHA",
+    "first_seen": "2026-09-27T12:00:00+00:00",
+    "focus_tag": "restriction",
+    "geometry_source": "text-polygon",
+    "icao_location": "ZSHA",
+    "issuer": null,
+    "keyword_hit": true,
+    "kind": "area",
+    "last_updated": "2026-08-21T01:00:00+00:00",
+    "lower": "000",
+    "matched_keywords": [
+     "DANGER",
+     "TEMPORARY",
+     "FORBIDDEN"
+    ],
+    "nms_id": "PASTE-A3757-26",
+    "notam_type": "N",
+    "number": "A3757/26",
+    "q_code": "QRDCA",
+    "qline_offset_nm": 16.7,
+    "radius_nm": 73.0,
+    "raw_text": "A3757/26 NOTAMN Q)ZSHA/QRDCA/IV/BO/W/000/999/3612N12207E073 A)ZSHA B)2608210100 C)2608211000 E) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY: N355230E1205430-N364100E1215600-N364100E1221330-N371100E1230030- N370030E1231430-N365100E1230600-N354600E1230600-N351400E1211400- N355230E1205430 VERTICAL LIMITS:SFC-UNL.CIVIL ACFT ARE FORBIDDEN TO FLY INTO THE AREA.",
+    "series": "A",
+    "source": "nms",
+    "status": "expired",
+    "title": "中国本土 ZSHA A3757/26",
+    "upper": "999",
+    "valid_end": "2026-08-21T10:00:00+00:00",
+    "valid_raw": [],
+    "valid_start": "2026-08-21T01:00:00+00:00"
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       123.3625,
+       37.41
+      ],
+      [
+       123.505556,
+       37.294722
+      ],
+      [
+       123.241667,
+       37.008333
+      ],
+      [
+       123.008333,
+       37.183333
+      ],
+      [
+       123.3625,
+       37.41
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "properties": {
+    "area_group": "CN",
+    "category": "restriction",
+    "date": "2026-08-21",
+    "ended_by": null,
+    "estimated_end": false,
+    "fir": "ZSHA",
+    "first_seen": "2026-09-27T12:00:00+00:00",
+    "focus_tag": "restriction",
+    "geometry_source": "text-polygon",
+    "icao_location": "ZSHA",
+    "issuer": null,
+    "keyword_hit": true,
+    "kind": "area",
+    "last_updated": "2026-08-21T02:00:00+00:00",
+    "lower": "000",
+    "matched_keywords": [
+     "DANGER",
+     "TEMPORARY",
+     "FORBIDDEN"
+    ],
+    "nms_id": "PASTE-A3758-26",
+    "notam_type": "N",
+    "number": "A3758/26",
+    "q_code": "QRDCA",
+    "qline_offset_nm": 1.1,
+    "radius_nm": 14.0,
+    "raw_text": "A3758/26 NOTAMN Q)ZSHA/QRDCA/IV/BO/W/000/999/3713N12318E014 A)ZSHA B)2608210200 C)2608211000 E) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY: N372436E1232145-N371741E1233020-N370030E1231430-N371100E1230030- N372436E1232145 VERTICAL LIMITS:SFC-UNL.CIVIL ACFT ARE FORBIDDEN TO FLY INTO THE AREA.",
+    "series": "A",
+    "source": "nms",
+    "status": "expired",
+    "title": "中国本土 ZSHA A3758/26",
+    "upper": "999",
+    "valid_end": "2026-08-21T10:00:00+00:00",
+    "valid_raw": [],
+    "valid_start": "2026-08-21T02:00:00+00:00"
+   },
+   "type": "Feature"
+  }
+ ],
+ "type": "FeatureCollection"
+}

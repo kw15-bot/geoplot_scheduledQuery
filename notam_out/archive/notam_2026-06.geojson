@@ -1,0 +1,139 @@
+{
+ "features": [
+  {
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       105.863333,
+       39.908889
+      ],
+      [
+       102.031111,
+       40.628333
+      ],
+      [
+       101.826944,
+       40.219167
+      ],
+      [
+       105.716111,
+       39.461667
+      ],
+      [
+       105.863333,
+       39.908889
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "properties": {
+    "area_group": "CN",
+    "category": "restriction",
+    "date": "2026-06-12",
+    "ended_by": null,
+    "estimated_end": false,
+    "fir": "ZLHW",
+    "first_seen": "2026-09-27T12:00:00+00:00",
+    "focus_tag": "restriction",
+    "geometry_source": "text-polygon",
+    "icao_location": "ZLHW",
+    "issuer": null,
+    "keyword_hit": true,
+    "kind": "area",
+    "last_updated": "2026-06-12T05:35:00+00:00",
+    "lower": "000",
+    "matched_keywords": [
+     "DANGER",
+     "TEMPORARY",
+     "FORBIDDEN"
+    ],
+    "nms_id": "PASTE-A2104-26",
+    "notam_type": "N",
+    "number": "A2104/26",
+    "q_code": "QRDCA",
+    "qline_offset_nm": 1.2,
+    "radius_nm": 94.0,
+    "raw_text": "A2104/26 NOTAMN Q)ZLHW/QRDCA/IV/BO/W/000/999/4003N10350E094 A)ZLHW B)2606120535 C)2606120645 E) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY: N395432E1055148-N403742E1020152-N401309E1014937-N392742E1054258 ,BACK TO START.VERTICAL LIMITS:SFC-UNL. AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.",
+    "series": "A",
+    "source": "nms",
+    "status": "expired",
+    "title": "中国本土 ZLHW A2104/26",
+    "upper": "999",
+    "valid_end": "2026-06-12T06:45:00+00:00",
+    "valid_raw": [],
+    "valid_start": "2026-06-12T05:35:00+00:00"
+   },
+   "type": "Feature"
+  },
+  {
+   "geometry": {
+    "coordinates": [
+     [
+      [
+       87.218056,
+       39.078611
+      ],
+      [
+       87.165556,
+       38.2575
+      ],
+      [
+       88.073056,
+       38.233611
+      ],
+      [
+       88.171111,
+       39.025556
+      ],
+      [
+       87.218056,
+       39.078611
+      ]
+     ]
+    ],
+    "type": "Polygon"
+   },
+   "properties": {
+    "area_group": "CN",
+    "category": "restriction",
+    "date": "2026-06-12",
+    "ended_by": null,
+    "estimated_end": false,
+    "fir": "ZWUQ",
+    "first_seen": "2026-09-27T12:00:00+00:00",
+    "focus_tag": "restriction",
+    "geometry_source": "text-polygon",
+    "icao_location": "ZWUQ",
+    "issuer": null,
+    "keyword_hit": true,
+    "kind": "area",
+    "last_updated": "2026-06-12T05:35:00+00:00",
+    "lower": "000",
+    "matched_keywords": [
+     "DANGER",
+     "TEMPORARY",
+     "FORBIDDEN"
+    ],
+    "nms_id": "PASTE-A2105-26",
+    "notam_type": "N",
+    "number": "A2105/26",
+    "q_code": "QRDCA",
+    "qline_offset_nm": 1.0,
+    "radius_nm": 34.0,
+    "raw_text": "A2105/26 NOTAMN Q)ZWUQ/QRDCA/IV/BO/W/000/999/3838N08740E034 A)ZWUQ B)2606120535 C)2606120645 E) A TEMPORARY DANGER AREA ESTABLISHED BOUNDED BY: N390443E0871305-N381527E0870956-N381401E0880423-N390132E0881016 ,BACK TO START.VERTICAL LIMITS:SFC-UNL. AIRCRAFT ARE FORBIDDEN TO FLY INTO THE AREA.",
+    "series": "A",
+    "source": "nms",
+    "status": "expired",
+    "title": "中国本土 ZWUQ A2105/26",
+    "upper": "999",
+    "valid_end": "2026-06-12T06:45:00+00:00",
+    "valid_raw": [],
+    "valid_start": "2026-06-12T05:35:00+00:00"
+   },
+   "type": "Feature"
+  }
+ ],
+ "type": "FeatureCollection"
+}
