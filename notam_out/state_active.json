@@ -16276,5 +16276,351 @@
   "type": "C",
   "upper": null,
   "year": "2026"
+ },
+ "1790525715025326": {
+  "account_id": "RODN",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "MIL",
+  "coordinates": "2621N12746E",
+  "effective_end": "2026-10-04T14:59:00Z",
+  "effective_start": "2026-09-27T16:15:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-27T16:20:24+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      127.766667,
+      26.433184
+     ],
+     [
+      127.775765,
+      26.432783
+     ],
+     [
+      127.784777,
+      26.431585
+     ],
+     [
+      127.793613,
+      26.429602
+     ],
+     [
+      127.802191,
+      26.426852
+     ],
+     [
+      127.810426,
+      26.423361
+     ],
+     [
+      127.818239,
+      26.419165
+     ],
+     [
+      127.825556,
+      26.414302
+     ],
+     [
+      127.832306,
+      26.40882
+     ],
+     [
+      127.838424,
+      26.402771
+     ],
+     [
+      127.843851,
+      26.396214
+     ],
+     [
+      127.848534,
+      26.389212
+     ],
+     [
+      127.852429,
+      26.381833
+     ],
+     [
+      127.855498,
+      26.374147
+     ],
+     [
+      127.857712,
+      26.366228
+     ],
+     [
+      127.859048,
+      26.358153
+     ],
+     [
+      127.859495,
+      26.35
+     ],
+     [
+      127.859048,
+      26.341847
+     ],
+     [
+      127.857712,
+      26.333772
+     ],
+     [
+      127.855498,
+      26.325853
+     ],
+     [
+      127.852429,
+      26.318167
+     ],
+     [
+      127.848534,
+      26.310788
+     ],
+     [
+      127.843851,
+      26.303786
+     ],
+     [
+      127.838424,
+      26.297229
+     ],
+     [
+      127.832306,
+      26.29118
+     ],
+     [
+      127.825556,
+      26.285698
+     ],
+     [
+      127.818239,
+      26.280835
+     ],
+     [
+      127.810426,
+      26.276639
+     ],
+     [
+      127.802191,
+      26.273148
+     ],
+     [
+      127.793613,
+      26.270398
+     ],
+     [
+      127.784777,
+      26.268415
+     ],
+     [
+      127.775765,
+      26.267217
+     ],
+     [
+      127.766667,
+      26.266816
+     ],
+     [
+      127.757568,
+      26.267217
+     ],
+     [
+      127.748557,
+      26.268415
+     ],
+     [
+      127.73972,
+      26.270398
+     ],
+     [
+      127.731143,
+      26.273148
+     ],
+     [
+      127.722908,
+      26.276639
+     ],
+     [
+      127.715094,
+      26.280835
+     ],
+     [
+      127.707777,
+      26.285698
+     ],
+     [
+      127.701027,
+      26.29118
+     ],
+     [
+      127.694909,
+      26.297229
+     ],
+     [
+      127.689483,
+      26.303786
+     ],
+     [
+      127.684799,
+      26.310788
+     ],
+     [
+      127.680904,
+      26.318167
+     ],
+     [
+      127.677835,
+      26.325853
+     ],
+     [
+      127.675622,
+      26.333772
+     ],
+     [
+      127.674285,
+      26.341847
+     ],
+     [
+      127.673838,
+      26.35
+     ],
+     [
+      127.674285,
+      26.358153
+     ],
+     [
+      127.675622,
+      26.366228
+     ],
+     [
+      127.677835,
+      26.374147
+     ],
+     [
+      127.680904,
+      26.381833
+     ],
+     [
+      127.684799,
+      26.389212
+     ],
+     [
+      127.689483,
+      26.396214
+     ],
+     [
+      127.694909,
+      26.402771
+     ],
+     [
+      127.701027,
+      26.40882
+     ],
+     [
+      127.707777,
+      26.414302
+     ],
+     [
+      127.715094,
+      26.419165
+     ],
+     [
+      127.722908,
+      26.423361
+     ],
+     [
+      127.731143,
+      26.426852
+     ],
+     [
+      127.73972,
+      26.429602
+     ],
+     [
+      127.748557,
+      26.431585
+     ],
+     [
+      127.757568,
+      26.432783
+     ],
+     [
+      127.766667,
+      26.433184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RODN",
+  "icao_text": "M1961/26 NOTAMN \r\nQ) RJJJ/QMRGO/IV/NBO/A/000/999/2621N12746E005 \r\nA) RODN \r\nB) 2609271615 \r\nC) 2610041459 \r\nE) RWY 05R/23L AND 05L/23R WET WITH NO STANDING WATER.",
+  "id": "1790525715025326",
+  "issued": "2026-09-27T16:15:00Z",
+  "last_updated": "2026-09-27T16:15:00Z",
+  "local_text": null,
+  "location": "RODN",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "M1961/26",
+  "purpose": "NBO",
+  "q_code": "QMRGO",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "M",
+  "text": "RWY 05R/23L AND 05L/23R WET WITH NO STANDING WATER.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790525747601000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-28T14:50:00Z",
+  "effective_start": "2026-09-28T07:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZGZU",
+  "first_seen": "2026-09-27T16:20:24+00:00",
+  "geometry": null,
+  "geometry_source": null,
+  "icao_location": "ZGZU",
+  "icao_text": "A4966/26 NOTAMN\r\nQ)ZGZU/QARCH/IV/BO/E/000/999/\r\nA)ZGZU B)2609280730 C)2609281450 \r\nE) SEGMENT OSNOV-ALGAG OF ATS RTE G586 NOT AVBL DUE TO TECHNICAL \r\nREASON, SCHEDULED FLIGHTS ALONG G586 OSNOV-ALGAG ADJUSTED TO ATS \r\nRTE V147,V148, ALL ACFT FLW ATC INSTRUCTION.\r\n1. MOLSO AND BEYOND TO MAMSI AND BEYOND: MOLSO-OPIXU-UGRIG-MAMSI \r\nAND BEYOND.\r\n2. MOLSO AND BEYOND TO ZGKL: MOLSO-OPIXU-UGRIG-MAMSI-ZGKL.\r\n3. MAMSI AND BEYOND TO MOLSO AND BEYOND: MAMSI-UGRIG-OPIXU-MOLSO \r\nAND BEYOND.\r\n4. ZGKL TO MOLSO AND BEYOND: MAMSI-UGRIG-OPIXU-MOLSO AND BEYOND.\r\n5. AGVIL AND BEYOND TO MAMSI AND BEYOND: \r\nAGVIL-OSNOV-OPIXU-UGRIG-MAMSI AND BEYOND.\r\n6. AGVIL AND BEYOND TO ZGKL: AGVIL-OSNOV-OPIXU-UGRIG-MAMSI-ZGKL.",
+  "id": "1790525747601000",
+  "issued": "2026-09-27T16:15:00Z",
+  "last_updated": "2026-09-27T16:16:00Z",
+  "local_text": null,
+  "location": "ZGZU",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4966/26",
+  "purpose": "BO",
+  "q_code": "QARCH",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "SEGMENT OSNOV-ALGAG OF ATS RTE G586 NOT AVBL DUE TO TECHNICAL \r\nREASON, SCHEDULED FLIGHTS ALONG G586 OSNOV-ALGAG ADJUSTED TO ATS \r\nRTE V147,V148, ALL ACFT FLW ATC INSTRUCTION.\r\n1. MOLSO AND BEYOND TO MAMSI AND BEYOND: MOLSO-OPIXU-UGRIG-MAMSI \r\nAND BEYOND.\r\n2. MOLSO AND BEYOND TO ZGKL: MOLSO-OPIXU-UGRIG-MAMSI-ZGKL.\r\n3. MAMSI AND BEYOND TO MOLSO AND BEYOND: MAMSI-UGRIG-OPIXU-MOLSO \r\nAND BEYOND.\r\n4. ZGKL TO MOLSO AND BEYOND: MAMSI-UGRIG-OPIXU-MOLSO AND BEYOND.\r\n5. AGVIL AND BEYOND TO MAMSI AND BEYOND: \r\nAGVIL-OSNOV-OPIXU-UGRIG-MAMSI AND BEYOND.\r\n6. AGVIL AND BEYOND TO ZGKL: AGVIL-OSNOV-OPIXU-UGRIG-MAMSI-ZGKL.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
  }
 }
