@@ -2048,7 +2048,7 @@ async function generatePdf(){
     // 対象1件だけを航行警報側と同じActive色で一時的に描き直す(終了後にrebuildNotamMapLayer()で元に戻す)。
     const activeColor = statusColor('active');
     notamLayer.clearLayers();
-    L.geoJSON(pdfTarget.feature, {
+    L.geoJSON(notamForLeaflet(pdfTarget.feature), {
       style: ()=> ({ color: activeColor.line, weight: 1.5, fillColor: activeColor.fill, fillOpacity: 0.14, opacity: 0.9 }),
       pointToLayer: (f, latlng)=> L.circleMarker(latlng, { radius:4, color: activeColor.line, weight:1.3, fillColor: activeColor.fill, fillOpacity:0.55 }),
     }).addTo(notamLayer);
@@ -3411,6 +3411,25 @@ function notamFeaturesForTab(tab){
   return notamActiveFeatures.concat(archived); // all
 }
 
+// 日付変更線(経度180°)をまたぐ図形(例: KZAKのA4714/26、東経165°〜西経145°)は、Leafletに
+// そのまま渡すと 179.98° → -175° を「西へ約355°戻る」線として描き、地図の横幅いっぱいに
+// 伸びてしまう。地図に描くときだけ、経度の幅が180°を超える多角形の西経側(負の経度)に360°を
+// 足して連続させる(東経185°等として日付変更線の東側に描かれる)。元のデータは変えない。
+function notamUnwrapGeometry(geom){
+  if (!geom) return geom;
+  const unwrapPolygon = rings => {
+    const lons = rings.flat().map(pt => pt[0]);
+    if (Math.max(...lons) - Math.min(...lons) <= 180) return rings;
+    return rings.map(ring => ring.map(([lon, lat]) => [lon < 0 ? lon + 360 : lon, lat]));
+  };
+  if (geom.type === 'Polygon') return { type:'Polygon', coordinates: unwrapPolygon(geom.coordinates) };
+  if (geom.type === 'MultiPolygon') return { type:'MultiPolygon', coordinates: geom.coordinates.map(unwrapPolygon) };
+  return geom;
+}
+function notamForLeaflet(f){
+  return { type:'Feature', properties: f.properties, geometry: notamUnwrapGeometry(f.geometry), _notamOrig: f._notamOrig || f };
+}
+
 function rebuildNotamMapLayer(){
   notamLayer.clearLayers();
   if (!notamLayerVisibleOnMap) return;
@@ -3424,7 +3443,7 @@ function rebuildNotamMapLayer(){
   const parts = feats.flatMap(f => f.geometry.type === 'MultiPolygon'
     ? f.geometry.coordinates.map(coords => ({ type:'Feature', properties: f.properties,
         geometry: { type:'Polygon', coordinates: coords }, _notamOrig: f }))
-    : [f]);
+    : [f]).map(notamForLeaflet);
   L.geoJSON({ type:'FeatureCollection', features: parts }, {
     style: notamStyle,
     pointToLayer: notamPointToLayer,
@@ -3508,7 +3527,7 @@ function renderNotamList(){
           const [lon,lat] = f.geometry.coordinates;
           map.setView([lat,lon], Math.max(map.getZoom(), 7));
         } else {
-          const b = L.geoJSON(f).getBounds();
+          const b = L.geoJSON(notamForLeaflet(f)).getBounds();
           if (b.isValid()) map.fitBounds(b.pad(0.3));
         }
       });
