@@ -167,12 +167,6 @@ body{
 .notam-filters label.check-row{display:inline-flex;margin:2px 10px 2px 0;font-size:11px;}
 /* NOTAMのカードは航行警報側と同じ.warn-item.milをそのまま使う(状態の違いは.validity-badgeの色で出す)。 */
 .notam-tag{font-family:var(--mono);font-size:9.5px;padding:1px 6px;border-radius:4px;display:inline-block;margin-top:6px;margin-right:4px;}
-.notam-tag.restriction{background:rgba(201,68,68,.14);color:var(--red);border:1px solid var(--red);}
-.notam-tag.flag{background:rgba(168,104,28,.14);color:var(--amber);border:1px solid var(--amber-dim);}
-.notam-tag.watch{background:rgba(31,122,140,.12);color:var(--cyan);border:1px solid var(--cyan);}
-.notam-tag.leisure{background:rgba(138,136,128,.14);color:var(--gray-fill);border:1px solid var(--gray);}
-.notam-tag.plaintext{background:rgba(138,136,128,.1);color:var(--text-faint);border:1px solid var(--border-bright);}
-.notam-tag.admin{background:rgba(138,136,128,.08);color:var(--text-faint);border:1px solid var(--border);}
 .notam-tag.qline{background:transparent;color:var(--text-faint);border:1px dashed var(--border-bright);}
 .status-pill{
   font-family:var(--mono);font-size:11px;letter-spacing:.06em;
@@ -3139,11 +3133,6 @@ function disconnectFile(){
    notam_cn_collect.pyを定期実行し、同じリポジトリのnotam_out/以下に書き出す(このHTML自身は
    収集を行わず、公開済みのGeoJSONを読みに行くだけ)。
 --------------------------------------------------------------- */
-const NOTAM_AREA_LABEL = { CN:'中国本土', HK:'香港', MO:'マカオ', TW:'台湾', REF:'周辺国FIR(参考)' };
-// focus_tag はQコード(主題)による絞り込み用の粗いタグであって、軍事かどうかの自動判定
-// ではない(notam_cn_collect.py の q_focus_tag() 参照)。バッジとしての表示にのみ使う
-// (絞り込みそのものはポリゴン条件とFIR選択のみ。下のnotamPassesFilter参照)。
-const NOTAM_FOCUS_LABEL = { restriction:'空域制限', flag:'要注意', watch:'要確認', leisure:'レジャー/民間', plaintext:'未分類(平文)', admin:'施設事務連絡' };
 const NOTAM_REFRESH_MS = 10 * 60 * 1000; // 10分。notam-collect.ymlの収集間隔に合わせる
 
 let notamActiveFeatures = [];             // 接続中URL(notam_cn.geojson)の features。active/upcomingのみを含む想定
@@ -3251,20 +3240,22 @@ function notamPointToLayer(f, latlng){
   const st = notamStyle(f);
   return L.circleMarker(latlng, { radius:4, color:st.color, weight:st.weight, fillColor:st.fillColor, fillOpacity:st.fillOpacity, dashArray:st.dashArray });
 }
+// 一覧・ポップアップの見出しは「A項の地名指標 + NOTAM番号」だけ(例: RJOO K2356/26)。
+// 地域名(周辺国FIR(参考)等)や種別(focus_tag・語句一致)は出さない(判定は人間が本文を読んで行う)。
+function notamHeading(f){
+  const p = f.properties || {};
+  return [p.icao_location, p.number].filter(Boolean).join(' ') || p.title || 'NOTAM';
+}
 function notamPopupHtml(f){
   const p = f.properties || {};
-  const label = NOTAM_AREA_LABEL[p.area_group] || p.area_group || '';
-  const tag = NOTAM_FOCUS_LABEL[p.focus_tag] || p.focus_tag || '';
   const period = (p.valid_start || p.valid_end)
     ? `<div class="pop-mono">${esc((p.valid_start||'?').replace('T',' ').replace('Z',''))} 〜 ${esc((p.valid_end||'?').replace('T',' ').replace('Z',''))}</div>` : '';
   const srcNote = (p.geometry_source || '').startsWith('qline')
     ? `<div class="pop-mono" style="color:var(--amber);">図形はQ項からの推定（${esc(p.geometry_source)}${p.qline_offset_nm ? `・中心ずれ約${Math.round(p.qline_offset_nm)}NM` : ''}）</div>` : '';
   const rawText = p.raw_text ? `<div class="pop-mono" style="white-space:pre-wrap;max-height:160px;overflow-y:auto;margin-top:6px;">${esc(p.raw_text)}</div>` : '';
-  const kwHtml = (p.matched_keywords && p.matched_keywords.length)
-    ? `<span class="notam-tag flag">語句一致: ${esc(p.matched_keywords.join(', '))}</span>` : '';
-  return `<div class="pop-title">${esc(p.title || p.number || 'NOTAM')}</div>`
-    + `<div class="pop-mono">${esc(label)} / ${esc(p.icao_location||'')} / ${esc(p.q_code||'')}</div>`
-    + `<div class="notam-tag ${esc(p.focus_tag||'admin')}">${esc(tag)}</div>${kwHtml}${period}${srcNote}${rawText}`;
+  return `<div class="pop-title">${esc(notamHeading(f))}</div>`
+    + `<div class="pop-mono">${esc(p.q_code||'')}</div>`
+    + `${period}${srcNote}${rawText}`;
 }
 
 // タブ(Active/Upcoming/Archive/All)ごとの一覧対象。Active/Upcomingは接続中URLのfeaturesの
@@ -3342,10 +3333,8 @@ function renderNotamList(){
     const p = f.properties || {};
     const key = notamFeatureKey(f);
     const div = document.createElement('div');
-    const tagKey = p.focus_tag || 'admin';
     // カードの見た目は航行警報側の軍事関連カード(.warn-item.mil)と揃える
     div.className = 'warn-item mil' + (f.geometry ? ' clickable' : '');
-    const label = NOTAM_AREA_LABEL[p.area_group] || p.area_group || '';
     const period = (p.valid_start || p.valid_end)
       ? `${esc((p.valid_start||'?').slice(0,16).replace('T',' '))} 〜 ${esc((p.valid_end||'?').slice(0,16).replace('T',' '))}`
       : '期間不明';
@@ -3355,11 +3344,9 @@ function renderNotamList(){
       ? `<label class="check-row" style="margin-top:6px;"><input type="checkbox" data-notam-map-toggle="${esc(key)}" data-notam-archive="${f._notamArchive ? '1' : ''}" ${notamIsOnMap(f) ? 'checked' : ''}> 地図に表示</label>`
       : '';
     div.innerHTML = `
-      <span class="wtitle">${esc(p.title || p.number || 'NOTAM')}</span>
-      <div class="wmeta"><span>${esc(label)}</span><span>${esc(p.icao_location||'')}</span><span>${esc(p.q_code||'')}</span></div>
+      <span class="wtitle">${esc(notamHeading(f))}</span>
+      <div class="wmeta"><span>${esc(p.q_code||'')}</span></div>
       <div class="validity-badge ${badgeClass}">有効期間 ・ ${esc(period)}</div>
-      <div class="notam-tag ${esc(tagKey)}">${esc(NOTAM_FOCUS_LABEL[tagKey] || tagKey)}</div>
-      ${(p.matched_keywords && p.matched_keywords.length) ? `<span class="notam-tag flag">語句一致: ${esc(p.matched_keywords.join(', '))}</span>` : ''}
       ${(p.geometry_source||'').startsWith('qline') ? `<span class="notam-tag qline">Q項推定図形</span>` : ''}
       ${mapToggleHtml}`;
     if (f.geometry){
