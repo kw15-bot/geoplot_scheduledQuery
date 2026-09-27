@@ -461,6 +461,21 @@ class RealNotams(unittest.TestCase):
         mixed = "N2300E11600-2310N11610E-N2400E11700-N2300E11600"
         self.assertEqual(len(C.parse_text_polygons(mixed)[0]), 4)
 
+    def test_named_waypoint_coords_in_parens_are_not_polygon_vertices(self):
+        # 2026-09-27追加: A4957/26等の航空路変更NOTAMで、迂回路の臨時ウェイポイント定義
+        # 'CG1(N253957E1095707)' のような座標が、実在しないエリア境界として誤検出されていたのを修正。
+        reroute = ("FLIGHTS VIA ENKUS-R343-ABTUD SHALL ADJUST TO "
+                   "ENKUS-CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD. "
+                   "ALSO VIA MILOP-CG3 (N275120 E1105724)-SANJIANG.")
+        self.assertEqual(C.parse_text_polygons(reroute), [])   # 座標はあるが多角形にはしない
+
+        # 括弧の外に出てくる本物の境界座標は、括弧付きウェイポイントの直後にあっても拾う
+        mixed = ("REROUTE VIA CG1(N253957E1095707) THEN AREA BOUNDED BY "
+                 "N2300E11600-N2300E11700-N2400E11700-N2300E11600.")
+        rings = C.parse_text_polygons(mixed)
+        self.assertEqual(len(rings), 1)
+        self.assertEqual(len(rings[0]), 4)
+
 
 # ----------------------------------------------------------------------------- APIモード（同一プロセス内モック）
 class MockState:
