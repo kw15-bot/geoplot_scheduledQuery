@@ -3244,7 +3244,29 @@ function notamPointToLayer(f, latlng){
 // 地域名(周辺国FIR(参考)等)や種別(focus_tag・語句一致)は出さない(判定は人間が本文を読んで行う)。
 function notamHeading(f){
   const p = f.properties || {};
-  return [p.icao_location, p.number].filter(Boolean).join(' ') || p.title || 'NOTAM';
+  const locs = f._notamLocations || [p.icao_location];
+  return [...locs, p.number].filter(Boolean).join(' ') || p.title || 'NOTAM';
+}
+// A項に地名指標が複数あるNOTAM(例: A)ZGZU ZHWH)は、NMS-APIから地名指標ごとに別レコード
+// (nms_idが別、本文・期間・図形は同一)として届く。一覧・地図・件数で重複しないよう、
+// 発行元+番号+開始時刻が同じものを1件にまとめ、地名指標は_notamLocationsに集約する。
+// 代表はnms_idが最小のもの(10分ごとの再読込でも同じものが選ばれ、地図表示ON/OFFが保たれる)。
+function notamDedupe(features){
+  const groups = new Map(), out = [];
+  features.slice().sort((a, b) => String((a.properties||{}).nms_id||'').localeCompare(String((b.properties||{}).nms_id||'')))
+    .forEach(f => {
+      const p = f.properties || {};
+      if (!p.number){ out.push(f); return; }
+      const k = `${p.issuer||''}|${p.number}|${p.valid_start||''}`;
+      const g = groups.get(k);
+      if (!g){
+        f._notamLocations = p.icao_location ? [p.icao_location] : [];
+        groups.set(k, f); out.push(f);
+      } else if (p.icao_location && !g._notamLocations.includes(p.icao_location)){
+        g._notamLocations.push(p.icao_location);
+      }
+    });
+  return out;
 }
 function notamPopupHtml(f){
   const p = f.properties || {};
@@ -3404,7 +3426,7 @@ async function rereadNotamUrl(){
   const res = await fetch(connectedNotamUrl, { cache:'no-store' });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const gj = JSON.parse(await res.text());
-  notamActiveFeatures = gj.features || [];
+  notamActiveFeatures = notamDedupe(gj.features || []);
   renderNotamList();
   updateNotamConnectionUI();
   logLine(`NOTAM自動再読込: ${connectedNotamUrl}（${notamActiveFeatures.length}件）`, 'l-ok');
@@ -3448,7 +3470,7 @@ async function loadAllNotamArchives(){
       if (res.status === 404) return { month, features: null };
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const gj = JSON.parse(await res.text());
-      const features = gj.features || [];
+      const features = notamDedupe(gj.features || []);
       features.forEach(f => { f._notamArchive = true; });
       return { month, features };
     }catch(e){
