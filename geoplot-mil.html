@@ -543,7 +543,7 @@ body.dark-mode .notam-item.tag-flag .wtitle{color:#e3a75c;}
     <div class="mode-tabs" id="modeTabs">
       <button class="mode-tab active" data-mode="auto">MAP（自動更新）</button>
       <button class="mode-tab" data-mode="manual">MAP（手動）</button>
-      <button class="mode-tab" data-mode="notam">NOTAM <span class="tab-n" id="notamModeBadge"></span></button>
+      <button class="mode-tab" data-mode="notam">NOTAM</button>
     </div>
     <div class="header-ticker" id="headerTicker">
       <div class="header-ticker-track" id="headerTickerTrack"></div>
@@ -3286,19 +3286,15 @@ function rebuildNotamMapLayer(){
   }).addTo(notamLayer);
 }
 
-function updateNotamBadge(){
-  const n = notamActiveFeatures.filter(f => notamStatusOf(f) === 'active' && notamPassesFilter(f)).length;
-  const badge = $('#notamModeBadge');
-  if (badge) badge.textContent = n;
-}
-
 function renderNotamList(){
   const container = $('#notamList');
   container.innerHTML = '';
 
-  const activeCount = notamActiveFeatures.filter(f => notamStatusOf(f) === 'active').length;
-  const upcomingCount = notamActiveFeatures.filter(f => notamStatusOf(f) === 'upcoming').length;
-  let archiveCount = 0; notamArchiveFeatures.forEach(arr => archiveCount += arr.length);
+  // 件数は収集した全件ではなく、実際にビューア(一覧・地図)に表示される件数を出す
+  // (notamPassesFilter = E項実座標ポリゴンのみ、かつ現在のFIR絞り込みを通過したもの)。
+  const activeCount = notamActiveFeatures.filter(f => notamStatusOf(f) === 'active').filter(notamPassesFilter).length;
+  const upcomingCount = notamActiveFeatures.filter(f => notamStatusOf(f) === 'upcoming').filter(notamPassesFilter).length;
+  let archiveCount = 0; notamArchiveFeatures.forEach(arr => archiveCount += arr.filter(notamPassesFilter).length);
   $('#notamCountActive').textContent = activeCount;
   $('#notamCountUpcoming').textContent = upcomingCount;
   $('#notamCountArchive').textContent = archiveCount;
@@ -3375,7 +3371,6 @@ function renderNotamList(){
   });
 
   rebuildNotamMapLayer();
-  updateNotamBadge();
 }
 
 // 「このタブを全て表示/非表示」: 現在のタブに表示されている(絞り込みを通過した)NOTAMだけを
