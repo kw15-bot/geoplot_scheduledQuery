@@ -165,22 +165,7 @@ body{
 .notam-filters .flabel{color:var(--text-dim);font-weight:600;margin:8px 0 4px;}
 .notam-filters .flabel:first-child{margin-top:0;}
 .notam-filters label.check-row{display:inline-flex;margin:2px 10px 2px 0;font-size:11px;}
-/* 航行警報側(.warn-item)とカードの見た目を揃える(枠線・角丸・余白・背景)。
-   focus_tagごとの色分けは.notam-tagの配色を流用し、restriction/flag/watchは
-   .warn-item.milと同じ要領で枠線・タイトル色にも反映する(HANDOFF_NOTAM.md参照)。 */
-.notam-item{border:1px solid var(--border);border-radius:8px;padding:9px 10px;margin-bottom:8px;background:var(--panel-alt);}
-.notam-item.clickable{cursor:pointer;transition:border-color .15s,transform .1s;}
-.notam-item.clickable:hover{border-color:var(--cyan);}
-.notam-item.clickable:active{transform:scale(.99);}
-.notam-item.tag-restriction{border-color:var(--red);background:linear-gradient(180deg,rgba(201,68,68,.07),transparent);}
-.notam-item.tag-restriction .wtitle{color:var(--red);}
-.notam-item.tag-flag{border-color:var(--amber-dim);background:linear-gradient(180deg,rgba(255,180,84,.06),transparent);}
-.notam-item.tag-flag .wtitle{color:#8a4f0f;}
-.notam-item.tag-watch{border-color:var(--cyan);background:linear-gradient(180deg,rgba(31,122,140,.06),transparent);}
-.notam-item.tag-watch .wtitle{color:var(--cyan);}
-.notam-item .wtitle{font-size:12px;font-weight:600;color:var(--text);line-height:1.4;}
-.notam-item .wmeta{font-family:var(--mono);font-size:10px;color:var(--text-faint);margin-top:4px;display:flex;gap:10px;flex-wrap:wrap;}
-.notam-item .wactions{margin-top:7px;display:flex;gap:6px;flex-wrap:wrap;}
+/* NOTAMのカードは航行警報側と同じ.warn-item.milをそのまま使う(状態の違いは.validity-badgeの色で出す)。 */
 .notam-tag{font-family:var(--mono);font-size:9.5px;padding:1px 6px;border-radius:4px;display:inline-block;margin-top:6px;margin-right:4px;}
 .notam-tag.restriction{background:rgba(201,68,68,.14);color:var(--red);border:1px solid var(--red);}
 .notam-tag.flag{background:rgba(168,104,28,.14);color:var(--amber);border:1px solid var(--amber-dim);}
@@ -532,7 +517,6 @@ body.dark-mode .mk-label{background:rgba(18,17,15,.85);}
 body.dark-mode .poly-label{color:#f1efe6!important;text-shadow:0 1px 3px rgba(0,0,0,.7);}
 body.dark-mode .pdf-panel{background:rgba(24,23,20,.97);}
 body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
-body.dark-mode .notam-item.tag-flag .wtitle{color:#e3a75c;}
 </style>
 </head>
 <body>
@@ -3351,9 +3335,6 @@ function renderNotamList(){
     $('#notamEmptyHint').textContent = 'NOTAMのURL（notam_out/notam_cn.geojson）に接続すると、ここに一覧が表示されます。';
   }
 
-  // 枠線・タイトル色の強調は空域制限(restriction)/要注意(flag)/要確認(watch)のみ
-  // (航行警報側の.warn-item.milと同じ考え方。leisure/plaintext/adminは既定色のまま)。
-  const EMPHASIZED_TAGS = new Set(['restriction','flag','watch']);
   // 有効期間バッジの色分け(航行警報側の.validity-badgeと揃える)
   const STATUS_BADGE_CLASS = { active:'active', upcoming:'notice', expired:'archive', cancelled:'archive', 'cancel-notice':'archive' };
 
@@ -3362,7 +3343,8 @@ function renderNotamList(){
     const key = notamFeatureKey(f);
     const div = document.createElement('div');
     const tagKey = p.focus_tag || 'admin';
-    div.className = 'notam-item' + (f.geometry ? ' clickable' : '') + (EMPHASIZED_TAGS.has(tagKey) ? ` tag-${tagKey}` : '');
+    // カードの見た目は航行警報側の軍事関連カード(.warn-item.mil)と揃える
+    div.className = 'warn-item mil' + (f.geometry ? ' clickable' : '');
     const label = NOTAM_AREA_LABEL[p.area_group] || p.area_group || '';
     const period = (p.valid_start || p.valid_end)
       ? `${esc((p.valid_start||'?').slice(0,16).replace('T',' '))} 〜 ${esc((p.valid_end||'?').slice(0,16).replace('T',' '))}`
