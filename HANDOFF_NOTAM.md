@@ -680,6 +680,7 @@ FAA公式の公開ツール(`notams.aim.faa.gov`)には「Archive Search」機�
 注意:
 - サンプルは手動で選んだものに偏っている。自動収集分で中国の多角形は A4957/26・A4958/26
   （臨時ウェイポイントの誤検出で除外済み）しか無く、自動収集データでの裏付けはまだ無い。
-- 収集側の既存`KEYWORD_LIST`（DANGER/TEMPORARY/CLSD/FORBIDDEN/PROHIBITED/DNG/CLOSED）に
-  `SPECIAL`は入っていない。適用するときに、この2語で`KEYWORD_LIST`を置き換えるか追加するかを決める
-  （`keyword_hit`/`matched_keywords`は今も収集データに出力されているが、ビューアでは使っていない）。
+- 2026-09-27: ユーザー指示で、収集側の`KEYWORD_LIST`に`SPECIAL`を**追加**した（置き換えではない。
+  DANGER/TEMPORARY/CLSD/FORBIDDEN/PROHIBITED/DNG/CLOSED/SPECIAL）。`keyword_hit`/`matched_keywords`は
+  収集データに出力されるが、ビューアではまだ使っていない。Activeは収集のたびに再計算されるので自動で
+  反映される。Archiveは再計算されないため、該当する B3231/26（2026-07）だけ手で更新した。

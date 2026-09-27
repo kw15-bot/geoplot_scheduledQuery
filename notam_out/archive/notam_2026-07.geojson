@@ -108,11 +108,13 @@
     "geometry_source": "text-polygon",
     "icao_location": "RPHI",
     "issuer": null,
-    "keyword_hit": false,
+    "keyword_hit": true,
     "kind": "area",
     "last_updated": "2026-07-06T04:00:00+00:00",
     "lower": "000",
-    "matched_keywords": [],
+    "matched_keywords": [
+     "SPECIAL"
+    ],
     "nms_id": "PASTE-B3231-26",
     "notam_type": "N",
     "number": "B3231/26",
