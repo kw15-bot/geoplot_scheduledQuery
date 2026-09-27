@@ -4594,6 +4594,99 @@
       "start": "2026-09-20T15:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/140bb12e4abb4183ab283c3764803a4d.html": {
+    "bureau": "河北海事局",
+    "cancels": [],
+    "date": "2026-09-27",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 20,
+    "first_seen": "2026-09-27T02:20:29+00:00",
+    "groups": [
+      [
+        {
+          "end": 66,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.931666666666665,
+          "lon": 120.01,
+          "raw": "39-55.90N 120-00.60E",
+          "start": 46
+        },
+        {
+          "end": 90,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.79666666666667,
+          "lon": 120.22916666666667,
+          "raw": "39-47.80N 120-13.75E",
+          "start": 70
+        },
+        {
+          "end": 115,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.626666666666665,
+          "lon": 120.034,
+          "raw": "39-37.60N 120-02.04E",
+          "start": 95
+        },
+        {
+          "end": 139,
+          "fmt": "DDM_HYPHEN",
+          "lat": 39.78,
+          "lon": 119.8,
+          "raw": "39-46.80N 119-48.00E",
+          "start": 119
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 66,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.931666666666665,
+        "lon": 120.01,
+        "raw": "39-55.90N 120-00.60E",
+        "start": 46
+      },
+      {
+        "end": 90,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.79666666666667,
+        "lon": 120.22916666666667,
+        "raw": "39-47.80N 120-13.75E",
+        "start": 70
+      },
+      {
+        "end": 115,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.626666666666665,
+        "lon": 120.034,
+        "raw": "39-37.60N 120-02.04E",
+        "start": 95
+      },
+      {
+        "end": 139,
+        "fmt": "DDM_HYPHEN",
+        "lat": 39.78,
+        "lon": 119.8,
+        "raw": "39-46.80N 119-48.00E",
+        "start": 119
+      }
+    ],
+    "raw_text": "渤海，9月28日0000时至30日11600时在下列四点连线海域范围内开展军事活动: （1）39-55.90N 120-00.60E；（2）39-47.80N 120-13.75E； （3）39-37.60N 120-02.04E；（4）39-46.80N 119-48.00E。 禁止驶入。",
+    "revoked": false,
+    "title": "军事活动—冀航警669/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/140bb12e4abb4183ab283c3764803a4d.html",
+    "validity": {
+      "end": "2026-09-28T22:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "9月28日0000时至30"
+      ],
+      "start": "2026-09-27T16:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1447e46c5d7744598cae23ca5901f07e.html": {
     "bureau": "连云港海事局",
     "cancels": [],
@@ -20809,6 +20902,18 @@
     "revoked": false,
     "title": "潜水作业—冀航警506/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4d5d52f237724abe81018fa4b60fde94.html?hav=1jWj6r2hy3yfaJwAHJyApkwp0s"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4d8119cdffd64f1cb3f038dfcb4c2c6a.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-27",
+    "detail_fetched": false,
+    "first_seen": "2026-09-27T02:20:29+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "潜水作业—冀航警668/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4d8119cdffd64f1cb3f038dfcb4c2c6a.html"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4dbb12f123564fa68eed19c61f2d16ff.html": {
     "bureau": "山东海事局",
