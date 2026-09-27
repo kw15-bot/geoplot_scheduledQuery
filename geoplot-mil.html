@@ -3431,6 +3431,8 @@ function rebuildNotamMapLayer(){
     onEachFeature: (part, layer) => {
       const f = part._notamOrig || part;
       layer.bindPopup(notamPopupHtml(f));
+      // 地図→左パネルの追従(航行警報側のselectItemInPanel()と同じ)。ポップアップも従来どおり開く。
+      layer.on('click', ()=> selectNotamInPanel(f));
       // 航行警報側と同じく、図形の上にNOTAM番号(例: A3757/26)を常時表示する
       const label = (f.properties || {}).number;
       if (label){
@@ -3485,6 +3487,7 @@ function renderNotamList(){
     const div = document.createElement('div');
     // カードの見た目は航行警報側の軍事関連カード(.warn-item.mil)と揃える
     div.className = 'warn-item mil' + (f.geometry ? ' clickable' : '');
+    div.dataset.notamKey = key; // selectNotamInPanel()が地図クリックからこのカードを探すのに使う
     const period = (p.valid_start || p.valid_end) ? notamPeriodUtc(p) : '期間不明';
     const badgeClass = STATUS_BADGE_CLASS[notamStatusOf(f)] || 'unknown';
     const hasGeom = !!f.geometry;
@@ -3618,6 +3621,27 @@ async function loadAllNotamArchives(){
   notamArchiveFeatures = next;
   renderNotamList();
   logLine(`NOTAM Archive読み込み完了: ${loaded}か月分（${total}件）`, 'l-ok');
+}
+
+// 地図上のNOTAMの図形をクリックしたとき、左パネルの該当カードまでスクロールして一時的に強調する
+// (航行警報側のselectItemInPanel()と同じ動き)。今のタブに無ければ、そのNOTAMの状態のタブに切り替える
+// (Archiveに切り替えるときはFIRの絞り込みを解除する)。
+function selectNotamInPanel(f){
+  const key = notamFeatureKey(f);
+  if (!currentNotamTabItems.some(g => notamFeatureKey(g) === key)){
+    const st = notamStatusOf(f);
+    const targetTab = f._notamArchive ? 'archive' : (st === 'upcoming') ? 'upcoming' : 'active';
+    notamTab = targetTab;
+    $$('#notamValidityTabs .tab-btn').forEach(b=> b.classList.toggle('active', b.dataset.tab === targetTab));
+    if (targetTab === 'archive'){ notamFirFilter = ''; $('#notamFirFilter').value = ''; }
+    renderNotamList();
+  }
+  const card = document.querySelector(`#notamList .warn-item[data-notam-key="${CSS.escape(key)}"]`);
+  if (!card) return;
+  card.scrollIntoView({ behavior:'smooth', block:'center' });
+  card.classList.add('map-selected');
+  clearTimeout(card._selectTimer);
+  card._selectTimer = setTimeout(()=> card.classList.remove('map-selected'), 1800);
 }
 
 $$('#notamValidityTabs .tab-btn').forEach(btn=>{
