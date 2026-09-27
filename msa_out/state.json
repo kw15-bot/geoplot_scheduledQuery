@@ -40710,11 +40710,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a9fba5ed15434a03a52eb084b9f9252d.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-27",
     "detail_fetched": false,
     "first_seen": "2026-09-27T01:50:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警888/26",
     "points": [],
     "revoked": false,
     "title": "“中远 N1229”轮试航—浙航警888/26",
