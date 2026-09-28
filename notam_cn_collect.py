@@ -526,6 +526,10 @@ def status_of(rec, now):
     if rec.get("type") == "C":
         return "cancel-notice"
     start, end = parse_dt(rec.get("effective_start")), effective_end(rec)
+    # 開始前に取消・置換されたもの(取消NOTAMの発行が元NOTAMの開始より前)は、開始を待たずに
+    # 「取消」にする。以前は開始時刻まで「予定(upcoming)」のまま残っていた(KZAK A4680/26等)。
+    if rec.get("end_override") and end and end <= now and (not start or end <= start):
+        return "cancelled"
     if start and start > now:
         return "upcoming"
     if end and end <= now:
