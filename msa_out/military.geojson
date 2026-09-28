@@ -1695,6 +1695,55 @@
     {
       "type": "Feature",
       "properties": {
+        "title": "舟山衢山西水域军事活动—浙航警890/26",
+        "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/186b51f9b9e94e9eac9a573fc9534156.html",
+        "date": "2026-09-28",
+        "bureau": "浙江海事局",
+        "group_count": 1,
+        "raw_text": "东海，9月28日至30日每日1000时至1500时在30-30N 122-0E;30-30N 122-10.67E;30-25N 122-10.67E;30-25N 122-0E;30-30N 122-0E诸点连线范围内水域，进行军事射击训练，禁止驶入。",
+        "valid_start": "2026-09-28T02:00:00+00:00",
+        "valid_end": "2026-09-30T07:00:00+00:00",
+        "valid_raw": [
+          "9月28日至30日每日1000时至1500时"
+        ],
+        "group_index": 1,
+        "kind": "area"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              122.0,
+              30.416666666666668
+            ],
+            [
+              122.17783333333334,
+              30.416666666666668
+            ],
+            [
+              122.17783333333334,
+              30.5
+            ],
+            [
+              122.0,
+              30.5
+            ],
+            [
+              122.0,
+              30.5
+            ],
+            [
+              122.0,
+              30.416666666666668
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "title": "火箭残骸掉落—浙航警807/26",
         "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1b3912fce94a44f3992284b9aa7948b2.html?hav=1jWj6r2hy5di2f19htPcDQ5wtV",
         "date": "2026-09-07",
