@@ -3344,7 +3344,7 @@ function notamPointToLayer(f, latlng){
   const st = notamStyle(f);
   return L.circleMarker(latlng, { radius:4, color:st.color, weight:st.weight, fillColor:st.fillColor, fillOpacity:st.fillOpacity, dashArray:st.dashArray });
 }
-// 一覧・ポップアップの見出しは「FIRコード + NOTAM番号」だけ(例: RJJJ K2356/26、notamFirTokens参照)。
+// 一覧・ポップアップの見出しは「FIRコード + NOTAM番号」だけ(例: ZSHA A4964/26、notamFirTokens参照)。
 // 地域名(周辺国FIR(参考)等)や種別(focus_tag・語句一致)は出さない(判定は人間が本文を読んで行う)。
 function notamHeading(f){
   const p = f.properties || {};
