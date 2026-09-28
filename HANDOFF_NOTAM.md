@@ -699,3 +699,15 @@ FAA公式の公開ツール(`notams.aim.faa.gov`)には「Archive Search」機�
 - 既知: E項が「NNNNM RADIUS OF 座標」の円で定義されている NOTAM（例: A4697/26）は、多角形として読めないので
   地図に出ない（レポートでは「APIが返した点のみ」等に分類される）。
 
+---
+
+## 18. E項の座標の読み取りの追加対応（2026-09-28、主に韓国RKRR）
+
+`parse_text_polygons()` に次を追加（回帰テスト3件、計44件）。既存データは `notam_backfill_text_polygon.py --apply` で描き直し済み。
+- 座標の数字の途中の改行をつなぐ（`-36082⏎0N1293040E`、`N128⏎5338E`）。以前は頂点が抜けたり、1エリアが2つに割れたりしていた。
+- 本文の円: `A CIRCLE RADIUS 7NM CENTERED ON <座標>`、`200NM RADIUS OF <座標>`、`0.5NM RAD OF <座標>`、
+  `22NM RADIUS CENTERED ON <座標>`（単位 NM/KM/M、半径500NMまで）→ 円のリング（`geometry_source` は `text-polygon`）。
+- 帯状エリア: `1NM EITHER SIDE OF (CENTER) LINE <座標>-<座標>-...` → 線の両側に幅を取った帯のリング（端は平ら）。
+  以前は線の頂点を結んで閉じた、誤った多角形になっていた。
+- 秒に小数が付く座標（`364322.287N 1273032.318E`）。
+
