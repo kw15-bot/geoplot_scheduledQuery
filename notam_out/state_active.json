@@ -30361,52 +30361,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790553157485000": {
-  "account_id": "RJAAYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3310N14118E",
-  "effective_end": "2026-09-28T04:30:00Z",
-  "effective_start": "2026-09-28T00:05:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RJJJ",
-  "first_seen": "2026-09-28T00:00:45+00:00",
-  "geometry": {
-   "coordinates": [
-    141.3,
-    33.166667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "RJJJ",
-  "icao_text": "X6108/26 NOTAMN\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280005 C)2609280430\r\nE)FLOW CTL AS FLWS, \r\n AREA:  FUKUOKA APCH CTA\r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR RJFF\r\nRMK: REF AIP ENR1.9-1",
-  "id": "1790553157485000",
-  "issued": "2026-09-27T23:52:00Z",
-  "last_updated": "2026-09-27T23:53:00Z",
-  "local_text": null,
-  "location": "RJJJ",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "X6108/26",
-  "purpose": "NBO",
-  "q_code": "QPFCA",
-  "qline_offset_nm": null,
-  "radius_nm": 999.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "X",
-  "text": "FLOW CTL AS FLWS, \r\n AREA:  FUKUOKA APCH CTA\r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR RJFF\r\nRMK: REF AIP ENR1.9-1",
-  "traffic": "I",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790553634875092": {
   "account_id": "RJSM",
   "area_group": "REF",
@@ -55911,6 +55865,1016 @@
   "series": "X",
   "text": "FLOW CTL AS FLWS, \r\n AREA: SECTOR N53 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR N53\r\nRMK: REF AIP ENR1.9-1",
   "traffic": "I",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790569238255000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-28T21:00:00.000Z",
+  "effective_start": "2026-09-28T10:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T04:30:34+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "Q2303/26 NOTAMN\r\nQ)RJJJ/QARCA/IV/BO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609281000 C)2609282100\r\nE)EASTBOUND PACOTS TRACKS BETWEEN JAPAN AND HAWAII,\r\nTRACK 11.\r\n FLEX ROUTE : TONIK SEGRO CANOE 23N160E 21N170E 21N180E 21N170W HOOPA\r\nJAPAN ROUTE : DAGDA G223 TONIK\r\n PHNL ROUTE : HOOPA KATHS OPACA PHNL\r\n        RMK : TRK 11 NOT AVAILABLE IF CROSSING CANOE BETWEEN 1400Z\r\n              AND 1900Z\r\nTRACK 12.\r\n FLEX ROUTE : UKATA B586 VASKO 2235N14450E 2311N15000E CANOE 23N160E\r\n              21N170E 21N180E 21N170W HOOPA\r\nJAPAN ROUTE : SABRI B586 UKATA\r\n PHNL ROUTE : HOOPA KATHS OPACA PHNL",
+  "id": "1790569238255000",
+  "issued": "2026-09-28T04:20:00.000Z",
+  "last_updated": "2026-09-28T04:20:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "Q2303/26",
+  "purpose": "BO",
+  "q_code": "QARCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "Q",
+  "text": "EASTBOUND PACOTS TRACKS BETWEEN JAPAN AND HAWAII,\r\nTRACK 11.\r\n FLEX ROUTE : TONIK SEGRO CANOE 23N160E 21N170E 21N180E 21N170W HOOPA\r\nJAPAN ROUTE : DAGDA G223 TONIK\r\n PHNL ROUTE : HOOPA KATHS OPACA PHNL\r\n        RMK : TRK 11 NOT AVAILABLE IF CROSSING CANOE BETWEEN 1400Z\r\n              AND 1900Z\r\nTRACK 12.\r\n FLEX ROUTE : UKATA B586 VASKO 2235N14450E 2311N15000E CANOE 23N160E\r\n              21N170E 21N180E 21N170W HOOPA\r\nJAPAN ROUTE : SABRI B586 UKATA\r\n PHNL ROUTE : HOOPA KATHS OPACA PHNL",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790569295563220": {
+  "account_id": "RJOI",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "MIL",
+  "coordinates": "3408N13214E",
+  "effective_end": "2026-10-28T14:00:00Z",
+  "effective_start": "2026-09-28T04:21:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T04:30:34+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      132.233333,
+      34.216517
+     ],
+     [
+      132.243184,
+      34.216116
+     ],
+     [
+      132.252939,
+      34.214919
+     ],
+     [
+      132.262506,
+      34.212935
+     ],
+     [
+      132.271791,
+      34.210185
+     ],
+     [
+      132.280707,
+      34.206695
+     ],
+     [
+      132.289166,
+      34.202498
+     ],
+     [
+      132.297087,
+      34.197635
+     ],
+     [
+      132.304394,
+      34.192153
+     ],
+     [
+      132.311017,
+      34.186104
+     ],
+     [
+      132.316892,
+      34.179548
+     ],
+     [
+      132.321963,
+      34.172546
+     ],
+     [
+      132.326179,
+      34.165166
+     ],
+     [
+      132.329502,
+      34.15748
+     ],
+     [
+      132.331898,
+      34.149562
+     ],
+     [
+      132.333345,
+      34.141487
+     ],
+     [
+      132.333829,
+      34.133333
+     ],
+     [
+      132.333345,
+      34.12518
+     ],
+     [
+      132.331898,
+      34.117105
+     ],
+     [
+      132.329502,
+      34.109186
+     ],
+     [
+      132.326179,
+      34.1015
+     ],
+     [
+      132.321963,
+      34.094121
+     ],
+     [
+      132.316892,
+      34.087119
+     ],
+     [
+      132.311017,
+      34.080562
+     ],
+     [
+      132.304394,
+      34.074514
+     ],
+     [
+      132.297087,
+      34.069032
+     ],
+     [
+      132.289166,
+      34.064169
+     ],
+     [
+      132.280707,
+      34.059972
+     ],
+     [
+      132.271791,
+      34.056482
+     ],
+     [
+      132.262506,
+      34.053732
+     ],
+     [
+      132.252939,
+      34.051748
+     ],
+     [
+      132.243184,
+      34.05055
+     ],
+     [
+      132.233333,
+      34.05015
+     ],
+     [
+      132.223483,
+      34.05055
+     ],
+     [
+      132.213728,
+      34.051748
+     ],
+     [
+      132.204161,
+      34.053732
+     ],
+     [
+      132.194875,
+      34.056482
+     ],
+     [
+      132.18596,
+      34.059972
+     ],
+     [
+      132.177501,
+      34.064169
+     ],
+     [
+      132.16958,
+      34.069032
+     ],
+     [
+      132.162272,
+      34.074514
+     ],
+     [
+      132.155649,
+      34.080562
+     ],
+     [
+      132.149774,
+      34.087119
+     ],
+     [
+      132.144704,
+      34.094121
+     ],
+     [
+      132.140488,
+      34.1015
+     ],
+     [
+      132.137165,
+      34.109186
+     ],
+     [
+      132.134769,
+      34.117105
+     ],
+     [
+      132.133322,
+      34.12518
+     ],
+     [
+      132.132838,
+      34.133333
+     ],
+     [
+      132.133322,
+      34.141487
+     ],
+     [
+      132.134769,
+      34.149562
+     ],
+     [
+      132.137165,
+      34.15748
+     ],
+     [
+      132.140488,
+      34.165166
+     ],
+     [
+      132.144704,
+      34.172546
+     ],
+     [
+      132.149774,
+      34.179548
+     ],
+     [
+      132.155649,
+      34.186104
+     ],
+     [
+      132.162272,
+      34.192153
+     ],
+     [
+      132.16958,
+      34.197635
+     ],
+     [
+      132.177501,
+      34.202498
+     ],
+     [
+      132.18596,
+      34.206695
+     ],
+     [
+      132.194875,
+      34.210185
+     ],
+     [
+      132.204161,
+      34.212935
+     ],
+     [
+      132.213728,
+      34.214919
+     ],
+     [
+      132.223483,
+      34.216116
+     ],
+     [
+      132.233333,
+      34.216517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RJOI",
+  "icao_text": "M0845/26 NOTAMN \r\nQ) RJJJ/QLBAS/IV/NBO/A/000/999/3408N13214E005 \r\nA) RJOI \r\nB) 2609280421 \r\nC) 2610281400 \r\nE) ROTATING BEACON OUT OF SERVICE UNTIL FURTHER NOTICE.",
+  "id": "1790569295563220",
+  "issued": "2026-09-28T04:21:00Z",
+  "last_updated": "2026-09-28T04:21:00Z",
+  "local_text": null,
+  "location": "RJOI",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "M0845/26",
+  "purpose": "NBO",
+  "q_code": "QLBAS",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "M",
+  "text": "ROTATING BEACON OUT OF SERVICE UNTIL FURTHER NOTICE.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790569344574000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-28T21:00:00.000Z",
+  "effective_start": "2026-09-28T07:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T04:30:34+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "Q2304/26 NOTAMN\r\nQ)RJJJ/QARCA/IV/BO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280700 C)2609282100\r\nE)EASTBOUND PACOTS TRACKS BETWEEN SOUTHEAST ASIA AND NORTH AMERICA,\r\nTRACK 14.\r\n     FLEX ROUTE : LEPKI 37N160E 37N170E 37N180E 37N170W 40N160W\r\n                  41N150W 40N140W 38N130W ALLBE\r\nRCTP/VHHH ROUTE : MOLKA M750 MUKEP Y891 OVSUN Y893 IGMIS Y57 POROT\r\n                  OTR11 LEPKI\r\n      NAR ROUTE : ACFT LDG KSFO--ALLBE PIRAT OSI KSFO\r\n                  ACFT LDG KLAX--ALLBE PIRAT BURGL IRNMN KLAX\r\n            RMK : TRK 15 NOT AVAILABLE\r\n                  ATM CENTER TEL:81-92-608-8870",
+  "id": "1790569344574000",
+  "issued": "2026-09-28T04:22:00.000Z",
+  "last_updated": "2026-09-28T04:22:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "Q2304/26",
+  "purpose": "BO",
+  "q_code": "QARCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "Q",
+  "text": "EASTBOUND PACOTS TRACKS BETWEEN SOUTHEAST ASIA AND NORTH AMERICA,\r\nTRACK 14.\r\n     FLEX ROUTE : LEPKI 37N160E 37N170E 37N180E 37N170W 40N160W\r\n                  41N150W 40N140W 38N130W ALLBE\r\nRCTP/VHHH ROUTE : MOLKA M750 MUKEP Y891 OVSUN Y893 IGMIS Y57 POROT\r\n                  OTR11 LEPKI\r\n      NAR ROUTE : ACFT LDG KSFO--ALLBE PIRAT OSI KSFO\r\n                  ACFT LDG KLAX--ALLBE PIRAT BURGL IRNMN KLAX\r\n            RMK : TRK 15 NOT AVAILABLE\r\n                  ATM CENTER TEL:81-92-608-8870",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790569755406644": {
+  "account_id": "RJSM",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "MIL",
+  "coordinates": "4042N14122E",
+  "effective_end": "2026-10-01T23:40:00Z",
+  "effective_start": "2026-10-01T23:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T04:30:34+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      141.366667,
+      40.783184
+     ],
+     [
+      141.377421,
+      40.782783
+     ],
+     [
+      141.388072,
+      40.781585
+     ],
+     [
+      141.398517,
+      40.779602
+     ],
+     [
+      141.408655,
+      40.776852
+     ],
+     [
+      141.418389,
+      40.773361
+     ],
+     [
+      141.427625,
+      40.769165
+     ],
+     [
+      141.436273,
+      40.764302
+     ],
+     [
+      141.444251,
+      40.75882
+     ],
+     [
+      141.451483,
+      40.752771
+     ],
+     [
+      141.457897,
+      40.746214
+     ],
+     [
+      141.463432,
+      40.739212
+     ],
+     [
+      141.468036,
+      40.731833
+     ],
+     [
+      141.471664,
+      40.724147
+     ],
+     [
+      141.47428,
+      40.716228
+     ],
+     [
+      141.47586,
+      40.708153
+     ],
+     [
+      141.476388,
+      40.7
+     ],
+     [
+      141.47586,
+      40.691847
+     ],
+     [
+      141.47428,
+      40.683772
+     ],
+     [
+      141.471664,
+      40.675853
+     ],
+     [
+      141.468036,
+      40.668167
+     ],
+     [
+      141.463432,
+      40.660788
+     ],
+     [
+      141.457897,
+      40.653786
+     ],
+     [
+      141.451483,
+      40.647229
+     ],
+     [
+      141.444251,
+      40.64118
+     ],
+     [
+      141.436273,
+      40.635698
+     ],
+     [
+      141.427625,
+      40.630835
+     ],
+     [
+      141.418389,
+      40.626639
+     ],
+     [
+      141.408655,
+      40.623148
+     ],
+     [
+      141.398517,
+      40.620398
+     ],
+     [
+      141.388072,
+      40.618415
+     ],
+     [
+      141.377421,
+      40.617217
+     ],
+     [
+      141.366667,
+      40.616816
+     ],
+     [
+      141.355912,
+      40.617217
+     ],
+     [
+      141.345261,
+      40.618415
+     ],
+     [
+      141.334816,
+      40.620398
+     ],
+     [
+      141.324678,
+      40.623148
+     ],
+     [
+      141.314944,
+      40.626639
+     ],
+     [
+      141.305709,
+      40.630835
+     ],
+     [
+      141.29706,
+      40.635698
+     ],
+     [
+      141.289082,
+      40.64118
+     ],
+     [
+      141.281851,
+      40.647229
+     ],
+     [
+      141.275437,
+      40.653786
+     ],
+     [
+      141.269901,
+      40.660788
+     ],
+     [
+      141.265297,
+      40.668167
+     ],
+     [
+      141.26167,
+      40.675853
+     ],
+     [
+      141.259053,
+      40.683772
+     ],
+     [
+      141.257474,
+      40.691847
+     ],
+     [
+      141.256945,
+      40.7
+     ],
+     [
+      141.257474,
+      40.708153
+     ],
+     [
+      141.259053,
+      40.716228
+     ],
+     [
+      141.26167,
+      40.724147
+     ],
+     [
+      141.265297,
+      40.731833
+     ],
+     [
+      141.269901,
+      40.739212
+     ],
+     [
+      141.275437,
+      40.746214
+     ],
+     [
+      141.281851,
+      40.752771
+     ],
+     [
+      141.289082,
+      40.75882
+     ],
+     [
+      141.29706,
+      40.764302
+     ],
+     [
+      141.305709,
+      40.769165
+     ],
+     [
+      141.314944,
+      40.773361
+     ],
+     [
+      141.324678,
+      40.776852
+     ],
+     [
+      141.334816,
+      40.779602
+     ],
+     [
+      141.345261,
+      40.781585
+     ],
+     [
+      141.355912,
+      40.782783
+     ],
+     [
+      141.366667,
+      40.783184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RJSM",
+  "icao_text": "M1581/26 NOTAMN \r\nQ) RJJJ/QFALW/IV/NBO/A/000/999/4042N14122E005 \r\nA) RJSM \r\nB) 2610012330 \r\nC) 2610012340 \r\nE) AERODROME QUIET HOURS WILL BE IN AFFECT. NO TAKE OFFS, LANDINGS, ENGINE RUNS ON SOUTH RAMP, AIRCRAFT TAXI ON ALPHA TAXIWAY, APU OPERATIONS ON SOUTH RAMP, OR HELICOPTER HOVERING. EXCEPTIONS TO QUIET HOURS: EMERGENCY AIRCRAFT LANDINGS, STRAIGHT IN FULL STOP LANDING, ALERT AIRCRAFT, ASSIGNED MISSION LAUNCHES, JASDF HOT SCRAMBLE, JAL/AMC/JASDF SCHEDULED FLIGHTS, HIGH POWER ENGINE RUNS MUST USE SILENCER, NO TAKEOFFS EXCEPT FOR AIRCRAFT PARTICIPATING IN EXERCISES. QUIET HOURS VALID FROM 0830L TO 0840L (2330Z TO 2340Z).",
+  "id": "1790569755406644",
+  "issued": "2026-09-28T04:29:00Z",
+  "last_updated": "2026-09-28T04:29:00Z",
+  "local_text": null,
+  "location": "RJSM",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "M1581/26",
+  "purpose": "NBO",
+  "q_code": "QFALW",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "M",
+  "text": "AERODROME QUIET HOURS WILL BE IN AFFECT. NO TAKE OFFS, LANDINGS, ENGINE RUNS ON SOUTH RAMP, AIRCRAFT TAXI ON ALPHA TAXIWAY, APU OPERATIONS ON SOUTH RAMP, OR HELICOPTER HOVERING. EXCEPTIONS TO QUIET HOURS: EMERGENCY AIRCRAFT LANDINGS, STRAIGHT IN FULL STOP LANDING, ALERT AIRCRAFT, ASSIGNED MISSION LAUNCHES, JASDF HOT SCRAMBLE, JAL/AMC/JASDF SCHEDULED FLIGHTS, HIGH POWER ENGINE RUNS MUST USE SILENCER, NO TAKEOFFS EXCEPT FOR AIRCRAFT PARTICIPATING IN EXERCISES. QUIET HOURS VALID FROM 0830L TO 0840L (2330Z TO 2340Z).",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790569827527000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0830N12429E",
+  "effective_end": "2026-12-23T23:59:00.000Z",
+  "effective_start": "2026-09-28T04:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-09-28T04:30:34+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      124.483333,
+      9.232016
+     ],
+     [
+      124.55588,
+      9.228491
+     ],
+     [
+      124.627729,
+      9.21795
+     ],
+     [
+      124.698186,
+      9.200495
+     ],
+     [
+      124.766575,
+      9.176294
+     ],
+     [
+      124.832236,
+      9.14558
+     ],
+     [
+      124.894536,
+      9.108649
+     ],
+     [
+      124.952877,
+      9.065856
+     ],
+     [
+      125.006695,
+      9.017613
+     ],
+     [
+      125.055474,
+      8.964386
+     ],
+     [
+      125.098742,
+      8.906686
+     ],
+     [
+      125.136084,
+      8.84507
+     ],
+     [
+      125.167139,
+      8.78013
+     ],
+     [
+      125.191609,
+      8.712493
+     ],
+     [
+      125.209257,
+      8.642809
+     ],
+     [
+      125.219915,
+      8.57175
+     ],
+     [
+      125.223479,
+      8.5
+     ],
+     [
+      125.219915,
+      8.42825
+     ],
+     [
+      125.209257,
+      8.357191
+     ],
+     [
+      125.191609,
+      8.287507
+     ],
+     [
+      125.167139,
+      8.21987
+     ],
+     [
+      125.136084,
+      8.15493
+     ],
+     [
+      125.098742,
+      8.093314
+     ],
+     [
+      125.055474,
+      8.035614
+     ],
+     [
+      125.006695,
+      7.982387
+     ],
+     [
+      124.952877,
+      7.934144
+     ],
+     [
+      124.894536,
+      7.891351
+     ],
+     [
+      124.832236,
+      7.85442
+     ],
+     [
+      124.766575,
+      7.823706
+     ],
+     [
+      124.698186,
+      7.799505
+     ],
+     [
+      124.627729,
+      7.78205
+     ],
+     [
+      124.55588,
+      7.771509
+     ],
+     [
+      124.483333,
+      7.767984
+     ],
+     [
+      124.410786,
+      7.771509
+     ],
+     [
+      124.338938,
+      7.78205
+     ],
+     [
+      124.26848,
+      7.799505
+     ],
+     [
+      124.200092,
+      7.823706
+     ],
+     [
+      124.134431,
+      7.85442
+     ],
+     [
+      124.07213,
+      7.891351
+     ],
+     [
+      124.01379,
+      7.934144
+     ],
+     [
+      123.959971,
+      7.982387
+     ],
+     [
+      123.911193,
+      8.035614
+     ],
+     [
+      123.867925,
+      8.093314
+     ],
+     [
+      123.830583,
+      8.15493
+     ],
+     [
+      123.799528,
+      8.21987
+     ],
+     [
+      123.775058,
+      8.287507
+     ],
+     [
+      123.757409,
+      8.357191
+     ],
+     [
+      123.746752,
+      8.42825
+     ],
+     [
+      123.743188,
+      8.5
+     ],
+     [
+      123.746752,
+      8.57175
+     ],
+     [
+      123.757409,
+      8.642809
+     ],
+     [
+      123.775058,
+      8.712493
+     ],
+     [
+      123.799528,
+      8.78013
+     ],
+     [
+      123.830583,
+      8.84507
+     ],
+     [
+      123.867925,
+      8.906686
+     ],
+     [
+      123.911193,
+      8.964386
+     ],
+     [
+      123.959971,
+      9.017613
+     ],
+     [
+      124.01379,
+      9.065856
+     ],
+     [
+      124.07213,
+      9.108649
+     ],
+     [
+      124.134431,
+      9.14558
+     ],
+     [
+      124.200092,
+      9.176294
+     ],
+     [
+      124.26848,
+      9.200495
+     ],
+     [
+      124.338938,
+      9.21795
+     ],
+     [
+      124.410786,
+      9.228491
+     ],
+     [
+      124.483333,
+      9.232016
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPMY",
+  "icao_text": "B5103/26 NOTAMN\r\nQ) RPHI/QSPCF/IV/BO /AE/000/999/0830N12429E044\r\nA) RPMY B) 2609280430 C) 2612232359\r\nE) LAGUINDINGAN APP FREQ CHANGED TO:\r\n122.3MHZ PRI FREQ.\r\n125.5MHZ SRY FREQ.",
+  "id": "1790569827527000",
+  "issued": "2026-09-28T04:30:00.000Z",
+  "last_updated": "2026-09-28T04:30:00.000Z",
+  "local_text": null,
+  "location": "RPMY",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5103/26",
+  "purpose": "BO ",
+  "q_code": "QSPCF",
+  "qline_offset_nm": null,
+  "radius_nm": 44.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AE",
+  "series": "B",
+  "text": "LAGUINDINGAN APP FREQ CHANGED TO:\r\n122.3MHZ PRI FREQ.\r\n125.5MHZ SRY FREQ.",
+  "traffic": "IV",
   "type": "N",
   "upper": null,
   "year": "2026"
