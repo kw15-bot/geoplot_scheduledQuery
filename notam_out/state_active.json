@@ -40288,5 +40288,73 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1790603061864000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T10:30:00.000Z",
+  "effective_start": "2026-09-29T09:10:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZSHA",
+  "first_seen": "2026-09-28T13:50:27+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     114.875,
+     25.808333
+    ],
+    [
+     116.210278,
+     26.920278
+    ],
+    [
+     116.558333,
+     27.208333
+    ],
+    [
+     116.921111,
+     27.519167
+    ],
+    [
+     117.549444,
+     28.059444
+    ],
+    [
+     117.97,
+     28.416667
+    ]
+   ],
+   "type": "LineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZSHA",
+  "icao_text": "A4990/26 NOTAMN\r\nQ)ZSHA/QARXX/IV/NBO/E/000/999/\r\nA)ZSHA B)2609290910 C)2609291030 \r\nE) 1.FLW SEGMENT OF ATS RTE TEMPORARY CLSD: \r\nA599: PANLONG VOR'PLT'- SHANGRAO VOR'SHR'.\r\n2.FLIGHT ROUTES TEMPORARY ADJUSTED AS FLW,DIVERSION FLW ATC \r\nINSTRUCTION,FPL FOR RELATED SCHEDULE FLIGHT ACCORDING TO ORIGINAL \r\nPLAN:\r\nA599: PANLONG VOR'PLT'- SHANGRAO VOR'SHR' ADJUST TO PANLONG VOR \r\n'PLT'-V171- SHANGRAO VOR 'SHR',AND VICE VERSA.\r\n ",
+  "id": "1790603061864000",
+  "issued": "2026-09-28T13:44:00.000Z",
+  "last_updated": "2026-09-28T13:44:00.000Z",
+  "local_text": null,
+  "location": "ZSHA",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4990/26",
+  "purpose": "NBO",
+  "q_code": "QARXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "1.FLW SEGMENT OF ATS RTE TEMPORARY CLSD: \r\nA599: PANLONG VOR'PLT'- SHANGRAO VOR'SHR'.\r\n2.FLIGHT ROUTES TEMPORARY ADJUSTED AS FLW,DIVERSION FLW ATC \r\nINSTRUCTION,FPL FOR RELATED SCHEDULE FLIGHT ACCORDING TO ORIGINAL \r\nPLAN:\r\nA599: PANLONG VOR'PLT'- SHANGRAO VOR'SHR' ADJUST TO PANLONG VOR \r\n'PLT'-V171- SHANGRAO VOR 'SHR',AND VICE VERSA.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
  }
 }
