@@ -3331,10 +3331,10 @@ function notamStyle(f){
   const st = notamStatusOf(f);
   const c = statusColor(st === 'active' ? 'active' : st === 'upcoming' ? 'notice' : 'archive');
   const isPoint = f.geometry && f.geometry.type === 'Point';
-  // 航空路閉鎖の線は面より細く見えるので太めにする
+  // 航空路閉鎖の線は、面の枠線(1.5)より少しだけ太くする
   const isLine = f.geometry && /LineString$/.test(f.geometry.type);
   return {
-    color: c.line, weight: isPoint ? 1.3 : isLine ? 4 : 1.5, fillColor: c.fill, fillOpacity: isPoint ? 0.55 : 0.14,
+    color: c.line, weight: isPoint ? 1.3 : isLine ? 2.2 : 1.5, fillColor: c.fill, fillOpacity: isPoint ? 0.55 : 0.14,
     // geometry_source が qline-circle/qline-point (Q項からの推定図形) の場合は破線にして、
     // E項座標列から得た確度の高い図形(実線)と見た目で区別する。
     dashArray: (p.geometry_source || '').startsWith('qline') ? '5,4' : null,

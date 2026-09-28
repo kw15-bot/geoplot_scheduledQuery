@@ -736,7 +736,7 @@ eAIP（eaipchina.cn、要ログイン）で配布している **AIPデータセ�
     `20KM WEST OF XXX`（XXX から**航空路に沿って**その方角へ進んだ地点）、座標の端点（航空路上に投影、30km以内）。
   - `ADJUST` / `REROUT` / `ISSUE FPL` / `FLIGHT PLANS` / `FLIGHTS ALONG|VIA|FM` / `SCHEDULED FLIGHTS` / `ALL AFFECTED`
     以降は迂回の指示なので読まない（迂回路を閉鎖区間と取り違えない）。迂回だけのNOTAM（A4968/26）は線にならない。
-- ビューア: `route-segment` の線も表示対象（太線、区間ごとにNOTAM番号のラベル、Shapefileは PolyLine）。
+- ビューア: `route-segment` の線も表示対象（面の枠線より少し太い2.2、区間ごとにNOTAM番号のラベル、Shapefileは PolyLine）。
   日次レポートでは、区間閉鎖が読めるのに線にできなかったものを「航空路の区間閉鎖だが線にできなかった」と分類する。
 - 既存レコードは `AIPDS_INDEX=... python notam_backfill_text_polygon.py --apply` で線に描き直し済み（2026-09-28、22件）。
 
