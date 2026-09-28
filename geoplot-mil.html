@@ -3412,19 +3412,20 @@ function notamFeaturesForTab(tab){
   return notamActiveFeatures.concat(archived); // all
 }
 
-// 日付変更線(経度180°)をまたぐ図形(例: KZAKのA4714/26、東経165°〜西経145°)は、Leafletに
-// そのまま渡すと 179.98° → -175° を「西へ約355°戻る」線として描き、地図の横幅いっぱいに
-// 伸びてしまう。地図に描くときだけ、経度の幅が180°を超える多角形の西経側(負の経度)に360°を
-// 足して連続させる(東経185°等として日付変更線の東側に描かれる)。元のデータは変えない。
+// 経度の表し方をそろえる。アジア・太平洋中心のビューアなので、西経30°より西(太平洋の東側・
+// 米大陸。KZAKなど)の経度は一律に360°を足し、東経180°より東(東経185°等)として描く。
+// こうすると、日付変更線をまたぐ図形(例: KZAKのA4714/26、東経165°〜西経145°)が地図の横幅いっぱいに
+// 伸びず、またがない図形(例: カリフォルニア沖のA4705/26)とも同じ「1枚の地図」上に並ぶ
+// (以前はまたぐ図形だけずらしていたので、見る場所によって片方しか見えなかった)。元のデータは変えない。
+const NOTAM_LON_WRAP_BELOW = -30;
+function notamWrapLon(lon){ return lon < NOTAM_LON_WRAP_BELOW ? lon + 360 : lon; }
 function notamUnwrapGeometry(geom){
   if (!geom) return geom;
-  const unwrapPolygon = rings => {
-    const lons = rings.flat().map(pt => pt[0]);
-    if (Math.max(...lons) - Math.min(...lons) <= 180) return rings;
-    return rings.map(ring => ring.map(([lon, lat]) => [lon < 0 ? lon + 360 : lon, lat]));
-  };
-  if (geom.type === 'Polygon') return { type:'Polygon', coordinates: unwrapPolygon(geom.coordinates) };
-  if (geom.type === 'MultiPolygon') return { type:'MultiPolygon', coordinates: geom.coordinates.map(unwrapPolygon) };
+  const ring = r => r.map(([lon, lat, ...rest]) => [notamWrapLon(lon), lat, ...rest]);
+  if (geom.type === 'Point') return { type:'Point', coordinates: [notamWrapLon(geom.coordinates[0]), ...geom.coordinates.slice(1)] };
+  if (geom.type === 'LineString') return { type:'LineString', coordinates: ring(geom.coordinates) };
+  if (geom.type === 'Polygon') return { type:'Polygon', coordinates: geom.coordinates.map(ring) };
+  if (geom.type === 'MultiPolygon') return { type:'MultiPolygon', coordinates: geom.coordinates.map(p => p.map(ring)) };
   return geom;
 }
 function notamForLeaflet(f){
@@ -3445,6 +3446,18 @@ function rebuildNotamMapLayer(){
     ? f.geometry.coordinates.map(coords => ({ type:'Feature', properties: f.properties,
         geometry: { type:'Polygon', coordinates: coords }, _notamOrig: f }))
     : [f]).map(notamForLeaflet);
+  // 範囲がまったく同じ図形が複数ある(例: A4714/26とA4715/26)と、NOTAM番号のラベルが同じ位置に
+  // 重なって読めなくなるので、1つのラベルにまとめて(「A4714/26・A4715/26」)最初の図形にだけ付ける。
+  const labelGroups = new Map();
+  parts.forEach(part => {
+    const g = JSON.stringify(part.geometry.coordinates);
+    const num = (part.properties || {}).number;
+    if (!labelGroups.has(g)) labelGroups.set(g, { first: part, numbers: [] });
+    const grp = labelGroups.get(g);
+    if (num && !grp.numbers.includes(num)) grp.numbers.push(num);
+  });
+  const labelOf = new Map();
+  labelGroups.forEach(grp => labelOf.set(grp.first, grp.numbers.join('・')));
   L.geoJSON({ type:'FeatureCollection', features: parts }, {
     style: notamStyle,
     pointToLayer: notamPointToLayer,
@@ -3454,7 +3467,7 @@ function rebuildNotamMapLayer(){
       // 地図→左パネルの追従(航行警報側のselectItemInPanel()と同じ)。ポップアップも従来どおり開く。
       layer.on('click', ()=> selectNotamInPanel(f));
       // 航行警報側と同じく、図形の上にNOTAM番号(例: A3757/26)を常時表示する
-      const label = (f.properties || {}).number;
+      const label = labelOf.get(part); // 同じ範囲の2つ目以降の図形はundefined(ラベルを付けない)
       if (label){
         const isPoint = part.geometry.type === 'Point';
         layer.bindTooltip(label, isPoint
