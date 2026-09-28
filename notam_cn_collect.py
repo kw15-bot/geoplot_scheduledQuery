@@ -69,9 +69,9 @@ AREA_BY_PREFIX = {
 # これらはプレフィックスで拾うと国全体（例: K=米国全土, RJ=日本全国のFIR）まで
 # 混入してしまうため、4文字の完全一致でのみマッチさせる（AREA_BY_PREFIXとは別枠）。
 #   RPHI: マニラFIR(フィリピン)  KZAK: オークランド洋上管制(米国)
-#   RJJJ: 福岡FIR(日本)          RKRR: 仁川FIR(韓国)
-#   ZKKP: 平壌FIR(北朝鮮)
-AREA_BY_EXACT = {"RPHI": "REF", "KZAK": "REF", "RJJJ": "REF", "RKRR": "REF", "ZKKP": "REF"}
+# 2026-09-28: RJJJ(福岡)・RKRR(仁川)・ZKKP(平壌)は中国と関係の薄いNOTAMが大半のため対象から外した
+# (ユーザー判断。収集済みの分も state・Archive から削除。drop_untargeted()参照)。
+AREA_BY_EXACT = {"RPHI": "REF", "KZAK": "REF"}
 AREA_LABEL = {"CN": "中国本土", "HK": "香港", "MO": "マカオ", "TW": "台湾", "REF": "周辺国FIR(参考)"}
 
 MAX_DELTA_WINDOW = dt.timedelta(hours=23, minutes=30)   # 仕様上の上限は24時間
@@ -145,6 +145,19 @@ def target_area(n):
             if tok[:2] in AREA_BY_PREFIX:
                 return AREA_BY_PREFIX[tok[:2]]
     return None
+
+
+def record_target_area(rec):
+    """保存済みレコード(またはArchiveのproperties)が、今の収集対象に入るか。target_area()と同じ判定。"""
+    return target_area({"icaoLocation": rec.get("icao_location"), "affectedFir": rec.get("fir")})
+
+
+def drop_untargeted(active):
+    """収集対象から外したFIRのレコードを state から消す(対象を狭めたときの後始末)。消した件数を返す。"""
+    gone = [k for k, r in active.items() if not record_target_area(r)]
+    for k in gone:
+        del active[k]
+    return len(gone)
 
 
 def q_category(q):
@@ -787,6 +800,9 @@ def main(argv=None):
     out = Path(a.out_dir)
     stats = collections.Counter()
     active = read_json(out / "state_active.json", {})
+    dropped = drop_untargeted(active)
+    if dropped:
+        stats["dropped_untargeted"] = dropped
     meta = read_json(out / "meta.json", {})
     last_ok = parse_dt(meta.get("last_success"))
 
