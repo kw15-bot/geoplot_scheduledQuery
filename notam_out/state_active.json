@@ -60162,5 +60162,107 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1790572016663000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "4316N14452E",
+  "effective_end": "2026-10-21T09:00:00Z",
+  "effective_start": "2026-10-05T21:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T05:10:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      144.717222,
+      43.283056
+     ],
+     [
+      144.720278,
+      43.292222
+     ],
+     [
+      144.762778,
+      43.305278
+     ],
+     [
+      144.845556,
+      43.297778
+     ],
+     [
+      144.875278,
+      43.313889
+     ],
+     [
+      144.924722,
+      43.294444
+     ],
+     [
+      144.966111,
+      43.294444
+     ],
+     [
+      144.988889,
+      43.292222
+     ],
+     [
+      145.003056,
+      43.255556
+     ],
+     [
+      144.918056,
+      43.260833
+     ],
+     [
+      144.849444,
+      43.264444
+     ],
+     [
+      144.820556,
+      43.261389
+     ],
+     [
+      144.750278,
+      43.270833
+     ],
+     [
+      144.717222,
+      43.283056
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RJJJ",
+  "icao_text": "U3452/26 NOTAMN\r\nQ)RJJJ/QWULW/IV/BO/W/000/009/4316N14452E008\r\nA)RJJJ B)2610052100 C)2610210900\r\nD)2100/0900\r\nE)UNMANNED ACFT:\r\nAREA: BOUNDED BY FLW POINTS\r\n431659N1444302E - 431732N1444313E - 431819N1444546E - 431752N1445044E\r\n- 431850N1445231E - 431740N1445529E - 431740N1445758E -\r\n431732N1445920E - 431520N1450011E - 431539N1445505E - 431552N1445058E\r\n- 431541N1444914E - 431615N1444501E - 431659N1444302E \r\n(AKKESHI-GUN,NOTSUKE-GUN IN HOKKAIDO)\r\n(YAUSUBETSU MANEUVERING AREA)\r\nWT: 320G\r\nRMK: SOURCE/JSDF-G(RJCT)\r\nF)SFC G)820FT AMSL",
+  "id": "1790572016663000",
+  "issued": "2026-09-28T05:06:00Z",
+  "last_updated": "2026-09-28T05:07:00Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": "SFC",
+  "max_fl": "009",
+  "min_fl": "000",
+  "number": "U3452/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 1.1,
+  "radius_nm": 8.0,
+  "ref_number": null,
+  "schedule": "2100/0900",
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT:\r\nAREA: BOUNDED BY FLW POINTS\r\n431659N1444302E - 431732N1444313E - 431819N1444546E - 431752N1445044E\r\n- 431850N1445231E - 431740N1445529E - 431740N1445758E -\r\n431732N1445920E - 431520N1450011E - 431539N1445505E - 431552N1445058E\r\n- 431541N1444914E - 431615N1444501E - 431659N1444302E \r\n(AKKESHI-GUN,NOTSUKE-GUN IN HOKKAIDO)\r\n(YAUSUBETSU MANEUVERING AREA)\r\nWT: 320G\r\nRMK: SOURCE/JSDF-G(RJCT)",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "820FT AMSL",
+  "year": "2026"
  }
 }
