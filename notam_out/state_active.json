@@ -1,4 +1,126 @@
 {
+ "1790416896693386": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": "2026-09-28T22:29:00.000Z",
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-09-29T05:00:00Z",
+  "effective_start": "2026-09-28T23:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-28T22:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -124.316667,
+      36.333333
+     ],
+     [
+      -123.0,
+      35.483333
+     ],
+     [
+      -122.166667,
+      35.316667
+     ],
+     [
+      -121.65,
+      35.55
+     ],
+     [
+      -121.533333,
+      35.616667
+     ],
+     [
+      -121.1,
+      35.25
+     ],
+     [
+      -120.8,
+      35.066667
+     ],
+     [
+      -120.7,
+      35.0
+     ],
+     [
+      -120.5,
+      34.766667
+     ],
+     [
+      -120.533333,
+      34.65
+     ],
+     [
+      -120.5,
+      34.4
+     ],
+     [
+      -120.916667,
+      34.266667
+     ],
+     [
+      -120.983333,
+      34.183333
+     ],
+     [
+      -121.433333,
+      34.116667
+     ],
+     [
+      -122.633333,
+      33.783333
+     ],
+     [
+      -122.833333,
+      34.083333
+     ],
+     [
+      -125.533333,
+      35.85
+     ],
+     [
+      -124.9,
+      36.516667
+     ],
+     [
+      -124.316667,
+      36.333333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790416896693386",
+  "issued": "2026-09-26T10:00:00Z",
+  "last_updated": "2026-09-28T22:30:00Z",
+  "local_text": "!CARF 09/327 ZAK AIRSPACE DCC QUEEN OF THE SKIES 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS 362000N1241900W TO 352900N1230000W TO 351900N1221000W TO 353300N1213900W TO 353700N1213200W TO 351500N1210600W TO 350400N1204800W TO 350000N1204200W TO 344600N1203000W TO 343900N1203200W TO 342400N1203000W TO 341600N1205500W TO 341100N1205900W TO 340700N1212600W TO 334700N1223800W TO 340500N1225000W TO 355100N1253200W TO 363100N1245400W TO POINT OF ORIGIN SFC-UNL 2609282300-2609290500",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "09/327",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 09/327 ZAK AIRSPACE DCC QUEEN OF THE SKIES 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS 362000N1241900W TO 352900N1230000W TO 351900N1221000W TO 353300N1213900W TO 353700N1213200W TO 351500N1210600W TO 350400N1204800W TO 350000N1204200W TO 344600N1203000W TO 343900N1203200W TO 342400N1203000W TO 341600N1205500W TO 341100N1205900W TO 340700N1212600W TO 334700N1223800W TO 340500N1225000W TO 355100N1253200W TO 363100N1245400W TO POINT OF ORIGIN SFC-UNL",
+  "traffic": null,
+  "type": null,
+  "upper": "UNL",
+  "year": "2026"
+ },
  "1790492193039000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -39989,6 +40111,328 @@
   "traffic": null,
   "type": null,
   "upper": "FL800",
+  "year": "2026"
+ },
+ "1790634654078528": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-01T22:29:00Z",
+  "effective_start": "2026-09-28T22:29:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-28T22:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4735/26 NOTAMC A4696/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2609282229\nE) ZAK AIRSPACE DCC QUEEN OF THE SKIES 26-4 STNR ALT RESERVATION WI AN A\nCANCELED",
+  "id": "1790634654078528",
+  "issued": "2026-09-28T22:29:00Z",
+  "last_updated": "2026-09-28T22:30:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4735/26",
+  "purpose": "NBO",
+  "q_code": "QRAXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "A4696/26",
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "A4735/26 NOTAMC A4696/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2609282229\nE) ZAK AIRSPACE DCC QUEEN OF THE SKIES 26-4 STNR ALT RESERVATION WI AN A\nCANCELED",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790635151721746": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T17:30:00Z",
+  "effective_start": "2026-09-29T16:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-28T22:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4736/26 NOTAMN\nQ) KZAK/QROLT/IV/NBO/W/000/230/\nA) KZAK\nB) 2609291600\nC) 2609291730\nE) AIRSPACE W237J ACT\nF) SFC\nG) FL230",
+  "id": "1790635151721746",
+  "issued": "2026-09-28T22:38:00Z",
+  "last_updated": "2026-09-28T22:39:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "230",
+  "min_fl": "000",
+  "number": "A4736/26",
+  "purpose": "NBO",
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "AIRSPACE W237J ACT",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL230",
+  "year": "2026"
+ },
+ "1790635151730316": {
+  "account_id": "SUAW",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-09-29T17:30:00Z",
+  "effective_start": "2026-09-29T16:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-28T22:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790635151730316",
+  "issued": "2026-09-28T22:38:00Z",
+  "last_updated": "2026-09-28T22:39:00Z",
+  "local_text": "!SUAW 09/115 ZAK AIRSPACE W237J ACT SFC-FL230 2609291600-2609291730",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "09/115",
+  "purpose": null,
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!SUAW 09/115 ZAK AIRSPACE W237J ACT SFC-FL230",
+  "traffic": null,
+  "type": null,
+  "upper": "FL230",
+  "year": "2026"
+ },
+ "1790635194681901": {
+  "account_id": "SUAW",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-09-29T17:30:00Z",
+  "effective_start": "2026-09-29T16:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-28T22:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790635194681901",
+  "issued": "2026-09-28T22:39:00Z",
+  "last_updated": "2026-09-28T22:39:00Z",
+  "local_text": "!SUAW 09/119 ZAK AIRSPACE W237H ACT SFC-FL230 2609291600-2609291730",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "09/119",
+  "purpose": null,
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!SUAW 09/119 ZAK AIRSPACE W237H ACT SFC-FL230",
+  "traffic": null,
+  "type": null,
+  "upper": "FL230",
+  "year": "2026"
+ },
+ "1790635194751021": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T23:30:00Z",
+  "effective_start": "2026-09-29T17:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-28T22:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4737/26 NOTAMN\nQ) KZAK/QROLT/IV/NBO/W/000/270/\nA) KZAK\nB) 2609291730\nC) 2609292330\nE) AIRSPACE W237H ACT\nF) SFC\nG) FL270",
+  "id": "1790635194751021",
+  "issued": "2026-09-28T22:38:00Z",
+  "last_updated": "2026-09-28T22:39:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "270",
+  "min_fl": "000",
+  "number": "A4737/26",
+  "purpose": "NBO",
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "AIRSPACE W237H ACT",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL270",
+  "year": "2026"
+ },
+ "1790635194857398": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T17:30:00Z",
+  "effective_start": "2026-09-29T16:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-28T22:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4738/26 NOTAMN\nQ) KZAK/QROLT/IV/NBO/W/000/230/\nA) KZAK\nB) 2609291600\nC) 2609291730\nE) AIRSPACE W237H ACT\nF) SFC\nG) FL230",
+  "id": "1790635194857398",
+  "issued": "2026-09-28T22:39:00Z",
+  "last_updated": "2026-09-28T22:39:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "230",
+  "min_fl": "000",
+  "number": "A4738/26",
+  "purpose": "NBO",
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "AIRSPACE W237H ACT",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL230",
+  "year": "2026"
+ },
+ "1790635194950256": {
+  "account_id": "SUAW",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-09-29T23:30:00Z",
+  "effective_start": "2026-09-29T17:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-28T22:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790635194950256",
+  "issued": "2026-09-28T22:38:00Z",
+  "last_updated": "2026-09-28T22:39:00Z",
+  "local_text": "!SUAW 09/117 ZAK AIRSPACE W237H ACT SFC-FL270 2609291730-2609292330",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "09/117",
+  "purpose": null,
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!SUAW 09/117 ZAK AIRSPACE W237H ACT SFC-FL270",
+  "traffic": null,
+  "type": null,
+  "upper": "FL270",
   "year": "2026"
  }
 }
