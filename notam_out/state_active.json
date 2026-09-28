@@ -30930,289 +30930,29 @@
  "1790552975118000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
-  "cancelation_date": null,
+  "cancelation_date": "2026-09-28T00:31:00.000Z",
   "classification": "INTL",
   "coordinates": "4138N12329E",
   "effective_end": "2026-09-28T07:00:00.000Z",
   "effective_start": "2026-09-28T02:00:00.000Z",
-  "end_override": null,
-  "ended_by": null,
+  "end_override": "2026-09-28T00:31:00+00:00",
+  "ended_by": "Y1476/26",
   "estimated": false,
   "fir": "ZYSH",
   "first_seen": "2026-09-27T23:51:02+00:00",
   "geometry": {
    "coordinates": [
-    [
-     [
-      123.483333,
-      41.716517
-     ],
-     [
-      123.494242,
-      41.716116
-     ],
-     [
-      123.505046,
-      41.714919
-     ],
-     [
-      123.515641,
-      41.712935
-     ],
-     [
-      123.525924,
-      41.710185
-     ],
-     [
-      123.535798,
-      41.706695
-     ],
-     [
-      123.545166,
-      41.702498
-     ],
-     [
-      123.553938,
-      41.697635
-     ],
-     [
-      123.562031,
-      41.692153
-     ],
-     [
-      123.569366,
-      41.686104
-     ],
-     [
-      123.575872,
-      41.679548
-     ],
-     [
-      123.581487,
-      41.672546
-     ],
-     [
-      123.586157,
-      41.665166
-     ],
-     [
-      123.589837,
-      41.65748
-     ],
-     [
-      123.59249,
-      41.649562
-     ],
-     [
-      123.594093,
-      41.641487
-     ],
-     [
-      123.594629,
-      41.633333
-     ],
-     [
-      123.594093,
-      41.62518
-     ],
-     [
-      123.59249,
-      41.617105
-     ],
-     [
-      123.589837,
-      41.609186
-     ],
-     [
-      123.586157,
-      41.6015
-     ],
-     [
-      123.581487,
-      41.594121
-     ],
-     [
-      123.575872,
-      41.587119
-     ],
-     [
-      123.569366,
-      41.580562
-     ],
-     [
-      123.562031,
-      41.574514
-     ],
-     [
-      123.553938,
-      41.569032
-     ],
-     [
-      123.545166,
-      41.564169
-     ],
-     [
-      123.535798,
-      41.559972
-     ],
-     [
-      123.525924,
-      41.556482
-     ],
-     [
-      123.515641,
-      41.553732
-     ],
-     [
-      123.505046,
-      41.551748
-     ],
-     [
-      123.494242,
-      41.55055
-     ],
-     [
-      123.483333,
-      41.55015
-     ],
-     [
-      123.472424,
-      41.55055
-     ],
-     [
-      123.461621,
-      41.551748
-     ],
-     [
-      123.451026,
-      41.553732
-     ],
-     [
-      123.440742,
-      41.556482
-     ],
-     [
-      123.430869,
-      41.559972
-     ],
-     [
-      123.421501,
-      41.564169
-     ],
-     [
-      123.412728,
-      41.569032
-     ],
-     [
-      123.404635,
-      41.574514
-     ],
-     [
-      123.397301,
-      41.580562
-     ],
-     [
-      123.390794,
-      41.587119
-     ],
-     [
-      123.385179,
-      41.594121
-     ],
-     [
-      123.38051,
-      41.6015
-     ],
-     [
-      123.37683,
-      41.609186
-     ],
-     [
-      123.374176,
-      41.617105
-     ],
-     [
-      123.372574,
-      41.62518
-     ],
-     [
-      123.372038,
-      41.633333
-     ],
-     [
-      123.372574,
-      41.641487
-     ],
-     [
-      123.374176,
-      41.649562
-     ],
-     [
-      123.37683,
-      41.65748
-     ],
-     [
-      123.38051,
-      41.665166
-     ],
-     [
-      123.385179,
-      41.672546
-     ],
-     [
-      123.390794,
-      41.679548
-     ],
-     [
-      123.397301,
-      41.686104
-     ],
-     [
-      123.404635,
-      41.692153
-     ],
-     [
-      123.412728,
-      41.697635
-     ],
-     [
-      123.421501,
-      41.702498
-     ],
-     [
-      123.430869,
-      41.706695
-     ],
-     [
-      123.440742,
-      41.710185
-     ],
-     [
-      123.451026,
-      41.712935
-     ],
-     [
-      123.461621,
-      41.714919
-     ],
-     [
-      123.472424,
-      41.716116
-     ],
-     [
-      123.483333,
-      41.716517
-     ]
-    ]
+    123.483333,
+    41.633333
    ],
-   "type": "Polygon"
+   "type": "Point"
   },
-  "geometry_source": "qline-circle",
+  "geometry_source": "qline-point",
   "icao_location": "ZYTX",
   "icao_text": "Y1475/26 NOTAMN\r\nQ)ZYSH/QFALT/IV/NBO/A/000/999/4138N12329E005\r\nA)ZYTX B)2609280200 C)2609280700 \r\nE) DUE TO HEAVY FOG,\r\n0200-0300 ,AD ONLY AVBL FOR 8 ARRIVAL ACFT PER HOUR.\r\n0300-0700 ,AD ONLY AVBL FOR 16 ARRIVAL ACFT PER HOUR.\r\n ",
   "id": "1790552975118000",
   "issued": "2026-09-27T23:49:00.000Z",
-  "last_updated": "2026-09-27T23:49:00.000Z",
+  "last_updated": "2026-09-28T00:31:00.000Z",
   "local_text": null,
   "location": "ZYTX",
   "lower": null,
@@ -31222,7 +30962,7 @@
   "purpose": "NBO",
   "q_code": "QFALT",
   "qline_offset_nm": null,
-  "radius_nm": 5.0,
+  "radius_nm": null,
   "ref_number": null,
   "schedule": null,
   "scope": "A",
@@ -33279,8 +33019,8 @@
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "3310N14118E",
-  "effective_end": "2026-10-01T00:29:00.000Z",
-  "effective_start": "2026-09-28T00:29:00.000Z",
+  "effective_end": "2026-10-01T00:29:00Z",
+  "effective_start": "2026-09-28T00:29:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
@@ -33297,8 +33037,8 @@
   "icao_location": "RJJJ",
   "icao_text": "X6112/26 NOTAMC X6104/26\r\nQ)RJJJ/QPFXX/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280029\r\nE)FLOW CTL SECTOR F07  \r\nNOTAM CNL",
   "id": "1790555384615000",
-  "issued": "2026-09-28T00:29:00.000Z",
-  "last_updated": "2026-09-28T00:29:00.000Z",
+  "issued": "2026-09-28T00:29:00Z",
+  "last_updated": "2026-09-28T00:30:00Z",
   "local_text": null,
   "location": "RJJJ",
   "lower": null,
@@ -33313,10 +33053,168 @@
   "schedule": null,
   "scope": "E",
   "series": "X",
-  "text": "FLOW CTL SECTOR F07  \r\nNOTAM CNL",
+  "text": "X6112/26 NOTAMC X6104/26\r\nQ)RJJJ/QPFXX/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280029\r\nE)FLOW CTL SECTOR F07  \r\nNOTAM CNL",
   "traffic": "I",
   "type": "C",
   "upper": null,
+  "year": "2026"
+ },
+ "1790555482657000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-01T00:30:00.000Z",
+  "effective_start": "2026-09-28T00:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZYSH",
+  "first_seen": "2026-09-28T00:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    123.485,
+    41.641667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "ZYTX",
+  "icao_text": "Y1476/26 NOTAMC Y1475/26\r\nQ)ZYSH/QFAXX////000/999/\r\nA)ZYTX B)2609280030 \r\nE) CNL NTM .\r\n",
+  "id": "1790555482657000",
+  "issued": "2026-09-28T00:31:00.000Z",
+  "last_updated": "2026-09-28T00:31:00.000Z",
+  "local_text": null,
+  "location": "ZYTX",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "Y1476/26",
+  "purpose": null,
+  "q_code": "QFAXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "Y1475/26",
+  "schedule": null,
+  "scope": null,
+  "series": "Y",
+  "text": "CNL NTM .",
+  "traffic": null,
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790555557134000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-28T09:20:00.000Z",
+  "effective_start": "2026-09-28T00:40:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T00:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "X6113/26 NOTAMN\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280040 C)2609280920\r\nE)FLOW CTL AS FLWS, \r\n AREA:  TOKYO APCH CTA\r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR RJTT VIA\r\nSPENS,SELNO,TOPIT,DOLBA OR UTIBO\r\nRMK: REF AIP ENR1.9-1",
+  "id": "1790555557134000",
+  "issued": "2026-09-28T00:32:00.000Z",
+  "last_updated": "2026-09-28T00:32:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "X6113/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "X",
+  "text": "FLOW CTL AS FLWS, \r\n AREA:  TOKYO APCH CTA\r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR RJTT VIA\r\nSPENS,SELNO,TOPIT,DOLBA OR UTIBO\r\nRMK: REF AIP ENR1.9-1",
+  "traffic": "I",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790555690848000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3243N12952E",
+  "effective_end": "2026-09-29T07:30:00.000Z",
+  "effective_start": "2026-09-28T23:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T00:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      129.862222,
+      32.723056
+     ],
+     [
+      129.861667,
+      32.722222
+     ],
+     [
+      129.863611,
+      32.721111
+     ],
+     [
+      129.864444,
+      32.722222
+     ],
+     [
+      129.862222,
+      32.723056
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RJJJ",
+  "icao_text": "U3446/26 NOTAMN\r\nQ)RJJJ/QWULW/IV/BO/W/000/009/3243N12952E001\r\nA)RJJJ B)2609282330 C)2609290730\r\nE)UNMANNED ACFT:\r\nAREA: BOUNDED BY FLW POINTS\r\n324323N1295144E - 324320N1295142E - 324316N1295149E - 324320N1295152E\r\n- 324323N1295144E \r\n(NAGASAKI-SHI)\r\nWT: 1.5KG\r\nF)SFC G)814FT AMSL",
+  "id": "1790555690848000",
+  "issued": "2026-09-28T00:34:00.000Z",
+  "last_updated": "2026-09-28T00:34:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U3446/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT:\r\nAREA: BOUNDED BY FLW POINTS\r\n324323N1295144E - 324320N1295142E - 324316N1295149E - 324320N1295152E\r\n- 324323N1295144E \r\n(NAGASAKI-SHI)\r\nWT: 1.5KG",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "814FT AMSL",
   "year": "2026"
  }
 }
