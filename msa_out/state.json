@@ -52961,11 +52961,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/e6169f0c9a6d4c249b99be6150739dad.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-28",
     "detail_fetched": false,
     "first_seen": "2026-09-28T12:20:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警892/26",
     "points": [],
     "revoked": false,
     "title": "鼠浪湖东灯浮恢复—浙航警892/26",
