@@ -4273,274 +4273,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790547060913983": {
-  "account_id": "CARF",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "DOM",
-  "coordinates": null,
-  "effective_end": "2026-09-28T18:33:00Z",
-  "effective_start": "2026-09-28T14:27:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-09-27T22:20:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      165.0,
-      28.466667
-     ],
-     [
-      165.0,
-      29.416667
-     ],
-     [
-      165.05,
-      29.416667
-     ],
-     [
-      172.683333,
-      30.433333
-     ],
-     [
-      179.983333,
-      30.95
-     ],
-     [
-      -175.0,
-      31.183333
-     ],
-     [
-      -171.483333,
-      31.283333
-     ],
-     [
-      -161.25,
-      30.55
-     ],
-     [
-      -155.666667,
-      29.616667
-     ],
-     [
-      -151.583333,
-      28.816667
-     ],
-     [
-      -145.433333,
-      26.883333
-     ],
-     [
-      -145.466667,
-      26.833333
-     ],
-     [
-      -154.533333,
-      24.05
-     ],
-     [
-      -156.183333,
-      23.766667
-     ],
-     [
-      -159.316667,
-      24.866667
-     ],
-     [
-      -167.816667,
-      27.633333
-     ],
-     [
-      -175.0,
-      29.416667
-     ],
-     [
-      -176.583333,
-      29.75
-     ],
-     [
-      179.983333,
-      29.8
-     ],
-     [
-      176.233333,
-      29.683333
-     ],
-     [
-      170.166667,
-      29.216667
-     ],
-     [
-      165.0,
-      28.466667
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "KZAK",
-  "icao_text": null,
-  "id": "1790547060913983",
-  "issued": "2026-09-27T22:10:00Z",
-  "last_updated": "2026-09-27T22:11:00Z",
-  "local_text": "!CARF 09/338 ZAK AIRSPACE DCC STARSHIP FLT 14 ASCENT STNR ALT RESERVATION REENTRY AREA WI AN AREA DEFINED AS 282800N1650000E TO 292500N1650000E TO 292500N1650300E TO 302600N1724100E TO 305700N1795900E TO 311100N1750000W TO 311700N1712900W TO 303300N1611500W TO 293700N1554000W TO 284900N1513500W TO 265300N1452600W TO 265000N1452800W TO 240300N1543200W TO 234600N1561100W TO 245200N1591900W TO 273800N1674900W TO 292500N1750000W TO 294500N1763500W TO 294800N1795900E TO 294100N1761400E TO 291300N1701000E TO POINT OF ORIGIN AREA OUTSIDE US CONTROLLED AIRSPACE IS FOR INFO ONLY SFC-UNL 2609281427-2609281833",
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": null,
-  "min_fl": null,
-  "number": "09/338",
-  "purpose": null,
-  "q_code": "QRACA",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": null,
-  "text": "!CARF 09/338 ZAK AIRSPACE DCC STARSHIP FLT 14 ASCENT STNR ALT RESERVATION REENTRY AREA WI AN AREA DEFINED AS 282800N1650000E TO 292500N1650000E TO 292500N1650300E TO 302600N1724100E TO 305700N1795900E TO 311100N1750000W TO 311700N1712900W TO 303300N1611500W TO 293700N1554000W TO 284900N1513500W TO 265300N1452600W TO 265000N1452800W TO 240300N1543200W TO 234600N1561100W TO 245200N1591900W TO 273800N1674900W TO 292500N1750000W TO 294500N1763500W TO 294800N1795900E TO 294100N1761400E TO 291300N1701000E TO POINT OF ORIGIN AREA OUTSIDE US CONTROLLED AIRSPACE IS FOR INFO ONLY SFC-UNL",
-  "traffic": null,
-  "type": null,
-  "upper": "UNL",
-  "year": "2026"
- },
- "1790547060914664": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-28T18:33:00Z",
-  "effective_start": "2026-09-28T14:27:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-09-27T22:20:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      165.0,
-      28.466667
-     ],
-     [
-      165.0,
-      29.416667
-     ],
-     [
-      165.05,
-      29.416667
-     ],
-     [
-      172.683333,
-      30.433333
-     ],
-     [
-      179.983333,
-      30.95
-     ],
-     [
-      -175.0,
-      31.183333
-     ],
-     [
-      -171.483333,
-      31.283333
-     ],
-     [
-      -161.25,
-      30.55
-     ],
-     [
-      -155.666667,
-      29.616667
-     ],
-     [
-      -151.583333,
-      28.816667
-     ],
-     [
-      -145.433333,
-      26.883333
-     ],
-     [
-      -145.466667,
-      26.833333
-     ],
-     [
-      -154.533333,
-      24.05
-     ],
-     [
-      -156.183333,
-      23.766667
-     ],
-     [
-      -159.316667,
-      24.866667
-     ],
-     [
-      -167.816667,
-      27.633333
-     ],
-     [
-      -175.0,
-      29.416667
-     ],
-     [
-      -176.583333,
-      29.75
-     ],
-     [
-      179.983333,
-      29.8
-     ],
-     [
-      176.233333,
-      29.683333
-     ],
-     [
-      170.166667,
-      29.216667
-     ],
-     [
-      165.0,
-      28.466667
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "KZAK",
-  "icao_text": "A4714/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/999/\nA) KZAK\nB) 2609281427\nC) 2609281833\nE) ZAK AIRSPACE DCC STARSHIP FLT 14 ASCENT STNR ALT RESERVATION \nREENTRY AREA WI AN AREA DEFINED AS 282800N1650000E TO 292500N1650000E TO 292500N1650300E TO 302600N1724100E TO 305700N1795900E TO 311100N1750000W TO 311700N1712900W TO 303300N1611500W TO 293700N1554000W TO 284900N1513500W TO 265300N1452600W TO 265000N1452800W TO 240300N1543200W TO 234600N1561100W TO 245200N1591900W TO 273800N1674900W TO 292500N1750000W TO 294500N1763500W TO 294800N1795900E TO 294100N1761400E TO 291300N1701000E TO POINT OF ORIGIN AREA OUTSIDE US CONTROLLED AIRSPACE IS FOR INFO ONLY\nF) SFC\nG) UNL",
-  "id": "1790547060914664",
-  "issued": "2026-09-27T22:10:00Z",
-  "last_updated": "2026-09-27T22:11:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A4714/26",
-  "purpose": "NBO",
-  "q_code": "QRACA",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "W",
-  "series": "A",
-  "text": "ZAK AIRSPACE DCC STARSHIP FLT 14 ASCENT STNR ALT RESERVATION \nREENTRY AREA WI AN AREA DEFINED AS 282800N1650000E TO 292500N1650000E TO 292500N1650300E TO 302600N1724100E TO 305700N1795900E TO 311100N1750000W TO 311700N1712900W TO 303300N1611500W TO 293700N1554000W TO 284900N1513500W TO 265300N1452600W TO 265000N1452800W TO 240300N1543200W TO 234600N1561100W TO 245200N1591900W TO 273800N1674900W TO 292500N1750000W TO 294500N1763500W TO 294800N1795900E TO 294100N1761400E TO 291300N1701000E TO POINT OF ORIGIN AREA OUTSIDE US CONTROLLED AIRSPACE IS FOR INFO ONLY",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "UNL",
-  "year": "2026"
- },
  "1790547428230984": {
   "account_id": "KZAK",
   "area_group": "REF",
@@ -41132,6 +40864,98 @@
   "scope": "W",
   "series": "A",
   "text": "A4726/26 NOTAMC A4685/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2609281559\nE) SPACEX HAS PLANNED A ROCKET LAUNCH. DEBRIS FM THIS LAUNCH WILL FALL W\nCANCELED",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790611275285720": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-01T16:00:00Z",
+  "effective_start": "2026-09-28T16:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-28T16:10:28+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4727/26 NOTAMC A4679/26\nQ) KZAK/QPFXX/IV/NBO/AE/000/999/\nA) KZAK\nB) 2609281600\nE) ATTENTION ACFT OPR AND DISPATCHERS OPERATING WI OAKLAND OCEANIC (KZAK\nCANCELED",
+  "id": "1790611275285720",
+  "issued": "2026-09-28T16:00:00Z",
+  "last_updated": "2026-09-28T16:00:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4727/26",
+  "purpose": "NBO",
+  "q_code": "QPFXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "A4679/26",
+  "schedule": null,
+  "scope": "AE",
+  "series": "A",
+  "text": "A4727/26 NOTAMC A4679/26\nQ) KZAK/QPFXX/IV/NBO/AE/000/999/\nA) KZAK\nB) 2609281600\nE) ATTENTION ACFT OPR AND DISPATCHERS OPERATING WI OAKLAND OCEANIC (KZAK\nCANCELED",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790611334926880": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-01T16:00:00Z",
+  "effective_start": "2026-09-28T16:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-28T16:10:28+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4728/26 NOTAMC A4714/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2609281600\nE) ZAK AIRSPACE DCC STARSHIP FLT 14 ASCENT STNR ALT RESERVATION \nCANCELED",
+  "id": "1790611334926880",
+  "issued": "2026-09-28T16:00:00Z",
+  "last_updated": "2026-09-28T16:01:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4728/26",
+  "purpose": "NBO",
+  "q_code": "QRAXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "A4714/26",
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "A4728/26 NOTAMC A4714/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2609281600\nE) ZAK AIRSPACE DCC STARSHIP FLT 14 ASCENT STNR ALT RESERVATION \nCANCELED",
   "traffic": "IV",
   "type": "C",
   "upper": null,
