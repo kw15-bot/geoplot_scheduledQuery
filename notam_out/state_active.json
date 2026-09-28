@@ -103527,312 +103527,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790587904374000": {
-  "account_id": "RKRRYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3724N12640E",
-  "effective_end": "2026-09-28T10:05:00Z",
-  "effective_start": "2026-09-28T09:30:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RKRR",
-  "first_seen": "2026-09-28T09:40:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      126.667222,
-      37.479573
-     ],
-     [
-      126.677485,
-      37.479172
-     ],
-     [
-      126.687649,
-      37.477974
-     ],
-     [
-      126.697616,
-      37.475991
-     ],
-     [
-      126.707291,
-      37.473241
-     ],
-     [
-      126.71658,
-      37.46975
-     ],
-     [
-      126.725393,
-      37.465554
-     ],
-     [
-      126.733646,
-      37.460691
-     ],
-     [
-      126.74126,
-      37.455209
-     ],
-     [
-      126.74816,
-      37.44916
-     ],
-     [
-      126.754281,
-      37.442603
-     ],
-     [
-      126.759564,
-      37.435601
-     ],
-     [
-      126.763957,
-      37.428222
-     ],
-     [
-      126.767419,
-      37.420536
-     ],
-     [
-      126.769916,
-      37.412617
-     ],
-     [
-      126.771423,
-      37.404542
-     ],
-     [
-      126.771928,
-      37.396389
-     ],
-     [
-      126.771423,
-      37.388236
-     ],
-     [
-      126.769916,
-      37.380161
-     ],
-     [
-      126.767419,
-      37.372242
-     ],
-     [
-      126.763957,
-      37.364556
-     ],
-     [
-      126.759564,
-      37.357177
-     ],
-     [
-      126.754281,
-      37.350175
-     ],
-     [
-      126.74816,
-      37.343618
-     ],
-     [
-      126.74126,
-      37.337569
-     ],
-     [
-      126.733646,
-      37.332087
-     ],
-     [
-      126.725393,
-      37.327224
-     ],
-     [
-      126.71658,
-      37.323028
-     ],
-     [
-      126.707291,
-      37.319537
-     ],
-     [
-      126.697616,
-      37.316787
-     ],
-     [
-      126.687649,
-      37.314804
-     ],
-     [
-      126.677485,
-      37.313606
-     ],
-     [
-      126.667222,
-      37.313205
-     ],
-     [
-      126.656959,
-      37.313606
-     ],
-     [
-      126.646795,
-      37.314804
-     ],
-     [
-      126.636828,
-      37.316787
-     ],
-     [
-      126.627153,
-      37.319537
-     ],
-     [
-      126.617864,
-      37.323028
-     ],
-     [
-      126.609051,
-      37.327224
-     ],
-     [
-      126.600798,
-      37.332087
-     ],
-     [
-      126.593184,
-      37.337569
-     ],
-     [
-      126.586284,
-      37.343618
-     ],
-     [
-      126.580163,
-      37.350175
-     ],
-     [
-      126.57488,
-      37.357177
-     ],
-     [
-      126.570487,
-      37.364556
-     ],
-     [
-      126.567025,
-      37.372242
-     ],
-     [
-      126.564528,
-      37.380161
-     ],
-     [
-      126.563021,
-      37.388236
-     ],
-     [
-      126.562516,
-      37.396389
-     ],
-     [
-      126.563021,
-      37.404542
-     ],
-     [
-      126.564528,
-      37.412617
-     ],
-     [
-      126.567025,
-      37.420536
-     ],
-     [
-      126.570487,
-      37.428222
-     ],
-     [
-      126.57488,
-      37.435601
-     ],
-     [
-      126.580163,
-      37.442603
-     ],
-     [
-      126.586284,
-      37.44916
-     ],
-     [
-      126.593184,
-      37.455209
-     ],
-     [
-      126.600798,
-      37.460691
-     ],
-     [
-      126.609051,
-      37.465554
-     ],
-     [
-      126.617864,
-      37.46975
-     ],
-     [
-      126.627153,
-      37.473241
-     ],
-     [
-      126.636828,
-      37.475991
-     ],
-     [
-      126.646795,
-      37.477974
-     ],
-     [
-      126.656959,
-      37.479172
-     ],
-     [
-      126.667222,
-      37.479573
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RKRR",
-  "icao_text": "D2929/26 NOTAMN  \r\nQ)RKRR/QRPCA/IV/NBO/W/000/999/3724N12640E016\r\nA)RKRR B)2609280930 C)2609281005\r\nE)TEMPO PROHIBITED AREA ACT AS FLW:\r\n1. AREA : A CIRCLE RADIUS 5NM CENTERED ON 372347N1264002E\r\n2. BUFFER ZONE : TEMPO BUFFER ZONE FM OUTSIDE OF PROHIBITED AREA TO\r\n                 10NM\r\n3. RMK : \r\n  - EXC SKED CIV ACFT USING AWY, EMERG MISSION ACFT\r\n  - EXC INFO/SURVEILLANCE RECONNAISSANCE ACFT(TKOF AND LDG NOT AVBL)\r\n  - FOR PRE-COORDINATION AND APV FOR PASSING THROUGH OR\r\n    ENTERING BUFFER ZONE CTC ROKAF SODO AT 031-669-7020/1\r\n    OR 031-661-4471 THEN CTC MCRC/ACC ON FREQ DURING THE FLT\r\nF)SFC G)UNL",
-  "id": "1790587904374000",
-  "issued": "2026-09-28T09:31:00Z",
-  "last_updated": "2026-09-28T09:32:00Z",
-  "local_text": null,
-  "location": "RKRR",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "D2929/26",
-  "purpose": "NBO",
-  "q_code": "QRPCA",
-  "qline_offset_nm": 0.2,
-  "radius_nm": 16.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "W",
-  "series": "D",
-  "text": "TEMPO PROHIBITED AREA ACT AS FLW:\r\n1. AREA : A CIRCLE RADIUS 5NM CENTERED ON 372347N1264002E\r\n2. BUFFER ZONE : TEMPO BUFFER ZONE FM OUTSIDE OF PROHIBITED AREA TO\r\n                 10NM\r\n3. RMK : \r\n  - EXC SKED CIV ACFT USING AWY, EMERG MISSION ACFT\r\n  - EXC INFO/SURVEILLANCE RECONNAISSANCE ACFT(TKOF AND LDG NOT AVBL)\r\n  - FOR PRE-COORDINATION AND APV FOR PASSING THROUGH OR\r\n    ENTERING BUFFER ZONE CTC ROKAF SODO AT 031-669-7020/1\r\n    OR 031-661-4471 THEN CTC MCRC/ACC ON FREQ DURING THE FLT",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "UNL",
-  "year": "2026"
- },
  "1790587930798000": {
   "account_id": "RJAAYNYX",
   "area_group": "REF",
@@ -106157,6 +105851,170 @@
   "traffic": "I",
   "type": "R",
   "upper": null,
+  "year": "2026"
+ },
+ "1790589647493000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3453N13747E",
+  "effective_end": "2026-12-22T08:00:00Z",
+  "effective_start": "2026-10-01T00:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T10:10:30+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      137.8175,
+      34.860833
+     ],
+     [
+      137.813889,
+      34.852778
+     ],
+     [
+      137.801667,
+      34.854722
+     ],
+     [
+      137.800278,
+      34.859722
+     ],
+     [
+      137.805833,
+      34.866944
+     ],
+     [
+      137.799722,
+      34.877778
+     ],
+     [
+      137.769722,
+      34.887778
+     ],
+     [
+      137.759444,
+      34.906667
+     ],
+     [
+      137.763056,
+      34.913056
+     ],
+     [
+      137.814444,
+      34.877222
+     ],
+     [
+      137.8175,
+      34.860833
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RJJJ",
+  "icao_text": "U3464/26 NOTAMN\r\nQ)RJJJ/QWULW/IV/BO/W/000/012/3453N13747E003\r\nA)RJJJ B)2610010000 C)2612220800\r\nE)BEYOND VISUAL LINE OF SIGHT UNMANNED ACFT:\r\nAREA: BOUNDED BY FLW POINTS\r\n345139N1374903E - 345110N1374850E - 345117N1374806E - 345135N1374801E\r\n- 345201N1374821E - 345240N1374759E - 345316N1374611E -\r\n345424N1374534E - 345447N1374547E - 345238N1374852E - 345139N1374903E\r\n(HAMAMATSU-SHI IN SHIZUOKA)\r\nWT: 10.2KG\r\nCONTACT INFORMATION: 080-4375-5066\r\nF)SFC G)1182FT AMSL",
+  "id": "1790589647493000",
+  "issued": "2026-09-28T10:00:00Z",
+  "last_updated": "2026-09-28T10:01:00Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": "SFC",
+  "max_fl": "012",
+  "min_fl": "000",
+  "number": "U3464/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.7,
+  "radius_nm": 3.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "BEYOND VISUAL LINE OF SIGHT UNMANNED ACFT:\r\nAREA: BOUNDED BY FLW POINTS\r\n345139N1374903E - 345110N1374850E - 345117N1374806E - 345135N1374801E\r\n- 345201N1374821E - 345240N1374759E - 345316N1374611E -\r\n345424N1374534E - 345447N1374547E - 345238N1374852E - 345139N1374903E\r\n(HAMAMATSU-SHI IN SHIZUOKA)\r\nWT: 10.2KG\r\nCONTACT INFORMATION: 080-4375-5066",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "1182FT AMSL",
+  "year": "2026"
+ },
+ "1790589927665000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3456N13752E",
+  "effective_end": "2026-12-22T08:00:00.000Z",
+  "effective_start": "2026-10-01T00:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T10:10:30+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      137.810278,
+      34.855556
+     ],
+     [
+      137.8125,
+      34.888889
+     ],
+     [
+      137.8525,
+      34.906111
+     ],
+     [
+      137.885833,
+      35.011944
+     ],
+     [
+      137.921111,
+      35.006111
+     ],
+     [
+      137.884444,
+      34.898056
+     ],
+     [
+      137.810278,
+      34.855556
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RJJJ",
+  "icao_text": "U3465/26 NOTAMN\r\nQ)RJJJ/QWULW/IV/BO/W/000/025/3456N13752E006\r\nA)RJJJ B)2610010000 C)2612220800\r\nE)BEYOND VISUAL LINE OF SIGHT UNMANNED ACFT:\r\nAREA: BOUNDED BY FLW POINTS\r\n345120N1374837E - 345320N1374845E - 345422N1375109E - 350043N1375309E\r\n- 350022N1375516E - 345353N1375304E - 345120N1374837E \r\n(HAMAMATSU-SHI IN SHIZUOKA)\r\nWT: 10.2KG\r\nCONTACT INFORMATION: 080-4375-5066\r\nF)SFC G)2461FT AMSL",
+  "id": "1790589927665000",
+  "issued": "2026-09-28T10:05:00.000Z",
+  "last_updated": "2026-09-28T10:05:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U3465/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 6.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "BEYOND VISUAL LINE OF SIGHT UNMANNED ACFT:\r\nAREA: BOUNDED BY FLW POINTS\r\n345120N1374837E - 345320N1374845E - 345422N1375109E - 350043N1375309E\r\n- 350022N1375516E - 345353N1375304E - 345120N1374837E \r\n(HAMAMATSU-SHI IN SHIZUOKA)\r\nWT: 10.2KG\r\nCONTACT INFORMATION: 080-4375-5066",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "2461FT AMSL",
   "year": "2026"
  }
 }
