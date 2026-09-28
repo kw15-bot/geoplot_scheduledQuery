@@ -31844,5 +31844,403 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1790553157485000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-28T04:30:00Z",
+  "effective_start": "2026-09-28T00:05:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T00:00:45+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "X6108/26 NOTAMN\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280005 C)2609280430\r\nE)FLOW CTL AS FLWS, \r\n AREA:  FUKUOKA APCH CTA\r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR RJFF\r\nRMK: REF AIP ENR1.9-1",
+  "id": "1790553157485000",
+  "issued": "2026-09-27T23:52:00Z",
+  "last_updated": "2026-09-27T23:53:00Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "X6108/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "X",
+  "text": "FLOW CTL AS FLWS, \r\n AREA:  FUKUOKA APCH CTA\r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR RJFF\r\nRMK: REF AIP ENR1.9-1",
+  "traffic": "I",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790553190748000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-28T04:30:00.000Z",
+  "effective_start": "2026-09-28T00:05:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T00:00:45+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "X6109/26 NOTAMN\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280005 C)2609280430\r\nE)FLOW CTL AS FLWS, \r\n AREA:  FUKUOKA APCH CTA\r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR RJFF\r\nRMK: REF AIP ENR1.9-1",
+  "id": "1790553190748000",
+  "issued": "2026-09-27T23:53:00.000Z",
+  "last_updated": "2026-09-27T23:53:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "X6109/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "X",
+  "text": "FLOW CTL AS FLWS, \r\n AREA:  FUKUOKA APCH CTA\r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR RJFF\r\nRMK: REF AIP ENR1.9-1",
+  "traffic": "I",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790553634875092": {
+  "account_id": "RJSM",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "MIL",
+  "coordinates": "4042N14122E",
+  "effective_end": "2026-12-17T23:59:00Z",
+  "effective_start": "2026-09-28T00:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T00:00:45+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      141.366667,
+      40.783184
+     ],
+     [
+      141.377421,
+      40.782783
+     ],
+     [
+      141.388072,
+      40.781585
+     ],
+     [
+      141.398517,
+      40.779602
+     ],
+     [
+      141.408655,
+      40.776852
+     ],
+     [
+      141.418389,
+      40.773361
+     ],
+     [
+      141.427625,
+      40.769165
+     ],
+     [
+      141.436273,
+      40.764302
+     ],
+     [
+      141.444251,
+      40.75882
+     ],
+     [
+      141.451483,
+      40.752771
+     ],
+     [
+      141.457897,
+      40.746214
+     ],
+     [
+      141.463432,
+      40.739212
+     ],
+     [
+      141.468036,
+      40.731833
+     ],
+     [
+      141.471664,
+      40.724147
+     ],
+     [
+      141.47428,
+      40.716228
+     ],
+     [
+      141.47586,
+      40.708153
+     ],
+     [
+      141.476388,
+      40.7
+     ],
+     [
+      141.47586,
+      40.691847
+     ],
+     [
+      141.47428,
+      40.683772
+     ],
+     [
+      141.471664,
+      40.675853
+     ],
+     [
+      141.468036,
+      40.668167
+     ],
+     [
+      141.463432,
+      40.660788
+     ],
+     [
+      141.457897,
+      40.653786
+     ],
+     [
+      141.451483,
+      40.647229
+     ],
+     [
+      141.444251,
+      40.64118
+     ],
+     [
+      141.436273,
+      40.635698
+     ],
+     [
+      141.427625,
+      40.630835
+     ],
+     [
+      141.418389,
+      40.626639
+     ],
+     [
+      141.408655,
+      40.623148
+     ],
+     [
+      141.398517,
+      40.620398
+     ],
+     [
+      141.388072,
+      40.618415
+     ],
+     [
+      141.377421,
+      40.617217
+     ],
+     [
+      141.366667,
+      40.616816
+     ],
+     [
+      141.355912,
+      40.617217
+     ],
+     [
+      141.345261,
+      40.618415
+     ],
+     [
+      141.334816,
+      40.620398
+     ],
+     [
+      141.324678,
+      40.623148
+     ],
+     [
+      141.314944,
+      40.626639
+     ],
+     [
+      141.305709,
+      40.630835
+     ],
+     [
+      141.29706,
+      40.635698
+     ],
+     [
+      141.289082,
+      40.64118
+     ],
+     [
+      141.281851,
+      40.647229
+     ],
+     [
+      141.275437,
+      40.653786
+     ],
+     [
+      141.269901,
+      40.660788
+     ],
+     [
+      141.265297,
+      40.668167
+     ],
+     [
+      141.26167,
+      40.675853
+     ],
+     [
+      141.259053,
+      40.683772
+     ],
+     [
+      141.257474,
+      40.691847
+     ],
+     [
+      141.256945,
+      40.7
+     ],
+     [
+      141.257474,
+      40.708153
+     ],
+     [
+      141.259053,
+      40.716228
+     ],
+     [
+      141.26167,
+      40.724147
+     ],
+     [
+      141.265297,
+      40.731833
+     ],
+     [
+      141.269901,
+      40.739212
+     ],
+     [
+      141.275437,
+      40.746214
+     ],
+     [
+      141.281851,
+      40.752771
+     ],
+     [
+      141.289082,
+      40.75882
+     ],
+     [
+      141.29706,
+      40.764302
+     ],
+     [
+      141.305709,
+      40.769165
+     ],
+     [
+      141.314944,
+      40.773361
+     ],
+     [
+      141.324678,
+      40.776852
+     ],
+     [
+      141.334816,
+      40.779602
+     ],
+     [
+      141.345261,
+      40.781585
+     ],
+     [
+      141.355912,
+      40.782783
+     ],
+     [
+      141.366667,
+      40.783184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RJSM",
+  "icao_text": "M1574/26 NOTAMN \r\nQ) RJJJ/QMKXX/IV/NBO/A/000/999/4042N14122E005 \r\nA) RJSM \r\nB) 2609280000 \r\nC) 2612172359 \r\nE) BE ADVISED FOR TIME SENSITIVE HAZ CARGO MISSIONS PROVIDING LESS THAN 14 DAYS OF PRIOR NOTICE: TOWING OR REVERSE THRUST MAY BE REQUIRED. RJSM CAN ONLY PROVIDE TOWBARS FOR THE FOLLOWING AIR FRAMES: C-130, E-3, C-21, C-17A, KC-135, KC-10, B-747* (ATLAS AIR ONLY), MD-11, C-12, AND ALL FIGHTER ACFT. ALL OTHER AIR FRAMES WILL NEED TO PROVIDE THEIR OWN TOWBAR IF UNABLE TO REVERSE.",
+  "id": "1790553634875092",
+  "issued": "2026-09-28T00:00:00Z",
+  "last_updated": "2026-09-28T00:00:00Z",
+  "local_text": null,
+  "location": "RJSM",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "M1574/26",
+  "purpose": "NBO",
+  "q_code": "QMKXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "M",
+  "text": "BE ADVISED FOR TIME SENSITIVE HAZ CARGO MISSIONS PROVIDING LESS THAN 14 DAYS OF PRIOR NOTICE: TOWING OR REVERSE THRUST MAY BE REQUIRED. RJSM CAN ONLY PROVIDE TOWBARS FOR THE FOLLOWING AIR FRAMES: C-130, E-3, C-21, C-17A, KC-135, KC-10, B-747* (ATLAS AIR ONLY), MD-11, C-12, AND ALL FIGHTER ACFT. ALL OTHER AIR FRAMES WILL NEED TO PROVIDE THEIR OWN TOWBAR IF UNABLE TO REVERSE.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
  }
 }
