@@ -226,14 +226,18 @@ _REF = re.compile(r"(\S+/\d+)\s+NOTAM([NRC])(?:\s+(\S+/\d+))?")
 #   FAA NOTAM SearchのPDFで確認)も読む。空白は緯度の桁の間だけ・1文字ずつ許し、読み取り後に取り除く。
 _TEXT_COORD = re.compile(
     r"(?:(?P<ns1>[NS])(?P<lat1>\d(?:[ \t]?\d){3}(?:(?:[ \t]?\d){2})?)\s*(?P<ew1>[EW])(?P<lon1>\d{5}(?:\d{2})?))"
-    r"|(?:(?P<lat2>\d{4}(?:\d{2})?)(?P<ns2>[NS])\s*(?P<lon2>\d{5}(?:\d{2})?)(?P<ew2>[EW]))"
+    r"|(?:(?P<lat2>\d{4}(?:\d{2}(?:\.\d+)?)?)(?P<ns2>[NS])\s*(?P<lon2>\d{5}(?:\d{2}(?:\.\d+)?)?)(?P<ew2>[EW]))"
 )
 
 
 def _dms(digits, deg_len):
+    # 秒に小数が付く表記(364322.287N 1273032.318E。RKRRのA1391/26で確認)にも対応する
+    digits, _, frac = digits.partition(".")
     d = int(digits[:deg_len])
     m = int(digits[deg_len:deg_len + 2])
     sec = int(digits[deg_len + 2:deg_len + 4]) if len(digits) > deg_len + 2 else 0
+    if frac and len(digits) > deg_len + 2:
+        sec += float("0." + frac)
     if m >= 60 or sec >= 60:
         return None
     return d + m / 60.0 + sec / 3600.0
@@ -267,6 +271,47 @@ def _is_named_waypoint_coord(e_text, start, end):
 # 座標と座標の間がこれ(空白・ハイフン・カンマ・TO)だけなら、同じ多角形の続きとみなす。
 # それ以外(ピリオドや "AREA 2:" のような見出し)が挟まっていたら、そこで多角形を区切る。
 _RING_CONTINUES = re.compile(r"(?:[\s,\-]|\bTO\b)*", re.I)
+# 座標の数字の途中で改行された表記(-36082⏎0N1293040E、N128⏎5338E。RKRRで確認)をつなぐ
+_SPLIT_DIGITS = re.compile(r"(?<=\d)[ \t]*\r?\n[ \t]*(?=\d)")
+# E項の円: "A CIRCLE RADIUS 7NM CENTERED ON <座標>" / "200NM RADIUS OF <座標>" / "0.5NM RAD OF <座標>"
+# (いずれも直後に座標が来る形。単位は NM / KM / M)
+_R = r"(?P<r>\d+(?:\.\d+)?)\s*(?P<u>NM|KM|M)\b"
+_CIRCLE_BEFORE = re.compile(
+    r"(?:CIRCLE\s+(?:WITH\s+)?(?:A\s+)?RADIUS\s+(?:OF\s+)?" + _R + r"\s+CENT(?:ER|RE)(?:ED|D)?\s+(?:ON|AT)"
+    r"|" + _R.replace("?P<r>", "?P<r2>").replace("?P<u>", "?P<u2>") + r"\s+(?:RADIUS|RAD)\s+(?:OF|CENT(?:ER|RE)(?:ED|D)?\s+ON|AROUND))\s*$",
+    re.I)
+# E項の帯状エリア: "1NM EITHER SIDE OF LINE <座標>-<座標>-..." (線の両側に指定幅)
+_CORRIDOR = re.compile(r"(?P<w>\d+(?:\.\d+)?)\s*(?P<u>NM|KM)\s+EITHER\s+SIDE\s+OF\s+(?:THE\s+)?(?:CENT(?:ER|RE)\s*)?LINE", re.I)
+TEXT_CIRCLE_MAX_NM = 500
+
+
+def _to_nm(value, unit):
+    unit = unit.upper()
+    return value / 1.852 if unit == "KM" else value / 1852.0 if unit == "M" else value
+
+
+def _corridor_ring(pts, width_nm):
+    """線(GeoJSON順 [lon,lat] の点列)の両側 width_nm の帯を、閉じたリングにする(端は平ら)。
+    幅が小さいので、線の中央緯度での等長方形近似で十分。"""
+    lat0 = sum(p[1] for p in pts) / len(pts)
+    kx = 60.0 * max(math.cos(math.radians(lat0)), 0.01)      # 経度1度あたりのNM
+    xy = [(p[0] * kx, p[1] * 60.0) for p in pts]
+    normals = []
+    for (x1, y1), (x2, y2) in zip(xy, xy[1:]):
+        d = math.hypot(x2 - x1, y2 - y1) or 1.0
+        normals.append((-(y2 - y1) / d, (x2 - x1) / d))
+    left, right = [], []
+    for i, (x, y) in enumerate(xy):
+        ns = [normals[k] for k in (i - 1, i) if 0 <= k < len(normals)]
+        nx, ny = sum(n[0] for n in ns), sum(n[1] for n in ns)
+        ln = math.hypot(nx, ny) or 1.0
+        nx, ny = nx / ln, ny / ln
+        cos_half = max(nx * ns[0][0] + ny * ns[0][1], 0.5)   # 曲がり角での幅の補正(上限2倍)
+        off = width_nm / cos_half
+        left.append([round((x + nx * off) / kx, 6), round((y + ny * off) / 60.0, 6)])
+        right.append([round((x - nx * off) / kx, 6), round((y - ny * off) / 60.0, 6)])
+    ring = left + right[::-1]
+    return ring + [ring[0]]
 
 
 def parse_text_polygons(e_text):
@@ -274,17 +319,24 @@ def parse_text_polygons(e_text):
     先頭点に戻ったところでリングを閉じ、複数エリアの列挙にも対応。3点未満は捨てる。
     座標の間に区切り記号以外(ピリオド・"AREA 2:"等)が挟まったところでも多角形を区切る
     (2026-09-27追加: L1539/26のように各エリアが先頭点に戻らず列挙される書式への対応)。
-    括弧内に単独で書かれた座標(臨時ウェイポイント定義)は頂点として数えない。"""
+    括弧内に単独で書かれた座標(臨時ウェイポイント定義)は頂点として数えない。
+    2026-09-28追加: 本文に書かれた円("A CIRCLE RADIUS 7NM CENTERED ON <座標>" 等)は円のリングに、
+    "1NM EITHER SIDE OF LINE <座標>-<座標>" は線の両側の帯のリングにする。座標の数字の途中の改行もつなぐ。"""
+    t = _SPLIT_DIGITS.sub("", e_text or "")
     rings, cur = [], []
+    corridor = None          # 帯状エリアの点列を集めている間は幅(NM)
     prev_end = None
-    for m in _TEXT_COORD.finditer(e_text or ""):
-        if _is_named_waypoint_coord(e_text, m.start(), m.end()):
+
+    def flush():
+        if corridor is not None:
+            if len(cur) >= 2:
+                rings.append(_corridor_ring(cur, corridor))
+        elif len(cur) >= 3:
+            rings.append(cur + [cur[0]])
+
+    for m in _TEXT_COORD.finditer(t):
+        if _is_named_waypoint_coord(t, m.start(), m.end()):
             continue
-        if cur and prev_end is not None and not _RING_CONTINUES.fullmatch(e_text[prev_end:m.start()]):
-            if len(cur) >= 3:
-                rings.append(cur + [cur[0]])
-            cur = []
-        prev_end = m.end()
         if m["ns1"] is not None:
             ns, lat_digits, ew, lon_digits = m["ns1"], re.sub(r"[ \t]", "", m["lat1"]), m["ew1"], m["lon1"]
         else:
@@ -293,13 +345,33 @@ def parse_text_polygons(e_text):
         if lat is None or lon is None or lat > 90 or lon > 180:
             continue
         pt = [round(lon if ew == "E" else -lon, 6), round(lat if ns == "N" else -lat, 6)]
-        if cur and pt == cur[0] and len(cur) >= 3:
+        gap = t[prev_end:m.start()] if prev_end is not None else t[:m.start()]
+
+        c = _CIRCLE_BEFORE.search(t[max(0, m.start() - 120):m.start()])
+        if c:
+            flush()
+            cur, corridor = [], None
+            r_nm = _to_nm(float(c["r"] or c["r2"]), c["u"] or c["u2"])
+            if 0 < r_nm <= TEXT_CIRCLE_MAX_NM:
+                rings.append(circle_ring(pt[1], pt[0], r_nm))
+            prev_end = m.end()
+            continue
+
+        hdr = None
+        for h in _CORRIDOR.finditer(gap):
+            hdr = h
+        if cur and (hdr or not _RING_CONTINUES.fullmatch(gap)):
+            flush()
+            cur, corridor = [], None
+        if hdr:
+            corridor = _to_nm(float(hdr["w"]), hdr["u"])
+        prev_end = m.end()
+        if corridor is None and cur and pt == cur[0] and len(cur) >= 3:
             rings.append(cur + [pt])
             cur = []
         else:
             cur.append(pt)
-    if len(cur) >= 3:
-        rings.append(cur + [cur[0]])
+    flush()
     return rings
 
 
