@@ -41772,5 +41772,423 @@
   "type": "N",
   "upper": "FL291",
   "year": "2026"
+ },
+ "1790620305332000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3228N08004E",
+  "effective_end": "2026-09-29T04:00:00.000Z",
+  "effective_start": "2026-09-28T21:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZWUQ",
+  "first_seen": "2026-09-28T18:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      80.066667,
+      32.749491
+     ],
+     [
+      80.099524,
+      32.748129
+     ],
+     [
+      80.132064,
+      32.744057
+     ],
+     [
+      80.163975,
+      32.737313
+     ],
+     [
+      80.194949,
+      32.727962
+     ],
+     [
+      80.224687,
+      32.716095
+     ],
+     [
+      80.252904,
+      32.701826
+     ],
+     [
+      80.279326,
+      32.685293
+     ],
+     [
+      80.303701,
+      32.666654
+     ],
+     [
+      80.325793,
+      32.646088
+     ],
+     [
+      80.34539,
+      32.623795
+     ],
+     [
+      80.362302,
+      32.599989
+     ],
+     [
+      80.376367,
+      32.574899
+     ],
+     [
+      80.38745,
+      32.548766
+     ],
+     [
+      80.395443,
+      32.521843
+     ],
+     [
+      80.40027,
+      32.494388
+     ],
+     [
+      80.401884,
+      32.466667
+     ],
+     [
+      80.40027,
+      32.438945
+     ],
+     [
+      80.395443,
+      32.41149
+     ],
+     [
+      80.38745,
+      32.384567
+     ],
+     [
+      80.376367,
+      32.358434
+     ],
+     [
+      80.362302,
+      32.333344
+     ],
+     [
+      80.34539,
+      32.309538
+     ],
+     [
+      80.325793,
+      32.287245
+     ],
+     [
+      80.303701,
+      32.26668
+     ],
+     [
+      80.279326,
+      32.248041
+     ],
+     [
+      80.252904,
+      32.231507
+     ],
+     [
+      80.224687,
+      32.217238
+     ],
+     [
+      80.194949,
+      32.205371
+     ],
+     [
+      80.163975,
+      32.196021
+     ],
+     [
+      80.132064,
+      32.189277
+     ],
+     [
+      80.099524,
+      32.185204
+     ],
+     [
+      80.066667,
+      32.183842
+     ],
+     [
+      80.03381,
+      32.185204
+     ],
+     [
+      80.001269,
+      32.189277
+     ],
+     [
+      79.969358,
+      32.196021
+     ],
+     [
+      79.938384,
+      32.205371
+     ],
+     [
+      79.908646,
+      32.217238
+     ],
+     [
+      79.88043,
+      32.231507
+     ],
+     [
+      79.854007,
+      32.248041
+     ],
+     [
+      79.829632,
+      32.26668
+     ],
+     [
+      79.80754,
+      32.287245
+     ],
+     [
+      79.787944,
+      32.309538
+     ],
+     [
+      79.771031,
+      32.333344
+     ],
+     [
+      79.756966,
+      32.358434
+     ],
+     [
+      79.745884,
+      32.384567
+     ],
+     [
+      79.73789,
+      32.41149
+     ],
+     [
+      79.733063,
+      32.438945
+     ],
+     [
+      79.731449,
+      32.466667
+     ],
+     [
+      79.733063,
+      32.494388
+     ],
+     [
+      79.73789,
+      32.521843
+     ],
+     [
+      79.745884,
+      32.548766
+     ],
+     [
+      79.756966,
+      32.574899
+     ],
+     [
+      79.771031,
+      32.599989
+     ],
+     [
+      79.787944,
+      32.623795
+     ],
+     [
+      79.80754,
+      32.646088
+     ],
+     [
+      79.829632,
+      32.666654
+     ],
+     [
+      79.854007,
+      32.685293
+     ],
+     [
+      79.88043,
+      32.701826
+     ],
+     [
+      79.908646,
+      32.716095
+     ],
+     [
+      79.938384,
+      32.727962
+     ],
+     [
+      79.969358,
+      32.737313
+     ],
+     [
+      80.001269,
+      32.744057
+     ],
+     [
+      80.03381,
+      32.748129
+     ],
+     [
+      80.066667,
+      32.749491
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZWUQ",
+  "icao_text": "A5003/26 NOTAMN\r\nQ)ZWUQ/QRTLP/IV/BO/W/000/276/3228N08004E017\r\nA)ZWUQ B)2609282130 C)2609290400 \r\nE) THE AREA WITHIN A CIRCLE CENTERED AT SHIQUANHE VOR 'SQH' WITH \r\nRADIUS OF 30KM CLSD AT 8,400M AND BELOW.\r\nF)GND G)8400M AMSL",
+  "id": "1790620305332000",
+  "issued": "2026-09-28T18:31:00.000Z",
+  "last_updated": "2026-09-28T18:31:00.000Z",
+  "local_text": null,
+  "location": "ZWUQ",
+  "lower": "GND",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A5003/26",
+  "purpose": "BO",
+  "q_code": "QRTLP",
+  "qline_offset_nm": null,
+  "radius_nm": 17.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "THE AREA WITHIN A CIRCLE CENTERED AT SHIQUANHE VOR 'SQH' WITH \r\nRADIUS OF 30KM CLSD AT 8,400M AND BELOW.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "8400M AMSL",
+  "year": "2026"
+ },
+ "1790620353182000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T06:40:00Z",
+  "effective_start": "2026-09-29T01:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZWUQ",
+  "first_seen": "2026-09-28T18:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     88.204444,
+     44.555278
+    ],
+    [
+     88.3175,
+     44.748611
+    ],
+    [
+     88.984444,
+     45.877778
+    ]
+   ],
+   "type": "LineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZWUQ",
+  "icao_text": "A5004/26 NOTAMN\r\nQ)ZWUQ/QARLT/IV/NBO/E/000/291/\r\nA)ZWUQ B)2609290130 C)2609290640 \r\nE) SEGMENT MULOR - NIRAV OF ATS RTE G588 CLSD AT 8,900M AND BELOW.\r\nF)GND G)8900M AMSL",
+  "id": "1790620353182000",
+  "issued": "2026-09-28T18:32:00Z",
+  "last_updated": "2026-09-28T18:33:00Z",
+  "local_text": null,
+  "location": "ZWUQ",
+  "lower": "GND",
+  "max_fl": "291",
+  "min_fl": "000",
+  "number": "A5004/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "SEGMENT MULOR - NIRAV OF ATS RTE G588 CLSD AT 8,900M AND BELOW.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "8900M AMSL",
+  "year": "2026"
+ },
+ "1790620480624000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T13:35:00Z",
+  "effective_start": "2026-09-29T11:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZWUQ",
+  "first_seen": "2026-09-28T18:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     88.204444,
+     44.555278
+    ],
+    [
+     88.3175,
+     44.748611
+    ],
+    [
+     88.984444,
+     45.877778
+    ]
+   ],
+   "type": "LineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZWUQ",
+  "icao_text": "A5005/26 NOTAMN\r\nQ)ZWUQ/QARLT/IV/NBO/E/000/291/\r\nA)ZWUQ B)2609291130 C)2609291335 \r\nE) SEGMENT MULOR - NIRAV OF ATS RTE G588 CLSD AT 8,900M AND BELOW.\r\nF)GND G)8900M AMSL",
+  "id": "1790620480624000",
+  "issued": "2026-09-28T18:32:00Z",
+  "last_updated": "2026-09-28T18:35:00Z",
+  "local_text": null,
+  "location": "ZWUQ",
+  "lower": "GND",
+  "max_fl": "291",
+  "min_fl": "000",
+  "number": "A5005/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "SEGMENT MULOR - NIRAV OF ATS RTE G588 CLSD AT 8,900M AND BELOW.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "8900M AMSL",
+  "year": "2026"
  }
 }
