@@ -24449,6 +24449,18 @@
     "title": "拖带作业—沪航警664/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5ac6f497baf441ef97f692d5e8ed6a0b.html?hav=1jWj6r2hy3yfmNttMvtCHK1D5s"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5adc850fbdf348408434e0c3a7270200.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-28",
+    "detail_fetched": false,
+    "first_seen": "2026-09-28T07:10:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警673/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5adc850fbdf348408434e0c3a7270200.html"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5af13d627d6d48e7ba5981ac65e2b42b.html": {
     "bureau": "河北海事局",
     "cancels": [],
@@ -33954,6 +33966,7 @@
       ]
     ],
     "military": true,
+    "own_id": "琼航警190/26",
     "points": [
       {
         "end": 54,
@@ -51605,6 +51618,18 @@
     "revoked": false,
     "title": "超大型船舶—沪航警746/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dec73f35d406454ca616928b59553b79.html"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/deeed443a94e461cb5e99f094a7ddd76.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-28",
+    "detail_fetched": false,
+    "first_seen": "2026-09-28T07:10:32+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警672/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/deeed443a94e461cb5e99f094a7ddd76.html"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/def41b8d26bb4895999c3981ac47c35e.html": {
     "bureau": "江苏海事局",
