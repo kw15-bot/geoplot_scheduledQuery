@@ -52155,312 +52155,6 @@
   "upper": "10000FT AMSL",
   "year": "2026"
  },
- "1790566138666000": {
-  "account_id": "RJAAYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3408N13437E",
-  "effective_end": "2026-09-28T07:10:00Z",
-  "effective_start": "2026-09-28T06:45:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RJJJ",
-  "first_seen": "2026-09-28T03:30:35+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      134.616667,
-      34.216517
-     ],
-     [
-      134.626517,
-      34.216116
-     ],
-     [
-      134.636272,
-      34.214919
-     ],
-     [
-      134.645839,
-      34.212935
-     ],
-     [
-      134.655125,
-      34.210185
-     ],
-     [
-      134.66404,
-      34.206695
-     ],
-     [
-      134.672499,
-      34.202498
-     ],
-     [
-      134.68042,
-      34.197635
-     ],
-     [
-      134.687728,
-      34.192153
-     ],
-     [
-      134.694351,
-      34.186104
-     ],
-     [
-      134.700226,
-      34.179548
-     ],
-     [
-      134.705296,
-      34.172546
-     ],
-     [
-      134.709512,
-      34.165166
-     ],
-     [
-      134.712835,
-      34.15748
-     ],
-     [
-      134.715231,
-      34.149562
-     ],
-     [
-      134.716678,
-      34.141487
-     ],
-     [
-      134.717162,
-      34.133333
-     ],
-     [
-      134.716678,
-      34.12518
-     ],
-     [
-      134.715231,
-      34.117105
-     ],
-     [
-      134.712835,
-      34.109186
-     ],
-     [
-      134.709512,
-      34.1015
-     ],
-     [
-      134.705296,
-      34.094121
-     ],
-     [
-      134.700226,
-      34.087119
-     ],
-     [
-      134.694351,
-      34.080562
-     ],
-     [
-      134.687728,
-      34.074514
-     ],
-     [
-      134.68042,
-      34.069032
-     ],
-     [
-      134.672499,
-      34.064169
-     ],
-     [
-      134.66404,
-      34.059972
-     ],
-     [
-      134.655125,
-      34.056482
-     ],
-     [
-      134.645839,
-      34.053732
-     ],
-     [
-      134.636272,
-      34.051748
-     ],
-     [
-      134.626517,
-      34.05055
-     ],
-     [
-      134.616667,
-      34.05015
-     ],
-     [
-      134.606816,
-      34.05055
-     ],
-     [
-      134.597061,
-      34.051748
-     ],
-     [
-      134.587494,
-      34.053732
-     ],
-     [
-      134.578209,
-      34.056482
-     ],
-     [
-      134.569293,
-      34.059972
-     ],
-     [
-      134.560834,
-      34.064169
-     ],
-     [
-      134.552913,
-      34.069032
-     ],
-     [
-      134.545606,
-      34.074514
-     ],
-     [
-      134.538983,
-      34.080562
-     ],
-     [
-      134.533108,
-      34.087119
-     ],
-     [
-      134.528037,
-      34.094121
-     ],
-     [
-      134.523821,
-      34.1015
-     ],
-     [
-      134.520498,
-      34.109186
-     ],
-     [
-      134.518102,
-      34.117105
-     ],
-     [
-      134.516655,
-      34.12518
-     ],
-     [
-      134.516171,
-      34.133333
-     ],
-     [
-      134.516655,
-      34.141487
-     ],
-     [
-      134.518102,
-      34.149562
-     ],
-     [
-      134.520498,
-      34.15748
-     ],
-     [
-      134.523821,
-      34.165166
-     ],
-     [
-      134.528037,
-      34.172546
-     ],
-     [
-      134.533108,
-      34.179548
-     ],
-     [
-      134.538983,
-      34.186104
-     ],
-     [
-      134.545606,
-      34.192153
-     ],
-     [
-      134.552913,
-      34.197635
-     ],
-     [
-      134.560834,
-      34.202498
-     ],
-     [
-      134.569293,
-      34.206695
-     ],
-     [
-      134.578209,
-      34.210185
-     ],
-     [
-      134.587494,
-      34.212935
-     ],
-     [
-      134.597061,
-      34.214919
-     ],
-     [
-      134.606816,
-      34.216116
-     ],
-     [
-      134.616667,
-      34.216517
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "RJOS",
-  "icao_text": "L4192/26 NOTAMN\r\nQ)RJJJ/QWALW/IV/M/AW/004/010/3408N13437E005\r\nA)RJOS B)2609280645 C)2609280710\r\nE)AIR DISPLAY\r\n1 FLT AREA   :WI 5NM RADIUS OF 340756N1343633E(RJOS ARP)\r\n              (ITANO-GUN IN TOKUSHIMA)\r\n2 USING ACFT :BE9L\r\n3 WX COND    :VMC ONLY\r\nF)400FT AMSL G)1000FT AMSL",
-  "id": "1790566138666000",
-  "issued": "2026-09-28T03:28:00Z",
-  "last_updated": "2026-09-28T03:29:00Z",
-  "local_text": null,
-  "location": "RJOS",
-  "lower": "400FT AMSL",
-  "max_fl": "010",
-  "min_fl": "004",
-  "number": "L4192/26",
-  "purpose": "M",
-  "q_code": "QWALW",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "AW",
-  "series": "L",
-  "text": "AIR DISPLAY\r\n1 FLT AREA   :WI 5NM RADIUS OF 340756N1343633E(RJOS ARP)\r\n              (ITANO-GUN IN TOKUSHIMA)\r\n2 USING ACFT :BE9L\r\n3 WX COND    :VMC ONLY",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "1000FT AMSL",
-  "year": "2026"
- },
  "1790566256865000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -58829,52 +58523,6 @@
   "upper": "820FT AMSL",
   "year": "2026"
  },
- "1790572545425000": {
-  "account_id": "RJAAYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3310N14118E",
-  "effective_end": "2026-09-28T08:00:00Z",
-  "effective_start": "2026-09-28T05:15:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RJJJ",
-  "first_seen": "2026-09-28T05:20:26+00:00",
-  "geometry": {
-   "coordinates": [
-    141.3,
-    33.166667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "RJJJ",
-  "icao_text": "X6135/26 NOTAMR X6103/26\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280515 C)2609280800\r\nE)FLOW CTL AS FLWS, \r\n AREA: SECTOR F15 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR F15\r\nRMK: REF AIP ENR1.9-1",
-  "id": "1790572545425000",
-  "issued": "2026-09-28T05:15:00Z",
-  "last_updated": "2026-09-28T05:16:00Z",
-  "local_text": null,
-  "location": "RJJJ",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "X6135/26",
-  "purpose": "NBO",
-  "q_code": "QPFCA",
-  "qline_offset_nm": null,
-  "radius_nm": 999.0,
-  "ref_number": "X6103/26",
-  "schedule": null,
-  "scope": "E",
-  "series": "X",
-  "text": "FLOW CTL AS FLWS, \r\n AREA: SECTOR F15 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR F15\r\nRMK: REF AIP ENR1.9-1",
-  "traffic": "I",
-  "type": "R",
-  "upper": null,
-  "year": "2026"
- },
  "1790572740679000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
@@ -60803,52 +60451,6 @@
   "traffic": "IV",
   "type": "N",
   "upper": "1313FT AMSL",
-  "year": "2026"
- },
- "1790574214283000": {
-  "account_id": "RJAAYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3310N14118E",
-  "effective_end": "2026-09-28T07:30:00Z",
-  "effective_start": "2026-09-28T05:43:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RJJJ",
-  "first_seen": "2026-09-28T05:50:28+00:00",
-  "geometry": {
-   "coordinates": [
-    141.3,
-    33.166667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "RJJJ",
-  "icao_text": "X6136/26 NOTAMN\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280543 C)2609280730\r\nE)FLOW CTL AS FLWS, \r\n AREA: SECTOR N54 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR N54\r\nRMK: REF AIP ENR1.9-1",
-  "id": "1790574214283000",
-  "issued": "2026-09-28T05:43:00Z",
-  "last_updated": "2026-09-28T05:44:00Z",
-  "local_text": null,
-  "location": "RJJJ",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "X6136/26",
-  "purpose": "NBO",
-  "q_code": "QPFCA",
-  "qline_offset_nm": null,
-  "radius_nm": 999.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "X",
-  "text": "FLOW CTL AS FLWS, \r\n AREA: SECTOR N54 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR N54\r\nRMK: REF AIP ENR1.9-1",
-  "traffic": "I",
-  "type": "N",
-  "upper": null,
   "year": "2026"
  },
  "1790574384489000": {
@@ -70608,6 +70210,1482 @@
   "scope": "W",
   "series": "P",
   "text": "IWAKUNI TEMPO RESERVED AIRSPACE ACT AS FLW,\r\nNAME/ID      ALT           PERIOD\r\nITRA-E       SFC/FL250     2609292200/2609301330\r\nITRA-N1      SFC/FL180     2609292200/2609301330\r\nITRA-N2      SFC/FL600     2609292200/2609301330\r\nITRA-N3      SFC/FL240     2609292200/2609301330\r\nITRA-S10     SFC/FL600     2609292200/2609301330\r\nITRA-S11     SFC/FL600     2609292200/2609301330\r\nITRA-S12     SFC/FL600     2609292200/2609301330\r\nITRA-S13     SFC/FL600     2609292200/2609301330\r\nITRA-S14     SFC/FL600     2609292200/2609301330\r\nITRA-S15     SFC/FL600     2609292200/2609301330\r\nITRA-S16     SFC/FL600     2609292200/2609301330\r\nITRA-S20     SFC/FL450     2609292200/2609301330\r\nITRA-S21     SFC/FL450     2609292200/2609301330\r\nITRA-S22     SFC/FL450     2609292200/2609301330\r\nITRA-S23     SFC/FL450     2609292200/2609301330\r\nITRA-S24     SFC/FL450     2609292200/2609301330\r\nITRA-S25     SFC/FL450     2609292200/2609301330\r\nITRA-S30     SFC/FL250     2609292200/2609301330\r\nITRA-S31     SFC/FL250     2609292200/2609301330\r\nITRA-S32     SFC/FL250     2609292200/2609301330\r\nITRA-S33     SFC/FL250     2609292200/2609301330\r\nRMK: REF AIP SUP 023/26",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790578900680000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3609N13755E",
+  "effective_end": "2026-10-15T21:00:00Z",
+  "effective_start": "2026-10-15T13:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T07:10:27+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      137.916667,
+      36.565918
+     ],
+     [
+      137.967154,
+      36.563915
+     ],
+     [
+      138.017155,
+      36.557926
+     ],
+     [
+      138.066188,
+      36.548009
+     ],
+     [
+      138.113781,
+      36.534258
+     ],
+     [
+      138.159476,
+      36.516807
+     ],
+     [
+      138.202832,
+      36.495823
+     ],
+     [
+      138.243433,
+      36.471509
+     ],
+     [
+      138.280886,
+      36.444098
+     ],
+     [
+      138.314832,
+      36.413856
+     ],
+     [
+      138.344944,
+      36.381072
+     ],
+     [
+      138.370931,
+      36.346062
+     ],
+     [
+      138.392543,
+      36.309165
+     ],
+     [
+      138.409572,
+      36.270735
+     ],
+     [
+      138.421854,
+      36.231142
+     ],
+     [
+      138.429271,
+      36.190767
+     ],
+     [
+      138.431751,
+      36.15
+     ],
+     [
+      138.429271,
+      36.109233
+     ],
+     [
+      138.421854,
+      36.068858
+     ],
+     [
+      138.409572,
+      36.029265
+     ],
+     [
+      138.392543,
+      35.990835
+     ],
+     [
+      138.370931,
+      35.953938
+     ],
+     [
+      138.344944,
+      35.918928
+     ],
+     [
+      138.314832,
+      35.886144
+     ],
+     [
+      138.280886,
+      35.855902
+     ],
+     [
+      138.243433,
+      35.828491
+     ],
+     [
+      138.202832,
+      35.804177
+     ],
+     [
+      138.159476,
+      35.783193
+     ],
+     [
+      138.113781,
+      35.765742
+     ],
+     [
+      138.066188,
+      35.751991
+     ],
+     [
+      138.017155,
+      35.742074
+     ],
+     [
+      137.967154,
+      35.736085
+     ],
+     [
+      137.916667,
+      35.734082
+     ],
+     [
+      137.86618,
+      35.736085
+     ],
+     [
+      137.816179,
+      35.742074
+     ],
+     [
+      137.767146,
+      35.751991
+     ],
+     [
+      137.719552,
+      35.765742
+     ],
+     [
+      137.673858,
+      35.783193
+     ],
+     [
+      137.630501,
+      35.804177
+     ],
+     [
+      137.589901,
+      35.828491
+     ],
+     [
+      137.552447,
+      35.855902
+     ],
+     [
+      137.518501,
+      35.886144
+     ],
+     [
+      137.48839,
+      35.918928
+     ],
+     [
+      137.462403,
+      35.953938
+     ],
+     [
+      137.440791,
+      35.990835
+     ],
+     [
+      137.423762,
+      36.029265
+     ],
+     [
+      137.411479,
+      36.068858
+     ],
+     [
+      137.404062,
+      36.109233
+     ],
+     [
+      137.401582,
+      36.15
+     ],
+     [
+      137.404062,
+      36.190767
+     ],
+     [
+      137.411479,
+      36.231142
+     ],
+     [
+      137.423762,
+      36.270735
+     ],
+     [
+      137.440791,
+      36.309165
+     ],
+     [
+      137.462403,
+      36.346062
+     ],
+     [
+      137.48839,
+      36.381072
+     ],
+     [
+      137.518501,
+      36.413856
+     ],
+     [
+      137.552447,
+      36.444098
+     ],
+     [
+      137.589901,
+      36.471509
+     ],
+     [
+      137.630501,
+      36.495823
+     ],
+     [
+      137.673858,
+      36.516807
+     ],
+     [
+      137.719552,
+      36.534258
+     ],
+     [
+      137.767146,
+      36.548009
+     ],
+     [
+      137.816179,
+      36.557926
+     ],
+     [
+      137.86618,
+      36.563915
+     ],
+     [
+      137.916667,
+      36.565918
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RJAF",
+  "icao_text": "N3895/26 NOTAMN\r\nQ)RJJJ/QNMAS/IV/BO/AE/000/999/3609N13755E025\r\nA)RJAF B)2610151300 C)2610152100\r\nE)MATSUMOTO VOR/DME/MBE U/S DUE TO MAINT",
+  "id": "1790578900680000",
+  "issued": "2026-09-28T07:01:00Z",
+  "last_updated": "2026-09-28T07:02:00Z",
+  "local_text": null,
+  "location": "RJAF",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "N3895/26",
+  "purpose": "BO",
+  "q_code": "QNMAS",
+  "qline_offset_nm": null,
+  "radius_nm": 25.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AE",
+  "series": "N",
+  "text": "MATSUMOTO VOR/DME/MBE U/S DUE TO MAINT",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790578912244000": {
+  "account_id": "RKRRYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3739N12640E",
+  "effective_end": "2026-10-17T11:45:00Z",
+  "effective_start": "2026-10-17T11:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RKRR",
+  "first_seen": "2026-09-28T07:10:27+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      126.666667,
+      37.666637
+     ],
+     [
+      126.668726,
+      37.666557
+     ],
+     [
+      126.670766,
+      37.666317
+     ],
+     [
+      126.672766,
+      37.66592
+     ],
+     [
+      126.674708,
+      37.66537
+     ],
+     [
+      126.676572,
+      37.664672
+     ],
+     [
+      126.678341,
+      37.663833
+     ],
+     [
+      126.679997,
+      37.66286
+     ],
+     [
+      126.681525,
+      37.661764
+     ],
+     [
+      126.682909,
+      37.660554
+     ],
+     [
+      126.684138,
+      37.659243
+     ],
+     [
+      126.685198,
+      37.657842
+     ],
+     [
+      126.68608,
+      37.656367
+     ],
+     [
+      126.686774,
+      37.654829
+     ],
+     [
+      126.687275,
+      37.653246
+     ],
+     [
+      126.687578,
+      37.651631
+     ],
+     [
+      126.687679,
+      37.65
+     ],
+     [
+      126.687578,
+      37.648369
+     ],
+     [
+      126.687275,
+      37.646754
+     ],
+     [
+      126.686774,
+      37.645171
+     ],
+     [
+      126.68608,
+      37.643633
+     ],
+     [
+      126.685198,
+      37.642158
+     ],
+     [
+      126.684138,
+      37.640757
+     ],
+     [
+      126.682909,
+      37.639446
+     ],
+     [
+      126.681525,
+      37.638236
+     ],
+     [
+      126.679997,
+      37.63714
+     ],
+     [
+      126.678341,
+      37.636167
+     ],
+     [
+      126.676572,
+      37.635328
+     ],
+     [
+      126.674708,
+      37.63463
+     ],
+     [
+      126.672766,
+      37.63408
+     ],
+     [
+      126.670766,
+      37.633683
+     ],
+     [
+      126.668726,
+      37.633443
+     ],
+     [
+      126.666667,
+      37.633363
+     ],
+     [
+      126.664607,
+      37.633443
+     ],
+     [
+      126.662567,
+      37.633683
+     ],
+     [
+      126.660567,
+      37.63408
+     ],
+     [
+      126.658626,
+      37.63463
+     ],
+     [
+      126.656761,
+      37.635328
+     ],
+     [
+      126.654993,
+      37.636167
+     ],
+     [
+      126.653337,
+      37.63714
+     ],
+     [
+      126.651809,
+      37.638236
+     ],
+     [
+      126.650424,
+      37.639446
+     ],
+     [
+      126.649195,
+      37.640757
+     ],
+     [
+      126.648135,
+      37.642158
+     ],
+     [
+      126.647254,
+      37.643633
+     ],
+     [
+      126.646559,
+      37.645171
+     ],
+     [
+      126.646058,
+      37.646754
+     ],
+     [
+      126.645755,
+      37.648369
+     ],
+     [
+      126.645654,
+      37.65
+     ],
+     [
+      126.645755,
+      37.651631
+     ],
+     [
+      126.646058,
+      37.653246
+     ],
+     [
+      126.646559,
+      37.654829
+     ],
+     [
+      126.647254,
+      37.656367
+     ],
+     [
+      126.648135,
+      37.657842
+     ],
+     [
+      126.649195,
+      37.659243
+     ],
+     [
+      126.650424,
+      37.660554
+     ],
+     [
+      126.651809,
+      37.661764
+     ],
+     [
+      126.653337,
+      37.66286
+     ],
+     [
+      126.654993,
+      37.663833
+     ],
+     [
+      126.656761,
+      37.664672
+     ],
+     [
+      126.658626,
+      37.66537
+     ],
+     [
+      126.660567,
+      37.66592
+     ],
+     [
+      126.662567,
+      37.666317
+     ],
+     [
+      126.664607,
+      37.666557
+     ],
+     [
+      126.666667,
+      37.666637
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RKRR",
+  "icao_text": "Z0714/26 NOTAMN  \r\nQ)RKRR/QWMLW/IV/BO/W/000/002/3739N12640E001\r\nA)RKRR B)2610171130 C)2610171145\r\nE)FIREWORKS WILL TAKE PLACE AS FLW :\r\nA CIRCLE RADIUS 30M CENTERED ON 373832N1264026E\r\nF)SFC G)200FT AMSL",
+  "id": "1790578912244000",
+  "issued": "2026-09-28T07:01:00Z",
+  "last_updated": "2026-09-28T07:02:00Z",
+  "local_text": null,
+  "location": "RKRR",
+  "lower": "SFC",
+  "max_fl": "002",
+  "min_fl": "000",
+  "number": "Z0714/26",
+  "purpose": "BO",
+  "q_code": "QWMLW",
+  "qline_offset_nm": null,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "Z",
+  "text": "FIREWORKS WILL TAKE PLACE AS FLW :\r\nA CIRCLE RADIUS 30M CENTERED ON 373832N1264026E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "200FT AMSL",
+  "year": "2026"
+ },
+ "1790579111475719": {
+  "account_id": "RKSO",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "MIL",
+  "coordinates": "3705N12701E",
+  "effective_end": "2026-09-28T15:01:00Z",
+  "effective_start": "2026-09-28T11:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RKRR",
+  "first_seen": "2026-09-28T07:10:27+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      127.016667,
+      37.166517
+     ],
+     [
+      127.026887,
+      37.166116
+     ],
+     [
+      127.037009,
+      37.164919
+     ],
+     [
+      127.046935,
+      37.162935
+     ],
+     [
+      127.05657,
+      37.160185
+     ],
+     [
+      127.06582,
+      37.156695
+     ],
+     [
+      127.074597,
+      37.152498
+     ],
+     [
+      127.082816,
+      37.147635
+     ],
+     [
+      127.090398,
+      37.142153
+     ],
+     [
+      127.09727,
+      37.136104
+     ],
+     [
+      127.103365,
+      37.129548
+     ],
+     [
+      127.108626,
+      37.122546
+     ],
+     [
+      127.113001,
+      37.115166
+     ],
+     [
+      127.116448,
+      37.10748
+     ],
+     [
+      127.118935,
+      37.099562
+     ],
+     [
+      127.120436,
+      37.091487
+     ],
+     [
+      127.120938,
+      37.083333
+     ],
+     [
+      127.120436,
+      37.07518
+     ],
+     [
+      127.118935,
+      37.067105
+     ],
+     [
+      127.116448,
+      37.059186
+     ],
+     [
+      127.113001,
+      37.0515
+     ],
+     [
+      127.108626,
+      37.044121
+     ],
+     [
+      127.103365,
+      37.037119
+     ],
+     [
+      127.09727,
+      37.030562
+     ],
+     [
+      127.090398,
+      37.024514
+     ],
+     [
+      127.082816,
+      37.019032
+     ],
+     [
+      127.074597,
+      37.014169
+     ],
+     [
+      127.06582,
+      37.009972
+     ],
+     [
+      127.05657,
+      37.006482
+     ],
+     [
+      127.046935,
+      37.003732
+     ],
+     [
+      127.037009,
+      37.001748
+     ],
+     [
+      127.026887,
+      37.00055
+     ],
+     [
+      127.016667,
+      37.00015
+     ],
+     [
+      127.006446,
+      37.00055
+     ],
+     [
+      126.996324,
+      37.001748
+     ],
+     [
+      126.986398,
+      37.003732
+     ],
+     [
+      126.976764,
+      37.006482
+     ],
+     [
+      126.967513,
+      37.009972
+     ],
+     [
+      126.958736,
+      37.014169
+     ],
+     [
+      126.950517,
+      37.019032
+     ],
+     [
+      126.942936,
+      37.024514
+     ],
+     [
+      126.936064,
+      37.030562
+     ],
+     [
+      126.929968,
+      37.037119
+     ],
+     [
+      126.924707,
+      37.044121
+     ],
+     [
+      126.920332,
+      37.0515
+     ],
+     [
+      126.916885,
+      37.059186
+     ],
+     [
+      126.914399,
+      37.067105
+     ],
+     [
+      126.912897,
+      37.07518
+     ],
+     [
+      126.912395,
+      37.083333
+     ],
+     [
+      126.912897,
+      37.091487
+     ],
+     [
+      126.914399,
+      37.099562
+     ],
+     [
+      126.916885,
+      37.10748
+     ],
+     [
+      126.920332,
+      37.115166
+     ],
+     [
+      126.924707,
+      37.122546
+     ],
+     [
+      126.929968,
+      37.129548
+     ],
+     [
+      126.936064,
+      37.136104
+     ],
+     [
+      126.942936,
+      37.142153
+     ],
+     [
+      126.950517,
+      37.147635
+     ],
+     [
+      126.958736,
+      37.152498
+     ],
+     [
+      126.967513,
+      37.156695
+     ],
+     [
+      126.976764,
+      37.160185
+     ],
+     [
+      126.986398,
+      37.162935
+     ],
+     [
+      126.996324,
+      37.164919
+     ],
+     [
+      127.006446,
+      37.166116
+     ],
+     [
+      127.016667,
+      37.166517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RKSO",
+  "icao_text": "M1423/26 NOTAMN \r\nQ) RKRR/QMTXX/IV/NBO/A/000/999/3705N12701E005 \r\nA) RKSO \r\nB) 2609281100 \r\nC) 2609281501 \r\nE) PERSONNEL AND EQUIPMENT WORKING .2NM WEST OF RWY 09L APPROACH END ON PERIMETER ROAD AT 37°0527.0211 N, 127°0034.9416 E. HIGHEST PIECE OF EQUIPMENT WILL BE 10 FT, BENEATH APPROACH PATH.",
+  "id": "1790579111475719",
+  "issued": "2026-09-28T07:04:00Z",
+  "last_updated": "2026-09-28T07:04:00Z",
+  "local_text": null,
+  "location": "RKSO",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "M1423/26",
+  "purpose": "NBO",
+  "q_code": "QMTXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "M",
+  "text": "PERSONNEL AND EQUIPMENT WORKING .2NM WEST OF RWY 09L APPROACH END ON PERIMETER ROAD AT 37°0527.0211 N, 127°0034.9416 E. HIGHEST PIECE OF EQUIPMENT WILL BE 10 FT, BENEATH APPROACH PATH.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790579183280000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2612N12738E",
+  "effective_end": "2026-09-28T21:23:00.000Z",
+  "effective_start": "2026-09-28T20:43:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": true,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T07:10:27+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      127.633333,
+      26.283184
+     ],
+     [
+      127.64242,
+      26.282783
+     ],
+     [
+      127.65142,
+      26.281585
+     ],
+     [
+      127.660245,
+      26.279602
+     ],
+     [
+      127.668811,
+      26.276852
+     ],
+     [
+      127.677036,
+      26.273361
+     ],
+     [
+      127.68484,
+      26.269165
+     ],
+     [
+      127.692147,
+      26.264302
+     ],
+     [
+      127.698888,
+      26.25882
+     ],
+     [
+      127.704998,
+      26.252771
+     ],
+     [
+      127.710418,
+      26.246214
+     ],
+     [
+      127.715095,
+      26.239212
+     ],
+     [
+      127.718985,
+      26.231833
+     ],
+     [
+      127.72205,
+      26.224147
+     ],
+     [
+      127.724261,
+      26.216228
+     ],
+     [
+      127.725596,
+      26.208153
+     ],
+     [
+      127.726042,
+      26.2
+     ],
+     [
+      127.725596,
+      26.191847
+     ],
+     [
+      127.724261,
+      26.183772
+     ],
+     [
+      127.72205,
+      26.175853
+     ],
+     [
+      127.718985,
+      26.168167
+     ],
+     [
+      127.715095,
+      26.160788
+     ],
+     [
+      127.710418,
+      26.153786
+     ],
+     [
+      127.704998,
+      26.147229
+     ],
+     [
+      127.698888,
+      26.14118
+     ],
+     [
+      127.692147,
+      26.135698
+     ],
+     [
+      127.68484,
+      26.130835
+     ],
+     [
+      127.677036,
+      26.126639
+     ],
+     [
+      127.668811,
+      26.123148
+     ],
+     [
+      127.660245,
+      26.120398
+     ],
+     [
+      127.65142,
+      26.118415
+     ],
+     [
+      127.64242,
+      26.117217
+     ],
+     [
+      127.633333,
+      26.116816
+     ],
+     [
+      127.624246,
+      26.117217
+     ],
+     [
+      127.615247,
+      26.118415
+     ],
+     [
+      127.606421,
+      26.120398
+     ],
+     [
+      127.597855,
+      26.123148
+     ],
+     [
+      127.589631,
+      26.126639
+     ],
+     [
+      127.581827,
+      26.130835
+     ],
+     [
+      127.57452,
+      26.135698
+     ],
+     [
+      127.567778,
+      26.14118
+     ],
+     [
+      127.561669,
+      26.147229
+     ],
+     [
+      127.556249,
+      26.153786
+     ],
+     [
+      127.551572,
+      26.160788
+     ],
+     [
+      127.547682,
+      26.168167
+     ],
+     [
+      127.544617,
+      26.175853
+     ],
+     [
+      127.542406,
+      26.183772
+     ],
+     [
+      127.541071,
+      26.191847
+     ],
+     [
+      127.540625,
+      26.2
+     ],
+     [
+      127.541071,
+      26.208153
+     ],
+     [
+      127.542406,
+      26.216228
+     ],
+     [
+      127.544617,
+      26.224147
+     ],
+     [
+      127.547682,
+      26.231833
+     ],
+     [
+      127.551572,
+      26.239212
+     ],
+     [
+      127.556249,
+      26.246214
+     ],
+     [
+      127.561669,
+      26.252771
+     ],
+     [
+      127.567778,
+      26.25882
+     ],
+     [
+      127.57452,
+      26.264302
+     ],
+     [
+      127.581827,
+      26.269165
+     ],
+     [
+      127.589631,
+      26.273361
+     ],
+     [
+      127.597855,
+      26.276852
+     ],
+     [
+      127.606421,
+      26.279602
+     ],
+     [
+      127.615247,
+      26.281585
+     ],
+     [
+      127.624246,
+      26.282783
+     ],
+     [
+      127.633333,
+      26.283184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ROAH",
+  "icao_text": "H3653/26 NOTAMN\r\nQ)RJJJ/QOBCE/IV/M/A/000/002/2612N12738E005\r\nA)ROAH B)2609282043 C)2609282123EST\r\nE)OBST(VESSEL) PASS ACROSS RWY 18L APCH AREA\r\nBTN POINT A AND B\r\nELEV: 121FT AMSL\r\n(NAHA-SHI IN OKINAWA)\r\nRMK: REF AIP ROAH AD 2.23",
+  "id": "1790579183280000",
+  "issued": "2026-09-28T07:05:00.000Z",
+  "last_updated": "2026-09-28T07:06:00.000Z",
+  "local_text": null,
+  "location": "ROAH",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "H3653/26",
+  "purpose": "M",
+  "q_code": "QOBCE",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "H",
+  "text": "OBST(VESSEL) PASS ACROSS RWY 18L APCH AREA\r\nBTN POINT A AND B\r\nELEV: 121FT AMSL\r\n(NAHA-SHI IN OKINAWA)\r\nRMK: REF AIP ROAH AD 2.23",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790579204468000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-10-01T07:06:00.000Z",
+  "effective_start": "2026-09-28T07:06:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T07:10:27+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "X6142/26 NOTAMC X6135/26\r\nQ)RJJJ/QPFXX/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280706\r\nE)FLOW CTL SECTOR F15  \r\nNOTAM CNL",
+  "id": "1790579204468000",
+  "issued": "2026-09-28T07:06:00.000Z",
+  "last_updated": "2026-09-28T07:06:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "X6142/26",
+  "purpose": "NBO",
+  "q_code": "QPFXX",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": "X6135/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "X",
+  "text": "FLOW CTL SECTOR F15  \r\nNOTAM CNL",
+  "traffic": "I",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790579237775000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-10-01T07:07:00.000Z",
+  "effective_start": "2026-09-28T07:07:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T07:10:27+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "X6143/26 NOTAMC X6136/26\r\nQ)RJJJ/QPFXX/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280707\r\nE)FLOW CTL SECTOR N54  \r\nNOTAM CNL",
+  "id": "1790579237775000",
+  "issued": "2026-09-28T07:07:00.000Z",
+  "last_updated": "2026-09-28T07:07:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "X6143/26",
+  "purpose": "NBO",
+  "q_code": "QPFXX",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": "X6136/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "X",
+  "text": "FLOW CTL SECTOR N54  \r\nNOTAM CNL",
+  "traffic": "I",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790579276380000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T03:40:00Z",
+  "effective_start": "2026-09-29T02:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZXXX",
+  "first_seen": "2026-09-28T07:10:27+00:00",
+  "geometry": null,
+  "geometry_source": null,
+  "icao_location": "ZGZU",
+  "icao_text": "A4975/26 NOTAMN Q) ZXXX/QARXX/IV/NBO/E/000/999/ A) ZGZU ZHWH  PART 1 OF 3  B) 2609290230  C) 2609290340  E) 1.ATS ROUTE G586 SEGMENT GMC-ALGAG, ATS ROUTE R343 \nSEGMENT MAMSI-ABTUD AND ATS ROUTE W45 SEGMENT NUPTI-VESUX NOT AVBL \nDUE TECHNICAL REASONS. ALL AFFECTED FLIGHTS SHALL BE ADJUSTED. \n2.FLIGHT PLANS FOR AFFECTED FLIGHTS SHALL BE FILED BASED ON \nORIGINAL FLIGHT TRACKS. FLIGHT CREWS SHALL PREPARE REROUTING DATA \nAND FOLLOW ATC INSTRUCTIONS TO IMPLEMENT REROUTING. \n3. REROUTING METHODS AS FOLLOWS: \n3.1.FLIGHTS VIA ENKUS-R343-ABTUD TO BEYOND ABTUD, SHALL ADJUST \nTO ENKUS-CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO BEYOND \nABTUD. \n3.2.FLIGHTS VIA GOSMA-R343-MAMSI TO BEYOND LAIBIN VOR 'LBN', \nSHALL ADJUST TO GOSMA-CHANGDE NDB 'CD'-SANJIANG VOR 'SJG'- LAIBIN \nVOR 'LBN' FOR BEYOND LAIBIN VOR 'LBN'. \n3.3.FLIGHTS VIA MILOP-W226-OLTUS-R343-MAMSI TO BEYOND LAIBIN VOR \n'LBN', SHALL ADJUST TO MILOP-W226-IRSAS-CG3 (N275120 \nE1105724)-SANJIANG VOR 'SJG'- LAIBIN VOR 'LBN' FOR BEYOND LAIBIN \nVOR 'LBN'. \n3.4.FLIGHTS VIA CHANGDE NDB 'CD'-W45-NUPTI-R343-MAMSI TO \n ) \n// // \nBEYOND LAIBIN VOR 'LBN', SHALL ADJUST TO CHANGDE NDB \n'CD'-SANJIANG VOR 'SJG'-LAIBIN VOR 'LBN' FOR BEYOND LAIBIN VOR \n'LBN'. \n3.5.FLIGHTS VIA XOPEK-W45-NUPTI ARR ZGGG, SHALL ADJUST TO END PART 1 OF 3\r\nA4975/26 NOTAMN Q) ZXXX/QARXX/IV/NBO/E/000/999/ A) ZGZU ZHWH  PART 2 OF 3  B) 2609290230  C) 2609290340  E) XOPEK-W138-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-R473-BEMAG-V5-ENVI \nP FOR ARR ZGGG. \n3.6.FLIGHTS VIA LAOLIANGCANG VOR 'LLC'-R343-NUPTI ARR ZGGG, \nSHALL ADJUST TO LAOLIANGCANG VOR \n'LLC'-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-BEMAG-V5-ENVIP FOR ARR \nZGGG. \n3.7.FLIGHTS VIA ERTANG VOR 'GMC'-G586-OSNOV TO BEYOND OSNOV, \nSHALL ADJUST TO ERTANG VOR 'GMC'-B330-MUBEL-OSNOV FOR BEYOND \nOSNOV. \n3.8.FLIGHTS VIA MOLSO-G586-ERTANG VOR 'GMC' TO BEYOND ERTANG VOR \n'GMC', SHALL ADJUST TO MOLSO-CG4 (N240823E1120514)-ERTANG VOR \n'GMC' FOR BEYOND ERTANG VOR 'GMC'. \n3.9.FLIGHTS VIA LIPNO-W24-OSNOV-G586 TO BEYOND ERTANG VOR 'GMC', \nSHALL ADJUST TO LIPNO-ERTANG VOR 'GMC' FOR BEYOND ERTANG VOR \n'GMC'. \n3.10.FLIGHTS DEP ZGGG TO BEYOND ERTANG VOR 'GMC', RADAR VECTOR \nDIRECT \nTO \n ) \n// // ERTANG VOR 'GMC' FOR BEYOND ERTANG VOR 'GMC'. \n3.11.FLIGHTS VIA ENKUS-R343-AVNEL-W618-SEBMO ARR ZGHA, SHALL \nADJUST TO ENKUS-CG1 (N253957E1095707)-CG2(N274629E1112333)-SEBMO \nFOR ARR ZGHA. \n3.12. FLIGHTS(DEPARTURE FROM ZGKL) VIA GUILIN VOR \n'KWL'-ONEMI-R343-ABTUD TO BEYOND ABTUD SHALL \nADJUST TO:AFTER DEPARTURE FROM ZGKL,SHALL FLW ATC(RADAR VECTOR) \nINSTRUCTION TO CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO \nBEYOND END PART 2 OF 3\r\nA4975/26 NOTAMN Q) ZXXX/QARXX/IV/NBO/E/000/999/ A) ZGZU ZHWH  PART 3 OF 3  B) 2609290230  C) 2609290340  E) ABTUD. \n ) \n// // END PART 3 OF 3",
+  "id": "1790579276380000",
+  "issued": "2026-09-28T07:07:00Z",
+  "last_updated": "2026-09-28T07:08:00Z",
+  "local_text": null,
+  "location": "ZGZU",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4975/26",
+  "purpose": "NBO",
+  "q_code": "QARXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "1.ATS ROUTE G586 SEGMENT GMC-ALGAG, ATS ROUTE R343 \nSEGMENT MAMSI-ABTUD AND ATS ROUTE W45 SEGMENT NUPTI-VESUX NOT AVBL \nDUE TECHNICAL REASONS. ALL AFFECTED FLIGHTS SHALL BE ADJUSTED. \n2.FLIGHT PLANS FOR AFFECTED FLIGHTS SHALL BE FILED BASED ON \nORIGINAL FLIGHT TRACKS. FLIGHT CREWS SHALL PREPARE REROUTING DATA \nAND FOLLOW ATC INSTRUCTIONS TO IMPLEMENT REROUTING. \n3. REROUTING METHODS AS FOLLOWS: \n3.1.FLIGHTS VIA ENKUS-R343-ABTUD TO BEYOND ABTUD, SHALL ADJUST \nTO ENKUS-CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO BEYOND \nABTUD. \n3.2.FLIGHTS VIA GOSMA-R343-MAMSI TO BEYOND LAIBIN VOR &apos;LBN&apos;, \nSHALL ADJUST TO GOSMA-CHANGDE NDB &apos;CD&apos;-SANJIANG VOR &apos;SJG&apos;- LAIBIN \nVOR &apos;LBN&apos; FOR BEYOND LAIBIN VOR &apos;LBN&apos;. \n3.3.FLIGHTS VIA MILOP-W226-OLTUS-R343-MAMSI TO BEYOND LAIBIN VOR \n&apos;LBN&apos;, SHALL ADJUST TO MILOP-W226-IRSAS-CG3 (N275120 \nE1105724)-SANJIANG VOR &apos;SJG&apos;- LAIBIN VOR &apos;LBN&apos; FOR BEYOND LAIBIN \nVOR &apos;LBN&apos;. \n3.4.FLIGHTS VIA CHANGDE NDB &apos;CD&apos;-W45-NUPTI-R343-MAMSI TO \n ) \n// // \nBEYOND LAIBIN VOR &apos;LBN&apos;, SHALL ADJUST TO CHANGDE NDB \n&apos;CD&apos;-SANJIANG VOR &apos;SJG&apos;-LAIBIN VOR &apos;LBN&apos; FOR BEYOND LAIBIN VOR \n&apos;LBN&apos;. \n3.5.FLIGHTS VIA XOPEK-W45-NUPTI ARR ZGGG, SHALL ADJUST TO \nXOPEK-W138-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-R473-BEMAG-V5-ENVI \nP FOR ARR ZGGG. \n3.6.FLIGHTS VIA LAOLIANGCANG VOR &apos;LLC&apos;-R343-NUPTI ARR ZGGG, \nSHALL ADJUST TO LAOLIANGCANG VOR \n&apos;LLC&apos;-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-BEMAG-V5-ENVIP FOR ARR \nZGGG. \n3.7.FLIGHTS VIA ERTANG VOR &apos;GMC&apos;-G586-OSNOV TO BEYOND OSNOV, \nSHALL ADJUST TO ERTANG VOR &apos;GMC&apos;-B330-MUBEL-OSNOV FOR BEYOND \nOSNOV. \n3.8.FLIGHTS VIA MOLSO-G586-ERTANG VOR &apos;GMC&apos; TO BEYOND ERTANG VOR \n&apos;GMC&apos;, SHALL ADJUST TO MOLSO-CG4 (N240823E1120514)-ERTANG VOR \n&apos;GMC&apos; FOR BEYOND ERTANG VOR &apos;GMC&apos;. \n3.9.FLIGHTS VIA LIPNO-W24-OSNOV-G586 TO BEYOND ERTANG VOR &apos;GMC&apos;, \nSHALL ADJUST TO LIPNO-ERTANG VOR &apos;GMC&apos; FOR BEYOND ERTANG VOR \n&apos;GMC&apos;. \n3.10.FLIGHTS DEP ZGGG TO BEYOND ERTANG VOR &apos;GMC&apos;, RADAR VECTOR \nDIRECT \nTO \n ) \n// // ERTANG VOR &apos;GMC&apos; FOR BEYOND ERTANG VOR &apos;GMC&apos;. \n3.11.FLIGHTS VIA ENKUS-R343-AVNEL-W618-SEBMO ARR ZGHA, SHALL \nADJUST TO ENKUS-CG1 (N253957E1095707)-CG2(N274629E1112333)-SEBMO \nFOR ARR ZGHA. \n3.12. FLIGHTS(DEPARTURE FROM ZGKL) VIA GUILIN VOR \n&apos;KWL&apos;-ONEMI-R343-ABTUD TO BEYOND ABTUD SHALL \nADJUST TO:AFTER DEPARTURE FROM ZGKL,SHALL FLW ATC(RADAR VECTOR) \nINSTRUCTION TO CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO \nBEYOND ABTUD. \n ) \n// //\r\n1.ATS ROUTE G586 SEGMENT GMC-ALGAG, ATS ROUTE R343 \nSEGMENT MAMSI-ABTUD AND ATS ROUTE W45 SEGMENT NUPTI-VESUX NOT AVBL \nDUE TECHNICAL REASONS. ALL AFFECTED FLIGHTS SHALL BE ADJUSTED. \n2.FLIGHT PLANS FOR AFFECTED FLIGHTS SHALL BE FILED BASED ON \nORIGINAL FLIGHT TRACKS. FLIGHT CREWS SHALL PREPARE REROUTING DATA \nAND FOLLOW ATC INSTRUCTIONS TO IMPLEMENT REROUTING. \n3. REROUTING METHODS AS FOLLOWS: \n3.1.FLIGHTS VIA ENKUS-R343-ABTUD TO BEYOND ABTUD, SHALL ADJUST \nTO ENKUS-CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO BEYOND \nABTUD. \n3.2.FLIGHTS VIA GOSMA-R343-MAMSI TO BEYOND LAIBIN VOR &apos;LBN&apos;, \nSHALL ADJUST TO GOSMA-CHANGDE NDB &apos;CD&apos;-SANJIANG VOR &apos;SJG&apos;- LAIBIN \nVOR &apos;LBN&apos; FOR BEYOND LAIBIN VOR &apos;LBN&apos;. \n3.3.FLIGHTS VIA MILOP-W226-OLTUS-R343-MAMSI TO BEYOND LAIBIN VOR \n&apos;LBN&apos;, SHALL ADJUST TO MILOP-W226-IRSAS-CG3 (N275120 \nE1105724)-SANJIANG VOR &apos;SJG&apos;- LAIBIN VOR &apos;LBN&apos; FOR BEYOND LAIBIN \nVOR &apos;LBN&apos;. \n3.4.FLIGHTS VIA CHANGDE NDB &apos;CD&apos;-W45-NUPTI-R343-MAMSI TO \n ) \n// // \nBEYOND LAIBIN VOR &apos;LBN&apos;, SHALL ADJUST TO CHANGDE NDB \n&apos;CD&apos;-SANJIANG VOR &apos;SJG&apos;-LAIBIN VOR &apos;LBN&apos; FOR BEYOND LAIBIN VOR \n&apos;LBN&apos;. \n3.5.FLIGHTS VIA XOPEK-W45-NUPTI ARR ZGGG, SHALL ADJUST TO \nXOPEK-W138-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-R473-BEMAG-V5-ENVI \nP FOR ARR ZGGG. \n3.6.FLIGHTS VIA LAOLIANGCANG VOR &apos;LLC&apos;-R343-NUPTI ARR ZGGG, \nSHALL ADJUST TO LAOLIANGCANG VOR \n&apos;LLC&apos;-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-BEMAG-V5-ENVIP FOR ARR \nZGGG. \n3.7.FLIGHTS VIA ERTANG VOR &apos;GMC&apos;-G586-OSNOV TO BEYOND OSNOV, \nSHALL ADJUST TO ERTANG VOR &apos;GMC&apos;-B330-MUBEL-OSNOV FOR BEYOND \nOSNOV. \n3.8.FLIGHTS VIA MOLSO-G586-ERTANG VOR &apos;GMC&apos; TO BEYOND ERTANG VOR \n&apos;GMC&apos;, SHALL ADJUST TO MOLSO-CG4 (N240823E1120514)-ERTANG VOR \n&apos;GMC&apos; FOR BEYOND ERTANG VOR &apos;GMC&apos;. \n3.9.FLIGHTS VIA LIPNO-W24-OSNOV-G586 TO BEYOND ERTANG VOR &apos;GMC&apos;, \nSHALL ADJUST TO LIPNO-ERTANG VOR &apos;GMC&apos; FOR BEYOND ERTANG VOR \n&apos;GMC&apos;. \n3.10.FLIGHTS DEP ZGGG TO BEYOND ERTANG VOR &apos;GMC&apos;, RADAR VECTOR \nDIRECT \nTO \n ) \n// // ERTANG VOR &apos;GMC&apos; FOR BEYOND ERTANG VOR &apos;GMC&apos;. \n3.11.FLIGHTS VIA ENKUS-R343-AVNEL-W618-SEBMO ARR ZGHA, SHALL \nADJUST TO ENKUS-CG1 (N253957E1095707)-CG2(N274629E1112333)-SEBMO \nFOR ARR ZGHA. \n3.12. FLIGHTS(DEPARTURE FROM ZGKL) VIA GUILIN VOR \n&apos;KWL&apos;-ONEMI-R343-ABTUD TO BEYOND ABTUD SHALL \nADJUST TO:AFTER DEPARTURE FROM ZGKL,SHALL FLW ATC(RADAR VECTOR) \nINSTRUCTION TO CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO \nBEYOND ABTUD. \n ) \n// //\r\n1.ATS ROUTE G586 SEGMENT GMC-ALGAG, ATS ROUTE R343 \nSEGMENT MAMSI-ABTUD AND ATS ROUTE W45 SEGMENT NUPTI-VESUX NOT AVBL \nDUE TECHNICAL REASONS. ALL AFFECTED FLIGHTS SHALL BE ADJUSTED. \n2.FLIGHT PLANS FOR AFFECTED FLIGHTS SHALL BE FILED BASED ON \nORIGINAL FLIGHT TRACKS. FLIGHT CREWS SHALL PREPARE REROUTING DATA \nAND FOLLOW ATC INSTRUCTIONS TO IMPLEMENT REROUTING. \n3. REROUTING METHODS AS FOLLOWS: \n3.1.FLIGHTS VIA ENKUS-R343-ABTUD TO BEYOND ABTUD, SHALL ADJUST \nTO ENKUS-CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO BEYOND \nABTUD. \n3.2.FLIGHTS VIA GOSMA-R343-MAMSI TO BEYOND LAIBIN VOR &apos;LBN&apos;, \nSHALL ADJUST TO GOSMA-CHANGDE NDB &apos;CD&apos;-SANJIANG VOR &apos;SJG&apos;- LAIBIN \nVOR &apos;LBN&apos; FOR BEYOND LAIBIN VOR &apos;LBN&apos;. \n3.3.FLIGHTS VIA MILOP-W226-OLTUS-R343-MAMSI TO BEYOND LAIBIN VOR \n&apos;LBN&apos;, SHALL ADJUST TO MILOP-W226-IRSAS-CG3 (N275120 \nE1105724)-SANJIANG VOR &apos;SJG&apos;- LAIBIN VOR &apos;LBN&apos; FOR BEYOND LAIBIN \nVOR &apos;LBN&apos;. \n3.4.FLIGHTS VIA CHANGDE NDB &apos;CD&apos;-W45-NUPTI-R343-MAMSI TO \n ) \n// // \nBEYOND LAIBIN VOR &apos;LBN&apos;, SHALL ADJUST TO CHANGDE NDB \n&apos;CD&apos;-SANJIANG VOR &apos;SJG&apos;-LAIBIN VOR &apos;LBN&apos; FOR BEYOND LAIBIN VOR \n&apos;LBN&apos;. \n3.5.FLIGHTS VIA XOPEK-W45-NUPTI ARR ZGGG, SHALL ADJUST TO \nXOPEK-W138-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-R473-BEMAG-V5-ENVI \nP FOR ARR ZGGG. \n3.6.FLIGHTS VIA LAOLIANGCANG VOR &apos;LLC&apos;-R343-NUPTI ARR ZGGG, \nSHALL ADJUST TO LAOLIANGCANG VOR \n&apos;LLC&apos;-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-BEMAG-V5-ENVIP FOR ARR \nZGGG. \n3.7.FLIGHTS VIA ERTANG VOR &apos;GMC&apos;-G586-OSNOV TO BEYOND OSNOV, \nSHALL ADJUST TO ERTANG VOR &apos;GMC&apos;-B330-MUBEL-OSNOV FOR BEYOND \nOSNOV. \n3.8.FLIGHTS VIA MOLSO-G586-ERTANG VOR &apos;GMC&apos; TO BEYOND ERTANG VOR \n&apos;GMC&apos;, SHALL ADJUST TO MOLSO-CG4 (N240823E1120514)-ERTANG VOR \n&apos;GMC&apos; FOR BEYOND ERTANG VOR &apos;GMC&apos;. \n3.9.FLIGHTS VIA LIPNO-W24-OSNOV-G586 TO BEYOND ERTANG VOR &apos;GMC&apos;, \nSHALL ADJUST TO LIPNO-ERTANG VOR &apos;GMC&apos; FOR BEYOND ERTANG VOR \n&apos;GMC&apos;. \n3.10.FLIGHTS DEP ZGGG TO BEYOND ERTANG VOR &apos;GMC&apos;, RADAR VECTOR \nDIRECT \nTO \n ) \n// // ERTANG VOR &apos;GMC&apos; FOR BEYOND ERTANG VOR &apos;GMC&apos;. \n3.11.FLIGHTS VIA ENKUS-R343-AVNEL-W618-SEBMO ARR ZGHA, SHALL \nADJUST TO ENKUS-CG1 (N253957E1095707)-CG2(N274629E1112333)-SEBMO \nFOR ARR ZGHA. \n3.12. FLIGHTS(DEPARTURE FROM ZGKL) VIA GUILIN VOR \n&apos;KWL&apos;-ONEMI-R343-ABTUD TO BEYOND ABTUD SHALL \nADJUST TO:AFTER DEPARTURE FROM ZGKL,SHALL FLW ATC(RADAR VECTOR) \nINSTRUCTION TO CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO \nBEYOND ABTUD. \n ) \n// //",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790579277296000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T03:40:00Z",
+  "effective_start": "2026-09-29T02:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZXXX",
+  "first_seen": "2026-09-28T07:10:27+00:00",
+  "geometry": null,
+  "geometry_source": null,
+  "icao_location": "ZHWH",
+  "icao_text": "A4975/26 NOTAMN Q) ZXXX/QARXX/IV/NBO/E/000/999/ A) ZGZU ZHWH  PART 1 OF 3  B) 2609290230  C) 2609290340  E) 1.ATS ROUTE G586 SEGMENT GMC-ALGAG, ATS ROUTE R343 \nSEGMENT MAMSI-ABTUD AND ATS ROUTE W45 SEGMENT NUPTI-VESUX NOT AVBL \nDUE TECHNICAL REASONS. ALL AFFECTED FLIGHTS SHALL BE ADJUSTED. \n2.FLIGHT PLANS FOR AFFECTED FLIGHTS SHALL BE FILED BASED ON \nORIGINAL FLIGHT TRACKS. FLIGHT CREWS SHALL PREPARE REROUTING DATA \nAND FOLLOW ATC INSTRUCTIONS TO IMPLEMENT REROUTING. \n3. REROUTING METHODS AS FOLLOWS: \n3.1.FLIGHTS VIA ENKUS-R343-ABTUD TO BEYOND ABTUD, SHALL ADJUST \nTO ENKUS-CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO BEYOND \nABTUD. \n3.2.FLIGHTS VIA GOSMA-R343-MAMSI TO BEYOND LAIBIN VOR 'LBN', \nSHALL ADJUST TO GOSMA-CHANGDE NDB 'CD'-SANJIANG VOR 'SJG'- LAIBIN \nVOR 'LBN' FOR BEYOND LAIBIN VOR 'LBN'. \n3.3.FLIGHTS VIA MILOP-W226-OLTUS-R343-MAMSI TO BEYOND LAIBIN VOR \n'LBN', SHALL ADJUST TO MILOP-W226-IRSAS-CG3 (N275120 \nE1105724)-SANJIANG VOR 'SJG'- LAIBIN VOR 'LBN' FOR BEYOND LAIBIN \nVOR 'LBN'. \n3.4.FLIGHTS VIA CHANGDE NDB 'CD'-W45-NUPTI-R343-MAMSI TO \n ) \n// // \nBEYOND LAIBIN VOR 'LBN', SHALL ADJUST TO CHANGDE NDB \n'CD'-SANJIANG VOR 'SJG'-LAIBIN VOR 'LBN' FOR BEYOND LAIBIN VOR \n'LBN'. \n3.5.FLIGHTS VIA XOPEK-W45-NUPTI ARR ZGGG, SHALL ADJUST TO END PART 1 OF 3\r\nA4975/26 NOTAMN Q) ZXXX/QARXX/IV/NBO/E/000/999/ A) ZGZU ZHWH  PART 2 OF 3  B) 2609290230  C) 2609290340  E) XOPEK-W138-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-R473-BEMAG-V5-ENVI \nP FOR ARR ZGGG. \n3.6.FLIGHTS VIA LAOLIANGCANG VOR 'LLC'-R343-NUPTI ARR ZGGG, \nSHALL ADJUST TO LAOLIANGCANG VOR \n'LLC'-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-BEMAG-V5-ENVIP FOR ARR \nZGGG. \n3.7.FLIGHTS VIA ERTANG VOR 'GMC'-G586-OSNOV TO BEYOND OSNOV, \nSHALL ADJUST TO ERTANG VOR 'GMC'-B330-MUBEL-OSNOV FOR BEYOND \nOSNOV. \n3.8.FLIGHTS VIA MOLSO-G586-ERTANG VOR 'GMC' TO BEYOND ERTANG VOR \n'GMC', SHALL ADJUST TO MOLSO-CG4 (N240823E1120514)-ERTANG VOR \n'GMC' FOR BEYOND ERTANG VOR 'GMC'. \n3.9.FLIGHTS VIA LIPNO-W24-OSNOV-G586 TO BEYOND ERTANG VOR 'GMC', \nSHALL ADJUST TO LIPNO-ERTANG VOR 'GMC' FOR BEYOND ERTANG VOR \n'GMC'. \n3.10.FLIGHTS DEP ZGGG TO BEYOND ERTANG VOR 'GMC', RADAR VECTOR \nDIRECT \nTO \n ) \n// // ERTANG VOR 'GMC' FOR BEYOND ERTANG VOR 'GMC'. \n3.11.FLIGHTS VIA ENKUS-R343-AVNEL-W618-SEBMO ARR ZGHA, SHALL \nADJUST TO ENKUS-CG1 (N253957E1095707)-CG2(N274629E1112333)-SEBMO \nFOR ARR ZGHA. \n3.12. FLIGHTS(DEPARTURE FROM ZGKL) VIA GUILIN VOR \n'KWL'-ONEMI-R343-ABTUD TO BEYOND ABTUD SHALL \nADJUST TO:AFTER DEPARTURE FROM ZGKL,SHALL FLW ATC(RADAR VECTOR) \nINSTRUCTION TO CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO \nBEYOND END PART 2 OF 3\r\nA4975/26 NOTAMN Q) ZXXX/QARXX/IV/NBO/E/000/999/ A) ZGZU ZHWH  PART 3 OF 3  B) 2609290230  C) 2609290340  E) ABTUD. \n ) \n// // END PART 3 OF 3",
+  "id": "1790579277296000",
+  "issued": "2026-09-28T07:07:00Z",
+  "last_updated": "2026-09-28T07:08:00Z",
+  "local_text": null,
+  "location": "ZHWH",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4975/26",
+  "purpose": "NBO",
+  "q_code": "QARXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "1.ATS ROUTE G586 SEGMENT GMC-ALGAG, ATS ROUTE R343 \nSEGMENT MAMSI-ABTUD AND ATS ROUTE W45 SEGMENT NUPTI-VESUX NOT AVBL \nDUE TECHNICAL REASONS. ALL AFFECTED FLIGHTS SHALL BE ADJUSTED. \n2.FLIGHT PLANS FOR AFFECTED FLIGHTS SHALL BE FILED BASED ON \nORIGINAL FLIGHT TRACKS. FLIGHT CREWS SHALL PREPARE REROUTING DATA \nAND FOLLOW ATC INSTRUCTIONS TO IMPLEMENT REROUTING. \n3. REROUTING METHODS AS FOLLOWS: \n3.1.FLIGHTS VIA ENKUS-R343-ABTUD TO BEYOND ABTUD, SHALL ADJUST \nTO ENKUS-CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO BEYOND \nABTUD. \n3.2.FLIGHTS VIA GOSMA-R343-MAMSI TO BEYOND LAIBIN VOR &apos;LBN&apos;, \nSHALL ADJUST TO GOSMA-CHANGDE NDB &apos;CD&apos;-SANJIANG VOR &apos;SJG&apos;- LAIBIN \nVOR &apos;LBN&apos; FOR BEYOND LAIBIN VOR &apos;LBN&apos;. \n3.3.FLIGHTS VIA MILOP-W226-OLTUS-R343-MAMSI TO BEYOND LAIBIN VOR \n&apos;LBN&apos;, SHALL ADJUST TO MILOP-W226-IRSAS-CG3 (N275120 \nE1105724)-SANJIANG VOR &apos;SJG&apos;- LAIBIN VOR &apos;LBN&apos; FOR BEYOND LAIBIN \nVOR &apos;LBN&apos;. \n3.4.FLIGHTS VIA CHANGDE NDB &apos;CD&apos;-W45-NUPTI-R343-MAMSI TO \n ) \n// // \nBEYOND LAIBIN VOR &apos;LBN&apos;, SHALL ADJUST TO CHANGDE NDB \n&apos;CD&apos;-SANJIANG VOR &apos;SJG&apos;-LAIBIN VOR &apos;LBN&apos; FOR BEYOND LAIBIN VOR \n&apos;LBN&apos;. \n3.5.FLIGHTS VIA XOPEK-W45-NUPTI ARR ZGGG, SHALL ADJUST TO \nXOPEK-W138-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-R473-BEMAG-V5-ENVI \nP FOR ARR ZGGG. \n3.6.FLIGHTS VIA LAOLIANGCANG VOR &apos;LLC&apos;-R343-NUPTI ARR ZGGG, \nSHALL ADJUST TO LAOLIANGCANG VOR \n&apos;LLC&apos;-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-BEMAG-V5-ENVIP FOR ARR \nZGGG. \n3.7.FLIGHTS VIA ERTANG VOR &apos;GMC&apos;-G586-OSNOV TO BEYOND OSNOV, \nSHALL ADJUST TO ERTANG VOR &apos;GMC&apos;-B330-MUBEL-OSNOV FOR BEYOND \nOSNOV. \n3.8.FLIGHTS VIA MOLSO-G586-ERTANG VOR &apos;GMC&apos; TO BEYOND ERTANG VOR \n&apos;GMC&apos;, SHALL ADJUST TO MOLSO-CG4 (N240823E1120514)-ERTANG VOR \n&apos;GMC&apos; FOR BEYOND ERTANG VOR &apos;GMC&apos;. \n3.9.FLIGHTS VIA LIPNO-W24-OSNOV-G586 TO BEYOND ERTANG VOR &apos;GMC&apos;, \nSHALL ADJUST TO LIPNO-ERTANG VOR &apos;GMC&apos; FOR BEYOND ERTANG VOR \n&apos;GMC&apos;. \n3.10.FLIGHTS DEP ZGGG TO BEYOND ERTANG VOR &apos;GMC&apos;, RADAR VECTOR \nDIRECT \nTO \n ) \n// // ERTANG VOR &apos;GMC&apos; FOR BEYOND ERTANG VOR &apos;GMC&apos;. \n3.11.FLIGHTS VIA ENKUS-R343-AVNEL-W618-SEBMO ARR ZGHA, SHALL \nADJUST TO ENKUS-CG1 (N253957E1095707)-CG2(N274629E1112333)-SEBMO \nFOR ARR ZGHA. \n3.12. FLIGHTS(DEPARTURE FROM ZGKL) VIA GUILIN VOR \n&apos;KWL&apos;-ONEMI-R343-ABTUD TO BEYOND ABTUD SHALL \nADJUST TO:AFTER DEPARTURE FROM ZGKL,SHALL FLW ATC(RADAR VECTOR) \nINSTRUCTION TO CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO \nBEYOND ABTUD. \n ) \n// //\r\n1.ATS ROUTE G586 SEGMENT GMC-ALGAG, ATS ROUTE R343 \nSEGMENT MAMSI-ABTUD AND ATS ROUTE W45 SEGMENT NUPTI-VESUX NOT AVBL \nDUE TECHNICAL REASONS. ALL AFFECTED FLIGHTS SHALL BE ADJUSTED. \n2.FLIGHT PLANS FOR AFFECTED FLIGHTS SHALL BE FILED BASED ON \nORIGINAL FLIGHT TRACKS. FLIGHT CREWS SHALL PREPARE REROUTING DATA \nAND FOLLOW ATC INSTRUCTIONS TO IMPLEMENT REROUTING. \n3. REROUTING METHODS AS FOLLOWS: \n3.1.FLIGHTS VIA ENKUS-R343-ABTUD TO BEYOND ABTUD, SHALL ADJUST \nTO ENKUS-CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO BEYOND \nABTUD. \n3.2.FLIGHTS VIA GOSMA-R343-MAMSI TO BEYOND LAIBIN VOR &apos;LBN&apos;, \nSHALL ADJUST TO GOSMA-CHANGDE NDB &apos;CD&apos;-SANJIANG VOR &apos;SJG&apos;- LAIBIN \nVOR &apos;LBN&apos; FOR BEYOND LAIBIN VOR &apos;LBN&apos;. \n3.3.FLIGHTS VIA MILOP-W226-OLTUS-R343-MAMSI TO BEYOND LAIBIN VOR \n&apos;LBN&apos;, SHALL ADJUST TO MILOP-W226-IRSAS-CG3 (N275120 \nE1105724)-SANJIANG VOR &apos;SJG&apos;- LAIBIN VOR &apos;LBN&apos; FOR BEYOND LAIBIN \nVOR &apos;LBN&apos;. \n3.4.FLIGHTS VIA CHANGDE NDB &apos;CD&apos;-W45-NUPTI-R343-MAMSI TO \n ) \n// // \nBEYOND LAIBIN VOR &apos;LBN&apos;, SHALL ADJUST TO CHANGDE NDB \n&apos;CD&apos;-SANJIANG VOR &apos;SJG&apos;-LAIBIN VOR &apos;LBN&apos; FOR BEYOND LAIBIN VOR \n&apos;LBN&apos;. \n3.5.FLIGHTS VIA XOPEK-W45-NUPTI ARR ZGGG, SHALL ADJUST TO \nXOPEK-W138-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-R473-BEMAG-V5-ENVI \nP FOR ARR ZGGG. \n3.6.FLIGHTS VIA LAOLIANGCANG VOR &apos;LLC&apos;-R343-NUPTI ARR ZGGG, \nSHALL ADJUST TO LAOLIANGCANG VOR \n&apos;LLC&apos;-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-BEMAG-V5-ENVIP FOR ARR \nZGGG. \n3.7.FLIGHTS VIA ERTANG VOR &apos;GMC&apos;-G586-OSNOV TO BEYOND OSNOV, \nSHALL ADJUST TO ERTANG VOR &apos;GMC&apos;-B330-MUBEL-OSNOV FOR BEYOND \nOSNOV. \n3.8.FLIGHTS VIA MOLSO-G586-ERTANG VOR &apos;GMC&apos; TO BEYOND ERTANG VOR \n&apos;GMC&apos;, SHALL ADJUST TO MOLSO-CG4 (N240823E1120514)-ERTANG VOR \n&apos;GMC&apos; FOR BEYOND ERTANG VOR &apos;GMC&apos;. \n3.9.FLIGHTS VIA LIPNO-W24-OSNOV-G586 TO BEYOND ERTANG VOR &apos;GMC&apos;, \nSHALL ADJUST TO LIPNO-ERTANG VOR &apos;GMC&apos; FOR BEYOND ERTANG VOR \n&apos;GMC&apos;. \n3.10.FLIGHTS DEP ZGGG TO BEYOND ERTANG VOR &apos;GMC&apos;, RADAR VECTOR \nDIRECT \nTO \n ) \n// // ERTANG VOR &apos;GMC&apos; FOR BEYOND ERTANG VOR &apos;GMC&apos;. \n3.11.FLIGHTS VIA ENKUS-R343-AVNEL-W618-SEBMO ARR ZGHA, SHALL \nADJUST TO ENKUS-CG1 (N253957E1095707)-CG2(N274629E1112333)-SEBMO \nFOR ARR ZGHA. \n3.12. FLIGHTS(DEPARTURE FROM ZGKL) VIA GUILIN VOR \n&apos;KWL&apos;-ONEMI-R343-ABTUD TO BEYOND ABTUD SHALL \nADJUST TO:AFTER DEPARTURE FROM ZGKL,SHALL FLW ATC(RADAR VECTOR) \nINSTRUCTION TO CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO \nBEYOND ABTUD. \n ) \n// //\r\n1.ATS ROUTE G586 SEGMENT GMC-ALGAG, ATS ROUTE R343 \nSEGMENT MAMSI-ABTUD AND ATS ROUTE W45 SEGMENT NUPTI-VESUX NOT AVBL \nDUE TECHNICAL REASONS. ALL AFFECTED FLIGHTS SHALL BE ADJUSTED. \n2.FLIGHT PLANS FOR AFFECTED FLIGHTS SHALL BE FILED BASED ON \nORIGINAL FLIGHT TRACKS. FLIGHT CREWS SHALL PREPARE REROUTING DATA \nAND FOLLOW ATC INSTRUCTIONS TO IMPLEMENT REROUTING. \n3. REROUTING METHODS AS FOLLOWS: \n3.1.FLIGHTS VIA ENKUS-R343-ABTUD TO BEYOND ABTUD, SHALL ADJUST \nTO ENKUS-CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO BEYOND \nABTUD. \n3.2.FLIGHTS VIA GOSMA-R343-MAMSI TO BEYOND LAIBIN VOR &apos;LBN&apos;, \nSHALL ADJUST TO GOSMA-CHANGDE NDB &apos;CD&apos;-SANJIANG VOR &apos;SJG&apos;- LAIBIN \nVOR &apos;LBN&apos; FOR BEYOND LAIBIN VOR &apos;LBN&apos;. \n3.3.FLIGHTS VIA MILOP-W226-OLTUS-R343-MAMSI TO BEYOND LAIBIN VOR \n&apos;LBN&apos;, SHALL ADJUST TO MILOP-W226-IRSAS-CG3 (N275120 \nE1105724)-SANJIANG VOR &apos;SJG&apos;- LAIBIN VOR &apos;LBN&apos; FOR BEYOND LAIBIN \nVOR &apos;LBN&apos;. \n3.4.FLIGHTS VIA CHANGDE NDB &apos;CD&apos;-W45-NUPTI-R343-MAMSI TO \n ) \n// // \nBEYOND LAIBIN VOR &apos;LBN&apos;, SHALL ADJUST TO CHANGDE NDB \n&apos;CD&apos;-SANJIANG VOR &apos;SJG&apos;-LAIBIN VOR &apos;LBN&apos; FOR BEYOND LAIBIN VOR \n&apos;LBN&apos;. \n3.5.FLIGHTS VIA XOPEK-W45-NUPTI ARR ZGGG, SHALL ADJUST TO \nXOPEK-W138-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-R473-BEMAG-V5-ENVI \nP FOR ARR ZGGG. \n3.6.FLIGHTS VIA LAOLIANGCANG VOR &apos;LLC&apos;-R343-NUPTI ARR ZGGG, \nSHALL ADJUST TO LAOLIANGCANG VOR \n&apos;LLC&apos;-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-BEMAG-V5-ENVIP FOR ARR \nZGGG. \n3.7.FLIGHTS VIA ERTANG VOR &apos;GMC&apos;-G586-OSNOV TO BEYOND OSNOV, \nSHALL ADJUST TO ERTANG VOR &apos;GMC&apos;-B330-MUBEL-OSNOV FOR BEYOND \nOSNOV. \n3.8.FLIGHTS VIA MOLSO-G586-ERTANG VOR &apos;GMC&apos; TO BEYOND ERTANG VOR \n&apos;GMC&apos;, SHALL ADJUST TO MOLSO-CG4 (N240823E1120514)-ERTANG VOR \n&apos;GMC&apos; FOR BEYOND ERTANG VOR &apos;GMC&apos;. \n3.9.FLIGHTS VIA LIPNO-W24-OSNOV-G586 TO BEYOND ERTANG VOR &apos;GMC&apos;, \nSHALL ADJUST TO LIPNO-ERTANG VOR &apos;GMC&apos; FOR BEYOND ERTANG VOR \n&apos;GMC&apos;. \n3.10.FLIGHTS DEP ZGGG TO BEYOND ERTANG VOR &apos;GMC&apos;, RADAR VECTOR \nDIRECT \nTO \n ) \n// // ERTANG VOR &apos;GMC&apos; FOR BEYOND ERTANG VOR &apos;GMC&apos;. \n3.11.FLIGHTS VIA ENKUS-R343-AVNEL-W618-SEBMO ARR ZGHA, SHALL \nADJUST TO ENKUS-CG1 (N253957E1095707)-CG2(N274629E1112333)-SEBMO \nFOR ARR ZGHA. \n3.12. FLIGHTS(DEPARTURE FROM ZGKL) VIA GUILIN VOR \n&apos;KWL&apos;-ONEMI-R343-ABTUD TO BEYOND ABTUD SHALL \nADJUST TO:AFTER DEPARTURE FROM ZGKL,SHALL FLW ATC(RADAR VECTOR) \nINSTRUCTION TO CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO \nBEYOND ABTUD. \n ) \n// //",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790579414136000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T07:10:00.000Z",
+  "effective_start": "2026-09-29T06:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZXXX",
+  "first_seen": "2026-09-28T07:10:27+00:00",
+  "geometry": null,
+  "geometry_source": null,
+  "icao_location": "ZGZU",
+  "icao_text": "(A4976/26 NOTAMN \nQ)ZXXX/QARXX/IV/NBO/E/000/999/ \nA)ZGZU ZHWH B)2609290600 C)2609290710 \nE) 1.ATS ROUTE G586 SEGMENT GMC-ALGAG, ATS ROUTE R343 \nSEGMENT MAMSI-ABTUD AND ATS ROUTE W45 SEGMENT NUPTI-VESUX NOT AVBL \nDUE TECHNICAL REASONS. ALL AFFECTED FLIGHTS SHALL BE ADJUSTED. \n2.FLIGHT PLANS FOR AFFECTED FLIGHTS SHALL BE FILED BASED ON \nORIGINAL FLIGHT TRACKS. FLIGHT CREWS SHALL PREPARE REROUTING DATA \nAND FOLLOW ATC INSTRUCTIONS TO IMPLEMENT REROUTING. \n3. REROUTING METHODS AS FOLLOWS: \n3.1.FLIGHTS VIA ENKUS-R343-ABTUD TO BEYOND ABTUD, SHALL ADJUST \nTO ENKUS-CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO BEYOND \nABTUD. \n3.2.FLIGHTS VIA GOSMA-R343-MAMSI TO BEYOND LAIBIN VOR 'LBN', \nSHALL ADJUST TO GOSMA-CHANGDE NDB 'CD'-SANJIANG VOR 'SJG'- LAIBIN \nVOR 'LBN' FOR BEYOND LAIBIN VOR 'LBN'. \n3.3.FLIGHTS VIA MILOP-W226-OLTUS-R343-MAMSI TO BEYOND LAIBIN VOR \n'LBN', SHALL ADJUST TO MILOP-W226-IRSAS-CG3 (N275120 \nE1105724)-SANJIANG VOR 'SJG'- LAIBIN VOR 'LBN' FOR BEYOND LAIBIN \nVOR 'LBN'. \n3.4.FLIGHTS VIA CHANGDE NDB 'CD'-W45-NUPTI-R343-MAMSI TO \n ) \n// // \nBEYOND LAIBIN VOR 'LBN', SHALL ADJUST TO CHANGDE NDB \n'CD'-SANJIANG VOR 'SJG'-LAIBIN VOR 'LBN' FOR BEYOND LAIBIN VOR \n'LBN'. \n3.5.FLIGHTS VIA XOPEK-W45-NUPTI ARR ZGGG, SHALL ADJUST TO \nXOPEK-W138-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-R473-BEMAG-V5-ENVI \nP FOR ARR ZGGG. \n3.6.FLIGHTS VIA LAOLIANGCANG VOR 'LLC'-R343-NUPTI ARR ZGGG, \nSHALL ADJUST TO LAOLIANGCANG VOR \n'LLC'-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-BEMAG-V5-ENVIP FOR ARR \nZGGG. \n3.7.FLIGHTS VIA ERTANG VOR 'GMC'-G586-OSNOV TO BEYOND OSNOV, \nSHALL ADJUST TO ERTANG VOR 'GMC'-B330-MUBEL-OSNOV FOR BEYOND \nOSNOV. \n3.8.FLIGHTS VIA MOLSO-G586-ERTANG VOR 'GMC' TO BEYOND ERTANG VOR \n'GMC', SHALL ADJUST TO MOLSO-CG4 (N240823E1120514)-ERTANG VOR \n'GMC' FOR BEYOND ERTANG VOR 'GMC'. \n3.9.FLIGHTS VIA LIPNO-W24-OSNOV-G586 TO BEYOND ERTANG VOR 'GMC', \nSHALL ADJUST TO LIPNO-ERTANG VOR 'GMC' FOR BEYOND ERTANG VOR \n'GMC'. \n3.10.FLIGHTS DEP ZGGG TO BEYOND ERTANG VOR 'GMC', RADAR VECTOR \nDIRECT \nTO \n ) \n// // ERTANG VOR 'GMC' FOR BEYOND ERTANG VOR 'GMC'. \n3.11.FLIGHTS VIA ENKUS-R343-AVNEL-W618-SEBMO ARR ZGHA, SHALL \nADJUST TO ENKUS-CG1 (N253957E1095707)-CG2(N274629E1112333)-SEBMO \nFOR ARR ZGHA. \n3.12. FLIGHTS(DEPARTURE FROM ZGKL) VIA GUILIN VOR \n'KWL'-ONEMI-R343-ABTUD TO BEYOND ABTUD SHALL \nADJUST TO:AFTER DEPARTURE FROM ZGKL,SHALL FLW ATC(RADAR VECTOR) \nINSTRUCTION TO CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO \nBEYOND ABTUD. \n ) \n// //",
+  "id": "1790579414136000",
+  "issued": "2026-09-28T07:09:00.000Z",
+  "last_updated": "2026-09-28T07:10:00.000Z",
+  "local_text": null,
+  "location": "ZGZU",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4976/26",
+  "purpose": "NBO",
+  "q_code": "QARXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "1.ATS ROUTE G586 SEGMENT GMC-ALGAG, ATS ROUTE R343 \nSEGMENT MAMSI-ABTUD AND ATS ROUTE W45 SEGMENT NUPTI-VESUX NOT AVBL \nDUE TECHNICAL REASONS. ALL AFFECTED FLIGHTS SHALL BE ADJUSTED. \n2.FLIGHT PLANS FOR AFFECTED FLIGHTS SHALL BE FILED BASED ON \nORIGINAL FLIGHT TRACKS. FLIGHT CREWS SHALL PREPARE REROUTING DATA \nAND FOLLOW ATC INSTRUCTIONS TO IMPLEMENT REROUTING. \n3. REROUTING METHODS AS FOLLOWS: \n3.1.FLIGHTS VIA ENKUS-R343-ABTUD TO BEYOND ABTUD, SHALL ADJUST \nTO ENKUS-CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO BEYOND \nABTUD. \n3.2.FLIGHTS VIA GOSMA-R343-MAMSI TO BEYOND LAIBIN VOR 'LBN', \nSHALL ADJUST TO GOSMA-CHANGDE NDB 'CD'-SANJIANG VOR 'SJG'- LAIBIN \nVOR 'LBN' FOR BEYOND LAIBIN VOR 'LBN'. \n3.3.FLIGHTS VIA MILOP-W226-OLTUS-R343-MAMSI TO BEYOND LAIBIN VOR \n'LBN', SHALL ADJUST TO MILOP-W226-IRSAS-CG3 (N275120 \nE1105724)-SANJIANG VOR 'SJG'- LAIBIN VOR 'LBN' FOR BEYOND LAIBIN \nVOR 'LBN'. \n3.4.FLIGHTS VIA CHANGDE NDB 'CD'-W45-NUPTI-R343-MAMSI TO \n ) \n// // \nBEYOND LAIBIN VOR 'LBN', SHALL ADJUST TO CHANGDE NDB \n'CD'-SANJIANG VOR 'SJG'-LAIBIN VOR 'LBN' FOR BEYOND LAIBIN VOR \n'LBN'. \n3.5.FLIGHTS VIA XOPEK-W45-NUPTI ARR ZGGG, SHALL ADJUST TO \nXOPEK-W138-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-R473-BEMAG-V5-ENVI \nP FOR ARR ZGGG. \n3.6.FLIGHTS VIA LAOLIANGCANG VOR 'LLC'-R343-NUPTI ARR ZGGG, \nSHALL ADJUST TO LAOLIANGCANG VOR \n'LLC'-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-BEMAG-V5-ENVIP FOR ARR \nZGGG. \n3.7.FLIGHTS VIA ERTANG VOR 'GMC'-G586-OSNOV TO BEYOND OSNOV, \nSHALL ADJUST TO ERTANG VOR 'GMC'-B330-MUBEL-OSNOV FOR BEYOND \nOSNOV. \n3.8.FLIGHTS VIA MOLSO-G586-ERTANG VOR 'GMC' TO BEYOND ERTANG VOR \n'GMC', SHALL ADJUST TO MOLSO-CG4 (N240823E1120514)-ERTANG VOR \n'GMC' FOR BEYOND ERTANG VOR 'GMC'. \n3.9.FLIGHTS VIA LIPNO-W24-OSNOV-G586 TO BEYOND ERTANG VOR 'GMC', \nSHALL ADJUST TO LIPNO-ERTANG VOR 'GMC' FOR BEYOND ERTANG VOR \n'GMC'. \n3.10.FLIGHTS DEP ZGGG TO BEYOND ERTANG VOR 'GMC', RADAR VECTOR \nDIRECT \nTO \n ) \n// // ERTANG VOR 'GMC' FOR BEYOND ERTANG VOR 'GMC'. \n3.11.FLIGHTS VIA ENKUS-R343-AVNEL-W618-SEBMO ARR ZGHA, SHALL \nADJUST TO ENKUS-CG1 (N253957E1095707)-CG2(N274629E1112333)-SEBMO \nFOR ARR ZGHA. \n3.12. FLIGHTS(DEPARTURE FROM ZGKL) VIA GUILIN VOR \n'KWL'-ONEMI-R343-ABTUD TO BEYOND ABTUD SHALL \nADJUST TO:AFTER DEPARTURE FROM ZGKL,SHALL FLW ATC(RADAR VECTOR) \nINSTRUCTION TO CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO \nBEYOND ABTUD. \n ) \n// //",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790579415161000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T07:10:00.000Z",
+  "effective_start": "2026-09-29T06:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZXXX",
+  "first_seen": "2026-09-28T07:10:27+00:00",
+  "geometry": null,
+  "geometry_source": null,
+  "icao_location": "ZHWH",
+  "icao_text": "(A4976/26 NOTAMN \nQ)ZXXX/QARXX/IV/NBO/E/000/999/ \nA)ZGZU ZHWH B)2609290600 C)2609290710 \nE) 1.ATS ROUTE G586 SEGMENT GMC-ALGAG, ATS ROUTE R343 \nSEGMENT MAMSI-ABTUD AND ATS ROUTE W45 SEGMENT NUPTI-VESUX NOT AVBL \nDUE TECHNICAL REASONS. ALL AFFECTED FLIGHTS SHALL BE ADJUSTED. \n2.FLIGHT PLANS FOR AFFECTED FLIGHTS SHALL BE FILED BASED ON \nORIGINAL FLIGHT TRACKS. FLIGHT CREWS SHALL PREPARE REROUTING DATA \nAND FOLLOW ATC INSTRUCTIONS TO IMPLEMENT REROUTING. \n3. REROUTING METHODS AS FOLLOWS: \n3.1.FLIGHTS VIA ENKUS-R343-ABTUD TO BEYOND ABTUD, SHALL ADJUST \nTO ENKUS-CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO BEYOND \nABTUD. \n3.2.FLIGHTS VIA GOSMA-R343-MAMSI TO BEYOND LAIBIN VOR 'LBN', \nSHALL ADJUST TO GOSMA-CHANGDE NDB 'CD'-SANJIANG VOR 'SJG'- LAIBIN \nVOR 'LBN' FOR BEYOND LAIBIN VOR 'LBN'. \n3.3.FLIGHTS VIA MILOP-W226-OLTUS-R343-MAMSI TO BEYOND LAIBIN VOR \n'LBN', SHALL ADJUST TO MILOP-W226-IRSAS-CG3 (N275120 \nE1105724)-SANJIANG VOR 'SJG'- LAIBIN VOR 'LBN' FOR BEYOND LAIBIN \nVOR 'LBN'. \n3.4.FLIGHTS VIA CHANGDE NDB 'CD'-W45-NUPTI-R343-MAMSI TO \n ) \n// // \nBEYOND LAIBIN VOR 'LBN', SHALL ADJUST TO CHANGDE NDB \n'CD'-SANJIANG VOR 'SJG'-LAIBIN VOR 'LBN' FOR BEYOND LAIBIN VOR \n'LBN'. \n3.5.FLIGHTS VIA XOPEK-W45-NUPTI ARR ZGGG, SHALL ADJUST TO \nXOPEK-W138-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-R473-BEMAG-V5-ENVI \nP FOR ARR ZGGG. \n3.6.FLIGHTS VIA LAOLIANGCANG VOR 'LLC'-R343-NUPTI ARR ZGGG, \nSHALL ADJUST TO LAOLIANGCANG VOR \n'LLC'-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-BEMAG-V5-ENVIP FOR ARR \nZGGG. \n3.7.FLIGHTS VIA ERTANG VOR 'GMC'-G586-OSNOV TO BEYOND OSNOV, \nSHALL ADJUST TO ERTANG VOR 'GMC'-B330-MUBEL-OSNOV FOR BEYOND \nOSNOV. \n3.8.FLIGHTS VIA MOLSO-G586-ERTANG VOR 'GMC' TO BEYOND ERTANG VOR \n'GMC', SHALL ADJUST TO MOLSO-CG4 (N240823E1120514)-ERTANG VOR \n'GMC' FOR BEYOND ERTANG VOR 'GMC'. \n3.9.FLIGHTS VIA LIPNO-W24-OSNOV-G586 TO BEYOND ERTANG VOR 'GMC', \nSHALL ADJUST TO LIPNO-ERTANG VOR 'GMC' FOR BEYOND ERTANG VOR \n'GMC'. \n3.10.FLIGHTS DEP ZGGG TO BEYOND ERTANG VOR 'GMC', RADAR VECTOR \nDIRECT \nTO \n ) \n// // ERTANG VOR 'GMC' FOR BEYOND ERTANG VOR 'GMC'. \n3.11.FLIGHTS VIA ENKUS-R343-AVNEL-W618-SEBMO ARR ZGHA, SHALL \nADJUST TO ENKUS-CG1 (N253957E1095707)-CG2(N274629E1112333)-SEBMO \nFOR ARR ZGHA. \n3.12. FLIGHTS(DEPARTURE FROM ZGKL) VIA GUILIN VOR \n'KWL'-ONEMI-R343-ABTUD TO BEYOND ABTUD SHALL \nADJUST TO:AFTER DEPARTURE FROM ZGKL,SHALL FLW ATC(RADAR VECTOR) \nINSTRUCTION TO CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO \nBEYOND ABTUD. \n ) \n// //",
+  "id": "1790579415161000",
+  "issued": "2026-09-28T07:09:00.000Z",
+  "last_updated": "2026-09-28T07:10:00.000Z",
+  "local_text": null,
+  "location": "ZHWH",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4976/26",
+  "purpose": "NBO",
+  "q_code": "QARXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "1.ATS ROUTE G586 SEGMENT GMC-ALGAG, ATS ROUTE R343 \nSEGMENT MAMSI-ABTUD AND ATS ROUTE W45 SEGMENT NUPTI-VESUX NOT AVBL \nDUE TECHNICAL REASONS. ALL AFFECTED FLIGHTS SHALL BE ADJUSTED. \n2.FLIGHT PLANS FOR AFFECTED FLIGHTS SHALL BE FILED BASED ON \nORIGINAL FLIGHT TRACKS. FLIGHT CREWS SHALL PREPARE REROUTING DATA \nAND FOLLOW ATC INSTRUCTIONS TO IMPLEMENT REROUTING. \n3. REROUTING METHODS AS FOLLOWS: \n3.1.FLIGHTS VIA ENKUS-R343-ABTUD TO BEYOND ABTUD, SHALL ADJUST \nTO ENKUS-CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO BEYOND \nABTUD. \n3.2.FLIGHTS VIA GOSMA-R343-MAMSI TO BEYOND LAIBIN VOR 'LBN', \nSHALL ADJUST TO GOSMA-CHANGDE NDB 'CD'-SANJIANG VOR 'SJG'- LAIBIN \nVOR 'LBN' FOR BEYOND LAIBIN VOR 'LBN'. \n3.3.FLIGHTS VIA MILOP-W226-OLTUS-R343-MAMSI TO BEYOND LAIBIN VOR \n'LBN', SHALL ADJUST TO MILOP-W226-IRSAS-CG3 (N275120 \nE1105724)-SANJIANG VOR 'SJG'- LAIBIN VOR 'LBN' FOR BEYOND LAIBIN \nVOR 'LBN'. \n3.4.FLIGHTS VIA CHANGDE NDB 'CD'-W45-NUPTI-R343-MAMSI TO \n ) \n// // \nBEYOND LAIBIN VOR 'LBN', SHALL ADJUST TO CHANGDE NDB \n'CD'-SANJIANG VOR 'SJG'-LAIBIN VOR 'LBN' FOR BEYOND LAIBIN VOR \n'LBN'. \n3.5.FLIGHTS VIA XOPEK-W45-NUPTI ARR ZGGG, SHALL ADJUST TO \nXOPEK-W138-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-R473-BEMAG-V5-ENVI \nP FOR ARR ZGGG. \n3.6.FLIGHTS VIA LAOLIANGCANG VOR 'LLC'-R343-NUPTI ARR ZGGG, \nSHALL ADJUST TO LAOLIANGCANG VOR \n'LLC'-RUKLI-W227-UKBOL-W228-APESO-W37-OMBEB-BEMAG-V5-ENVIP FOR ARR \nZGGG. \n3.7.FLIGHTS VIA ERTANG VOR 'GMC'-G586-OSNOV TO BEYOND OSNOV, \nSHALL ADJUST TO ERTANG VOR 'GMC'-B330-MUBEL-OSNOV FOR BEYOND \nOSNOV. \n3.8.FLIGHTS VIA MOLSO-G586-ERTANG VOR 'GMC' TO BEYOND ERTANG VOR \n'GMC', SHALL ADJUST TO MOLSO-CG4 (N240823E1120514)-ERTANG VOR \n'GMC' FOR BEYOND ERTANG VOR 'GMC'. \n3.9.FLIGHTS VIA LIPNO-W24-OSNOV-G586 TO BEYOND ERTANG VOR 'GMC', \nSHALL ADJUST TO LIPNO-ERTANG VOR 'GMC' FOR BEYOND ERTANG VOR \n'GMC'. \n3.10.FLIGHTS DEP ZGGG TO BEYOND ERTANG VOR 'GMC', RADAR VECTOR \nDIRECT \nTO \n ) \n// // ERTANG VOR 'GMC' FOR BEYOND ERTANG VOR 'GMC'. \n3.11.FLIGHTS VIA ENKUS-R343-AVNEL-W618-SEBMO ARR ZGHA, SHALL \nADJUST TO ENKUS-CG1 (N253957E1095707)-CG2(N274629E1112333)-SEBMO \nFOR ARR ZGHA. \n3.12. FLIGHTS(DEPARTURE FROM ZGKL) VIA GUILIN VOR \n'KWL'-ONEMI-R343-ABTUD TO BEYOND ABTUD SHALL \nADJUST TO:AFTER DEPARTURE FROM ZGKL,SHALL FLW ATC(RADAR VECTOR) \nINSTRUCTION TO CG1(N253957E1095707)-CG2(N274629E1112333)-ABTUD TO \nBEYOND ABTUD. \n ) \n// //",
   "traffic": "IV",
   "type": "N",
   "upper": null,
