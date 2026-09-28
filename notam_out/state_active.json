@@ -11869,312 +11869,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790564487450000": {
-  "account_id": "VHHHYNYX",
-  "area_group": "HK",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2003N11500E",
-  "effective_end": "2026-09-28T12:00:00.000Z",
-  "effective_start": "2026-09-28T09:00:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "VHHK",
-  "first_seen": "2026-09-28T03:10:26+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      115.0,
-      23.610259
-     ],
-     [
-      115.37148,
-      23.593115
-     ],
-     [
-      115.739383,
-      23.541849
-     ],
-     [
-      116.100165,
-      23.456955
-     ],
-     [
-      116.450352,
-      23.33925
-     ],
-     [
-      116.786572,
-      23.189868
-     ],
-     [
-      117.105585,
-      23.010247
-     ],
-     [
-      117.404321,
-      22.802117
-     ],
-     [
-      117.679902,
-      22.567483
-     ],
-     [
-      117.929674,
-      22.308604
-     ],
-     [
-      118.151231,
-      22.027974
-     ],
-     [
-      118.342441,
-      21.728294
-     ],
-     [
-      118.50146,
-      21.412452
-     ],
-     [
-      118.626759,
-      21.083489
-     ],
-     [
-      118.717131,
-      20.744572
-     ],
-     [
-      118.771704,
-      20.398966
-     ],
-     [
-      118.789953,
-      20.05
-     ],
-     [
-      118.771704,
-      19.701034
-     ],
-     [
-      118.717131,
-      19.355428
-     ],
-     [
-      118.626759,
-      19.016511
-     ],
-     [
-      118.50146,
-      18.687548
-     ],
-     [
-      118.342441,
-      18.371706
-     ],
-     [
-      118.151231,
-      18.072026
-     ],
-     [
-      117.929674,
-      17.791396
-     ],
-     [
-      117.679902,
-      17.532517
-     ],
-     [
-      117.404321,
-      17.297883
-     ],
-     [
-      117.105585,
-      17.089753
-     ],
-     [
-      116.786572,
-      16.910132
-     ],
-     [
-      116.450352,
-      16.76075
-     ],
-     [
-      116.100165,
-      16.643045
-     ],
-     [
-      115.739383,
-      16.558151
-     ],
-     [
-      115.37148,
-      16.506885
-     ],
-     [
-      115.0,
-      16.489741
-     ],
-     [
-      114.62852,
-      16.506885
-     ],
-     [
-      114.260617,
-      16.558151
-     ],
-     [
-      113.899835,
-      16.643045
-     ],
-     [
-      113.549648,
-      16.76075
-     ],
-     [
-      113.213428,
-      16.910132
-     ],
-     [
-      112.894415,
-      17.089753
-     ],
-     [
-      112.595679,
-      17.297883
-     ],
-     [
-      112.320098,
-      17.532517
-     ],
-     [
-      112.070326,
-      17.791396
-     ],
-     [
-      111.848769,
-      18.072026
-     ],
-     [
-      111.657559,
-      18.371706
-     ],
-     [
-      111.49854,
-      18.687548
-     ],
-     [
-      111.373241,
-      19.016511
-     ],
-     [
-      111.282869,
-      19.355428
-     ],
-     [
-      111.228296,
-      19.701034
-     ],
-     [
-      111.210047,
-      20.05
-     ],
-     [
-      111.228296,
-      20.398966
-     ],
-     [
-      111.282869,
-      20.744572
-     ],
-     [
-      111.373241,
-      21.083489
-     ],
-     [
-      111.49854,
-      21.412452
-     ],
-     [
-      111.657559,
-      21.728294
-     ],
-     [
-      111.848769,
-      22.027974
-     ],
-     [
-      112.070326,
-      22.308604
-     ],
-     [
-      112.320098,
-      22.567483
-     ],
-     [
-      112.595679,
-      22.802117
-     ],
-     [
-      112.894415,
-      23.010247
-     ],
-     [
-      113.213428,
-      23.189868
-     ],
-     [
-      113.549648,
-      23.33925
-     ],
-     [
-      113.899835,
-      23.456955
-     ],
-     [
-      114.260617,
-      23.541849
-     ],
-     [
-      114.62852,
-      23.593115
-     ],
-     [
-      115.0,
-      23.610259
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "VHHK",
-  "icao_text": "A2264/26 NOTAMN\r\nQ) VHHK/QPFCA/IV/NBO/E /000/999/2003N11500E214\r\nA) VHHK B) 2609280900 C) 2609281200\r\nE) DUE TO TRAFFIC, FLIGHTS TRANSITING HONG KONG FIR,\r\n\r\n1. DESTINATIONS ZSAM, ZSFZ, ZSQZ: TREATED AS ONE STREAM\r\n2. DESTINATIONS OTHER THAN MENTIONED IN (1): TREATED AS ONE STREAM\r\n\r\nVIA THE FOLLOWING ROUTE IS SUBJECT TO FLOW CONTROL:\r\n\r\nA461 NOMAN - DOTMI A470, 10 MINUTES\r\n\r\nRMK: FLOW CONTROL MAY BE ADJUSTED SUBJECT TO SITUATION AND \r\nDISCRETION OF HONG KONG ATS WATCH SUPERVISOR.",
-  "id": "1790564487450000",
-  "issued": "2026-09-28T03:01:00.000Z",
-  "last_updated": "2026-09-28T03:01:00.000Z",
-  "local_text": null,
-  "location": "VHHK",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A2264/26",
-  "purpose": "NBO",
-  "q_code": "QPFCA",
-  "qline_offset_nm": null,
-  "radius_nm": 214.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E ",
-  "series": "A",
-  "text": "DUE TO TRAFFIC, FLIGHTS TRANSITING HONG KONG FIR,\r\n\r\n1. DESTINATIONS ZSAM, ZSFZ, ZSQZ: TREATED AS ONE STREAM\r\n2. DESTINATIONS OTHER THAN MENTIONED IN (1): TREATED AS ONE STREAM\r\n\r\nVIA THE FOLLOWING ROUTE IS SUBJECT TO FLOW CONTROL:\r\n\r\nA461 NOMAN - DOTMI A470, 10 MINUTES\r\n\r\nRMK: FLOW CONTROL MAY BE ADJUSTED SUBJECT TO SITUATION AND \r\nDISCRETION OF HONG KONG ATS WATCH SUPERVISOR.",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790566256865000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -36830,6 +36524,312 @@
   "scope": "AE",
   "series": "G",
   "text": "DUE TO TEMPO OBST, MSA ADJUSTED AS FLW:\r\n1.REF AIP CHINA ZJHK-7C,7D,9A,10A,10B:CENTERED AT \r\nNYB,210DEG-320DEG,MSA CHANGED FM 750M TO 800M.\r\n2.REF AIP CHINA \r\nZJHK-7A,7B,7J,7K,7L,7M,9B,9E,9F,10C,10D,10E,10F,10G,10H: \r\nCENTERED AT MLT, 030DEG-110DEG,MSA CHANGED FM 750M TO 800M.\r\n3.REF AIP CHINA ZJHK-7E,7F,7G,7H,9C,9D,20A,20B,20C,20D: \r\nCENTERED AT ARP,080DEG-180DEG,MSA CHANGED FM 750M TO 800M.",
+  "traffic": "IV",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790596371798000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1956N11028E",
+  "effective_end": "2026-12-11T15:59:00Z",
+  "effective_start": "2026-09-28T11:44:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZJSA",
+  "first_seen": "2026-09-28T12:00:46+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      110.466667,
+      20.066427
+     ],
+     [
+      110.480544,
+      20.065786
+     ],
+     [
+      110.494287,
+      20.06387
+     ],
+     [
+      110.507764,
+      20.060696
+     ],
+     [
+      110.520845,
+      20.056296
+     ],
+     [
+      110.533405,
+      20.050712
+     ],
+     [
+      110.545322,
+      20.043997
+     ],
+     [
+      110.556481,
+      20.036216
+     ],
+     [
+      110.566776,
+      20.027445
+     ],
+     [
+      110.576106,
+      20.017767
+     ],
+     [
+      110.584382,
+      20.007276
+     ],
+     [
+      110.591525,
+      19.996073
+     ],
+     [
+      110.597465,
+      19.984266
+     ],
+     [
+      110.602146,
+      19.971968
+     ],
+     [
+      110.605522,
+      19.959299
+     ],
+     [
+      110.607561,
+      19.946379
+     ],
+     [
+      110.608242,
+      19.933333
+     ],
+     [
+      110.607561,
+      19.920288
+     ],
+     [
+      110.605522,
+      19.907368
+     ],
+     [
+      110.602146,
+      19.894698
+     ],
+     [
+      110.597465,
+      19.882401
+     ],
+     [
+      110.591525,
+      19.870593
+     ],
+     [
+      110.584382,
+      19.85939
+     ],
+     [
+      110.576106,
+      19.8489
+     ],
+     [
+      110.566776,
+      19.839222
+     ],
+     [
+      110.556481,
+      19.83045
+     ],
+     [
+      110.545322,
+      19.82267
+     ],
+     [
+      110.533405,
+      19.815955
+     ],
+     [
+      110.520845,
+      19.810371
+     ],
+     [
+      110.507764,
+      19.805971
+     ],
+     [
+      110.494287,
+      19.802797
+     ],
+     [
+      110.480544,
+      19.80088
+     ],
+     [
+      110.466667,
+      19.80024
+     ],
+     [
+      110.45279,
+      19.80088
+     ],
+     [
+      110.439047,
+      19.802797
+     ],
+     [
+      110.425569,
+      19.805971
+     ],
+     [
+      110.412488,
+      19.810371
+     ],
+     [
+      110.399928,
+      19.815955
+     ],
+     [
+      110.388011,
+      19.82267
+     ],
+     [
+      110.376852,
+      19.83045
+     ],
+     [
+      110.366558,
+      19.839222
+     ],
+     [
+      110.357227,
+      19.8489
+     ],
+     [
+      110.348951,
+      19.85939
+     ],
+     [
+      110.341808,
+      19.870593
+     ],
+     [
+      110.335868,
+      19.882401
+     ],
+     [
+      110.331187,
+      19.894698
+     ],
+     [
+      110.327811,
+      19.907368
+     ],
+     [
+      110.325773,
+      19.920288
+     ],
+     [
+      110.325091,
+      19.933333
+     ],
+     [
+      110.325773,
+      19.946379
+     ],
+     [
+      110.327811,
+      19.959299
+     ],
+     [
+      110.331187,
+      19.971968
+     ],
+     [
+      110.335868,
+      19.984266
+     ],
+     [
+      110.341808,
+      19.996073
+     ],
+     [
+      110.348951,
+      20.007276
+     ],
+     [
+      110.357227,
+      20.017767
+     ],
+     [
+      110.366558,
+      20.027445
+     ],
+     [
+      110.376852,
+      20.036216
+     ],
+     [
+      110.388011,
+      20.043997
+     ],
+     [
+      110.399928,
+      20.050712
+     ],
+     [
+      110.412488,
+      20.056296
+     ],
+     [
+      110.425569,
+      20.060696
+     ],
+     [
+      110.439047,
+      20.06387
+     ],
+     [
+      110.45279,
+      20.065786
+     ],
+     [
+      110.466667,
+      20.066427
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZJHK",
+  "icao_text": "G4358/26 NOTAMR G2699/26\r\nQ)ZJSA/QOBCE/IV/M/A/000/999/1956N11028E008\r\nA)ZJHK B)2609281144 C)2612111559 \r\nE) ADD NEW TEMPO OBSTACLES WITHIN A CIRCLE WITH A RADIUS OF 15KM \r\n(CENTERED ON THE CENTER OF RWY09/27):\r\nOBSTACLE ID/DESIGNATION   TYPE    POSITION MAG BRG(DEGREE)/DIST(M) \r\n    ELEVATION(M) MARKING/LIGHTING TYPE& COLOUR   FLIGHT \r\nPROCEDURE/TAKE-OFF PATH AREA AFFECTED & REMARKS\r\n CRANE    CRANE          312/14,209      498   LGT    MSA(MLT,NYB)",
+  "id": "1790596371798000",
+  "issued": "2026-09-28T11:52:00Z",
+  "last_updated": "2026-09-28T11:53:00Z",
+  "local_text": null,
+  "location": "ZJHK",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "G4358/26",
+  "purpose": "M",
+  "q_code": "QOBCE",
+  "qline_offset_nm": null,
+  "radius_nm": 8.0,
+  "ref_number": "G2699/26",
+  "schedule": null,
+  "scope": "A",
+  "series": "G",
+  "text": "ADD NEW TEMPO OBSTACLES WITHIN A CIRCLE WITH A RADIUS OF 15KM \r\n(CENTERED ON THE CENTER OF RWY09/27):\r\nOBSTACLE ID/DESIGNATION   TYPE    POSITION MAG BRG(DEGREE)/DIST(M) \r\n    ELEVATION(M) MARKING/LIGHTING TYPE&amp; COLOUR   FLIGHT \r\nPROCEDURE/TAKE-OFF PATH AREA AFFECTED &amp; REMARKS\r\n CRANE    CRANE          312/14,209      498   LGT    MSA(MLT,NYB)",
   "traffic": "IV",
   "type": "R",
   "upper": null,
