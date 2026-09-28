@@ -64953,52 +64953,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790576590020000": {
-  "account_id": "RJAAYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3310N14118E",
-  "effective_end": "2026-09-28T13:00:00.000Z",
-  "effective_start": "2026-09-28T06:22:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RJJJ",
-  "first_seen": "2026-09-28T06:30:36+00:00",
-  "geometry": {
-   "coordinates": [
-    141.3,
-    33.166667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "RJJJ",
-  "icao_text": "X6141/26 NOTAMR X6128/26\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280622 C)2609281300\r\nE)FLOW CTL AS FLWS, \r\n AREA:  TOKYO APCH CTA\r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR RJTT VIA \r\nTEDIX,LALID \r\nRMK: REF AIP ENR1.9-1",
-  "id": "1790576590020000",
-  "issued": "2026-09-28T06:22:00.000Z",
-  "last_updated": "2026-09-28T06:23:00.000Z",
-  "local_text": null,
-  "location": "RJJJ",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "X6141/26",
-  "purpose": "NBO",
-  "q_code": "QPFCA",
-  "qline_offset_nm": null,
-  "radius_nm": 999.0,
-  "ref_number": "X6128/26",
-  "schedule": null,
-  "scope": "E",
-  "series": "X",
-  "text": "FLOW CTL AS FLWS, \r\n AREA:  TOKYO APCH CTA\r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR RJTT VIA \r\nTEDIX,LALID \r\nRMK: REF AIP ENR1.9-1",
-  "traffic": "I",
-  "type": "R",
-  "upper": null,
-  "year": "2026"
- },
  "1790576655918000": {
   "account_id": "RJAAYNYX",
   "area_group": "REF",
@@ -106935,312 +106889,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790591404139000": {
-  "account_id": "RKRRYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3729N12637E",
-  "effective_end": "2026-09-28T11:20:00.000Z",
-  "effective_start": "2026-09-28T10:29:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RKRR",
-  "first_seen": "2026-09-28T10:30:38+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      126.609444,
-      37.562906
-     ],
-     [
-      126.619718,
-      37.562505
-     ],
-     [
-      126.629894,
-      37.561307
-     ],
-     [
-      126.639872,
-      37.559324
-     ],
-     [
-      126.649558,
-      37.556574
-     ],
-     [
-      126.658857,
-      37.553083
-     ],
-     [
-      126.66768,
-      37.548887
-     ],
-     [
-      126.675942,
-      37.544024
-     ],
-     [
-      126.683564,
-      37.538542
-     ],
-     [
-      126.690473,
-      37.532493
-     ],
-     [
-      126.6966,
-      37.525936
-     ],
-     [
-      126.701889,
-      37.518934
-     ],
-     [
-      126.706287,
-      37.511555
-     ],
-     [
-      126.709753,
-      37.503869
-     ],
-     [
-      126.712252,
-      37.49595
-     ],
-     [
-      126.713761,
-      37.487875
-     ],
-     [
-      126.714266,
-      37.479722
-     ],
-     [
-      126.713761,
-      37.471569
-     ],
-     [
-      126.712252,
-      37.463494
-     ],
-     [
-      126.709753,
-      37.455575
-     ],
-     [
-      126.706287,
-      37.447889
-     ],
-     [
-      126.701889,
-      37.44051
-     ],
-     [
-      126.6966,
-      37.433508
-     ],
-     [
-      126.690473,
-      37.426951
-     ],
-     [
-      126.683564,
-      37.420902
-     ],
-     [
-      126.675942,
-      37.41542
-     ],
-     [
-      126.66768,
-      37.410557
-     ],
-     [
-      126.658857,
-      37.406361
-     ],
-     [
-      126.649558,
-      37.40287
-     ],
-     [
-      126.639872,
-      37.40012
-     ],
-     [
-      126.629894,
-      37.398137
-     ],
-     [
-      126.619718,
-      37.396939
-     ],
-     [
-      126.609444,
-      37.396538
-     ],
-     [
-      126.59917,
-      37.396939
-     ],
-     [
-      126.588994,
-      37.398137
-     ],
-     [
-      126.579016,
-      37.40012
-     ],
-     [
-      126.56933,
-      37.40287
-     ],
-     [
-      126.560031,
-      37.406361
-     ],
-     [
-      126.551208,
-      37.410557
-     ],
-     [
-      126.542946,
-      37.41542
-     ],
-     [
-      126.535324,
-      37.420902
-     ],
-     [
-      126.528415,
-      37.426951
-     ],
-     [
-      126.522288,
-      37.433508
-     ],
-     [
-      126.516999,
-      37.44051
-     ],
-     [
-      126.512601,
-      37.447889
-     ],
-     [
-      126.509135,
-      37.455575
-     ],
-     [
-      126.506636,
-      37.463494
-     ],
-     [
-      126.505127,
-      37.471569
-     ],
-     [
-      126.504622,
-      37.479722
-     ],
-     [
-      126.505127,
-      37.487875
-     ],
-     [
-      126.506636,
-      37.49595
-     ],
-     [
-      126.509135,
-      37.503869
-     ],
-     [
-      126.512601,
-      37.511555
-     ],
-     [
-      126.516999,
-      37.518934
-     ],
-     [
-      126.522288,
-      37.525936
-     ],
-     [
-      126.528415,
-      37.532493
-     ],
-     [
-      126.535324,
-      37.538542
-     ],
-     [
-      126.542946,
-      37.544024
-     ],
-     [
-      126.551208,
-      37.548887
-     ],
-     [
-      126.560031,
-      37.553083
-     ],
-     [
-      126.56933,
-      37.556574
-     ],
-     [
-      126.579016,
-      37.559324
-     ],
-     [
-      126.588994,
-      37.561307
-     ],
-     [
-      126.59917,
-      37.562505
-     ],
-     [
-      126.609444,
-      37.562906
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RKRR",
-  "icao_text": "D2931/26 NOTAMN  \r\nQ)RKRR/QRPCA/IV/NBO/W/000/999/3729N12637E016\r\nA)RKRR B)2609281029 C)2609281120\r\nE)TEMPO PROHIBITED AREA ACT AS FLW:\r\n1. AREA : A CIRCLE RADIUS 5NM CENTERED ON 372847N1263634E\r\n2. BUFFER ZONE : TEMPO BUFFER ZONE FM OUTSIDE OF PROHIBITED AREA TO\r\n                 10NM\r\n3. RMK : \r\n  - EXC SKED CIV ACFT USING AWY, EMERG MISSION ACFT\r\n  - EXC INFO/SURVEILLANCE RECONNAISSANCE ACFT(TKOF AND LDG NOT AVBL)\r\n  - FOR PRE-COORDINATION AND APV FOR PASSING THROUGH OR\r\n    ENTERING BUFFER ZONE CTC ROKAF SODO AT 031-669-7020/1\r\n    OR 031-661-4471 THEN CTC MCRC/ACC ON FREQ DURING THE FLT\r\nF)SFC G)UNL",
-  "id": "1790591404139000",
-  "issued": "2026-09-28T10:29:00.000Z",
-  "last_updated": "2026-09-28T10:30:00.000Z",
-  "local_text": null,
-  "location": "RKRR",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "D2931/26",
-  "purpose": "NBO",
-  "q_code": "QRPCA",
-  "qline_offset_nm": 0.4,
-  "radius_nm": 16.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "W",
-  "series": "D",
-  "text": "TEMPO PROHIBITED AREA ACT AS FLW:\r\n1. AREA : A CIRCLE RADIUS 5NM CENTERED ON 372847N1263634E\r\n2. BUFFER ZONE : TEMPO BUFFER ZONE FM OUTSIDE OF PROHIBITED AREA TO\r\n                 10NM\r\n3. RMK : \r\n  - EXC SKED CIV ACFT USING AWY, EMERG MISSION ACFT\r\n  - EXC INFO/SURVEILLANCE RECONNAISSANCE ACFT(TKOF AND LDG NOT AVBL)\r\n  - FOR PRE-COORDINATION AND APV FOR PASSING THROUGH OR\r\n    ENTERING BUFFER ZONE CTC ROKAF SODO AT 031-669-7020/1\r\n    OR 031-661-4471 THEN CTC MCRC/ACC ON FREQ DURING THE FLT",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "UNL",
-  "year": "2026"
- },
  "1790591411708000": {
   "account_id": "RJAAYNYX",
   "area_group": "REF",
@@ -107285,312 +106933,6 @@
   "traffic": "I",
   "type": "R",
   "upper": null,
-  "year": "2026"
- },
- "1790591487420000": {
-  "account_id": "RKRRYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3724N12640E",
-  "effective_end": "2026-09-28T11:05:00.000Z",
-  "effective_start": "2026-09-28T10:30:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RKRR",
-  "first_seen": "2026-09-28T10:40:26+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      126.667222,
-      37.479573
-     ],
-     [
-      126.677485,
-      37.479172
-     ],
-     [
-      126.687649,
-      37.477974
-     ],
-     [
-      126.697616,
-      37.475991
-     ],
-     [
-      126.707291,
-      37.473241
-     ],
-     [
-      126.71658,
-      37.46975
-     ],
-     [
-      126.725393,
-      37.465554
-     ],
-     [
-      126.733646,
-      37.460691
-     ],
-     [
-      126.74126,
-      37.455209
-     ],
-     [
-      126.74816,
-      37.44916
-     ],
-     [
-      126.754281,
-      37.442603
-     ],
-     [
-      126.759564,
-      37.435601
-     ],
-     [
-      126.763957,
-      37.428222
-     ],
-     [
-      126.767419,
-      37.420536
-     ],
-     [
-      126.769916,
-      37.412617
-     ],
-     [
-      126.771423,
-      37.404542
-     ],
-     [
-      126.771928,
-      37.396389
-     ],
-     [
-      126.771423,
-      37.388236
-     ],
-     [
-      126.769916,
-      37.380161
-     ],
-     [
-      126.767419,
-      37.372242
-     ],
-     [
-      126.763957,
-      37.364556
-     ],
-     [
-      126.759564,
-      37.357177
-     ],
-     [
-      126.754281,
-      37.350175
-     ],
-     [
-      126.74816,
-      37.343618
-     ],
-     [
-      126.74126,
-      37.337569
-     ],
-     [
-      126.733646,
-      37.332087
-     ],
-     [
-      126.725393,
-      37.327224
-     ],
-     [
-      126.71658,
-      37.323028
-     ],
-     [
-      126.707291,
-      37.319537
-     ],
-     [
-      126.697616,
-      37.316787
-     ],
-     [
-      126.687649,
-      37.314804
-     ],
-     [
-      126.677485,
-      37.313606
-     ],
-     [
-      126.667222,
-      37.313205
-     ],
-     [
-      126.656959,
-      37.313606
-     ],
-     [
-      126.646795,
-      37.314804
-     ],
-     [
-      126.636828,
-      37.316787
-     ],
-     [
-      126.627153,
-      37.319537
-     ],
-     [
-      126.617864,
-      37.323028
-     ],
-     [
-      126.609051,
-      37.327224
-     ],
-     [
-      126.600798,
-      37.332087
-     ],
-     [
-      126.593184,
-      37.337569
-     ],
-     [
-      126.586284,
-      37.343618
-     ],
-     [
-      126.580163,
-      37.350175
-     ],
-     [
-      126.57488,
-      37.357177
-     ],
-     [
-      126.570487,
-      37.364556
-     ],
-     [
-      126.567025,
-      37.372242
-     ],
-     [
-      126.564528,
-      37.380161
-     ],
-     [
-      126.563021,
-      37.388236
-     ],
-     [
-      126.562516,
-      37.396389
-     ],
-     [
-      126.563021,
-      37.404542
-     ],
-     [
-      126.564528,
-      37.412617
-     ],
-     [
-      126.567025,
-      37.420536
-     ],
-     [
-      126.570487,
-      37.428222
-     ],
-     [
-      126.57488,
-      37.435601
-     ],
-     [
-      126.580163,
-      37.442603
-     ],
-     [
-      126.586284,
-      37.44916
-     ],
-     [
-      126.593184,
-      37.455209
-     ],
-     [
-      126.600798,
-      37.460691
-     ],
-     [
-      126.609051,
-      37.465554
-     ],
-     [
-      126.617864,
-      37.46975
-     ],
-     [
-      126.627153,
-      37.473241
-     ],
-     [
-      126.636828,
-      37.475991
-     ],
-     [
-      126.646795,
-      37.477974
-     ],
-     [
-      126.656959,
-      37.479172
-     ],
-     [
-      126.667222,
-      37.479573
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RKRR",
-  "icao_text": "D2932/26 NOTAMN  \r\nQ)RKRR/QRPCA/IV/NBO/W/000/999/3724N12640E016\r\nA)RKRR B)2609281030 C)2609281105\r\nE)TEMPO PROHIBITED AREA ACT AS FLW:\r\n1. AREA : A CIRCLE RADIUS 5NM CENTERED ON 372347N1264002E\r\n2. BUFFER ZONE : TEMPO BUFFER ZONE FM OUTSIDE OF PROHIBITED AREA TO\r\n                 10NM\r\n3. RMK : \r\n  - EXC SKED CIV ACFT USING AWY, EMERG MISSION ACFT\r\n  - EXC INFO/SURVEILLANCE RECONNAISSANCE ACFT(TKOF AND LDG NOT AVBL)\r\n  - FOR PRE-COORDINATION AND APV FOR PASSING THROUGH OR\r\n    ENTERING BUFFER ZONE CTC ROKAF SODO AT 031-669-7020/1\r\n    OR 031-661-4471 THEN CTC MCRC/ACC ON FREQ DURING THE FLT\r\nF)SFC G)UNL",
-  "id": "1790591487420000",
-  "issued": "2026-09-28T10:31:00.000Z",
-  "last_updated": "2026-09-28T10:31:00.000Z",
-  "local_text": null,
-  "location": "RKRR",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "D2932/26",
-  "purpose": "NBO",
-  "q_code": "QRPCA",
-  "qline_offset_nm": 0.2,
-  "radius_nm": 16.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "W",
-  "series": "D",
-  "text": "TEMPO PROHIBITED AREA ACT AS FLW:\r\n1. AREA : A CIRCLE RADIUS 5NM CENTERED ON 372347N1264002E\r\n2. BUFFER ZONE : TEMPO BUFFER ZONE FM OUTSIDE OF PROHIBITED AREA TO\r\n                 10NM\r\n3. RMK : \r\n  - EXC SKED CIV ACFT USING AWY, EMERG MISSION ACFT\r\n  - EXC INFO/SURVEILLANCE RECONNAISSANCE ACFT(TKOF AND LDG NOT AVBL)\r\n  - FOR PRE-COORDINATION AND APV FOR PASSING THROUGH OR\r\n    ENTERING BUFFER ZONE CTC ROKAF SODO AT 031-669-7020/1\r\n    OR 031-661-4471 THEN CTC MCRC/ACC ON FREQ DURING THE FLT",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "UNL",
   "year": "2026"
  },
  "1790591754058000": {
@@ -117429,6 +116771,970 @@
   "traffic": "IV",
   "type": "N",
   "upper": null,
+  "year": "2026"
+ },
+ "1790593363460000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1431N12101E",
+  "effective_end": "2026-09-28T20:00:00.000Z",
+  "effective_start": "2026-09-28T14:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-09-28T11:10:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.016667,
+      14.59985
+     ],
+     [
+      121.025089,
+      14.59945
+     ],
+     [
+      121.03343,
+      14.598252
+     ],
+     [
+      121.04161,
+      14.596268
+     ],
+     [
+      121.049549,
+      14.593518
+     ],
+     [
+      121.057172,
+      14.590028
+     ],
+     [
+      121.064405,
+      14.585831
+     ],
+     [
+      121.071178,
+      14.580968
+     ],
+     [
+      121.077426,
+      14.575486
+     ],
+     [
+      121.083089,
+      14.569438
+     ],
+     [
+      121.088112,
+      14.562881
+     ],
+     [
+      121.092447,
+      14.555879
+     ],
+     [
+      121.096053,
+      14.5485
+     ],
+     [
+      121.098894,
+      14.540814
+     ],
+     [
+      121.100942,
+      14.532895
+     ],
+     [
+      121.10218,
+      14.52482
+     ],
+     [
+      121.102594,
+      14.516667
+     ],
+     [
+      121.10218,
+      14.508513
+     ],
+     [
+      121.100942,
+      14.500438
+     ],
+     [
+      121.098894,
+      14.49252
+     ],
+     [
+      121.096053,
+      14.484834
+     ],
+     [
+      121.092447,
+      14.477454
+     ],
+     [
+      121.088112,
+      14.470452
+     ],
+     [
+      121.083089,
+      14.463896
+     ],
+     [
+      121.077426,
+      14.457847
+     ],
+     [
+      121.071178,
+      14.452365
+     ],
+     [
+      121.064405,
+      14.447502
+     ],
+     [
+      121.057172,
+      14.443305
+     ],
+     [
+      121.049549,
+      14.439815
+     ],
+     [
+      121.04161,
+      14.437065
+     ],
+     [
+      121.03343,
+      14.435081
+     ],
+     [
+      121.025089,
+      14.433884
+     ],
+     [
+      121.016667,
+      14.433483
+     ],
+     [
+      121.008244,
+      14.433884
+     ],
+     [
+      120.999903,
+      14.435081
+     ],
+     [
+      120.991723,
+      14.437065
+     ],
+     [
+      120.983784,
+      14.439815
+     ],
+     [
+      120.976161,
+      14.443305
+     ],
+     [
+      120.968928,
+      14.447502
+     ],
+     [
+      120.962155,
+      14.452365
+     ],
+     [
+      120.955907,
+      14.457847
+     ],
+     [
+      120.950244,
+      14.463896
+     ],
+     [
+      120.945221,
+      14.470452
+     ],
+     [
+      120.940886,
+      14.477454
+     ],
+     [
+      120.937281,
+      14.484834
+     ],
+     [
+      120.93444,
+      14.49252
+     ],
+     [
+      120.932391,
+      14.500438
+     ],
+     [
+      120.931154,
+      14.508513
+     ],
+     [
+      120.93074,
+      14.516667
+     ],
+     [
+      120.931154,
+      14.52482
+     ],
+     [
+      120.932391,
+      14.532895
+     ],
+     [
+      120.93444,
+      14.540814
+     ],
+     [
+      120.937281,
+      14.5485
+     ],
+     [
+      120.940886,
+      14.555879
+     ],
+     [
+      120.945221,
+      14.562881
+     ],
+     [
+      120.950244,
+      14.569438
+     ],
+     [
+      120.955907,
+      14.575486
+     ],
+     [
+      120.962155,
+      14.580968
+     ],
+     [
+      120.968928,
+      14.585831
+     ],
+     [
+      120.976161,
+      14.590028
+     ],
+     [
+      120.983784,
+      14.593518
+     ],
+     [
+      120.991723,
+      14.596268
+     ],
+     [
+      120.999903,
+      14.598252
+     ],
+     [
+      121.008244,
+      14.59945
+     ],
+     [
+      121.016667,
+      14.59985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPLL",
+  "icao_text": "B5118/26 NOTAMN\r\nQ) RPHI/QMXLC/IV/BO /A /000/999/1431N12101E005\r\nA) RPLL B) 2609281400 C) 2609282000\r\nE) PORTION OF TWY D (BTN TWY F4 AND F5) CLSD DUE WIP (EMERG PAVEMENT \r\nREPAIR).",
+  "id": "1790593363460000",
+  "issued": "2026-09-28T11:02:00.000Z",
+  "last_updated": "2026-09-28T11:02:00.000Z",
+  "local_text": null,
+  "location": "RPLL",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5118/26",
+  "purpose": "BO ",
+  "q_code": "QMXLC",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A ",
+  "series": "B",
+  "text": "PORTION OF TWY D (BTN TWY F4 AND F5) CLSD DUE WIP (EMERG PAVEMENT \r\nREPAIR).",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790593385983000": {
+  "account_id": "RKRRYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3729N12637E",
+  "effective_end": "2026-09-28T11:50:00.000Z",
+  "effective_start": "2026-09-28T11:02:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RKRR",
+  "first_seen": "2026-09-28T11:10:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      126.609444,
+      37.562906
+     ],
+     [
+      126.619718,
+      37.562505
+     ],
+     [
+      126.629894,
+      37.561307
+     ],
+     [
+      126.639872,
+      37.559324
+     ],
+     [
+      126.649558,
+      37.556574
+     ],
+     [
+      126.658857,
+      37.553083
+     ],
+     [
+      126.66768,
+      37.548887
+     ],
+     [
+      126.675942,
+      37.544024
+     ],
+     [
+      126.683564,
+      37.538542
+     ],
+     [
+      126.690473,
+      37.532493
+     ],
+     [
+      126.6966,
+      37.525936
+     ],
+     [
+      126.701889,
+      37.518934
+     ],
+     [
+      126.706287,
+      37.511555
+     ],
+     [
+      126.709753,
+      37.503869
+     ],
+     [
+      126.712252,
+      37.49595
+     ],
+     [
+      126.713761,
+      37.487875
+     ],
+     [
+      126.714266,
+      37.479722
+     ],
+     [
+      126.713761,
+      37.471569
+     ],
+     [
+      126.712252,
+      37.463494
+     ],
+     [
+      126.709753,
+      37.455575
+     ],
+     [
+      126.706287,
+      37.447889
+     ],
+     [
+      126.701889,
+      37.44051
+     ],
+     [
+      126.6966,
+      37.433508
+     ],
+     [
+      126.690473,
+      37.426951
+     ],
+     [
+      126.683564,
+      37.420902
+     ],
+     [
+      126.675942,
+      37.41542
+     ],
+     [
+      126.66768,
+      37.410557
+     ],
+     [
+      126.658857,
+      37.406361
+     ],
+     [
+      126.649558,
+      37.40287
+     ],
+     [
+      126.639872,
+      37.40012
+     ],
+     [
+      126.629894,
+      37.398137
+     ],
+     [
+      126.619718,
+      37.396939
+     ],
+     [
+      126.609444,
+      37.396538
+     ],
+     [
+      126.59917,
+      37.396939
+     ],
+     [
+      126.588994,
+      37.398137
+     ],
+     [
+      126.579016,
+      37.40012
+     ],
+     [
+      126.56933,
+      37.40287
+     ],
+     [
+      126.560031,
+      37.406361
+     ],
+     [
+      126.551208,
+      37.410557
+     ],
+     [
+      126.542946,
+      37.41542
+     ],
+     [
+      126.535324,
+      37.420902
+     ],
+     [
+      126.528415,
+      37.426951
+     ],
+     [
+      126.522288,
+      37.433508
+     ],
+     [
+      126.516999,
+      37.44051
+     ],
+     [
+      126.512601,
+      37.447889
+     ],
+     [
+      126.509135,
+      37.455575
+     ],
+     [
+      126.506636,
+      37.463494
+     ],
+     [
+      126.505127,
+      37.471569
+     ],
+     [
+      126.504622,
+      37.479722
+     ],
+     [
+      126.505127,
+      37.487875
+     ],
+     [
+      126.506636,
+      37.49595
+     ],
+     [
+      126.509135,
+      37.503869
+     ],
+     [
+      126.512601,
+      37.511555
+     ],
+     [
+      126.516999,
+      37.518934
+     ],
+     [
+      126.522288,
+      37.525936
+     ],
+     [
+      126.528415,
+      37.532493
+     ],
+     [
+      126.535324,
+      37.538542
+     ],
+     [
+      126.542946,
+      37.544024
+     ],
+     [
+      126.551208,
+      37.548887
+     ],
+     [
+      126.560031,
+      37.553083
+     ],
+     [
+      126.56933,
+      37.556574
+     ],
+     [
+      126.579016,
+      37.559324
+     ],
+     [
+      126.588994,
+      37.561307
+     ],
+     [
+      126.59917,
+      37.562505
+     ],
+     [
+      126.609444,
+      37.562906
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RKRR",
+  "icao_text": "D2962/26 NOTAMR D2931/26 \r\nQ)RKRR/QRPCA/IV/NBO/W/000/999/3729N12637E016\r\nA)RKRR B)2609281102 C)2609281150\r\nE)TEMPO PROHIBITED AREA ACT AS FLW:\r\n1. AREA : A CIRCLE RADIUS 5NM CENTERED ON 372847N1263634E\r\n2. BUFFER ZONE : TEMPO BUFFER ZONE FM OUTSIDE OF PROHIBITED AREA TO\r\n                 10NM\r\n3. RMK : \r\n  - EXC SKED CIV ACFT USING AWY, EMERG MISSION ACFT\r\n  - EXC INFO/SURVEILLANCE RECONNAISSANCE ACFT(TKOF AND LDG NOT AVBL)\r\n  - FOR PRE-COORDINATION AND APV FOR PASSING THROUGH OR\r\n    ENTERING BUFFER ZONE CTC ROKAF SODO AT 031-669-7020/1\r\n    OR 031-661-4471 THEN CTC MCRC/ACC ON FREQ DURING THE FLT\r\nF)SFC G)UNL",
+  "id": "1790593385983000",
+  "issued": "2026-09-28T11:02:00.000Z",
+  "last_updated": "2026-09-28T11:03:00.000Z",
+  "local_text": null,
+  "location": "RKRR",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "D2962/26",
+  "purpose": "NBO",
+  "q_code": "QRPCA",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 16.0,
+  "ref_number": "D2931/26",
+  "schedule": null,
+  "scope": "W",
+  "series": "D",
+  "text": "TEMPO PROHIBITED AREA ACT AS FLW:\r\n1. AREA : A CIRCLE RADIUS 5NM CENTERED ON 372847N1263634E\r\n2. BUFFER ZONE : TEMPO BUFFER ZONE FM OUTSIDE OF PROHIBITED AREA TO\r\n                 10NM\r\n3. RMK : \r\n  - EXC SKED CIV ACFT USING AWY, EMERG MISSION ACFT\r\n  - EXC INFO/SURVEILLANCE RECONNAISSANCE ACFT(TKOF AND LDG NOT AVBL)\r\n  - FOR PRE-COORDINATION AND APV FOR PASSING THROUGH OR\r\n    ENTERING BUFFER ZONE CTC ROKAF SODO AT 031-669-7020/1\r\n    OR 031-661-4471 THEN CTC MCRC/ACC ON FREQ DURING THE FLT",
+  "traffic": "IV",
+  "type": "R",
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1790593403672000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-10-01T11:03:00.000Z",
+  "effective_start": "2026-09-28T11:03:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T11:10:28+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "X6151/26 NOTAMC X6141/26\r\nQ)RJJJ/QPFCC/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609281103\r\nE)FLOW CTL TOKYO APCH CTA  \r\nCMPL",
+  "id": "1790593403672000",
+  "issued": "2026-09-28T11:03:00.000Z",
+  "last_updated": "2026-09-28T11:03:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "X6151/26",
+  "purpose": "NBO",
+  "q_code": "QPFCC",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": "X6141/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "X",
+  "text": "FLOW CTL TOKYO APCH CTA  \r\nCMPL",
+  "traffic": "I",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790593455975000": {
+  "account_id": "RKRRYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3724N12640E",
+  "effective_end": "2026-09-28T11:35:00.000Z",
+  "effective_start": "2026-09-28T11:03:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RKRR",
+  "first_seen": "2026-09-28T11:10:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      126.667222,
+      37.479573
+     ],
+     [
+      126.677485,
+      37.479172
+     ],
+     [
+      126.687649,
+      37.477974
+     ],
+     [
+      126.697616,
+      37.475991
+     ],
+     [
+      126.707291,
+      37.473241
+     ],
+     [
+      126.71658,
+      37.46975
+     ],
+     [
+      126.725393,
+      37.465554
+     ],
+     [
+      126.733646,
+      37.460691
+     ],
+     [
+      126.74126,
+      37.455209
+     ],
+     [
+      126.74816,
+      37.44916
+     ],
+     [
+      126.754281,
+      37.442603
+     ],
+     [
+      126.759564,
+      37.435601
+     ],
+     [
+      126.763957,
+      37.428222
+     ],
+     [
+      126.767419,
+      37.420536
+     ],
+     [
+      126.769916,
+      37.412617
+     ],
+     [
+      126.771423,
+      37.404542
+     ],
+     [
+      126.771928,
+      37.396389
+     ],
+     [
+      126.771423,
+      37.388236
+     ],
+     [
+      126.769916,
+      37.380161
+     ],
+     [
+      126.767419,
+      37.372242
+     ],
+     [
+      126.763957,
+      37.364556
+     ],
+     [
+      126.759564,
+      37.357177
+     ],
+     [
+      126.754281,
+      37.350175
+     ],
+     [
+      126.74816,
+      37.343618
+     ],
+     [
+      126.74126,
+      37.337569
+     ],
+     [
+      126.733646,
+      37.332087
+     ],
+     [
+      126.725393,
+      37.327224
+     ],
+     [
+      126.71658,
+      37.323028
+     ],
+     [
+      126.707291,
+      37.319537
+     ],
+     [
+      126.697616,
+      37.316787
+     ],
+     [
+      126.687649,
+      37.314804
+     ],
+     [
+      126.677485,
+      37.313606
+     ],
+     [
+      126.667222,
+      37.313205
+     ],
+     [
+      126.656959,
+      37.313606
+     ],
+     [
+      126.646795,
+      37.314804
+     ],
+     [
+      126.636828,
+      37.316787
+     ],
+     [
+      126.627153,
+      37.319537
+     ],
+     [
+      126.617864,
+      37.323028
+     ],
+     [
+      126.609051,
+      37.327224
+     ],
+     [
+      126.600798,
+      37.332087
+     ],
+     [
+      126.593184,
+      37.337569
+     ],
+     [
+      126.586284,
+      37.343618
+     ],
+     [
+      126.580163,
+      37.350175
+     ],
+     [
+      126.57488,
+      37.357177
+     ],
+     [
+      126.570487,
+      37.364556
+     ],
+     [
+      126.567025,
+      37.372242
+     ],
+     [
+      126.564528,
+      37.380161
+     ],
+     [
+      126.563021,
+      37.388236
+     ],
+     [
+      126.562516,
+      37.396389
+     ],
+     [
+      126.563021,
+      37.404542
+     ],
+     [
+      126.564528,
+      37.412617
+     ],
+     [
+      126.567025,
+      37.420536
+     ],
+     [
+      126.570487,
+      37.428222
+     ],
+     [
+      126.57488,
+      37.435601
+     ],
+     [
+      126.580163,
+      37.442603
+     ],
+     [
+      126.586284,
+      37.44916
+     ],
+     [
+      126.593184,
+      37.455209
+     ],
+     [
+      126.600798,
+      37.460691
+     ],
+     [
+      126.609051,
+      37.465554
+     ],
+     [
+      126.617864,
+      37.46975
+     ],
+     [
+      126.627153,
+      37.473241
+     ],
+     [
+      126.636828,
+      37.475991
+     ],
+     [
+      126.646795,
+      37.477974
+     ],
+     [
+      126.656959,
+      37.479172
+     ],
+     [
+      126.667222,
+      37.479573
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RKRR",
+  "icao_text": "D2963/26 NOTAMR D2932/26 \r\nQ)RKRR/QRPCA/IV/NBO/W/000/999/3724N12640E016\r\nA)RKRR B)2609281103 C)2609281135\r\nE)TEMPO PROHIBITED AREA ACT AS FLW:\r\n1. AREA : A CIRCLE RADIUS 5NM CENTERED ON 372347N1264002E\r\n2. BUFFER ZONE : TEMPO BUFFER ZONE FM OUTSIDE OF PROHIBITED AREA TO\r\n                 10NM\r\n3. RMK : \r\n  - EXC SKED CIV ACFT USING AWY, EMERG MISSION ACFT\r\n  - EXC INFO/SURVEILLANCE RECONNAISSANCE ACFT(TKOF AND LDG NOT AVBL)\r\n  - FOR PRE-COORDINATION AND APV FOR PASSING THROUGH OR\r\n    ENTERING BUFFER ZONE CTC ROKAF SODO AT 031-669-7020/1\r\n    OR 031-661-4471 THEN CTC MCRC/ACC ON FREQ DURING THE FLT\r\nF)SFC G)UNL",
+  "id": "1790593455975000",
+  "issued": "2026-09-28T11:04:00.000Z",
+  "last_updated": "2026-09-28T11:04:00.000Z",
+  "local_text": null,
+  "location": "RKRR",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "D2963/26",
+  "purpose": "NBO",
+  "q_code": "QRPCA",
+  "qline_offset_nm": 0.2,
+  "radius_nm": 16.0,
+  "ref_number": "D2932/26",
+  "schedule": null,
+  "scope": "W",
+  "series": "D",
+  "text": "TEMPO PROHIBITED AREA ACT AS FLW:\r\n1. AREA : A CIRCLE RADIUS 5NM CENTERED ON 372347N1264002E\r\n2. BUFFER ZONE : TEMPO BUFFER ZONE FM OUTSIDE OF PROHIBITED AREA TO\r\n                 10NM\r\n3. RMK : \r\n  - EXC SKED CIV ACFT USING AWY, EMERG MISSION ACFT\r\n  - EXC INFO/SURVEILLANCE RECONNAISSANCE ACFT(TKOF AND LDG NOT AVBL)\r\n  - FOR PRE-COORDINATION AND APV FOR PASSING THROUGH OR\r\n    ENTERING BUFFER ZONE CTC ROKAF SODO AT 031-669-7020/1\r\n    OR 031-661-4471 THEN CTC MCRC/ACC ON FREQ DURING THE FLT",
+  "traffic": "IV",
+  "type": "R",
+  "upper": "UNL",
   "year": "2026"
  }
 }
