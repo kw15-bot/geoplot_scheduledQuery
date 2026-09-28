@@ -244,6 +244,17 @@ class Fixture(unittest.TestCase):
         self.assertNotIn("A0101/26", props(self.out))
         self.assertEqual(arch(self.out)["A0101/26"]["status"], "cancelled")
 
+    def test_cancel_before_start_archives_immediately(self):
+        """開始前に取消されたNOTAMは、開始時刻を待たずにArchiveへ移る(以前は開始まで予定のまま残った)。"""
+        self.put([feat("A0120/26", "ZBPE", "ZBPE", start="2026-09-25T00:00:00.000Z", end="2026-09-26T00:00:00.000Z")])
+        self.go("2026-09-21T12:00:00Z")
+        self.assertEqual(props(self.out)["A0120/26"]["status"], "upcoming")
+        self.put([feat("A0121/26", "ZBPE", "ZBPE", ntype="C", ref="A0120/26", start="2026-09-21T15:00:00.000Z",
+                       geom=None, coords="", radius="")])
+        self.go("2026-09-21T16:00:00Z")
+        self.assertNotIn("A0120/26", props(self.out))
+        self.assertEqual(arch(self.out)["A0120/26"]["status"], "cancelled")
+
     # --- 失効とArchive（即時移行）
     def test_expiry_moves_to_archive_immediately(self):
         self.put(BASE)
