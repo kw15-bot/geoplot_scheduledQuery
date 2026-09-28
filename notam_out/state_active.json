@@ -102915,312 +102915,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790587803433000": {
-  "account_id": "RKRRYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3729N12637E",
-  "effective_end": "2026-09-28T10:20:00.000Z",
-  "effective_start": "2026-09-28T09:29:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RKRR",
-  "first_seen": "2026-09-28T09:30:35+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      126.609444,
-      37.562906
-     ],
-     [
-      126.619718,
-      37.562505
-     ],
-     [
-      126.629894,
-      37.561307
-     ],
-     [
-      126.639872,
-      37.559324
-     ],
-     [
-      126.649558,
-      37.556574
-     ],
-     [
-      126.658857,
-      37.553083
-     ],
-     [
-      126.66768,
-      37.548887
-     ],
-     [
-      126.675942,
-      37.544024
-     ],
-     [
-      126.683564,
-      37.538542
-     ],
-     [
-      126.690473,
-      37.532493
-     ],
-     [
-      126.6966,
-      37.525936
-     ],
-     [
-      126.701889,
-      37.518934
-     ],
-     [
-      126.706287,
-      37.511555
-     ],
-     [
-      126.709753,
-      37.503869
-     ],
-     [
-      126.712252,
-      37.49595
-     ],
-     [
-      126.713761,
-      37.487875
-     ],
-     [
-      126.714266,
-      37.479722
-     ],
-     [
-      126.713761,
-      37.471569
-     ],
-     [
-      126.712252,
-      37.463494
-     ],
-     [
-      126.709753,
-      37.455575
-     ],
-     [
-      126.706287,
-      37.447889
-     ],
-     [
-      126.701889,
-      37.44051
-     ],
-     [
-      126.6966,
-      37.433508
-     ],
-     [
-      126.690473,
-      37.426951
-     ],
-     [
-      126.683564,
-      37.420902
-     ],
-     [
-      126.675942,
-      37.41542
-     ],
-     [
-      126.66768,
-      37.410557
-     ],
-     [
-      126.658857,
-      37.406361
-     ],
-     [
-      126.649558,
-      37.40287
-     ],
-     [
-      126.639872,
-      37.40012
-     ],
-     [
-      126.629894,
-      37.398137
-     ],
-     [
-      126.619718,
-      37.396939
-     ],
-     [
-      126.609444,
-      37.396538
-     ],
-     [
-      126.59917,
-      37.396939
-     ],
-     [
-      126.588994,
-      37.398137
-     ],
-     [
-      126.579016,
-      37.40012
-     ],
-     [
-      126.56933,
-      37.40287
-     ],
-     [
-      126.560031,
-      37.406361
-     ],
-     [
-      126.551208,
-      37.410557
-     ],
-     [
-      126.542946,
-      37.41542
-     ],
-     [
-      126.535324,
-      37.420902
-     ],
-     [
-      126.528415,
-      37.426951
-     ],
-     [
-      126.522288,
-      37.433508
-     ],
-     [
-      126.516999,
-      37.44051
-     ],
-     [
-      126.512601,
-      37.447889
-     ],
-     [
-      126.509135,
-      37.455575
-     ],
-     [
-      126.506636,
-      37.463494
-     ],
-     [
-      126.505127,
-      37.471569
-     ],
-     [
-      126.504622,
-      37.479722
-     ],
-     [
-      126.505127,
-      37.487875
-     ],
-     [
-      126.506636,
-      37.49595
-     ],
-     [
-      126.509135,
-      37.503869
-     ],
-     [
-      126.512601,
-      37.511555
-     ],
-     [
-      126.516999,
-      37.518934
-     ],
-     [
-      126.522288,
-      37.525936
-     ],
-     [
-      126.528415,
-      37.532493
-     ],
-     [
-      126.535324,
-      37.538542
-     ],
-     [
-      126.542946,
-      37.544024
-     ],
-     [
-      126.551208,
-      37.548887
-     ],
-     [
-      126.560031,
-      37.553083
-     ],
-     [
-      126.56933,
-      37.556574
-     ],
-     [
-      126.579016,
-      37.559324
-     ],
-     [
-      126.588994,
-      37.561307
-     ],
-     [
-      126.59917,
-      37.562505
-     ],
-     [
-      126.609444,
-      37.562906
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RKRR",
-  "icao_text": "D2928/26 NOTAMN  \r\nQ)RKRR/QRPCA/IV/NBO/W/000/999/3729N12637E016\r\nA)RKRR B)2609280929 C)2609281020\r\nE)TEMPO PROHIBITED AREA ACT AS FLW:\r\n1. AREA : A CIRCLE RADIUS 5NM CENTERED ON 372847N1263634E\r\n2. BUFFER ZONE : TEMPO BUFFER ZONE FM OUTSIDE OF PROHIBITED AREA TO\r\n                 10NM\r\n3. RMK : \r\n  - EXC SKED CIV ACFT USING AWY, EMERG MISSION ACFT\r\n  - EXC INFO/SURVEILLANCE RECONNAISSANCE ACFT(TKOF AND LDG NOT AVBL)\r\n  - FOR PRE-COORDINATION AND APV FOR PASSING THROUGH OR\r\n    ENTERING BUFFER ZONE CTC ROKAF SODO AT 031-669-7020/1\r\n    OR 031-661-4471 THEN CTC MCRC/ACC ON FREQ DURING THE FLT\r\nF)SFC G)UNL",
-  "id": "1790587803433000",
-  "issued": "2026-09-28T09:29:00.000Z",
-  "last_updated": "2026-09-28T09:30:00.000Z",
-  "local_text": null,
-  "location": "RKRR",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "D2928/26",
-  "purpose": "NBO",
-  "q_code": "QRPCA",
-  "qline_offset_nm": 0.4,
-  "radius_nm": 16.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "W",
-  "series": "D",
-  "text": "TEMPO PROHIBITED AREA ACT AS FLW:\r\n1. AREA : A CIRCLE RADIUS 5NM CENTERED ON 372847N1263634E\r\n2. BUFFER ZONE : TEMPO BUFFER ZONE FM OUTSIDE OF PROHIBITED AREA TO\r\n                 10NM\r\n3. RMK : \r\n  - EXC SKED CIV ACFT USING AWY, EMERG MISSION ACFT\r\n  - EXC INFO/SURVEILLANCE RECONNAISSANCE ACFT(TKOF AND LDG NOT AVBL)\r\n  - FOR PRE-COORDINATION AND APV FOR PASSING THROUGH OR\r\n    ENTERING BUFFER ZONE CTC ROKAF SODO AT 031-669-7020/1\r\n    OR 031-661-4471 THEN CTC MCRC/ACC ON FREQ DURING THE FLT",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "UNL",
-  "year": "2026"
- },
  "1790587857819000": {
   "account_id": "RJAAYNYX",
   "area_group": "REF",
@@ -106015,6 +105709,756 @@
   "traffic": "IV",
   "type": "N",
   "upper": "2461FT AMSL",
+  "year": "2026"
+ },
+ "1790590244973000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T00:40:00Z",
+  "effective_start": "2026-09-28T23:50:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZXXX",
+  "first_seen": "2026-09-28T10:20:28+00:00",
+  "geometry": null,
+  "geometry_source": null,
+  "icao_location": "ZWUQ",
+  "icao_text": "A4978/26 NOTAMN\r\nQ)ZXXX/QARLC/IV/NBO/E/000/999/\r\nA)ZLHW ZWUQ B)2609282350 C)2609290040 \r\nE) THE SEGMENT WITHIN A CIRCLE CENTERED AT DUMIN WITH RADIUS OF \r\n160KM CLSD.",
+  "id": "1790590244973000",
+  "issued": "2026-09-28T10:10:00Z",
+  "last_updated": "2026-09-28T10:11:00Z",
+  "local_text": null,
+  "location": "ZWUQ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4978/26",
+  "purpose": "NBO",
+  "q_code": "QARLC",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "THE SEGMENT WITHIN A CIRCLE CENTERED AT DUMIN WITH RADIUS OF \r\n160KM CLSD.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790590245795000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T00:40:00Z",
+  "effective_start": "2026-09-28T23:50:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZXXX",
+  "first_seen": "2026-09-28T10:20:28+00:00",
+  "geometry": null,
+  "geometry_source": null,
+  "icao_location": "ZLHW",
+  "icao_text": "A4978/26 NOTAMN\r\nQ)ZXXX/QARLC/IV/NBO/E/000/999/\r\nA)ZLHW ZWUQ B)2609282350 C)2609290040 \r\nE) THE SEGMENT WITHIN A CIRCLE CENTERED AT DUMIN WITH RADIUS OF \r\n160KM CLSD.",
+  "id": "1790590245795000",
+  "issued": "2026-09-28T10:10:00Z",
+  "last_updated": "2026-09-28T10:11:00Z",
+  "local_text": null,
+  "location": "ZLHW",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4978/26",
+  "purpose": "NBO",
+  "q_code": "QARLC",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "THE SEGMENT WITHIN A CIRCLE CENTERED AT DUMIN WITH RADIUS OF \r\n160KM CLSD.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790590357561000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-30T07:42:00Z",
+  "effective_start": "2026-09-30T06:22:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZLHW",
+  "first_seen": "2026-09-28T10:20:28+00:00",
+  "geometry": null,
+  "geometry_source": null,
+  "icao_location": "ZLHW",
+  "icao_text": "A4979/26 NOTAMN\r\nQ)ZLHW/QARLC/IV/NBO/E/000/999/\r\nA)ZLHW B)2609300622 C)2609300742 \r\nE) SEGMENT WITHIN A CIRCLE CENTERED AT DUMIN WITH RADIUS OF 100KM \r\nCLSD.",
+  "id": "1790590357561000",
+  "issued": "2026-09-28T10:10:00Z",
+  "last_updated": "2026-09-28T10:13:00Z",
+  "local_text": null,
+  "location": "ZLHW",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4979/26",
+  "purpose": "NBO",
+  "q_code": "QARLC",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "SEGMENT WITHIN A CIRCLE CENTERED AT DUMIN WITH RADIUS OF 100KM \r\nCLSD.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790590554234000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T10:04:00Z",
+  "effective_start": "2026-09-29T08:44:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZLHW",
+  "first_seen": "2026-09-28T10:20:28+00:00",
+  "geometry": null,
+  "geometry_source": null,
+  "icao_location": "ZLHW",
+  "icao_text": "A4980/26 NOTAMN\r\nQ)ZLHW/QARLC/IV/NBO/E/000/999/\r\nA)ZLHW B)2609290844 C)2609291004 \r\nE) SEGMENT WITHIN A CIRCLE CENTERED AT DUMIN WITH RADIUS OF 100KM \r\nCLSD.",
+  "id": "1790590554234000",
+  "issued": "2026-09-28T10:15:00Z",
+  "last_updated": "2026-09-28T10:16:00Z",
+  "local_text": null,
+  "location": "ZLHW",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4980/26",
+  "purpose": "NBO",
+  "q_code": "QARLC",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "SEGMENT WITHIN A CIRCLE CENTERED AT DUMIN WITH RADIUS OF 100KM \r\nCLSD.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790590569497000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3335N13027E",
+  "effective_end": "2026-10-20T21:00:00.000Z",
+  "effective_start": "2026-09-28T10:15:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T10:20:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      130.45,
+      33.666517
+     ],
+     [
+      130.459787,
+      33.666116
+     ],
+     [
+      130.46948,
+      33.664919
+     ],
+     [
+      130.478985,
+      33.662935
+     ],
+     [
+      130.488211,
+      33.660185
+     ],
+     [
+      130.497069,
+      33.656695
+     ],
+     [
+      130.505474,
+      33.652498
+     ],
+     [
+      130.513344,
+      33.647635
+     ],
+     [
+      130.520605,
+      33.642153
+     ],
+     [
+      130.527185,
+      33.636104
+     ],
+     [
+      130.533023,
+      33.629548
+     ],
+     [
+      130.53806,
+      33.622546
+     ],
+     [
+      130.54225,
+      33.615166
+     ],
+     [
+      130.545551,
+      33.60748
+     ],
+     [
+      130.547932,
+      33.599562
+     ],
+     [
+      130.54937,
+      33.591487
+     ],
+     [
+      130.54985,
+      33.583333
+     ],
+     [
+      130.54937,
+      33.57518
+     ],
+     [
+      130.547932,
+      33.567105
+     ],
+     [
+      130.545551,
+      33.559186
+     ],
+     [
+      130.54225,
+      33.5515
+     ],
+     [
+      130.53806,
+      33.544121
+     ],
+     [
+      130.533023,
+      33.537119
+     ],
+     [
+      130.527185,
+      33.530562
+     ],
+     [
+      130.520605,
+      33.524514
+     ],
+     [
+      130.513344,
+      33.519032
+     ],
+     [
+      130.505474,
+      33.514169
+     ],
+     [
+      130.497069,
+      33.509972
+     ],
+     [
+      130.488211,
+      33.506482
+     ],
+     [
+      130.478985,
+      33.503732
+     ],
+     [
+      130.46948,
+      33.501748
+     ],
+     [
+      130.459787,
+      33.50055
+     ],
+     [
+      130.45,
+      33.50015
+     ],
+     [
+      130.440213,
+      33.50055
+     ],
+     [
+      130.43052,
+      33.501748
+     ],
+     [
+      130.421015,
+      33.503732
+     ],
+     [
+      130.411789,
+      33.506482
+     ],
+     [
+      130.402931,
+      33.509972
+     ],
+     [
+      130.394526,
+      33.514169
+     ],
+     [
+      130.386656,
+      33.519032
+     ],
+     [
+      130.379395,
+      33.524514
+     ],
+     [
+      130.372815,
+      33.530562
+     ],
+     [
+      130.366977,
+      33.537119
+     ],
+     [
+      130.36194,
+      33.544121
+     ],
+     [
+      130.35775,
+      33.5515
+     ],
+     [
+      130.354449,
+      33.559186
+     ],
+     [
+      130.352068,
+      33.567105
+     ],
+     [
+      130.35063,
+      33.57518
+     ],
+     [
+      130.35015,
+      33.583333
+     ],
+     [
+      130.35063,
+      33.591487
+     ],
+     [
+      130.352068,
+      33.599562
+     ],
+     [
+      130.354449,
+      33.60748
+     ],
+     [
+      130.35775,
+      33.615166
+     ],
+     [
+      130.36194,
+      33.622546
+     ],
+     [
+      130.366977,
+      33.629548
+     ],
+     [
+      130.372815,
+      33.636104
+     ],
+     [
+      130.379395,
+      33.642153
+     ],
+     [
+      130.386656,
+      33.647635
+     ],
+     [
+      130.394526,
+      33.652498
+     ],
+     [
+      130.402931,
+      33.656695
+     ],
+     [
+      130.411789,
+      33.660185
+     ],
+     [
+      130.421015,
+      33.662935
+     ],
+     [
+      130.43052,
+      33.664919
+     ],
+     [
+      130.440213,
+      33.666116
+     ],
+     [
+      130.45,
+      33.666517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RJFF",
+  "icao_text": "F1056/26 NOTAMR F0898/26\r\nQ)RJJJ/QFDAS/I/M/A/000/999/3335N13027E005\r\nA)RJFF B)2609281015 C)2610202100\r\nE)VISUAL-DOCKING-GUIDANCE-SYSTEM FOR SPOT 1,2,3,5 U/S DUE TO TROUBLE\r\n",
+  "id": "1790590569497000",
+  "issued": "2026-09-28T10:15:00.000Z",
+  "last_updated": "2026-09-28T10:16:00.000Z",
+  "local_text": null,
+  "location": "RJFF",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "F1056/26",
+  "purpose": "M",
+  "q_code": "QFDAS",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "F0898/26",
+  "schedule": null,
+  "scope": "A",
+  "series": "F",
+  "text": "VISUAL-DOCKING-GUIDANCE-SYSTEM FOR SPOT 1,2,3,5 U/S DUE TO TROUBLE",
+  "traffic": "I",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790590582729900": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-01T05:00:00Z",
+  "effective_start": "2026-09-30T23:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-28T10:20:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -124.316667,
+      36.333333
+     ],
+     [
+      -123.0,
+      35.483333
+     ],
+     [
+      -122.166667,
+      35.316667
+     ],
+     [
+      -121.65,
+      35.55
+     ],
+     [
+      -121.533333,
+      35.616667
+     ],
+     [
+      -121.1,
+      35.25
+     ],
+     [
+      -120.8,
+      35.066667
+     ],
+     [
+      -120.7,
+      35.0
+     ],
+     [
+      -120.5,
+      34.766667
+     ],
+     [
+      -120.533333,
+      34.65
+     ],
+     [
+      -120.5,
+      34.4
+     ],
+     [
+      -120.916667,
+      34.266667
+     ],
+     [
+      -120.983333,
+      34.183333
+     ],
+     [
+      -121.433333,
+      34.116667
+     ],
+     [
+      -122.633333,
+      33.783333
+     ],
+     [
+      -122.833333,
+      34.083333
+     ],
+     [
+      -125.533333,
+      35.85
+     ],
+     [
+      -124.9,
+      36.516667
+     ],
+     [
+      -124.316667,
+      36.333333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790590582729900",
+  "issued": "2026-09-28T10:15:00Z",
+  "last_updated": "2026-09-28T10:15:00Z",
+  "local_text": "!CARF 09/349 ZAK AIRSPACE DCC QUEEN OF THE SKIES 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS 362000N1241900W TO 352900N1230000W TO 351900N1221000W TO 353300N1213900W TO 353700N1213200W TO 351500N1210600W TO 350400N1204800W TO 350000N1204200W TO 344600N1203000W TO 343900N1203200W TO 342400N1203000W TO 341600N1205500W TO 341100N1205900W TO 340700N1212600W TO 334700N1223800W TO 340500N1225000W TO 355100N1253200W TO 363100N1245400W TO POINT OF ORIGIN SFC-UNL 2609302300-2610010500",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "09/349",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 09/349 ZAK AIRSPACE DCC QUEEN OF THE SKIES 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS 362000N1241900W TO 352900N1230000W TO 351900N1221000W TO 353300N1213900W TO 353700N1213200W TO 351500N1210600W TO 350400N1204800W TO 350000N1204200W TO 344600N1203000W TO 343900N1203200W TO 342400N1203000W TO 341600N1205500W TO 341100N1205900W TO 340700N1212600W TO 334700N1223800W TO 340500N1225000W TO 355100N1253200W TO 363100N1245400W TO POINT OF ORIGIN SFC-UNL",
+  "traffic": null,
+  "type": null,
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1790590582902249": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-01T05:00:00Z",
+  "effective_start": "2026-09-30T23:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-28T10:20:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -124.316667,
+      36.333333
+     ],
+     [
+      -123.0,
+      35.483333
+     ],
+     [
+      -122.166667,
+      35.316667
+     ],
+     [
+      -121.65,
+      35.55
+     ],
+     [
+      -121.533333,
+      35.616667
+     ],
+     [
+      -121.1,
+      35.25
+     ],
+     [
+      -120.8,
+      35.066667
+     ],
+     [
+      -120.7,
+      35.0
+     ],
+     [
+      -120.5,
+      34.766667
+     ],
+     [
+      -120.533333,
+      34.65
+     ],
+     [
+      -120.5,
+      34.4
+     ],
+     [
+      -120.916667,
+      34.266667
+     ],
+     [
+      -120.983333,
+      34.183333
+     ],
+     [
+      -121.433333,
+      34.116667
+     ],
+     [
+      -122.633333,
+      33.783333
+     ],
+     [
+      -122.833333,
+      34.083333
+     ],
+     [
+      -125.533333,
+      35.85
+     ],
+     [
+      -124.9,
+      36.516667
+     ],
+     [
+      -124.316667,
+      36.333333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4721/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/999/\nA) KZAK\nB) 2609302300\nC) 2610010500\nE) ZAK AIRSPACE DCC QUEEN OF THE SKIES 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS 362000N1241900W TO 352900N1230000W TO 351900N1221000W TO 353300N1213900W TO 353700N1213200W TO 351500N1210600W TO 350400N1204800W TO 350000N1204200W TO 344600N1203000W TO 343900N1203200W TO 342400N1203000W TO 341600N1205500W TO 341100N1205900W TO 340700N1212600W TO 334700N1223800W TO 340500N1225000W TO 355100N1253200W TO 363100N1245400W TO POINT OF ORIGIN\nF) SFC\nG) UNL",
+  "id": "1790590582902249",
+  "issued": "2026-09-28T10:15:00Z",
+  "last_updated": "2026-09-28T10:15:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4721/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE DCC QUEEN OF THE SKIES 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS 362000N1241900W TO 352900N1230000W TO 351900N1221000W TO 353300N1213900W TO 353700N1213200W TO 351500N1210600W TO 350400N1204800W TO 350000N1204200W TO 344600N1203000W TO 343900N1203200W TO 342400N1203000W TO 341600N1205500W TO 341100N1205900W TO 340700N1212600W TO 334700N1223800W TO 340500N1225000W TO 355100N1253200W TO 363100N1245400W TO POINT OF ORIGIN",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1790590595575000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-30T03:37:00Z",
+  "effective_start": "2026-09-30T02:17:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZLHW",
+  "first_seen": "2026-09-28T10:20:28+00:00",
+  "geometry": null,
+  "geometry_source": null,
+  "icao_location": "ZLHW",
+  "icao_text": "A4981/26 NOTAMN\r\nQ)ZLHW/QARLC/IV/NBO/E/000/999/\r\nA)ZLHW B)2609300217 C)2609300337 \r\nE) SEGMENT WITHIN A CIRCLE CENTERED AT DUMIN WITH RADIUS OF 100KM \r\nCLSD.",
+  "id": "1790590595575000",
+  "issued": "2026-09-28T10:16:00Z",
+  "last_updated": "2026-09-28T10:17:00Z",
+  "local_text": null,
+  "location": "ZLHW",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4981/26",
+  "purpose": "NBO",
+  "q_code": "QARLC",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "SEGMENT WITHIN A CIRCLE CENTERED AT DUMIN WITH RADIUS OF 100KM \r\nCLSD.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
   "year": "2026"
  }
 }
