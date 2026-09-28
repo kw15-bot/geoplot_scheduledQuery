@@ -38530,5 +38530,139 @@
   "type": null,
   "upper": null,
   "year": "2026"
+ },
+ "1790599867318000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T12:05:00.000Z",
+  "effective_start": "2026-09-29T10:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZBPE",
+  "first_seen": "2026-09-28T13:00:48+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     115.669722,
+     42.262778
+    ],
+    [
+     114.863889,
+     43.112222
+    ],
+    [
+     113.25,
+     44.783333
+    ]
+   ],
+   "type": "LineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZBPE",
+  "icao_text": "A4985/26 NOTAMN\r\nQ)ZBPE/QARLT/IV/NBO/E/000/256/\r\nA)ZBPE B)2609291000 C)2609291205 \r\nE) SEGMENT UNTEN - POLHO OF ATS RTE B339 CLSD AT 7,800M AND BELOW.\r\nF)FL000 G)FL256",
+  "id": "1790599867318000",
+  "issued": "2026-09-28T12:50:00.000Z",
+  "last_updated": "2026-09-28T12:51:00.000Z",
+  "local_text": null,
+  "location": "ZBPE",
+  "lower": "FL000",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4985/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "SEGMENT UNTEN - POLHO OF ATS RTE B339 CLSD AT 7,800M AND BELOW.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL256",
+  "year": "2026"
+ },
+ "1790599977509000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T12:05:00Z",
+  "effective_start": "2026-09-29T10:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZBPE",
+  "first_seen": "2026-09-28T13:00:48+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      115.262778,
+      42.236111
+     ],
+     [
+      114.205556,
+      42.627222
+     ],
+     [
+      113.190556,
+      43.0125
+     ]
+    ],
+    [
+     [
+      115.262778,
+      42.236111
+     ],
+     [
+      113.496111,
+      42.1025
+     ]
+    ],
+    [
+     [
+      113.153333,
+      41.843333
+     ],
+     [
+      116.147778,
+      42.043333
+     ]
+    ]
+   ],
+   "type": "MultiLineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZBPE",
+  "icao_text": "A4986/26 NOTAMN\r\nQ)ZBPE/QARLT/IV/NBO/E/000/177/\r\nA)ZBPE B)2609291000 C)2609291205 \r\nE) FLW SEGMENT OF ATS RTE CLSD BELOW 5,400M:\r\n1.A575 : UPREK - UKBAD \r\n2.W28  : UPREK - VERMI  \r\n3.W86  : TUMURTAI VOR'TMR' - POKOR .\r\nF)FL000 G)FL177",
+  "id": "1790599977509000",
+  "issued": "2026-09-28T12:52:00Z",
+  "last_updated": "2026-09-28T12:53:00Z",
+  "local_text": null,
+  "location": "ZBPE",
+  "lower": "FL000",
+  "max_fl": "177",
+  "min_fl": "000",
+  "number": "A4986/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "FLW SEGMENT OF ATS RTE CLSD BELOW 5,400M:\r\n1.A575 : UPREK - UKBAD \r\n2.W28  : UPREK - VERMI  \r\n3.W86  : TUMURTAI VOR&apos;TMR&apos; - POKOR .",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL177",
+  "year": "2026"
  }
 }
