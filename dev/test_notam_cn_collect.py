@@ -49,7 +49,7 @@ BASE = [
     feat("A0105/26", "RCTP", "RCAA", coords="2500N12130E", radius="999"),    # TW、半径999→点
     feat("A0106/26", "KZBW", "ZBW"),                                         # 米ARTCC（除外）
     feat("A0107/26", "ZMUB", "ZMUB"),                                        # モンゴル（除外）
-    feat("A0108/26", "RJTG", "RJJJ"),                                        # 福岡FIR（周辺国FIRとして参考対象、REF）
+    feat("A0108/26", "RPMM", "RPHI"),                                        # マニラFIR（周辺国FIRとして参考対象、REF）
     feat("A0109/26", "ZGZU", "ZGZU", geom=None, coords="", radius=""),       # 図形なし（座標も無い）
 ]
 
@@ -109,25 +109,37 @@ class Fixture(unittest.TestCase):
         self.assertFalse(any(r["icao_location"] in ("KZBW", "ZMUB") for r in state.values()))
 
     def test_ref_fir_exact_match_not_prefix(self):
-        """周辺国の参考FIR(RPHI/KZAK/RJJJ/RKRR/ZKKP)は4文字完全一致でのみ対象になり、
+        """周辺国の参考FIR(RPHI/KZAK)は4文字完全一致でのみ対象になり、
         同じ2文字を持つ無関係な地点(例: K始まりの米国内, RJ始まりの日本国内の他空港)は
         対象外のままであることを確認する（AREA_BY_PREFIXへの巻き込み事故の回帰防止）。"""
         ref_hits = [
             feat("A0201/26", "RPMM", "RPHI"),   # フィリピン・マニラFIR -> REF
             feat("A0202/26", "PAOA", "KZAK"),   # オークランド洋上管制 -> REF
-            feat("A0203/26", "RJFF", "RJJJ"),   # 福岡FIR -> REF
-            feat("A0204/26", "RKSI", "RKRR"),   # 仁川FIR -> REF
-            feat("A0205/26", "ZKPY", "ZKKP"),   # 平壌FIR -> REF
         ]
         ref_miss = [
             feat("A0301/26", "KJFK", "KZNY"),   # 米国内だが指定FIR(KZAK)ではない -> 対象外
-            feat("A0302/26", "RJTT", "RJTG"),   # 日本国内だが指定FIR(RJJJ)ではない -> 対象外
+            feat("A0302/26", "RJTT", "RJTG"),   # 日本国内 -> 対象外
+            # 2026-09-28に対象から外したFIR
+            feat("A0203/26", "RJFF", "RJJJ"),   # 福岡FIR
+            feat("A0204/26", "RKSI", "RKRR"),   # 仁川FIR
+            feat("A0205/26", "ZKPY", "ZKKP"),   # 平壌FIR
         ]
         self.put(ref_hits + ref_miss)
         self.assertEqual(self.go(), 0)
         p = props(self.out)
         self.assertEqual(set(p), {f["properties"]["coreNOTAMData"]["notam"]["number"] for f in ref_hits})
         self.assertEqual({v["area_group"] for v in p.values()}, {"REF"})
+
+    def test_dropped_fir_records_are_purged_from_state(self):
+        """対象から外したFIR(RJJJ等)のレコードが state に残っていたら、次の収集で消える。"""
+        self.put(BASE)
+        self.assertEqual(self.go(), 0)
+        state = load(self.out, "state_active.json")
+        some = next(iter(state.values()))
+        state["old-rjjj"] = dict(some, id="old-rjjj", icao_location="RJFF", fir="RJJJ", area_group="REF")
+        (self.out / "state_active.json").write_text(json.dumps(state), encoding="utf-8")
+        self.assertEqual(self.go(), 0)
+        self.assertNotIn("old-rjjj", load(self.out, "state_active.json"))
 
     def test_nms_response_envelope_accepted(self):
         self.put(BASE, kind="envelope")
