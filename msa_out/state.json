@@ -37517,6 +37517,18 @@
       "start": "2026-09-12T23:30:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8ad0390a9f8c4a48a04c8988aaf8895e.html": {
+    "bureau": "浙江海事局",
+    "date": "2026-09-28",
+    "detail_fetched": false,
+    "first_seen": "2026-09-28T10:00:47+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "HE RONG HAI轮航经虾峙门外深水航槽—浙航警891/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8ad0390a9f8c4a48a04c8988aaf8895e.html"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8b6f1dbfb5f5430ca1513ab096618820.html": {
     "bureau": "长江海事局",
     "cancels": [],
