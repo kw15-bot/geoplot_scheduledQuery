@@ -105522,5 +105522,403 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1790588535053000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-29T21:00:00.000Z",
+  "effective_start": "2026-09-28T21:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T09:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "Q2306/26 NOTAMN\r\nQ)RJJJ/QANCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609282100 C)2609292100\r\nE)CDR ARE ESTABLISHED AS FLW,\r\n    RTE         PERIOD                 MNM APPLICABLE ALT\r\n1)  Z16         2609291300/2609292100  MEA\r\n2)  Z17         2609282100/2609282200  MEA\r\n    Z17         2609291300/2609292100  MEA\r\n3)  Z18         2609282100/2609282200  MEA\r\n    Z18         2609291300/2609292100  MEA\r\n4)  Z21         2609282100/2609282200  MEA\r\n    Z21         2609291200/2609292100  MEA\r\n5)  Z101        2609291300/2609292100  MEA\r\n6)  Z102        2609291300/2609292100  MEA\r\n7)  Z162        2609282100/2609282200  MEA\r\n    Z162        2609291300/2609292100  MEA\r\n8)  Z171        2609282100/2609282200  MEA\r\n    Z171        2609291200/2609292100  MEA\r\n9)  Z182        2609282100/2609282200  MEA\r\n    Z182        2609291200/2609292100  MEA\r\nRMK: REF AIP ENR3.3",
+  "id": "1790588535053000",
+  "issued": "2026-09-28T09:41:00.000Z",
+  "last_updated": "2026-09-28T09:42:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "Q2306/26",
+  "purpose": "NBO",
+  "q_code": "QANCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "Q",
+  "text": "CDR ARE ESTABLISHED AS FLW,\r\n    RTE         PERIOD                 MNM APPLICABLE ALT\r\n1)  Z16         2609291300/2609292100  MEA\r\n2)  Z17         2609282100/2609282200  MEA\r\n    Z17         2609291300/2609292100  MEA\r\n3)  Z18         2609282100/2609282200  MEA\r\n    Z18         2609291300/2609292100  MEA\r\n4)  Z21         2609282100/2609282200  MEA\r\n    Z21         2609291200/2609292100  MEA\r\n5)  Z101        2609291300/2609292100  MEA\r\n6)  Z102        2609291300/2609292100  MEA\r\n7)  Z162        2609282100/2609282200  MEA\r\n    Z162        2609291300/2609292100  MEA\r\n8)  Z171        2609282100/2609282200  MEA\r\n    Z171        2609291200/2609292100  MEA\r\n9)  Z182        2609282100/2609282200  MEA\r\n    Z182        2609291200/2609292100  MEA\r\nRMK: REF AIP ENR3.3",
+  "traffic": "I",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790588547149000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-29T22:00:00Z",
+  "effective_start": "2026-09-28T22:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T09:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "Q2307/26 NOTAMN\r\nQ)RJJJ/QANCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609282200 C)2609292200\r\nE)CDR ARE ESTABLISHED AS FLW,\r\n    RTE         PERIOD                 MNM APPLICABLE ALT\r\n1)  L512        2609291200/2609292200  MEA\r\n2)  Z13         2609291200/2609292200  MEA\r\n3)  Z14         2609291200/2609292200  MEA\r\n4)  Z25         2609291330/2609292200  MEA\r\n5)  Z26         2609291330/2609292200  MEA\r\n6)  Z27         2609291330/2609292200  MEA\r\n7)  Z40         2609282200/2609282300  MEA\r\n    Z40         2609291400/2609292200  MEA\r\n8)  Z41         2609282200/2609282300  MEA\r\n    Z41         2609291400/2609292200  MEA\r\n9)  Z262        2609291330/2609292200  MEA\r\nRMK: REF AIP ENR3.3",
+  "id": "1790588547149000",
+  "issued": "2026-09-28T09:42:00Z",
+  "last_updated": "2026-09-28T09:43:00Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "Q2307/26",
+  "purpose": "NBO",
+  "q_code": "QANCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "Q",
+  "text": "CDR ARE ESTABLISHED AS FLW,\r\n    RTE         PERIOD                 MNM APPLICABLE ALT\r\n1)  L512        2609291200/2609292200  MEA\r\n2)  Z13         2609291200/2609292200  MEA\r\n3)  Z14         2609291200/2609292200  MEA\r\n4)  Z25         2609291330/2609292200  MEA\r\n5)  Z26         2609291330/2609292200  MEA\r\n6)  Z27         2609291330/2609292200  MEA\r\n7)  Z40         2609282200/2609282300  MEA\r\n    Z40         2609291400/2609292200  MEA\r\n8)  Z41         2609282200/2609282300  MEA\r\n    Z41         2609291400/2609292200  MEA\r\n9)  Z262        2609291330/2609292200  MEA\r\nRMK: REF AIP ENR3.3",
+  "traffic": "I",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790588663625000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3438N13513E",
+  "effective_end": "2026-09-29T08:00:00Z",
+  "effective_start": "2026-09-29T04:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T09:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      135.216667,
+      34.716517
+     ],
+     [
+      135.226576,
+      34.716116
+     ],
+     [
+      135.23639,
+      34.714919
+     ],
+     [
+      135.246014,
+      34.712935
+     ],
+     [
+      135.255355,
+      34.710185
+     ],
+     [
+      135.264324,
+      34.706695
+     ],
+     [
+      135.272833,
+      34.702498
+     ],
+     [
+      135.280802,
+      34.697635
+     ],
+     [
+      135.288153,
+      34.692153
+     ],
+     [
+      135.294816,
+      34.686104
+     ],
+     [
+      135.300726,
+      34.679548
+     ],
+     [
+      135.305827,
+      34.672546
+     ],
+     [
+      135.310069,
+      34.665166
+     ],
+     [
+      135.313411,
+      34.65748
+     ],
+     [
+      135.315822,
+      34.649562
+     ],
+     [
+      135.317277,
+      34.641487
+     ],
+     [
+      135.317764,
+      34.633333
+     ],
+     [
+      135.317277,
+      34.62518
+     ],
+     [
+      135.315822,
+      34.617105
+     ],
+     [
+      135.313411,
+      34.609186
+     ],
+     [
+      135.310069,
+      34.6015
+     ],
+     [
+      135.305827,
+      34.594121
+     ],
+     [
+      135.300726,
+      34.587119
+     ],
+     [
+      135.294816,
+      34.580562
+     ],
+     [
+      135.288153,
+      34.574514
+     ],
+     [
+      135.280802,
+      34.569032
+     ],
+     [
+      135.272833,
+      34.564169
+     ],
+     [
+      135.264324,
+      34.559972
+     ],
+     [
+      135.255355,
+      34.556482
+     ],
+     [
+      135.246014,
+      34.553732
+     ],
+     [
+      135.23639,
+      34.551748
+     ],
+     [
+      135.226576,
+      34.55055
+     ],
+     [
+      135.216667,
+      34.55015
+     ],
+     [
+      135.206757,
+      34.55055
+     ],
+     [
+      135.196944,
+      34.551748
+     ],
+     [
+      135.18732,
+      34.553732
+     ],
+     [
+      135.177978,
+      34.556482
+     ],
+     [
+      135.16901,
+      34.559972
+     ],
+     [
+      135.1605,
+      34.564169
+     ],
+     [
+      135.152531,
+      34.569032
+     ],
+     [
+      135.14518,
+      34.574514
+     ],
+     [
+      135.138517,
+      34.580562
+     ],
+     [
+      135.132607,
+      34.587119
+     ],
+     [
+      135.127507,
+      34.594121
+     ],
+     [
+      135.123265,
+      34.6015
+     ],
+     [
+      135.119922,
+      34.609186
+     ],
+     [
+      135.117512,
+      34.617105
+     ],
+     [
+      135.116056,
+      34.62518
+     ],
+     [
+      135.115569,
+      34.633333
+     ],
+     [
+      135.116056,
+      34.641487
+     ],
+     [
+      135.117512,
+      34.649562
+     ],
+     [
+      135.119922,
+      34.65748
+     ],
+     [
+      135.123265,
+      34.665166
+     ],
+     [
+      135.127507,
+      34.672546
+     ],
+     [
+      135.132607,
+      34.679548
+     ],
+     [
+      135.138517,
+      34.686104
+     ],
+     [
+      135.14518,
+      34.692153
+     ],
+     [
+      135.152531,
+      34.697635
+     ],
+     [
+      135.1605,
+      34.702498
+     ],
+     [
+      135.16901,
+      34.706695
+     ],
+     [
+      135.177978,
+      34.710185
+     ],
+     [
+      135.18732,
+      34.712935
+     ],
+     [
+      135.196944,
+      34.714919
+     ],
+     [
+      135.206757,
+      34.716116
+     ],
+     [
+      135.216667,
+      34.716517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RJBE",
+  "icao_text": "M1339/26 NOTAMN\r\nQ)RJJJ/QICCT/I/NBO/A/000/999/3438N13513E005\r\nA)RJBE B)2609290400 C)2609290800\r\nE)ILS-LOC,GP FOR RWY 09 ON TEST DO NOT USE DUE TO FLTCK\r\nFALSE INDICATIONS POSSIBLE\r\nRMK:VMC ONLY",
+  "id": "1790588663625000",
+  "issued": "2026-09-28T09:44:00Z",
+  "last_updated": "2026-09-28T09:45:00Z",
+  "local_text": null,
+  "location": "RJBE",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "M1339/26",
+  "purpose": "NBO",
+  "q_code": "QICCT",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "M",
+  "text": "ILS-LOC,GP FOR RWY 09 ON TEST DO NOT USE DUE TO FLTCK\r\nFALSE INDICATIONS POSSIBLE\r\nRMK:VMC ONLY",
+  "traffic": "I",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
  }
 }
