@@ -44617,52 +44617,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790562718489000": {
-  "account_id": "RJAAYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3310N14118E",
-  "effective_end": "2026-09-28T04:00:00Z",
-  "effective_start": "2026-09-28T02:31:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RJJJ",
-  "first_seen": "2026-09-28T02:40:29+00:00",
-  "geometry": {
-   "coordinates": [
-    141.3,
-    33.166667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "RJJJ",
-  "icao_text": "X6120/26 NOTAMN\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280231 C)2609280400\r\nE)FLOW CTL AS FLWS, \r\n AREA: SECTOR N54 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR N54\r\nRMK: REF AIP ENR1.9-1",
-  "id": "1790562718489000",
-  "issued": "2026-09-28T02:31:00Z",
-  "last_updated": "2026-09-28T02:32:00Z",
-  "local_text": null,
-  "location": "RJJJ",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "X6120/26",
-  "purpose": "NBO",
-  "q_code": "QPFCA",
-  "qline_offset_nm": null,
-  "radius_nm": 999.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "X",
-  "text": "FLOW CTL AS FLWS, \r\n AREA: SECTOR N54 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR N54\r\nRMK: REF AIP ENR1.9-1",
-  "traffic": "I",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790562763131000": {
   "account_id": "RJAAYNYX",
   "area_group": "REF",
@@ -53531,6 +53485,822 @@
   "traffic": "IV",
   "type": "N",
   "upper": "1000FT AMSL",
+  "year": "2026"
+ },
+ "1790566256865000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2237N10810E",
+  "effective_end": "2026-09-30T08:00:00Z",
+  "effective_start": "2026-09-30T02:05:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZGZU",
+  "first_seen": "2026-09-28T03:40:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      108.166667,
+      22.69985
+     ],
+     [
+      108.175499,
+      22.69945
+     ],
+     [
+      108.184247,
+      22.698252
+     ],
+     [
+      108.192825,
+      22.696268
+     ],
+     [
+      108.201152,
+      22.693518
+     ],
+     [
+      108.209146,
+      22.690028
+     ],
+     [
+      108.216731,
+      22.685831
+     ],
+     [
+      108.223834,
+      22.680968
+     ],
+     [
+      108.230387,
+      22.675486
+     ],
+     [
+      108.236325,
+      22.669438
+     ],
+     [
+      108.241593,
+      22.662881
+     ],
+     [
+      108.24614,
+      22.655879
+     ],
+     [
+      108.249921,
+      22.6485
+     ],
+     [
+      108.2529,
+      22.640814
+     ],
+     [
+      108.255049,
+      22.632895
+     ],
+     [
+      108.256346,
+      22.62482
+     ],
+     [
+      108.25678,
+      22.616667
+     ],
+     [
+      108.256346,
+      22.608513
+     ],
+     [
+      108.255049,
+      22.600438
+     ],
+     [
+      108.2529,
+      22.59252
+     ],
+     [
+      108.249921,
+      22.584834
+     ],
+     [
+      108.24614,
+      22.577454
+     ],
+     [
+      108.241593,
+      22.570452
+     ],
+     [
+      108.236325,
+      22.563896
+     ],
+     [
+      108.230387,
+      22.557847
+     ],
+     [
+      108.223834,
+      22.552365
+     ],
+     [
+      108.216731,
+      22.547502
+     ],
+     [
+      108.209146,
+      22.543305
+     ],
+     [
+      108.201152,
+      22.539815
+     ],
+     [
+      108.192825,
+      22.537065
+     ],
+     [
+      108.184247,
+      22.535081
+     ],
+     [
+      108.175499,
+      22.533884
+     ],
+     [
+      108.166667,
+      22.533483
+     ],
+     [
+      108.157834,
+      22.533884
+     ],
+     [
+      108.149086,
+      22.535081
+     ],
+     [
+      108.140508,
+      22.537065
+     ],
+     [
+      108.132182,
+      22.539815
+     ],
+     [
+      108.124187,
+      22.543305
+     ],
+     [
+      108.116602,
+      22.547502
+     ],
+     [
+      108.109499,
+      22.552365
+     ],
+     [
+      108.102947,
+      22.557847
+     ],
+     [
+      108.097008,
+      22.563896
+     ],
+     [
+      108.09174,
+      22.570452
+     ],
+     [
+      108.087194,
+      22.577454
+     ],
+     [
+      108.083413,
+      22.584834
+     ],
+     [
+      108.080433,
+      22.59252
+     ],
+     [
+      108.078285,
+      22.600438
+     ],
+     [
+      108.076987,
+      22.608513
+     ],
+     [
+      108.076553,
+      22.616667
+     ],
+     [
+      108.076987,
+      22.62482
+     ],
+     [
+      108.078285,
+      22.632895
+     ],
+     [
+      108.080433,
+      22.640814
+     ],
+     [
+      108.083413,
+      22.6485
+     ],
+     [
+      108.087194,
+      22.655879
+     ],
+     [
+      108.09174,
+      22.662881
+     ],
+     [
+      108.097008,
+      22.669438
+     ],
+     [
+      108.102947,
+      22.675486
+     ],
+     [
+      108.109499,
+      22.680968
+     ],
+     [
+      108.116602,
+      22.685831
+     ],
+     [
+      108.124187,
+      22.690028
+     ],
+     [
+      108.132182,
+      22.693518
+     ],
+     [
+      108.140508,
+      22.696268
+     ],
+     [
+      108.149086,
+      22.698252
+     ],
+     [
+      108.157834,
+      22.69945
+     ],
+     [
+      108.166667,
+      22.69985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZGNN",
+  "icao_text": "G4349/26 NOTAMN\r\nQ)ZGZU/QFTAS/I/B/A/000/999/2237N10810E005\r\nA)ZGNN B)2609300205 C)2609300800 \r\nE) RWY23 RVR EQPT C U/S DUE TO MAINT.",
+  "id": "1790566256865000",
+  "issued": "2026-09-28T03:29:00Z",
+  "last_updated": "2026-09-28T03:31:00Z",
+  "local_text": null,
+  "location": "ZGNN",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "G4349/26",
+  "purpose": "B",
+  "q_code": "QFTAS",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "G",
+  "text": "RWY23 RVR EQPT C U/S DUE TO MAINT.",
+  "traffic": "I",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790566444546000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3926N14108E",
+  "effective_end": "2026-10-03T03:50:00.000Z",
+  "effective_start": "2026-10-03T01:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T03:40:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      141.1375,
+      39.441389
+     ],
+     [
+      141.147222,
+      39.44
+     ],
+     [
+      141.143056,
+      39.413889
+     ],
+     [
+      141.131111,
+      39.415556
+     ],
+     [
+      141.1375,
+      39.441389
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RJSI",
+  "icao_text": "L4193/26 NOTAMN\r\nQ)RJJJ/QWBLW/IV/M/AW/004/030/3926N14108E002\r\nA)RJSI B)2610030130 C)2610030350\r\nD)0130/0200 0320/0350\r\nE)AEROBATICS:\r\n1.FLT AREA  : BOUNDED BY FLW POINTS\r\n392629N1410815E - 392624N1410850E - 392450N1410835E  -\r\n392456N1410752E - 392629N1410815E\r\n(OVER RJSI)\r\n(HANAMAKI-SHI IN IWATE)\r\n2.USING ACFT: PTS2,SUBA\r\n3.WX COND   : VMC ONLY AND FLT VIS AT OR ABV 5000M\r\nF)400FT AMSL G)3000FT AMSL",
+  "id": "1790566444546000",
+  "issued": "2026-09-28T03:33:00.000Z",
+  "last_updated": "2026-09-28T03:34:00.000Z",
+  "local_text": null,
+  "location": "RJSI",
+  "lower": "400FT AMSL",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "L4193/26",
+  "purpose": "M",
+  "q_code": "QWBLW",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 2.0,
+  "ref_number": null,
+  "schedule": "0130/0200 0320/0350",
+  "scope": "AW",
+  "series": "L",
+  "text": "AEROBATICS:\r\n1.FLT AREA  : BOUNDED BY FLW POINTS\r\n392629N1410815E - 392624N1410850E - 392450N1410835E  -\r\n392456N1410752E - 392629N1410815E\r\n(OVER RJSI)\r\n(HANAMAKI-SHI IN IWATE)\r\n2.USING ACFT: PTS2,SUBA\r\n3.WX COND   : VMC ONLY AND FLT VIS AT OR ABV 5000M",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "3000FT AMSL",
+  "year": "2026"
+ },
+ "1790566552095000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-28T05:00:00Z",
+  "effective_start": "2026-09-28T03:35:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T03:40:25+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "X6125/26 NOTAMR X6120/26\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280335 C)2609280500\r\nE)FLOW CTL AS FLWS, \r\n AREA: SECTOR N54 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR N54\r\nRMK: REF AIP ENR1.9-1",
+  "id": "1790566552095000",
+  "issued": "2026-09-28T03:35:00Z",
+  "last_updated": "2026-09-28T03:36:00Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "X6125/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": "X6120/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "X",
+  "text": "FLOW CTL AS FLWS, \r\n AREA: SECTOR N54 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR N54\r\nRMK: REF AIP ENR1.9-1",
+  "traffic": "I",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790566577995000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-28T05:30:00.000Z",
+  "effective_start": "2026-09-28T03:36:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T03:40:25+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "X6126/26 NOTAMN\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280336 C)2609280530\r\nE)FLOW CTL AS FLWS, \r\n AREA: SECTOR N51 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR N51\r\nRMK: REF AIP ENR1.9-1",
+  "id": "1790566577995000",
+  "issued": "2026-09-28T03:36:00.000Z",
+  "last_updated": "2026-09-28T03:36:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "X6126/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "X",
+  "text": "FLOW CTL AS FLWS, \r\n AREA: SECTOR N51 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR N51\r\nRMK: REF AIP ENR1.9-1",
+  "traffic": "I",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790566608736000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-28T08:50:00Z",
+  "effective_start": "2026-09-28T03:36:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T03:40:25+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "X6127/26 NOTAMN\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280336 C)2609280850\r\nE)FLOW CTL AS FLWS, \r\n AREA: SECTOR T38 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR T38\r\nRMK: REF AIP ENR1.9-1",
+  "id": "1790566608736000",
+  "issued": "2026-09-28T03:36:00Z",
+  "last_updated": "2026-09-28T03:37:00Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "X6127/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "X",
+  "text": "FLOW CTL AS FLWS, \r\n AREA: SECTOR T38 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR T38\r\nRMK: REF AIP ENR1.9-1",
+  "traffic": "I",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790566646074000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0934N12346E",
+  "effective_end": "2026-12-26T14:00:00.000Z",
+  "effective_start": "2026-09-28T03:37:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": true,
+  "fir": "RPHI",
+  "first_seen": "2026-09-28T03:40:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      123.766667,
+      9.64985
+     ],
+     [
+      123.774935,
+      9.64945
+     ],
+     [
+      123.783124,
+      9.648252
+     ],
+     [
+      123.791154,
+      9.646268
+     ],
+     [
+      123.798949,
+      9.643518
+     ],
+     [
+      123.806432,
+      9.640028
+     ],
+     [
+      123.813533,
+      9.635831
+     ],
+     [
+      123.820182,
+      9.630968
+     ],
+     [
+      123.826316,
+      9.625486
+     ],
+     [
+      123.831875,
+      9.619438
+     ],
+     [
+      123.836807,
+      9.612881
+     ],
+     [
+      123.841063,
+      9.605879
+     ],
+     [
+      123.844602,
+      9.5985
+     ],
+     [
+      123.847391,
+      9.590814
+     ],
+     [
+      123.849403,
+      9.582895
+     ],
+     [
+      123.850617,
+      9.57482
+     ],
+     [
+      123.851023,
+      9.566667
+     ],
+     [
+      123.850617,
+      9.558513
+     ],
+     [
+      123.849403,
+      9.550438
+     ],
+     [
+      123.847391,
+      9.54252
+     ],
+     [
+      123.844602,
+      9.534834
+     ],
+     [
+      123.841063,
+      9.527454
+     ],
+     [
+      123.836807,
+      9.520452
+     ],
+     [
+      123.831875,
+      9.513896
+     ],
+     [
+      123.826316,
+      9.507847
+     ],
+     [
+      123.820182,
+      9.502365
+     ],
+     [
+      123.813533,
+      9.497502
+     ],
+     [
+      123.806432,
+      9.493305
+     ],
+     [
+      123.798949,
+      9.489815
+     ],
+     [
+      123.791154,
+      9.487065
+     ],
+     [
+      123.783124,
+      9.485081
+     ],
+     [
+      123.774935,
+      9.483884
+     ],
+     [
+      123.766667,
+      9.483483
+     ],
+     [
+      123.758398,
+      9.483884
+     ],
+     [
+      123.750209,
+      9.485081
+     ],
+     [
+      123.742179,
+      9.487065
+     ],
+     [
+      123.734385,
+      9.489815
+     ],
+     [
+      123.726901,
+      9.493305
+     ],
+     [
+      123.719801,
+      9.497502
+     ],
+     [
+      123.713151,
+      9.502365
+     ],
+     [
+      123.707017,
+      9.507847
+     ],
+     [
+      123.701458,
+      9.513896
+     ],
+     [
+      123.696527,
+      9.520452
+     ],
+     [
+      123.692271,
+      9.527454
+     ],
+     [
+      123.688731,
+      9.534834
+     ],
+     [
+      123.685942,
+      9.54252
+     ],
+     [
+      123.683931,
+      9.550438
+     ],
+     [
+      123.682716,
+      9.558513
+     ],
+     [
+      123.68231,
+      9.566667
+     ],
+     [
+      123.682716,
+      9.57482
+     ],
+     [
+      123.683931,
+      9.582895
+     ],
+     [
+      123.685942,
+      9.590814
+     ],
+     [
+      123.688731,
+      9.5985
+     ],
+     [
+      123.692271,
+      9.605879
+     ],
+     [
+      123.696527,
+      9.612881
+     ],
+     [
+      123.701458,
+      9.619438
+     ],
+     [
+      123.707017,
+      9.625486
+     ],
+     [
+      123.713151,
+      9.630968
+     ],
+     [
+      123.719801,
+      9.635831
+     ],
+     [
+      123.726901,
+      9.640028
+     ],
+     [
+      123.734385,
+      9.643518
+     ],
+     [
+      123.742179,
+      9.646268
+     ],
+     [
+      123.750209,
+      9.648252
+     ],
+     [
+      123.758398,
+      9.64945
+     ],
+     [
+      123.766667,
+      9.64985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPSP",
+  "icao_text": "B5102/26 NOTAMR B4909/26\r\nQ) RPHI/QMRXX/IV/NBO/A /000/999/0934N12346E005\r\nA) RPSP B) 2609280337 C) 2612261400EST\r\nE) EXER CTN DRG LDG/TKOF RWY 03/21 DUE MEASURED FRICTION LVL BLW MNM \r\nLVL LCA AT 360M TO 474M FM RWY 03 THR (6M LEFT FROM CL).\r\n\r\nRMK: CORRECTIVE MAINT INPR.\r\n     RWY COND ASSESSMENT UPON REQ.",
+  "id": "1790566646074000",
+  "issued": "2026-09-28T03:37:00.000Z",
+  "last_updated": "2026-09-28T03:37:00.000Z",
+  "local_text": null,
+  "location": "RPSP",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5102/26",
+  "purpose": "NBO",
+  "q_code": "QMRXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "B4909/26",
+  "schedule": null,
+  "scope": "A ",
+  "series": "B",
+  "text": "EXER CTN DRG LDG/TKOF RWY 03/21 DUE MEASURED FRICTION LVL BLW MNM \r\nLVL LCA AT 360M TO 474M FM RWY 03 THR (6M LEFT FROM CL).\r\n\r\nRMK: CORRECTIVE MAINT INPR.\r\n     RWY COND ASSESSMENT UPON REQ.",
+  "traffic": "IV",
+  "type": "R",
+  "upper": null,
   "year": "2026"
  }
 }
