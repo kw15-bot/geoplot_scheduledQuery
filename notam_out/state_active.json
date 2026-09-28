@@ -24353,312 +24353,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790549393045485": {
-  "account_id": "RJSM",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "MIL",
-  "coordinates": "4042N14122E",
-  "effective_end": "2026-10-14T23:59:00Z",
-  "effective_start": "2026-09-27T22:49:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RJJJ",
-  "first_seen": "2026-09-27T22:50:26+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      141.366667,
-      40.783184
-     ],
-     [
-      141.377421,
-      40.782783
-     ],
-     [
-      141.388072,
-      40.781585
-     ],
-     [
-      141.398517,
-      40.779602
-     ],
-     [
-      141.408655,
-      40.776852
-     ],
-     [
-      141.418389,
-      40.773361
-     ],
-     [
-      141.427625,
-      40.769165
-     ],
-     [
-      141.436273,
-      40.764302
-     ],
-     [
-      141.444251,
-      40.75882
-     ],
-     [
-      141.451483,
-      40.752771
-     ],
-     [
-      141.457897,
-      40.746214
-     ],
-     [
-      141.463432,
-      40.739212
-     ],
-     [
-      141.468036,
-      40.731833
-     ],
-     [
-      141.471664,
-      40.724147
-     ],
-     [
-      141.47428,
-      40.716228
-     ],
-     [
-      141.47586,
-      40.708153
-     ],
-     [
-      141.476388,
-      40.7
-     ],
-     [
-      141.47586,
-      40.691847
-     ],
-     [
-      141.47428,
-      40.683772
-     ],
-     [
-      141.471664,
-      40.675853
-     ],
-     [
-      141.468036,
-      40.668167
-     ],
-     [
-      141.463432,
-      40.660788
-     ],
-     [
-      141.457897,
-      40.653786
-     ],
-     [
-      141.451483,
-      40.647229
-     ],
-     [
-      141.444251,
-      40.64118
-     ],
-     [
-      141.436273,
-      40.635698
-     ],
-     [
-      141.427625,
-      40.630835
-     ],
-     [
-      141.418389,
-      40.626639
-     ],
-     [
-      141.408655,
-      40.623148
-     ],
-     [
-      141.398517,
-      40.620398
-     ],
-     [
-      141.388072,
-      40.618415
-     ],
-     [
-      141.377421,
-      40.617217
-     ],
-     [
-      141.366667,
-      40.616816
-     ],
-     [
-      141.355912,
-      40.617217
-     ],
-     [
-      141.345261,
-      40.618415
-     ],
-     [
-      141.334816,
-      40.620398
-     ],
-     [
-      141.324678,
-      40.623148
-     ],
-     [
-      141.314944,
-      40.626639
-     ],
-     [
-      141.305709,
-      40.630835
-     ],
-     [
-      141.29706,
-      40.635698
-     ],
-     [
-      141.289082,
-      40.64118
-     ],
-     [
-      141.281851,
-      40.647229
-     ],
-     [
-      141.275437,
-      40.653786
-     ],
-     [
-      141.269901,
-      40.660788
-     ],
-     [
-      141.265297,
-      40.668167
-     ],
-     [
-      141.26167,
-      40.675853
-     ],
-     [
-      141.259053,
-      40.683772
-     ],
-     [
-      141.257474,
-      40.691847
-     ],
-     [
-      141.256945,
-      40.7
-     ],
-     [
-      141.257474,
-      40.708153
-     ],
-     [
-      141.259053,
-      40.716228
-     ],
-     [
-      141.26167,
-      40.724147
-     ],
-     [
-      141.265297,
-      40.731833
-     ],
-     [
-      141.269901,
-      40.739212
-     ],
-     [
-      141.275437,
-      40.746214
-     ],
-     [
-      141.281851,
-      40.752771
-     ],
-     [
-      141.289082,
-      40.75882
-     ],
-     [
-      141.29706,
-      40.764302
-     ],
-     [
-      141.305709,
-      40.769165
-     ],
-     [
-      141.314944,
-      40.773361
-     ],
-     [
-      141.324678,
-      40.776852
-     ],
-     [
-      141.334816,
-      40.779602
-     ],
-     [
-      141.345261,
-      40.781585
-     ],
-     [
-      141.355912,
-      40.782783
-     ],
-     [
-      141.366667,
-      40.783184
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "RJSM",
-  "icao_text": "M1571/26 NOTAMN \r\nQ) RJJJ/QFFLT/IV/NBO/A/000/999/4042N14122E005 \r\nA) RJSM \r\nB) 2609272249 \r\nC) 2610142359 \r\nE) INTERIOR/EXTERIOR AIRCRAFT RESCUE AND FIRE SUPPRESSION CAPABILITY IS CRITICAL LEVEL OF SERVICE FOR C-17, B-1, B-52 B-767, KC-135 AND SIMILAR SIZE AIRCRAFT. LIMITED CAPABILITY TO MITIGATE AIRCRAFT EMERGENCIES. LOCAL HOST NATION FIREFIGHTING RESOURCES MAY AUGMENT EMERGENCIES AT THE DISCRETION OF THE INCIDENT COMMANDER. FIREFIGHTING CAPABILITIES REMAIN OPTIMUM LEVEL OF SERVICE FOR F-16/F-18 AIRCRAFT. FOR QUESTIONS PLEASE CALL MISAWA AIRFIELD MANAGEMENT AT DSN 226-3110",
-  "id": "1790549393045485",
-  "issued": "2026-09-27T22:49:00Z",
-  "last_updated": "2026-09-27T22:49:00Z",
-  "local_text": null,
-  "location": "RJSM",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "M1571/26",
-  "purpose": "NBO",
-  "q_code": "QFFLT",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "A",
-  "series": "M",
-  "text": "INTERIOR/EXTERIOR AIRCRAFT RESCUE AND FIRE SUPPRESSION CAPABILITY IS CRITICAL LEVEL OF SERVICE FOR C-17, B-1, B-52 B-767, KC-135 AND SIMILAR SIZE AIRCRAFT. LIMITED CAPABILITY TO MITIGATE AIRCRAFT EMERGENCIES. LOCAL HOST NATION FIREFIGHTING RESOURCES MAY AUGMENT EMERGENCIES AT THE DISCRETION OF THE INCIDENT COMMANDER. FIREFIGHTING CAPABILITIES REMAIN OPTIMUM LEVEL OF SERVICE FOR F-16/F-18 AIRCRAFT. FOR QUESTIONS PLEASE CALL MISAWA AIRFIELD MANAGEMENT AT DSN 226-3110",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790549585868633": {
   "account_id": "RKJK",
   "area_group": "REF",
@@ -33511,6 +33205,378 @@
   "traffic": "IV",
   "type": "N",
   "upper": null,
+  "year": "2026"
+ },
+ "1790554371945886": {
+  "account_id": "RJSM",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "MIL",
+  "coordinates": "4042N14122E",
+  "effective_end": "2026-10-10T23:59:00Z",
+  "effective_start": "2026-09-28T00:12:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T00:20:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      141.366667,
+      40.783184
+     ],
+     [
+      141.377421,
+      40.782783
+     ],
+     [
+      141.388072,
+      40.781585
+     ],
+     [
+      141.398517,
+      40.779602
+     ],
+     [
+      141.408655,
+      40.776852
+     ],
+     [
+      141.418389,
+      40.773361
+     ],
+     [
+      141.427625,
+      40.769165
+     ],
+     [
+      141.436273,
+      40.764302
+     ],
+     [
+      141.444251,
+      40.75882
+     ],
+     [
+      141.451483,
+      40.752771
+     ],
+     [
+      141.457897,
+      40.746214
+     ],
+     [
+      141.463432,
+      40.739212
+     ],
+     [
+      141.468036,
+      40.731833
+     ],
+     [
+      141.471664,
+      40.724147
+     ],
+     [
+      141.47428,
+      40.716228
+     ],
+     [
+      141.47586,
+      40.708153
+     ],
+     [
+      141.476388,
+      40.7
+     ],
+     [
+      141.47586,
+      40.691847
+     ],
+     [
+      141.47428,
+      40.683772
+     ],
+     [
+      141.471664,
+      40.675853
+     ],
+     [
+      141.468036,
+      40.668167
+     ],
+     [
+      141.463432,
+      40.660788
+     ],
+     [
+      141.457897,
+      40.653786
+     ],
+     [
+      141.451483,
+      40.647229
+     ],
+     [
+      141.444251,
+      40.64118
+     ],
+     [
+      141.436273,
+      40.635698
+     ],
+     [
+      141.427625,
+      40.630835
+     ],
+     [
+      141.418389,
+      40.626639
+     ],
+     [
+      141.408655,
+      40.623148
+     ],
+     [
+      141.398517,
+      40.620398
+     ],
+     [
+      141.388072,
+      40.618415
+     ],
+     [
+      141.377421,
+      40.617217
+     ],
+     [
+      141.366667,
+      40.616816
+     ],
+     [
+      141.355912,
+      40.617217
+     ],
+     [
+      141.345261,
+      40.618415
+     ],
+     [
+      141.334816,
+      40.620398
+     ],
+     [
+      141.324678,
+      40.623148
+     ],
+     [
+      141.314944,
+      40.626639
+     ],
+     [
+      141.305709,
+      40.630835
+     ],
+     [
+      141.29706,
+      40.635698
+     ],
+     [
+      141.289082,
+      40.64118
+     ],
+     [
+      141.281851,
+      40.647229
+     ],
+     [
+      141.275437,
+      40.653786
+     ],
+     [
+      141.269901,
+      40.660788
+     ],
+     [
+      141.265297,
+      40.668167
+     ],
+     [
+      141.26167,
+      40.675853
+     ],
+     [
+      141.259053,
+      40.683772
+     ],
+     [
+      141.257474,
+      40.691847
+     ],
+     [
+      141.256945,
+      40.7
+     ],
+     [
+      141.257474,
+      40.708153
+     ],
+     [
+      141.259053,
+      40.716228
+     ],
+     [
+      141.26167,
+      40.724147
+     ],
+     [
+      141.265297,
+      40.731833
+     ],
+     [
+      141.269901,
+      40.739212
+     ],
+     [
+      141.275437,
+      40.746214
+     ],
+     [
+      141.281851,
+      40.752771
+     ],
+     [
+      141.289082,
+      40.75882
+     ],
+     [
+      141.29706,
+      40.764302
+     ],
+     [
+      141.305709,
+      40.769165
+     ],
+     [
+      141.314944,
+      40.773361
+     ],
+     [
+      141.324678,
+      40.776852
+     ],
+     [
+      141.334816,
+      40.779602
+     ],
+     [
+      141.345261,
+      40.781585
+     ],
+     [
+      141.355912,
+      40.782783
+     ],
+     [
+      141.366667,
+      40.783184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RJSM",
+  "icao_text": "M1575/26 NOTAMN \r\nQ) RJJJ/QFFLT/IV/NBO/A/000/999/4042N14122E005 \r\nA) RJSM \r\nB) 2609280012 \r\nC) 2610102359 \r\nE) INTERIOR/EXTERIOR AIRCRAFT RESCUE AND FIRE SUPPRESSION CAPABILITY IS CRITICAL LEVEL OF SERVICE FOR C-17, B-1, B-52 B-767, KC-135 AND SIMILAR SIZE AIRCRAFT. LIMITED CAPABILITY TO MITIGATE AIRCRAFT EMERGENCIES. LOCAL HOST NATION FIREFIGHTING RESOURCES MAY AUGMENT EMERGENCIES AT THE DISCRETION OF THE INCIDENT COMMANDER. FIREFIGHTING CAPABILITIES REMAIN CRITICAL LEVEL OF SERVICE FOR F-16/F-18 AIRCRAFT. FOR QUESTIONS PLEASE CALL MISAWA AIRFIELD MANAGEMENT AT DSN 226-3110",
+  "id": "1790554371945886",
+  "issued": "2026-09-28T00:12:00Z",
+  "last_updated": "2026-09-28T00:12:00Z",
+  "local_text": null,
+  "location": "RJSM",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "M1575/26",
+  "purpose": "NBO",
+  "q_code": "QFFLT",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "M",
+  "text": "INTERIOR/EXTERIOR AIRCRAFT RESCUE AND FIRE SUPPRESSION CAPABILITY IS CRITICAL LEVEL OF SERVICE FOR C-17, B-1, B-52 B-767, KC-135 AND SIMILAR SIZE AIRCRAFT. LIMITED CAPABILITY TO MITIGATE AIRCRAFT EMERGENCIES. LOCAL HOST NATION FIREFIGHTING RESOURCES MAY AUGMENT EMERGENCIES AT THE DISCRETION OF THE INCIDENT COMMANDER. FIREFIGHTING CAPABILITIES REMAIN CRITICAL LEVEL OF SERVICE FOR F-16/F-18 AIRCRAFT. FOR QUESTIONS PLEASE CALL MISAWA AIRFIELD MANAGEMENT AT DSN 226-3110",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790554617106000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3353N13606E",
+  "effective_end": "2026-09-28T09:00:00Z",
+  "effective_start": "2026-09-28T01:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T00:20:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      136.100278,
+      33.888611
+     ],
+     [
+      136.104167,
+      33.886389
+     ],
+     [
+      136.109167,
+      33.889444
+     ],
+     [
+      136.089167,
+      33.868889
+     ],
+     [
+      136.100278,
+      33.888611
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RJJJ",
+  "icao_text": "U3445/26 NOTAMN\r\nQ)RJJJ/QWULW/IV/BO/W/000/005/3353N13606E002\r\nA)RJJJ B)2609280100 C)2609280900\r\nE)BEYOND VISUAL LINE OF SIGHT UNMANNED ACFT:\r\nAREA: 70M EITHER SIDE OF A LINE 335319N1360601E - 335311N1360615E -\r\n335322N1360633E - 335208N1360521E \r\n(KUMANO-SHI IN MIE)\r\nWT: 2.1KG\r\nCONTACT INFORMATION: 052-588-4601\r\nF)SFC G)460FT AMSL",
+  "id": "1790554617106000",
+  "issued": "2026-09-28T00:16:00Z",
+  "last_updated": "2026-09-28T00:17:00Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": "SFC",
+  "max_fl": "005",
+  "min_fl": "000",
+  "number": "U3445/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.0,
+  "radius_nm": 2.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "BEYOND VISUAL LINE OF SIGHT UNMANNED ACFT:\r\nAREA: 70M EITHER SIDE OF A LINE 335319N1360601E - 335311N1360615E -\r\n335322N1360633E - 335208N1360521E \r\n(KUMANO-SHI IN MIE)\r\nWT: 2.1KG\r\nCONTACT INFORMATION: 052-588-4601",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "460FT AMSL",
   "year": "2026"
  }
 }
