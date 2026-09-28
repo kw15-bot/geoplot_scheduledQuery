@@ -45,52 +45,6 @@
   "upper": "UNL",
   "year": "2026"
  },
- "1790420781318000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-09-28T18:14:00.000Z",
-  "classification": "INTL",
-  "coordinates": "2852N11554E",
-  "effective_end": "2026-10-02T22:00:00.000Z",
-  "effective_start": "2026-09-28T18:30:00.000Z",
-  "end_override": "2026-09-28T18:13:00+00:00",
-  "ended_by": "M2806/26",
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-09-28T18:20:32+00:00",
-  "geometry": {
-   "coordinates": [
-    115.9,
-    28.866667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "ZSCN",
-  "icao_text": "M2791/26 NOTAMN\r\nQ)ZSHA/QMRLC/IV/NBO/A/000/999/2852N11554E005\r\nA)ZSCN B)2609281830 C)2610022200 \r\nD)1830-2200 SEP 28 30, OCT 02\r\nE) RWY03/21 CLSD DUE TO MAINT.\r\n ",
-  "id": "1790420781318000",
-  "issued": "2026-09-26T11:05:00.000Z",
-  "last_updated": "2026-09-28T18:14:00.000Z",
-  "local_text": null,
-  "location": "ZSCN",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "M2791/26",
-  "purpose": "NBO",
-  "q_code": "QMRLC",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": "1830-2200 SEP 28 30, OCT 02",
-  "scope": "A",
-  "series": "M",
-  "text": "RWY03/21 CLSD DUE TO MAINT.",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790492193039000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -41523,6 +41477,300 @@
   "traffic": "IV",
   "type": "N",
   "upper": "FL999",
+  "year": "2026"
+ },
+ "1790619645432000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T13:40:00.000Z",
+  "effective_start": "2026-09-29T10:10:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZWUQ",
+  "first_seen": "2026-09-28T18:30:41+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     84.75024,
+     40.341355
+    ],
+    [
+     83.931667,
+     40.514722
+    ],
+    [
+     82.237841,
+     40.852491
+    ]
+   ],
+   "type": "LineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZWUQ",
+  "icao_text": "A4999/26 NOTAMN\r\nQ)ZWUQ/QARLT/IV/NBO/E/000/266/\r\nA)ZWUQ B)2609291010 C)2609291340 \r\nE) SEGMENT 110KM WEST OF SADAN-50KM EAST OF PAMLI OF ATS RTE W186 \r\nCLSD AT 8,100M AND BELOW.\r\nF)GND G)8100M AMSL",
+  "id": "1790619645432000",
+  "issued": "2026-09-28T18:20:00.000Z",
+  "last_updated": "2026-09-28T18:20:00.000Z",
+  "local_text": null,
+  "location": "ZWUQ",
+  "lower": "GND",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4999/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "SEGMENT 110KM WEST OF SADAN-50KM EAST OF PAMLI OF ATS RTE W186 \r\nCLSD AT 8,100M AND BELOW.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "8100M AMSL",
+  "year": "2026"
+ },
+ "1790619740737000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T16:30:00Z",
+  "effective_start": "2026-09-29T09:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZWUQ",
+  "first_seen": "2026-09-28T18:30:41+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     86.0,
+     40.076667
+    ],
+    [
+     82.495,
+     39.541667
+    ],
+    [
+     81.201069,
+     39.308184
+    ]
+   ],
+   "type": "LineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZWUQ",
+  "icao_text": "A5000/26 NOTAMN\r\nQ)ZWUQ/QARLT/IV/NBO/E/000/276/\r\nA)ZWUQ B)2609290930 C)2609291630 \r\nE) SEGMENT SADAN-100KM EAST OF KANPI OF ATS RTE W187 CLSD AT \r\n8,400M AND BELOW.\r\nF)GND G)8400M AMSL",
+  "id": "1790619740737000",
+  "issued": "2026-09-28T18:22:00Z",
+  "last_updated": "2026-09-28T18:23:00Z",
+  "local_text": null,
+  "location": "ZWUQ",
+  "lower": "GND",
+  "max_fl": "276",
+  "min_fl": "000",
+  "number": "A5000/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "SEGMENT SADAN-100KM EAST OF KANPI OF ATS RTE W187 CLSD AT \r\n8,400M AND BELOW.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "8400M AMSL",
+  "year": "2026"
+ },
+ "1790619941856065": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-01T18:24:00Z",
+  "effective_start": "2026-09-28T18:24:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-28T18:30:41+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4731/26 NOTAMC A4677/26\nQ) KZAK/QPFXX/IV/NBO/AE/000/999/\nA) KZAK\nB) 2609281824\nE) ATTENTION ACFT OPR AND DISPATCHERS OPERATING WI OAKLAND OCEANIC (KZAK\nCANCELED",
+  "id": "1790619941856065",
+  "issued": "2026-09-28T18:24:00Z",
+  "last_updated": "2026-09-28T18:25:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4731/26",
+  "purpose": "NBO",
+  "q_code": "QPFXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "A4677/26",
+  "schedule": null,
+  "scope": "AE",
+  "series": "A",
+  "text": "A4731/26 NOTAMC A4677/26\nQ) KZAK/QPFXX/IV/NBO/AE/000/999/\nA) KZAK\nB) 2609281824\nE) ATTENTION ACFT OPR AND DISPATCHERS OPERATING WI OAKLAND OCEANIC (KZAK\nCANCELED",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790619948289000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T14:25:00Z",
+  "effective_start": "2026-09-29T00:50:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZWUQ",
+  "first_seen": "2026-09-28T18:30:41+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      75.408333,
+      36.941667
+     ],
+     [
+      76.308824,
+      36.960848
+     ]
+    ],
+    [
+     [
+      75.408333,
+      36.941667
+     ],
+     [
+      76.222495,
+      37.568196
+     ]
+    ]
+   ],
+   "type": "MultiLineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZWUQ",
+  "icao_text": "A5001/26 NOTAMN\r\nQ)ZWUQ/QARLT/IV/NBO/E/000/311/\r\nA)ZWUQ B)2609290050 C)2609291425 \r\nE) FLW SEGMENT OF ATS RTE CLSD AT 9,500M AND BELOW:\r\n1. W112: PURPA-80KM EAST OF PURPA.\r\n2. L181.\r\n3. B215: PURPA-100KM NORTH OF PURPA.\r\nF)GND G)9500M AMSL",
+  "id": "1790619948289000",
+  "issued": "2026-09-28T18:25:00Z",
+  "last_updated": "2026-09-28T18:26:00Z",
+  "local_text": null,
+  "location": "ZWUQ",
+  "lower": "GND",
+  "max_fl": "311",
+  "min_fl": "000",
+  "number": "A5001/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "FLW SEGMENT OF ATS RTE CLSD AT 9,500M AND BELOW:\r\n1. W112: PURPA-80KM EAST OF PURPA.\r\n2. L181.\r\n3. B215: PURPA-100KM NORTH OF PURPA.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "9500M AMSL",
+  "year": "2026"
+ },
+ "1790620138412000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T04:00:00Z",
+  "effective_start": "2026-09-28T21:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZWUQ",
+  "first_seen": "2026-09-28T18:30:41+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      75.408333,
+      36.941667
+     ],
+     [
+      77.071667,
+      38.221667
+     ],
+     [
+      77.499167,
+      38.578333
+     ],
+     [
+      77.684145,
+      38.686669
+     ]
+    ],
+    [
+     [
+      75.408333,
+      36.941667
+     ],
+     [
+      79.868333,
+      37.036667
+     ]
+    ]
+   ],
+   "type": "MultiLineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZWUQ",
+  "icao_text": "A5002/26 NOTAMN\r\nQ)ZWUQ/QARLT/IV/NBO/E/197/291/\r\nA)ZWUQ B)2609282100 C)2609290400 \r\nE) FLW SEGMENT OF ATS RTE CLSD BTN 6,000M(INCLUSIVE) AND \r\n8,900M(INCLUSIVE):\r\n1. B215: PURPA-20KM NORTH OF MAGIV.\r\n2. W112: PURPA-HOTAN VOR/DME 'HTN'.\r\n3. L181.\r\nF)FL197 G)FL291",
+  "id": "1790620138412000",
+  "issued": "2026-09-28T18:28:00Z",
+  "last_updated": "2026-09-28T18:29:00Z",
+  "local_text": null,
+  "location": "ZWUQ",
+  "lower": "FL197",
+  "max_fl": "291",
+  "min_fl": "197",
+  "number": "A5002/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "FLW SEGMENT OF ATS RTE CLSD BTN 6,000M(INCLUSIVE) AND \r\n8,900M(INCLUSIVE):\r\n1. B215: PURPA-20KM NORTH OF MAGIV.\r\n2. W112: PURPA-HOTAN VOR/DME &apos;HTN&apos;.\r\n3. L181.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL291",
   "year": "2026"
  }
 }
