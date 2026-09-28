@@ -32673,52 +32673,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790555557134000": {
-  "account_id": "RJAAYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3310N14118E",
-  "effective_end": "2026-09-28T09:20:00.000Z",
-  "effective_start": "2026-09-28T00:40:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RJJJ",
-  "first_seen": "2026-09-28T00:40:28+00:00",
-  "geometry": {
-   "coordinates": [
-    141.3,
-    33.166667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "RJJJ",
-  "icao_text": "X6113/26 NOTAMN\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280040 C)2609280920\r\nE)FLOW CTL AS FLWS, \r\n AREA:  TOKYO APCH CTA\r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR RJTT VIA\r\nSPENS,SELNO,TOPIT,DOLBA OR UTIBO\r\nRMK: REF AIP ENR1.9-1",
-  "id": "1790555557134000",
-  "issued": "2026-09-28T00:32:00.000Z",
-  "last_updated": "2026-09-28T00:32:00.000Z",
-  "local_text": null,
-  "location": "RJJJ",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "X6113/26",
-  "purpose": "NBO",
-  "q_code": "QPFCA",
-  "qline_offset_nm": null,
-  "radius_nm": 999.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "X",
-  "text": "FLOW CTL AS FLWS, \r\n AREA:  TOKYO APCH CTA\r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR RJTT VIA\r\nSPENS,SELNO,TOPIT,DOLBA OR UTIBO\r\nRMK: REF AIP ENR1.9-1",
-  "traffic": "I",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790555690848000": {
   "account_id": "RJAAYNYX",
   "area_group": "REF",
@@ -53687,52 +53641,6 @@
   "upper": "3000FT AMSL",
   "year": "2026"
  },
- "1790566608736000": {
-  "account_id": "RJAAYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3310N14118E",
-  "effective_end": "2026-09-28T08:50:00Z",
-  "effective_start": "2026-09-28T03:36:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RJJJ",
-  "first_seen": "2026-09-28T03:40:25+00:00",
-  "geometry": {
-   "coordinates": [
-    141.3,
-    33.166667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "RJJJ",
-  "icao_text": "X6127/26 NOTAMN\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280336 C)2609280850\r\nE)FLOW CTL AS FLWS, \r\n AREA: SECTOR T38 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR T38\r\nRMK: REF AIP ENR1.9-1",
-  "id": "1790566608736000",
-  "issued": "2026-09-28T03:36:00Z",
-  "last_updated": "2026-09-28T03:37:00Z",
-  "local_text": null,
-  "location": "RJJJ",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "X6127/26",
-  "purpose": "NBO",
-  "q_code": "QPFCA",
-  "qline_offset_nm": null,
-  "radius_nm": 999.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "X",
-  "text": "FLOW CTL AS FLWS, \r\n AREA: SECTOR T38 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR T38\r\nRMK: REF AIP ENR1.9-1",
-  "traffic": "I",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790566646074000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
@@ -61737,8 +61645,8 @@
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": null,
-  "effective_end": "2026-09-29T00:38:00.000Z",
-  "effective_start": "2026-09-28T23:50:00.000Z",
+  "effective_end": "2026-09-29T00:38:00Z",
+  "effective_start": "2026-09-28T23:50:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
@@ -61749,8 +61657,8 @@
   "icao_location": "ZWUQ",
   "icao_text": "A4973/26 NOTAMN\r\nQ)ZWUQ/QARLC/IV/NBO/E/000/999/\r\nA)ZWUQ B)2609282350 C)2609290038 \r\nE) FLW SEGMENT OF ATS RTE CLSD:\r\n1.W112 :ADMUX-120KM WEST OF ADMUX.\r\n2.W187 :OBDEG-SAKLU.\r\n3.Y1 :MAGOD-130KM WEST OF MAGOD.\r\nF)GND G)UNL",
   "id": "1790573981699000",
-  "issued": "2026-09-28T05:36:00.000Z",
-  "last_updated": "2026-09-28T05:39:00.000Z",
+  "issued": "2026-09-28T05:36:00Z",
+  "last_updated": "2026-09-28T05:40:00Z",
   "local_text": null,
   "location": "ZWUQ",
   "lower": "GND",
@@ -62074,6 +61982,568 @@
   "text": "IAP VOR RWY 27 PROFILE VIEW MINIMA CHANGED TO:\r\n\r\nOCA (H)      CAT A      CAT B      CAT C      CAT D\r\nCIRCLING   570 (504)  570 (504)  900 (834)  1000 (934)\r\n\r\nREF AIP RPVP AD CHART 2-30.",
   "traffic": "IV",
   "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790574103319000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3728N13705E",
+  "effective_end": "2026-09-29T08:41:00Z",
+  "effective_start": "2026-09-29T00:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T05:50:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      137.080556,
+      37.461111
+     ],
+     [
+      137.080278,
+      37.461389
+     ],
+     [
+      137.079167,
+      37.461111
+     ],
+     [
+      137.076389,
+      37.4625
+     ],
+     [
+      137.078056,
+      37.463889
+     ],
+     [
+      137.079722,
+      37.465278
+     ],
+     [
+      137.083889,
+      37.462778
+     ],
+     [
+      137.086389,
+      37.461944
+     ],
+     [
+      137.087778,
+      37.460278
+     ],
+     [
+      137.0875,
+      37.4575
+     ],
+     [
+      137.085556,
+      37.455
+     ],
+     [
+      137.081944,
+      37.453056
+     ],
+     [
+      137.0775,
+      37.454167
+     ],
+     [
+      137.075278,
+      37.456667
+     ],
+     [
+      137.077778,
+      37.458611
+     ],
+     [
+      137.078611,
+      37.459167
+     ],
+     [
+      137.079444,
+      37.46
+     ],
+     [
+      137.080556,
+      37.461111
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RJJJ",
+  "icao_text": "U3453/26 NOTAMN\r\nQ)RJJJ/QWULW/IV/BO/W/000/014/3728N13705E002\r\nA)RJJJ B)2609290000 C)2609290841\r\nE)UNMANNED ACFT:\r\nAREA: BOUNDED BY FLW POINTS\r\n372740N1370450E - 372741N1370449E - 372740N1370445E - 372745N1370435E\r\n- 372750N1370441E - 372755N1370447E - 372746N1370502E -\r\n372743N1370511E - 372737N1370516E - 372727N1370515E - 372718N1370508E\r\n- 372711N1370455E - 372715N1370439E - 372724N1370431E -\r\n372731N1370440E - 372733N1370443E - 372736N1370446E - 372740N1370450E\r\n(WAJIMA-SHI IN ISHIKAWA)\r\nWT: 1.1KG\r\nF)SFC G)1313FT AMSL",
+  "id": "1790574103319000",
+  "issued": "2026-09-28T05:41:00Z",
+  "last_updated": "2026-09-28T05:42:00Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": "SFC",
+  "max_fl": "014",
+  "min_fl": "000",
+  "number": "U3453/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 2.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT:\r\nAREA: BOUNDED BY FLW POINTS\r\n372740N1370450E - 372741N1370449E - 372740N1370445E - 372745N1370435E\r\n- 372750N1370441E - 372755N1370447E - 372746N1370502E -\r\n372743N1370511E - 372737N1370516E - 372727N1370515E - 372718N1370508E\r\n- 372711N1370455E - 372715N1370439E - 372724N1370431E -\r\n372731N1370440E - 372733N1370443E - 372736N1370446E - 372740N1370450E\r\n(WAJIMA-SHI IN ISHIKAWA)\r\nWT: 1.1KG",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "1313FT AMSL",
+  "year": "2026"
+ },
+ "1790574214283000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-28T07:30:00Z",
+  "effective_start": "2026-09-28T05:43:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T05:50:28+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "X6136/26 NOTAMN\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280543 C)2609280730\r\nE)FLOW CTL AS FLWS, \r\n AREA: SECTOR N54 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR N54\r\nRMK: REF AIP ENR1.9-1",
+  "id": "1790574214283000",
+  "issued": "2026-09-28T05:43:00Z",
+  "last_updated": "2026-09-28T05:44:00Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "X6136/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "X",
+  "text": "FLOW CTL AS FLWS, \r\n AREA: SECTOR N54 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR N54\r\nRMK: REF AIP ENR1.9-1",
+  "traffic": "I",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790574384489000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-10-01T05:46:00.000Z",
+  "effective_start": "2026-09-28T05:46:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T05:50:28+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "X6137/26 NOTAMC X6127/26\r\nQ)RJJJ/QPFXX/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280546\r\nE)FLOW CTL SECTOR T38  \r\nNOTAM CNL",
+  "id": "1790574384489000",
+  "issued": "2026-09-28T05:46:00.000Z",
+  "last_updated": "2026-09-28T05:46:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "X6137/26",
+  "purpose": "NBO",
+  "q_code": "QPFXX",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": "X6127/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "X",
+  "text": "FLOW CTL SECTOR T38  \r\nNOTAM CNL",
+  "traffic": "I",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790574463587000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3439N13357E",
+  "effective_end": "2026-11-30T08:00:00Z",
+  "effective_start": "2026-09-28T05:47:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T05:50:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      133.95,
+      34.733184
+     ],
+     [
+      133.959911,
+      34.732783
+     ],
+     [
+      133.969727,
+      34.731585
+     ],
+     [
+      133.979353,
+      34.729602
+     ],
+     [
+      133.988696,
+      34.726852
+     ],
+     [
+      133.997667,
+      34.723361
+     ],
+     [
+      134.006178,
+      34.719165
+     ],
+     [
+      134.014148,
+      34.714302
+     ],
+     [
+      134.021501,
+      34.70882
+     ],
+     [
+      134.028165,
+      34.702771
+     ],
+     [
+      134.034076,
+      34.696214
+     ],
+     [
+      134.039178,
+      34.689212
+     ],
+     [
+      134.043421,
+      34.681833
+     ],
+     [
+      134.046764,
+      34.674147
+     ],
+     [
+      134.049175,
+      34.666228
+     ],
+     [
+      134.050631,
+      34.658153
+     ],
+     [
+      134.051118,
+      34.65
+     ],
+     [
+      134.050631,
+      34.641847
+     ],
+     [
+      134.049175,
+      34.633772
+     ],
+     [
+      134.046764,
+      34.625853
+     ],
+     [
+      134.043421,
+      34.618167
+     ],
+     [
+      134.039178,
+      34.610788
+     ],
+     [
+      134.034076,
+      34.603786
+     ],
+     [
+      134.028165,
+      34.597229
+     ],
+     [
+      134.021501,
+      34.59118
+     ],
+     [
+      134.014148,
+      34.585698
+     ],
+     [
+      134.006178,
+      34.580835
+     ],
+     [
+      133.997667,
+      34.576639
+     ],
+     [
+      133.988696,
+      34.573148
+     ],
+     [
+      133.979353,
+      34.570398
+     ],
+     [
+      133.969727,
+      34.568415
+     ],
+     [
+      133.959911,
+      34.567217
+     ],
+     [
+      133.95,
+      34.566816
+     ],
+     [
+      133.940089,
+      34.567217
+     ],
+     [
+      133.930273,
+      34.568415
+     ],
+     [
+      133.920647,
+      34.570398
+     ],
+     [
+      133.911304,
+      34.573148
+     ],
+     [
+      133.902333,
+      34.576639
+     ],
+     [
+      133.893822,
+      34.580835
+     ],
+     [
+      133.885852,
+      34.585698
+     ],
+     [
+      133.878499,
+      34.59118
+     ],
+     [
+      133.871835,
+      34.597229
+     ],
+     [
+      133.865924,
+      34.603786
+     ],
+     [
+      133.860822,
+      34.610788
+     ],
+     [
+      133.856579,
+      34.618167
+     ],
+     [
+      133.853236,
+      34.625853
+     ],
+     [
+      133.850825,
+      34.633772
+     ],
+     [
+      133.849369,
+      34.641847
+     ],
+     [
+      133.848882,
+      34.65
+     ],
+     [
+      133.849369,
+      34.658153
+     ],
+     [
+      133.850825,
+      34.666228
+     ],
+     [
+      133.853236,
+      34.674147
+     ],
+     [
+      133.856579,
+      34.681833
+     ],
+     [
+      133.860822,
+      34.689212
+     ],
+     [
+      133.865924,
+      34.696214
+     ],
+     [
+      133.871835,
+      34.702771
+     ],
+     [
+      133.878499,
+      34.70882
+     ],
+     [
+      133.885852,
+      34.714302
+     ],
+     [
+      133.893822,
+      34.719165
+     ],
+     [
+      133.902333,
+      34.723361
+     ],
+     [
+      133.911304,
+      34.726852
+     ],
+     [
+      133.920647,
+      34.729602
+     ],
+     [
+      133.930273,
+      34.731585
+     ],
+     [
+      133.940089,
+      34.732783
+     ],
+     [
+      133.95,
+      34.733184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RJJJ",
+  "icao_text": "V3697/26 NOTAMN\r\nQ)RJJJ/QOLAS/IV/M/E/000/005/3439N13357E005\r\nA)RJJJ B)2609280547 C)2611300800\r\nE)OBST LGT U/S\r\nTYPE: TOWER\r\nPSN: 343859.6N1335653.3E ELEV: 483FT AMSL\r\n(OKAYAMA-SHI)",
+  "id": "1790574463587000",
+  "issued": "2026-09-28T05:47:00Z",
+  "last_updated": "2026-09-28T05:48:00Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "005",
+  "min_fl": "000",
+  "number": "V3697/26",
+  "purpose": "M",
+  "q_code": "QOLAS",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "V",
+  "text": "OBST LGT U/S\r\nTYPE: TOWER\r\nPSN: 343859.6N1335653.3E ELEV: 483FT AMSL\r\n(OKAYAMA-SHI)",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790574466966000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-28T13:00:00Z",
+  "effective_start": "2026-09-28T05:47:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T05:50:28+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "X6138/26 NOTAMR X6113/26\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280547 C)2609281300\r\nE)FLOW CTL AS FLWS, \r\n AREA:  TOKYO APCH CTA\r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR RJTT VIA\r\nSPENS,SELNO,TOPIT,DOLBA OR UTIBO\r\nRMK: REF AIP ENR1.9-1",
+  "id": "1790574466966000",
+  "issued": "2026-09-28T05:47:00Z",
+  "last_updated": "2026-09-28T05:48:00Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "X6138/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": "X6113/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "X",
+  "text": "FLOW CTL AS FLWS, \r\n AREA:  TOKYO APCH CTA\r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR RJTT VIA\r\nSPENS,SELNO,TOPIT,DOLBA OR UTIBO\r\nRMK: REF AIP ENR1.9-1",
+  "traffic": "I",
+  "type": "R",
   "upper": null,
   "year": "2026"
  }
