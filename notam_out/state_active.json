@@ -41028,5 +41028,113 @@
   "type": "N",
   "upper": "FL310",
   "year": "2026"
+ },
+ "1790610779954466": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-04T06:00:00Z",
+  "effective_start": "2026-09-29T19:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-28T16:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -154.0,
+      18.0
+     ],
+     [
+      -144.0,
+      18.0
+     ],
+     [
+      -153.0,
+      10.5
+     ],
+     [
+      -154.0,
+      18.0
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4725/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/500/\nA) KZAK\nB) 2609291900\nC) 2610040600\nD) DLY 1900-0600\nE) AIRSPACE BOEING EAST BOX. AN AREA DEFINED AS 180000N1540000W TO 180000N1440000W TO 103000N1530000W TO POINT OF ORIGIN. ALL NON-PARTICIPATING ACFT ARE REQUIRED TO AVOID THE NOTAMED AREA. IFR ACFT UNDER ATC JURISDICTION CAN ANTICIPATE CLR AROUND THE NOTAMED\nAREA.\nF) SFC\nG) FL500",
+  "id": "1790610779954466",
+  "issued": "2026-09-28T15:52:00Z",
+  "last_updated": "2026-09-28T15:52:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "500",
+  "min_fl": "000",
+  "number": "A4725/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": "DLY 1900-0600",
+  "scope": "W",
+  "series": "A",
+  "text": "AIRSPACE BOEING EAST BOX. AN AREA DEFINED AS 180000N1540000W TO 180000N1440000W TO 103000N1530000W TO POINT OF ORIGIN. ALL NON-PARTICIPATING ACFT ARE REQUIRED TO AVOID THE NOTAMED AREA. IFR ACFT UNDER ATC JURISDICTION CAN ANTICIPATE CLR AROUND THE NOTAMED\nAREA.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL500",
+  "year": "2026"
+ },
+ "1790611235978682": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-01T15:59:00Z",
+  "effective_start": "2026-09-28T15:59:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-28T16:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4726/26 NOTAMC A4685/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2609281559\nE) SPACEX HAS PLANNED A ROCKET LAUNCH. DEBRIS FM THIS LAUNCH WILL FALL W\nCANCELED",
+  "id": "1790611235978682",
+  "issued": "2026-09-28T15:59:00Z",
+  "last_updated": "2026-09-28T15:59:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4726/26",
+  "purpose": "NBO",
+  "q_code": "QRAXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "A4685/26",
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "A4726/26 NOTAMC A4685/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2609281559\nE) SPACEX HAS PLANNED A ROCKET LAUNCH. DEBRIS FM THIS LAUNCH WILL FALL W\nCANCELED",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
  }
 }
