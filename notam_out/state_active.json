@@ -40960,5 +40960,303 @@
   "type": "C",
   "upper": null,
   "year": "2026"
+ },
+ "1790612095331000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T02:40:00Z",
+  "effective_start": "2026-09-29T01:50:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZLHW",
+  "first_seen": "2026-09-28T16:20:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      102.704722,
+      41.6775
+     ],
+     [
+      102.990556,
+      41.5975
+     ],
+     [
+      104.701389,
+      41.099167
+     ]
+    ],
+    [
+     [
+      102.816667,
+      42.033333
+     ],
+     [
+      102.990556,
+      41.5975
+     ],
+     [
+      102.988333,
+      41.355
+     ],
+     [
+      102.992333,
+      40.270832
+     ]
+    ],
+    [
+     [
+      102.684955,
+      40.269162
+     ],
+     [
+      102.702778,
+      41.437222
+     ],
+     [
+      102.704722,
+      41.6775
+     ],
+     [
+      102.816667,
+      42.033333
+     ]
+    ],
+    [
+     [
+      104.313611,
+      40.980556
+     ],
+     [
+      102.988333,
+      41.355
+     ],
+     [
+      102.702778,
+      41.437222
+     ]
+    ]
+   ],
+   "type": "MultiLineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZLHW",
+  "icao_text": "A4992/26 NOTAMN\r\nQ)ZLHW/QARLT/IV/NBO/E/000/276/\r\nA)ZLHW B)2609290150 C)2609290240 \r\nE) FLW SEGMENT OF ATS RTE CLSD AT 8,400M AND BELOW:\r\n1. W270 : BUVEM - BIVOR.\r\n2. B330 : MORIT - N401615E1025934.\r\n3. W195 : N401609E1024104 - MORIT.\r\n4. W66  : LAGEB - ESPED.\r\nF)FL000 G)FL276",
+  "id": "1790612095331000",
+  "issued": "2026-09-28T16:14:00Z",
+  "last_updated": "2026-09-28T16:15:00Z",
+  "local_text": null,
+  "location": "ZLHW",
+  "lower": "FL000",
+  "max_fl": "276",
+  "min_fl": "000",
+  "number": "A4992/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "FLW SEGMENT OF ATS RTE CLSD AT 8,400M AND BELOW:\r\n1. W270 : BUVEM - BIVOR.\r\n2. B330 : MORIT - N401615E1025934.\r\n3. W195 : N401609E1024104 - MORIT.\r\n4. W66  : LAGEB - ESPED.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL276",
+  "year": "2026"
+ },
+ "1790612241550000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T03:50:00.000Z",
+  "effective_start": "2026-09-29T01:50:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZLHW",
+  "first_seen": "2026-09-28T16:20:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      103.98,
+      37.611944
+     ],
+     [
+      104.175278,
+      37.254722
+     ],
+     [
+      104.240556,
+      36.953056
+     ],
+     [
+      104.341667,
+      36.482222
+     ],
+     [
+      104.346389,
+      36.197778
+     ]
+    ],
+    [
+     [
+      104.240556,
+      36.953056
+     ],
+     [
+      104.610833,
+      37.214167
+     ],
+     [
+      104.761389,
+      37.319167
+     ]
+    ],
+    [
+     [
+      104.175278,
+      37.254722
+     ],
+     [
+      104.501111,
+      37.451944
+     ]
+    ],
+    [
+     [
+      105.186111,
+      36.304444
+     ],
+     [
+      104.736111,
+      36.4
+     ],
+     [
+      104.341667,
+      36.482222
+     ]
+    ],
+    [
+     [
+      104.346389,
+      36.197778
+     ],
+     [
+      104.971111,
+      35.8975
+     ]
+    ]
+   ],
+   "type": "MultiLineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZLHW",
+  "icao_text": "A4993/26 NOTAMN\r\nQ)ZLHW/QARLT/IV/NBO/E/177/217/\r\nA)ZLHW B)2609290150 C)2609290350 \r\nE) FLW SEGMENT OF ATS RTE CLSD BTN 5,400M(INCLUSIVE) AND \r\n6,600M(INCLUSIVE):\r\n1. B330: JELAN - BIGUX.\r\n2. W211: AGITU - ADPUX.\r\n3. B215: IDUGI - OROXU.\r\n4. W213: IDSUD - APESU.\r\n5. W214: BIGUX - UKBIN.\r\nF)FL177 G)FL217",
+  "id": "1790612241550000",
+  "issued": "2026-09-28T16:16:00.000Z",
+  "last_updated": "2026-09-28T16:17:00.000Z",
+  "local_text": null,
+  "location": "ZLHW",
+  "lower": "FL177",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4993/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "FLW SEGMENT OF ATS RTE CLSD BTN 5,400M(INCLUSIVE) AND \r\n6,600M(INCLUSIVE):\r\n1. B330: JELAN - BIGUX.\r\n2. W211: AGITU - ADPUX.\r\n3. B215: IDUGI - OROXU.\r\n4. W213: IDSUD - APESU.\r\n5. W214: BIGUX - UKBIN.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL217",
+  "year": "2026"
+ },
+ "1790612309006000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T03:50:00.000Z",
+  "effective_start": "2026-09-29T01:50:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZLHW",
+  "first_seen": "2026-09-28T16:20:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      104.346389,
+      36.197778
+     ],
+     [
+      104.3525,
+      35.831667
+     ],
+     [
+      104.357778,
+      35.500278
+     ]
+    ],
+    [
+     [
+      104.111944,
+      33.590278
+     ],
+     [
+      104.111944,
+      35.5
+     ],
+     [
+      104.113333,
+      35.828889
+     ],
+     [
+      104.068056,
+      36.242778
+     ]
+    ]
+   ],
+   "type": "MultiLineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZLHW",
+  "icao_text": "A4994/26 NOTAMN\r\nQ)ZLHW/QARLT/IV/NBO/E/000/217/\r\nA)ZLHW B)2609290150 C)2609290350 \r\nE) FLW SEGMENT OF ATS RTE CLSD AT 6,600M AND BELOW:\r\n1. B330: BIGUX - IRMUB.\r\n2. W195: VIDEK - IGDOB.\r\nF)FL000 G)FL217",
+  "id": "1790612309006000",
+  "issued": "2026-09-28T16:18:00.000Z",
+  "last_updated": "2026-09-28T16:18:00.000Z",
+  "local_text": null,
+  "location": "ZLHW",
+  "lower": "FL000",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4994/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "FLW SEGMENT OF ATS RTE CLSD AT 6,600M AND BELOW:\r\n1. B330: BIGUX - IRMUB.\r\n2. W195: VIDEK - IGDOB.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL217",
+  "year": "2026"
  }
 }
