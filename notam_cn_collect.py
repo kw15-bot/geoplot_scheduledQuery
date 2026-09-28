@@ -555,6 +555,7 @@ def apply_links(active):
             if issued and (not cur or issued < cur):
                 x["end_override"] = iso(issued)
             x["ended_by"] = r["number"]
+            x["ended_by_type"] = r["type"]          # "C"=取消(撤回) / "R"=置換。ビューアの「〜により撤回」表示用
 
 
 def ingest(active, features, now, stats):
@@ -613,7 +614,8 @@ def to_feature(rec, now):
             "radius_nm": rec.get("radius_nm"), "geometry_source": rec.get("geometry_source"),
             "qline_offset_nm": rec.get("qline_offset_nm"),
             "estimated_end": rec.get("estimated"), "status": status_of(rec, now),
-            "ended_by": rec.get("ended_by"), "first_seen": rec.get("first_seen"),
+            "ended_by": rec.get("ended_by"), "ended_by_type": rec.get("ended_by_type"),
+            "first_seen": rec.get("first_seen"),
             "last_updated": rec.get("last_updated"),
         },
     }
