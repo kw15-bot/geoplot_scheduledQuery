@@ -1,0 +1,6 @@
+
+# AIP-DS の平文(公開リポジトリにコミットしない。HANDOFF_NOTAM.md §19)
+*.zip
+aip/*.json
+aip/*.json.gz
+__pycache__/

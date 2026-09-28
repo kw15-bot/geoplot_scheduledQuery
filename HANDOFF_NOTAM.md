@@ -711,3 +711,40 @@ FAA公式の公開ツール(`notams.aim.faa.gov`)には「Archive Search」機�
   以前は線の頂点を結んで閉じた、誤った多角形になっていた。
 - 秒に小数が付く座標（`364322.287N 1273032.318E`）。
 
+
+---
+
+## 19. 航空路の区間閉鎖を線で描く（2026-09-28、中国AIPデータセット）
+
+中国の航空路閉鎖NOTAM（`SEGMENT SADAN - MAGIV OF ATS RTE W187 CLSD` など）は座標を書かず、
+地点名（ウェイポイント・VOR）だけで区間を示す。地点の座標と航空路のつながりを、中国民航局 航行情報服務センターが
+eAIP（eaipchina.cn、要ログイン）で配布している **AIPデータセット（AIP-DS、AIXM 5.1.1）** から取る。
+
+- **データセットそのものはリポジトリに置かない**（公開リポジトリのため）。データセットの利用条件（useLimitation）は
+  「For evaluation and testing use only; not for operational purposes.」で、再配布については書かれていない。
+  中国の地点座標は測絵成果として扱われうるため、平文の再配布は避ける。
+- 必要な部分だけ（地点 `points`・航空路 `routes`・区間 `segments`・`meta`）を `aip_build_index.py` で小さな索引にし、
+  **暗号化して** `aip/cn_aip_index.json.gz.enc` としてコミットする（openssl AES-256-CBC + PBKDF2）。
+  鍵は GitHub の Secret **`AIPDS_KEY`**。
+- `notam-collect.yml` が収集前に `$RUNNER_TEMP` に復号し、`AIPDS_INDEX` で `notam_cn_collect.py` に渡す。
+  復号した索引はコミット対象（`notam_out/`）に書かない。Secret が無い・復号に失敗したときは、線を作らずに
+  従来どおり（Q項の点など）で動く。
+- `notam_route_segments.py`: E項を読み、区間を航空路の区間（RouteSegment）に沿ってたどって線にする
+  （`geometry_source: "route-segment"`、LineString / MultiLineString。優先順位は E項の多角形の次）。
+  - 対応する書き方: `SEGMENT A-B OF ATS RTE R`、`ATS ROUTE R SEGMENT A-B`、見出し `FLW SEGMENT OF ATS RTE CLSD:` の後の
+    `1. R : A - B` / `R: A - B` の項目、`NAME VOR 'XXX'`（引用符内の識別符号を使う。`&apos;` も可）、
+    `20KM WEST OF XXX`（XXX から**航空路に沿って**その方角へ進んだ地点）、座標の端点（航空路上に投影、30km以内）。
+  - `ADJUST` / `REROUT` / `ISSUE FPL` / `FLIGHT PLANS` / `FLIGHTS ALONG|VIA|FM` / `SCHEDULED FLIGHTS` / `ALL AFFECTED`
+    以降は迂回の指示なので読まない（迂回路を閉鎖区間と取り違えない）。迂回だけのNOTAM（A4968/26）は線にならない。
+- ビューア: `route-segment` の線も表示対象（太線、区間ごとにNOTAM番号のラベル、Shapefileは PolyLine）。
+  日次レポートでは、区間閉鎖が読めるのに線にできなかったものを「航空路の区間閉鎖だが線にできなかった」と分類する。
+- 既存レコードは `AIPDS_INDEX=... python notam_backfill_text_polygon.py --apply` で線に描き直し済み（2026-09-28、22件）。
+
+### AIRAC更新（28日ごと）の手順
+
+1. eAIP にログインし、新しい AIP-DS の ZIP（`CN_AIP-DS_EFF<発効日時>_AIRAC<番号>_V*.zip`）を手元に落とす。
+2. `AIPDS_KEY=<Secretと同じ値> python aip_build_index.py <ZIP>` → `aip/cn_aip_index.json.gz.enc` を上書き。
+   確認用に `--plain out.json` で平文も書けるが、**平文・ZIPはコミットしない**（`.gitignore` 済み）。
+3. 暗号化した索引だけをコミット。鍵を変える場合は Secret も同時に更新する。
+- 現在の索引: AIRAC 2611（発効 2026-10-28 16:00 UTC）。地点 1,843、航空路 624、区間 2,624。
+  発効前のデータを先に使っているので、10/28 までの間に廃止・新設された区間があるとずれる可能性がある。

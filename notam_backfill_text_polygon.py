@@ -20,6 +20,11 @@ state_active.json にキャッシュされる設計のため、修正前に取�
   格上げ(円・点 → 多角形): K2356/26, K2392/26, A4705/26, 09/332
   格下げ(誤った多角形 → 円・点・またはNone): A4957/26, A4958/26
 
+2026-09-28追加: 航空路の区間閉鎖(SEGMENT A-B OF ATS RTE R CLSD 等)を、AIP索引
+(環境変数 AIPDS_INDEX、HANDOFF_NOTAM.md §19)で線(geometry_source "route-segment")にする。
+多角形が無く区間閉鎖が読めるものは線に格上げする。索引が無い環境では既存の線に触れない。
+  AIPDS_INDEX=/path/to/aip_index.json.gz python notam_backfill_text_polygon.py --apply
+
 本スクリプトは、既存の `notam_out/state_active.json` と `notam_out/archive/*.geojson` を
 対象に、修正後の `parse_text_polygons()` で再判定し、結果が変わるものだけ上書きする
 **一回限りの後方互換バックフィル**。
@@ -91,7 +96,17 @@ def reconcile_state_active_record(rec, e_text_source):
             rec["qline_offset_nm"] = None
         return True
 
-    if rec.get("geometry_source") != "text-polygon":
+    # 航空路の区間閉鎖の線(route-segment、AIP索引=環境変数 AIPDS_INDEX があるときだけ作れる)
+    line = C.notam_route_segments.route_closure_geometry(e_text)
+    if line:
+        if rec.get("geometry_source") == "route-segment" and rec.get("geometry") == line:
+            return False
+        rec["geometry"], rec["geometry_source"], rec["qline_offset_nm"] = line, "route-segment", None
+        return True
+    if rec.get("geometry_source") == "route-segment" and not C.notam_route_segments.load_index():
+        return False  # 索引が無い環境では線を作り直せないだけなので、既存の線を残す
+
+    if rec.get("geometry_source") not in ("text-polygon", "route-segment"):
         return False  # 元々多角形以外(円・点・None)で、新たな多角形も無い → 触らない
 
     # ここに来るのは「旧パーサでは多角形と誤認していたが、修正後は多角形が無い」ケース
@@ -136,7 +151,16 @@ def reconcile_archive_feature(feat):
         # Archive側にはQ項の生座標が残っていないため qline_offset_nm は再計算できない(参考値なので省略)。
         return True
 
-    if p.get("geometry_source") != "text-polygon":
+    line = C.notam_route_segments.route_closure_geometry(e_text)
+    if line:
+        if p.get("geometry_source") == "route-segment" and feat.get("geometry") == line:
+            return False
+        feat["geometry"], p["geometry_source"] = line, "route-segment"
+        return True
+    if p.get("geometry_source") == "route-segment" and not C.notam_route_segments.load_index():
+        return False
+
+    if p.get("geometry_source") not in ("text-polygon", "route-segment"):
         return False
 
     # Archive側は円・点へのフォールバックに必要なQ項生座標を保持していないため、

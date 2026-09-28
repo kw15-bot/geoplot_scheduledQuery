@@ -15,7 +15,8 @@ Qコードの主題(2〜3文字目、ICAO Doc 8126 の定義)ごとにまとめ�
 集計の考え方:
   - 同じNOTAMが地名指標ごとに別レコードで届く(A)ZGZU ZHWH 等)ので、番号+開始時刻で1件にまとめる
     (ビューアの notamDedupe() と同じ考え方)。
-  - 「地図に表示」は、ビューアと同じ条件(E項の座標から多角形ができた text-polygon、かつDOM以外)。
+  - 「地図に表示」は、ビューアと同じ条件(E項の座標から多角形ができた text-polygon、または
+    航空路の区間閉鎖を線にした route-segment、かつDOM以外)。
   - 「過去24時間の新規」は first_seen(手動取り込み分は除く)、「過去24時間の失効・取消」は Archive の valid_end
     (取消は last_updated)が集計時刻から24時間以内のもの。
   - 種別の名前はQコードの一般的な定義(ICAO Doc 8126)。軍事かどうかの判定はしない。
@@ -163,7 +164,7 @@ def load_items(out, now):
     for it in items.values():
         it["firs"] = firs_of(it["fir"], it["locations"])
         it["subject"] = subject_of(it["q_code"])
-        it["on_map"] = (it["geometry_source"] == "text-polygon" and it["has_geometry"]
+        it["on_map"] = (it["geometry_source"] in ("text-polygon", "route-segment") and it["has_geometry"]
                         and it["classification"] != "DOM" and it["notam_type"] != "C")
     return list(items.values())
 
@@ -179,6 +180,8 @@ def off_map_reason(it):
     gs = it["geometry_source"]
     if not it["has_geometry"]:
         return "位置情報なし(本文にもQ項にも座標なし)"
+    if C.notam_route_segments.find_closures(it.get("e_text")):
+        return "航空路の区間閉鎖だが線にできなかった(AIP索引が無い、または区間を航空路上で特定できない)"
     if gs in ("qline-circle", "qline-point"):
         return "Q項の中心座標・半径から作った円/点のみ(E項に多角形の座標なし)"
     if gs == "api-point":
