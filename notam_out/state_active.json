@@ -25819,52 +25819,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790550156685000": {
-  "account_id": "RJAAYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3310N14118E",
-  "effective_end": "2026-09-28T06:00:00Z",
-  "effective_start": "2026-09-27T23:15:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RJJJ",
-  "first_seen": "2026-09-27T23:10:26+00:00",
-  "geometry": {
-   "coordinates": [
-    141.3,
-    33.166667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "RJJJ",
-  "icao_text": "X6103/26 NOTAMN\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609272315 C)2609280600\r\nE)FLOW CTL AS FLWS, \r\n AREA: SECTOR F15 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR F15\r\nRMK: REF AIP ENR1.9-1",
-  "id": "1790550156685000",
-  "issued": "2026-09-27T23:02:00Z",
-  "last_updated": "2026-09-27T23:03:00Z",
-  "local_text": null,
-  "location": "RJJJ",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "X6103/26",
-  "purpose": "NBO",
-  "q_code": "QPFCA",
-  "qline_offset_nm": null,
-  "radius_nm": 999.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "X",
-  "text": "FLOW CTL AS FLWS, \r\n AREA: SECTOR F15 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR F15\r\nRMK: REF AIP ENR1.9-1",
-  "traffic": "I",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790550290229887": {
   "account_id": "RJTR",
   "area_group": "REF",
@@ -60263,6 +60217,710 @@
   "traffic": "IV",
   "type": "N",
   "upper": "820FT AMSL",
+  "year": "2026"
+ },
+ "1790572483577000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-28T06:30:00.000Z",
+  "effective_start": "2026-09-28T05:14:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T05:20:26+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "X6134/26 NOTAMN\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280514 C)2609280630\r\nE)FLOW CTL AS FLWS, \r\n AREA:  TOKYO APCH CTA\r\nPROC: SPEED ADJUSTMENT WILL BE EXPECTED FOR ACFT FLYING TO \r\nRJTT VIA SPENS OR SELNO\r\nRMK: REF AIP ENR1.9-1",
+  "id": "1790572483577000",
+  "issued": "2026-09-28T05:14:00.000Z",
+  "last_updated": "2026-09-28T05:14:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "X6134/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "X",
+  "text": "FLOW CTL AS FLWS, \r\n AREA:  TOKYO APCH CTA\r\nPROC: SPEED ADJUSTMENT WILL BE EXPECTED FOR ACFT FLYING TO \r\nRJTT VIA SPENS OR SELNO\r\nRMK: REF AIP ENR1.9-1",
+  "traffic": "I",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790572545425000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-28T08:00:00Z",
+  "effective_start": "2026-09-28T05:15:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T05:20:26+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "X6135/26 NOTAMR X6103/26\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280515 C)2609280800\r\nE)FLOW CTL AS FLWS, \r\n AREA: SECTOR F15 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR F15\r\nRMK: REF AIP ENR1.9-1",
+  "id": "1790572545425000",
+  "issued": "2026-09-28T05:15:00Z",
+  "last_updated": "2026-09-28T05:16:00Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "X6135/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": "X6103/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "X",
+  "text": "FLOW CTL AS FLWS, \r\n AREA: SECTOR F15 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR F15\r\nRMK: REF AIP ENR1.9-1",
+  "traffic": "I",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790572740679000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0945N11846E",
+  "effective_end": "2026-10-28T23:59:00.000Z",
+  "effective_start": "2026-10-01T00:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-09-28T05:20:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      118.766667,
+      9.833184
+     ],
+     [
+      118.77494,
+      9.832783
+     ],
+     [
+      118.783133,
+      9.831585
+     ],
+     [
+      118.791167,
+      9.829602
+     ],
+     [
+      118.798966,
+      9.826852
+     ],
+     [
+      118.806454,
+      9.823361
+     ],
+     [
+      118.813558,
+      9.819165
+     ],
+     [
+      118.820211,
+      9.814302
+     ],
+     [
+      118.826348,
+      9.80882
+     ],
+     [
+      118.831911,
+      9.802771
+     ],
+     [
+      118.836845,
+      9.796214
+     ],
+     [
+      118.841103,
+      9.789212
+     ],
+     [
+      118.844645,
+      9.781833
+     ],
+     [
+      118.847435,
+      9.774147
+     ],
+     [
+      118.849448,
+      9.766228
+     ],
+     [
+      118.850663,
+      9.758153
+     ],
+     [
+      118.851069,
+      9.75
+     ],
+     [
+      118.850663,
+      9.741847
+     ],
+     [
+      118.849448,
+      9.733772
+     ],
+     [
+      118.847435,
+      9.725853
+     ],
+     [
+      118.844645,
+      9.718167
+     ],
+     [
+      118.841103,
+      9.710788
+     ],
+     [
+      118.836845,
+      9.703786
+     ],
+     [
+      118.831911,
+      9.697229
+     ],
+     [
+      118.826348,
+      9.69118
+     ],
+     [
+      118.820211,
+      9.685698
+     ],
+     [
+      118.813558,
+      9.680835
+     ],
+     [
+      118.806454,
+      9.676639
+     ],
+     [
+      118.798966,
+      9.673148
+     ],
+     [
+      118.791167,
+      9.670398
+     ],
+     [
+      118.783133,
+      9.668415
+     ],
+     [
+      118.77494,
+      9.667217
+     ],
+     [
+      118.766667,
+      9.666816
+     ],
+     [
+      118.758394,
+      9.667217
+     ],
+     [
+      118.750201,
+      9.668415
+     ],
+     [
+      118.742166,
+      9.670398
+     ],
+     [
+      118.734367,
+      9.673148
+     ],
+     [
+      118.726879,
+      9.676639
+     ],
+     [
+      118.719775,
+      9.680835
+     ],
+     [
+      118.713122,
+      9.685698
+     ],
+     [
+      118.706985,
+      9.69118
+     ],
+     [
+      118.701422,
+      9.697229
+     ],
+     [
+      118.696488,
+      9.703786
+     ],
+     [
+      118.69223,
+      9.710788
+     ],
+     [
+      118.688689,
+      9.718167
+     ],
+     [
+      118.685898,
+      9.725853
+     ],
+     [
+      118.683886,
+      9.733772
+     ],
+     [
+      118.68267,
+      9.741847
+     ],
+     [
+      118.682264,
+      9.75
+     ],
+     [
+      118.68267,
+      9.758153
+     ],
+     [
+      118.683886,
+      9.766228
+     ],
+     [
+      118.685898,
+      9.774147
+     ],
+     [
+      118.688689,
+      9.781833
+     ],
+     [
+      118.69223,
+      9.789212
+     ],
+     [
+      118.696488,
+      9.796214
+     ],
+     [
+      118.701422,
+      9.802771
+     ],
+     [
+      118.706985,
+      9.80882
+     ],
+     [
+      118.713122,
+      9.814302
+     ],
+     [
+      118.719775,
+      9.819165
+     ],
+     [
+      118.726879,
+      9.823361
+     ],
+     [
+      118.734367,
+      9.826852
+     ],
+     [
+      118.742166,
+      9.829602
+     ],
+     [
+      118.750201,
+      9.831585
+     ],
+     [
+      118.758394,
+      9.832783
+     ],
+     [
+      118.766667,
+      9.833184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPVP",
+  "icao_text": "B5104/26 NOTAMN\r\nQ) RPHI/QPMCH/IV/NBO/A /000/999/0945N11846E005\r\nA) RPVP B) 2610010000 C) 2610282359\r\nE) IAP VOR RWY 27 PROFILE VIEW MINIMA CHANGED TO:\r\n\r\nOCA (H)      CAT A      CAT B      CAT C      CAT D\r\nCIRCLING   570 (504)  507 (504)  900 (834)  1000 (934)\r\n\r\nREF AIP RPVP AD CHART 2-30.",
+  "id": "1790572740679000",
+  "issued": "2026-09-28T05:18:00.000Z",
+  "last_updated": "2026-09-28T05:19:00.000Z",
+  "local_text": null,
+  "location": "RPVP",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5104/26",
+  "purpose": "NBO",
+  "q_code": "QPMCH",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A ",
+  "series": "B",
+  "text": "IAP VOR RWY 27 PROFILE VIEW MINIMA CHANGED TO:\r\n\r\nOCA (H)      CAT A      CAT B      CAT C      CAT D\r\nCIRCLING   570 (504)  507 (504)  900 (834)  1000 (934)\r\n\r\nREF AIP RPVP AD CHART 2-30.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790572817484000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3447N13155E",
+  "effective_end": "2026-10-09T08:00:00.000Z",
+  "effective_start": "2026-10-05T00:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T05:20:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      131.916667,
+      34.866517
+     ],
+     [
+      131.926594,
+      34.866116
+     ],
+     [
+      131.936426,
+      34.864919
+     ],
+     [
+      131.946067,
+      34.862935
+     ],
+     [
+      131.955425,
+      34.860185
+     ],
+     [
+      131.96441,
+      34.856695
+     ],
+     [
+      131.972935,
+      34.852498
+     ],
+     [
+      131.980919,
+      34.847635
+     ],
+     [
+      131.988283,
+      34.842153
+     ],
+     [
+      131.994958,
+      34.836104
+     ],
+     [
+      132.000879,
+      34.829548
+     ],
+     [
+      132.005989,
+      34.822546
+     ],
+     [
+      132.010238,
+      34.815166
+     ],
+     [
+      132.013587,
+      34.80748
+     ],
+     [
+      132.016002,
+      34.799562
+     ],
+     [
+      132.01746,
+      34.791487
+     ],
+     [
+      132.017948,
+      34.783333
+     ],
+     [
+      132.01746,
+      34.77518
+     ],
+     [
+      132.016002,
+      34.767105
+     ],
+     [
+      132.013587,
+      34.759186
+     ],
+     [
+      132.010238,
+      34.7515
+     ],
+     [
+      132.005989,
+      34.744121
+     ],
+     [
+      132.000879,
+      34.737119
+     ],
+     [
+      131.994958,
+      34.730562
+     ],
+     [
+      131.988283,
+      34.724514
+     ],
+     [
+      131.980919,
+      34.719032
+     ],
+     [
+      131.972935,
+      34.714169
+     ],
+     [
+      131.96441,
+      34.709972
+     ],
+     [
+      131.955425,
+      34.706482
+     ],
+     [
+      131.946067,
+      34.703732
+     ],
+     [
+      131.936426,
+      34.701748
+     ],
+     [
+      131.926594,
+      34.70055
+     ],
+     [
+      131.916667,
+      34.70015
+     ],
+     [
+      131.906739,
+      34.70055
+     ],
+     [
+      131.896908,
+      34.701748
+     ],
+     [
+      131.887266,
+      34.703732
+     ],
+     [
+      131.877908,
+      34.706482
+     ],
+     [
+      131.868923,
+      34.709972
+     ],
+     [
+      131.860398,
+      34.714169
+     ],
+     [
+      131.852415,
+      34.719032
+     ],
+     [
+      131.84505,
+      34.724514
+     ],
+     [
+      131.838375,
+      34.730562
+     ],
+     [
+      131.832455,
+      34.737119
+     ],
+     [
+      131.827345,
+      34.744121
+     ],
+     [
+      131.823095,
+      34.7515
+     ],
+     [
+      131.819747,
+      34.759186
+     ],
+     [
+      131.817332,
+      34.767105
+     ],
+     [
+      131.815873,
+      34.77518
+     ],
+     [
+      131.815386,
+      34.783333
+     ],
+     [
+      131.815873,
+      34.791487
+     ],
+     [
+      131.817332,
+      34.799562
+     ],
+     [
+      131.819747,
+      34.80748
+     ],
+     [
+      131.823095,
+      34.815166
+     ],
+     [
+      131.827345,
+      34.822546
+     ],
+     [
+      131.832455,
+      34.829548
+     ],
+     [
+      131.838375,
+      34.836104
+     ],
+     [
+      131.84505,
+      34.842153
+     ],
+     [
+      131.852415,
+      34.847635
+     ],
+     [
+      131.860398,
+      34.852498
+     ],
+     [
+      131.868923,
+      34.856695
+     ],
+     [
+      131.877908,
+      34.860185
+     ],
+     [
+      131.887266,
+      34.862935
+     ],
+     [
+      131.896908,
+      34.864919
+     ],
+     [
+      131.906739,
+      34.866116
+     ],
+     [
+      131.916667,
+      34.866517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RJJJ",
+  "icao_text": "V3696/26 NOTAMN\r\nQ)RJJJ/QOLAS/IV/M/E/000/007/3447N13155E005\r\nA)RJJJ B)2610050000 C)2610090800\r\nE)OBST LGT U/S\r\nTYPE: CHIMNEY\r\nPSN: 344650.4N1315517.9E ELEV: 672FT AMSL\r\n(HAMADA-SHI IN SHIMANE)\r\nRMK: OBST LGT IN PLACE OF OBST DAY MARKING FOR CHIMNEY",
+  "id": "1790572817484000",
+  "issued": "2026-09-28T05:20:00.000Z",
+  "last_updated": "2026-09-28T05:20:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "V3696/26",
+  "purpose": "M",
+  "q_code": "QOLAS",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "V",
+  "text": "OBST LGT U/S\r\nTYPE: CHIMNEY\r\nPSN: 344650.4N1315517.9E ELEV: 672FT AMSL\r\n(HAMADA-SHI IN SHIMANE)\r\nRMK: OBST LGT IN PLACE OF OBST DAY MARKING FOR CHIMNEY",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
   "year": "2026"
  }
 }
