@@ -519,7 +519,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
   <div class="header">
     <div class="brand"><span class="dot" id="brandDot"></span><span id="brandLabel">警報現況表示</span></div>
     <div class="mode-tabs" id="modeTabs">
-      <button class="mode-tab active" data-mode="auto">MSA</button>
+      <button class="mode-tab active" data-mode="auto">NAVWAR</button>
       <button class="mode-tab" data-mode="notam">NOTAM(Beta)</button>
       <button class="mode-tab" data-mode="manual">手動</button>
     </div>
@@ -704,7 +704,8 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 // 座標/日時/コード的な表示に使っていたIBM Plex Mono(等幅)は廃止)。
 // v1.8.4: ブランド表示名を「航行警報モニター」から「航行警報現況表示」に変更。
 //   (2026-09-28: NOTAM追加に合わせて「警報現況表示」に変更。モードタブも左から
-//    「MSA / NOTAM(Beta) / 手動」の順・表記に変更。data-modeの値(auto/notam/manual)は据え置き)
+//    「MSA / NOTAM(Beta) / 手動」の順・表記に変更。data-modeの値(auto/notam/manual)は据え置き。
+//    同日、先頭タブの表記を「MSA」から「NAVWAR」(航行警報)に変更)
 // v1.8.5: ヘッダー中央(旧header-spacerの空きスペース)に、現在Active(期間不明含む)な
 // 警報タイトルが右から左へ流れるティッカーを追加(updateHeaderTicker()、renderWarnList()
 // のたびに再計算)。ホバーで一時停止。対象0件のときは固定メッセージを表示。
