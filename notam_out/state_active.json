@@ -40210,5 +40210,83 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1790602343793000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T09:54:00Z",
+  "effective_start": "2026-09-29T08:44:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZLHW",
+  "first_seen": "2026-09-28T13:40:31+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      92.3,
+      39.083333
+     ],
+     [
+      90.950278,
+      38.875833
+     ]
+    ],
+    [
+     [
+      90.701667,
+      38.683333
+     ],
+     [
+      92.5,
+      38.166667
+     ]
+    ],
+    [
+     [
+      92.5,
+      38.166667
+     ],
+     [
+      92.401667,
+      38.620556
+     ],
+     [
+      92.3,
+      39.083333
+     ]
+    ]
+   ],
+   "type": "MultiLineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZLHW",
+  "icao_text": "A4989/26 NOTAMN\r\nQ)ZLHW/QARLC/IV/NBO/E/000/999/\r\nA)ZLHW B)2609290844 C)2609290954 \r\nE) FLW SEGMENT OF ATS RTE CLSD:\r\n1. W112: TUSLI - ADMUX.\r\n2. Y1: MAGOD - DUMIN.\r\n3. W192: DUMIN  - TUSLI.",
+  "id": "1790602343793000",
+  "issued": "2026-09-28T13:32:00Z",
+  "last_updated": "2026-09-28T13:33:00Z",
+  "local_text": null,
+  "location": "ZLHW",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4989/26",
+  "purpose": "NBO",
+  "q_code": "QARLC",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "FLW SEGMENT OF ATS RTE CLSD:\r\n1. W112: TUSLI - ADMUX.\r\n2. Y1: MAGOD - DUMIN.\r\n3. W192: DUMIN  - TUSLI.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
  }
 }
