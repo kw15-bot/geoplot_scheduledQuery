@@ -10729,86 +10729,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790511406701000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-28T06:50:00Z",
-  "effective_start": "2026-09-28T00:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZGZU",
-  "first_seen": "2026-09-27T12:19:30+00:00",
-  "geometry": null,
-  "geometry_source": null,
-  "icao_location": "ZGZU",
-  "icao_text": "A4959/26 NOTAMN\r\nQ)ZGZU/QARCH/IV/BO/E/000/999/\r\nA)ZGZU B)2609280000 C)2609280650 \r\nE) SEGMENT NANNING VOR 'WUY'-ALEKI OF ATS RTE R339 NOT AVBL DUE TO \r\nTECHNICAL REASON,ALL AFFECTED FLIGHTS SHALL BE ADJUSTED.ALL ACFT \r\nFOLLOW ATC INSTRUCTIONS:\r\nSCHEDULED FLIGHTS ALONG R339 NANNING VOR 'WUY'-ALEKI ADJUSTED TO \r\nNANNING VOR 'WUY'-V153-ALEKI.",
-  "id": "1790511406701000",
-  "issued": "2026-09-27T12:15:00Z",
-  "last_updated": "2026-09-27T12:17:00Z",
-  "local_text": null,
-  "location": "ZGZU",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A4959/26",
-  "purpose": "BO",
-  "q_code": "QARCH",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "A",
-  "text": "SEGMENT NANNING VOR &apos;WUY&apos;-ALEKI OF ATS RTE R339 NOT AVBL DUE TO \r\nTECHNICAL REASON,ALL AFFECTED FLIGHTS SHALL BE ADJUSTED.ALL ACFT \r\nFOLLOW ATC INSTRUCTIONS:\r\nSCHEDULED FLIGHTS ALONG R339 NANNING VOR &apos;WUY&apos;-ALEKI ADJUSTED TO \r\nNANNING VOR &apos;WUY&apos;-V153-ALEKI.",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1790511408978000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-28T06:50:00Z",
-  "effective_start": "2026-09-28T00:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZGZU",
-  "first_seen": "2026-09-27T12:19:30+00:00",
-  "geometry": null,
-  "geometry_source": null,
-  "icao_location": "ZGZU",
-  "icao_text": "A4960/26 NOTAMN\r\nQ)ZGZU/QARLC/IV/NBO/E/000/999/\r\nA)ZGZU B)2609280000 C)2609280650 \r\nE) SEGMENT NANNING VOR 'WUY'-RUNEG OF ATS RTE W169 CLSD",
-  "id": "1790511408978000",
-  "issued": "2026-09-27T12:15:00Z",
-  "last_updated": "2026-09-27T12:17:00Z",
-  "local_text": null,
-  "location": "ZGZU",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A4960/26",
-  "purpose": "NBO",
-  "q_code": "QARLC",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "A",
-  "text": "SEGMENT NANNING VOR &apos;WUY&apos;-RUNEG OF ATS RTE W169 CLSD",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790511615418000": {
   "account_id": "RJAAYNYX",
   "area_group": "REF",
@@ -14008,312 +13928,6 @@
   "text": "L4172/26 NOTAMC L4150/26\r\nQ)RJJJ/QCTAK/I/B/AE/000/999/3611N14025E040\r\nA)RJAH B)2609271335\r\nE)RADAR SER RESUMED NML",
   "traffic": "I",
   "type": "C",
-  "upper": null,
-  "year": "2026"
- },
- "1790521611028000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3702N07952E",
-  "effective_end": "2026-09-28T06:50:00Z",
-  "effective_start": "2026-09-28T05:50:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZWUQ",
-  "first_seen": "2026-09-27T15:10:25+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      79.866667,
-      37.116517
-     ],
-     [
-      79.87688,
-      37.116116
-     ],
-     [
-      79.886996,
-      37.114919
-     ],
-     [
-      79.896915,
-      37.112935
-     ],
-     [
-      79.906543,
-      37.110185
-     ],
-     [
-      79.915788,
-      37.106695
-     ],
-     [
-      79.924559,
-      37.102498
-     ],
-     [
-      79.932772,
-      37.097635
-     ],
-     [
-      79.940349,
-      37.092153
-     ],
-     [
-      79.947217,
-      37.086104
-     ],
-     [
-      79.953308,
-      37.079548
-     ],
-     [
-      79.958565,
-      37.072546
-     ],
-     [
-      79.962938,
-      37.065166
-     ],
-     [
-      79.966383,
-      37.05748
-     ],
-     [
-      79.968867,
-      37.049562
-     ],
-     [
-      79.970368,
-      37.041487
-     ],
-     [
-      79.97087,
-      37.033333
-     ],
-     [
-      79.970368,
-      37.02518
-     ],
-     [
-      79.968867,
-      37.017105
-     ],
-     [
-      79.966383,
-      37.009186
-     ],
-     [
-      79.962938,
-      37.0015
-     ],
-     [
-      79.958565,
-      36.994121
-     ],
-     [
-      79.953308,
-      36.987119
-     ],
-     [
-      79.947217,
-      36.980562
-     ],
-     [
-      79.940349,
-      36.974514
-     ],
-     [
-      79.932772,
-      36.969032
-     ],
-     [
-      79.924559,
-      36.964169
-     ],
-     [
-      79.915788,
-      36.959972
-     ],
-     [
-      79.906543,
-      36.956482
-     ],
-     [
-      79.896915,
-      36.953732
-     ],
-     [
-      79.886996,
-      36.951748
-     ],
-     [
-      79.87688,
-      36.95055
-     ],
-     [
-      79.866667,
-      36.95015
-     ],
-     [
-      79.856453,
-      36.95055
-     ],
-     [
-      79.846338,
-      36.951748
-     ],
-     [
-      79.836418,
-      36.953732
-     ],
-     [
-      79.82679,
-      36.956482
-     ],
-     [
-      79.817546,
-      36.959972
-     ],
-     [
-      79.808775,
-      36.964169
-     ],
-     [
-      79.800561,
-      36.969032
-     ],
-     [
-      79.792984,
-      36.974514
-     ],
-     [
-      79.786117,
-      36.980562
-     ],
-     [
-      79.780025,
-      36.987119
-     ],
-     [
-      79.774768,
-      36.994121
-     ],
-     [
-      79.770396,
-      37.0015
-     ],
-     [
-      79.766951,
-      37.009186
-     ],
-     [
-      79.764466,
-      37.017105
-     ],
-     [
-      79.762966,
-      37.02518
-     ],
-     [
-      79.762464,
-      37.033333
-     ],
-     [
-      79.762966,
-      37.041487
-     ],
-     [
-      79.764466,
-      37.049562
-     ],
-     [
-      79.766951,
-      37.05748
-     ],
-     [
-      79.770396,
-      37.065166
-     ],
-     [
-      79.774768,
-      37.072546
-     ],
-     [
-      79.780025,
-      37.079548
-     ],
-     [
-      79.786117,
-      37.086104
-     ],
-     [
-      79.792984,
-      37.092153
-     ],
-     [
-      79.800561,
-      37.097635
-     ],
-     [
-      79.808775,
-      37.102498
-     ],
-     [
-      79.817546,
-      37.106695
-     ],
-     [
-      79.82679,
-      37.110185
-     ],
-     [
-      79.836418,
-      37.112935
-     ],
-     [
-      79.846338,
-      37.114919
-     ],
-     [
-      79.856453,
-      37.116116
-     ],
-     [
-      79.866667,
-      37.116517
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "ZWTN",
-  "icao_text": "W1337/26 NOTAMN\r\nQ)ZWUQ/QFALT/IV/NBO/A/000/999/3702N07952E005\r\nA)ZWTN B)2609280550 C)2609280650 \r\nE) AD ARE FORBIDDEN TO TAKE-OFF AND LANDING.",
-  "id": "1790521611028000",
-  "issued": "2026-09-27T15:06:00Z",
-  "last_updated": "2026-09-27T15:07:00Z",
-  "local_text": null,
-  "location": "ZWTN",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "W1337/26",
-  "purpose": "NBO",
-  "q_code": "QFALT",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "A",
-  "series": "W",
-  "text": "AD ARE FORBIDDEN TO TAKE-OFF AND LANDING.",
-  "traffic": "IV",
-  "type": "N",
   "upper": null,
   "year": "2026"
  },
@@ -68711,8 +68325,8 @@
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "3639N13711E",
-  "effective_end": "2026-12-25T07:00:00.000Z",
-  "effective_start": "2026-09-28T06:39:00.000Z",
+  "effective_end": "2026-12-25T07:00:00Z",
+  "effective_start": "2026-09-28T06:39:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
@@ -68989,12 +68603,12 @@
   "icao_location": "RJNT",
   "icao_text": "L4208/26 NOTAMR L3195/26\r\nQ)RJJJ/QOLAS/IV/M/A/000/003/3639N13711E005\r\nA)RJNT B)2609280639 C)2612250700\r\nE)OBST LGT U/S\r\nTYPE: POWER LINE TOWER\r\nPSN: 364043.1N1371047.3E ELEV: 259FT AMSL\r\n(TOYAMA-SHI)",
   "id": "1790577594313000",
-  "issued": "2026-09-28T06:39:00.000Z",
-  "last_updated": "2026-09-28T06:39:00.000Z",
+  "issued": "2026-09-28T06:39:00Z",
+  "last_updated": "2026-09-28T06:40:00Z",
   "local_text": null,
   "location": "RJNT",
   "lower": null,
-  "max_fl": "999",
+  "max_fl": "003",
   "min_fl": "000",
   "number": "L4208/26",
   "purpose": "M",
@@ -69008,6 +68622,1734 @@
   "text": "OBST LGT U/S\r\nTYPE: POWER LINE TOWER\r\nPSN: 364043.1N1371047.3E ELEV: 259FT AMSL\r\n(TOYAMA-SHI)",
   "traffic": "IV",
   "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790577690152000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3112N12120E",
+  "effective_end": "2026-10-19T22:00:00.000Z",
+  "effective_start": "2026-09-30T17:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZSHA",
+  "first_seen": "2026-09-28T06:50:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.333333,
+      31.283184
+     ],
+     [
+      121.342865,
+      31.282783
+     ],
+     [
+      121.352306,
+      31.281585
+     ],
+     [
+      121.361563,
+      31.279602
+     ],
+     [
+      121.370549,
+      31.276852
+     ],
+     [
+      121.379176,
+      31.273361
+     ],
+     [
+      121.387362,
+      31.269165
+     ],
+     [
+      121.395028,
+      31.264302
+     ],
+     [
+      121.402099,
+      31.25882
+     ],
+     [
+      121.408508,
+      31.252771
+     ],
+     [
+      121.414193,
+      31.246214
+     ],
+     [
+      121.4191,
+      31.239212
+     ],
+     [
+      121.42318,
+      31.231833
+     ],
+     [
+      121.426395,
+      31.224147
+     ],
+     [
+      121.428714,
+      31.216228
+     ],
+     [
+      121.430114,
+      31.208153
+     ],
+     [
+      121.430583,
+      31.2
+     ],
+     [
+      121.430114,
+      31.191847
+     ],
+     [
+      121.428714,
+      31.183772
+     ],
+     [
+      121.426395,
+      31.175853
+     ],
+     [
+      121.42318,
+      31.168167
+     ],
+     [
+      121.4191,
+      31.160788
+     ],
+     [
+      121.414193,
+      31.153786
+     ],
+     [
+      121.408508,
+      31.147229
+     ],
+     [
+      121.402099,
+      31.14118
+     ],
+     [
+      121.395028,
+      31.135698
+     ],
+     [
+      121.387362,
+      31.130835
+     ],
+     [
+      121.379176,
+      31.126639
+     ],
+     [
+      121.370549,
+      31.123148
+     ],
+     [
+      121.361563,
+      31.120398
+     ],
+     [
+      121.352306,
+      31.118415
+     ],
+     [
+      121.342865,
+      31.117217
+     ],
+     [
+      121.333333,
+      31.116816
+     ],
+     [
+      121.323801,
+      31.117217
+     ],
+     [
+      121.314361,
+      31.118415
+     ],
+     [
+      121.305103,
+      31.120398
+     ],
+     [
+      121.296118,
+      31.123148
+     ],
+     [
+      121.28749,
+      31.126639
+     ],
+     [
+      121.279304,
+      31.130835
+     ],
+     [
+      121.271639,
+      31.135698
+     ],
+     [
+      121.264568,
+      31.14118
+     ],
+     [
+      121.258159,
+      31.147229
+     ],
+     [
+      121.252473,
+      31.153786
+     ],
+     [
+      121.247567,
+      31.160788
+     ],
+     [
+      121.243487,
+      31.168167
+     ],
+     [
+      121.240272,
+      31.175853
+     ],
+     [
+      121.237953,
+      31.183772
+     ],
+     [
+      121.236552,
+      31.191847
+     ],
+     [
+      121.236084,
+      31.2
+     ],
+     [
+      121.236552,
+      31.208153
+     ],
+     [
+      121.237953,
+      31.216228
+     ],
+     [
+      121.240272,
+      31.224147
+     ],
+     [
+      121.243487,
+      31.231833
+     ],
+     [
+      121.247567,
+      31.239212
+     ],
+     [
+      121.252473,
+      31.246214
+     ],
+     [
+      121.258159,
+      31.252771
+     ],
+     [
+      121.264568,
+      31.25882
+     ],
+     [
+      121.271639,
+      31.264302
+     ],
+     [
+      121.279304,
+      31.269165
+     ],
+     [
+      121.28749,
+      31.273361
+     ],
+     [
+      121.296118,
+      31.276852
+     ],
+     [
+      121.305103,
+      31.279602
+     ],
+     [
+      121.314361,
+      31.281585
+     ],
+     [
+      121.323801,
+      31.282783
+     ],
+     [
+      121.333333,
+      31.283184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZSSS",
+  "icao_text": "F3993/26 NOTAMN\r\nQ)ZSHA/QMXLC/IV/M/A/000/999/3112N12120E005\r\nA)ZSSS B)2609301700 C)2610192200 \r\nD)1700-2200 DLY\r\nE) FLW TWY CLSD:\r\n1.TWY A2,A3,A4,B1,B2,B3,B4,B5,B6,B7,B8,T6,K2,K4,K5,K6,K7.\r\n2.TWY A,B CLSD BTN TWY H4 AND TWY H7.\r\n3.TWY H2,H3,H5,H6 CLSD BTN RWY18R/36L AND TWY B.\r\n4.TWY A BTN TWY A2 AND TWY H4.\r\n5.TWY B BTN TWY H1 AND TWY H4.\r\n6.TWY H1 BTN RWY18L/36R AND RWY18R/36L.\r\n ",
+  "id": "1790577690152000",
+  "issued": "2026-09-28T06:39:00.000Z",
+  "last_updated": "2026-09-28T06:41:00.000Z",
+  "local_text": null,
+  "location": "ZSSS",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "F3993/26",
+  "purpose": "M",
+  "q_code": "QMXLC",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": "1700-2200 DLY",
+  "scope": "A",
+  "series": "F",
+  "text": "FLW TWY CLSD:\r\n1.TWY A2,A3,A4,B1,B2,B3,B4,B5,B6,B7,B8,T6,K2,K4,K5,K6,K7.\r\n2.TWY A,B CLSD BTN TWY H4 AND TWY H7.\r\n3.TWY H2,H3,H5,H6 CLSD BTN RWY18R/36L AND TWY B.\r\n4.TWY A BTN TWY A2 AND TWY H4.\r\n5.TWY B BTN TWY H1 AND TWY H4.\r\n6.TWY H1 BTN RWY18L/36R AND RWY18R/36L.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790577692457000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3112N12120E",
+  "effective_end": "2026-10-30T22:00:00Z",
+  "effective_start": "2026-10-20T17:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZSHA",
+  "first_seen": "2026-09-28T06:50:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.333333,
+      31.283184
+     ],
+     [
+      121.342865,
+      31.282783
+     ],
+     [
+      121.352306,
+      31.281585
+     ],
+     [
+      121.361563,
+      31.279602
+     ],
+     [
+      121.370549,
+      31.276852
+     ],
+     [
+      121.379176,
+      31.273361
+     ],
+     [
+      121.387362,
+      31.269165
+     ],
+     [
+      121.395028,
+      31.264302
+     ],
+     [
+      121.402099,
+      31.25882
+     ],
+     [
+      121.408508,
+      31.252771
+     ],
+     [
+      121.414193,
+      31.246214
+     ],
+     [
+      121.4191,
+      31.239212
+     ],
+     [
+      121.42318,
+      31.231833
+     ],
+     [
+      121.426395,
+      31.224147
+     ],
+     [
+      121.428714,
+      31.216228
+     ],
+     [
+      121.430114,
+      31.208153
+     ],
+     [
+      121.430583,
+      31.2
+     ],
+     [
+      121.430114,
+      31.191847
+     ],
+     [
+      121.428714,
+      31.183772
+     ],
+     [
+      121.426395,
+      31.175853
+     ],
+     [
+      121.42318,
+      31.168167
+     ],
+     [
+      121.4191,
+      31.160788
+     ],
+     [
+      121.414193,
+      31.153786
+     ],
+     [
+      121.408508,
+      31.147229
+     ],
+     [
+      121.402099,
+      31.14118
+     ],
+     [
+      121.395028,
+      31.135698
+     ],
+     [
+      121.387362,
+      31.130835
+     ],
+     [
+      121.379176,
+      31.126639
+     ],
+     [
+      121.370549,
+      31.123148
+     ],
+     [
+      121.361563,
+      31.120398
+     ],
+     [
+      121.352306,
+      31.118415
+     ],
+     [
+      121.342865,
+      31.117217
+     ],
+     [
+      121.333333,
+      31.116816
+     ],
+     [
+      121.323801,
+      31.117217
+     ],
+     [
+      121.314361,
+      31.118415
+     ],
+     [
+      121.305103,
+      31.120398
+     ],
+     [
+      121.296118,
+      31.123148
+     ],
+     [
+      121.28749,
+      31.126639
+     ],
+     [
+      121.279304,
+      31.130835
+     ],
+     [
+      121.271639,
+      31.135698
+     ],
+     [
+      121.264568,
+      31.14118
+     ],
+     [
+      121.258159,
+      31.147229
+     ],
+     [
+      121.252473,
+      31.153786
+     ],
+     [
+      121.247567,
+      31.160788
+     ],
+     [
+      121.243487,
+      31.168167
+     ],
+     [
+      121.240272,
+      31.175853
+     ],
+     [
+      121.237953,
+      31.183772
+     ],
+     [
+      121.236552,
+      31.191847
+     ],
+     [
+      121.236084,
+      31.2
+     ],
+     [
+      121.236552,
+      31.208153
+     ],
+     [
+      121.237953,
+      31.216228
+     ],
+     [
+      121.240272,
+      31.224147
+     ],
+     [
+      121.243487,
+      31.231833
+     ],
+     [
+      121.247567,
+      31.239212
+     ],
+     [
+      121.252473,
+      31.246214
+     ],
+     [
+      121.258159,
+      31.252771
+     ],
+     [
+      121.264568,
+      31.25882
+     ],
+     [
+      121.271639,
+      31.264302
+     ],
+     [
+      121.279304,
+      31.269165
+     ],
+     [
+      121.28749,
+      31.273361
+     ],
+     [
+      121.296118,
+      31.276852
+     ],
+     [
+      121.305103,
+      31.279602
+     ],
+     [
+      121.314361,
+      31.281585
+     ],
+     [
+      121.323801,
+      31.282783
+     ],
+     [
+      121.333333,
+      31.283184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZSSS",
+  "icao_text": "F3994/26 NOTAMN\r\nQ)ZSHA/QMRLC/IV/NBO/A/000/999/3112N12120E005\r\nA)ZSSS B)2610201700 C)2610302200 \r\nD)1700-2200 DLY\r\nE) RWY18R/36L CLSD.ACFT SHALL CROSS RWY18R/36L VIA TWY H1,H7.",
+  "id": "1790577692457000",
+  "issued": "2026-09-28T06:40:00Z",
+  "last_updated": "2026-09-28T06:42:00Z",
+  "local_text": null,
+  "location": "ZSSS",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "F3994/26",
+  "purpose": "NBO",
+  "q_code": "QMRLC",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": "1700-2200 DLY",
+  "scope": "A",
+  "series": "F",
+  "text": "RWY18R/36L CLSD.ACFT SHALL CROSS RWY18R/36L VIA TWY H1,H7.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790577719444000": {
+  "account_id": "RKRRYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3441N12527E",
+  "effective_end": "2026-10-08T09:00:00Z",
+  "effective_start": "2026-10-06T06:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RKRR",
+  "first_seen": "2026-09-28T06:50:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      [
+       125.544722,
+       36.705556
+      ],
+      [
+       125.973611,
+       36.705556
+      ],
+      [
+       126.105,
+       36.523056
+      ],
+      [
+       126.105,
+       36.303056
+      ],
+      [
+       125.544722,
+       36.705556
+      ]
+     ]
+    ],
+    [
+     [
+      [
+       124.911389,
+       32.677222
+      ],
+      [
+       124.198333,
+       33.314722
+      ],
+      [
+       125.544722,
+       36.705556
+      ],
+      [
+       124.911389,
+       32.677222
+      ]
+     ]
+    ]
+   ],
+   "type": "MultiPolygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RKRR",
+  "icao_text": "E4645/26 NOTAMN  \r\nQ)RKRR/QRTCA/IV/BO/W/000/999/3441N12527E125\r\nA)RKRR B)2610060600 C)2610080900\r\nD)0600-0900\r\nE)TEMPO RESTRICTED AREA ACT AS FLW\r\nAREA BOUNDED BY THE FOLLOWING\r\n364220N1253241E-364220N1255825E-363123N1260618E-361811N1260618E-36151\r\n3N1255410E-324038N1245441E-331853N1241154E-364220N1253241E\r\nF)SFC G)UNL",
+  "id": "1790577719444000",
+  "issued": "2026-09-28T06:41:00Z",
+  "last_updated": "2026-09-28T06:42:00Z",
+  "local_text": null,
+  "location": "RKRR",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "E4645/26",
+  "purpose": "BO",
+  "q_code": "QRTCA",
+  "qline_offset_nm": 115.1,
+  "radius_nm": 125.0,
+  "ref_number": null,
+  "schedule": "0600-0900",
+  "scope": "W",
+  "series": "E",
+  "text": "TEMPO RESTRICTED AREA ACT AS FLW\r\nAREA BOUNDED BY THE FOLLOWING\r\n364220N1253241E-364220N1255825E-363123N1260618E-361811N1260618E-36151\r\n3N1255410E-324038N1245441E-331853N1241154E-364220N1253241E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1790577734415000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3112N12120E",
+  "effective_end": "2026-10-30T22:00:00.000Z",
+  "effective_start": "2026-10-20T17:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZSHA",
+  "first_seen": "2026-09-28T06:50:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.333333,
+      31.283184
+     ],
+     [
+      121.342865,
+      31.282783
+     ],
+     [
+      121.352306,
+      31.281585
+     ],
+     [
+      121.361563,
+      31.279602
+     ],
+     [
+      121.370549,
+      31.276852
+     ],
+     [
+      121.379176,
+      31.273361
+     ],
+     [
+      121.387362,
+      31.269165
+     ],
+     [
+      121.395028,
+      31.264302
+     ],
+     [
+      121.402099,
+      31.25882
+     ],
+     [
+      121.408508,
+      31.252771
+     ],
+     [
+      121.414193,
+      31.246214
+     ],
+     [
+      121.4191,
+      31.239212
+     ],
+     [
+      121.42318,
+      31.231833
+     ],
+     [
+      121.426395,
+      31.224147
+     ],
+     [
+      121.428714,
+      31.216228
+     ],
+     [
+      121.430114,
+      31.208153
+     ],
+     [
+      121.430583,
+      31.2
+     ],
+     [
+      121.430114,
+      31.191847
+     ],
+     [
+      121.428714,
+      31.183772
+     ],
+     [
+      121.426395,
+      31.175853
+     ],
+     [
+      121.42318,
+      31.168167
+     ],
+     [
+      121.4191,
+      31.160788
+     ],
+     [
+      121.414193,
+      31.153786
+     ],
+     [
+      121.408508,
+      31.147229
+     ],
+     [
+      121.402099,
+      31.14118
+     ],
+     [
+      121.395028,
+      31.135698
+     ],
+     [
+      121.387362,
+      31.130835
+     ],
+     [
+      121.379176,
+      31.126639
+     ],
+     [
+      121.370549,
+      31.123148
+     ],
+     [
+      121.361563,
+      31.120398
+     ],
+     [
+      121.352306,
+      31.118415
+     ],
+     [
+      121.342865,
+      31.117217
+     ],
+     [
+      121.333333,
+      31.116816
+     ],
+     [
+      121.323801,
+      31.117217
+     ],
+     [
+      121.314361,
+      31.118415
+     ],
+     [
+      121.305103,
+      31.120398
+     ],
+     [
+      121.296118,
+      31.123148
+     ],
+     [
+      121.28749,
+      31.126639
+     ],
+     [
+      121.279304,
+      31.130835
+     ],
+     [
+      121.271639,
+      31.135698
+     ],
+     [
+      121.264568,
+      31.14118
+     ],
+     [
+      121.258159,
+      31.147229
+     ],
+     [
+      121.252473,
+      31.153786
+     ],
+     [
+      121.247567,
+      31.160788
+     ],
+     [
+      121.243487,
+      31.168167
+     ],
+     [
+      121.240272,
+      31.175853
+     ],
+     [
+      121.237953,
+      31.183772
+     ],
+     [
+      121.236552,
+      31.191847
+     ],
+     [
+      121.236084,
+      31.2
+     ],
+     [
+      121.236552,
+      31.208153
+     ],
+     [
+      121.237953,
+      31.216228
+     ],
+     [
+      121.240272,
+      31.224147
+     ],
+     [
+      121.243487,
+      31.231833
+     ],
+     [
+      121.247567,
+      31.239212
+     ],
+     [
+      121.252473,
+      31.246214
+     ],
+     [
+      121.258159,
+      31.252771
+     ],
+     [
+      121.264568,
+      31.25882
+     ],
+     [
+      121.271639,
+      31.264302
+     ],
+     [
+      121.279304,
+      31.269165
+     ],
+     [
+      121.28749,
+      31.273361
+     ],
+     [
+      121.296118,
+      31.276852
+     ],
+     [
+      121.305103,
+      31.279602
+     ],
+     [
+      121.314361,
+      31.281585
+     ],
+     [
+      121.323801,
+      31.282783
+     ],
+     [
+      121.333333,
+      31.283184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZSSS",
+  "icao_text": "F3995/26 NOTAMN\r\nQ)ZSHA/QMXLC/IV/M/A/000/999/3112N12120E005\r\nA)ZSSS B)2610201700 C)2610302200 \r\nD)1700-2200 DLY\r\nE) FLW TWY CLSD:\r\n1. TWY C1,C2,C3,C4,B7,B8.\r\n2. TWY H2,H3,H4,H5,H6 CLSD BTN TWY B AND TWY C.\r\n3. TWY C BTN TWY H1 AND TWY H7.\r\n ",
+  "id": "1790577734415000",
+  "issued": "2026-09-28T06:42:00.000Z",
+  "last_updated": "2026-09-28T06:42:00.000Z",
+  "local_text": null,
+  "location": "ZSSS",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "F3995/26",
+  "purpose": "M",
+  "q_code": "QMXLC",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": "1700-2200 DLY",
+  "scope": "A",
+  "series": "F",
+  "text": "FLW TWY CLSD:\r\n1. TWY C1,C2,C3,C4,B7,B8.\r\n2. TWY H2,H3,H4,H5,H6 CLSD BTN TWY B AND TWY C.\r\n3. TWY C BTN TWY H1 AND TWY H7.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790577750818000": {
+  "account_id": "RKRRYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3634N12606E",
+  "effective_end": "2026-10-08T04:30:00.000Z",
+  "effective_start": "2026-10-07T02:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RKRR",
+  "first_seen": "2026-09-28T06:50:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      125.994444,
+      36.613889
+     ],
+     [
+      125.994444,
+      36.516667
+     ],
+     [
+      126.2,
+      36.516667
+     ],
+     [
+      126.2,
+      36.613889
+     ],
+     [
+      125.994444,
+      36.613889
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RKRR",
+  "icao_text": "E4646/26 NOTAMN  \r\nQ)RKRR/QRTCA/IV/BO/W/000/330/3634N12606E007\r\nA)RKRR B)2610070230 C)2610080430\r\nD)0230-0430\r\nE)TEMPO RESTRICTED AREA ACT AS FLW\r\nAREA BOUNDED BY THE FOLLOWING\r\n363650N1255940E-363100N1255940E-363100N1261200E-363650N1261200E-36365\r\n0N1255940E\r\nF)SFC G)33000FT AMSL",
+  "id": "1790577750818000",
+  "issued": "2026-09-28T06:42:00.000Z",
+  "last_updated": "2026-09-28T06:42:00.000Z",
+  "local_text": null,
+  "location": "RKRR",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "E4646/26",
+  "purpose": "BO",
+  "q_code": "QRTCA",
+  "qline_offset_nm": 0.2,
+  "radius_nm": 7.0,
+  "ref_number": null,
+  "schedule": "0230-0430",
+  "scope": "W",
+  "series": "E",
+  "text": "TEMPO RESTRICTED AREA ACT AS FLW\r\nAREA BOUNDED BY THE FOLLOWING\r\n363650N1255940E-363100N1255940E-363100N1261200E-363650N1261200E-36365\r\n0N1255940E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "33000FT AMSL",
+  "year": "2026"
+ },
+ "1790577782472000": {
+  "account_id": "RKRRYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3438N12509E",
+  "effective_end": "2026-10-08T06:00:00.000Z",
+  "effective_start": "2026-10-06T00:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RKRR",
+  "first_seen": "2026-09-28T06:50:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      124.691111,
+      35.25
+     ],
+     [
+      125.602778,
+      35.250278
+     ],
+     [
+      125.603889,
+      34.0
+     ],
+     [
+      124.883889,
+      34.000278
+     ],
+     [
+      124.691111,
+      35.25
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RKRR",
+  "icao_text": "E4647/26 NOTAMN  \r\nQ)RKRR/QRTCA/IV/BO/W/140/250/3438N12509E045\r\nA)RKRR B)2610060000 C)2610080600\r\nD)06 0000-0300, 07 0030-0230, 08 0400-0600\r\nE)TEMPO RESTRICTED AREA ACT AS FLW\r\nAREA BOUNDED BY THE FOLLOWING\r\n351500N1244128E-351501N1253610E-340000N1253614E-340001N1245302E-34004\r\n4N1245000E-340245N1244136E-351500N1244128E\r\nF)FL140 G)FL250",
+  "id": "1790577782472000",
+  "issued": "2026-09-28T06:42:00.000Z",
+  "last_updated": "2026-09-28T06:43:00.000Z",
+  "local_text": null,
+  "location": "RKRR",
+  "lower": "FL140",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "E4647/26",
+  "purpose": "BO",
+  "q_code": "QRTCA",
+  "qline_offset_nm": 2.3,
+  "radius_nm": 45.0,
+  "ref_number": null,
+  "schedule": "06 0000-0300, 07 0030-0230, 08 0400-0600",
+  "scope": "W",
+  "series": "E",
+  "text": "TEMPO RESTRICTED AREA ACT AS FLW\r\nAREA BOUNDED BY THE FOLLOWING\r\n351500N1244128E-351501N1253610E-340000N1253614E-340001N1245302E-34004\r\n4N1245000E-340245N1244136E-351500N1244128E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL250",
+  "year": "2026"
+ },
+ "1790577813472000": {
+  "account_id": "RKRRYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3625N13014E",
+  "effective_end": "2026-10-08T12:00:00.000Z",
+  "effective_start": "2026-10-06T04:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RKRR",
+  "first_seen": "2026-09-28T06:50:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      130.066667,
+      36.75
+     ],
+     [
+      130.4,
+      36.65
+     ],
+     [
+      130.4,
+      36.083333
+     ],
+     [
+      130.066667,
+      36.183333
+     ],
+     [
+      130.066667,
+      36.75
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RKRR",
+  "icao_text": "E4648/26 NOTAMN  \r\nQ)RKRR/QRTCA/IV/BO/W/140/250/3625N13014E022\r\nA)RKRR B)2610060430 C)2610081200\r\nD)06 0430-0800 0900-1100, 07 0330-0630, 08 0030-0230 0930-1200\r\nE)TEMPO RESTRICTED AREA ACT AS FLW\r\nAREA BOUNDED BY THE FOLLOWING\r\n364500N1300400E-363900N1302400E-360500N1302400E-361100N1300400E-36450\r\n0N1300400E\r\nF)FL140 G)FL250",
+  "id": "1790577813472000",
+  "issued": "2026-09-28T06:43:00.000Z",
+  "last_updated": "2026-09-28T06:43:00.000Z",
+  "local_text": null,
+  "location": "RKRR",
+  "lower": "FL140",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "E4648/26",
+  "purpose": "BO",
+  "q_code": "QRTCA",
+  "qline_offset_nm": 0.0,
+  "radius_nm": 22.0,
+  "ref_number": null,
+  "schedule": "06 0430-0800 0900-1100, 07 0330-0630, 08 0030-0230 0930-1200",
+  "scope": "W",
+  "series": "E",
+  "text": "TEMPO RESTRICTED AREA ACT AS FLW\r\nAREA BOUNDED BY THE FOLLOWING\r\n364500N1300400E-363900N1302400E-360500N1302400E-361100N1300400E-36450\r\n0N1300400E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL250",
+  "year": "2026"
+ },
+ "1790577826438000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "4316N14452E",
+  "effective_end": "2026-10-04T15:00:00Z",
+  "effective_start": "2026-10-02T15:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T06:50:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      144.721111,
+      43.281111
+     ],
+     [
+      144.726944,
+      43.295556
+     ],
+     [
+      144.733611,
+      43.294722
+     ],
+     [
+      144.749722,
+      43.312222
+     ],
+     [
+      144.755278,
+      43.308056
+     ],
+     [
+      144.766389,
+      43.314444
+     ],
+     [
+      144.894167,
+      43.317778
+     ],
+     [
+      144.950556,
+      43.294444
+     ],
+     [
+      144.978611,
+      43.296389
+     ],
+     [
+      145.012778,
+      43.271944
+     ],
+     [
+      145.022778,
+      43.271944
+     ],
+     [
+      145.023056,
+      43.264722
+     ],
+     [
+      144.9875,
+      43.234722
+     ],
+     [
+      144.951389,
+      43.250278
+     ],
+     [
+      144.916667,
+      43.249722
+     ],
+     [
+      144.910278,
+      43.238056
+     ],
+     [
+      144.869722,
+      43.238333
+     ],
+     [
+      144.868333,
+      43.253056
+     ],
+     [
+      144.848889,
+      43.263889
+     ],
+     [
+      144.844722,
+      43.255278
+     ],
+     [
+      144.721111,
+      43.281111
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RJJJ",
+  "icao_text": "U3456/26 NOTAMN\r\nQ)RJJJ/QWULW/IV/BO/W/000/080/4316N14452E008\r\nA)RJJJ B)2610021500 C)2610041500\r\nE)UNMANNED ACFT(FIXED WING):\r\nAREA: BOUNDED BY FLW POINTS\r\n431652N1444316E - 431744N1444337E - 431741N1444401E - 431844N1444459E\r\n- 431829N1444519E - 431852N1444559E - 431904N1445339E -\r\n431740N1445702E - 431747N1445843E - 431619N1450046E - 431619N1450122E\r\n- 431553N1450123E - 431405N1445915E - 431501N1445705E -\r\n431459N1445500E - 431417N1445437E - 431418N1445211E - 431511N1445206E\r\n- 431550N1445056E - 431519N1445041E - 431652N1444316E \r\n(AKKESHI-GUN, NOTSUKE-GUN IN HOKKAIDO)\r\n(YAUSUBETSU MANEUVERING AREA)\r\nWT: 20KG\r\nNUMBER: 2\r\nRMK: SOURCE/JSDF-G(RJCT)\r\nF)SFC G)8000FT AMSL",
+  "id": "1790577826438000",
+  "issued": "2026-09-28T06:43:00Z",
+  "last_updated": "2026-09-28T06:44:00Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": "SFC",
+  "max_fl": "080",
+  "min_fl": "000",
+  "number": "U3456/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.7,
+  "radius_nm": 8.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT(FIXED WING):\r\nAREA: BOUNDED BY FLW POINTS\r\n431652N1444316E - 431744N1444337E - 431741N1444401E - 431844N1444459E\r\n- 431829N1444519E - 431852N1444559E - 431904N1445339E -\r\n431740N1445702E - 431747N1445843E - 431619N1450046E - 431619N1450122E\r\n- 431553N1450123E - 431405N1445915E - 431501N1445705E -\r\n431459N1445500E - 431417N1445437E - 431418N1445211E - 431511N1445206E\r\n- 431550N1445056E - 431519N1445041E - 431652N1444316E \r\n(AKKESHI-GUN, NOTSUKE-GUN IN HOKKAIDO)\r\n(YAUSUBETSU MANEUVERING AREA)\r\nWT: 20KG\r\nNUMBER: 2\r\nRMK: SOURCE/JSDF-G(RJCT)",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "8000FT AMSL",
+  "year": "2026"
+ },
+ "1790577844316000": {
+  "account_id": "RKRRYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3414N12808E",
+  "effective_end": "2026-10-08T08:30:00.000Z",
+  "effective_start": "2026-10-08T05:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RKRR",
+  "first_seen": "2026-09-28T06:50:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      [
+       128.893889,
+       34.778889
+      ],
+      [
+       129.055833,
+       34.563056
+      ],
+      [
+       128.583333,
+       34.0
+      ],
+      [
+       128.571667,
+       34.0
+      ],
+      [
+       128.893889,
+       34.778889
+      ]
+     ]
+    ],
+    [
+     [
+      [
+       127.465556,
+       33.605
+      ],
+      [
+       127.356111,
+       33.687222
+      ],
+      [
+       128.841944,
+       34.768333
+      ],
+      [
+       127.465556,
+       33.605
+      ]
+     ]
+    ]
+   ],
+   "type": "MultiPolygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RKRR",
+  "icao_text": "E4649/26 NOTAMN  \r\nQ)RKRR/QRTCA/IV/BO/W/100/300/3414N12808E052\r\nA)RKRR B)2610080500 C)2610080830\r\nE)TEMPO RESTRICTED AREA ACT AS FLW\r\nAREA BOUNDED BY THE FOLLOWING\r\n344644N1285338E-343347N1290321E-340000N1283500E-340000N1283418E-33421\r\n9N1282041E-333618N1272756E-334114N1272122E-344606N1285031E-344644N128\r\n5338E\r\nF)10000FT AMSL G)FL300",
+  "id": "1790577844316000",
+  "issued": "2026-09-28T06:43:00.000Z",
+  "last_updated": "2026-09-28T06:44:00.000Z",
+  "local_text": null,
+  "location": "RKRR",
+  "lower": "10000FT AMSL",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "E4649/26",
+  "purpose": "BO",
+  "q_code": "QRTCA",
+  "qline_offset_nm": 32.5,
+  "radius_nm": 52.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "E",
+  "text": "TEMPO RESTRICTED AREA ACT AS FLW\r\nAREA BOUNDED BY THE FOLLOWING\r\n344644N1285338E-343347N1290321E-340000N1283500E-340000N1283418E-33421\r\n9N1282041E-333618N1272756E-334114N1272122E-344606N1285031E-344644N128\r\n5338E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL300",
+  "year": "2026"
+ },
+ "1790577864264000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3112N12120E",
+  "effective_end": "2026-10-30T22:00:00.000Z",
+  "effective_start": "2026-10-20T17:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZSHA",
+  "first_seen": "2026-09-28T06:50:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.333333,
+      31.283184
+     ],
+     [
+      121.342865,
+      31.282783
+     ],
+     [
+      121.352306,
+      31.281585
+     ],
+     [
+      121.361563,
+      31.279602
+     ],
+     [
+      121.370549,
+      31.276852
+     ],
+     [
+      121.379176,
+      31.273361
+     ],
+     [
+      121.387362,
+      31.269165
+     ],
+     [
+      121.395028,
+      31.264302
+     ],
+     [
+      121.402099,
+      31.25882
+     ],
+     [
+      121.408508,
+      31.252771
+     ],
+     [
+      121.414193,
+      31.246214
+     ],
+     [
+      121.4191,
+      31.239212
+     ],
+     [
+      121.42318,
+      31.231833
+     ],
+     [
+      121.426395,
+      31.224147
+     ],
+     [
+      121.428714,
+      31.216228
+     ],
+     [
+      121.430114,
+      31.208153
+     ],
+     [
+      121.430583,
+      31.2
+     ],
+     [
+      121.430114,
+      31.191847
+     ],
+     [
+      121.428714,
+      31.183772
+     ],
+     [
+      121.426395,
+      31.175853
+     ],
+     [
+      121.42318,
+      31.168167
+     ],
+     [
+      121.4191,
+      31.160788
+     ],
+     [
+      121.414193,
+      31.153786
+     ],
+     [
+      121.408508,
+      31.147229
+     ],
+     [
+      121.402099,
+      31.14118
+     ],
+     [
+      121.395028,
+      31.135698
+     ],
+     [
+      121.387362,
+      31.130835
+     ],
+     [
+      121.379176,
+      31.126639
+     ],
+     [
+      121.370549,
+      31.123148
+     ],
+     [
+      121.361563,
+      31.120398
+     ],
+     [
+      121.352306,
+      31.118415
+     ],
+     [
+      121.342865,
+      31.117217
+     ],
+     [
+      121.333333,
+      31.116816
+     ],
+     [
+      121.323801,
+      31.117217
+     ],
+     [
+      121.314361,
+      31.118415
+     ],
+     [
+      121.305103,
+      31.120398
+     ],
+     [
+      121.296118,
+      31.123148
+     ],
+     [
+      121.28749,
+      31.126639
+     ],
+     [
+      121.279304,
+      31.130835
+     ],
+     [
+      121.271639,
+      31.135698
+     ],
+     [
+      121.264568,
+      31.14118
+     ],
+     [
+      121.258159,
+      31.147229
+     ],
+     [
+      121.252473,
+      31.153786
+     ],
+     [
+      121.247567,
+      31.160788
+     ],
+     [
+      121.243487,
+      31.168167
+     ],
+     [
+      121.240272,
+      31.175853
+     ],
+     [
+      121.237953,
+      31.183772
+     ],
+     [
+      121.236552,
+      31.191847
+     ],
+     [
+      121.236084,
+      31.2
+     ],
+     [
+      121.236552,
+      31.208153
+     ],
+     [
+      121.237953,
+      31.216228
+     ],
+     [
+      121.240272,
+      31.224147
+     ],
+     [
+      121.243487,
+      31.231833
+     ],
+     [
+      121.247567,
+      31.239212
+     ],
+     [
+      121.252473,
+      31.246214
+     ],
+     [
+      121.258159,
+      31.252771
+     ],
+     [
+      121.264568,
+      31.25882
+     ],
+     [
+      121.271639,
+      31.264302
+     ],
+     [
+      121.279304,
+      31.269165
+     ],
+     [
+      121.28749,
+      31.273361
+     ],
+     [
+      121.296118,
+      31.276852
+     ],
+     [
+      121.305103,
+      31.279602
+     ],
+     [
+      121.314361,
+      31.281585
+     ],
+     [
+      121.323801,
+      31.282783
+     ],
+     [
+      121.333333,
+      31.283184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZSSS",
+  "icao_text": "F3996/26 NOTAMN\r\nQ)ZSHA/QMRLT/IV/NBO/A/000/999/3112N12120E005\r\nA)ZSSS B)2610201700 C)2610302200 \r\nD)1700-2200 DLY\r\nE) RWY18L/36R NOT AVBL FOR LANDING,EXCEPT ALTN.\r\n ",
+  "id": "1790577864264000",
+  "issued": "2026-09-28T06:42:00.000Z",
+  "last_updated": "2026-09-28T06:44:00.000Z",
+  "local_text": null,
+  "location": "ZSSS",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "F3996/26",
+  "purpose": "NBO",
+  "q_code": "QMRLT",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": "1700-2200 DLY",
+  "scope": "A",
+  "series": "F",
+  "text": "RWY18L/36R NOT AVBL FOR LANDING,EXCEPT ALTN.",
+  "traffic": "IV",
+  "type": "N",
   "upper": null,
   "year": "2026"
  }
