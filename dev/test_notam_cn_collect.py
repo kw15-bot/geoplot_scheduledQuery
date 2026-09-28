@@ -483,6 +483,44 @@ class RealNotams(unittest.TestCase):
         # "TO" 区切りやカンマ区切りは同じ多角形の続きとして扱う
         self.assertEqual(len(C.parse_text_polygons("N2300E11600 TO N2300E11700, N2400E11700")), 1)
 
+    def test_coordinate_split_by_line_break_is_joined(self):
+        # 2026-09-28追加: RKRRのE4645/26等。座標の数字の途中で改行されていた
+        e = ("AREA BOUNDED BY THE FOLLOWING\n364220N1253241E-364220N1255825E-363123N1260618E-36151\n"
+             "3N1255410E-324038N1245441E-331853N1241154E-364220N1253241E")
+        rings = C.parse_text_polygons(e)
+        self.assertEqual([len(r) for r in rings], [7])
+
+    def test_text_circles(self):
+        # 2026-09-28追加: 本文に書かれた円(RKRR D2923/26・Z0714/26・A1391/26、KZAK A4697/26、RPHI B5101/26)
+        cases = [
+            ("1. AREA : A CIRCLE RADIUS 0.5NM CENTERED ON 372317N1263845E", 0.5, 37 + 23 / 60 + 17 / 3600),
+            ("FIREWORKS WILL TAKE PLACE AS FLW : A CIRCLE RADIUS 30M CENTERED ON 373832N1264026E",
+             30 / 1852, 37 + 38 / 60 + 32 / 3600),
+            ("1.PSN: 0.5NM RAD OF 364322.287N 1273032.318E - RKTU", 0.5, 36 + 43 / 60 + 22.287 / 3600),
+            ("WI AN AREA DEFINED AS 200NM RADIUS OF 164800N1594200W", 200, 16.8),
+            ("WILL TAKE PLACE WI: 22NM RADIUS CENTERED ON 094812.36N 1241300.60E", 22, 9 + 48 / 60 + 12.36 / 3600),
+        ]
+        for text, r_nm, lat in cases:
+            rings = C.parse_text_polygons(text)
+            self.assertEqual(len(rings), 1, text)
+            ring = rings[0]
+            self.assertEqual(len(ring), C.CIRCLE_POINTS + 1)
+            # circle_ringの先頭点は真北(中心の緯度 + 半径)
+            self.assertAlmostEqual(ring[0][1] - lat, r_nm * 1.852 / 111.32, places=4)
+
+    def test_corridor_either_side_of_line(self):
+        # 2026-09-28追加: RKRR E4579/26等。線の両側1NMの帯(以前は線の頂点を結んだ誤った多角形になっていた)
+        e = "TEMPO RESTRICTED AREA ACT AS FLW:\n1NM EITHER SIDE OF LINE \n364212N1262907E-363300N1262300E-363300N1261600E"
+        rings = C.parse_text_polygons(e)
+        self.assertEqual(len(rings), 1)
+        ring = rings[0]
+        self.assertEqual(len(ring), 3 * 2 + 1)          # 3点の線 → 左右3点ずつ + 閉じる点
+        self.assertEqual(ring[0], ring[-1])
+        # 最後の点(126.266667E, 36.55N)の真北・真南に1NMずつ(東西に伸びる区間の端)
+        lats = sorted(p[1] for p in ring if abs(p[0] - (126 + 16 / 60)) < 1e-6)
+        self.assertAlmostEqual(lats[0], 36.55 - 1 / 60, places=5)
+        self.assertAlmostEqual(lats[-1], 36.55 + 1 / 60, places=5)
+
     def test_named_waypoint_coords_in_parens_are_not_polygon_vertices(self):
         # 2026-09-27追加: A4957/26等の航空路変更NOTAMで、迂回路の臨時ウェイポイント定義
         # 'CG1(N253957E1095707)' のような座標が、実在しないエリア境界として誤検出されていたのを修正。
