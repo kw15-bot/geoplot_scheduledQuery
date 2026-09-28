@@ -3905,58 +3905,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790525747601000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-28T14:50:00Z",
-  "effective_start": "2026-09-28T07:30:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZGZU",
-  "first_seen": "2026-09-27T16:20:24+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     112.743056,
-     24.49
-    ],
-    [
-     111.300833,
-     24.625278
-    ]
-   ],
-   "type": "LineString"
-  },
-  "geometry_source": "route-segment",
-  "icao_location": "ZGZU",
-  "icao_text": "A4966/26 NOTAMN\r\nQ)ZGZU/QARCH/IV/BO/E/000/999/\r\nA)ZGZU B)2609280730 C)2609281450 \r\nE) SEGMENT OSNOV-ALGAG OF ATS RTE G586 NOT AVBL DUE TO TECHNICAL \r\nREASON, SCHEDULED FLIGHTS ALONG G586 OSNOV-ALGAG ADJUSTED TO ATS \r\nRTE V147,V148, ALL ACFT FLW ATC INSTRUCTION.\r\n1. MOLSO AND BEYOND TO MAMSI AND BEYOND: MOLSO-OPIXU-UGRIG-MAMSI \r\nAND BEYOND.\r\n2. MOLSO AND BEYOND TO ZGKL: MOLSO-OPIXU-UGRIG-MAMSI-ZGKL.\r\n3. MAMSI AND BEYOND TO MOLSO AND BEYOND: MAMSI-UGRIG-OPIXU-MOLSO \r\nAND BEYOND.\r\n4. ZGKL TO MOLSO AND BEYOND: MAMSI-UGRIG-OPIXU-MOLSO AND BEYOND.\r\n5. AGVIL AND BEYOND TO MAMSI AND BEYOND: \r\nAGVIL-OSNOV-OPIXU-UGRIG-MAMSI AND BEYOND.\r\n6. AGVIL AND BEYOND TO ZGKL: AGVIL-OSNOV-OPIXU-UGRIG-MAMSI-ZGKL.",
-  "id": "1790525747601000",
-  "issued": "2026-09-27T16:15:00Z",
-  "last_updated": "2026-09-27T16:16:00Z",
-  "local_text": null,
-  "location": "ZGZU",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A4966/26",
-  "purpose": "BO",
-  "q_code": "QARCH",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "A",
-  "text": "SEGMENT OSNOV-ALGAG OF ATS RTE G586 NOT AVBL DUE TO TECHNICAL \r\nREASON, SCHEDULED FLIGHTS ALONG G586 OSNOV-ALGAG ADJUSTED TO ATS \r\nRTE V147,V148, ALL ACFT FLW ATC INSTRUCTION.\r\n1. MOLSO AND BEYOND TO MAMSI AND BEYOND: MOLSO-OPIXU-UGRIG-MAMSI \r\nAND BEYOND.\r\n2. MOLSO AND BEYOND TO ZGKL: MOLSO-OPIXU-UGRIG-MAMSI-ZGKL.\r\n3. MAMSI AND BEYOND TO MOLSO AND BEYOND: MAMSI-UGRIG-OPIXU-MOLSO \r\nAND BEYOND.\r\n4. ZGKL TO MOLSO AND BEYOND: MAMSI-UGRIG-OPIXU-MOLSO AND BEYOND.\r\n5. AGVIL AND BEYOND TO MAMSI AND BEYOND: \r\nAGVIL-OSNOV-OPIXU-UGRIG-MAMSI AND BEYOND.\r\n6. AGVIL AND BEYOND TO ZGKL: AGVIL-OSNOV-OPIXU-UGRIG-MAMSI-ZGKL.",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790528591772000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
