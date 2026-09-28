@@ -218,6 +218,7 @@ class Fixture(unittest.TestCase):
         self.assertEqual(old["status"], "cancelled")
         self.assertEqual(old["valid_end"], "2026-09-21T15:00:00+00:00")
         self.assertEqual(old["ended_by"], "A0110/26")
+        self.assertEqual(old["ended_by_type"], "R")                          # ビューアでは「A0110/26により置換」
         self.assertEqual(p["A0110/26"]["status"], "active")
 
     def test_cancel_notice_not_drawn_but_kept(self):
@@ -254,6 +255,7 @@ class Fixture(unittest.TestCase):
         self.go("2026-09-21T16:00:00Z")
         self.assertNotIn("A0120/26", props(self.out))
         self.assertEqual(arch(self.out)["A0120/26"]["status"], "cancelled")
+        self.assertEqual(arch(self.out)["A0120/26"]["ended_by_type"], "C")   # ビューアでは「A0121/26により撤回」
 
     # --- 失効とArchive（即時移行）
     def test_expiry_moves_to_archive_immediately(self):
