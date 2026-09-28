@@ -38707,11 +38707,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/92e9de5502de456fac2e5236bd50e00c.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-09-28",
     "detail_fetched": false,
     "first_seen": "2026-09-28T07:50:41+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警408/26",
     "points": [],
     "revoked": false,
     "title": "调整助航标志—辽航警408/26",
