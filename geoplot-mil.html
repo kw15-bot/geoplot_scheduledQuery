@@ -3395,8 +3395,17 @@ function notamPeriodUtc(p){
   const fmt = v => v ? String(v).slice(0,16).replace('T',' ') : '?';
   return `${fmt(p.valid_start)} 〜 ${fmt(p.valid_end)}`;
 }
+// 取消・置換で打ち切られたNOTAMの「〜により撤回」表示(航行警報側の revoked_by と同じ考え方)。
+// ended_by_type: C=取消 → 撤回、R=置換 → 置換。種別の無い古いデータは撤回として扱う。
+function notamRevokedText(p){
+  if (notamStatusOf({ properties: p }) !== 'cancelled') return '';
+  const how = p.ended_by_type === 'R' ? '置換' : '撤回';
+  return p.ended_by ? `${how}済み ・ ${p.ended_by}により${how}` : '撤回済み';
+}
 function notamPopupHtml(f){
   const p = f.properties || {};
+  const revoked = notamRevokedText(p);
+  const revokedNote = revoked ? `<div class="pop-mono" style="color:var(--red);">${esc(revoked)}</div>` : '';
   const period = (p.valid_start || p.valid_end)
     ? `<div class="pop-mono">有効期間 (UTC): ${esc(notamPeriodUtc(p))}</div>` : '';
   const srcNote = (p.geometry_source || '').startsWith('qline')
@@ -3404,7 +3413,7 @@ function notamPopupHtml(f){
   const rawText = p.raw_text ? `<div class="pop-mono" style="white-space:pre-wrap;max-height:160px;overflow-y:auto;margin-top:6px;">${esc(p.raw_text)}</div>` : '';
   return `<div class="pop-title">${esc(p.number || notamHeading(f))}</div>`
     + `<div class="pop-mono">FIR: ${esc(notamFirTokens(f).join(' '))}</div>`
-    + `${period}${srcNote}${rawText}${notamActionButtonsHtml(f, true)}`;
+    + `${period}${revokedNote}${srcNote}${rawText}${notamActionButtonsHtml(f, true)}`;
 }
 
 // タブ(Active/Upcoming/Archive/All)ごとの一覧対象。Active/Upcomingは接続中URLのfeaturesの
@@ -3541,6 +3550,7 @@ function renderNotamList(){
       <span class="wtitle">${esc(p.number || notamHeading(f))}</span>
       <div class="wmeta"><span>FIR: ${esc(notamFirTokens(f).join(' '))}</span></div>
       <div class="validity-badge ${badgeClass}">有効期間 (UTC) ・ ${esc(period)}</div>
+      ${notamRevokedText(p) ? `<div class="validity-badge archive">${esc(notamRevokedText(p))}</div>` : ''}
       ${(p.geometry_source||'').startsWith('qline') ? `<span class="notam-tag qline">Q項推定図形</span>` : ''}
       ${mapToggleHtml}
       ${notamActionButtonsHtml(f, false)}`;
