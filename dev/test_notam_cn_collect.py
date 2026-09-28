@@ -537,6 +537,77 @@ class RealNotams(unittest.TestCase):
         self.assertEqual(len(rings[0]), 4)
 
 
+# 合成の航空路索引(実在の航空路・地点ではない)。X1: AAA(30N100E)-BBB(30N101E)-CCC(30N102E)-DDD(30N103E)、
+# 東西にまっすぐ。Y2: AAA-EEE(31N100E)。
+_FAKE_AIP = {
+    "meta": {"pubNo": "TEST"},
+    "points": {"a": ["AAA", 30.0, 100.0, "WPT"], "b": ["BBB", 30.0, 101.0, "WPT"], "c": ["CCC", 30.0, 102.0, "VOR_DME"],
+               "d": ["DDD", 30.0, 103.0, "WPT"], "e": ["EEE", 31.0, 100.0, "WPT"]},
+    "routes": {"r1": "X1", "r2": "Y2"},
+    "segments": [["r1", "a", "b"], ["r1", "b", "c"], ["r1", "c", "d"], ["r2", "a", "e"]],
+}
+
+
+class RouteSegments(unittest.TestCase):
+    """航空路の区間閉鎖 -> 線(notam_route_segments.py)。索引は合成データなので鍵が無くても動く。"""
+
+    def setUp(self):
+        C.notam_route_segments.set_index(_FAKE_AIP)
+
+    def tearDown(self):
+        C.notam_route_segments.set_index(None)
+
+    def lines(self, text):
+        return C.notam_route_segments.route_closure_lines(text)
+
+    def test_segment_of_ats_rte(self):
+        ls = self.lines("SEGMENT BBB - DDD OF ATS RTE X1 CLSD.")
+        self.assertEqual(ls, [[[101.0, 30.0], [102.0, 30.0], [103.0, 30.0]]])
+
+    def test_ats_route_segment_and_navaid_name(self):
+        ls = self.lines("ATS ROUTE X1 SEGMENT AAA-CHANGDU VOR &apos;CCC&apos; NOT AVBL.")
+        self.assertEqual(ls[0][0], [100.0, 30.0])
+        self.assertEqual(ls[0][-1], [102.0, 30.0])
+
+    def test_numbered_items_and_reroute_is_ignored(self):
+        text = ("FLW SEGMENT OF ATS RTE CLSD AT 9,200M AND BELOW:\n1.X1 :AAA- BBB.\n2.Y2: AAA-EEE\n"
+                "FLIGHTS ALONG X1 FM CCC TO DDD ADJUSTED TO CCC-X1-DDD")
+        ls = self.lines(text)
+        self.assertEqual(len(ls), 2)
+        self.assertEqual(ls[1], [[100.0, 30.0], [100.0, 31.0]])
+
+    def test_offset_along_route(self):
+        # BBBから東へ(航空路に沿って)約96km = 東経約102.0度
+        (line,) = self.lines("SEGMENT BBB-96KM EAST OF BBB OF ATS RTE X1 CLSD")
+        self.assertEqual(line[0], [101.0, 30.0])
+        self.assertAlmostEqual(line[-1][0], 102.0, delta=0.01)
+        (line,) = self.lines("SEGMENT 50KM WEST OF CCC - DDD OF ATS RTE X1 CLSD")
+        self.assertAlmostEqual(line[0][0], 101.48, delta=0.02)
+        self.assertEqual(line[-1], [103.0, 30.0])
+
+    def test_coordinate_endpoint_projected(self):
+        (line,) = self.lines("SEGMENT AAA - N300500E1013000 OF ATS RTE X1 CLSD")
+        self.assertAlmostEqual(line[-1][0], 101.5, delta=0.01)
+        self.assertAlmostEqual(line[-1][1], 30.0, delta=0.01)
+
+    def test_reroute_only_and_unknown(self):
+        self.assertEqual(self.lines("FLIGHTS VIA AAA-X1-DDD SHALL ADJUST TO AAA-Y2-EEE."), [])
+        self.assertEqual(self.lines("SEGMENT AAA-ZZZ OF ATS RTE X1 CLSD"), [])
+        self.assertEqual(self.lines("SEGMENT AAA-BBB OF ATS RTE Q9 CLSD"), [])
+
+    def test_build_geometry_uses_route_segment(self):
+        g, src = C.build_geometry({}, {"coordinates": "3000N10100E", "radius": "999"},
+                                  "SEGMENT AAA-CCC OF ATS RTE X1 CLSD. SEGMENT AAA-EEE OF ATS RTE Y2 CLSD.")
+        self.assertEqual(src, "route-segment")
+        self.assertEqual(g["type"], "MultiLineString")
+
+    def test_without_index_falls_back(self):
+        C.notam_route_segments.set_index(None)
+        g, src = C.build_geometry({}, {"coordinates": "3000N10100E", "radius": "999"},
+                                  "SEGMENT AAA-CCC OF ATS RTE X1 CLSD.")
+        self.assertEqual(src, "qline-point")
+
+
 # ----------------------------------------------------------------------------- APIモード（同一プロセス内モック）
 class MockState:
     feats = []

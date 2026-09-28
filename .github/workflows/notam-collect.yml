@@ -7,6 +7,8 @@ name: NOTAM collect (CN/HK/MO/TW + REF FIR)
 # 必要な設定(NMS-APIへの実接続を使う場合):
 #   Secrets   NMS_CLIENT_ID / NMS_CLIENT_SECRET
 #   Variables NMS_ENV (prod | staging | fit)  ※未設定なら staging(取得済み認証情報はstaging用)
+#   Secrets   AIPDS_KEY  航空路閉鎖を線にするAIP索引(aip/cn_aip_index.json.gz.enc)の鍵。
+#             未設定なら復号をとばし、航空路閉鎖は従来どおりQ項の点になる(HANDOFF_NOTAM.md §19)
 # NMS-API側の実運用(prod接続・再配布条件)が未確定な間は、Secretsを設定しなければ
 # このジョブは失敗する(＝データは書き換わらない)だけなので、安全側に倒れる。
 on:
@@ -35,6 +37,21 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+
+      # 復号した索引はランナーの一時領域にだけ置く(コミット対象の notam_out/ には書かない)
+      - name: Decrypt AIP index
+        env:
+          AIPDS_KEY: ${{ secrets.AIPDS_KEY }}
+        run: |
+          if [ -z "$AIPDS_KEY" ] || [ ! -f aip/cn_aip_index.json.gz.enc ]; then
+            echo "AIPDS_KEY not set; route closures stay as Q-line points"; exit 0
+          fi
+          if openssl enc -d -aes-256-cbc -pbkdf2 -pass env:AIPDS_KEY \
+               -in aip/cn_aip_index.json.gz.enc -out "$RUNNER_TEMP/aip_index.json.gz"; then
+            echo "AIPDS_INDEX=$RUNNER_TEMP/aip_index.json.gz" >> "$GITHUB_ENV"
+          else
+            echo "::warning::AIP index decrypt failed (wrong AIPDS_KEY?)"
+          fi
 
       - name: Collect NOTAMs
         env:
