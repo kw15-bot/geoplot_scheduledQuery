@@ -37140,5 +37140,167 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1790598291647000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T12:00:00Z",
+  "effective_start": "2026-09-29T00:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZGZU",
+  "first_seen": "2026-09-28T12:30:36+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     108.148333,
+     22.585
+    ],
+    [
+     108.752222,
+     22.117222
+    ],
+    [
+     109.095,
+     21.849444
+    ]
+   ],
+   "type": "LineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZGZU",
+  "icao_text": "A4982/26 NOTAMN\r\nQ)ZGZU/QARCH/IV/BO/E/000/999/\r\nA)ZGZU B)2609290000 C)2609291200 \r\nD)0000-0410,1000-1200\r\nE) SEGMENT NANNING VOR 'WUY'-ALEKI OF ATS RTE R339 NOT AVBL DUE TO \r\nTECHNICAL REASON,ALL AFFECTED FLIGHTS SHALL BE ADJUSTED.ALL ACFT \r\nFOLLOW ATC INSTRUCTIONS:\r\nSCHEDULED FLIGHTS ALONG R339 NANNING VOR 'WUY'-ALEKI ADJUSTED TO \r\nNANNING VOR 'WUY'-V153-ALEKI.",
+  "id": "1790598291647000",
+  "issued": "2026-09-28T12:24:00Z",
+  "last_updated": "2026-09-28T12:25:00Z",
+  "local_text": null,
+  "location": "ZGZU",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4982/26",
+  "purpose": "BO",
+  "q_code": "QARCH",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": "0000-0410,1000-1200",
+  "scope": "E",
+  "series": "A",
+  "text": "SEGMENT NANNING VOR &apos;WUY&apos;-ALEKI OF ATS RTE R339 NOT AVBL DUE TO \r\nTECHNICAL REASON,ALL AFFECTED FLIGHTS SHALL BE ADJUSTED.ALL ACFT \r\nFOLLOW ATC INSTRUCTIONS:\r\nSCHEDULED FLIGHTS ALONG R339 NANNING VOR &apos;WUY&apos;-ALEKI ADJUSTED TO \r\nNANNING VOR &apos;WUY&apos;-V153-ALEKI.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790598294553000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-29T12:00:00Z",
+  "effective_start": "2026-09-29T00:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZGZU",
+  "first_seen": "2026-09-28T12:30:36+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     108.148333,
+     22.585
+    ],
+    [
+     108.305,
+     21.216667
+    ],
+    [
+     108.266667,
+     20.988889
+    ],
+    [
+     108.185,
+     20.5
+    ]
+   ],
+   "type": "LineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZGZU",
+  "icao_text": "A4983/26 NOTAMN\r\nQ)ZGZU/QARLC/IV/NBO/E/000/999/\r\nA)ZGZU B)2609290000 C)2609291200 \r\nD)0000-0410,1000-1200\r\nE) SEGMENT NANNING VOR 'WUY'-RUNEG OF ATS RTE W169 CLSD.",
+  "id": "1790598294553000",
+  "issued": "2026-09-28T12:24:00Z",
+  "last_updated": "2026-09-28T12:25:00Z",
+  "local_text": null,
+  "location": "ZGZU",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4983/26",
+  "purpose": "NBO",
+  "q_code": "QARLC",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": "0000-0410,1000-1200",
+  "scope": "E",
+  "series": "A",
+  "text": "SEGMENT NANNING VOR &apos;WUY&apos;-RUNEG OF ATS RTE W169 CLSD.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790598636857000": {
+  "account_id": "SNOWTAM",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-28T20:10:00.000Z",
+  "effective_start": "2026-09-28T12:10:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": null,
+  "first_seen": "2026-09-28T12:30:36+00:00",
+  "geometry": {
+   "coordinates": [
+    109.865,
+    39.49
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "ZBDS",
+  "icao_text": null,
+  "id": "1790598636857000",
+  "issued": "2026-09-28T12:29:00.000Z",
+  "last_updated": "2026-09-28T12:30:00.000Z",
+  "local_text": null,
+  "location": "ZBDS",
+  "lower": null,
+  "max_fl": null,
+  "min_fl": null,
+  "number": "0193",
+  "purpose": null,
+  "q_code": null,
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": "SWZX",
+  "text": "SWZX0193 ZBDS 09281210\r (SNOWTAM 0193\r ZBDS\r 09281210 13 5/5/5 100/100/100 NR/NR/NR WET/WET/WET\r )",
+  "traffic": null,
+  "type": null,
+  "upper": null,
+  "year": "2026"
  }
 }
