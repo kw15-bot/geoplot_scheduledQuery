@@ -29936,11 +29936,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/73d0147797b7416f842065fd77349d88.html": {
     "bureau": "连云港海事局",
+    "cancels": [],
     "date": "2026-09-28",
     "detail_fetched": false,
     "first_seen": "2026-09-28T15:33:14+00:00",
     "groups": [],
     "military": false,
+    "own_id": "云航警162/26",
     "points": [],
     "revoked": false,
     "title": "黄海南部“SHENTON WAY”轮失去动力—云航警162/26",
