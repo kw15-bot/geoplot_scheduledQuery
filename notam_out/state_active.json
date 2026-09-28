@@ -20194,13 +20194,13 @@
  "1790544685686000": {
   "account_id": "RJAAYNYX",
   "area_group": "REF",
-  "cancelation_date": null,
+  "cancelation_date": "2026-09-28T04:12:00.000Z",
   "classification": "INTL",
   "coordinates": "3310N14118E",
   "effective_end": "2026-09-28T21:00:00.000Z",
   "effective_start": "2026-09-28T07:00:00.000Z",
-  "end_override": null,
-  "ended_by": null,
+  "end_override": "2026-09-28T04:11:00+00:00",
+  "ended_by": "Q2299/26",
   "estimated": false,
   "fir": "RJJJ",
   "first_seen": "2026-09-27T21:40:26+00:00",
@@ -20216,7 +20216,7 @@
   "icao_text": "Q2295/26 NOTAMN\r\nQ)RJJJ/QARCA/IV/BO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280700 C)2609282100\r\nE)EASTBOUND PACOTS TRACKS BETWEEN JAPAN AND NORTH AMERICA,\r\nTRACK 1.\r\n FLEX ROUTE : KALNA 41N160E 42N170E 43N180E 45N170W 48N160W 50N150W\r\n              50N140W ORNAI\r\nJAPAN ROUTE : ADNAP OTR5 KALNA\r\n  NAR ROUTE : ACFT LDG KSEA/KPDX--ORNAI TOU KSEA/KPDX\r\n              ACFT LDG CYVR--ORNAI POWOL CYVR\r\n        RMK : ACFT LDG OTHER DEST--ORNAI UPR TO DEST\r\nTRACK 2.\r\n FLEX ROUTE : EMRON 40N160E 41N170E 41N180E 43N170W 45N160W 45N150W\r\n              44N140W 42N130W VESPA\r\nJAPAN ROUTE : ADNAP OTR7 EMRON\r\n  NAR ROUTE : ACFT LDG KSFO--VESPA AMAKR BGGLO KSFO\r\n              ACFT LDG KLAX--VESPA ENI OAK BURGL IRNMN KLAX\r\nTRACK 3.\r\n FLEX ROUTE : LEPKI 39N160E 40N170E 40N180E 42N170W 44N160W 44N150W\r\n              43N140W 40N130W DACEM\r\nJAPAN ROUTE : AVBET OTR11 LEPKI\r\n  NAR ROUTE : ACFT LDG KLAX--DACEM PAINT PIRAT BURGL IRNMN KLAX\r\n              ACFT LDG KSFO--DACEM PAINT PIRAT OSI KSFO\r\n        RMK : ATM CENTER TEL:81-92-608-8870",
   "id": "1790544685686000",
   "issued": "2026-09-27T21:31:00.000Z",
-  "last_updated": "2026-09-27T21:31:00.000Z",
+  "last_updated": "2026-09-28T04:12:00.000Z",
   "local_text": null,
   "location": "RJJJ",
   "lower": null,
@@ -20226,7 +20226,7 @@
   "purpose": "BO",
   "q_code": "QARCA",
   "qline_offset_nm": null,
-  "radius_nm": 999.0,
+  "radius_nm": null,
   "ref_number": null,
   "schedule": null,
   "scope": "E",
@@ -20240,13 +20240,13 @@
  "1790544771055000": {
   "account_id": "RJAAYNYX",
   "area_group": "REF",
-  "cancelation_date": null,
+  "cancelation_date": "2026-09-28T04:15:00.000Z",
   "classification": "INTL",
   "coordinates": "3310N14118E",
-  "effective_end": "2026-09-28T21:00:00Z",
-  "effective_start": "2026-09-28T10:00:00Z",
-  "end_override": null,
-  "ended_by": null,
+  "effective_end": "2026-09-28T21:00:00.000Z",
+  "effective_start": "2026-09-28T10:00:00.000Z",
+  "end_override": "2026-09-28T04:15:00+00:00",
+  "ended_by": "Q2301/26",
   "estimated": false,
   "fir": "RJJJ",
   "first_seen": "2026-09-27T21:40:26+00:00",
@@ -20261,8 +20261,8 @@
   "icao_location": "RJJJ",
   "icao_text": "Q2296/26 NOTAMN\r\nQ)RJJJ/QARCA/IV/BO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609281000 C)2609282100\r\nE)EASTBOUND PACOTS TRACKS BETWEEN JAPAN AND HAWAII,\r\nTRACK 11.\r\n FLEX ROUTE : TONIK SEGRO CANOE 23N160E 21N170E 21N180E 21N170W HOOPA\r\nJAPAN ROUTE : DAGDA G223 TONIK\r\n PHNL ROUTE : HOOPA KATHS OPACA PHNL\r\n        RMK : TRK 11 NOT AVAILABLE IF CROSSING CANOE BETWEEN 1400Z\r\n              AND 1900Z\r\nTRACK 12.\r\n FLEX ROUTE : TONIK VASKO 2235N14450E 2311N15000E CANOE 23N160E\r\n              21N170E 21N180E 21N170W HOOPA\r\nJAPAN ROUTE : DAGDA G223 TONIK\r\n PHNL ROUTE : HOOPA KATHS OPACA PHNL\r\n        RMK : ATM CENTER TEL:81-92-608-8870",
   "id": "1790544771055000",
-  "issued": "2026-09-27T21:32:00Z",
-  "last_updated": "2026-09-27T21:33:00Z",
+  "issued": "2026-09-27T21:32:00.000Z",
+  "last_updated": "2026-09-28T04:15:00.000Z",
   "local_text": null,
   "location": "RJJJ",
   "lower": null,
@@ -20272,7 +20272,7 @@
   "purpose": "BO",
   "q_code": "QARCA",
   "qline_offset_nm": null,
-  "radius_nm": 999.0,
+  "radius_nm": null,
   "ref_number": null,
   "schedule": null,
   "scope": "E",
@@ -20286,13 +20286,13 @@
  "1790544874557000": {
   "account_id": "RJAAYNYX",
   "area_group": "REF",
-  "cancelation_date": null,
+  "cancelation_date": "2026-09-28T04:13:00.000Z",
   "classification": "INTL",
   "coordinates": "3310N14118E",
   "effective_end": "2026-09-28T21:00:00.000Z",
   "effective_start": "2026-09-28T07:00:00.000Z",
-  "end_override": null,
-  "ended_by": null,
+  "end_override": "2026-09-28T04:13:00+00:00",
+  "ended_by": "Q2300/26",
   "estimated": false,
   "fir": "RJJJ",
   "first_seen": "2026-09-27T21:40:26+00:00",
@@ -20308,7 +20308,7 @@
   "icao_text": "Q2297/26 NOTAMN\r\nQ)RJJJ/QARCA/IV/BO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280700 C)2609282100\r\nE)EASTBOUND PACOTS TRACKS BETWEEN SOUTHEAST ASIA AND NORTH AMERICA,\r\nTRACK 14.\r\n     FLEX ROUTE : LEPKI 38N160E 39N170E 39N180E 41N170W 43N160W\r\n                  43N150W 42N140W 38N130W ALLBE\r\nRCTP/VHHH ROUTE : MOLKA M750 MUKEP Y891 OVSUN Y893 IGMIS Y57 POROT\r\n                  OTR11 LEPKI\r\n      NAR ROUTE : ACFT LDG KSFO--ALLBE PIRAT OSI KSFO\r\n                  ACFT LDG KLAX--ALLBE PIRAT BURGL IRNMN KLAX\r\n            RMK : TRK 15 NOT AVAILABLE\r\n                  ATM CENTER TEL:81-92-608-8870",
   "id": "1790544874557000",
   "issued": "2026-09-27T21:34:00.000Z",
-  "last_updated": "2026-09-27T21:34:00.000Z",
+  "last_updated": "2026-09-28T04:13:00.000Z",
   "local_text": null,
   "location": "RJJJ",
   "lower": null,
@@ -20318,7 +20318,7 @@
   "purpose": "BO",
   "q_code": "QARCA",
   "qline_offset_nm": null,
-  "radius_nm": 999.0,
+  "radius_nm": null,
   "ref_number": null,
   "schedule": null,
   "scope": "E",
@@ -55376,6 +55376,542 @@
   "text": "FLOW CTL SECTOR F16  \r\nCMPL",
   "traffic": "I",
   "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790568740700000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-10-01T04:11:00.000Z",
+  "effective_start": "2026-09-28T04:11:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T04:20:25+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "Q2299/26 NOTAMC Q2295/26\r\nQ)RJJJ/QARXX/IV/BO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280411\r\nE)EASTBOUND PACOTS TRACKS BETWEEN JAPAN AND NORTH AMERICA\r\nNEW NOTAM TO FLW",
+  "id": "1790568740700000",
+  "issued": "2026-09-28T04:11:00.000Z",
+  "last_updated": "2026-09-28T04:12:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "Q2299/26",
+  "purpose": "BO",
+  "q_code": "QARXX",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": "Q2295/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "Q",
+  "text": "EASTBOUND PACOTS TRACKS BETWEEN JAPAN AND NORTH AMERICA\r\nNEW NOTAM TO FLW",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790568810204000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-10-01T04:12:00.000Z",
+  "effective_start": "2026-09-28T04:12:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T04:20:25+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "Q2300/26 NOTAMC Q2297/26\r\nQ)RJJJ/QARXX/IV/BO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280412\r\nE)EASTBOUND PACOTS TRACKS BETWEEN SOUTHEAST ASIA AND NORTH AMERICA\r\nNEW NOTAM TO FLW",
+  "id": "1790568810204000",
+  "issued": "2026-09-28T04:13:00.000Z",
+  "last_updated": "2026-09-28T04:13:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "Q2300/26",
+  "purpose": "BO",
+  "q_code": "QARXX",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": "Q2297/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "Q",
+  "text": "EASTBOUND PACOTS TRACKS BETWEEN SOUTHEAST ASIA AND NORTH AMERICA\r\nNEW NOTAM TO FLW",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790568932243000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-10-01T04:14:00.000Z",
+  "effective_start": "2026-09-28T04:14:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T04:20:25+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "Q2301/26 NOTAMC Q2296/26\r\nQ)RJJJ/QARXX/IV/BO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280414\r\nE)EASTBOUND PACOTS TRACKS BETWEEN JAPAN AND HAWAII\r\nNEW NOTAM TO FLW",
+  "id": "1790568932243000",
+  "issued": "2026-09-28T04:15:00.000Z",
+  "last_updated": "2026-09-28T04:15:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "Q2301/26",
+  "purpose": "BO",
+  "q_code": "QARXX",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": "Q2296/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "Q",
+  "text": "EASTBOUND PACOTS TRACKS BETWEEN JAPAN AND HAWAII\r\nNEW NOTAM TO FLW",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790569023379000": {
+  "account_id": "RKRRYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3505N12804E",
+  "effective_end": "2026-10-02T22:00:00.000Z",
+  "effective_start": "2026-09-30T11:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RKRR",
+  "first_seen": "2026-09-28T04:20:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      128.066667,
+      35.166517
+     ],
+     [
+      128.07663,
+      35.166116
+     ],
+     [
+      128.086498,
+      35.164919
+     ],
+     [
+      128.096175,
+      35.162935
+     ],
+     [
+      128.105567,
+      35.160185
+     ],
+     [
+      128.114585,
+      35.156695
+     ],
+     [
+      128.123142,
+      35.152498
+     ],
+     [
+      128.131154,
+      35.147635
+     ],
+     [
+      128.138546,
+      35.142153
+     ],
+     [
+      128.145245,
+      35.136104
+     ],
+     [
+      128.151187,
+      35.129548
+     ],
+     [
+      128.156316,
+      35.122546
+     ],
+     [
+      128.160581,
+      35.115166
+     ],
+     [
+      128.163942,
+      35.10748
+     ],
+     [
+      128.166366,
+      35.099562
+     ],
+     [
+      128.167829,
+      35.091487
+     ],
+     [
+      128.168319,
+      35.083333
+     ],
+     [
+      128.167829,
+      35.07518
+     ],
+     [
+      128.166366,
+      35.067105
+     ],
+     [
+      128.163942,
+      35.059186
+     ],
+     [
+      128.160581,
+      35.0515
+     ],
+     [
+      128.156316,
+      35.044121
+     ],
+     [
+      128.151187,
+      35.037119
+     ],
+     [
+      128.145245,
+      35.030562
+     ],
+     [
+      128.138546,
+      35.024514
+     ],
+     [
+      128.131154,
+      35.019032
+     ],
+     [
+      128.123142,
+      35.014169
+     ],
+     [
+      128.114585,
+      35.009972
+     ],
+     [
+      128.105567,
+      35.006482
+     ],
+     [
+      128.096175,
+      35.003732
+     ],
+     [
+      128.086498,
+      35.001748
+     ],
+     [
+      128.07663,
+      35.00055
+     ],
+     [
+      128.066667,
+      35.00015
+     ],
+     [
+      128.056703,
+      35.00055
+     ],
+     [
+      128.046835,
+      35.001748
+     ],
+     [
+      128.037159,
+      35.003732
+     ],
+     [
+      128.027766,
+      35.006482
+     ],
+     [
+      128.018748,
+      35.009972
+     ],
+     [
+      128.010192,
+      35.014169
+     ],
+     [
+      128.002179,
+      35.019032
+     ],
+     [
+      127.994788,
+      35.024514
+     ],
+     [
+      127.988089,
+      35.030562
+     ],
+     [
+      127.982146,
+      35.037119
+     ],
+     [
+      127.977018,
+      35.044121
+     ],
+     [
+      127.972752,
+      35.0515
+     ],
+     [
+      127.969392,
+      35.059186
+     ],
+     [
+      127.966968,
+      35.067105
+     ],
+     [
+      127.965504,
+      35.07518
+     ],
+     [
+      127.965015,
+      35.083333
+     ],
+     [
+      127.965504,
+      35.091487
+     ],
+     [
+      127.966968,
+      35.099562
+     ],
+     [
+      127.969392,
+      35.10748
+     ],
+     [
+      127.972752,
+      35.115166
+     ],
+     [
+      127.977018,
+      35.122546
+     ],
+     [
+      127.982146,
+      35.129548
+     ],
+     [
+      127.988089,
+      35.136104
+     ],
+     [
+      127.994788,
+      35.142153
+     ],
+     [
+      128.002179,
+      35.147635
+     ],
+     [
+      128.010192,
+      35.152498
+     ],
+     [
+      128.018748,
+      35.156695
+     ],
+     [
+      128.027766,
+      35.160185
+     ],
+     [
+      128.037159,
+      35.162935
+     ],
+     [
+      128.046835,
+      35.164919
+     ],
+     [
+      128.056703,
+      35.166116
+     ],
+     [
+      128.066667,
+      35.166517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RKPS",
+  "icao_text": "C1766/26 NOTAMN  \r\nQ)RKRR/QMNLC/IV/NBO/A/000/999/3505N12804E005\r\nA)RKPS B)2609301100 C)2610022200\r\nD)1100-2200\r\nE)RAMP 5 CLSD DUE TO WIP",
+  "id": "1790569023379000",
+  "issued": "2026-09-28T04:16:00.000Z",
+  "last_updated": "2026-09-28T04:17:00.000Z",
+  "local_text": null,
+  "location": "RKPS",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "C1766/26",
+  "purpose": "NBO",
+  "q_code": "QMNLC",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": "1100-2200",
+  "scope": "A",
+  "series": "C",
+  "text": "RAMP 5 CLSD DUE TO WIP",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790569062452000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-28T21:00:00Z",
+  "effective_start": "2026-09-28T07:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T04:20:25+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "Q2302/26 NOTAMN\r\nQ)RJJJ/QARCA/IV/BO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280700 C)2609282100\r\nE)EASTBOUND PACOTS TRACKS BETWEEN JAPAN AND NORTH AMERICA,\r\nTRACK 1.\r\n FLEX ROUTE : KALNA 41N160E 41N170E 40N180E 40N170W 44N160W 47N150W\r\n              49N140W PRETY\r\nJAPAN ROUTE : ADNAP OTR5 KALNA\r\n  NAR ROUTE : ACFT LDG KSEA/KPDX--PRETY TOU KSEA/KPDX\r\n              ACFT LDG CYVR--PRETY GOVAD CYVR\r\n        RMK : ACFT LDG OTHER DEST--PRETY UPR TO DEST\r\nTRACK 2.\r\n FLEX ROUTE : EMRON 39N160E 39N170E 39N180E 39N170W 42N160W 43N150W\r\n              43N140W 41N130W TRYSH\r\nJAPAN ROUTE : ADNAP OTR7 EMRON\r\n  NAR ROUTE : ACFT LDG KSFO--TRYSH AMAKR BGGLO KSFO\r\n              ACFT LDG KLAX--TRYSH ENI OAK BURGL IRNMN KLAX\r\nTRACK 3.\r\n FLEX ROUTE : LEPKI 38N160E 38N170E 38N180E 38N170W 41N160W 42N150W\r\n              41N140W 39N130W DACEM\r\nJAPAN ROUTE : AVBET OTR11 LEPKI\r\n  NAR ROUTE : ACFT LDG KLAX--DACEM PAINT PIRAT BURGL IRNMN KLAX\r\n              ACFT LDG KSFO--DACEM PAINT PIRAT OSI KSFO\r\n        RMK : ATM CENTER TEL:81-92-608-8870",
+  "id": "1790569062452000",
+  "issued": "2026-09-28T04:17:00Z",
+  "last_updated": "2026-09-28T04:18:00Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "Q2302/26",
+  "purpose": "BO",
+  "q_code": "QARCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "Q",
+  "text": "EASTBOUND PACOTS TRACKS BETWEEN JAPAN AND NORTH AMERICA,\r\nTRACK 1.\r\n FLEX ROUTE : KALNA 41N160E 41N170E 40N180E 40N170W 44N160W 47N150W\r\n              49N140W PRETY\r\nJAPAN ROUTE : ADNAP OTR5 KALNA\r\n  NAR ROUTE : ACFT LDG KSEA/KPDX--PRETY TOU KSEA/KPDX\r\n              ACFT LDG CYVR--PRETY GOVAD CYVR\r\n        RMK : ACFT LDG OTHER DEST--PRETY UPR TO DEST\r\nTRACK 2.\r\n FLEX ROUTE : EMRON 39N160E 39N170E 39N180E 39N170W 42N160W 43N150W\r\n              43N140W 41N130W TRYSH\r\nJAPAN ROUTE : ADNAP OTR7 EMRON\r\n  NAR ROUTE : ACFT LDG KSFO--TRYSH AMAKR BGGLO KSFO\r\n              ACFT LDG KLAX--TRYSH ENI OAK BURGL IRNMN KLAX\r\nTRACK 3.\r\n FLEX ROUTE : LEPKI 38N160E 38N170E 38N180E 38N170W 41N160W 42N150W\r\n              41N140W 39N130W DACEM\r\nJAPAN ROUTE : AVBET OTR11 LEPKI\r\n  NAR ROUTE : ACFT LDG KLAX--DACEM PAINT PIRAT BURGL IRNMN KLAX\r\n              ACFT LDG KSFO--DACEM PAINT PIRAT OSI KSFO\r\n        RMK : ATM CENTER TEL:81-92-608-8870",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790569202159000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3310N14118E",
+  "effective_end": "2026-09-28T06:40:00.000Z",
+  "effective_start": "2026-09-28T04:19:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T04:20:25+00:00",
+  "geometry": {
+   "coordinates": [
+    141.3,
+    33.166667
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RJJJ",
+  "icao_text": "X6132/26 NOTAMN\r\nQ)RJJJ/QPFCA/I/NBO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280419 C)2609280640\r\nE)FLOW CTL AS FLWS, \r\n AREA: SECTOR N53 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR N53\r\nRMK: REF AIP ENR1.9-1",
+  "id": "1790569202159000",
+  "issued": "2026-09-28T04:19:00.000Z",
+  "last_updated": "2026-09-28T04:20:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "X6132/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "X",
+  "text": "FLOW CTL AS FLWS, \r\n AREA: SECTOR N53 \r\nPROC: EXP DEP CLR TIME WILL BE ISSUED TO ACFT FOR SECTOR N53\r\nRMK: REF AIP ENR1.9-1",
+  "traffic": "I",
+  "type": "N",
   "upper": null,
   "year": "2026"
  }
