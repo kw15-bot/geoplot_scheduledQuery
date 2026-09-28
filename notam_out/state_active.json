@@ -4648,289 +4648,29 @@
  "1790497856335000": {
   "account_id": "RJAAYNYX",
   "area_group": "REF",
-  "cancelation_date": null,
+  "cancelation_date": "2026-09-28T06:54:00.000Z",
   "classification": "INTL",
   "coordinates": "2612N12738E",
-  "effective_end": "2026-09-28T16:00:00Z",
-  "effective_start": "2026-09-28T15:20:00Z",
-  "end_override": null,
-  "ended_by": null,
+  "effective_end": "2026-09-28T16:00:00.000Z",
+  "effective_start": "2026-09-28T15:20:00.000Z",
+  "end_override": "2026-09-28T06:54:00+00:00",
+  "ended_by": "H3652/26",
   "estimated": true,
   "fir": "RJJJ",
   "first_seen": "2026-09-27T12:01:24+00:00",
   "geometry": {
    "coordinates": [
-    [
-     [
-      127.633333,
-      26.283184
-     ],
-     [
-      127.64242,
-      26.282783
-     ],
-     [
-      127.65142,
-      26.281585
-     ],
-     [
-      127.660245,
-      26.279602
-     ],
-     [
-      127.668811,
-      26.276852
-     ],
-     [
-      127.677036,
-      26.273361
-     ],
-     [
-      127.68484,
-      26.269165
-     ],
-     [
-      127.692147,
-      26.264302
-     ],
-     [
-      127.698888,
-      26.25882
-     ],
-     [
-      127.704998,
-      26.252771
-     ],
-     [
-      127.710418,
-      26.246214
-     ],
-     [
-      127.715095,
-      26.239212
-     ],
-     [
-      127.718985,
-      26.231833
-     ],
-     [
-      127.72205,
-      26.224147
-     ],
-     [
-      127.724261,
-      26.216228
-     ],
-     [
-      127.725596,
-      26.208153
-     ],
-     [
-      127.726042,
-      26.2
-     ],
-     [
-      127.725596,
-      26.191847
-     ],
-     [
-      127.724261,
-      26.183772
-     ],
-     [
-      127.72205,
-      26.175853
-     ],
-     [
-      127.718985,
-      26.168167
-     ],
-     [
-      127.715095,
-      26.160788
-     ],
-     [
-      127.710418,
-      26.153786
-     ],
-     [
-      127.704998,
-      26.147229
-     ],
-     [
-      127.698888,
-      26.14118
-     ],
-     [
-      127.692147,
-      26.135698
-     ],
-     [
-      127.68484,
-      26.130835
-     ],
-     [
-      127.677036,
-      26.126639
-     ],
-     [
-      127.668811,
-      26.123148
-     ],
-     [
-      127.660245,
-      26.120398
-     ],
-     [
-      127.65142,
-      26.118415
-     ],
-     [
-      127.64242,
-      26.117217
-     ],
-     [
-      127.633333,
-      26.116816
-     ],
-     [
-      127.624246,
-      26.117217
-     ],
-     [
-      127.615247,
-      26.118415
-     ],
-     [
-      127.606421,
-      26.120398
-     ],
-     [
-      127.597855,
-      26.123148
-     ],
-     [
-      127.589631,
-      26.126639
-     ],
-     [
-      127.581827,
-      26.130835
-     ],
-     [
-      127.57452,
-      26.135698
-     ],
-     [
-      127.567778,
-      26.14118
-     ],
-     [
-      127.561669,
-      26.147229
-     ],
-     [
-      127.556249,
-      26.153786
-     ],
-     [
-      127.551572,
-      26.160788
-     ],
-     [
-      127.547682,
-      26.168167
-     ],
-     [
-      127.544617,
-      26.175853
-     ],
-     [
-      127.542406,
-      26.183772
-     ],
-     [
-      127.541071,
-      26.191847
-     ],
-     [
-      127.540625,
-      26.2
-     ],
-     [
-      127.541071,
-      26.208153
-     ],
-     [
-      127.542406,
-      26.216228
-     ],
-     [
-      127.544617,
-      26.224147
-     ],
-     [
-      127.547682,
-      26.231833
-     ],
-     [
-      127.551572,
-      26.239212
-     ],
-     [
-      127.556249,
-      26.246214
-     ],
-     [
-      127.561669,
-      26.252771
-     ],
-     [
-      127.567778,
-      26.25882
-     ],
-     [
-      127.57452,
-      26.264302
-     ],
-     [
-      127.581827,
-      26.269165
-     ],
-     [
-      127.589631,
-      26.273361
-     ],
-     [
-      127.597855,
-      26.276852
-     ],
-     [
-      127.606421,
-      26.279602
-     ],
-     [
-      127.615247,
-      26.281585
-     ],
-     [
-      127.624246,
-      26.282783
-     ],
-     [
-      127.633333,
-      26.283184
-     ]
-    ]
+    127.633333,
+    26.2
    ],
-   "type": "Polygon"
+   "type": "Point"
   },
-  "geometry_source": "qline-circle",
+  "geometry_source": "qline-point",
   "icao_location": "ROAH",
   "icao_text": "H3643/26 NOTAMN\r\nQ)RJJJ/QOBCE/IV/M/A/000/002/2612N12738E005\r\nA)ROAH B)2609281520 C)2609281600EST\r\nE)OBST(VESSEL) PASS ACROSS RWY 18L APCH AREA\r\nBTN POINT A AND B\r\nELEV: 121FT AMSL\r\n(NAHA-SHI IN OKINAWA)\r\nRMK: REF AIP ROAH AD 2.23",
   "id": "1790497856335000",
-  "issued": "2026-09-27T08:30:00Z",
-  "last_updated": "2026-09-27T08:31:00Z",
+  "issued": "2026-09-27T08:30:00.000Z",
+  "last_updated": "2026-09-28T06:54:00.000Z",
   "local_text": null,
   "location": "ROAH",
   "lower": null,
@@ -4940,7 +4680,7 @@
   "purpose": "M",
   "q_code": "QOBCE",
   "qline_offset_nm": null,
-  "radius_nm": 5.0,
+  "radius_nm": null,
   "ref_number": null,
   "schedule": null,
   "scope": "A",
@@ -20451,52 +20191,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790544685686000": {
-  "account_id": "RJAAYNYX",
-  "area_group": "REF",
-  "cancelation_date": "2026-09-28T04:12:00.000Z",
-  "classification": "INTL",
-  "coordinates": "3310N14118E",
-  "effective_end": "2026-09-28T21:00:00.000Z",
-  "effective_start": "2026-09-28T07:00:00.000Z",
-  "end_override": "2026-09-28T04:11:00+00:00",
-  "ended_by": "Q2299/26",
-  "estimated": false,
-  "fir": "RJJJ",
-  "first_seen": "2026-09-27T21:40:26+00:00",
-  "geometry": {
-   "coordinates": [
-    141.3,
-    33.166667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "RJJJ",
-  "icao_text": "Q2295/26 NOTAMN\r\nQ)RJJJ/QARCA/IV/BO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280700 C)2609282100\r\nE)EASTBOUND PACOTS TRACKS BETWEEN JAPAN AND NORTH AMERICA,\r\nTRACK 1.\r\n FLEX ROUTE : KALNA 41N160E 42N170E 43N180E 45N170W 48N160W 50N150W\r\n              50N140W ORNAI\r\nJAPAN ROUTE : ADNAP OTR5 KALNA\r\n  NAR ROUTE : ACFT LDG KSEA/KPDX--ORNAI TOU KSEA/KPDX\r\n              ACFT LDG CYVR--ORNAI POWOL CYVR\r\n        RMK : ACFT LDG OTHER DEST--ORNAI UPR TO DEST\r\nTRACK 2.\r\n FLEX ROUTE : EMRON 40N160E 41N170E 41N180E 43N170W 45N160W 45N150W\r\n              44N140W 42N130W VESPA\r\nJAPAN ROUTE : ADNAP OTR7 EMRON\r\n  NAR ROUTE : ACFT LDG KSFO--VESPA AMAKR BGGLO KSFO\r\n              ACFT LDG KLAX--VESPA ENI OAK BURGL IRNMN KLAX\r\nTRACK 3.\r\n FLEX ROUTE : LEPKI 39N160E 40N170E 40N180E 42N170W 44N160W 44N150W\r\n              43N140W 40N130W DACEM\r\nJAPAN ROUTE : AVBET OTR11 LEPKI\r\n  NAR ROUTE : ACFT LDG KLAX--DACEM PAINT PIRAT BURGL IRNMN KLAX\r\n              ACFT LDG KSFO--DACEM PAINT PIRAT OSI KSFO\r\n        RMK : ATM CENTER TEL:81-92-608-8870",
-  "id": "1790544685686000",
-  "issued": "2026-09-27T21:31:00.000Z",
-  "last_updated": "2026-09-28T04:12:00.000Z",
-  "local_text": null,
-  "location": "RJJJ",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "Q2295/26",
-  "purpose": "BO",
-  "q_code": "QARCA",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "Q",
-  "text": "EASTBOUND PACOTS TRACKS BETWEEN JAPAN AND NORTH AMERICA,\r\nTRACK 1.\r\n FLEX ROUTE : KALNA 41N160E 42N170E 43N180E 45N170W 48N160W 50N150W\r\n              50N140W ORNAI\r\nJAPAN ROUTE : ADNAP OTR5 KALNA\r\n  NAR ROUTE : ACFT LDG KSEA/KPDX--ORNAI TOU KSEA/KPDX\r\n              ACFT LDG CYVR--ORNAI POWOL CYVR\r\n        RMK : ACFT LDG OTHER DEST--ORNAI UPR TO DEST\r\nTRACK 2.\r\n FLEX ROUTE : EMRON 40N160E 41N170E 41N180E 43N170W 45N160W 45N150W\r\n              44N140W 42N130W VESPA\r\nJAPAN ROUTE : ADNAP OTR7 EMRON\r\n  NAR ROUTE : ACFT LDG KSFO--VESPA AMAKR BGGLO KSFO\r\n              ACFT LDG KLAX--VESPA ENI OAK BURGL IRNMN KLAX\r\nTRACK 3.\r\n FLEX ROUTE : LEPKI 39N160E 40N170E 40N180E 42N170W 44N160W 44N150W\r\n              43N140W 40N130W DACEM\r\nJAPAN ROUTE : AVBET OTR11 LEPKI\r\n  NAR ROUTE : ACFT LDG KLAX--DACEM PAINT PIRAT BURGL IRNMN KLAX\r\n              ACFT LDG KSFO--DACEM PAINT PIRAT OSI KSFO\r\n        RMK : ATM CENTER TEL:81-92-608-8870",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790544771055000": {
   "account_id": "RJAAYNYX",
   "area_group": "REF",
@@ -20538,52 +20232,6 @@
   "scope": "E",
   "series": "Q",
   "text": "EASTBOUND PACOTS TRACKS BETWEEN JAPAN AND HAWAII,\r\nTRACK 11.\r\n FLEX ROUTE : TONIK SEGRO CANOE 23N160E 21N170E 21N180E 21N170W HOOPA\r\nJAPAN ROUTE : DAGDA G223 TONIK\r\n PHNL ROUTE : HOOPA KATHS OPACA PHNL\r\n        RMK : TRK 11 NOT AVAILABLE IF CROSSING CANOE BETWEEN 1400Z\r\n              AND 1900Z\r\nTRACK 12.\r\n FLEX ROUTE : TONIK VASKO 2235N14450E 2311N15000E CANOE 23N160E\r\n              21N170E 21N180E 21N170W HOOPA\r\nJAPAN ROUTE : DAGDA G223 TONIK\r\n PHNL ROUTE : HOOPA KATHS OPACA PHNL\r\n        RMK : ATM CENTER TEL:81-92-608-8870",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1790544874557000": {
-  "account_id": "RJAAYNYX",
-  "area_group": "REF",
-  "cancelation_date": "2026-09-28T04:13:00.000Z",
-  "classification": "INTL",
-  "coordinates": "3310N14118E",
-  "effective_end": "2026-09-28T21:00:00.000Z",
-  "effective_start": "2026-09-28T07:00:00.000Z",
-  "end_override": "2026-09-28T04:13:00+00:00",
-  "ended_by": "Q2300/26",
-  "estimated": false,
-  "fir": "RJJJ",
-  "first_seen": "2026-09-27T21:40:26+00:00",
-  "geometry": {
-   "coordinates": [
-    141.3,
-    33.166667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "RJJJ",
-  "icao_text": "Q2297/26 NOTAMN\r\nQ)RJJJ/QARCA/IV/BO/E/000/999/3310N14118E999\r\nA)RJJJ B)2609280700 C)2609282100\r\nE)EASTBOUND PACOTS TRACKS BETWEEN SOUTHEAST ASIA AND NORTH AMERICA,\r\nTRACK 14.\r\n     FLEX ROUTE : LEPKI 38N160E 39N170E 39N180E 41N170W 43N160W\r\n                  43N150W 42N140W 38N130W ALLBE\r\nRCTP/VHHH ROUTE : MOLKA M750 MUKEP Y891 OVSUN Y893 IGMIS Y57 POROT\r\n                  OTR11 LEPKI\r\n      NAR ROUTE : ACFT LDG KSFO--ALLBE PIRAT OSI KSFO\r\n                  ACFT LDG KLAX--ALLBE PIRAT BURGL IRNMN KLAX\r\n            RMK : TRK 15 NOT AVAILABLE\r\n                  ATM CENTER TEL:81-92-608-8870",
-  "id": "1790544874557000",
-  "issued": "2026-09-27T21:34:00.000Z",
-  "last_updated": "2026-09-28T04:13:00.000Z",
-  "local_text": null,
-  "location": "RJJJ",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "Q2297/26",
-  "purpose": "BO",
-  "q_code": "QARCA",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "Q",
-  "text": "EASTBOUND PACOTS TRACKS BETWEEN SOUTHEAST ASIA AND NORTH AMERICA,\r\nTRACK 14.\r\n     FLEX ROUTE : LEPKI 38N160E 39N170E 39N180E 41N170W 43N160W\r\n                  43N150W 42N140W 38N130W ALLBE\r\nRCTP/VHHH ROUTE : MOLKA M750 MUKEP Y891 OVSUN Y893 IGMIS Y57 POROT\r\n                  OTR11 LEPKI\r\n      NAR ROUTE : ACFT LDG KSFO--ALLBE PIRAT OSI KSFO\r\n                  ACFT LDG KLAX--ALLBE PIRAT BURGL IRNMN KLAX\r\n            RMK : TRK 15 NOT AVAILABLE\r\n                  ATM CENTER TEL:81-92-608-8870",
   "traffic": "IV",
   "type": "N",
   "upper": null,
@@ -70348,6 +69996,618 @@
   "scope": "A",
   "series": "F",
   "text": "RWY18L/36R NOT AVBL FOR LANDING,EXCEPT ALTN.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790578485690000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2612N12738E",
+  "effective_end": "2026-10-01T06:54:00.000Z",
+  "effective_start": "2026-09-28T06:54:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T07:00:44+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      127.633333,
+      26.283184
+     ],
+     [
+      127.64242,
+      26.282783
+     ],
+     [
+      127.65142,
+      26.281585
+     ],
+     [
+      127.660245,
+      26.279602
+     ],
+     [
+      127.668811,
+      26.276852
+     ],
+     [
+      127.677036,
+      26.273361
+     ],
+     [
+      127.68484,
+      26.269165
+     ],
+     [
+      127.692147,
+      26.264302
+     ],
+     [
+      127.698888,
+      26.25882
+     ],
+     [
+      127.704998,
+      26.252771
+     ],
+     [
+      127.710418,
+      26.246214
+     ],
+     [
+      127.715095,
+      26.239212
+     ],
+     [
+      127.718985,
+      26.231833
+     ],
+     [
+      127.72205,
+      26.224147
+     ],
+     [
+      127.724261,
+      26.216228
+     ],
+     [
+      127.725596,
+      26.208153
+     ],
+     [
+      127.726042,
+      26.2
+     ],
+     [
+      127.725596,
+      26.191847
+     ],
+     [
+      127.724261,
+      26.183772
+     ],
+     [
+      127.72205,
+      26.175853
+     ],
+     [
+      127.718985,
+      26.168167
+     ],
+     [
+      127.715095,
+      26.160788
+     ],
+     [
+      127.710418,
+      26.153786
+     ],
+     [
+      127.704998,
+      26.147229
+     ],
+     [
+      127.698888,
+      26.14118
+     ],
+     [
+      127.692147,
+      26.135698
+     ],
+     [
+      127.68484,
+      26.130835
+     ],
+     [
+      127.677036,
+      26.126639
+     ],
+     [
+      127.668811,
+      26.123148
+     ],
+     [
+      127.660245,
+      26.120398
+     ],
+     [
+      127.65142,
+      26.118415
+     ],
+     [
+      127.64242,
+      26.117217
+     ],
+     [
+      127.633333,
+      26.116816
+     ],
+     [
+      127.624246,
+      26.117217
+     ],
+     [
+      127.615247,
+      26.118415
+     ],
+     [
+      127.606421,
+      26.120398
+     ],
+     [
+      127.597855,
+      26.123148
+     ],
+     [
+      127.589631,
+      26.126639
+     ],
+     [
+      127.581827,
+      26.130835
+     ],
+     [
+      127.57452,
+      26.135698
+     ],
+     [
+      127.567778,
+      26.14118
+     ],
+     [
+      127.561669,
+      26.147229
+     ],
+     [
+      127.556249,
+      26.153786
+     ],
+     [
+      127.551572,
+      26.160788
+     ],
+     [
+      127.547682,
+      26.168167
+     ],
+     [
+      127.544617,
+      26.175853
+     ],
+     [
+      127.542406,
+      26.183772
+     ],
+     [
+      127.541071,
+      26.191847
+     ],
+     [
+      127.540625,
+      26.2
+     ],
+     [
+      127.541071,
+      26.208153
+     ],
+     [
+      127.542406,
+      26.216228
+     ],
+     [
+      127.544617,
+      26.224147
+     ],
+     [
+      127.547682,
+      26.231833
+     ],
+     [
+      127.551572,
+      26.239212
+     ],
+     [
+      127.556249,
+      26.246214
+     ],
+     [
+      127.561669,
+      26.252771
+     ],
+     [
+      127.567778,
+      26.25882
+     ],
+     [
+      127.57452,
+      26.264302
+     ],
+     [
+      127.581827,
+      26.269165
+     ],
+     [
+      127.589631,
+      26.273361
+     ],
+     [
+      127.597855,
+      26.276852
+     ],
+     [
+      127.606421,
+      26.279602
+     ],
+     [
+      127.615247,
+      26.281585
+     ],
+     [
+      127.624246,
+      26.282783
+     ],
+     [
+      127.633333,
+      26.283184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ROAH",
+  "icao_text": "H3652/26 NOTAMC H3643/26\r\nQ)RJJJ/QOBXX/IV/M/A/000/002/2612N12738E005\r\nA)ROAH B)2609280654\r\nE)OBST (VESSEL) PASS \r\nNEW NOTAM TO FLW",
+  "id": "1790578485690000",
+  "issued": "2026-09-28T06:54:00.000Z",
+  "last_updated": "2026-09-28T06:54:00.000Z",
+  "local_text": null,
+  "location": "ROAH",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "H3652/26",
+  "purpose": "M",
+  "q_code": "QOBXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "H3643/26",
+  "schedule": null,
+  "scope": "A",
+  "series": "H",
+  "text": "OBST (VESSEL) PASS \r\nNEW NOTAM TO FLW",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790578581012000": {
+  "account_id": "RJAAYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3249N13203E",
+  "effective_end": "2026-09-30T13:30:00.000Z",
+  "effective_start": "2026-09-29T22:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RJJJ",
+  "first_seen": "2026-09-28T07:00:44+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      132.05,
+      36.177285
+     ],
+     [
+      132.44195,
+      36.161102
+     ],
+     [
+      132.830125,
+      36.112711
+     ],
+     [
+      133.210787,
+      36.032578
+     ],
+     [
+      133.58027,
+      35.921473
+     ],
+     [
+      133.935016,
+      35.780467
+     ],
+     [
+      134.271608,
+      35.610918
+     ],
+     [
+      134.586805,
+      35.41446
+     ],
+     [
+      134.877571,
+      35.192982
+     ],
+     [
+      135.141106,
+      34.94862
+     ],
+     [
+      135.374871,
+      34.683726
+     ],
+     [
+      135.576617,
+      34.400851
+     ],
+     [
+      135.744399,
+      34.10272
+     ],
+     [
+      135.876602,
+      33.792203
+     ],
+     [
+      135.971953,
+      33.472291
+     ],
+     [
+      136.029534,
+      33.146065
+     ],
+     [
+      136.048789,
+      32.816667
+     ],
+     [
+      136.029534,
+      32.487268
+     ],
+     [
+      135.971953,
+      32.161043
+     ],
+     [
+      135.876602,
+      31.841131
+     ],
+     [
+      135.744399,
+      31.530614
+     ],
+     [
+      135.576617,
+      31.232482
+     ],
+     [
+      135.374871,
+      30.949607
+     ],
+     [
+      135.141106,
+      30.684713
+     ],
+     [
+      134.877571,
+      30.440351
+     ],
+     [
+      134.586805,
+      30.218874
+     ],
+     [
+      134.271608,
+      30.022415
+     ],
+     [
+      133.935016,
+      29.852866
+     ],
+     [
+      133.58027,
+      29.71186
+     ],
+     [
+      133.210787,
+      29.600756
+     ],
+     [
+      132.830125,
+      29.520622
+     ],
+     [
+      132.44195,
+      29.472231
+     ],
+     [
+      132.05,
+      29.456049
+     ],
+     [
+      131.65805,
+      29.472231
+     ],
+     [
+      131.269875,
+      29.520622
+     ],
+     [
+      130.889213,
+      29.600756
+     ],
+     [
+      130.51973,
+      29.71186
+     ],
+     [
+      130.164984,
+      29.852866
+     ],
+     [
+      129.828392,
+      30.022415
+     ],
+     [
+      129.513195,
+      30.218874
+     ],
+     [
+      129.222429,
+      30.440351
+     ],
+     [
+      128.958894,
+      30.684713
+     ],
+     [
+      128.725129,
+      30.949607
+     ],
+     [
+      128.523383,
+      31.232482
+     ],
+     [
+      128.355601,
+      31.530614
+     ],
+     [
+      128.223398,
+      31.841131
+     ],
+     [
+      128.128047,
+      32.161043
+     ],
+     [
+      128.070466,
+      32.487268
+     ],
+     [
+      128.051211,
+      32.816667
+     ],
+     [
+      128.070466,
+      33.146065
+     ],
+     [
+      128.128047,
+      33.472291
+     ],
+     [
+      128.223398,
+      33.792203
+     ],
+     [
+      128.355601,
+      34.10272
+     ],
+     [
+      128.523383,
+      34.400851
+     ],
+     [
+      128.725129,
+      34.683726
+     ],
+     [
+      128.958894,
+      34.94862
+     ],
+     [
+      129.222429,
+      35.192982
+     ],
+     [
+      129.513195,
+      35.41446
+     ],
+     [
+      129.828392,
+      35.610918
+     ],
+     [
+      130.164984,
+      35.780467
+     ],
+     [
+      130.51973,
+      35.921473
+     ],
+     [
+      130.889213,
+      36.032578
+     ],
+     [
+      131.269875,
+      36.112711
+     ],
+     [
+      131.65805,
+      36.161102
+     ],
+     [
+      132.05,
+      36.177285
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RJJJ",
+  "icao_text": "P4798/26 NOTAMN\r\nQ)RJJJ/QRACA/IV/NBO/W/000/999/3249N13203E202\r\nA)RJJJ B)2609292200 C)2609301330\r\nE)IWAKUNI TEMPO RESERVED AIRSPACE ACT AS FLW,\r\nNAME/ID      ALT           PERIOD\r\nITRA-E       SFC/FL250     2609292200/2609301330\r\nITRA-N1      SFC/FL180     2609292200/2609301330\r\nITRA-N2      SFC/FL600     2609292200/2609301330\r\nITRA-N3      SFC/FL240     2609292200/2609301330\r\nITRA-S10     SFC/FL600     2609292200/2609301330\r\nITRA-S11     SFC/FL600     2609292200/2609301330\r\nITRA-S12     SFC/FL600     2609292200/2609301330\r\nITRA-S13     SFC/FL600     2609292200/2609301330\r\nITRA-S14     SFC/FL600     2609292200/2609301330\r\nITRA-S15     SFC/FL600     2609292200/2609301330\r\nITRA-S16     SFC/FL600     2609292200/2609301330\r\nITRA-S20     SFC/FL450     2609292200/2609301330\r\nITRA-S21     SFC/FL450     2609292200/2609301330\r\nITRA-S22     SFC/FL450     2609292200/2609301330\r\nITRA-S23     SFC/FL450     2609292200/2609301330\r\nITRA-S24     SFC/FL450     2609292200/2609301330\r\nITRA-S25     SFC/FL450     2609292200/2609301330\r\nITRA-S30     SFC/FL250     2609292200/2609301330\r\nITRA-S31     SFC/FL250     2609292200/2609301330\r\nITRA-S32     SFC/FL250     2609292200/2609301330\r\nITRA-S33     SFC/FL250     2609292200/2609301330\r\nRMK: REF AIP SUP 023/26",
+  "id": "1790578581012000",
+  "issued": "2026-09-28T06:55:00.000Z",
+  "last_updated": "2026-09-28T06:56:00.000Z",
+  "local_text": null,
+  "location": "RJJJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "P4798/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": 202.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "P",
+  "text": "IWAKUNI TEMPO RESERVED AIRSPACE ACT AS FLW,\r\nNAME/ID      ALT           PERIOD\r\nITRA-E       SFC/FL250     2609292200/2609301330\r\nITRA-N1      SFC/FL180     2609292200/2609301330\r\nITRA-N2      SFC/FL600     2609292200/2609301330\r\nITRA-N3      SFC/FL240     2609292200/2609301330\r\nITRA-S10     SFC/FL600     2609292200/2609301330\r\nITRA-S11     SFC/FL600     2609292200/2609301330\r\nITRA-S12     SFC/FL600     2609292200/2609301330\r\nITRA-S13     SFC/FL600     2609292200/2609301330\r\nITRA-S14     SFC/FL600     2609292200/2609301330\r\nITRA-S15     SFC/FL600     2609292200/2609301330\r\nITRA-S16     SFC/FL600     2609292200/2609301330\r\nITRA-S20     SFC/FL450     2609292200/2609301330\r\nITRA-S21     SFC/FL450     2609292200/2609301330\r\nITRA-S22     SFC/FL450     2609292200/2609301330\r\nITRA-S23     SFC/FL450     2609292200/2609301330\r\nITRA-S24     SFC/FL450     2609292200/2609301330\r\nITRA-S25     SFC/FL450     2609292200/2609301330\r\nITRA-S30     SFC/FL250     2609292200/2609301330\r\nITRA-S31     SFC/FL250     2609292200/2609301330\r\nITRA-S32     SFC/FL250     2609292200/2609301330\r\nITRA-S33     SFC/FL250     2609292200/2609301330\r\nRMK: REF AIP SUP 023/26",
   "traffic": "IV",
   "type": "N",
   "upper": null,
