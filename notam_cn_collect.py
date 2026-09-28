@@ -51,6 +51,8 @@ import urllib.parse
 import urllib.request
 from pathlib import Path
 
+import notam_route_segments
+
 SCHEMA_VERSION = 1
 HOSTS = {
     "fit": "https://api-fit.cgifederal-aim.com",
@@ -400,7 +402,7 @@ def _valid_polygon(coords):
 
 
 def build_geometry(feature, n, e_text=""):
-    """(geometry|None, source)。優先順: APIの面 > E項テキストの多角形 > Q項の円 > Q項の点 > APIの点。
+    """(geometry|None, source)。優先順: APIの面 > E項テキストの多角形 > 航空路閉鎖の線 > Q項の円 > Q項の点 > APIの点。
     Q項の中心座標は誤記がありうる（実データで、E項の多角形から138NMずれた例を確認）ため、
     E項に多角形があればそちらを正とする。"""
     g = feature.get("geometry") or {}
@@ -428,6 +430,11 @@ def build_geometry(feature, n, e_text=""):
         geom = {"type": "Polygon", "coordinates": [rings[0]]} if len(rings) == 1 \
             else {"type": "MultiPolygon", "coordinates": [[r] for r in rings]}
         return geom, "text-polygon"
+    # 航空路の区間閉鎖(SEGMENT A-B OF ATS RTE R CLSD 等)を、AIPデータセットの索引で線にする。
+    # 索引(環境変数 AIPDS_INDEX)が無ければ何もしない。HANDOFF_NOTAM.md §19
+    line = notam_route_segments.route_closure_geometry(e_text)
+    if line:
+        return line, "route-segment"
     c = parse_qline_coord(n.get("coordinates"))
     try:
         r = float(n.get("radius")) if n.get("radius") not in (None, "") else None

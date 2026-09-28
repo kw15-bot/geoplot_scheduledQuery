@@ -2405,9 +2405,10 @@ function _shpSignedArea(ring){
   return s/2;
 }
 
-function _buildShapefileBinaries(groups){
+function _buildShapefileBinaries(groups, forceType){
   const maxLen = Math.max(...groups.map(g=>g.length));
-  const shapeType = maxLen >= 3 ? 5 : maxLen === 2 ? 3 : (groups.length > 1 ? 8 : 1);
+  // forceType: 3を渡すと点数に関係なくPolyLineにする(NOTAMの航空路閉鎖の線。閉じたリングにしない)
+  const shapeType = forceType || (maxLen >= 3 ? 5 : maxLen === 2 ? 3 : (groups.length > 1 ? 8 : 1));
 
   let allX = [], allY = [];
   let contentBytes; // レコード本体(ShapeType含む)のバイト列を作る
@@ -2596,6 +2597,7 @@ function notamGeometryGroups(geom){
   if (geom.type === 'Polygon') return [toPts(geom.coordinates[0] || [])];
   if (geom.type === 'MultiPolygon') return geom.coordinates.map(poly => toPts(poly[0] || []));
   if (geom.type === 'LineString') return [toPts(geom.coordinates)];
+  if (geom.type === 'MultiLineString') return geom.coordinates.map(toPts);
   if (geom.type === 'Point') return [toPts([geom.coordinates])];
   if (geom.type === 'GeometryCollection') return geom.geometries.flatMap(notamGeometryGroups);
   return [];
@@ -2612,7 +2614,8 @@ async function exportNotamAsShapefile(f, btn){
   btn.disabled = true;
   btn.textContent = '出力中...';
   try {
-    const { shpBuf, shxBuf } = _buildShapefileBinaries(groups);
+    const isLine = /LineString$/.test((f.geometry || {}).type || '');
+    const { shpBuf, shxBuf } = _buildShapefileBinaries(groups, isLine ? 3 : undefined);
     const dbfBuf = _buildDbf([
       ['NOTAM_NO', p.number || '', 20],
       ['TITLE', notamHeading(f), 120],
@@ -3286,13 +3289,15 @@ function guessNotamUrl(geojsonUrl){
   return geojsonUrl.replace(/(^|\/)msa_out\//, '$1notam_out/').replace(/[^/]+$/, 'notam_cn.geojson');
 }
 function notamStatusOf(f){ return (f.properties && f.properties.status) || 'active'; }
-// E項に実座標があるポリゴン系のみを表示する。Q項の座標/半径から作った円・点
+// E項に実座標があるポリゴン系と、航空路の区間閉鎖をAIPデータセットの航空路で線にしたもの
+// (geometry_source: route-segment、LineString/MultiLineString)を表示する。Q項の座標/半径から作った円・点
 // (geometry_source: qline-circle/qline-point)や図形なしは、「参考として意味のある形状情報が
 // 本文に無い」ため一覧・地図の両方から除外する(収集自体はnotam_cn_collect.py側で継続し、
 // notam_out系ファイルには残る。除外はこのビューワの表示範囲に限定される)。
 function notamHasRealPolygon(f){
-  return !!(f.geometry && (f.geometry.type === 'Polygon' || f.geometry.type === 'MultiPolygon')
-    && f.properties && f.properties.geometry_source === 'text-polygon');
+  const t = f.geometry && f.geometry.type, src = f.properties && f.properties.geometry_source;
+  return (src === 'text-polygon' && (t === 'Polygon' || t === 'MultiPolygon'))
+    || (src === 'route-segment' && (t === 'LineString' || t === 'MultiLineString'));
 }
 // 見出し・FIRドロップダウンに使うFIRコード。Q項のFIR(fir)を使うが、複数FIRにまたがる
 // NOTAMはQ項が国コード+XX(例: ZXXX)になり、代わりにA項に各FIRが並ぶ決まりなので、
@@ -3326,8 +3331,10 @@ function notamStyle(f){
   const st = notamStatusOf(f);
   const c = statusColor(st === 'active' ? 'active' : st === 'upcoming' ? 'notice' : 'archive');
   const isPoint = f.geometry && f.geometry.type === 'Point';
+  // 航空路閉鎖の線は面より細く見えるので太めにする
+  const isLine = f.geometry && /LineString$/.test(f.geometry.type);
   return {
-    color: c.line, weight: isPoint ? 1.3 : 1.5, fillColor: c.fill, fillOpacity: isPoint ? 0.55 : 0.14,
+    color: c.line, weight: isPoint ? 1.3 : isLine ? 4 : 1.5, fillColor: c.fill, fillOpacity: isPoint ? 0.55 : 0.14,
     // geometry_source が qline-circle/qline-point (Q項からの推定図形) の場合は破線にして、
     // E項座標列から得た確度の高い図形(実線)と見た目で区別する。
     dashArray: (p.geometry_source || '').startsWith('qline') ? '5,4' : null,
@@ -3426,6 +3433,7 @@ function notamUnwrapGeometry(geom){
   if (geom.type === 'LineString') return { type:'LineString', coordinates: ring(geom.coordinates) };
   if (geom.type === 'Polygon') return { type:'Polygon', coordinates: geom.coordinates.map(ring) };
   if (geom.type === 'MultiPolygon') return { type:'MultiPolygon', coordinates: geom.coordinates.map(p => p.map(ring)) };
+  if (geom.type === 'MultiLineString') return { type:'MultiLineString', coordinates: geom.coordinates.map(ring) };
   return geom;
 }
 function notamForLeaflet(f){
@@ -3442,9 +3450,11 @@ function rebuildNotamMapLayer(){
   // エリアが複数あるNOTAM(MultiPolygon、例: L1539/26のAREA 1/AREA 2)は、エリアごとに別の図形に
   // 分けて描く。Leafletは1図形に1つしかツールチップを出せないので、こうしないとNOTAM番号が
   // 片方のエリアにしか付かない。ポップアップ等は元のfeature(_notamOrig)から作る。
-  const parts = feats.flatMap(f => f.geometry.type === 'MultiPolygon'
+  // 航空路閉鎖の線(MultiLineString、例: A4969/26の5区間)も同じく区間ごとに分ける。
+  const SPLIT = { MultiPolygon: 'Polygon', MultiLineString: 'LineString' };
+  const parts = feats.flatMap(f => SPLIT[f.geometry.type]
     ? f.geometry.coordinates.map(coords => ({ type:'Feature', properties: f.properties,
-        geometry: { type:'Polygon', coordinates: coords }, _notamOrig: f }))
+        geometry: { type: SPLIT[f.geometry.type], coordinates: coords }, _notamOrig: f }))
     : [f]).map(notamForLeaflet);
   // 範囲がまったく同じ図形が複数ある(例: A4714/26とA4715/26)と、NOTAM番号のラベルが同じ位置に
   // 重なって読めなくなるので、1つのラベルにまとめて(「A4714/26・A4715/26」)最初の図形にだけ付ける。
