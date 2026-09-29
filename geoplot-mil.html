@@ -96,7 +96,7 @@ body{
 .brand small{font-family:var(--sans);font-weight:400;letter-spacing:0;color:var(--text-dim);font-size:11px;margin-left:4px;}
 /* ヘッダー中央の「現在有効な警報」流れるボックス。中身を2回複製して並べ、
    translateX(0)→translateX(-50%)でループさせる定番のマーキー実装(継ぎ目が
-   出ない)。件数0のときはアニメーションを止めて固定メッセージを表示する。 */
+   出ない)。件数0のときも「現在有効な〜はありません」を同じように流す。 */
 .header-ticker{flex:1;min-width:0;overflow:hidden;position:relative;height:30px;
   margin:0 14px;border-radius:6px;background:var(--panel-alt);border:1px solid var(--border);}
 .header-ticker-track{position:absolute;top:0;left:0;height:100%;display:flex;align-items:center;
@@ -105,8 +105,8 @@ body{
 .header-ticker-track .htick-item{padding:0 30px;font-size:12px;color:var(--text-dim);position:relative;}
 .header-ticker-track .htick-item::after{content:'';position:absolute;right:0;top:50%;
   transform:translateY(-50%);width:4px;height:4px;border-radius:50%;background:var(--text-faint);}
-.header-ticker-empty{position:absolute;inset:0;display:flex;align-items:center;
-  padding:0 14px;font-size:12px;color:var(--text-faint);}
+.header-ticker-track .htick-item.htick-empty{color:var(--text-faint);}
+.header-ticker-track .htick-item.htick-empty::after{display:none;}
 @keyframes header-ticker-scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
 /* 手動モードでは警報一覧そのものを扱わないので、ティッカーは表示しない(旧
    header-spacerと同じ、見た目には何も無いflex:1の空き領域に戻す。レイアウト用に
@@ -2875,37 +2875,39 @@ function updateNotamHeaderTicker(){
 }
 function fillHeaderTicker(track, titles, emptyText){
   if (!track) return;
-  const pane = track.parentElement;
+  // 0件のときも「現在有効な〜はありません」を同じように流す(2026-09-29、ユーザー要望)。
+  // 文言だけは薄い色(.htick-empty)にし、区切りの点は付けない。
+  track._baseHtml = titles.length
+    ? titles.map(t => `<span class="htick-item">${esc(t)}</span>`).join('')
+    : `<span class="htick-item htick-empty">${esc(emptyText)}</span>`;
   track.style.animation = 'none';
-  let msg = pane.querySelector('.header-ticker-empty');
-  if (!titles.length){
-    track.innerHTML = '';
-    pane.classList.add('is-empty');
-    if (!msg){
-      msg = document.createElement('div');
-      msg.className = 'header-ticker-empty';
-      pane.appendChild(msg);
-    }
-    msg.textContent = emptyText;
-    return;
-  }
-  pane.classList.remove('is-empty');
-  if (msg) msg.remove();
-
-  const itemsHtml = titles.map(t => `<span class="htick-item">${esc(t)}</span>`).join('');
-  track.innerHTML = itemsHtml + itemsHtml; // 2回複製(ループの継ぎ目を隠すため)
-
-  // 描画後の実幅(=複製2つ分)から、1コピー分の幅を求めて所要時間を逆算する。
-  // 非表示のモード側(display:none)では幅が0になるので、表示されたときに計り直す(syncHeaderTickers)。
+  track.innerHTML = track._baseHtml;
   requestAnimationFrame(()=> startHeaderTicker(track));
 }
+// 1コピー分がティッカーの枠より短い(件数が少ない・0件の文言だけ)と、同じ文字が同時に2つ見えて
+// 途切れたように見えるので、枠の幅に届くまで繰り返してから、それを2回並べてループさせる。
+// 非表示のモード側(display:none)では幅が0で計れないので、表示されたときに計り直す(syncHeaderTickers)。
 function startHeaderTicker(track){
-  if (!track.innerHTML) return;
+  if (!track._baseHtml) return;
+  track.innerHTML = track._baseHtml;
+  const baseWidth = track.scrollWidth;
+  const boxWidth = track.parentElement.clientWidth;
+  if (!baseWidth || !boxWidth){ track.style.animation = 'none'; return; }
+  const copy = track._baseHtml.repeat(Math.max(1, Math.ceil(boxWidth / baseWidth)));
+  track.innerHTML = copy + copy; // 2回複製(ループの継ぎ目を隠すため)
   const oneCopyWidth = track.scrollWidth / 2;
-  if (!oneCopyWidth) return;
   const duration = Math.max(8, oneCopyWidth / HEADER_TICKER_SPEED_PX_S);
   track.style.animation = `header-ticker-scroll ${duration.toFixed(1)}s linear infinite`;
 }
+// 画面幅が変わると繰り返し回数が合わなくなるので、表示中のティッカーを計り直す
+let _tickerResizeTimer = null;
+window.addEventListener('resize', ()=>{
+  clearTimeout(_tickerResizeTimer);
+  _tickerResizeTimer = setTimeout(()=> ['#headerTickerTrack', '#headerTickerTrackNotam'].forEach(sel => {
+    const t = $(sel);
+    if (t) startHeaderTicker(t);
+  }), 250);
+});
 function syncHeaderTickers(){
   requestAnimationFrame(()=> ['#headerTickerTrack', '#headerTickerTrackNotam'].forEach(sel => {
     const t = $(sel);
