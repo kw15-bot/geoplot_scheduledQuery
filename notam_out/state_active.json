@@ -36413,52 +36413,6 @@
   "upper": "8900M AMSL",
   "year": "2026"
  },
- "1790628210474239": {
-  "account_id": "SUAW",
-  "area_group": "REF",
-  "cancelation_date": "2026-09-28T20:45:00.000Z",
-  "classification": "DOM",
-  "coordinates": null,
-  "effective_end": "2026-09-30T09:00:00.000Z",
-  "effective_start": "2026-09-29T07:00:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZAK",
-  "first_seen": "2026-09-28T20:50:28+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.015794,
-    37.542436
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": null,
-  "id": "1790628210474239",
-  "issued": "2026-09-28T20:42:00.000Z",
-  "last_updated": "2026-09-28T20:46:00.000Z",
-  "local_text": "!SUAW 09/090 ZAK AIRSPACE W291E ACT SFC-FL800 2609290700-2609300900",
-  "location": "ZAK",
-  "lower": null,
-  "max_fl": null,
-  "min_fl": null,
-  "number": "09/090",
-  "purpose": null,
-  "q_code": "QROLT",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": null,
-  "text": "AIRSPACE !SUAW 09/090 ZAK AIRSPACE W291E ACT SFC-FL800",
-  "traffic": null,
-  "type": null,
-  "upper": null,
-  "year": "2026"
- },
  "1790628359271873": {
   "account_id": "KZAK",
   "area_group": "REF",
@@ -57835,6 +57789,536 @@
   "series": "B",
   "text": "MIL EXER (PUERTO PRINCESA ATZ). CNL.",
   "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790664664848000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0934N12346E",
+  "effective_end": "2026-10-02T06:50:00.000Z",
+  "effective_start": "2026-09-29T06:50:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-09-29T07:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      123.766667,
+      9.64985
+     ],
+     [
+      123.774935,
+      9.64945
+     ],
+     [
+      123.783124,
+      9.648252
+     ],
+     [
+      123.791154,
+      9.646268
+     ],
+     [
+      123.798949,
+      9.643518
+     ],
+     [
+      123.806432,
+      9.640028
+     ],
+     [
+      123.813533,
+      9.635831
+     ],
+     [
+      123.820182,
+      9.630968
+     ],
+     [
+      123.826316,
+      9.625486
+     ],
+     [
+      123.831875,
+      9.619438
+     ],
+     [
+      123.836807,
+      9.612881
+     ],
+     [
+      123.841063,
+      9.605879
+     ],
+     [
+      123.844602,
+      9.5985
+     ],
+     [
+      123.847391,
+      9.590814
+     ],
+     [
+      123.849403,
+      9.582895
+     ],
+     [
+      123.850617,
+      9.57482
+     ],
+     [
+      123.851023,
+      9.566667
+     ],
+     [
+      123.850617,
+      9.558513
+     ],
+     [
+      123.849403,
+      9.550438
+     ],
+     [
+      123.847391,
+      9.54252
+     ],
+     [
+      123.844602,
+      9.534834
+     ],
+     [
+      123.841063,
+      9.527454
+     ],
+     [
+      123.836807,
+      9.520452
+     ],
+     [
+      123.831875,
+      9.513896
+     ],
+     [
+      123.826316,
+      9.507847
+     ],
+     [
+      123.820182,
+      9.502365
+     ],
+     [
+      123.813533,
+      9.497502
+     ],
+     [
+      123.806432,
+      9.493305
+     ],
+     [
+      123.798949,
+      9.489815
+     ],
+     [
+      123.791154,
+      9.487065
+     ],
+     [
+      123.783124,
+      9.485081
+     ],
+     [
+      123.774935,
+      9.483884
+     ],
+     [
+      123.766667,
+      9.483483
+     ],
+     [
+      123.758398,
+      9.483884
+     ],
+     [
+      123.750209,
+      9.485081
+     ],
+     [
+      123.742179,
+      9.487065
+     ],
+     [
+      123.734385,
+      9.489815
+     ],
+     [
+      123.726901,
+      9.493305
+     ],
+     [
+      123.719801,
+      9.497502
+     ],
+     [
+      123.713151,
+      9.502365
+     ],
+     [
+      123.707017,
+      9.507847
+     ],
+     [
+      123.701458,
+      9.513896
+     ],
+     [
+      123.696527,
+      9.520452
+     ],
+     [
+      123.692271,
+      9.527454
+     ],
+     [
+      123.688731,
+      9.534834
+     ],
+     [
+      123.685942,
+      9.54252
+     ],
+     [
+      123.683931,
+      9.550438
+     ],
+     [
+      123.682716,
+      9.558513
+     ],
+     [
+      123.68231,
+      9.566667
+     ],
+     [
+      123.682716,
+      9.57482
+     ],
+     [
+      123.683931,
+      9.582895
+     ],
+     [
+      123.685942,
+      9.590814
+     ],
+     [
+      123.688731,
+      9.5985
+     ],
+     [
+      123.692271,
+      9.605879
+     ],
+     [
+      123.696527,
+      9.612881
+     ],
+     [
+      123.701458,
+      9.619438
+     ],
+     [
+      123.707017,
+      9.625486
+     ],
+     [
+      123.713151,
+      9.630968
+     ],
+     [
+      123.719801,
+      9.635831
+     ],
+     [
+      123.726901,
+      9.640028
+     ],
+     [
+      123.734385,
+      9.643518
+     ],
+     [
+      123.742179,
+      9.646268
+     ],
+     [
+      123.750209,
+      9.648252
+     ],
+     [
+      123.758398,
+      9.64945
+     ],
+     [
+      123.766667,
+      9.64985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPSP",
+  "icao_text": "B5159/26 NOTAMC B4769/26\r\nQ) RPHI/QWECN/IV/BO /AW/000/020/0934N12346E005\r\nA) RPSP B) 2609290650\r\nE) MIL EXER (PANGLAO ATZ). CNL.",
+  "id": "1790664664848000",
+  "issued": "2026-09-29T06:50:00.000Z",
+  "last_updated": "2026-09-29T06:51:00.000Z",
+  "local_text": null,
+  "location": "RPSP",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5159/26",
+  "purpose": "BO ",
+  "q_code": "QWECN",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "B4769/26",
+  "schedule": null,
+  "scope": "AW",
+  "series": "B",
+  "text": "MIL EXER (PANGLAO ATZ). CNL.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790664722440000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2219N12115E",
+  "effective_end": "2026-10-21T23:50:00.000Z",
+  "effective_start": "2026-10-13T22:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-09-29T07:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.933333,
+      22.416667
+     ],
+     [
+      121.633333,
+      22.533333
+     ],
+     [
+      121.633333,
+      22.1
+     ],
+     [
+      120.866667,
+      22.1
+     ],
+     [
+      120.933333,
+      22.416667
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "A3565/26 NOTAMN\r\nQ) RCAA/QWMLW/IV/BO/W/000/999/2219N12115E025\r\nA) RCAA\r\nB) 2610132200 C) 2610212350\r\nD) OCT 13 14 20 21 2200-2350\r\nE) GUN FRNG WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.UNMANNED ACFT WILL BE RELEASED.\r\n3.TFC CONCERNED KEEP CLOSE CTC WITH KAOHSIUNG APP OR\r\n  TAIPEI ACC.\r\n4.OPR TEL: 03-4712201 EXTENSION 355531\r\n5.AREA AS FLW:\r\n222500N 1205600E\r\n223200N 1213800E\r\n220600N 1213800E\r\n220600N 1205200E\r\n222500N 1205600E\r\nF) SFC G) UNL",
+  "id": "1790664722440000",
+  "issued": "2026-09-29T06:51:00.000Z",
+  "last_updated": "2026-09-29T06:52:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3565/26",
+  "purpose": "BO",
+  "q_code": "QWMLW",
+  "qline_offset_nm": 2.0,
+  "radius_nm": 25.0,
+  "ref_number": null,
+  "schedule": "OCT 13 14 20 21 2200-2350",
+  "scope": "W",
+  "series": "A",
+  "text": "GUN FRNG WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.UNMANNED ACFT WILL BE RELEASED.\r\n3.TFC CONCERNED KEEP CLOSE CTC WITH KAOHSIUNG APP OR\r\n  TAIPEI ACC.\r\n4.OPR TEL: 03-4712201 EXTENSION 355531\r\n5.AREA AS FLW:\r\n222500N 1205600E\r\n223200N 1213800E\r\n220600N 1213800E\r\n220600N 1205200E\r\n222500N 1205600E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1790664791190000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0643N12205E",
+  "effective_end": "2026-12-31T23:59:00.000Z",
+  "effective_start": "2026-10-01T00:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-09-29T07:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      122.431389,
+      7.112778
+     ],
+     [
+      122.433889,
+      6.339167
+     ],
+     [
+      121.716667,
+      6.341944
+     ],
+     [
+      121.764167,
+      7.112778
+     ],
+     [
+      122.431389,
+      7.112778
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPMZ",
+  "icao_text": "B5160/26 NOTAMN\r\nQ) RPHI/QWULW/IV/BO /AW/000/070/0643N12205E033\r\nA) RPMZ B) 2610010000 C) 2612312359\r\nE) UAS FLT OPS WILL TAKE PLACE WI:\r\n070646N 1222553E -\r\n062021N 1222602E - \r\n062031N 1214300E - \r\n070646N 1214551E - \r\n070646N 1222553E\r\n(SOUTHERN ZAMBOANGA/BASILAN).\r\n\r\nRMK: UTILIZED FOR BILATERAL KAPIT-BISIG OPS\r\n     NON-PARTICIPATING ACFT EXER CTN.\r\nF) SFC G) 7000FT AMSL",
+  "id": "1790664791190000",
+  "issued": "2026-09-29T06:52:00.000Z",
+  "last_updated": "2026-09-29T06:53:00.000Z",
+  "local_text": null,
+  "location": "RPMZ",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5160/26",
+  "purpose": "BO ",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.6,
+  "radius_nm": 33.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "B",
+  "text": "UAS FLT OPS WILL TAKE PLACE WI:\r\n070646N 1222553E -\r\n062021N 1222602E - \r\n062031N 1214300E - \r\n070646N 1214551E - \r\n070646N 1222553E\r\n(SOUTHERN ZAMBOANGA/BASILAN).\r\n\r\nRMK: UTILIZED FOR BILATERAL KAPIT-BISIG OPS\r\n     NON-PARTICIPATING ACFT EXER CTN.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "7000FT AMSL",
+  "year": "2026"
+ },
+ "1790664905976000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2502N12039E",
+  "effective_end": "2026-10-21T23:50:00.000Z",
+  "effective_start": "2026-10-13T21:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-09-29T07:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    120.65,
+    25.033333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RCAA",
+  "icao_text": "A3566/26 NOTAMN\r\nQ) RCAA/QARLT/IV/NBO/E/000/999/2502N12039E299\r\nA) RCAA\r\nB) 2610132100 C) 2610212350\r\nD) OCT 13 14 20 21 2100-2350\r\nE) ROUTE RESTRICTIONS DUE TO GUN FRNG (REF NOTAM A3565/26) AS FLW:\r\n1.AFFECTED ROUTE:\r\nAWY B591 BTN JICHI AND HCN,\r\nAWY Q11 BTN JICHI AND POTIB,\r\nAWY G581 BTN IGURU AND HCN,\r\nQ11, Q12, Q13, J5 TRANSITION.\r\n2.TFC DEP FM RCTP VIA AWY B591/Q11 WILL CHANGE RTE VIA THE WEST\r\nCOAST USING T5 RNAV TRANSITION, FM PARPA DCT POTIB.\r\n3.TFC FM SALMI OR BULAN VIA AWY B591/Q11 WILL CHANGE RTE VIA \r\n THE WEST COAST USING DRAKE A1 APU W4 TO TNN JOIN AWY A577/Q14.\r\n4.TFC VIA AWY M646 W4 WILL CHANGE RTE FM POTIB DCT TNN VICE VERSA.\r\n5.THE BLOCKED TIME AT EACH POINT OF BDRY FOR INBD TFC VIA GUN FRNG\r\nAREA AS FLW:\r\nELATO, ENVAR AND KAPLI: OCT 13 14 20 21 2100-2335\r\nIGURU: OCT 13 14 20 21 2120-2350\r\nGUMBO: OCT 13 14 20 21 2140-2350",
+  "id": "1790664905976000",
+  "issued": "2026-09-29T06:54:00.000Z",
+  "last_updated": "2026-09-29T06:55:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3566/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": 299.0,
+  "ref_number": null,
+  "schedule": "OCT 13 14 20 21 2100-2350",
+  "scope": "E",
+  "series": "A",
+  "text": "ROUTE RESTRICTIONS DUE TO GUN FRNG (REF NOTAM A3565/26) AS FLW:\r\n1.AFFECTED ROUTE:\r\nAWY B591 BTN JICHI AND HCN,\r\nAWY Q11 BTN JICHI AND POTIB,\r\nAWY G581 BTN IGURU AND HCN,\r\nQ11, Q12, Q13, J5 TRANSITION.\r\n2.TFC DEP FM RCTP VIA AWY B591/Q11 WILL CHANGE RTE VIA THE WEST\r\nCOAST USING T5 RNAV TRANSITION, FM PARPA DCT POTIB.\r\n3.TFC FM SALMI OR BULAN VIA AWY B591/Q11 WILL CHANGE RTE VIA \r\n THE WEST COAST USING DRAKE A1 APU W4 TO TNN JOIN AWY A577/Q14.\r\n4.TFC VIA AWY M646 W4 WILL CHANGE RTE FM POTIB DCT TNN VICE VERSA.\r\n5.THE BLOCKED TIME AT EACH POINT OF BDRY FOR INBD TFC VIA GUN FRNG\r\nAREA AS FLW:\r\nELATO, ENVAR AND KAPLI: OCT 13 14 20 21 2100-2335\r\nIGURU: OCT 13 14 20 21 2120-2350\r\nGUMBO: OCT 13 14 20 21 2140-2350",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790664964761000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-02T06:53:00.000Z",
+  "effective_start": "2026-09-29T06:53:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZBPE",
+  "first_seen": "2026-09-29T07:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    116.598333,
+    40.073333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "ZBAA",
+  "icao_text": "E3880/26 NOTAMC E3805/26\r\nQ)ZBPE/QMXAK//M//000/999/\r\nA)ZBAA B)2609290653 \r\nE) CNL NTM.\r\n",
+  "id": "1790664964761000",
+  "issued": "2026-09-29T06:55:00.000Z",
+  "last_updated": "2026-09-29T06:56:00.000Z",
+  "local_text": null,
+  "location": "ZBAA",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "E3880/26",
+  "purpose": "M",
+  "q_code": "QMXAK",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "E3805/26",
+  "schedule": null,
+  "scope": null,
+  "series": "E",
+  "text": "CNL NTM.",
+  "traffic": null,
   "type": "C",
   "upper": null,
   "year": "2026"
