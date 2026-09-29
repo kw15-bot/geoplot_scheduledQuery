@@ -36887,70 +36887,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790619948289000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-29T14:25:00Z",
-  "effective_start": "2026-09-29T00:50:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZWUQ",
-  "first_seen": "2026-09-28T18:30:41+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      75.408333,
-      36.941667
-     ],
-     [
-      76.308824,
-      36.960848
-     ]
-    ],
-    [
-     [
-      75.408333,
-      36.941667
-     ],
-     [
-      76.222495,
-      37.568196
-     ]
-    ]
-   ],
-   "type": "MultiLineString"
-  },
-  "geometry_source": "route-segment",
-  "icao_location": "ZWUQ",
-  "icao_text": "A5001/26 NOTAMN\r\nQ)ZWUQ/QARLT/IV/NBO/E/000/311/\r\nA)ZWUQ B)2609290050 C)2609291425 \r\nE) FLW SEGMENT OF ATS RTE CLSD AT 9,500M AND BELOW:\r\n1. W112: PURPA-80KM EAST OF PURPA.\r\n2. L181.\r\n3. B215: PURPA-100KM NORTH OF PURPA.\r\nF)GND G)9500M AMSL",
-  "id": "1790619948289000",
-  "issued": "2026-09-28T18:25:00Z",
-  "last_updated": "2026-09-28T18:26:00Z",
-  "local_text": null,
-  "location": "ZWUQ",
-  "lower": "GND",
-  "max_fl": "311",
-  "min_fl": "000",
-  "number": "A5001/26",
-  "purpose": "NBO",
-  "q_code": "QARLT",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "A",
-  "text": "FLW SEGMENT OF ATS RTE CLSD AT 9,500M AND BELOW:\r\n1. W112: PURPA-80KM EAST OF PURPA.\r\n2. L181.\r\n3. B215: PURPA-100KM NORTH OF PURPA.",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "9500M AMSL",
-  "year": "2026"
- },
  "1790620480624000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -60771,6 +60707,178 @@
   "traffic": "I",
   "type": "R",
   "upper": null,
+  "year": "2026"
+ },
+ "1790667042414000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1434N12058E",
+  "effective_end": "2026-10-01T07:00:00.000Z",
+  "effective_start": "2026-10-01T04:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-09-29T07:40:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.960997,
+      14.567353
+     ],
+     [
+      120.966928,
+      14.569889
+     ],
+     [
+      120.975244,
+      14.563989
+     ],
+     [
+      120.964839,
+      14.559469
+     ],
+     [
+      120.960997,
+      14.567353
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPHI",
+  "icao_text": "B5161/26 NOTAMN\r\nQ) RPHI/QWELW/IV/BO /W /000/005/1434N12058E001\r\nA) RPHI B) 2610010400 C) 2610010700\r\nE) MIL EXER WILL TAKE PLACE WI:\r\n143402.47N 1205739.59E - \r\n143411.60N 1205800.94E -\r\n143350.36N 1205830.88E -\r\n143334.09N 1205753.42E -\r\n143402.47N 1205739.59E\r\n(0.82NM WEST OF DOLOMITE BEACH)\r\n\r\nRMK: WRNG TO NON-PARTICIPATING ACFT - HIGH DENSITY ACFT UTILIZED\r\nFOR INTERAGENCY EXER 26.\r\nF) SFC G) 500FT AMSL",
+  "id": "1790667042414000",
+  "issued": "2026-09-29T07:30:00.000Z",
+  "last_updated": "2026-09-29T07:30:00.000Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5161/26",
+  "purpose": "BO ",
+  "q_code": "QWELW",
+  "qline_offset_nm": 0.1,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W ",
+  "series": "B",
+  "text": "MIL EXER WILL TAKE PLACE WI:\r\n143402.47N 1205739.59E - \r\n143411.60N 1205800.94E -\r\n143350.36N 1205830.88E -\r\n143334.09N 1205753.42E -\r\n143402.47N 1205739.59E\r\n(0.82NM WEST OF DOLOMITE BEACH)\r\n\r\nRMK: WRNG TO NON-PARTICIPATING ACFT - HIGH DENSITY ACFT UTILIZED\r\nFOR INTERAGENCY EXER 26.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "500FT AMSL",
+  "year": "2026"
+ },
+ "1790667127941000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-02T07:29:00.000Z",
+  "effective_start": "2026-09-29T07:29:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZWUQ",
+  "first_seen": "2026-09-29T07:40:29+00:00",
+  "geometry": null,
+  "geometry_source": null,
+  "icao_location": "ZWUQ",
+  "icao_text": "A5007/26 NOTAMC A5001/26\r\nQ)ZWUQ/QARAK//M//000/999/\r\nA)ZWUQ B)2609290729 \r\nE) CNL NTM.\r\n",
+  "id": "1790667127941000",
+  "issued": "2026-09-29T07:30:00.000Z",
+  "last_updated": "2026-09-29T07:32:00.000Z",
+  "local_text": null,
+  "location": "ZWUQ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A5007/26",
+  "purpose": "M",
+  "q_code": "QARAK",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "A5001/26",
+  "schedule": null,
+  "scope": null,
+  "series": "A",
+  "text": "CNL NTM.",
+  "traffic": null,
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790667435827000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0907N11917E",
+  "effective_end": "2026-10-09T19:49:00.000Z",
+  "effective_start": "2026-10-09T19:20:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-09-29T07:40:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      118.95,
+      9.266667
+     ],
+     [
+      119.216667,
+      9.466667
+     ],
+     [
+      119.6,
+      8.95
+     ],
+     [
+      119.333333,
+      8.75
+     ],
+     [
+      118.95,
+      9.266667
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPHI",
+  "icao_text": "B5162/26 NOTAMN\r\nQ) RPHI/QWMLW/IV/BO /W /000/999/0907N11917E023\r\nA) RPHI B) 2610091920 C) 2610091949\r\nE) SPECIAL OPS (AEROSPACE FLT ACT) WILL BE CONDUCTED BY CHINA. \r\nEST FALL AREA OF UNBURNED DEBRIS WI:\r\n091600N 1185700E - \r\n092800N 1191300E - \r\n085700N 1193600E - \r\n084500N 1192000E - \r\n091600N 1185700E\r\n(28NM SOUTHEAST OF PUERTO PRINCESA AP).\r\nF) SFC G) UNL",
+  "id": "1790667435827000",
+  "issued": "2026-09-29T07:36:00.000Z",
+  "last_updated": "2026-09-29T07:37:00.000Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5162/26",
+  "purpose": "BO ",
+  "q_code": "QWMLW",
+  "qline_offset_nm": 0.7,
+  "radius_nm": 23.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W ",
+  "series": "B",
+  "text": "SPECIAL OPS (AEROSPACE FLT ACT) WILL BE CONDUCTED BY CHINA. \r\nEST FALL AREA OF UNBURNED DEBRIS WI:\r\n091600N 1185700E - \r\n092800N 1191300E - \r\n085700N 1193600E - \r\n084500N 1192000E - \r\n091600N 1185700E\r\n(28NM SOUTHEAST OF PUERTO PRINCESA AP).",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
   "year": "2026"
  }
 }
