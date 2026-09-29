@@ -45785,8 +45785,8 @@
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "0650N11835E",
-  "effective_end": "2026-12-31T23:59:00.000Z",
-  "effective_start": "2026-10-01T00:00:00.000Z",
+  "effective_end": "2026-12-31T23:59:00Z",
+  "effective_start": "2026-10-01T00:00:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
@@ -45831,26 +45831,472 @@
   "icao_location": "RPHI",
   "icao_text": "B5134/26 NOTAMN\r\nQ) RPHI/QWULW/IV/BO /W /000/070/0650N11835E097\r\nA) RPHI B) 2610010000 C) 2612312359\r\nE) UAS FLT OPS WILL TAKE PLACE WI:\r\n053144N 1192828E -\r\n073010N 1174617E -\r\n074916N 1172419E -\r\n080752N 1174141E -\r\n074511N 1180832E -\r\n055201N 1194652E -\r\n053144N 1192828E \r\n(BALABAK).\r\n\r\nRMK: UTILIZED FOR BILATERAL KAPIT-BISIG OPS\r\n     NON-PARTICIPATING ACFT EXER CTN.\r\nF) SFC G) 7000FT AMSL",
   "id": "1790651402117000",
-  "issued": "2026-09-29T03:09:00.000Z",
-  "last_updated": "2026-09-29T03:10:00.000Z",
+  "issued": "2026-09-29T03:09:00Z",
+  "last_updated": "2026-09-29T03:13:00Z",
   "local_text": null,
   "location": "RPHI",
   "lower": "SFC",
-  "max_fl": "999",
+  "max_fl": "070",
   "min_fl": "000",
   "number": "B5134/26",
-  "purpose": "BO ",
+  "purpose": "BO",
   "q_code": "QWULW",
   "qline_offset_nm": 20.2,
   "radius_nm": 97.0,
   "ref_number": null,
   "schedule": null,
-  "scope": "W ",
+  "scope": "W",
   "series": "B",
   "text": "UAS FLT OPS WILL TAKE PLACE WI:\r\n053144N 1192828E -\r\n073010N 1174617E -\r\n074916N 1172419E -\r\n080752N 1174141E -\r\n074511N 1180832E -\r\n055201N 1194652E -\r\n053144N 1192828E \r\n(BALABAK).\r\n\r\nRMK: UTILIZED FOR BILATERAL KAPIT-BISIG OPS\r\n     NON-PARTICIPATING ACFT EXER CTN.",
   "traffic": "IV",
   "type": "N",
   "upper": "7000FT AMSL",
+  "year": "2026"
+ },
+ "1790651550269000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0709N12004E",
+  "effective_end": "2026-12-31T23:59:00Z",
+  "effective_start": "2026-10-01T00:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-09-29T03:20:27+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.712222,
+      7.025833
+     ],
+     [
+      121.714167,
+      6.835278
+     ],
+     [
+      118.615,
+      7.211944
+     ],
+     [
+      118.413056,
+      7.443333
+     ],
+     [
+      121.712222,
+      7.025833
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPHI",
+  "icao_text": "B5135/26 NOTAMN\r\nQ) RPHI/QWULW/IV/BO /W /000/070/0709N12004E102\r\nA) RPHI B) 2610010000 C) 2612312359\r\nE) UAS FLT OPS WILL TAKE PLACE WI:\r\n070133N 1214244E -\r\n065007N 1214251E -\r\n071243N 1183654E -\r\n072636N 1182447E - \r\n070133N 1214244E\r\n(ZAMBOANGA - BALABAK CORRIDOR).\r\n\r\nRMK: UTILIZED FOR BILATERAL KAPIT-BISIG OPS\r\n     NON-PARTICIPATING ACFT EXER CTN.\r\nF) SFC G) 7000FT AMSL",
+  "id": "1790651550269000",
+  "issued": "2026-09-29T03:12:00Z",
+  "last_updated": "2026-09-29T03:13:00Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": "SFC",
+  "max_fl": "070",
+  "min_fl": "000",
+  "number": "B5135/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 3.1,
+  "radius_nm": 102.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "B",
+  "text": "UAS FLT OPS WILL TAKE PLACE WI:\r\n070133N 1214244E -\r\n065007N 1214251E -\r\n071243N 1183654E -\r\n072636N 1182447E - \r\n070133N 1214244E\r\n(ZAMBOANGA - BALABAK CORRIDOR).\r\n\r\nRMK: UTILIZED FOR BILATERAL KAPIT-BISIG OPS\r\n     NON-PARTICIPATING ACFT EXER CTN.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "7000FT AMSL",
+  "year": "2026"
+ },
+ "1790651720499000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0820N11840E",
+  "effective_end": "2026-12-31T23:59:00.000Z",
+  "effective_start": "2026-10-01T00:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-09-29T03:20:27+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      116.0525,
+      10.359444
+     ],
+     [
+      121.791389,
+      7.576389
+     ],
+     [
+      121.706389,
+      7.129167
+     ],
+     [
+      121.712222,
+      7.025833
+     ],
+     [
+      121.064722,
+      7.109444
+     ],
+     [
+      115.588889,
+      9.605
+     ],
+     [
+      116.0525,
+      10.359444
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPHI",
+  "icao_text": "B5136/26 NOTAMN\r\nQ) RPHI/QWULW/IV/BO /W /000/070/0820N11840E201\r\nA) RPHI B) 2610010000 C) 2612312359\r\nE) UAS FLT OPS WILL TAKE PLACE WI:\r\n102134N 1160309E -\r\n073435N 1214729E -\r\n070745N 1214223E -\r\n070133N 1214244E -\r\n070634N 1210353E -\r\n093618N 1153520E -\r\n102134N 1160309E\r\n(ZAMBOANGA - BARKO NG REPUBLIKA NG PILIPINAS (BRP) \r\nSIERRA MADRE CORRIDOR).\r\n\r\nRMK: UTILIZED FOR BILATERAL KAPIT-BISIG OPS\r\n     NON-PARTICIPATING ACFT EXER CTN.\r\nF) SFC G) 7000FT AMSL",
+  "id": "1790651720499000",
+  "issued": "2026-09-29T03:15:00.000Z",
+  "last_updated": "2026-09-29T03:15:00.000Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5136/26",
+  "purpose": "BO ",
+  "q_code": "QWULW",
+  "qline_offset_nm": 59.8,
+  "radius_nm": 201.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W ",
+  "series": "B",
+  "text": "UAS FLT OPS WILL TAKE PLACE WI:\r\n102134N 1160309E -\r\n073435N 1214729E -\r\n070745N 1214223E -\r\n070133N 1214244E -\r\n070634N 1210353E -\r\n093618N 1153520E -\r\n102134N 1160309E\r\n(ZAMBOANGA - BARKO NG REPUBLIKA NG PILIPINAS (BRP) \r\nSIERRA MADRE CORRIDOR).\r\n\r\nRMK: UTILIZED FOR BILATERAL KAPIT-BISIG OPS\r\n     NON-PARTICIPATING ACFT EXER CTN.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "7000FT AMSL",
+  "year": "2026"
+ },
+ "1790651966213000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3109N12148E",
+  "effective_end": "2026-12-31T15:59:00.000Z",
+  "effective_start": "2026-09-29T03:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZSHA",
+  "first_seen": "2026-09-29T03:20:27+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.8,
+      31.233184
+     ],
+     [
+      121.809527,
+      31.232783
+     ],
+     [
+      121.818962,
+      31.231585
+     ],
+     [
+      121.828215,
+      31.229602
+     ],
+     [
+      121.837196,
+      31.226852
+     ],
+     [
+      121.845819,
+      31.223361
+     ],
+     [
+      121.854,
+      31.219165
+     ],
+     [
+      121.861662,
+      31.214302
+     ],
+     [
+      121.868729,
+      31.20882
+     ],
+     [
+      121.875135,
+      31.202771
+     ],
+     [
+      121.880817,
+      31.196214
+     ],
+     [
+      121.885721,
+      31.189212
+     ],
+     [
+      121.889799,
+      31.181833
+     ],
+     [
+      121.893013,
+      31.174147
+     ],
+     [
+      121.89533,
+      31.166228
+     ],
+     [
+      121.89673,
+      31.158153
+     ],
+     [
+      121.897198,
+      31.15
+     ],
+     [
+      121.89673,
+      31.141847
+     ],
+     [
+      121.89533,
+      31.133772
+     ],
+     [
+      121.893013,
+      31.125853
+     ],
+     [
+      121.889799,
+      31.118167
+     ],
+     [
+      121.885721,
+      31.110788
+     ],
+     [
+      121.880817,
+      31.103786
+     ],
+     [
+      121.875135,
+      31.097229
+     ],
+     [
+      121.868729,
+      31.09118
+     ],
+     [
+      121.861662,
+      31.085698
+     ],
+     [
+      121.854,
+      31.080835
+     ],
+     [
+      121.845819,
+      31.076639
+     ],
+     [
+      121.837196,
+      31.073148
+     ],
+     [
+      121.828215,
+      31.070398
+     ],
+     [
+      121.818962,
+      31.068415
+     ],
+     [
+      121.809527,
+      31.067217
+     ],
+     [
+      121.8,
+      31.066816
+     ],
+     [
+      121.790473,
+      31.067217
+     ],
+     [
+      121.781038,
+      31.068415
+     ],
+     [
+      121.771785,
+      31.070398
+     ],
+     [
+      121.762804,
+      31.073148
+     ],
+     [
+      121.754181,
+      31.076639
+     ],
+     [
+      121.746,
+      31.080835
+     ],
+     [
+      121.738338,
+      31.085698
+     ],
+     [
+      121.731271,
+      31.09118
+     ],
+     [
+      121.724865,
+      31.097229
+     ],
+     [
+      121.719183,
+      31.103786
+     ],
+     [
+      121.714279,
+      31.110788
+     ],
+     [
+      121.710201,
+      31.118167
+     ],
+     [
+      121.706987,
+      31.125853
+     ],
+     [
+      121.70467,
+      31.133772
+     ],
+     [
+      121.70327,
+      31.141847
+     ],
+     [
+      121.702802,
+      31.15
+     ],
+     [
+      121.70327,
+      31.158153
+     ],
+     [
+      121.70467,
+      31.166228
+     ],
+     [
+      121.706987,
+      31.174147
+     ],
+     [
+      121.710201,
+      31.181833
+     ],
+     [
+      121.714279,
+      31.189212
+     ],
+     [
+      121.719183,
+      31.196214
+     ],
+     [
+      121.724865,
+      31.202771
+     ],
+     [
+      121.731271,
+      31.20882
+     ],
+     [
+      121.738338,
+      31.214302
+     ],
+     [
+      121.746,
+      31.219165
+     ],
+     [
+      121.754181,
+      31.223361
+     ],
+     [
+      121.762804,
+      31.226852
+     ],
+     [
+      121.771785,
+      31.229602
+     ],
+     [
+      121.781038,
+      31.231585
+     ],
+     [
+      121.790473,
+      31.232783
+     ],
+     [
+      121.8,
+      31.233184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZSPD",
+  "icao_text": "F4020/26 NOTAMN\r\nQ)ZSHA/QFAHX/IV/NBO/A/000/999/3109N12148E005\r\nA)ZSPD B)2609290300 C)2612311559 \r\nE) ACTIVITIES OF BIRD FLOCKS WILL TAKE PLACE AROUND AD:\r\nAREA 1: PRIMARY ACTIVITY AREA INCLUDE CHONGMING ISLAND(EASTERN OF \r\nAIRPORT) TO SEA OF CHANGXING ISLAND AND AREAS WI A 6KM RADIUS OF \r\nWETLAND,FARMLAND AND COASTAL REGION NORTH/SOUTH END OF AIRPORT.\r\nALT: 0M-200M,MIGRATORY FLIGHT ALT 300M-3,000M AT NIGHT.\r\nTIME: DAY AND NIGHT.\r\nAREA 2: 8KM-15KM SOUTH OF RWY34R THR TO 7 KM EAST OF RWY16L/34R \r\nRCL.\r\nALT: 30M-80M\r\nTIME: DAY AND NIGHT,\r\nAERODROME AUTHORITY RESORTS TO DISPERSAL METHODS TO REDUCE BIRD \r\nACTIVITIES.\r\nEXERCISE CAUTION WHILE LANDING AND TAKE-OFF.\r\n ",
+  "id": "1790651966213000",
+  "issued": "2026-09-29T03:19:00.000Z",
+  "last_updated": "2026-09-29T03:19:00.000Z",
+  "local_text": null,
+  "location": "ZSPD",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "F4020/26",
+  "purpose": "NBO",
+  "q_code": "QFAHX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "F",
+  "text": "ACTIVITIES OF BIRD FLOCKS WILL TAKE PLACE AROUND AD:\r\nAREA 1: PRIMARY ACTIVITY AREA INCLUDE CHONGMING ISLAND(EASTERN OF \r\nAIRPORT) TO SEA OF CHANGXING ISLAND AND AREAS WI A 6KM RADIUS OF \r\nWETLAND,FARMLAND AND COASTAL REGION NORTH/SOUTH END OF AIRPORT.\r\nALT: 0M-200M,MIGRATORY FLIGHT ALT 300M-3,000M AT NIGHT.\r\nTIME: DAY AND NIGHT.\r\nAREA 2: 8KM-15KM SOUTH OF RWY34R THR TO 7 KM EAST OF RWY16L/34R \r\nRCL.\r\nALT: 30M-80M\r\nTIME: DAY AND NIGHT,\r\nAERODROME AUTHORITY RESORTS TO DISPERSAL METHODS TO REDUCE BIRD \r\nACTIVITIES.\r\nEXERCISE CAUTION WHILE LANDING AND TAKE-OFF.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
   "year": "2026"
  }
 }
