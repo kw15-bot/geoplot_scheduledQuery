@@ -47154,6 +47154,18 @@
     "title": "容港拖11轮拖带大型浮标—鲁航警656/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c2736c38944741779f361dd087f2abe0.html?hav=1jWj6r2hy3yfgO79ZX7mV6HpWi"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c27d72ba1ebd49cb850c74404ee0299d.html": {
+    "bureau": "长江海事局",
+    "date": "2026-09-29",
+    "detail_fetched": false,
+    "first_seen": "2026-09-29T10:10:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "关于“金和95”轮试航作业的航行警告—黄海航警50/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c27d72ba1ebd49cb850c74404ee0299d.html"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/c29a6c171b2844e49bcc671d922c24e1.html": {
     "bureau": "广东海事局",
     "cancels": [],
@@ -51338,6 +51350,7 @@
       ]
     ],
     "military": true,
+    "own_id": "辽航警409/26",
     "points": [
       {
         "end": 41,
