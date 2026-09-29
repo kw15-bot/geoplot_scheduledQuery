@@ -573,6 +573,26 @@ _FAKE_AIP = {
 }
 
 
+class TextShapes20260929(unittest.TestCase):
+    """2026-09-29 日次チェックで見つけた読み漏れ(索引は不要)。"""
+
+    def test_symbol_first_with_decimal_seconds(self):
+        # ZGZU G3522/26・G4364/26: 記号が先で秒に小数が付く座標
+        e = ("ADD TEMPO MOVING OBSTACLE MARKED WITH LGTS WI FLW AREA: N223141.6E1135759.5-N223141.6E1135806.0-"
+             "N223136.4E1135806.0- N223136.3E1135759.5-N223141.6E1135759.5 . ALT:450.0M.")
+        rings = C.parse_text_polygons(e)
+        self.assertEqual(len(rings), 1)
+        self.assertEqual(len(rings[0]), 5)
+        self.assertAlmostEqual(rings[0][0][0], 113 + 57 / 60 + 59.5 / 3600, places=5)
+
+    def test_radius_centered_at(self):
+        # KZAK A4740/26: "404NM RADIUS CENTERED AT <座標>"(以前は CENTERED ON だけ読めた)
+        e = "MAY NOT BE AVBL WI A 404NM RADIUS CENTERED AT 325229N1145314W (BZA280016) FL400-UNL, 358NM RADIUS AT FL250"
+        rings = C.parse_text_polygons(e)
+        self.assertEqual(len(rings), 1)
+        self.assertAlmostEqual(max(p[1] for p in rings[0]) - (32 + 52 / 60 + 29 / 3600), 404 / 60, delta=0.05)
+
+
 class RouteSegments(unittest.TestCase):
     """航空路の区間閉鎖 -> 線(notam_route_segments.py)。索引は合成データなので鍵が無くても動く。"""
 
@@ -625,6 +645,12 @@ class RouteSegments(unittest.TestCase):
                                   "SEGMENT AAA-CCC OF ATS RTE X1 CLSD. SEGMENT AAA-EEE OF ATS RTE Y2 CLSD.")
         self.assertEqual(src, "route-segment")
         self.assertEqual(g["type"], "MultiLineString")
+
+    def test_parenthesized_segment_range(self):
+        """2026-09-29追加(ZWUQ A4996/26): 区間が括弧で囲まれた書き方。"""
+        self.assertEqual(C.notam_route_segments.find_closures("SEGMENT (BBB-DDD) OF ATS RTE X1 CLSD AT 8,900M AND BELOW."),
+                         [("X1", "BBB", "DDD")])
+        self.assertEqual(len(self.lines("SEGMENT (50KM EAST OF AAA-DDD) OF ATS RTE X1 CLSD")), 1)
 
     def test_circle_centered_on_named_point(self):
         """2026-09-29追加(ZWUQ A5003/26): 円の中心が地点名(VOR)で書かれているもの。中心は索引から引く。"""
