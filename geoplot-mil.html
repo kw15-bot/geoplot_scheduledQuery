@@ -3911,7 +3911,7 @@ const DEFAULT_NOTAM_URL = 'https://kw15-bot.github.io/geoplot_scheduledQuery/not
 // WebCryptoは https か localhost でしか使えない(GitHub Pages と http://127.0.0.1 はどちらも可)。
 const KEY_GATE_SALT = 'geoplot-viewer-gate-v1';
 const KEY_GATE_ITER = 300000;
-const KEY_GATE_HASH = 'ee93593ef85e35b69b3d6c208bbfbfc6f498614076c6d8f4e5ef63d4f1502e43';
+const KEY_GATE_HASH = '76b9642a64116d078e4a61480da1962414e51f4041ff518b0e93582cd401d669';
 async function keyGateHash(key){
   const enc = new TextEncoder();
   const base = await crypto.subtle.importKey('raw', enc.encode(key), 'PBKDF2', false, ['deriveBits']);
