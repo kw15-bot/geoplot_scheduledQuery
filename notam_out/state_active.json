@@ -30819,62 +30819,6 @@
   "upper": "FL999",
   "year": "2026"
  },
- "1790619645432000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-29T13:40:00.000Z",
-  "effective_start": "2026-09-29T10:10:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZWUQ",
-  "first_seen": "2026-09-28T18:30:41+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     84.75024,
-     40.341355
-    ],
-    [
-     83.931667,
-     40.514722
-    ],
-    [
-     82.237841,
-     40.852491
-    ]
-   ],
-   "type": "LineString"
-  },
-  "geometry_source": "route-segment",
-  "icao_location": "ZWUQ",
-  "icao_text": "A4999/26 NOTAMN\r\nQ)ZWUQ/QARLT/IV/NBO/E/000/266/\r\nA)ZWUQ B)2609291010 C)2609291340 \r\nE) SEGMENT 110KM WEST OF SADAN-50KM EAST OF PAMLI OF ATS RTE W186 \r\nCLSD AT 8,100M AND BELOW.\r\nF)GND G)8100M AMSL",
-  "id": "1790619645432000",
-  "issued": "2026-09-28T18:20:00.000Z",
-  "last_updated": "2026-09-28T18:20:00.000Z",
-  "local_text": null,
-  "location": "ZWUQ",
-  "lower": "GND",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A4999/26",
-  "purpose": "NBO",
-  "q_code": "QARLT",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "A",
-  "text": "SEGMENT 110KM WEST OF SADAN-50KM EAST OF PAMLI OF ATS RTE W186 \r\nCLSD AT 8,100M AND BELOW.",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "8100M AMSL",
-  "year": "2026"
- },
  "1790619740737000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -30975,62 +30919,6 @@
   "traffic": "IV",
   "type": "C",
   "upper": null,
-  "year": "2026"
- },
- "1790620480624000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-29T13:35:00Z",
-  "effective_start": "2026-09-29T11:30:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZWUQ",
-  "first_seen": "2026-09-28T18:40:26+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     88.204444,
-     44.555278
-    ],
-    [
-     88.3175,
-     44.748611
-    ],
-    [
-     88.984444,
-     45.877778
-    ]
-   ],
-   "type": "LineString"
-  },
-  "geometry_source": "route-segment",
-  "icao_location": "ZWUQ",
-  "icao_text": "A5005/26 NOTAMN\r\nQ)ZWUQ/QARLT/IV/NBO/E/000/291/\r\nA)ZWUQ B)2609291130 C)2609291335 \r\nE) SEGMENT MULOR - NIRAV OF ATS RTE G588 CLSD AT 8,900M AND BELOW.\r\nF)GND G)8900M AMSL",
-  "id": "1790620480624000",
-  "issued": "2026-09-28T18:32:00Z",
-  "last_updated": "2026-09-28T18:35:00Z",
-  "local_text": null,
-  "location": "ZWUQ",
-  "lower": "GND",
-  "max_fl": "291",
-  "min_fl": "000",
-  "number": "A5005/26",
-  "purpose": "NBO",
-  "q_code": "QARLT",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "A",
-  "text": "SEGMENT MULOR - NIRAV OF ATS RTE G588 CLSD AT 8,900M AND BELOW.",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "8900M AMSL",
   "year": "2026"
  },
  "1790628359271873": {
@@ -77209,6 +77097,596 @@
   "traffic": "IV",
   "type": "N",
   "upper": "FL256",
+  "year": "2026"
+ },
+ "1790688736780000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-30T11:55:00.000Z",
+  "effective_start": "2026-09-30T06:45:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZLHW",
+  "first_seen": "2026-09-29T13:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      102.995278,
+      39.4725
+     ],
+     [
+      105.5,
+      40.0
+     ],
+     [
+      106.963333,
+      40.308333
+     ]
+    ],
+    [
+     [
+      102.995278,
+      39.4725
+     ],
+     [
+      102.775,
+      39.421667
+     ]
+    ],
+    [
+     [
+      102.672222,
+      39.434722
+     ],
+     [
+      102.702778,
+      41.437222
+     ],
+     [
+      102.704722,
+      41.6775
+     ],
+     [
+      102.816667,
+      42.033333
+     ]
+    ],
+    [
+     [
+      102.816667,
+      42.033333
+     ],
+     [
+      102.990556,
+      41.5975
+     ],
+     [
+      102.988333,
+      41.355
+     ],
+     [
+      102.995278,
+      39.4725
+     ],
+     [
+      102.995556,
+      39.3575
+     ]
+    ]
+   ],
+   "type": "MultiLineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZLHW",
+  "icao_text": "A5012/26 NOTAMN\r\nQ)ZLHW/QARLT/IV/NBO/E/000/256/\r\nA)ZLHW B)2609300645 C)2609301155 \r\nE) FLW SEGMENT OF ATS RTE CLSD AT 7,800M AND BELOW:\r\n1. V162 : DAMRO - DENGKOU VOR'DKO' . \r\n2. W272 : DAMRO - YABRAI VOR'YBL'.\r\n3. W195 : ALGOT  - MORIT .\r\n4. B330 : MORIT - ELRUB .\r\nF)FL000 G)FL256",
+  "id": "1790688736780000",
+  "issued": "2026-09-29T13:30:00.000Z",
+  "last_updated": "2026-09-29T13:32:00.000Z",
+  "local_text": null,
+  "location": "ZLHW",
+  "lower": "FL000",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A5012/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "FLW SEGMENT OF ATS RTE CLSD AT 7,800M AND BELOW:\r\n1. V162 : DAMRO - DENGKOU VOR'DKO' . \r\n2. W272 : DAMRO - YABRAI VOR'YBL'.\r\n3. W195 : ALGOT  - MORIT .\r\n4. B330 : MORIT - ELRUB .",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL256",
+  "year": "2026"
+ },
+ "1790688800249000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-30T03:35:00.000Z",
+  "effective_start": "2026-09-30T02:17:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZLHW",
+  "first_seen": "2026-09-29T13:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      92.3,
+      39.083333
+     ],
+     [
+      90.950278,
+      38.875833
+     ]
+    ],
+    [
+     [
+      90.701667,
+      38.683333
+     ],
+     [
+      92.5,
+      38.166667
+     ]
+    ],
+    [
+     [
+      92.5,
+      38.166667
+     ],
+     [
+      92.401667,
+      38.620556
+     ],
+     [
+      92.3,
+      39.083333
+     ]
+    ]
+   ],
+   "type": "MultiLineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZLHW",
+  "icao_text": "A5013/26 NOTAMN\r\nQ)ZLHW/QARLC/IV/NBO/E/000/999/\r\nA)ZLHW B)2609300217 C)2609300335 \r\nE) FLW SEGMENT OF ATS RTE CLSD:\r\n1.W112 : TUSLI - ADMUX .\r\n2.Y1   : MAGOD - DUMIN .\r\n3.W192 : DUMIN  - TUSLI .\r\n ",
+  "id": "1790688800249000",
+  "issued": "2026-09-29T13:32:00.000Z",
+  "last_updated": "2026-09-29T13:33:00.000Z",
+  "local_text": null,
+  "location": "ZLHW",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A5013/26",
+  "purpose": "NBO",
+  "q_code": "QARLC",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "FLW SEGMENT OF ATS RTE CLSD:\r\n1.W112 : TUSLI - ADMUX .\r\n2.Y1   : MAGOD - DUMIN .\r\n3.W192 : DUMIN  - TUSLI .",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790689101941000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-30T06:39:00.000Z",
+  "effective_start": "2026-09-30T03:39:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZLHW",
+  "first_seen": "2026-09-29T13:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      94.866667,
+      40.305833
+     ],
+     [
+      95.199444,
+      41.861667
+     ]
+    ],
+    [
+     [
+      95.145278,
+      40.2
+     ],
+     [
+      95.4325,
+      41.719167
+     ]
+    ],
+    [
+     [
+      94.866667,
+      40.305833
+     ],
+     [
+      93.848056,
+      40.915
+     ]
+    ],
+    [
+     [
+      93.620278,
+      40.757778
+     ],
+     [
+      94.6925,
+      40.1025
+     ]
+    ],
+    [
+     [
+      95.4325,
+      41.719167
+     ],
+     [
+      97.401667,
+      40.465
+     ],
+     [
+      98.356667,
+      39.845
+     ]
+    ]
+   ],
+   "type": "MultiLineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZLHW",
+  "icao_text": "A5014/26 NOTAMN\r\nQ)ZLHW/QARLT/IV/NBO/E/000/256/\r\nA)ZLHW B)2609300339 C)2609300639 \r\nE) FLW SEGMENT OF ATS RTE CLSD AT 7,800M AND BELOW:\r\n1.B215 : IBANO - NUKTI .\r\n2.W271 : NIXUK - TESEN .\r\n3.G470 : IBANO - BIKNO .\r\n4.W191 : MOVBI - KARVI .\r\n5.V67  : TESEN - JIAYUGUAN VOR'JSG' .\r\nF)FL000 G)FL256",
+  "id": "1790689101941000",
+  "issued": "2026-09-29T13:36:00.000Z",
+  "last_updated": "2026-09-29T13:38:00.000Z",
+  "local_text": null,
+  "location": "ZLHW",
+  "lower": "FL000",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A5014/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "FLW SEGMENT OF ATS RTE CLSD AT 7,800M AND BELOW:\r\n1.B215 : IBANO - NUKTI .\r\n2.W271 : NIXUK - TESEN .\r\n3.G470 : IBANO - BIKNO .\r\n4.W191 : MOVBI - KARVI .\r\n5.V67  : TESEN - JIAYUGUAN VOR'JSG' .",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL256",
+  "year": "2026"
+ },
+ "1790689104394000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "4010N09449E",
+  "effective_end": "2026-09-30T06:39:00Z",
+  "effective_start": "2026-09-30T03:39:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZLHW",
+  "first_seen": "2026-09-29T13:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      94.845,
+      40.612489
+     ],
+     [
+      94.902609,
+      40.610326
+     ],
+     [
+      94.959662,
+      40.603858
+     ],
+     [
+      95.015612,
+      40.593148
+     ],
+     [
+      95.069918,
+      40.578299
+     ],
+     [
+      95.122058,
+      40.559453
+     ],
+     [
+      95.17153,
+      40.536793
+     ],
+     [
+      95.217858,
+      40.510535
+     ],
+     [
+      95.260594,
+      40.480934
+     ],
+     [
+      95.299329,
+      40.448275
+     ],
+     [
+      95.333687,
+      40.412871
+     ],
+     [
+      95.36334,
+      40.375064
+     ],
+     [
+      95.388,
+      40.335218
+     ],
+     [
+      95.407431,
+      40.293716
+     ],
+     [
+      95.421446,
+      40.250959
+     ],
+     [
+      95.429909,
+      40.207358
+     ],
+     [
+      95.432739,
+      40.163333
+     ],
+     [
+      95.429909,
+      40.119308
+     ],
+     [
+      95.421446,
+      40.075707
+     ],
+     [
+      95.407431,
+      40.03295
+     ],
+     [
+      95.388,
+      39.991449
+     ],
+     [
+      95.36334,
+      39.951603
+     ],
+     [
+      95.333687,
+      39.913796
+     ],
+     [
+      95.299329,
+      39.878392
+     ],
+     [
+      95.260594,
+      39.845732
+     ],
+     [
+      95.217858,
+      39.816131
+     ],
+     [
+      95.17153,
+      39.789874
+     ],
+     [
+      95.122058,
+      39.767213
+     ],
+     [
+      95.069918,
+      39.748368
+     ],
+     [
+      95.015612,
+      39.733518
+     ],
+     [
+      94.959662,
+      39.722808
+     ],
+     [
+      94.902609,
+      39.716341
+     ],
+     [
+      94.845,
+      39.714178
+     ],
+     [
+      94.787391,
+      39.716341
+     ],
+     [
+      94.730338,
+      39.722808
+     ],
+     [
+      94.674388,
+      39.733518
+     ],
+     [
+      94.620082,
+      39.748368
+     ],
+     [
+      94.567942,
+      39.767213
+     ],
+     [
+      94.51847,
+      39.789874
+     ],
+     [
+      94.472142,
+      39.816131
+     ],
+     [
+      94.429406,
+      39.845732
+     ],
+     [
+      94.390671,
+      39.878392
+     ],
+     [
+      94.356313,
+      39.913796
+     ],
+     [
+      94.32666,
+      39.951603
+     ],
+     [
+      94.302,
+      39.991449
+     ],
+     [
+      94.282569,
+      40.03295
+     ],
+     [
+      94.268554,
+      40.075707
+     ],
+     [
+      94.260091,
+      40.119308
+     ],
+     [
+      94.257261,
+      40.163333
+     ],
+     [
+      94.260091,
+      40.207358
+     ],
+     [
+      94.268554,
+      40.250959
+     ],
+     [
+      94.282569,
+      40.293716
+     ],
+     [
+      94.302,
+      40.335218
+     ],
+     [
+      94.32666,
+      40.375064
+     ],
+     [
+      94.356313,
+      40.412871
+     ],
+     [
+      94.390671,
+      40.448275
+     ],
+     [
+      94.429406,
+      40.480934
+     ],
+     [
+      94.472142,
+      40.510535
+     ],
+     [
+      94.51847,
+      40.536793
+     ],
+     [
+      94.567942,
+      40.559453
+     ],
+     [
+      94.620082,
+      40.578299
+     ],
+     [
+      94.674388,
+      40.593148
+     ],
+     [
+      94.730338,
+      40.603858
+     ],
+     [
+      94.787391,
+      40.610326
+     ],
+     [
+      94.845,
+      40.612489
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "ZLDH",
+  "icao_text": "L1571/26 NOTAMN\r\nQ)ZLHW/QFALT/IV/NBO/A/000/999/4010N09449E005\r\nA)ZLDH B)2609300339 C)2609300639 \r\nE) ACFT TAKE-OFF/LANDING AD ZLDH SHALL CLIMB OR DESCEND WI A \r\nCIRCLE CENTERED AT DUNHUANG VOR'DNH' WITH RADIUS OF 50KM.",
+  "id": "1790689104394000",
+  "issued": "2026-09-29T13:37:00Z",
+  "last_updated": "2026-09-29T13:39:00Z",
+  "local_text": null,
+  "location": "ZLDH",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "L1571/26",
+  "purpose": "NBO",
+  "q_code": "QFALT",
+  "qline_offset_nm": 1.3,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "L",
+  "text": "ACFT TAKE-OFF/LANDING AD ZLDH SHALL CLIMB OR DESCEND WI A \r\nCIRCLE CENTERED AT DUNHUANG VOR&apos;DNH&apos; WITH RADIUS OF 50KM.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
   "year": "2026"
  }
 }
