@@ -7838,11 +7838,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/1a7dc4a6be774dc1b1ae923c351960a2.html": {
     "bureau": "海南海事局",
+    "cancels": [],
     "date": "2026-09-29",
     "detail_fetched": false,
     "first_seen": "2026-09-29T06:40:33+00:00",
     "groups": [],
     "military": false,
+    "own_id": "琼航警191/26",
     "points": [],
     "revoked": false,
     "title": "“大航拖8”轮拖带“鑫航浚6”—琼航警191/26",
@@ -21179,6 +21181,18 @@
     "revoked": false,
     "title": "装载大件船舶—沪航警715/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4df2621d1b6e496bba6740ad11d1213d.html?hav=1jWj6r2hy5di8XU8i3ARZF1ZI5"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4df5721879114769b86ea23dc6da8591.html": {
+    "bureau": "长江海事局",
+    "date": "2026-09-29",
+    "detail_fetched": false,
+    "first_seen": "2026-09-29T06:50:37+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "关于“德荣6”轮水上试验活动的航行警告—安海航警34/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4df5721879114769b86ea23dc6da8591.html"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4e5443b11d1243ab943fa5ae358acabf.html": {
     "bureau": "上海海事局",
