@@ -535,7 +535,6 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 <body>
 <div class="key-gate" id="keyGate">
   <div id="keyGateMsg"></div>
-  <button class="btn small" type="button" id="keyGateRetry" hidden>key を入力する</button>
 </div>
 
 <div class="app" id="mainApp">
@@ -3907,7 +3906,7 @@ const DEFAULT_NOTAM_URL = 'https://kw15-bot.github.io/geoplot_scheduledQuery/not
 // key入力。ブラウザ標準の入力ダイアログ(window.prompt)で聞く。keyそのものはページに置かず、
 // PBKDF2(SHA-256)で作ったハッシュだけを持って比べる。
 // keyを変えるときは、新しいkeyで KEY_GATE_HASH を作り直す(HANDOFF_NOTAM.md §21に手順)。
-// 違うkeyなら聞き直す。キャンセルしたら下地に「key を入力する」ボタンだけを出す。
+// 違うkeyなら聞き直す。キャンセルしたら何も出さない(聞き直すにはページを再読み込みする)。
 // WebCryptoは https か localhost でしか使えない(GitHub Pages と http://127.0.0.1 はどちらも可)。
 const KEY_GATE_SALT = 'geoplot-viewer-gate-v1';
 const KEY_GATE_ITER = 300000;
@@ -3920,9 +3919,7 @@ async function keyGateHash(key){
   return [...new Uint8Array(bits)].map(b => b.toString(16).padStart(2, '0')).join('');
 }
 async function askKey(){
-  const msg = $('#keyGateMsg'), retry = $('#keyGateRetry');
-  retry.hidden = true;
-  msg.textContent = '';
+  const msg = $('#keyGateMsg');
   if (!(window.crypto && crypto.subtle)){
     msg.textContent = 'このページは https か http://127.0.0.1 で開いてください';
     return;
@@ -3930,11 +3927,7 @@ async function askKey(){
   let label = 'パスワードを入力してください';
   for (;;){
     const key = window.prompt(label, '');
-    if (key === null){                     // キャンセル
-      msg.textContent = '閲覧には key が必要です';
-      retry.hidden = false;
-      return;
-    }
+    if (key === null) return;              // キャンセル: 無地の下地のまま
     if (key && await keyGateHash(key) === KEY_GATE_HASH){
       $('#keyGate').hidden = true;
       startApp();
@@ -3943,7 +3936,6 @@ async function askKey(){
     label = 'key が違います。パスワードを入力してください';
   }
 }
-$('#keyGateRetry').addEventListener('click', askKey);
 // 描画(下地の表示)が済んでから聞く。すぐに prompt() を出すと、白い画面のままダイアログが出ることがある
 setTimeout(askKey, 50);
 
