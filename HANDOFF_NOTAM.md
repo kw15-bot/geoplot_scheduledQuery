@@ -780,3 +780,6 @@ eAIP（eaipchina.cn、要ログイン）で配布している **AIPデータセ�
 - key を変えるとき: Secret `VIEWER_KEY` を更新し、Actions の **Viewer key sync**（`.github/workflows/viewer-key-sync.yml`）を手動実行する。
   Secret から `KEY_GATE_HASH` を作り直してコミットし、Pages に反映される。key そのものはログにも出ない。
   （手で置き換える場合は `python3 -c "import hashlib;print(hashlib.pbkdf2_hmac('sha256',b'<新しいkey>',b'geoplot-viewer-gate-v1',300000,32).hex())"`）
+- 2026-09-29 修正: 日付変更線を越えて東へドラッグすると、地図が360°ぶん飛び（Leaflet の worldCopyJump）、米国西岸沖などの図形
+  （西経を+360°して東経236°等に描いたもの）が画面から消えていた。worldCopyJump をやめ、東西に動かせる範囲を
+  西経60°〜東経330°（東経135°中心の1周、`MAP_LON_MIN`/`MAP_LON_MAX`）に限った。カーソル位置の表示は従来どおり西経で出る。
