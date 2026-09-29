@@ -1527,11 +1527,10 @@ function updateCoordPin(){
   // NOTAM側と同じ経度の表し方(西経30°より西は+360°)にして、太平洋側の図形と同じ位置に立てる
   const ll = L.latLng(c.lat, notamWrapLon(c.lon));
   coordPin = L.marker(ll, {
-    icon: L.divIcon({ className:'', iconSize:[18,26], iconAnchor:[9,26], tooltipAnchor:[0,-24],
+    icon: L.divIcon({ className:'', iconSize:[18,26], iconAnchor:[9,26],
       html:'<svg class="coord-pin" viewBox="0 0 18 26"><path d="M9 25C9 25 17 14.5 17 9A8 8 0 0 0 1 9C1 14.5 9 25 9 25Z" fill="#e0453a" stroke="#fff" stroke-width="1.5"/><circle cx="9" cy="9" r="3" fill="#fff"/></svg>' }),
     keyboard:false, zIndexOffset:1000,
-  }).bindTooltip(`${decToDMS(c.lat, true)} / ${decToDMS(c.lon, false)}`, { permanent:true, direction:'top', className:'poly-label' })
-    .addTo(map);
+  }).addTo(map);
   map.setView(ll, Math.max(map.getZoom(), 8));
 }
 $('#coordPlotInput').addEventListener('input', updateCoordPin);
