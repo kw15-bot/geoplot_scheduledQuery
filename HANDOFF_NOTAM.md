@@ -777,6 +777,6 @@ eAIP（eaipchina.cn、要ログイン）で配布している **AIPデータセ�
 - WebCrypto を使うので、https（GitHub Pages）か http://127.0.0.1 で開く必要がある（file:// では開けない）。
 - **注意: まだ目隠しに過ぎない。** データ（`msa_out/`・`notam_out/`）は暗号化していないので、URLを直接開けば読める。
   データの暗号化（方式A。key は Secret `VIEWER_KEY`）は未実装。
-- key を変えるとき:
-  `python3 -c "import hashlib;print(hashlib.pbkdf2_hmac('sha256',b'<新しいkey>',b'geoplot-viewer-gate-v1',300000,32).hex())"`
-  の出力で `KEY_GATE_HASH` を置き換える（Secret `VIEWER_KEY` も同じ値に更新しておく）。
+- key を変えるとき: Secret `VIEWER_KEY` を更新し、Actions の **Viewer key sync**（`.github/workflows/viewer-key-sync.yml`）を手動実行する。
+  Secret から `KEY_GATE_HASH` を作り直してコミットし、Pages に反映される。key そのものはログにも出ない。
+  （手で置き換える場合は `python3 -c "import hashlib;print(hashlib.pbkdf2_hmac('sha256',b'<新しいkey>',b'geoplot-viewer-gate-v1',300000,32).hex())"`）
