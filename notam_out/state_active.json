@@ -62145,98 +62145,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790673479047000": {
-  "account_id": "SNOWTAM",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-29T17:01:00.000Z",
-  "effective_start": "2026-09-29T09:01:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": null,
-  "first_seen": "2026-09-29T09:20:34+00:00",
-  "geometry": {
-   "coordinates": [
-    123.485,
-    41.641667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZYTX",
-  "icao_text": null,
-  "id": "1790673479047000",
-  "issued": "2026-09-29T09:17:00.000Z",
-  "last_updated": "2026-09-29T09:17:00.000Z",
-  "local_text": null,
-  "location": "ZYTX",
-  "lower": null,
-  "max_fl": null,
-  "min_fl": null,
-  "number": "0195",
-  "purpose": null,
-  "q_code": null,
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": "SWZX",
-  "text": "SWZX0195 ZYTX 09290901\r (SNOWTAM 0195\r ZYTX\r 09290901 06 5/5/5 100/100/100 NR/NR/NR WET/WET/WET\r )",
-  "traffic": null,
-  "type": null,
-  "upper": null,
-  "year": "2026"
- },
- "1790673543999488": {
-  "account_id": "SNOWTAM",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-29T17:01:00Z",
-  "effective_start": "2026-09-29T09:01:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": null,
-  "first_seen": "2026-09-29T09:20:34+00:00",
-  "geometry": {
-   "coordinates": [
-    123.485,
-    41.641667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZYTX",
-  "icao_text": "SWZX0195 ZYTX 09290901\r\n(SNOWTAM 0195\r\nZYTX\r\n09290901 06 5/5/5 100/100/100 NR/NR/NR WET/WET/WET\r\n)",
-  "id": "1790673543999488",
-  "issued": "2026-09-29T09:17:00Z",
-  "last_updated": "2026-09-29T09:18:00Z",
-  "local_text": null,
-  "location": "ZYTX",
-  "lower": null,
-  "max_fl": null,
-  "min_fl": null,
-  "number": "SWZX0195/26",
-  "purpose": null,
-  "q_code": null,
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": "SWZX",
-  "text": "WZX0195 ZYTX 09290901\r\n(SNOWTAM 0195\r\nZYTX\r\n09290901 06 5/5/5 100/100/100 NR/NR/NR WET/WET/WET\r\n)",
-  "traffic": null,
-  "type": null,
-  "upper": null,
-  "year": "2026"
- },
  "1790673701264000": {
   "account_id": "RCTPYNYX",
   "area_group": "TW",
@@ -78738,6 +78646,232 @@
   "scope": "W",
   "series": "A",
   "text": "FLW AREA IMPLEMENT FLTCK AND FLIGHT VALIDATION:\r\n AREA 2:\r\nLATERAL LIMITS: N242456E1180805-N242149E1180623-N242206E1180701\r\n-N242255E1180751-N242428E1180838-N242524E1181021\r\n-N243227E1182245-N243319E1182429-N243231E1182015\r\n-N243301E1181700-N242456E1180805 .\r\nVERTICAL LIMITS:6,600M(QNE) AND BELOW.\r\nALL ACFT FLW ATC INSTRUCTION.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL217",
+  "year": "2026"
+ },
+ "1790701599084000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2408N11752E",
+  "effective_end": "2026-10-20T09:00:00.000Z",
+  "effective_start": "2026-10-06T21:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZSHA",
+  "first_seen": "2026-09-29T17:10:27+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      118.113333,
+      24.232222
+     ],
+     [
+      118.233333,
+      24.1025
+     ],
+     [
+      117.836111,
+      23.756111
+     ],
+     [
+      117.630556,
+      24.048056
+     ],
+     [
+      117.475278,
+      24.159444
+     ],
+     [
+      117.898333,
+      24.514722
+     ],
+     [
+      118.113333,
+      24.232222
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "ZSHA",
+  "icao_text": "A5017/26 NOTAMN\r\nQ)ZSHA/QXXXX/IV/NBO/W/000/217/2408N11752E023\r\nA)ZSHA B)2610062100 C)2610200900 \r\nD)2100-0900(NEXT DAY) DLY\r\nE) FLW AREA IMPLEMENT FLTCK AND FLIGHT VALIDATION:\r\n AREA 6:\r\nLATERAL LIMITS: N241356E1180648-N240609E1181400-N234522E1175010-\r\nN240253E1173750-N240934E1172831-N243053E1175354-N241356E1180648 .\r\nVERTICAL LIMITS:6,600M(QNE) AND BELOW.\r\nALL ACFT FLW ATC INSTRUCTION.\r\nF)FL000 G)FL217",
+  "id": "1790701599084000",
+  "issued": "2026-09-29T17:05:00.000Z",
+  "last_updated": "2026-09-29T17:06:00.000Z",
+  "local_text": null,
+  "location": "ZSHA",
+  "lower": "FL000",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A5017/26",
+  "purpose": "NBO",
+  "q_code": "QXXXX",
+  "qline_offset_nm": 0.2,
+  "radius_nm": 23.0,
+  "ref_number": null,
+  "schedule": "2100-0900(NEXT DAY) DLY",
+  "scope": "W",
+  "series": "A",
+  "text": "FLW AREA IMPLEMENT FLTCK AND FLIGHT VALIDATION:\r\n AREA 6:\r\nLATERAL LIMITS: N241356E1180648-N240609E1181400-N234522E1175010-\r\nN240253E1173750-N240934E1172831-N243053E1175354-N241356E1180648 .\r\nVERTICAL LIMITS:6,600M(QNE) AND BELOW.\r\nALL ACFT FLW ATC INSTRUCTION.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL217",
+  "year": "2026"
+ },
+ "1790701602572000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2424N11811E",
+  "effective_end": "2026-10-19T23:45:00.000Z",
+  "effective_start": "2026-10-06T21:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZSHA",
+  "first_seen": "2026-09-29T17:10:27+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      118.215833,
+      24.406389
+     ],
+     [
+      118.211944,
+      24.444722
+     ],
+     [
+      118.1725,
+      24.423333
+     ],
+     [
+      118.143889,
+      24.407778
+     ],
+     [
+      118.130833,
+      24.381944
+     ],
+     [
+      118.153611,
+      24.36
+     ],
+     [
+      118.215833,
+      24.406389
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "ZSHA",
+  "icao_text": "A5018/26 NOTAMN\r\nQ)ZSHA/QXXXX/IV/NBO/W/000/059/2424N11811E005\r\nA)ZSHA B)2610062100 C)2610192345 \r\nD)2100-2345 DLY\r\nE) FLW AREA IMPLEMENT FLTCK:\r\n AREA 4:\r\nLATERAL LIMITS: N242423E1181257-N242641E1181243-N242524E1181021\r\n-N242428E1180838-N242255E1180751-N242136E1180913\r\n-N242423E1181257 .\r\nVERTICAL LIMITS:1,800M(QNH) AND BELOW.\r\nALL ACFT FLW ATC INSTRUCTION.\r\nF)GND G)1800M AMSL",
+  "id": "1790701602572000",
+  "issued": "2026-09-29T17:05:00.000Z",
+  "last_updated": "2026-09-29T17:06:00.000Z",
+  "local_text": null,
+  "location": "ZSHA",
+  "lower": "GND",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A5018/26",
+  "purpose": "NBO",
+  "q_code": "QXXXX",
+  "qline_offset_nm": 0.7,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": "2100-2345 DLY",
+  "scope": "W",
+  "series": "A",
+  "text": "FLW AREA IMPLEMENT FLTCK:\r\n AREA 4:\r\nLATERAL LIMITS: N242423E1181257-N242641E1181243-N242524E1181021\r\n-N242428E1180838-N242255E1180751-N242136E1180913\r\n-N242423E1181257 .\r\nVERTICAL LIMITS:1,800M(QNH) AND BELOW.\r\nALL ACFT FLW ATC INSTRUCTION.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "1800M AMSL",
+  "year": "2026"
+ },
+ "1790701799301000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2415N11811E",
+  "effective_end": "2026-10-19T23:45:00.000Z",
+  "effective_start": "2026-10-06T21:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZSHA",
+  "first_seen": "2026-09-29T17:10:27+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      118.113333,
+      24.232222
+     ],
+     [
+      118.106389,
+      24.363611
+     ],
+     [
+      118.116944,
+      24.368333
+     ],
+     [
+      118.130833,
+      24.381944
+     ],
+     [
+      118.153611,
+      24.36
+     ],
+     [
+      118.324444,
+      24.225278
+     ],
+     [
+      118.233333,
+      24.1025
+     ],
+     [
+      118.113333,
+      24.232222
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "ZSHA",
+  "icao_text": "A5019/26 NOTAMN\r\nQ)ZSHA/QXXXX/IV/NBO/W/000/217/2415N11811E009\r\nA)ZSHA B)2610062100 C)2610192345 \r\nD)2100-2345 DLY\r\nE) FLW AREA IMPLEMENT FLTCK:\r\n AREA 5:\r\nLATERAL LIMITS: \r\nN241356E1180648-N242149E1180623-N242206E1180701-N242255E1180751-\r\nN242136E1180913-N241331E1181928-N240609E1181400-N241356E1180648 .\r\nVERTICAL LIMITS:6,600M(QNE) AND BELOW.\r\nALL ACFT FLW ATC INSTRUCTION.\r\nF)FL000 G)FL217",
+  "id": "1790701799301000",
+  "issued": "2026-09-29T17:09:00.000Z",
+  "last_updated": "2026-09-29T17:09:00.000Z",
+  "local_text": null,
+  "location": "ZSHA",
+  "lower": "FL000",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A5019/26",
+  "purpose": "NBO",
+  "q_code": "QXXXX",
+  "qline_offset_nm": 2.6,
+  "radius_nm": 9.0,
+  "ref_number": null,
+  "schedule": "2100-2345 DLY",
+  "scope": "W",
+  "series": "A",
+  "text": "FLW AREA IMPLEMENT FLTCK:\r\n AREA 5:\r\nLATERAL LIMITS: \r\nN241356E1180648-N242149E1180623-N242206E1180701-N242255E1180751-\r\nN242136E1180913-N241331E1181928-N240609E1181400-N241356E1180648 .\r\nVERTICAL LIMITS:6,600M(QNE) AND BELOW.\r\nALL ACFT FLW ATC INSTRUCTION.",
   "traffic": "IV",
   "type": "N",
   "upper": "FL217",
