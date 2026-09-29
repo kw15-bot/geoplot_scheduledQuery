@@ -766,3 +766,17 @@ eAIP（eaipchina.cn、要ログイン）で配布している **AIPデータセ�
 - 2026-09-29 追加: NOTAMモードでもヘッダー中央のティッカー（現在有効一覧）を表示。Activeタブと同じ対象（地図に出せる図形あり・DOM以外・重複は1件）を
   「FIR 番号」で、開始が新しい順に流す（`updateNotamHeaderTicker()`）。0件のときは「現在有効なNOTAMはありません」を流す（航行警報側も同じ）。航行警報側とは別の枠（`.header-ticker-pane[data-ticker]`）で、表示中のモードの分だけ出る。
 - 2026-09-29 追加: 地図ツールバーの座標プロット欄（`DDMMSS[NS]DDDMMSS[EW]` → ズーム＆ピン、消すとピンも消える）。全モード共通。
+
+---
+
+## 21. ビューアの key 入力画面（2026-09-29）
+
+`geoplot-mil.html` を開くと、最初に key 入力画面が出る。正しい key が入るまで、ビューア本体の起動（モード選択・データの自動接続）を行わない（`startApp()`）。
+- key そのものはページに置かない。PBKDF2-SHA256（salt `geoplot-viewer-gate-v1`、300,000回）のハッシュ `KEY_GATE_HASH` だけを持って比べる。
+- 「この端末では次回から入力を省略する」を選ぶと、ハッシュを localStorage（`geoplotViewerKeyHash`）に覚える。やめるときはブラウザのサイトデータを消す。
+- WebCrypto を使うので、https（GitHub Pages）か http://127.0.0.1 で開く必要がある（file:// では開けない）。
+- **注意: まだ目隠しに過ぎない。** データ（`msa_out/`・`notam_out/`）は暗号化していないので、URLを直接開けば読める。
+  データの暗号化（方式A。key は Secret `VIEWER_KEY`）は未実装。
+- key を変えるとき:
+  `python3 -c "import hashlib;print(hashlib.pbkdf2_hmac('sha256',b'<新しいkey>',b'geoplot-viewer-gate-v1',300000,32).hex())"`
+  の出力で `KEY_GATE_HASH` を置き換える（Secret `VIEWER_KEY` も同じ値に更新しておく）。
