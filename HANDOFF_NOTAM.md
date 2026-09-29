@@ -783,3 +783,7 @@ eAIP（eaipchina.cn、要ログイン）で配布している **AIPデータセ�
 - 2026-09-29 修正: 日付変更線を越えて東へドラッグすると、地図が360°ぶん飛び（Leaflet の worldCopyJump）、米国西岸沖などの図形
   （西経を+360°して東経236°等に描いたもの）が画面から消えていた。worldCopyJump をやめ、東西に動かせる範囲を
   西経60°〜東経330°（東経135°中心の1周、`MAP_LON_MIN`/`MAP_LON_MAX`）に限った。カーソル位置の表示は従来どおり西経で出る。
+- 2026-09-29 追加: ヘッダーの🔔（新着の通知）に NOTAM も出す。notam_cn.geojson を読み込む（10分おきの自動再読込を含む）たびに、
+  ビューアに出るもの（地図に描ける図形あり・DOM以外）で Active/Upcoming のうち、まだ見ていないものを通知する（`registerNotamsForNotifications()`）。
+  同じNOTAMは発行元+番号+開始時刻で1件。初めて読み込んだときはその時点の分を既読にする（localStorage `geoplotMil_seenNotamKeys`）。
+  通知をクリックすると NOTAM モードに切り替え、その図形にズームして左の一覧でカードを示す。
