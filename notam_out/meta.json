@@ -1,11 +1,11 @@
 {
- "active_records": 357,
+ "active_records": 356,
  "by_status": {
-  "active": 109,
-  "upcoming": 190
+  "active": 106,
+  "upcoming": 192
  },
- "features": 299,
- "last_change": "2026-09-29T20:50:31+00:00",
- "last_success": "2026-09-29T20:50:31+00:00",
+ "features": 298,
+ "last_change": "2026-09-29T21:00:47+00:00",
+ "last_success": "2026-09-29T21:00:47+00:00",
  "schema": 1
 }
