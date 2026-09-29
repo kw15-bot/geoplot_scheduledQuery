@@ -1,0 +1,58 @@
+name: Viewer key sync
+
+# ビューア(geoplot-mil.html)のkey入力で照合するハッシュ(KEY_GATE_HASH)を、Secret VIEWER_KEY から
+# 作り直してコミットする。keyを変えるときは「Secret VIEWER_KEY を更新 → このワークフローを手動実行」。
+# key そのものはどこにも出力しない(ページに載るのはPBKDF2のハッシュだけ。HANDOFF_NOTAM.md §21)。
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: viewer-key-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Update KEY_GATE_HASH from VIEWER_KEY
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+        run: |
+          python3 - <<'PY'
+          import hashlib, os, re, sys
+          key = os.environ.get("VIEWER_KEY", "")
+          if not key:
+              sys.exit("Secret VIEWER_KEY が未設定です")
+          path = "geoplot-mil.html"
+          html = open(path, encoding="utf-8").read()
+          m = re.search(r"const KEY_GATE_SALT = '([^']+)';\s*const KEY_GATE_ITER = (\d+);", html)
+          if not m:
+              sys.exit("geoplot-mil.html に KEY_GATE_SALT / KEY_GATE_ITER が見つかりません")
+          h = hashlib.pbkdf2_hmac("sha256", key.encode("utf-8"), m[1].encode("utf-8"), int(m[2]), 32).hex()
+          new, n = re.subn(r"const KEY_GATE_HASH = '[0-9a-f]{64}';", f"const KEY_GATE_HASH = '{h}';", html)
+          if n != 1:
+              sys.exit("geoplot-mil.html に KEY_GATE_HASH が見つかりません")
+          open(path, "w", encoding="utf-8").write(new)
+          print("KEY_GATE_HASH updated" if new != html else "KEY_GATE_HASH already up to date")
+          PY
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add geoplot-mil.html
+          if git diff --staged --quiet; then
+            echo "no changes"; exit 0
+          fi
+          git commit -m "Viewer: sync key hash from VIEWER_KEY"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

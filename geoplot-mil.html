@@ -3905,7 +3905,8 @@ const DEFAULT_NOTAM_URL = 'https://kw15-bot.github.io/geoplot_scheduledQuery/not
 // ---------------------------------------------------------------------------
 // key入力。ブラウザ標準の入力ダイアログ(window.prompt)で聞く。keyそのものはページに置かず、
 // PBKDF2(SHA-256)で作ったハッシュだけを持って比べる。
-// keyを変えるときは、新しいkeyで KEY_GATE_HASH を作り直す(HANDOFF_NOTAM.md §21に手順)。
+// keyを変えるときは Secret VIEWER_KEY を更新して Actions の「Viewer key sync」を実行すると、
+// KEY_GATE_HASH が作り直される(.github/workflows/viewer-key-sync.yml、HANDOFF_NOTAM.md §21)。
 // 違うkeyなら聞き直す。キャンセルしたら何も出さない(聞き直すにはページを再読み込みする)。
 // WebCryptoは https か localhost でしか使えない(GitHub Pages と http://127.0.0.1 はどちらも可)。
 const KEY_GATE_SALT = 'geoplot-viewer-gate-v1';
