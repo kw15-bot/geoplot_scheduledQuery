@@ -791,3 +791,5 @@ eAIP（eaipchina.cn、要ログイン）で配布している **AIPデータセ�
 - 2026-09-29 追加（§18の続き）: 円の中心が座標ではなく地点名で書かれたものを読む（`text_rings()` → `notam_route_segments.named_center_circles()`）。
   例: `CIRCLE CENTERED AT SHIQUANHE VOR 'SQH' WITH RADIUS OF 30KM`（ZWUQ A5003/26）、`SEGMENT WITHIN A CIRCLE CENTERED AT DUMIN WITH RADIUS OF 100KM CLSD`（ZLHW A4979〜4981/26、ZXXX A4978/26）。
   中心の座標はAIP索引から引き（同名なら VOR 等の航法施設を優先）、`geometry_source` は `text-polygon`。以前は Q項の円のみ、または図形なしだった。
+- 2026-09-29 日次チェックで修正: (1) 区間が括弧で囲まれた航空路閉鎖 `SEGMENT (50KM WEST OF SADAN-100KM EAST OF PAMLI) OF ATS RTE W186`（ZWUQ A4996/26）、
+  (2) 記号が先で秒に小数が付く座標 `N223141.6E1135759.5`（ZGZU G3522/26・G4364/26）、(3) `404NM RADIUS CENTERED AT <座標>`（KZAK A4740/26。以前は CENTERED ON のみ）。

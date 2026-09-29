@@ -49,7 +49,8 @@ _EP = (r"(?:\d+(?:\.\d+)?\s*(?:KM|NM)\s+(?:NORTH|SOUTH|EAST|WEST|NORTHEAST|NORTH
 _EP_PARTS = re.compile(r"(?:(?P<d>\d+(?:\.\d+)?)\s*(?P<u>KM|NM)\s+(?P<dir>[A-Z]+)\s+OF\s+)?(?P<base>.+)$")
 _RANGE = rf"(?P<a>{_EP})\s*-\s*(?P<b>{_EP})"
 _ATS = r"ATS\s+R(?:OU)?TES?"
-_PAT_SEG_OF = re.compile(rf"SEGMENT\s+{_RANGE}\s+OF\s+{_ATS}\s+(?P<r>{_RTE})\b")
+# 区間が括弧で囲まれた書き方もある: "SEGMENT (50KM WEST OF SADAN-100KM EAST OF PAMLI) OF ATS RTE W186" (ZWUQ A4996/26)
+_PAT_SEG_OF = re.compile(rf"SEGMENT\s+\(?\s*{_RANGE}\s*\)?\s+OF\s+{_ATS}\s+(?P<r>{_RTE})\b")
 _PAT_RTE_SEG = re.compile(rf"{_ATS}\s+(?P<r>{_RTE})\s+SEGMENT\s+{_RANGE}")
 _PAT_ITEM = re.compile(rf"(?:^|[\s:.,;])(?:\d+\s*\.\s*)?(?P<r>{_RTE})\s*:\s*{_RANGE}")
 # 迂回の指示などが始まる所。ここより後ろは閉鎖区間の記述ではない
