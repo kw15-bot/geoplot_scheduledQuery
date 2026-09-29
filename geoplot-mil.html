@@ -551,14 +551,14 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
     </div>
     <span class="app-version" id="appVersion"></span>
     <div class="notif-wrap">
-      <button id="btnNotifBell" class="notif-bell" title="新着の警告">🔔<span id="notifBadge" class="notif-badge" style="display:none;">0</span></button>
+      <button id="btnNotifBell" class="notif-bell" title="新着の警告・NOTAM">🔔<span id="notifBadge" class="notif-badge" style="display:none;">0</span></button>
       <div class="notif-panel" id="notifPanel">
         <div class="notif-panel-head">
-          <span>新着の警告</span>
+          <span>新着の警告・NOTAM</span>
           <button class="btn small ghost" id="btnNotifClearAll">全て既読</button>
         </div>
         <div id="notifList"></div>
-        <div class="empty-hint" id="notifEmptyHint">新着はありません。military.geojsonが自動更新されるたびにここへ追加されます。</div>
+        <div class="empty-hint" id="notifEmptyHint">新着はありません。航行警報(military.geojson)・NOTAM(notam_cn.geojson)が自動更新されるたびにここへ追加されます。</div>
       </div>
     </div>
   </div>
@@ -2259,6 +2259,15 @@ const PENDING_KEY = 'geoplotMil_pendingNotifications';
 let seenKeys = new Set();
 let pendingNotifications = new Map(); // canonicalKey -> {key,title,bureau,date,url,points}
 let hasImportedOnce = false; // first import just baselines "seen"; nothing is "new" yet
+// NOTAM側(2026-09-29追加)。航行警報とは別に「既に見た」を持つ。NOTAMを初めて読み込んだときは、
+// その時点の分を既読として扱い、以後に増えたものだけを通知する(航行警報側と同じ考え方)。
+const SEEN_NOTAM_KEY = 'geoplotMil_seenNotamKeys';
+let seenNotamKeys = new Set();
+let notamNotifBaselined = false;
+try{
+  const raw = localStorage.getItem(SEEN_NOTAM_KEY);
+  if (raw !== null){ seenNotamKeys = new Set(JSON.parse(raw)); notamNotifBaselined = true; }
+}catch(e){ /* ignore corrupt storage */ }
 
 try{ seenKeys = new Set(JSON.parse(localStorage.getItem(SEEN_KEY) || '[]')); }catch(e){ /* ignore corrupt storage */ }
 try{
@@ -2271,6 +2280,7 @@ function persistNotificationState(){
   try{
     localStorage.setItem(SEEN_KEY, JSON.stringify([...seenKeys].slice(-4000))); // cap growth
     localStorage.setItem(PENDING_KEY, JSON.stringify([...pendingNotifications.values()]));
+    if (notamNotifBaselined) localStorage.setItem(SEEN_NOTAM_KEY, JSON.stringify([...seenNotamKeys].slice(-4000)));
   }catch(e){ /* storage full/unavailable — notifications still work for this session */ }
 }
 
@@ -2312,6 +2322,45 @@ function registerImportedItemsForNotifications(items){
   updateNotifBadge();
 }
 
+// NOTAMの新着。ビューアに出るもの(地図に描ける図形あり・DOM以外)のうち、Active/Upcoming を対象にする。
+// 同じNOTAMがA項の地名ごとに別レコードで届く(notamDedupe)ので、発行元+番号+開始時刻で1件と数える。
+function notamNotifKey(f){
+  const p = f.properties || {};
+  return 'notam:' + [p.issuer, p.number, p.valid_start].join('|');
+}
+function registerNotamsForNotifications(feats){
+  const shown = feats.filter(f => notamHasRealPolygon(f) && (f.properties || {}).classification !== 'DOM'
+    && ['active', 'upcoming'].includes(notamStatusOf(f)));
+  if (!notamNotifBaselined){
+    shown.forEach(f => seenNotamKeys.add(notamNotifKey(f)));
+    notamNotifBaselined = true;
+    persistNotificationState();
+    return;
+  }
+  let addedAny = false;
+  shown.forEach(f=>{
+    const k = notamNotifKey(f);
+    if (seenNotamKeys.has(k)) return;
+    seenNotamKeys.add(k);
+    if (pendingNotifications.has(k)) return;
+    const p = f.properties || {};
+    let bounds = null;
+    try{
+      const b = L.geoJSON(notamForLeaflet(f)).getBounds();
+      if (b.isValid()) bounds = [[b.getSouth(), b.getWest()], [b.getNorth(), b.getEast()]];
+    }catch(e){ /* 図形が読めなければズームしないだけ */ }
+    pendingNotifications.set(k, {
+      key: k, kind: 'notam', title: notamHeading(f),
+      bureau: notamStatusOf(f) === 'upcoming' ? 'NOTAM・Upcoming' : 'NOTAM・Active',
+      date: p.valid_start ? p.valid_start.slice(0, 16).replace('T', ' ') + ' UTC〜' : '', bounds,
+    });
+    addedAny = true;
+  });
+  if (addedAny) renderNotifPanel();
+  persistNotificationState();
+  updateNotifBadge();
+}
+
 function renderNotifPanel(){
   const list = $('#notifList');
   const items = [...pendingNotifications.values()];
@@ -2335,8 +2384,18 @@ function renderNotifPanel(){
     div.addEventListener('click', ()=>{
       const it = pendingNotifications.get(div.dataset.key);
       if (!it) return;
-      if (!$('#mainApp').classList.contains('mode-auto')) enterMode('auto');
       $('#notifPanel').style.display = 'none';
+      if (it.kind === 'notam'){
+        // NOTAMの通知: NOTAMモードに切り替えて、その図形にズームし、左の一覧でカードを示す
+        if (!$('#mainApp').classList.contains('mode-notam')) enterMode('notam');
+        if (it.bounds) map.fitBounds(L.latLngBounds(it.bounds).pad(0.4));
+        const f = notamActiveFeatures.find(g => notamNotifKey(g) === it.key);
+        if (f) selectNotamInPanel(f);
+        pendingNotifications.delete(it.key);
+        persistNotificationState(); updateNotifBadge(); renderNotifPanel();
+        return;
+      }
+      if (!$('#mainApp').classList.contains('mode-auto')) enterMode('auto');
       if (it.points && it.points.length){
         const b = L.latLngBounds(it.points.map(p=>[p.lat,p.lon]));
         if (b.isValid()) map.fitBounds(b.pad(0.4));
@@ -3725,6 +3784,7 @@ async function rereadNotamUrl(){
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const gj = JSON.parse(await res.text());
   notamActiveFeatures = notamDedupe(gj.features || []);
+  registerNotamsForNotifications(notamActiveFeatures);
   renderNotamList();
   updateNotamConnectionUI();
   logLine(`NOTAM自動再読込: ${connectedNotamUrl}（${notamActiveFeatures.length}件）`, 'l-ok');
