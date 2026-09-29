@@ -788,3 +788,6 @@ eAIP（eaipchina.cn、要ログイン）で配布している **AIPデータセ�
   同じNOTAMは発行元+番号+開始時刻で1件。初めて読み込んだときはその時点の分を既読にする（localStorage `geoplotMil_seenNotamKeys`）。
   通知をクリックすると NOTAM モードに切り替え、その図形にズームして左の一覧でカードを示す。
 - 2026-09-29 削除: ヘッダー中央のティッカー（現在有効一覧）は、航行警報・NOTAMとも不要になったので削除した。ヘッダー中央は空き領域（`.header-spacer`）。
+- 2026-09-29 追加（§18の続き）: 円の中心が座標ではなく地点名で書かれたものを読む（`text_rings()` → `notam_route_segments.named_center_circles()`）。
+  例: `CIRCLE CENTERED AT SHIQUANHE VOR 'SQH' WITH RADIUS OF 30KM`（ZWUQ A5003/26）、`SEGMENT WITHIN A CIRCLE CENTERED AT DUMIN WITH RADIUS OF 100KM CLSD`（ZLHW A4979〜4981/26、ZXXX A4978/26）。
+  中心の座標はAIP索引から引き（同名なら VOR 等の航法施設を優先）、`geometry_source` は `text-polygon`。以前は Q項の円のみ、または図形なしだった。
