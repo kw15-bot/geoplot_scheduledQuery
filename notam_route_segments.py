@@ -63,6 +63,7 @@ class RouteIndex:
     def __init__(self, data):
         self.meta = data.get("meta") or {}
         self.points = {k: (v[0], float(v[1]), float(v[2])) for k, v in (data.get("points") or {}).items()}
+        self.kinds = {k: (v[3] if len(v) > 3 else "WPT") for k, v in (data.get("points") or {}).items()}
         self.by_name = {}
         for uid, (name, _, _) in self.points.items():
             self.by_name.setdefault(name, []).append(uid)
@@ -331,3 +332,55 @@ def route_closure_geometry(e_text, index=None):
         return None
     return {"type": "LineString", "coordinates": lines[0]} if len(lines) == 1 \
         else {"type": "MultiLineString", "coordinates": lines}
+
+
+# ----------------------------------------------------------------------------- 地点を中心にした円
+# "THE AREA WITHIN A CIRCLE CENTERED AT SHIQUANHE VOR 'SQH' WITH RADIUS OF 30KM CLSD" (ZWUQ A5003/26) のように、
+# 円の中心が座標ではなく地点名(VOR・NDB・ウェイポイント)で書かれているもの。中心の座標は索引から引く。
+_UNIT = r"(?P<r>\d+(?:\.\d+)?)\s*(?P<u>KM|NM|M)\b"
+_PT = r"(?P<p>[A-Z]{2,5})\b"
+_CENT = r"CENT(?:ER|RE)(?:ED|D)?\s+(?:AT|ON)"
+_NAMED_CIRCLES = [
+    re.compile(rf"CIRCLE\s+{_CENT}\s+{_PT}\s+(?:WITH\s+)?(?:A\s+)?RADIUS\s+(?:OF\s+)?{_UNIT}"),
+    re.compile(rf"RADIUS\s+(?:OF\s+)?{_UNIT}\s+{_CENT}\s+{_PT}"),
+    re.compile(rf"{_UNIT}\s+RADIUS\s+(?:OF|AROUND|{_CENT})\s+{_PT}"),
+]
+
+
+def _normalize(e_text):
+    t = re.sub(r"\s+", " ", html.unescape(e_text or "").upper())
+    return _NAVAID.sub(r"\1", t)
+
+
+def has_named_center_circle(e_text):
+    """地点名を中心にした円の書き方があるか(索引の有無に関係なく判定)。"""
+    t = _normalize(e_text)
+    return any(p.search(t) for p in _NAMED_CIRCLES)
+
+
+def named_center_circles(e_text, index=None):
+    """[(lat, lon, 半径NM), ...](本文の順)。中心の地点が索引に無いものは捨てる。"""
+    idx = index or load_index()
+    if not idx:
+        return []
+    t = _normalize(e_text)
+    found = []
+    for pat in _NAMED_CIRCLES:
+        for m in pat.finditer(t):
+            uids = idx.by_name.get(m["p"]) or []
+            if not uids:
+                continue
+            # 同じ名前の地点が複数あるときは航法施設(VOR等)を優先する
+            navs = [u for u in uids if u in idx.kinds and idx.kinds[u] != "WPT"]
+            uid = navs[0] if navs else uids[0]
+            r = float(m["r"])
+            r_nm = r / 1.852 if m["u"] == "KM" else r / 1852.0 if m["u"] == "M" else r
+            lat, lon = idx.ll(uid)
+            found.append((m.start(), lat, lon, r_nm))
+    out, seen = [], set()
+    for _, lat, lon, r_nm in sorted(found):
+        key = (round(lat, 5), round(lon, 5), round(r_nm, 3))
+        if key not in seen:
+            seen.add(key)
+            out.append((lat, lon, r_nm))
+    return out
