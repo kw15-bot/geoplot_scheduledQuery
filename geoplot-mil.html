@@ -275,6 +275,17 @@ body.base-sat .leaflet-control-attribution{
 }
 .map-toolbar .coord-plot-input.invalid{border-color:var(--red);}
 .coord-pin{width:18px;height:26px;}
+/* レイヤー選択(NOTAMモードのみ。2026-09-29) */
+.app:not(.mode-notam) .notam-only{display:none;}
+.layer-wrap{position:relative;display:flex;}
+.layer-panel{display:none;position:absolute;top:calc(100% + 6px);left:0;min-width:220px;z-index:600;
+  background:var(--panel);border:1px solid var(--border-bright);border-radius:8px;padding:10px 12px;
+  box-shadow:0 4px 16px rgba(0,0,0,.12);font-size:12px;}
+.layer-panel.open{display:block;}
+.layer-panel .check-row{display:flex;align-items:center;gap:6px;margin:0;cursor:pointer;}
+.layer-note{margin-top:6px;font-size:10.5px;color:var(--text-faint);line-height:1.5;}
+.layer-note.err{color:var(--red);}
+body.dark-mode .layer-panel{background:rgba(24,23,20,.97);}
 .toolbar-sep{width:1px;align-self:stretch;background:rgba(0,0,0,.15);margin:2px 0;}
 body.dark-mode .toolbar-sep{background:rgba(255,255,255,.18);}
 .scale-note{position:absolute;right:12px;bottom:12px;z-index:500;font-family:var(--mono);font-size:10px;color:var(--text-faint);background:rgba(255,255,255,.8);padding:4px 8px;border-radius:5px;border:1px solid var(--border);}
@@ -655,6 +666,14 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <span class="toolbar-sep"></span>
       <input type="text" id="coordPlotInput" class="coord-plot-input" placeholder="DMS: 000000N0000000E"
              spellcheck="false" autocomplete="off" title="座標(度分秒 例: 350737N1000535E)を入力すると、その地点にズームしてピンを立てます。消すとピンも消えます">
+      <span class="toolbar-sep notam-only"></span>
+      <div class="layer-wrap notam-only">
+        <button class="btn small" id="btnLayers" type="button" title="地図に重ねるレイヤーを選ぶ">レイヤー</button>
+        <div class="layer-panel" id="layerPanel">
+          <label class="check-row"><input type="checkbox" id="layerRoutes"> 航空路（中国）</label>
+          <div class="layer-note" id="layerRoutesNote">中国AIPの全航空路。細い線で下に敷きます（線にマウスを乗せると航空路名）。</div>
+        </div>
+      </div>
     </div>
     <div class="measure-panel" id="measurePanel">
       <div class="measure-stats" id="measureStats">計測モード: 地図をクリックして頂点を追加</div>
@@ -735,7 +754,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v2.1.0';
+const APP_VERSION = 'v2.2.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -758,6 +777,8 @@ const APP_VERSION = 'v2.1.0';
 //  - ヘッダー中央のティッカーを削除(一時的にNOTAM版も追加したが、両方とも不要になった)
 // v2.1.0 (2026-09-29): NOTAMの航空路閉鎖の線に、幅20km(中心線の左右10km。中国の飛行基本規則 第十五条)の帯を重ねて描く
 //  (routeBandRing()。地図とPDF出力の両方。帯は他の図形より下に敷き、ラベルは付けない)。
+// v2.2.0 (2026-09-29): NOTAMモードの地図に「レイヤー」ボタンを追加し、1つ目のレイヤーとして中国の全航空路を表示できるように
+//  (暗号化した aip/cn_routes_layer.enc を起動時のkeyで復号。NOTAMの図形の下に細い線で敷き、マウスを乗せると航空路名)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -1467,7 +1488,9 @@ const FULL_VIEW_BOUNDS = [[12, 88], [46, 141]];
 // 以前は日付変更線を越えて東へドラッグすると地図が360°ぶん飛び(worldCopyJump)、米国西岸沖などの図形
 // (東経236°等に描いたもの)が画面から消えていた。範囲を1周に限れば、図形は常にその中に1つだけある。
 const MAP_LON_MIN = -60, MAP_LON_MAX = 330;
-const map = L.map('map', { zoomControl:false, worldCopyJump:false, renderer: L.canvas(), zoomSnap:0.25, zoomDelta:1,
+// renderer の tolerance: 細い線(航空路レイヤー1px、航空路閉鎖2.2px)でも、線から数px以内ならクリック・マウスオーバーを拾う
+// (既定0だと線の太さの半分=0.5pxしか反応しない)。
+const map = L.map('map', { zoomControl:false, worldCopyJump:false, renderer: L.canvas({ tolerance: 5 }), zoomSnap:0.25, zoomDelta:1,
   maxBounds: [[-85, MAP_LON_MIN], [85, MAP_LON_MAX]], maxBoundsViscosity: 1.0 });
 // Best-effort initial view -- the map container is still 0x0 at this point (#mainApp is
 // display:none until enterMode() runs below), so this fitBounds call can't compute a
@@ -1570,6 +1593,69 @@ const msaLayer = L.layerGroup().addTo(map);
 // とは完全に別データソース(notam_cn_collect.pyの出力)で、専用モード(data-mode-section="notam")
 // としてenterMode()で他の2つと排他的に表示切替される。
 const notamLayer = L.layerGroup().addTo(map);
+
+// ---------------------------------------------------------------------------
+// NOTAMモードの「レイヤー」。地図に重ねる参考レイヤーを選ぶ(2026-09-29〜。まずは航空路)。
+// 航空路は中国AIPデータセットから作ったもので、公開しない方針のため暗号化して置いてあり
+// (aip/cn_routes_layer.enc、aip_build_routes_layer.py、Actions の Viewer key sync が Secret VIEWER_KEY で作る)、
+// 起動時に入れたkeyでブラウザ内で復号する。
+// NOTAMの図形より下に敷く。別のpane(別のcanvas)にすると上のcanvasにマウスを取られて航空路名が出ないので、
+// 同じcanvasに先に描き、そのあとNOTAMの図形を描き直して上に重ねる(syncOverlayLayers)。
+let viewerKey = null;
+const ROUTES_LAYER_URL = 'aip/cn_routes_layer.enc';
+const routesLayer = L.layerGroup();
+let routesLoaded = null;                                    // 読み込み中/済みの Promise
+function b64bytes(s){ return Uint8Array.from(atob(s), c => c.charCodeAt(0)); }
+async function decryptLayerFile(url){
+  const res = await fetch(url, { cache:'no-store' });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const box = await res.json();
+  const enc = new TextEncoder();
+  const base = await crypto.subtle.importKey('raw', enc.encode(viewerKey || ''), 'PBKDF2', false, ['deriveKey']);
+  const aes = await crypto.subtle.deriveKey({ name:'PBKDF2', hash:'SHA-256', salt: b64bytes(box.salt), iterations: box.iter },
+    base, { name:'AES-GCM', length:256 }, false, ['decrypt']);
+  let gz;
+  try { gz = await crypto.subtle.decrypt({ name:'AES-GCM', iv: b64bytes(box.iv) }, aes, b64bytes(box.ct)); }
+  catch (e) { throw new Error('復号できません(レイヤーのデータが今のkeyで作られていない可能性。Actions の Viewer key sync を実行してください)'); }
+  const text = await new Response(new Blob([gz]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+  return { data: JSON.parse(text), airac: box.airac };
+}
+function loadRoutesLayer(){
+  if (!routesLoaded){
+    routesLoaded = decryptLayerFile(ROUTES_LAYER_URL).then(({ data, airac }) => {
+      L.geoJSON(data, {
+        style: () => ({ color: '#6f6a5e', weight: 1, opacity: 0.55 }),
+        onEachFeature: (f, layer) => layer.bindTooltip(f.properties.route, { sticky: true, className: 'poly-label' }),
+      }).addTo(routesLayer);
+      $('#layerRoutesNote').classList.remove('err');
+      $('#layerRoutesNote').textContent = `中国AIPの全航空路${airac ? `（AIRAC ${airac}）` : ''}・${data.features.length}本。線にマウスを乗せると航空路名。`;
+    }).catch(err => {
+      routesLoaded = null;                                  // 次にチェックしたときに読み直す
+      $('#layerRoutes').checked = false;
+      $('#layerRoutesNote').classList.add('err');
+      $('#layerRoutesNote').textContent = '航空路を読み込めませんでした: ' + err.message;
+    });
+  }
+  return routesLoaded;
+}
+// 航空路レイヤーは NOTAMモードで、チェックが入っているときだけ出す
+function syncOverlayLayers(){
+  const want = $('#layerRoutes').checked && $('#mainApp').classList.contains('mode-notam');
+  if (want){
+    loadRoutesLayer().then(()=>{
+      if ($('#layerRoutes').checked && $('#mainApp').classList.contains('mode-notam') && !map.hasLayer(routesLayer)){
+        routesLayer.addTo(map);
+        rebuildNotamMapLayer();                             // NOTAMの図形を描き直して航空路の上に出す
+      }
+    });
+  } else if (map.hasLayer(routesLayer)) {
+    map.removeLayer(routesLayer);
+  }
+}
+$('#btnLayers').addEventListener('click', (e)=>{ e.stopPropagation(); $('#layerPanel').classList.toggle('open'); });
+$('#layerPanel').addEventListener('click', e => e.stopPropagation());
+document.addEventListener('click', ()=> $('#layerPanel').classList.remove('open'));
+$('#layerRoutes').addEventListener('change', syncOverlayLayers);
 const historyLayers = new Map(); // id -> layerGroup
 const historyMeta = new Map(); // id -> { title, raw_text } -- used by manual-mode popups + PDF export
 
@@ -3872,6 +3958,7 @@ function enterMode(mode){
   app.classList.remove('mode-auto','mode-manual','mode-notam');
   app.classList.add(mode === 'manual' ? 'mode-manual' : mode === 'notam' ? 'mode-notam' : 'mode-auto');
   $$('#modeTabs .mode-tab').forEach(btn=> btn.classList.toggle('active', btn.dataset.mode === mode));
+  syncOverlayLayers(); // 航空路などの参考レイヤーは NOTAMモードのときだけ出す
   // 3モードとも地図上の表示は排他 -- auto(msaLayer) / manual(manualLayerGroup) / notam(notamLayer)。
   // Each mode only shows its own shapes on the map. Without this, switching modes left the
   // previous mode's shapes visibly on the map.
@@ -3964,6 +4051,7 @@ async function askKey(){
     const key = window.prompt(label, '');
     if (key === null) return;              // キャンセル: 無地の下地のまま
     if (key && await keyGateHash(key) === KEY_GATE_HASH){
+      viewerKey = key;                     // レイヤー(航空路など)の暗号化データの復号に使う。ページを閉じれば消える
       $('#keyGate').hidden = true;
       startApp();
       return;
