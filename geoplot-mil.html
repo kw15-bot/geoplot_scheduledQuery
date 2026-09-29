@@ -523,9 +523,20 @@ body.dark-mode .mk-label{background:rgba(18,17,15,.85);}
 body.dark-mode .poly-label{color:#f1efe6!important;text-shadow:0 1px 3px rgba(0,0,0,.7);}
 body.dark-mode .pdf-panel{background:rgba(24,23,20,.97);}
 body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
+/* ---------- key入力(2026-09-29) ----------
+   ページを開くとブラウザ標準の入力ダイアログ(window.prompt)でkeyを聞き、正しいkeyが入るまで
+   ビューア本体を隠しておく(この下地だけを見せる)。データの暗号化はまだ(HANDOFF_NOTAM.md §21)なので、
+   今のところは「気軽に見られない」ための目隠し。 */
+.key-gate{position:fixed;inset:0;z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:12px;padding:16px;background:var(--bg-deep);color:var(--text-dim);font-size:12.5px;}
+.key-gate[hidden]{display:none;}
 </style>
 </head>
 <body>
+<div class="key-gate" id="keyGate">
+  <div id="keyGateMsg"></div>
+  <button class="btn small" type="button" id="keyGateRetry" hidden>key を入力する</button>
+</div>
 
 <div class="app" id="mainApp">
   <div class="header">
@@ -3855,6 +3866,9 @@ $$('#modeTabs .mode-tab').forEach(btn=>{
 
 // Startup: no landing/mode-select screen anymore -- go straight into 自動収集モード
 // (MAP・自動更新), matching the other two modes' access via the header tabs at any time.
+// 2026-09-29: 起動処理(モード選択・データの自動接続)は、key入力画面で正しいkeyが入ってから
+// startApp() でまとめて行う(下の key入力画面 の節)。
+function startApp(){
 enterMode('auto');
 
 // Zero-click connect: if the page was opened with ?geojson=<url> (e.g. by
@@ -3879,6 +3893,51 @@ const DEFAULT_NOTAM_URL = 'https://kw15-bot.github.io/geoplot_scheduledQuery/not
   if (input) input.value = notamUrl;
   connectNotamUrl(notamUrl);
 })();
+}
+
+// ---------------------------------------------------------------------------
+// key入力。ブラウザ標準の入力ダイアログ(window.prompt)で聞く。keyそのものはページに置かず、
+// PBKDF2(SHA-256)で作ったハッシュだけを持って比べる。
+// keyを変えるときは、新しいkeyで KEY_GATE_HASH を作り直す(HANDOFF_NOTAM.md §21に手順)。
+// 違うkeyなら聞き直す。キャンセルしたら下地に「key を入力する」ボタンだけを出す。
+// WebCryptoは https か localhost でしか使えない(GitHub Pages と http://127.0.0.1 はどちらも可)。
+const KEY_GATE_SALT = 'geoplot-viewer-gate-v1';
+const KEY_GATE_ITER = 300000;
+const KEY_GATE_HASH = 'ee93593ef85e35b69b3d6c208bbfbfc6f498614076c6d8f4e5ef63d4f1502e43';
+async function keyGateHash(key){
+  const enc = new TextEncoder();
+  const base = await crypto.subtle.importKey('raw', enc.encode(key), 'PBKDF2', false, ['deriveBits']);
+  const bits = await crypto.subtle.deriveBits(
+    { name:'PBKDF2', hash:'SHA-256', salt: enc.encode(KEY_GATE_SALT), iterations: KEY_GATE_ITER }, base, 256);
+  return [...new Uint8Array(bits)].map(b => b.toString(16).padStart(2, '0')).join('');
+}
+async function askKey(){
+  const msg = $('#keyGateMsg'), retry = $('#keyGateRetry');
+  retry.hidden = true;
+  msg.textContent = '';
+  if (!(window.crypto && crypto.subtle)){
+    msg.textContent = 'このページは https か http://127.0.0.1 で開いてください';
+    return;
+  }
+  let label = 'パスワードを入力してください';
+  for (;;){
+    const key = window.prompt(label, '');
+    if (key === null){                     // キャンセル
+      msg.textContent = '閲覧には key が必要です';
+      retry.hidden = false;
+      return;
+    }
+    if (key && await keyGateHash(key) === KEY_GATE_HASH){
+      $('#keyGate').hidden = true;
+      startApp();
+      return;
+    }
+    label = 'key が違います。パスワードを入力してください';
+  }
+}
+$('#keyGateRetry').addEventListener('click', askKey);
+// 描画(下地の表示)が済んでから聞く。すぐに prompt() を出すと、白い画面のままダイアログが出ることがある
+setTimeout(askKey, 50);
 
 
 </script>
