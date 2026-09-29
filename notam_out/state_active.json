@@ -79356,5 +79356,183 @@
   "type": "C",
   "upper": null,
   "year": "2026"
+ },
+ "1790707941051131": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-09-30T03:00:00Z",
+  "effective_start": "2026-09-29T20:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-29T19:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -121.6,
+      31.95
+     ],
+     [
+      -122.866667,
+      31.833333
+     ],
+     [
+      -123.9,
+      33.466667
+     ],
+     [
+      -122.75,
+      33.75
+     ],
+     [
+      -121.6,
+      31.95
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790707941051131",
+  "issued": "2026-09-29T18:51:00Z",
+  "last_updated": "2026-09-29T18:51:00Z",
+  "local_text": "!CARF 09/359 ZAK AIRSPACE DCC KING 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS 315700N1213600W TO 315000N1225200W TO 332800N1235400W TO 334500N1224500W TO POINT OF ORIGIN SFC-FL430 2609292000-2609300300",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "09/359",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 09/359 ZAK AIRSPACE DCC KING 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS 315700N1213600W TO 315000N1225200W TO 332800N1235400W TO 334500N1224500W TO POINT OF ORIGIN SFC-FL430",
+  "traffic": null,
+  "type": null,
+  "upper": "FL430",
+  "year": "2026"
+ },
+ "1790707942927030": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-30T03:00:00Z",
+  "effective_start": "2026-09-29T20:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-29T19:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -121.6,
+      31.95
+     ],
+     [
+      -122.866667,
+      31.833333
+     ],
+     [
+      -123.9,
+      33.466667
+     ],
+     [
+      -122.75,
+      33.75
+     ],
+     [
+      -121.6,
+      31.95
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4753/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/430/\nA) KZAK\nB) 2609292000\nC) 2609300300\nE) ZAK AIRSPACE DCC KING 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS 315700N1213600W TO 315000N1225200W TO 332800N1235400W TO 334500N1224500W TO POINT OF ORIGIN\nF) SFC\nG) FL430",
+  "id": "1790707942927030",
+  "issued": "2026-09-29T18:51:00Z",
+  "last_updated": "2026-09-29T18:51:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "430",
+  "min_fl": "000",
+  "number": "A4753/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE DCC KING 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS 315700N1213600W TO 315000N1225200W TO 332800N1235400W TO 334500N1224500W TO POINT OF ORIGIN",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL430",
+  "year": "2026"
+ },
+ "1790708237780286": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-30T21:00:00Z",
+  "effective_start": "2026-09-30T05:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-29T19:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4754/26 NOTAMN\nQ) KZAK/QARCA/IV/BO/E/000/999\nA) KZAK\nB) 2609300500\nC) 2609302100\nE) (TDM TRK J 260930050001 2609300500 2609302100 ALCOA BUTEN BOSKE 38N140W 38N150W 39N160W 37N170W 35N180E 33N170E 32N160E 30N150E 28N140E CANAI RTS/KSFO GNNRR ALCOA KLAX MCKEY LIBBO BRINY ALCOA CANAI V75 NHC RMK/0)",
+  "id": "1790708237780286",
+  "issued": "2026-09-29T18:55:00Z",
+  "last_updated": "2026-09-29T18:56:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": null,
+  "max_fl": null,
+  "min_fl": null,
+  "number": "A4754/26",
+  "purpose": "BO",
+  "q_code": "QARCA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": "A",
+  "text": "(TDM TRK J 260930050001 2609300500 2609302100 ALCOA BUTEN BOSKE 38N140W 38N150W 39N160W 37N170W 35N180E 33N170E 32N160E 30N150E 28N140E CANAI RTS/KSFO GNNRR ALCOA KLAX MCKEY LIBBO BRINY ALCOA CANAI V75 NHC RMK/0)",
+  "traffic": null,
+  "type": "N",
+  "upper": null,
+  "year": "2026"
  }
 }
