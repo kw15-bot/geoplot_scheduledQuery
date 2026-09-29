@@ -78348,5 +78348,77 @@
   "type": "R",
   "upper": null,
   "year": "2026"
+ },
+ "1790686046890000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-09-30T03:37:00.000Z",
+  "effective_start": "2026-09-30T02:17:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZWUQ",
+  "first_seen": "2026-09-29T12:50:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      88.708333,
+      38.575
+     ],
+     [
+      90.341944,
+      38.798611
+     ],
+     [
+      90.950278,
+      38.875833
+     ]
+    ],
+    [
+     [
+      90.701667,
+      38.683333
+     ],
+     [
+      90.341944,
+      38.798611
+     ],
+     [
+      87.879559,
+      39.523417
+     ]
+    ]
+   ],
+   "type": "MultiLineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZWUQ",
+  "icao_text": "A5009/26 NOTAMN\r\nQ)ZWUQ/QARLC/IV/NBO/E/000/999/\r\nA)ZWUQ B)2609300217 C)2609300337 \r\nE) FLW SEGMENT OF ATS RTE CLSD:\r\n1.W112: NOLEP-ADMUX.\r\n2.Y1: MAGOD-260KM WEST OF MAGOD.\r\nF)GND G)UNL",
+  "id": "1790686046890000",
+  "issued": "2026-09-29T12:46:00.000Z",
+  "last_updated": "2026-09-29T12:47:00.000Z",
+  "local_text": null,
+  "location": "ZWUQ",
+  "lower": "GND",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A5009/26",
+  "purpose": "NBO",
+  "q_code": "QARLC",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "FLW SEGMENT OF ATS RTE CLSD:\r\n1.W112: NOLEP-ADMUX.\r\n2.Y1: MAGOD-260KM WEST OF MAGOD.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
+  "year": "2026"
  }
 }
