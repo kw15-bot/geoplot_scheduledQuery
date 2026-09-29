@@ -523,9 +523,37 @@ body.dark-mode .mk-label{background:rgba(18,17,15,.85);}
 body.dark-mode .poly-label{color:#f1efe6!important;text-shadow:0 1px 3px rgba(0,0,0,.7);}
 body.dark-mode .pdf-panel{background:rgba(24,23,20,.97);}
 body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
+/* ---------- key入力画面(2026-09-29) ----------
+   ページを開くと最初にこの画面を出し、正しいkeyが入るまでビューア本体を隠す。
+   データの暗号化はまだ(HANDOFF_NOTAM.md §21)なので、今のところは「気軽に見られない」ための目隠し。 */
+.key-gate{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;
+  padding:16px;background:var(--bg-deep);}
+.key-gate[hidden]{display:none;}
+.key-gate-card{width:100%;max-width:340px;background:var(--panel);border:1px solid var(--border-bright);
+  border-radius:10px;padding:26px 24px 22px;box-shadow:0 6px 24px rgba(0,0,0,.08);}
+.key-gate-card .brand{justify-content:center;margin-bottom:6px;}
+.key-gate-sub{text-align:center;font-size:11.5px;color:var(--text-dim);margin-bottom:18px;}
+.key-gate-card input[type=password]{width:100%;background:var(--bg-deep);border:1px solid var(--border);border-radius:6px;
+  color:var(--text);font-family:var(--mono);font-size:14px;padding:10px 11px;outline:none;letter-spacing:.08em;}
+.key-gate-card input[type=password]:focus{border-color:var(--cyan);}
+.key-gate-card .btn{width:100%;justify-content:center;margin-top:12px;}
+.key-gate-remember{display:flex;align-items:center;gap:6px;margin-top:10px;font-size:11.5px;color:var(--text-dim);cursor:pointer;}
+.key-gate-msg{min-height:16px;margin-top:10px;text-align:center;font-size:11.5px;color:var(--red);}
+.key-gate-card.shake{animation:key-gate-shake .35s;}
+@keyframes key-gate-shake{20%,60%{transform:translateX(-6px);}40%,80%{transform:translateX(6px);}}
 </style>
 </head>
 <body>
+<div class="key-gate" id="keyGate">
+  <form class="key-gate-card" id="keyGateForm" autocomplete="off">
+    <div class="brand"><span class="dot"></span><span>警報現況表示</span></div>
+    <div class="key-gate-sub">閲覧には key が必要です</div>
+    <input type="password" id="keyGateInput" placeholder="key" aria-label="key" autofocus>
+    <label class="key-gate-remember"><input type="checkbox" id="keyGateRemember"> この端末では次回から入力を省略する</label>
+    <button class="btn primary" type="submit" id="keyGateSubmit">開く</button>
+    <div class="key-gate-msg" id="keyGateMsg" role="alert"></div>
+  </form>
+</div>
 
 <div class="app" id="mainApp">
   <div class="header">
@@ -3855,6 +3883,9 @@ $$('#modeTabs .mode-tab').forEach(btn=>{
 
 // Startup: no landing/mode-select screen anymore -- go straight into 自動収集モード
 // (MAP・自動更新), matching the other two modes' access via the header tabs at any time.
+// 2026-09-29: 起動処理(モード選択・データの自動接続)は、key入力画面で正しいkeyが入ってから
+// startApp() でまとめて行う(下の key入力画面 の節)。
+function startApp(){
 enterMode('auto');
 
 // Zero-click connect: if the page was opened with ?geojson=<url> (e.g. by
@@ -3878,6 +3909,61 @@ const DEFAULT_NOTAM_URL = 'https://kw15-bot.github.io/geoplot_scheduledQuery/not
   const input = $('#notamUrlInput');
   if (input) input.value = notamUrl;
   connectNotamUrl(notamUrl);
+})();
+}
+
+// ---------------------------------------------------------------------------
+// key入力画面。keyそのものはページに置かず、PBKDF2(SHA-256)で作ったハッシュだけを持って比べる。
+// keyを変えるときは、新しいkeyで KEY_GATE_HASH を作り直す(HANDOFF_NOTAM.md §21に手順)。
+// 「次回から省略」を選ぶと、ハッシュをこの端末(localStorage)に覚え、次回はそれで照合する。
+// WebCryptoは https か localhost でしか使えない(GitHub Pages と http://127.0.0.1 はどちらも可)。
+const KEY_GATE_SALT = 'geoplot-viewer-gate-v1';
+const KEY_GATE_ITER = 300000;
+const KEY_GATE_HASH = 'ee93593ef85e35b69b3d6c208bbfbfc6f498614076c6d8f4e5ef63d4f1502e43';
+const KEY_GATE_STORE = 'geoplotViewerKeyHash';
+async function keyGateHash(key){
+  const enc = new TextEncoder();
+  const base = await crypto.subtle.importKey('raw', enc.encode(key), 'PBKDF2', false, ['deriveBits']);
+  const bits = await crypto.subtle.deriveBits(
+    { name:'PBKDF2', hash:'SHA-256', salt: enc.encode(KEY_GATE_SALT), iterations: KEY_GATE_ITER }, base, 256);
+  return [...new Uint8Array(bits)].map(b => b.toString(16).padStart(2, '0')).join('');
+}
+function keyGateOpen(){
+  $('#keyGate').hidden = true;
+  startApp();
+}
+(function initKeyGate(){
+  let saved = null;
+  try { saved = localStorage.getItem(KEY_GATE_STORE); } catch (e) {}
+  if (saved === KEY_GATE_HASH){ keyGateOpen(); return; }
+  const form = $('#keyGateForm'), input = $('#keyGateInput'), msg = $('#keyGateMsg'), btn = $('#keyGateSubmit');
+  if (!(window.crypto && crypto.subtle)){
+    msg.textContent = 'このページは https か http://127.0.0.1 で開いてください';
+    btn.disabled = true;
+    return;
+  }
+  input.focus();
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    const key = input.value;
+    if (!key) return;
+    btn.disabled = true;
+    msg.textContent = '';
+    const h = await keyGateHash(key);
+    btn.disabled = false;
+    if (h !== KEY_GATE_HASH){
+      msg.textContent = 'key が違います';
+      form.classList.remove('shake'); void form.offsetWidth; form.classList.add('shake');
+      input.select();
+      return;
+    }
+    try {
+      if ($('#keyGateRemember').checked) localStorage.setItem(KEY_GATE_STORE, h);
+      else localStorage.removeItem(KEY_GATE_STORE);
+    } catch (err) {}
+    input.value = '';
+    keyGateOpen();
+  });
 })();
 
 
