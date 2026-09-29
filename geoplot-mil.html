@@ -285,6 +285,13 @@ body.base-sat .leaflet-control-attribution{
   position:absolute;top:12px;left:12px;z-index:500;display:flex;gap:6px;flex-wrap:wrap;max-width:calc(100% - 24px);
 }
 .map-toolbar .btn{background:rgba(255,255,255,.88);backdrop-filter:blur(3px);}
+/* 座標プロット欄。高さはflexの伸長(align-items:stretch)で隣のボタンに揃える */
+.map-toolbar .coord-plot-input{
+  width:150px;flex:none;padding:0 9px;font-size:11px;resize:none;letter-spacing:.03em;
+  background:rgba(255,255,255,.88);backdrop-filter:blur(3px);border:1px solid var(--border-bright);
+}
+.map-toolbar .coord-plot-input.invalid{border-color:var(--red);}
+.coord-pin{width:18px;height:26px;}
 .toolbar-sep{width:1px;align-self:stretch;background:rgba(0,0,0,.15);margin:2px 0;}
 body.dark-mode .toolbar-sep{background:rgba(255,255,255,.18);}
 .scale-note{position:absolute;right:12px;bottom:12px;z-index:500;font-family:var(--mono);font-size:10px;color:var(--text-faint);background:rgba(255,255,255,.8);padding:4px 8px;border-radius:5px;border:1px solid var(--border);}
@@ -504,6 +511,7 @@ body.dark-mode .leaflet-tile-pane{filter:invert(100%) hue-rotate(180deg) brightn
 body.dark-mode.base-sat .leaflet-tile-pane{filter:none;}
 body.dark-mode .readout{background:rgba(18,17,15,.85);}
 body.dark-mode .map-toolbar .btn{background:rgba(18,17,15,.8);}
+body.dark-mode .map-toolbar .coord-plot-input{background:rgba(18,17,15,.8);}
 body.dark-mode .scale-note{background:rgba(18,17,15,.75);}
 body.dark-mode .measure-control a{background:rgba(18,17,15,.85)!important;}
 body.dark-mode .measure-panel{background:rgba(24,23,20,.92);}
@@ -653,6 +661,9 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <button class="btn small" id="btnFitAll">全体表示</button>
       <span class="toolbar-sep"></span>
       <button class="btn small" id="btnBaseToggle">地図切替</button>
+      <span class="toolbar-sep"></span>
+      <input type="text" id="coordPlotInput" class="coord-plot-input" placeholder="000000N0000000E"
+             spellcheck="false" autocomplete="off" title="座標(度分秒 例: 350737N1000535E)を入力すると、その地点にズームしてピンを立てます。消すとピンも消えます">
     </div>
     <div class="measure-panel" id="measurePanel">
       <div class="measure-stats" id="measureStats">計測モード: 地図をクリックして頂点を追加</div>
@@ -1486,6 +1497,39 @@ function setBasemap(which){
   $('#btnBaseToggle').classList.toggle('primary', which === 'sat');
 }
 $('#btnBaseToggle').addEventListener('click', ()=> setBasemap(currentBase === 'osm' ? 'sat' : 'osm'));
+
+// 座標プロット(航行警報・NOTAMどちらのモードでも使える)。度分秒の DDMMSS[NS]DDDMMSS[EW]
+// (例: 350737N1000535E、秒の小数・間の空白も可)を入力すると、その地点にズームしてピンを立てる。
+// 入力を消すとピンも消える。途中まで打った状態など読めない間はピンを外し、枠を赤くする。
+let coordPin = null;
+function parseDmsCoord(text){
+  const m = text.trim().toUpperCase().replace(/\s+/g, '')
+    .match(/^(\d{2})(\d{2})(\d{2}(?:\.\d+)?)([NS])(\d{3})(\d{2})(\d{2}(?:\.\d+)?)([EW])$/);
+  if (!m) return null;
+  const [, ld, lm, ls, ns, gd, gm, gs, ew] = m;
+  if (+lm >= 60 || +ls >= 60 || +gm >= 60 || +gs >= 60) return null;
+  const lat = (+ld + lm / 60 + ls / 3600) * (ns === 'S' ? -1 : 1);
+  const lon = (+gd + gm / 60 + gs / 3600) * (ew === 'W' ? -1 : 1);
+  if (Math.abs(lat) > 90 || Math.abs(lon) > 180) return null;
+  return { lat, lon };
+}
+function updateCoordPin(){
+  const input = $('#coordPlotInput');
+  const c = parseDmsCoord(input.value);
+  if (coordPin){ map.removeLayer(coordPin); coordPin = null; }
+  input.classList.toggle('invalid', !!input.value.trim() && !c);
+  if (!c) return;
+  // NOTAM側と同じ経度の表し方(西経30°より西は+360°)にして、太平洋側の図形と同じ位置に立てる
+  const ll = L.latLng(c.lat, notamWrapLon(c.lon));
+  coordPin = L.marker(ll, {
+    icon: L.divIcon({ className:'', iconSize:[18,26], iconAnchor:[9,26], tooltipAnchor:[0,-24],
+      html:'<svg class="coord-pin" viewBox="0 0 18 26"><path d="M9 25C9 25 17 14.5 17 9A8 8 0 0 0 1 9C1 14.5 9 25 9 25Z" fill="#e0453a" stroke="#fff" stroke-width="1.5"/><circle cx="9" cy="9" r="3" fill="#fff"/></svg>' }),
+    keyboard:false, zIndexOffset:1000,
+  }).bindTooltip(`${decToDMS(c.lat, true)} / ${decToDMS(c.lon, false)}`, { permanent:true, direction:'top', className:'poly-label' })
+    .addTo(map);
+  map.setView(ll, Math.max(map.getZoom(), 8));
+}
+$('#coordPlotInput').addEventListener('input', updateCoordPin);
 
 // manualLayerGroup wraps manualLayer + every history entry's layerGroup so the whole
 // manual-mode drawing set can be shown/hidden together (see enterMode) independently of
