@@ -48138,5 +48138,71 @@
   "type": "N",
   "upper": "5000FT AMSL",
   "year": "2026"
+ },
+ "1790654715422000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0831N12624E",
+  "effective_end": "2026-10-05T06:00:00.000Z",
+  "effective_start": "2026-09-30T22:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-09-29T04:10:27+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      125.855278,
+      8.869444
+     ],
+     [
+      126.753333,
+      9.041389
+     ],
+     [
+      126.930278,
+      8.151389
+     ],
+     [
+      126.040278,
+      7.978333
+     ],
+     [
+      125.855278,
+      8.869444
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPMF",
+  "icao_text": "B5139/26 NOTAMN\r\nQ) RPHI/QWYLW/IV/M  /AW/000/050/0831N12624E040\r\nA) RPMF B) 2609302200 C) 2610050600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n085210N 1255119E -\r\n090229N 1264512E -\r\n080905N 1265549E -\r\n075842N 1260225E -\r\n085210N 1255119E\r\n(LIANGA AND BISLIG BAY).\r\nF) SFC G) 5000FT AMSL",
+  "id": "1790654715422000",
+  "issued": "2026-09-29T04:04:00.000Z",
+  "last_updated": "2026-09-29T04:05:00.000Z",
+  "local_text": null,
+  "location": "RPMF",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5139/26",
+  "purpose": "M  ",
+  "q_code": "QWYLW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 40.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "B",
+  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n085210N 1255119E -\r\n090229N 1264512E -\r\n080905N 1265549E -\r\n075842N 1260225E -\r\n085210N 1255119E\r\n(LIANGA AND BISLIG BAY).",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "5000FT AMSL",
+  "year": "2026"
  }
 }
