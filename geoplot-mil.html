@@ -1470,7 +1470,13 @@ const FULL_VIEW_BOUNDS = [[12, 88], [46, 141]];
 // out than expected, on some window sizes but not others). zoomSnap:0.25 lets it land
 // on the much closer actual fit instead. zoomDelta:1 keeps the +/- buttons/scroll-wheel
 // moving by a normal whole step, same as before -- only the fitBounds precision changes.
-const map = L.map('map', { zoomControl:false, worldCopyJump:true, renderer: L.canvas(), zoomSnap:0.25, zoomDelta:1 });
+// 2026-09-29: worldCopyJump をやめ、東西に動かせる範囲を「東経135°を中心とした1周(西経60°〜東経330°)」に
+// 限った。NOTAMの図形は西経30°より西を+360°して描いている(NOTAM_LON_WRAP_BELOW)ので、
+// 以前は日付変更線を越えて東へドラッグすると地図が360°ぶん飛び(worldCopyJump)、米国西岸沖などの図形
+// (東経236°等に描いたもの)が画面から消えていた。範囲を1周に限れば、図形は常にその中に1つだけある。
+const MAP_LON_MIN = -60, MAP_LON_MAX = 330;
+const map = L.map('map', { zoomControl:false, worldCopyJump:false, renderer: L.canvas(), zoomSnap:0.25, zoomDelta:1,
+  maxBounds: [[-85, MAP_LON_MIN], [85, MAP_LON_MAX]], maxBoundsViscosity: 1.0 });
 // Best-effort initial view -- the map container is still 0x0 at this point (#mainApp is
 // display:none until enterMode() runs below), so this fitBounds call can't compute a
 // correct zoom yet. It just keeps the map in a valid state (some view is required before
