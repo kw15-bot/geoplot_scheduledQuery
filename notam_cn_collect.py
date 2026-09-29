@@ -390,6 +390,17 @@ def parse_text_polygons(e_text):
     return rings
 
 
+def text_rings(e_text):
+    """E項から読める面(リング)。座標で書かれた多角形・円・帯(parse_text_polygons)が無ければ、
+    地点名を中心にした円(例: "CIRCLE CENTERED AT SHIQUANHE VOR 'SQH' WITH RADIUS OF 30KM"。
+    中心はAIP索引から引く。notam_route_segments.named_center_circles)を見る。2026-09-29追加。"""
+    rings = parse_text_polygons(e_text)
+    if rings:
+        return rings
+    return [circle_ring(lat, lon, r) for lat, lon, r in notam_route_segments.named_center_circles(e_text)
+            if 0 < r <= TEXT_CIRCLE_MAX_NM]
+
+
 def ring_centroid(ring):
     pts = ring[:-1]
     return sum(p[1] for p in pts) / len(pts), sum(p[0] for p in pts) / len(pts)      # (lat, lon)
@@ -438,7 +449,7 @@ def build_geometry(feature, n, e_text=""):
         geom = {"type": "Polygon", "coordinates": polys[0]} if len(polys) == 1 \
             else {"type": "MultiPolygon", "coordinates": polys}
         return geom, "api"
-    rings = parse_text_polygons(e_text)
+    rings = text_rings(e_text)
     if rings:
         geom = {"type": "Polygon", "coordinates": [rings[0]]} if len(rings) == 1 \
             else {"type": "MultiPolygon", "coordinates": [[r] for r in rings]}

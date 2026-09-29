@@ -81,7 +81,7 @@ def reconcile_state_active_record(rec, e_text_source):
         return False
 
     e_text = C.e_section(e_text_source, e_text_source)
-    rings = C.parse_text_polygons(e_text)
+    rings = C.text_rings(e_text)
 
     if rings:
         geom = _make_polygon_geom(rings)
@@ -106,6 +106,9 @@ def reconcile_state_active_record(rec, e_text_source):
     if rec.get("geometry_source") == "route-segment" and not C.notam_route_segments.load_index():
         return False  # 索引が無い環境では線を作り直せないだけなので、既存の線を残す
 
+    if rec.get("geometry_source") == "text-polygon" and not C.notam_route_segments.load_index() \
+            and C.notam_route_segments.has_named_center_circle(e_text):
+        return False  # 地点名を中心にした円は索引が無いと作り直せないので、既存の円を残す
     if rec.get("geometry_source") not in ("text-polygon", "route-segment"):
         return False  # 元々多角形以外(円・点・None)で、新たな多角形も無い → 触らない
 
@@ -140,7 +143,7 @@ def reconcile_archive_feature(feat):
 
     raw_text = p.get("raw_text")
     e_text = C.e_section(raw_text, raw_text)
-    rings = C.parse_text_polygons(e_text)
+    rings = C.text_rings(e_text)
 
     if rings:
         geom = _make_polygon_geom(rings)
@@ -160,6 +163,9 @@ def reconcile_archive_feature(feat):
     if p.get("geometry_source") == "route-segment" and not C.notam_route_segments.load_index():
         return False
 
+    if p.get("geometry_source") == "text-polygon" and not C.notam_route_segments.load_index() \
+            and C.notam_route_segments.has_named_center_circle(e_text):
+        return False
     if p.get("geometry_source") not in ("text-polygon", "route-segment"):
         return False
 
