@@ -11121,6 +11121,18 @@
     "title": "装载大件船舶—沪航警718/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2bfc3ba3af2c4d278347448830358a28.html?hav=1jWj6r2hy5di8YwtGf35mT6XcO"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2c34ea18765c4f71a9d7da44df519d8c.html": {
+    "bureau": "河北海事局",
+    "date": "2026-09-29",
+    "detail_fetched": false,
+    "first_seen": "2026-09-29T08:20:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "航标动态—冀航警678/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2c34ea18765c4f71a9d7da44df519d8c.html"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/2c97ab25ff8442db83a4e5fb22654e8a.html": {
     "bureau": "长江海事局",
     "cancels": [],
@@ -21921,11 +21933,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/51148dbda8424341a3572b2eb5a89b6a.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-09-29",
     "detail_fetched": false,
     "first_seen": "2026-09-29T08:10:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警852/26",
     "points": [],
     "revoked": false,
     "title": "扫测作业-创荣2—鲁航警852/26",
@@ -41080,6 +41094,18 @@
     "revoked": false,
     "title": "水下检验—冀航警647/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a2881a7a1b0c484ca8dd0c61dfa44f28.html"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a2958a0534364757a12fa9aaa7a0fabc.html": {
+    "bureau": "山东海事局",
+    "date": "2026-09-29",
+    "detail_fetched": false,
+    "first_seen": "2026-09-29T08:20:35+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水工作业-勘探409、海洋石油707和滨海66—鲁航警853/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a2958a0534364757a12fa9aaa7a0fabc.html"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/a308d4f2edb74ff4a499a5ad82c46ab4.html": {
     "bureau": "山东海事局",
