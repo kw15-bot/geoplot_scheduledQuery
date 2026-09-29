@@ -52081,8 +52081,8 @@
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "2238N11349E",
-  "effective_end": "2026-12-23T15:59:00.000Z",
-  "effective_start": "2026-09-29T05:44:00.000Z",
+  "effective_end": "2026-12-23T15:59:00Z",
+  "effective_start": "2026-09-29T05:44:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
@@ -52357,10 +52357,10 @@
   },
   "geometry_source": "qline-circle",
   "icao_location": "ZGSZ",
-  "icao_text": "G4369/26 NOTAMR G3534/26\r\nQ)ZGZU/QPIXX/I/NBO/A/000/999/2238N11349E005\r\nA)ZGSZ B)2609290544 C)2612231559 \r\nE) DUE TO OBST:\r\n1.ZGSZ-5L-8 :IAC ILS/DME Y RWY33 CHANGED AS FLW:\r\nARRIVAL FLIGHT FM EAST ON TRACK 229DEG,ADD NEW FIX POINT D3.3SHK \r\nBTN D5.5SHK-D1.3SHK, ALT:750M.\r\n2.ZGSZ-5L-10:IAC ILS/DME Y RWY34L CHANGED AS FLW:\r\nARRIVAL FLIGHT FM EAST ON TRACK 229DEG,ADD NEW FIX POINT D3.3SHK \r\nBTN D5.5SHK-D1.3SHK, ALT:750M.\r\n3.ZGSZ-5L-12:IAC ILS/DME Y RWY34R CHANGED AS FLW:\r\nARRIVAL FLIGHT FM EAST ON TRACK 229DEG,ADD NEW FIX POINT D3.3SHK \r\nBTN D5.5SHK-D1.3SHK, ALT:750M.\r\n ",
+  "icao_text": "G4369/26 NOTAMR G3534/26\r\nQ)ZGZU/QPIXX/I/NBO/A/000/999/2238N11349E005\r\nA)ZGSZ B)2609290544 C)2612231559 \r\nE) DUE TO OBST:\r\n1.ZGSZ-5L-8 :IAC ILS/DME Y RWY33 CHANGED AS FLW:\r\nARRIVAL FLIGHT FM EAST ON TRACK 229DEG,ADD NEW FIX POINT D3.3SHK \r\nBTN D5.5SHK-D1.3SHK, ALT:750M.\r\n2.ZGSZ-5L-10:IAC ILS/DME Y RWY34L CHANGED AS FLW:\r\nARRIVAL FLIGHT FM EAST ON TRACK 229DEG,ADD NEW FIX POINT D3.3SHK \r\nBTN D5.5SHK-D1.3SHK, ALT:750M.\r\n3.ZGSZ-5L-12:IAC ILS/DME Y RWY34R CHANGED AS FLW:\r\nARRIVAL FLIGHT FM EAST ON TRACK 229DEG,ADD NEW FIX POINT D3.3SHK \r\nBTN D5.5SHK-D1.3SHK, ALT:750M.",
   "id": "1790661594391000",
-  "issued": "2026-09-29T05:59:00.000Z",
-  "last_updated": "2026-09-29T05:59:00.000Z",
+  "issued": "2026-09-29T05:59:00Z",
+  "last_updated": "2026-09-29T06:00:00Z",
   "local_text": null,
   "location": "ZGSZ",
   "lower": null,
@@ -52377,6 +52377,618 @@
   "series": "G",
   "text": "DUE TO OBST:\r\n1.ZGSZ-5L-8 :IAC ILS/DME Y RWY33 CHANGED AS FLW:\r\nARRIVAL FLIGHT FM EAST ON TRACK 229DEG,ADD NEW FIX POINT D3.3SHK \r\nBTN D5.5SHK-D1.3SHK, ALT:750M.\r\n2.ZGSZ-5L-10:IAC ILS/DME Y RWY34L CHANGED AS FLW:\r\nARRIVAL FLIGHT FM EAST ON TRACK 229DEG,ADD NEW FIX POINT D3.3SHK \r\nBTN D5.5SHK-D1.3SHK, ALT:750M.\r\n3.ZGSZ-5L-12:IAC ILS/DME Y RWY34R CHANGED AS FLW:\r\nARRIVAL FLIGHT FM EAST ON TRACK 229DEG,ADD NEW FIX POINT D3.3SHK \r\nBTN D5.5SHK-D1.3SHK, ALT:750M.",
   "traffic": "I",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790661774997000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2238N11349E",
+  "effective_end": "2026-12-23T15:59:00Z",
+  "effective_start": "2026-09-29T05:45:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZGZU",
+  "first_seen": "2026-09-29T06:10:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      113.816667,
+      22.716517
+     ],
+     [
+      113.8255,
+      22.716116
+     ],
+     [
+      113.834249,
+      22.714919
+     ],
+     [
+      113.842828,
+      22.712935
+     ],
+     [
+      113.851156,
+      22.710185
+     ],
+     [
+      113.859151,
+      22.706695
+     ],
+     [
+      113.866737,
+      22.702498
+     ],
+     [
+      113.873841,
+      22.697635
+     ],
+     [
+      113.880394,
+      22.692153
+     ],
+     [
+      113.886334,
+      22.686104
+     ],
+     [
+      113.891602,
+      22.679548
+     ],
+     [
+      113.896149,
+      22.672546
+     ],
+     [
+      113.899931,
+      22.665166
+     ],
+     [
+      113.90291,
+      22.65748
+     ],
+     [
+      113.905059,
+      22.649562
+     ],
+     [
+      113.906357,
+      22.641487
+     ],
+     [
+      113.906791,
+      22.633333
+     ],
+     [
+      113.906357,
+      22.62518
+     ],
+     [
+      113.905059,
+      22.617105
+     ],
+     [
+      113.90291,
+      22.609186
+     ],
+     [
+      113.899931,
+      22.6015
+     ],
+     [
+      113.896149,
+      22.594121
+     ],
+     [
+      113.891602,
+      22.587119
+     ],
+     [
+      113.886334,
+      22.580562
+     ],
+     [
+      113.880394,
+      22.574514
+     ],
+     [
+      113.873841,
+      22.569032
+     ],
+     [
+      113.866737,
+      22.564169
+     ],
+     [
+      113.859151,
+      22.559972
+     ],
+     [
+      113.851156,
+      22.556482
+     ],
+     [
+      113.842828,
+      22.553732
+     ],
+     [
+      113.834249,
+      22.551748
+     ],
+     [
+      113.8255,
+      22.55055
+     ],
+     [
+      113.816667,
+      22.55015
+     ],
+     [
+      113.807833,
+      22.55055
+     ],
+     [
+      113.799084,
+      22.551748
+     ],
+     [
+      113.790505,
+      22.553732
+     ],
+     [
+      113.782178,
+      22.556482
+     ],
+     [
+      113.774182,
+      22.559972
+     ],
+     [
+      113.766596,
+      22.564169
+     ],
+     [
+      113.759492,
+      22.569032
+     ],
+     [
+      113.752939,
+      22.574514
+     ],
+     [
+      113.747,
+      22.580562
+     ],
+     [
+      113.741731,
+      22.587119
+     ],
+     [
+      113.737184,
+      22.594121
+     ],
+     [
+      113.733403,
+      22.6015
+     ],
+     [
+      113.730423,
+      22.609186
+     ],
+     [
+      113.728274,
+      22.617105
+     ],
+     [
+      113.726976,
+      22.62518
+     ],
+     [
+      113.726542,
+      22.633333
+     ],
+     [
+      113.726976,
+      22.641487
+     ],
+     [
+      113.728274,
+      22.649562
+     ],
+     [
+      113.730423,
+      22.65748
+     ],
+     [
+      113.733403,
+      22.665166
+     ],
+     [
+      113.737184,
+      22.672546
+     ],
+     [
+      113.741731,
+      22.679548
+     ],
+     [
+      113.747,
+      22.686104
+     ],
+     [
+      113.752939,
+      22.692153
+     ],
+     [
+      113.759492,
+      22.697635
+     ],
+     [
+      113.766596,
+      22.702498
+     ],
+     [
+      113.774182,
+      22.706695
+     ],
+     [
+      113.782178,
+      22.710185
+     ],
+     [
+      113.790505,
+      22.712935
+     ],
+     [
+      113.799084,
+      22.714919
+     ],
+     [
+      113.807833,
+      22.716116
+     ],
+     [
+      113.816667,
+      22.716517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZGSZ",
+  "icao_text": "G4370/26 NOTAMR G3535/26\r\nQ)ZGZU/QXXXX/IV/NBO/A/000/999/2238N11349E005\r\nA)ZGSZ B)2609290545 C)2612231559 \r\nE) DUE TO OBST, DATABASE CODING TABLE ZGSZ-0C-14(RELATED TO \r\nZGSZ-5L-7:IAC RNP ILS/DME Z RWY33):\r\nPATH TERMINATOR   WAYPOINT ID   FLY OVER  MAGNETIC COURSE(DEG)  \r\nTURN DIRECTION ALTITUDE(M)  IAS(KT) VPA/TCH    NAVIGATION \r\nSPECIFICATION\r\n               RWY33 APPROACH TRANSITION SZ051\r\nIF       SZ051             1500       MAX205          RNP1\r\nTF       SZ055             900                        RNP1\r\nTF       SZ053             750                        RNP1\r\nTF       CF33              700                        RNP1",
+  "id": "1790661774997000",
+  "issued": "2026-09-29T06:02:00Z",
+  "last_updated": "2026-09-29T06:03:00Z",
+  "local_text": null,
+  "location": "ZGSZ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "G4370/26",
+  "purpose": "NBO",
+  "q_code": "QXXXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "G3535/26",
+  "schedule": null,
+  "scope": "A",
+  "series": "G",
+  "text": "DUE TO OBST, DATABASE CODING TABLE ZGSZ-0C-14(RELATED TO \r\nZGSZ-5L-7:IAC RNP ILS/DME Z RWY33):\r\nPATH TERMINATOR   WAYPOINT ID   FLY OVER  MAGNETIC COURSE(DEG)  \r\nTURN DIRECTION ALTITUDE(M)  IAS(KT) VPA/TCH    NAVIGATION \r\nSPECIFICATION\r\n               RWY33 APPROACH TRANSITION SZ051\r\nIF       SZ051             1500       MAX205          RNP1\r\nTF       SZ055             900                        RNP1\r\nTF       SZ053             750                        RNP1\r\nTF       CF33              700                        RNP1",
+  "traffic": "IV",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790661959173000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2238N11349E",
+  "effective_end": "2026-12-23T15:59:00Z",
+  "effective_start": "2026-09-29T05:46:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZGZU",
+  "first_seen": "2026-09-29T06:10:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      113.816667,
+      22.716517
+     ],
+     [
+      113.8255,
+      22.716116
+     ],
+     [
+      113.834249,
+      22.714919
+     ],
+     [
+      113.842828,
+      22.712935
+     ],
+     [
+      113.851156,
+      22.710185
+     ],
+     [
+      113.859151,
+      22.706695
+     ],
+     [
+      113.866737,
+      22.702498
+     ],
+     [
+      113.873841,
+      22.697635
+     ],
+     [
+      113.880394,
+      22.692153
+     ],
+     [
+      113.886334,
+      22.686104
+     ],
+     [
+      113.891602,
+      22.679548
+     ],
+     [
+      113.896149,
+      22.672546
+     ],
+     [
+      113.899931,
+      22.665166
+     ],
+     [
+      113.90291,
+      22.65748
+     ],
+     [
+      113.905059,
+      22.649562
+     ],
+     [
+      113.906357,
+      22.641487
+     ],
+     [
+      113.906791,
+      22.633333
+     ],
+     [
+      113.906357,
+      22.62518
+     ],
+     [
+      113.905059,
+      22.617105
+     ],
+     [
+      113.90291,
+      22.609186
+     ],
+     [
+      113.899931,
+      22.6015
+     ],
+     [
+      113.896149,
+      22.594121
+     ],
+     [
+      113.891602,
+      22.587119
+     ],
+     [
+      113.886334,
+      22.580562
+     ],
+     [
+      113.880394,
+      22.574514
+     ],
+     [
+      113.873841,
+      22.569032
+     ],
+     [
+      113.866737,
+      22.564169
+     ],
+     [
+      113.859151,
+      22.559972
+     ],
+     [
+      113.851156,
+      22.556482
+     ],
+     [
+      113.842828,
+      22.553732
+     ],
+     [
+      113.834249,
+      22.551748
+     ],
+     [
+      113.8255,
+      22.55055
+     ],
+     [
+      113.816667,
+      22.55015
+     ],
+     [
+      113.807833,
+      22.55055
+     ],
+     [
+      113.799084,
+      22.551748
+     ],
+     [
+      113.790505,
+      22.553732
+     ],
+     [
+      113.782178,
+      22.556482
+     ],
+     [
+      113.774182,
+      22.559972
+     ],
+     [
+      113.766596,
+      22.564169
+     ],
+     [
+      113.759492,
+      22.569032
+     ],
+     [
+      113.752939,
+      22.574514
+     ],
+     [
+      113.747,
+      22.580562
+     ],
+     [
+      113.741731,
+      22.587119
+     ],
+     [
+      113.737184,
+      22.594121
+     ],
+     [
+      113.733403,
+      22.6015
+     ],
+     [
+      113.730423,
+      22.609186
+     ],
+     [
+      113.728274,
+      22.617105
+     ],
+     [
+      113.726976,
+      22.62518
+     ],
+     [
+      113.726542,
+      22.633333
+     ],
+     [
+      113.726976,
+      22.641487
+     ],
+     [
+      113.728274,
+      22.649562
+     ],
+     [
+      113.730423,
+      22.65748
+     ],
+     [
+      113.733403,
+      22.665166
+     ],
+     [
+      113.737184,
+      22.672546
+     ],
+     [
+      113.741731,
+      22.679548
+     ],
+     [
+      113.747,
+      22.686104
+     ],
+     [
+      113.752939,
+      22.692153
+     ],
+     [
+      113.759492,
+      22.697635
+     ],
+     [
+      113.766596,
+      22.702498
+     ],
+     [
+      113.774182,
+      22.706695
+     ],
+     [
+      113.782178,
+      22.710185
+     ],
+     [
+      113.790505,
+      22.712935
+     ],
+     [
+      113.799084,
+      22.714919
+     ],
+     [
+      113.807833,
+      22.716116
+     ],
+     [
+      113.816667,
+      22.716517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZGSZ",
+  "icao_text": "G4371/26 NOTAMR G3537/26\r\nQ)ZGZU/QXXXX/IV/NBO/A/000/999/2238N11349E005\r\nA)ZGSZ B)2609290546 C)2612231559 \r\nE) DUE TO OBST, DATABASE CODING TABLE ZGSZ-0C-15(RELATE TO \r\nZGSZ-5L-9 IAC RNP ILS/DME Z RWY34L):\r\nPATH TERMINATOR   WAYPOINT ID   FLY OVER  MAGNETIC COURS(DEG)  \r\nTURN DIRECTION ALTITUDE(M)  IAS(KT) VPA/TCH    NAVIGATION \r\nSPECIFICATION\r\nRWY34L  APPROACH TRANSITION SZ051\r\nIF       SZ051                             1500   MAX205           \r\n RNP1\r\nTF       SZ055                             900                     \r\n RNP1\r\nTF       SZ053                             750                     \r\n RNP1\r\nTF       CF34L                             700                     \r\n RNP1",
+  "id": "1790661959173000",
+  "issued": "2026-09-29T06:05:00Z",
+  "last_updated": "2026-09-29T06:06:00Z",
+  "local_text": null,
+  "location": "ZGSZ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "G4371/26",
+  "purpose": "NBO",
+  "q_code": "QXXXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "G3537/26",
+  "schedule": null,
+  "scope": "A",
+  "series": "G",
+  "text": "DUE TO OBST, DATABASE CODING TABLE ZGSZ-0C-15(RELATE TO \r\nZGSZ-5L-9 IAC RNP ILS/DME Z RWY34L):\r\nPATH TERMINATOR   WAYPOINT ID   FLY OVER  MAGNETIC COURS(DEG)  \r\nTURN DIRECTION ALTITUDE(M)  IAS(KT) VPA/TCH    NAVIGATION \r\nSPECIFICATION\r\nRWY34L  APPROACH TRANSITION SZ051\r\nIF       SZ051                             1500   MAX205           \r\n RNP1\r\nTF       SZ055                             900                     \r\n RNP1\r\nTF       SZ053                             750                     \r\n RNP1\r\nTF       CF34L                             700                     \r\n RNP1",
+  "traffic": "IV",
   "type": "R",
   "upper": null,
   "year": "2026"
