@@ -626,6 +626,19 @@ class RouteSegments(unittest.TestCase):
         self.assertEqual(src, "route-segment")
         self.assertEqual(g["type"], "MultiLineString")
 
+    def test_circle_centered_on_named_point(self):
+        """2026-09-29追加(ZWUQ A5003/26): 円の中心が地点名(VOR)で書かれているもの。中心は索引から引く。"""
+        e = "THE AREA WITHIN A CIRCLE CENTERED AT CHANGDU VOR &apos;CCC&apos; WITH RADIUS OF 30KM CLSD AT 8,400M AND BELOW."
+        g, src = C.build_geometry({}, {"coordinates": "3000N10200E", "radius": "016"}, e)
+        self.assertEqual((src, g["type"]), ("text-polygon", "Polygon"))
+        ring = g["coordinates"][0]
+        lat_max = max(p[1] for p in ring)
+        self.assertAlmostEqual(lat_max - 30.0, 30 / 111.2, delta=0.01)          # 半径30km
+        self.assertAlmostEqual(sum(p[0] for p in ring[:-1]) / (len(ring) - 1), 102.0, delta=0.01)
+        # "30KM RADIUS OF AAA" の書き方、索引に無い地点
+        self.assertEqual(len(C.notam_route_segments.named_center_circles("30KM RADIUS OF AAA")), 1)
+        self.assertEqual(C.notam_route_segments.named_center_circles("CIRCLE CENTERED AT ZZZ WITH RADIUS OF 5NM"), [])
+
     def test_without_index_falls_back(self):
         C.notam_route_segments.set_index(None)
         g, src = C.build_geometry({}, {"coordinates": "3000N10100E", "radius": "999"},
