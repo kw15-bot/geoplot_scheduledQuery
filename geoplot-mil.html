@@ -3566,6 +3566,12 @@ function rebuildNotamMapLayer(){
     ? f.geometry.coordinates.map(coords => ({ type:'Feature', properties: f.properties,
         geometry: { type: SPLIT[f.geometry.type], coordinates: coords }, _notamOrig: f }))
     : [f]).map(notamForLeaflet);
+  // 重なったときは Active(赤) を一番上に描く。描いた順に上へ重なるので、Archive → Upcoming → Active の順に並べる
+  // (例: ZWUQ の A5004/26(Active) と A5005/26(Upcoming) が同じ線で、黄色の線が赤を隠していた)。
+  // クリックも一番上の図形が拾うので、重なりをクリックすると Active のカードに飛ぶ。
+  const DRAW_RANK = { active: 2, upcoming: 1 };
+  const rankOf = part => DRAW_RANK[notamStatusOf(part)] || 0;
+  parts.sort((a, b) => rankOf(a) - rankOf(b));              // 同じ順位の中の並びは変えない(安定ソート)
   // 範囲がまったく同じ図形が複数ある(例: A4714/26とA4715/26)と、NOTAM番号のラベルが同じ位置に
   // 重なって読めなくなるので、1つのラベルにまとめて(「A4714/26・A4715/26」)最初の図形にだけ付ける。
   const labelGroups = new Map();
@@ -3574,10 +3580,12 @@ function rebuildNotamMapLayer(){
     const num = (part.properties || {}).number;
     if (!labelGroups.has(g)) labelGroups.set(g, { first: part, numbers: [] });
     const grp = labelGroups.get(g);
-    if (num && !grp.numbers.includes(num)) grp.numbers.push(num);
+    if (num && !grp.numbers.some(x => x.num === num)) grp.numbers.push({ num, rank: rankOf(part) });
   });
   const labelOf = new Map();
-  labelGroups.forEach(grp => labelOf.set(grp.first, grp.numbers.join('・')));
+  // ラベルの番号は Active を先頭にする(同じ状態どうしは元の並びのまま)
+  labelGroups.forEach(grp => labelOf.set(grp.first,
+    grp.numbers.slice().sort((a, b) => b.rank - a.rank).map(x => x.num).join('・')));
   L.geoJSON({ type:'FeatureCollection', features: parts }, {
     style: notamStyle,
     pointToLayer: notamPointToLayer,
