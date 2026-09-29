@@ -101,7 +101,7 @@ body{
   margin:0 14px;border-radius:6px;background:var(--panel-alt);border:1px solid var(--border);}
 .header-ticker-track{position:absolute;top:0;left:0;height:100%;display:flex;align-items:center;
   white-space:nowrap;will-change:transform;animation:header-ticker-scroll linear infinite;}
-.header-ticker:hover .header-ticker-track{animation-play-state:paused;}
+.header-ticker-pane:hover .header-ticker-track{animation-play-state:paused;}
 .header-ticker-track .htick-item{padding:0 30px;font-size:12px;color:var(--text-dim);position:relative;}
 .header-ticker-track .htick-item::after{content:'';position:absolute;right:0;top:50%;
   transform:translateY(-50%);width:4px;height:4px;border-radius:50%;background:var(--text-faint);}
@@ -111,9 +111,13 @@ body{
 /* 手動モードでは警報一覧そのものを扱わないので、ティッカーは表示しない(旧
    header-spacerと同じ、見た目には何も無いflex:1の空き領域に戻す。レイアウト用に
    要素自体は両モードで存在させたまま、枠と中身だけをCSSで消す)。 */
-.app.mode-manual .header-ticker,.app.mode-notam .header-ticker{background:transparent;border-color:transparent;}
-.app.mode-manual .header-ticker-track,.app.mode-manual .header-ticker-empty,
-.app.mode-notam .header-ticker-track,.app.mode-notam .header-ticker-empty{display:none;}
+/* NOTAMモードではNOTAMの「現在有効(Active)」を同じ見た目で流す(2026-09-29)。
+   モードごとの中身は .header-ticker-pane[data-ticker] に分け、表示中のモードの分だけ出す。 */
+.header-ticker-pane{position:absolute;inset:0;}
+.app:not(.mode-notam) .header-ticker-pane[data-ticker="notam"],
+.app.mode-notam .header-ticker-pane[data-ticker="auto"]{display:none;}
+.app.mode-manual .header-ticker{background:transparent;border-color:transparent;}
+.app.mode-manual .header-ticker-pane{display:none;}
 .notif-wrap{position:relative;}
 .notif-bell{
   position:relative;background:transparent;border:1px solid transparent;border-radius:8px;
@@ -532,7 +536,8 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <button class="mode-tab" data-mode="manual">手動</button>
     </div>
     <div class="header-ticker" id="headerTicker">
-      <div class="header-ticker-track" id="headerTickerTrack"></div>
+      <div class="header-ticker-pane" data-ticker="auto"><div class="header-ticker-track" id="headerTickerTrack"></div></div>
+      <div class="header-ticker-pane" data-ticker="notam"><div class="header-ticker-track" id="headerTickerTrackNotam"></div></div>
     </div>
     <span class="app-version" id="appVersion"></span>
     <div class="notif-wrap">
@@ -2853,40 +2858,60 @@ function selectItemInPanel(it){
 // よう、実際の描画幅から所要時間を逆算している。
 const HEADER_TICKER_SPEED_PX_S = 55; // 流れる速さ(px/秒)。大きいほど速い。
 function updateHeaderTicker(base){
-  const track = $('#headerTickerTrack');
-  if (!track) return;
   const activeTitles = base
     .filter(it => { const s = getValidityStatus(it); return s === 'active' || s === 'unknown'; })
     .sort((a,b)=> (b.date||'').localeCompare(a.date||''))
     .map(it => it.title);
-
+  fillHeaderTicker($('#headerTickerTrack'), activeTitles, '現在有効な警報はありません');
+}
+// NOTAM版: 一覧のActiveタブと同じもの(地図に出せる図形があり、DOM以外、同一NOTAMは1件)を、
+// 開始が新しい順に「FIR 番号」で流す。renderNotamList()のたびに呼ばれる。
+function updateNotamHeaderTicker(){
+  const titles = notamActiveFeatures
+    .filter(f => notamStatusOf(f) === 'active' && notamHasRealPolygon(f)
+      && !((f.properties || {}).classification === 'DOM'))
+    .sort((a,b)=> ((b.properties||{}).valid_start||'').localeCompare((a.properties||{}).valid_start||''))
+    .map(notamHeading);
+  fillHeaderTicker($('#headerTickerTrackNotam'), titles, '現在有効なNOTAMはありません');
+}
+function fillHeaderTicker(track, titles, emptyText){
+  if (!track) return;
+  const pane = track.parentElement;
   track.style.animation = 'none';
-  if (!activeTitles.length){
+  let msg = pane.querySelector('.header-ticker-empty');
+  if (!titles.length){
     track.innerHTML = '';
-    track.parentElement.classList.add('is-empty');
-    if (!$('#headerTickerEmptyMsg')){
-      const msg = document.createElement('div');
-      msg.id = 'headerTickerEmptyMsg';
+    pane.classList.add('is-empty');
+    if (!msg){
+      msg = document.createElement('div');
       msg.className = 'header-ticker-empty';
-      msg.textContent = '現在有効な警報はありません';
-      track.parentElement.appendChild(msg);
+      pane.appendChild(msg);
     }
+    msg.textContent = emptyText;
     return;
   }
-  track.parentElement.classList.remove('is-empty');
-  const emptyMsg = $('#headerTickerEmptyMsg');
-  if (emptyMsg) emptyMsg.remove();
+  pane.classList.remove('is-empty');
+  if (msg) msg.remove();
 
-  const itemsHtml = activeTitles.map(t => `<span class="htick-item">${esc(t)}</span>`).join('');
+  const itemsHtml = titles.map(t => `<span class="htick-item">${esc(t)}</span>`).join('');
   track.innerHTML = itemsHtml + itemsHtml; // 2回複製(ループの継ぎ目を隠すため)
 
   // 描画後の実幅(=複製2つ分)から、1コピー分の幅を求めて所要時間を逆算する。
-  requestAnimationFrame(()=>{
-    const oneCopyWidth = track.scrollWidth / 2;
-    const duration = Math.max(8, oneCopyWidth / HEADER_TICKER_SPEED_PX_S);
-    track.style.animationDuration = duration.toFixed(1) + 's';
-    track.style.animation = `header-ticker-scroll ${duration.toFixed(1)}s linear infinite`;
-  });
+  // 非表示のモード側(display:none)では幅が0になるので、表示されたときに計り直す(syncHeaderTickers)。
+  requestAnimationFrame(()=> startHeaderTicker(track));
+}
+function startHeaderTicker(track){
+  if (!track.innerHTML) return;
+  const oneCopyWidth = track.scrollWidth / 2;
+  if (!oneCopyWidth) return;
+  const duration = Math.max(8, oneCopyWidth / HEADER_TICKER_SPEED_PX_S);
+  track.style.animation = `header-ticker-scroll ${duration.toFixed(1)}s linear infinite`;
+}
+function syncHeaderTickers(){
+  requestAnimationFrame(()=> ['#headerTickerTrack', '#headerTickerTrackNotam'].forEach(sel => {
+    const t = $(sel);
+    if (t && t.style.animation === 'none') startHeaderTicker(t);
+  }));
 }
 
 function popupHtml(it, extra=''){
@@ -3554,6 +3579,7 @@ function renderNotamList(){
   $('#notamCountUpcoming').textContent = upcomingCount;
   $('#notamCountArchive').textContent = archiveCount;
   $('#notamCountAll').textContent = activeCount + upcomingCount + archiveCount;
+  updateNotamHeaderTicker();
 
   // ポリゴン条件は満たすがFIR絞り込み前、という段階でFIRドロップダウンの選択肢を作る
   // (航行警報側のArchive/All局ドロップダウンと同じ「今のスコープに実在する値だけ出す」方式)。
@@ -3772,6 +3798,7 @@ function enterMode(mode){
   app.classList.remove('mode-auto','mode-manual','mode-notam');
   app.classList.add(mode === 'manual' ? 'mode-manual' : mode === 'notam' ? 'mode-notam' : 'mode-auto');
   $$('#modeTabs .mode-tab').forEach(btn=> btn.classList.toggle('active', btn.dataset.mode === mode));
+  syncHeaderTickers(); // 非表示だった側のティッカーは幅0で計れていないので、表示されたここで流し始める
   // 3モードとも地図上の表示は排他 -- auto(msaLayer) / manual(manualLayerGroup) / notam(notamLayer)。
   // Each mode only shows its own shapes on the map. Without this, switching modes left the
   // previous mode's shapes visibly on the map.
