@@ -787,3 +787,4 @@ eAIP（eaipchina.cn、要ログイン）で配布している **AIPデータセ�
   ビューアに出るもの（地図に描ける図形あり・DOM以外）で Active/Upcoming のうち、まだ見ていないものを通知する（`registerNotamsForNotifications()`）。
   同じNOTAMは発行元+番号+開始時刻で1件。初めて読み込んだときはその時点の分を既読にする（localStorage `geoplotMil_seenNotamKeys`）。
   通知をクリックすると NOTAM モードに切り替え、その図形にズームして左の一覧でカードを示す。
+- 2026-09-29 削除: ヘッダー中央のティッカー（現在有効一覧）は、航行警報・NOTAMとも不要になったので削除した。ヘッダー中央は空き領域（`.header-spacer`）。
