@@ -96,24 +96,28 @@ body{
 .brand small{font-family:var(--sans);font-weight:400;letter-spacing:0;color:var(--text-dim);font-size:11px;margin-left:4px;}
 /* ヘッダー中央の「現在有効な警報」流れるボックス。中身を2回複製して並べ、
    translateX(0)→translateX(-50%)でループさせる定番のマーキー実装(継ぎ目が
-   出ない)。件数0のときはアニメーションを止めて固定メッセージを表示する。 */
+   出ない)。件数0のときも「現在有効な〜はありません」を同じように流す。 */
 .header-ticker{flex:1;min-width:0;overflow:hidden;position:relative;height:30px;
   margin:0 14px;border-radius:6px;background:var(--panel-alt);border:1px solid var(--border);}
 .header-ticker-track{position:absolute;top:0;left:0;height:100%;display:flex;align-items:center;
   white-space:nowrap;will-change:transform;animation:header-ticker-scroll linear infinite;}
-.header-ticker:hover .header-ticker-track{animation-play-state:paused;}
+.header-ticker-pane:hover .header-ticker-track{animation-play-state:paused;}
 .header-ticker-track .htick-item{padding:0 30px;font-size:12px;color:var(--text-dim);position:relative;}
 .header-ticker-track .htick-item::after{content:'';position:absolute;right:0;top:50%;
   transform:translateY(-50%);width:4px;height:4px;border-radius:50%;background:var(--text-faint);}
-.header-ticker-empty{position:absolute;inset:0;display:flex;align-items:center;
-  padding:0 14px;font-size:12px;color:var(--text-faint);}
+.header-ticker-track .htick-item.htick-empty{color:var(--text-faint);}
+.header-ticker-track .htick-item.htick-empty::after{display:none;}
 @keyframes header-ticker-scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
 /* 手動モードでは警報一覧そのものを扱わないので、ティッカーは表示しない(旧
    header-spacerと同じ、見た目には何も無いflex:1の空き領域に戻す。レイアウト用に
    要素自体は両モードで存在させたまま、枠と中身だけをCSSで消す)。 */
-.app.mode-manual .header-ticker,.app.mode-notam .header-ticker{background:transparent;border-color:transparent;}
-.app.mode-manual .header-ticker-track,.app.mode-manual .header-ticker-empty,
-.app.mode-notam .header-ticker-track,.app.mode-notam .header-ticker-empty{display:none;}
+/* NOTAMモードではNOTAMの「現在有効(Active)」を同じ見た目で流す(2026-09-29)。
+   モードごとの中身は .header-ticker-pane[data-ticker] に分け、表示中のモードの分だけ出す。 */
+.header-ticker-pane{position:absolute;inset:0;}
+.app:not(.mode-notam) .header-ticker-pane[data-ticker="notam"],
+.app.mode-notam .header-ticker-pane[data-ticker="auto"]{display:none;}
+.app.mode-manual .header-ticker{background:transparent;border-color:transparent;}
+.app.mode-manual .header-ticker-pane{display:none;}
 .notif-wrap{position:relative;}
 .notif-bell{
   position:relative;background:transparent;border:1px solid transparent;border-radius:8px;
@@ -285,6 +289,13 @@ body.base-sat .leaflet-control-attribution{
   position:absolute;top:12px;left:12px;z-index:500;display:flex;gap:6px;flex-wrap:wrap;max-width:calc(100% - 24px);
 }
 .map-toolbar .btn{background:rgba(255,255,255,.88);backdrop-filter:blur(3px);}
+/* 座標プロット欄。高さはflexの伸長(align-items:stretch)で隣のボタンに揃える */
+.map-toolbar .coord-plot-input{
+  width:150px;flex:none;padding:0 9px;font-size:11px;resize:none;letter-spacing:.03em;
+  background:rgba(255,255,255,.88);backdrop-filter:blur(3px);border:1px solid var(--border-bright);
+}
+.map-toolbar .coord-plot-input.invalid{border-color:var(--red);}
+.coord-pin{width:18px;height:26px;}
 .toolbar-sep{width:1px;align-self:stretch;background:rgba(0,0,0,.15);margin:2px 0;}
 body.dark-mode .toolbar-sep{background:rgba(255,255,255,.18);}
 .scale-note{position:absolute;right:12px;bottom:12px;z-index:500;font-family:var(--mono);font-size:10px;color:var(--text-faint);background:rgba(255,255,255,.8);padding:4px 8px;border-radius:5px;border:1px solid var(--border);}
@@ -504,6 +515,7 @@ body.dark-mode .leaflet-tile-pane{filter:invert(100%) hue-rotate(180deg) brightn
 body.dark-mode.base-sat .leaflet-tile-pane{filter:none;}
 body.dark-mode .readout{background:rgba(18,17,15,.85);}
 body.dark-mode .map-toolbar .btn{background:rgba(18,17,15,.8);}
+body.dark-mode .map-toolbar .coord-plot-input{background:rgba(18,17,15,.8);}
 body.dark-mode .scale-note{background:rgba(18,17,15,.75);}
 body.dark-mode .measure-control a{background:rgba(18,17,15,.85)!important;}
 body.dark-mode .measure-panel{background:rgba(24,23,20,.92);}
@@ -524,7 +536,8 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <button class="mode-tab" data-mode="manual">手動</button>
     </div>
     <div class="header-ticker" id="headerTicker">
-      <div class="header-ticker-track" id="headerTickerTrack"></div>
+      <div class="header-ticker-pane" data-ticker="auto"><div class="header-ticker-track" id="headerTickerTrack"></div></div>
+      <div class="header-ticker-pane" data-ticker="notam"><div class="header-ticker-track" id="headerTickerTrackNotam"></div></div>
     </div>
     <span class="app-version" id="appVersion"></span>
     <div class="notif-wrap">
@@ -653,6 +666,9 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <button class="btn small" id="btnFitAll">全体表示</button>
       <span class="toolbar-sep"></span>
       <button class="btn small" id="btnBaseToggle">地図切替</button>
+      <span class="toolbar-sep"></span>
+      <input type="text" id="coordPlotInput" class="coord-plot-input" placeholder="000000N0000000E"
+             spellcheck="false" autocomplete="off" title="座標(度分秒 例: 350737N1000535E)を入力すると、その地点にズームしてピンを立てます。消すとピンも消えます">
     </div>
     <div class="measure-panel" id="measurePanel">
       <div class="measure-stats" id="measureStats">計測モード: 地図をクリックして頂点を追加</div>
@@ -1486,6 +1502,38 @@ function setBasemap(which){
   $('#btnBaseToggle').classList.toggle('primary', which === 'sat');
 }
 $('#btnBaseToggle').addEventListener('click', ()=> setBasemap(currentBase === 'osm' ? 'sat' : 'osm'));
+
+// 座標プロット(航行警報・NOTAMどちらのモードでも使える)。度分秒の DDMMSS[NS]DDDMMSS[EW]
+// (例: 350737N1000535E、秒の小数・間の空白も可)を入力すると、その地点にズームしてピンを立てる。
+// 入力を消すとピンも消える。途中まで打った状態など読めない間はピンを外し、枠を赤くする。
+let coordPin = null;
+function parseDmsCoord(text){
+  const m = text.trim().toUpperCase().replace(/\s+/g, '')
+    .match(/^(\d{2})(\d{2})(\d{2}(?:\.\d+)?)([NS])(\d{3})(\d{2})(\d{2}(?:\.\d+)?)([EW])$/);
+  if (!m) return null;
+  const [, ld, lm, ls, ns, gd, gm, gs, ew] = m;
+  if (+lm >= 60 || +ls >= 60 || +gm >= 60 || +gs >= 60) return null;
+  const lat = (+ld + lm / 60 + ls / 3600) * (ns === 'S' ? -1 : 1);
+  const lon = (+gd + gm / 60 + gs / 3600) * (ew === 'W' ? -1 : 1);
+  if (Math.abs(lat) > 90 || Math.abs(lon) > 180) return null;
+  return { lat, lon };
+}
+function updateCoordPin(){
+  const input = $('#coordPlotInput');
+  const c = parseDmsCoord(input.value);
+  if (coordPin){ map.removeLayer(coordPin); coordPin = null; }
+  input.classList.toggle('invalid', !!input.value.trim() && !c);
+  if (!c) return;
+  // NOTAM側と同じ経度の表し方(西経30°より西は+360°)にして、太平洋側の図形と同じ位置に立てる
+  const ll = L.latLng(c.lat, notamWrapLon(c.lon));
+  coordPin = L.marker(ll, {
+    icon: L.divIcon({ className:'', iconSize:[18,26], iconAnchor:[9,26],
+      html:'<svg class="coord-pin" viewBox="0 0 18 26"><path d="M9 25C9 25 17 14.5 17 9A8 8 0 0 0 1 9C1 14.5 9 25 9 25Z" fill="#e0453a" stroke="#fff" stroke-width="1.5"/><circle cx="9" cy="9" r="3" fill="#fff"/></svg>' }),
+    keyboard:false, zIndexOffset:1000,
+  }).addTo(map);
+  map.setView(ll, Math.max(map.getZoom(), 8));
+}
+$('#coordPlotInput').addEventListener('input', updateCoordPin);
 
 // manualLayerGroup wraps manualLayer + every history entry's layerGroup so the whole
 // manual-mode drawing set can be shown/hidden together (see enterMode) independently of
@@ -2809,40 +2857,62 @@ function selectItemInPanel(it){
 // よう、実際の描画幅から所要時間を逆算している。
 const HEADER_TICKER_SPEED_PX_S = 55; // 流れる速さ(px/秒)。大きいほど速い。
 function updateHeaderTicker(base){
-  const track = $('#headerTickerTrack');
-  if (!track) return;
   const activeTitles = base
     .filter(it => { const s = getValidityStatus(it); return s === 'active' || s === 'unknown'; })
     .sort((a,b)=> (b.date||'').localeCompare(a.date||''))
     .map(it => it.title);
-
+  fillHeaderTicker($('#headerTickerTrack'), activeTitles, '現在有効な警報はありません');
+}
+// NOTAM版: 一覧のActiveタブと同じもの(地図に出せる図形があり、DOM以外、同一NOTAMは1件)を、
+// 開始が新しい順に「FIR 番号」で流す。renderNotamList()のたびに呼ばれる。
+function updateNotamHeaderTicker(){
+  const titles = notamActiveFeatures
+    .filter(f => notamStatusOf(f) === 'active' && notamHasRealPolygon(f)
+      && !((f.properties || {}).classification === 'DOM'))
+    .sort((a,b)=> ((b.properties||{}).valid_start||'').localeCompare((a.properties||{}).valid_start||''))
+    .map(notamHeading);
+  fillHeaderTicker($('#headerTickerTrackNotam'), titles, '現在有効なNOTAMはありません');
+}
+function fillHeaderTicker(track, titles, emptyText){
+  if (!track) return;
+  // 0件のときも「現在有効な〜はありません」を同じように流す(2026-09-29、ユーザー要望)。
+  // 文言だけは薄い色(.htick-empty)にし、区切りの点は付けない。
+  track._baseHtml = titles.length
+    ? titles.map(t => `<span class="htick-item">${esc(t)}</span>`).join('')
+    : `<span class="htick-item htick-empty">${esc(emptyText)}</span>`;
   track.style.animation = 'none';
-  if (!activeTitles.length){
-    track.innerHTML = '';
-    track.parentElement.classList.add('is-empty');
-    if (!$('#headerTickerEmptyMsg')){
-      const msg = document.createElement('div');
-      msg.id = 'headerTickerEmptyMsg';
-      msg.className = 'header-ticker-empty';
-      msg.textContent = '現在有効な警報はありません';
-      track.parentElement.appendChild(msg);
-    }
-    return;
-  }
-  track.parentElement.classList.remove('is-empty');
-  const emptyMsg = $('#headerTickerEmptyMsg');
-  if (emptyMsg) emptyMsg.remove();
-
-  const itemsHtml = activeTitles.map(t => `<span class="htick-item">${esc(t)}</span>`).join('');
-  track.innerHTML = itemsHtml + itemsHtml; // 2回複製(ループの継ぎ目を隠すため)
-
-  // 描画後の実幅(=複製2つ分)から、1コピー分の幅を求めて所要時間を逆算する。
-  requestAnimationFrame(()=>{
-    const oneCopyWidth = track.scrollWidth / 2;
-    const duration = Math.max(8, oneCopyWidth / HEADER_TICKER_SPEED_PX_S);
-    track.style.animationDuration = duration.toFixed(1) + 's';
-    track.style.animation = `header-ticker-scroll ${duration.toFixed(1)}s linear infinite`;
-  });
+  track.innerHTML = track._baseHtml;
+  requestAnimationFrame(()=> startHeaderTicker(track));
+}
+// 1コピー分がティッカーの枠より短い(件数が少ない・0件の文言だけ)と、同じ文字が同時に2つ見えて
+// 途切れたように見えるので、枠の幅に届くまで繰り返してから、それを2回並べてループさせる。
+// 非表示のモード側(display:none)では幅が0で計れないので、表示されたときに計り直す(syncHeaderTickers)。
+function startHeaderTicker(track){
+  if (!track._baseHtml) return;
+  track.innerHTML = track._baseHtml;
+  const baseWidth = track.scrollWidth;
+  const boxWidth = track.parentElement.clientWidth;
+  if (!baseWidth || !boxWidth){ track.style.animation = 'none'; return; }
+  const copy = track._baseHtml.repeat(Math.max(1, Math.ceil(boxWidth / baseWidth)));
+  track.innerHTML = copy + copy; // 2回複製(ループの継ぎ目を隠すため)
+  const oneCopyWidth = track.scrollWidth / 2;
+  const duration = Math.max(8, oneCopyWidth / HEADER_TICKER_SPEED_PX_S);
+  track.style.animation = `header-ticker-scroll ${duration.toFixed(1)}s linear infinite`;
+}
+// 画面幅が変わると繰り返し回数が合わなくなるので、表示中のティッカーを計り直す
+let _tickerResizeTimer = null;
+window.addEventListener('resize', ()=>{
+  clearTimeout(_tickerResizeTimer);
+  _tickerResizeTimer = setTimeout(()=> ['#headerTickerTrack', '#headerTickerTrackNotam'].forEach(sel => {
+    const t = $(sel);
+    if (t) startHeaderTicker(t);
+  }), 250);
+});
+function syncHeaderTickers(){
+  requestAnimationFrame(()=> ['#headerTickerTrack', '#headerTickerTrackNotam'].forEach(sel => {
+    const t = $(sel);
+    if (t && t.style.animation === 'none') startHeaderTicker(t);
+  }));
 }
 
 function popupHtml(it, extra=''){
@@ -3510,6 +3580,7 @@ function renderNotamList(){
   $('#notamCountUpcoming').textContent = upcomingCount;
   $('#notamCountArchive').textContent = archiveCount;
   $('#notamCountAll').textContent = activeCount + upcomingCount + archiveCount;
+  updateNotamHeaderTicker();
 
   // ポリゴン条件は満たすがFIR絞り込み前、という段階でFIRドロップダウンの選択肢を作る
   // (航行警報側のArchive/All局ドロップダウンと同じ「今のスコープに実在する値だけ出す」方式)。
@@ -3728,6 +3799,7 @@ function enterMode(mode){
   app.classList.remove('mode-auto','mode-manual','mode-notam');
   app.classList.add(mode === 'manual' ? 'mode-manual' : mode === 'notam' ? 'mode-notam' : 'mode-auto');
   $$('#modeTabs .mode-tab').forEach(btn=> btn.classList.toggle('active', btn.dataset.mode === mode));
+  syncHeaderTickers(); // 非表示だった側のティッカーは幅0で計れていないので、表示されたここで流し始める
   // 3モードとも地図上の表示は排他 -- auto(msaLayer) / manual(manualLayerGroup) / notam(notamLayer)。
   // Each mode only shows its own shapes on the map. Without this, switching modes left the
   // previous mode's shapes visibly on the map.
