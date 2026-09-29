@@ -42298,5 +42298,71 @@
   "type": null,
   "upper": "FL320",
   "year": "2026"
+ },
+ "1790647982959000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0654N12204E",
+  "effective_end": "2026-10-12T16:00:00.000Z",
+  "effective_start": "2026-10-11T07:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-09-29T02:20:27+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      122.062783,
+      6.914708
+     ],
+     [
+      122.086261,
+      6.905825
+     ],
+     [
+      122.082883,
+      6.899044
+     ],
+     [
+      122.060561,
+      6.907175
+     ],
+     [
+      122.062783,
+      6.914708
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPMZ",
+  "icao_text": "C1257/26 NOTAMN\r\nQ) RPHI/QRTCA/IV/BO /AW/000/005/0654N12204E002\r\nA) RPMZ B) 2610110700 C) 2610121600\r\nD) 0700-1600\r\nE) TEMPO RESTRICTED AREA ACT WI:\r\n065452.95N 1220346.02E -\r\n065420.97N 1220510.54E -\r\n065356.56N 1220458.38E -\r\n065425.83N 1220338.02E -\r\n065452.95N 1220346.02E\r\n(ZAMBOANGA CITY)\r\n\r\nRMK: ALL TYPES OF ACFT AND UNMANNED AERIAL VEHICLES (UAV) ARE NOT \r\nALLOWED.\r\nF) SFC G) 450FT AMSL",
+  "id": "1790647982959000",
+  "issued": "2026-09-29T02:12:00.000Z",
+  "last_updated": "2026-09-29T02:13:00.000Z",
+  "local_text": null,
+  "location": "RPMZ",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "C1257/26",
+  "purpose": "BO ",
+  "q_code": "QRTCA",
+  "qline_offset_nm": 0.6,
+  "radius_nm": 2.0,
+  "ref_number": null,
+  "schedule": "0700-1600",
+  "scope": "AW",
+  "series": "C",
+  "text": "TEMPO RESTRICTED AREA ACT WI:\r\n065452.95N 1220346.02E -\r\n065420.97N 1220510.54E -\r\n065356.56N 1220458.38E -\r\n065425.83N 1220338.02E -\r\n065452.95N 1220346.02E\r\n(ZAMBOANGA CITY)\r\n\r\nRMK: ALL TYPES OF ACFT AND UNMANNED AERIAL VEHICLES (UAV) ARE NOT \r\nALLOWED.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "450FT AMSL",
+  "year": "2026"
  }
 }
