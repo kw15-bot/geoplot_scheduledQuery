@@ -690,7 +690,8 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 
 // Bump this on every edit to this file (format: vMAJOR.MINOR.PATCH, plain decimal --
 // no date encoding). Bump PATCH for a normal fix/tweak, MINOR for a new feature, MAJOR
-// for a breaking/large change. Shown in the header next to the notif bell so it's easy
+// for a breaking/large change. 各桁は0〜9の1桁で、9の次は上の桁へ繰り上げる
+// (例: v1.9.9 の次の修正は v2.0.0、v1.9.x の次の機能追加も v2.0.0。v1.10.0 のような2桁にはしない)。 Shown in the header next to the notif bell so it's easy
 // to confirm at a glance (especially over screen-share / when reporting a bug) whether
 // the browser is actually running the latest file, rather than a stale cached copy --
 // this exact confusion has happened multiple times during development (see HANDOFF.md).
@@ -734,7 +735,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v1.10.0';
+const APP_VERSION = 'v2.0.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -743,7 +744,8 @@ const APP_VERSION = 'v1.10.0';
 // このv1.8.9までのMSA機能そのものには変更を加えていない(既存挙動を維持したままの追加)。
 // 表示条件はE項の実座標ポリゴンのみ(Q項由来の円・点は除外、収集自体には残る)。詳細は
 // HANDOFF_NOTAM.md参照。
-// v1.10.0 (2026-09-28〜29、v1.9.0以降の変更をまとめて反映。版数の上げ忘れがあったため一括で上げた):
+// v2.0.0 (2026-09-28〜29、v1.9.0以降の変更をまとめて反映。版数の上げ忘れがあったため一括で上げた。
+//  各桁は0〜9の10進で、v1.9.x の次の機能追加は繰り上がって v2.0.0。一時 v1.10.0 と表示していたのは誤り):
 //  - 先頭タブの表記を「MSA」→「NAVWAR」。周辺国の参考FIRは RPHI/KZAK のみに縮小(RJJJ/RKRR/ZKKP は収集対象外)
 //  - NOTAM: 西経30°より西は+360°して描く(太平洋側の図形を1枚の地図に並べる)。同じ範囲の図形はラベルを1つにまとめる
 //  - NOTAM: 航空路の区間閉鎖を線で描く(geometry_source: route-segment、太さ2.2)
