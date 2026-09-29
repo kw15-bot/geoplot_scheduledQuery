@@ -611,618 +611,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790495335044000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3907N11721E",
-  "effective_end": "2026-09-29T12:00:00.000Z",
-  "effective_start": "2026-09-29T01:00:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZBPE",
-  "first_seen": "2026-09-27T12:01:24+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      117.35,
-      39.19985
-     ],
-     [
-      117.360509,
-      39.19945
-     ],
-     [
-      117.370916,
-      39.198252
-     ],
-     [
-      117.381123,
-      39.196268
-     ],
-     [
-      117.391029,
-      39.193518
-     ],
-     [
-      117.40054,
-      39.190028
-     ],
-     [
-      117.409565,
-      39.185831
-     ],
-     [
-      117.418016,
-      39.180968
-     ],
-     [
-      117.425812,
-      39.175486
-     ],
-     [
-      117.432878,
-      39.169438
-     ],
-     [
-      117.439145,
-      39.162881
-     ],
-     [
-      117.444555,
-      39.155879
-     ],
-     [
-      117.449053,
-      39.1485
-     ],
-     [
-      117.452598,
-      39.140814
-     ],
-     [
-      117.455154,
-      39.132895
-     ],
-     [
-      117.456698,
-      39.12482
-     ],
-     [
-      117.457214,
-      39.116667
-     ],
-     [
-      117.456698,
-      39.108513
-     ],
-     [
-      117.455154,
-      39.100438
-     ],
-     [
-      117.452598,
-      39.09252
-     ],
-     [
-      117.449053,
-      39.084834
-     ],
-     [
-      117.444555,
-      39.077454
-     ],
-     [
-      117.439145,
-      39.070452
-     ],
-     [
-      117.432878,
-      39.063896
-     ],
-     [
-      117.425812,
-      39.057847
-     ],
-     [
-      117.418016,
-      39.052365
-     ],
-     [
-      117.409565,
-      39.047502
-     ],
-     [
-      117.40054,
-      39.043305
-     ],
-     [
-      117.391029,
-      39.039815
-     ],
-     [
-      117.381123,
-      39.037065
-     ],
-     [
-      117.370916,
-      39.035081
-     ],
-     [
-      117.360509,
-      39.033884
-     ],
-     [
-      117.35,
-      39.033483
-     ],
-     [
-      117.339491,
-      39.033884
-     ],
-     [
-      117.329084,
-      39.035081
-     ],
-     [
-      117.318877,
-      39.037065
-     ],
-     [
-      117.308971,
-      39.039815
-     ],
-     [
-      117.29946,
-      39.043305
-     ],
-     [
-      117.290435,
-      39.047502
-     ],
-     [
-      117.281984,
-      39.052365
-     ],
-     [
-      117.274188,
-      39.057847
-     ],
-     [
-      117.267122,
-      39.063896
-     ],
-     [
-      117.260855,
-      39.070452
-     ],
-     [
-      117.255445,
-      39.077454
-     ],
-     [
-      117.250947,
-      39.084834
-     ],
-     [
-      117.247402,
-      39.09252
-     ],
-     [
-      117.244846,
-      39.100438
-     ],
-     [
-      117.243302,
-      39.108513
-     ],
-     [
-      117.242786,
-      39.116667
-     ],
-     [
-      117.243302,
-      39.12482
-     ],
-     [
-      117.244846,
-      39.132895
-     ],
-     [
-      117.247402,
-      39.140814
-     ],
-     [
-      117.250947,
-      39.1485
-     ],
-     [
-      117.255445,
-      39.155879
-     ],
-     [
-      117.260855,
-      39.162881
-     ],
-     [
-      117.267122,
-      39.169438
-     ],
-     [
-      117.274188,
-      39.175486
-     ],
-     [
-      117.281984,
-      39.180968
-     ],
-     [
-      117.290435,
-      39.185831
-     ],
-     [
-      117.29946,
-      39.190028
-     ],
-     [
-      117.308971,
-      39.193518
-     ],
-     [
-      117.318877,
-      39.196268
-     ],
-     [
-      117.329084,
-      39.198252
-     ],
-     [
-      117.339491,
-      39.19945
-     ],
-     [
-      117.35,
-      39.19985
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "ZBTJ",
-  "icao_text": "E3868/26 NOTAMN\r\nQ)ZBPE/QIDAS/I/NBO/A/000/999/3907N11721E005\r\nA)ZBTJ B)2609290100 C)2609291200 \r\nE) RWY34L DME 'ICG' CH42X U/S DUE TO MAINT.\r\n ",
-  "id": "1790495335044000",
-  "issued": "2026-09-27T07:47:00.000Z",
-  "last_updated": "2026-09-27T07:48:00.000Z",
-  "local_text": null,
-  "location": "ZBTJ",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "E3868/26",
-  "purpose": "NBO",
-  "q_code": "QIDAS",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "A",
-  "series": "E",
-  "text": "RWY34L DME 'ICG' CH42X U/S DUE TO MAINT.",
-  "traffic": "I",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1790495930210000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3907N11721E",
-  "effective_end": "2026-09-29T12:00:00.000Z",
-  "effective_start": "2026-09-29T01:00:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZBPE",
-  "first_seen": "2026-09-27T12:01:24+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      117.35,
-      39.19985
-     ],
-     [
-      117.360509,
-      39.19945
-     ],
-     [
-      117.370916,
-      39.198252
-     ],
-     [
-      117.381123,
-      39.196268
-     ],
-     [
-      117.391029,
-      39.193518
-     ],
-     [
-      117.40054,
-      39.190028
-     ],
-     [
-      117.409565,
-      39.185831
-     ],
-     [
-      117.418016,
-      39.180968
-     ],
-     [
-      117.425812,
-      39.175486
-     ],
-     [
-      117.432878,
-      39.169438
-     ],
-     [
-      117.439145,
-      39.162881
-     ],
-     [
-      117.444555,
-      39.155879
-     ],
-     [
-      117.449053,
-      39.1485
-     ],
-     [
-      117.452598,
-      39.140814
-     ],
-     [
-      117.455154,
-      39.132895
-     ],
-     [
-      117.456698,
-      39.12482
-     ],
-     [
-      117.457214,
-      39.116667
-     ],
-     [
-      117.456698,
-      39.108513
-     ],
-     [
-      117.455154,
-      39.100438
-     ],
-     [
-      117.452598,
-      39.09252
-     ],
-     [
-      117.449053,
-      39.084834
-     ],
-     [
-      117.444555,
-      39.077454
-     ],
-     [
-      117.439145,
-      39.070452
-     ],
-     [
-      117.432878,
-      39.063896
-     ],
-     [
-      117.425812,
-      39.057847
-     ],
-     [
-      117.418016,
-      39.052365
-     ],
-     [
-      117.409565,
-      39.047502
-     ],
-     [
-      117.40054,
-      39.043305
-     ],
-     [
-      117.391029,
-      39.039815
-     ],
-     [
-      117.381123,
-      39.037065
-     ],
-     [
-      117.370916,
-      39.035081
-     ],
-     [
-      117.360509,
-      39.033884
-     ],
-     [
-      117.35,
-      39.033483
-     ],
-     [
-      117.339491,
-      39.033884
-     ],
-     [
-      117.329084,
-      39.035081
-     ],
-     [
-      117.318877,
-      39.037065
-     ],
-     [
-      117.308971,
-      39.039815
-     ],
-     [
-      117.29946,
-      39.043305
-     ],
-     [
-      117.290435,
-      39.047502
-     ],
-     [
-      117.281984,
-      39.052365
-     ],
-     [
-      117.274188,
-      39.057847
-     ],
-     [
-      117.267122,
-      39.063896
-     ],
-     [
-      117.260855,
-      39.070452
-     ],
-     [
-      117.255445,
-      39.077454
-     ],
-     [
-      117.250947,
-      39.084834
-     ],
-     [
-      117.247402,
-      39.09252
-     ],
-     [
-      117.244846,
-      39.100438
-     ],
-     [
-      117.243302,
-      39.108513
-     ],
-     [
-      117.242786,
-      39.116667
-     ],
-     [
-      117.243302,
-      39.12482
-     ],
-     [
-      117.244846,
-      39.132895
-     ],
-     [
-      117.247402,
-      39.140814
-     ],
-     [
-      117.250947,
-      39.1485
-     ],
-     [
-      117.255445,
-      39.155879
-     ],
-     [
-      117.260855,
-      39.162881
-     ],
-     [
-      117.267122,
-      39.169438
-     ],
-     [
-      117.274188,
-      39.175486
-     ],
-     [
-      117.281984,
-      39.180968
-     ],
-     [
-      117.290435,
-      39.185831
-     ],
-     [
-      117.29946,
-      39.190028
-     ],
-     [
-      117.308971,
-      39.193518
-     ],
-     [
-      117.318877,
-      39.196268
-     ],
-     [
-      117.329084,
-      39.198252
-     ],
-     [
-      117.339491,
-      39.19945
-     ],
-     [
-      117.35,
-      39.19985
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "ZBTJ",
-  "icao_text": "E3869/26 NOTAMN\r\nQ)ZBPE/QICAS/I/NBO/A/000/999/3907N11721E005\r\nA)ZBTJ B)2609290100 C)2609291200 \r\nE) RWY34L ILS U/S DUE TO MAINT.\r\n ",
-  "id": "1790495930210000",
-  "issued": "2026-09-27T07:56:00.000Z",
-  "last_updated": "2026-09-27T07:58:00.000Z",
-  "local_text": null,
-  "location": "ZBTJ",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "E3869/26",
-  "purpose": "NBO",
-  "q_code": "QICAS",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "A",
-  "series": "E",
-  "text": "RWY34L ILS U/S DUE TO MAINT.",
-  "traffic": "I",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790506570743752": {
   "account_id": "KZAK",
   "area_group": "REF",
@@ -34415,74 +33803,6 @@
   "series": "G",
   "text": "RWY26 GP U/S DUE TO MAINT.",
   "traffic": "I",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1790603061864000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-29T10:30:00.000Z",
-  "effective_start": "2026-09-29T09:10:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-09-28T13:50:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     114.875,
-     25.808333
-    ],
-    [
-     116.210278,
-     26.920278
-    ],
-    [
-     116.558333,
-     27.208333
-    ],
-    [
-     116.921111,
-     27.519167
-    ],
-    [
-     117.549444,
-     28.059444
-    ],
-    [
-     117.97,
-     28.416667
-    ]
-   ],
-   "type": "LineString"
-  },
-  "geometry_source": "route-segment",
-  "icao_location": "ZSHA",
-  "icao_text": "A4990/26 NOTAMN\r\nQ)ZSHA/QARXX/IV/NBO/E/000/999/\r\nA)ZSHA B)2609290910 C)2609291030 \r\nE) 1.FLW SEGMENT OF ATS RTE TEMPORARY CLSD: \r\nA599: PANLONG VOR'PLT'- SHANGRAO VOR'SHR'.\r\n2.FLIGHT ROUTES TEMPORARY ADJUSTED AS FLW,DIVERSION FLW ATC \r\nINSTRUCTION,FPL FOR RELATED SCHEDULE FLIGHT ACCORDING TO ORIGINAL \r\nPLAN:\r\nA599: PANLONG VOR'PLT'- SHANGRAO VOR'SHR' ADJUST TO PANLONG VOR \r\n'PLT'-V171- SHANGRAO VOR 'SHR',AND VICE VERSA.\r\n ",
-  "id": "1790603061864000",
-  "issued": "2026-09-28T13:44:00.000Z",
-  "last_updated": "2026-09-28T13:44:00.000Z",
-  "local_text": null,
-  "location": "ZSHA",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A4990/26",
-  "purpose": "NBO",
-  "q_code": "QARXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "A",
-  "text": "1.FLW SEGMENT OF ATS RTE TEMPORARY CLSD: \r\nA599: PANLONG VOR'PLT'- SHANGRAO VOR'SHR'.\r\n2.FLIGHT ROUTES TEMPORARY ADJUSTED AS FLW,DIVERSION FLW ATC \r\nINSTRUCTION,FPL FOR RELATED SCHEDULE FLIGHT ACCORDING TO ORIGINAL \r\nPLAN:\r\nA599: PANLONG VOR'PLT'- SHANGRAO VOR'SHR' ADJUST TO PANLONG VOR \r\n'PLT'-V171- SHANGRAO VOR 'SHR',AND VICE VERSA.",
-  "traffic": "IV",
   "type": "N",
   "upper": null,
   "year": "2026"
@@ -77374,6 +76694,98 @@
   "text": "WIP WI FLW AREA:\r\n1. 1,879M-3,103M NORTH OF RWY04R DTHR,627M-658M WEST OF RWY04R/22L \r\nCL.\r\n2. 3,305M-3,468M NORTH OF RWY04R DTHR,627M-658M WEST OF RWY04R/22L \r\nCL.\r\n3. 4,187M-4,355M NORTH OF RWY04R DTHR,732M-774M WEST OF RWY04R/22L \r\nCL.\r\n4. 4,355M-4,679M NORTH OF RWY04R DTHR,627M-774M WEST OF RWY04R/22L \r\nCL.\r\n5. 3,367M-3,482M NORTH OF RWY04R DTHR,376M-441M EAST OF RWY04R/22L \r\nCL.\r\n6. 24M SOUTH-73M NORTH OF RWY04R DTHR,815M-963M WEST OF RWY04R/22L \r\nCL.\r\n7. 52M-73M NORTH OF RWY04R DTHR,749M-815M WEST OF RWY04R/22L CL.\r\n8. 73M-348M NORTH OF RWY04R DTHR,955M-963M WEST OF RWY04R/22L CL.",
   "traffic": "IV",
   "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790677328388000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-02T10:20:00.000Z",
+  "effective_start": "2026-09-29T10:20:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZBPE",
+  "first_seen": "2026-09-29T10:30:36+00:00",
+  "geometry": {
+   "coordinates": [
+    117.345,
+    39.123333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "ZBTJ",
+  "icao_text": "E3881/26 NOTAMC E3868/26\r\nQ)ZBPE/QIDAK//M//000/999/\r\nA)ZBTJ B)2609291020 \r\nE) CNL NTM.\r\n",
+  "id": "1790677328388000",
+  "issued": "2026-09-29T10:21:00.000Z",
+  "last_updated": "2026-09-29T10:22:00.000Z",
+  "local_text": null,
+  "location": "ZBTJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "E3881/26",
+  "purpose": "M",
+  "q_code": "QIDAK",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "E3868/26",
+  "schedule": null,
+  "scope": null,
+  "series": "E",
+  "text": "CNL NTM.",
+  "traffic": null,
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790677498343000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-02T10:22:00Z",
+  "effective_start": "2026-09-29T10:22:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZBPE",
+  "first_seen": "2026-09-29T10:30:36+00:00",
+  "geometry": {
+   "coordinates": [
+    117.345,
+    39.123333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "ZBTJ",
+  "icao_text": "E3882/26 NOTAMC E3869/26\r\nQ)ZBPE/QICAK//M//000/999/\r\nA)ZBTJ B)2609291022 \r\nE) CNL NTM.",
+  "id": "1790677498343000",
+  "issued": "2026-09-29T10:24:00Z",
+  "last_updated": "2026-09-29T10:25:00Z",
+  "local_text": null,
+  "location": "ZBTJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "E3882/26",
+  "purpose": "M",
+  "q_code": "QICAK",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "E3869/26",
+  "schedule": null,
+  "scope": null,
+  "series": "E",
+  "text": "E3882/26 NOTAMC E3869/26\r\nQ)ZBPE/QICAK//M//000/999/\r\nA)ZBTJ B)2609291022 \r\nE) CNL NTM.",
+  "traffic": null,
+  "type": "C",
   "upper": null,
   "year": "2026"
  }
