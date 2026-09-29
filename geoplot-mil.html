@@ -291,7 +291,7 @@ body.base-sat .leaflet-control-attribution{
 .map-toolbar .btn{background:rgba(255,255,255,.88);backdrop-filter:blur(3px);}
 /* 座標プロット欄。高さはflexの伸長(align-items:stretch)で隣のボタンに揃える */
 .map-toolbar .coord-plot-input{
-  width:150px;flex:none;padding:0 9px;font-size:11px;resize:none;letter-spacing:.03em;
+  width:170px;flex:none;padding:0 9px;font-size:11px;resize:none;letter-spacing:.03em;
   background:rgba(255,255,255,.88);backdrop-filter:blur(3px);border:1px solid var(--border-bright);
 }
 .map-toolbar .coord-plot-input.invalid{border-color:var(--red);}
@@ -667,7 +667,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <span class="toolbar-sep"></span>
       <button class="btn small" id="btnBaseToggle">地図切替</button>
       <span class="toolbar-sep"></span>
-      <input type="text" id="coordPlotInput" class="coord-plot-input" placeholder="000000N0000000E"
+      <input type="text" id="coordPlotInput" class="coord-plot-input" placeholder="DMS: 000000N0000000E"
              spellcheck="false" autocomplete="off" title="座標(度分秒 例: 350737N1000535E)を入力すると、その地点にズームしてピンを立てます。消すとピンも消えます">
     </div>
     <div class="measure-panel" id="measurePanel">
@@ -1534,6 +1534,22 @@ function updateCoordPin(){
   map.setView(ll, Math.max(map.getZoom(), 8));
 }
 $('#coordPlotInput').addEventListener('input', updateCoordPin);
+// 欄の幅を、表示している文字(プレースホルダー)の幅ちょうどに合わせる(右に余白が空かないように)。
+// フォントは端末ごとに違う(游明朝等)ので、実際のフォントで測る。
+function fitCoordPlotInput(){
+  const el = $('#coordPlotInput');
+  const cs = getComputedStyle(el);
+  const ctx = document.createElement('canvas').getContext('2d');
+  ctx.font = `${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+  const ls = parseFloat(cs.letterSpacing) || 0;
+  const text = el.placeholder;
+  const w = ctx.measureText(text).width + ls * text.length
+    + parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight)
+    + parseFloat(cs.borderLeftWidth) + parseFloat(cs.borderRightWidth);
+  if (w > 0) el.style.width = Math.ceil(w + 2) + 'px';
+}
+fitCoordPlotInput();
+if (document.fonts) document.fonts.ready.then(fitCoordPlotInput); // Webフォントが後から読み込まれた場合
 
 // manualLayerGroup wraps manualLayer + every history entry's layerGroup so the whole
 // manual-mode drawing set can be shown/hidden together (see enterMode) independently of
@@ -2892,7 +2908,11 @@ function startHeaderTicker(track){
   track.innerHTML = track._baseHtml;
   const baseWidth = track.scrollWidth;
   const boxWidth = track.parentElement.clientWidth;
-  if (!baseWidth || !boxWidth){ track.style.animation = 'none'; return; }
+  // 非表示(幅0)で計れなかったものは印を付けておき、表示されたときに syncHeaderTickers() で流し始める。
+  // (style.animation を 'none' にしても読み返すと 'auto ease 0s 1 normal none running none' になるので、
+  //  その値では判定できない。以前はこれでNOTAM側のティッカーが止まったままだった)
+  track._needsStart = !baseWidth || !boxWidth;
+  if (track._needsStart){ track.style.animation = 'none'; return; }
   const copy = track._baseHtml.repeat(Math.max(1, Math.ceil(boxWidth / baseWidth)));
   track.innerHTML = copy + copy; // 2回複製(ループの継ぎ目を隠すため)
   const oneCopyWidth = track.scrollWidth / 2;
@@ -2911,7 +2931,7 @@ window.addEventListener('resize', ()=>{
 function syncHeaderTickers(){
   requestAnimationFrame(()=> ['#headerTickerTrack', '#headerTickerTrackNotam'].forEach(sel => {
     const t = $(sel);
-    if (t && t.style.animation === 'none') startHeaderTicker(t);
+    if (t && t._needsStart) startHeaderTicker(t);
   }));
 }
 
