@@ -24031,11 +24031,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/5781d7cd6eb0428f895d03f408f9cd9a.html": {
     "bureau": "长江海事局",
+    "cancels": [],
     "date": "2026-09-29",
     "detail_fetched": false,
     "first_seen": "2026-09-29T09:00:50+00:00",
     "groups": [],
     "military": false,
+    "own_id": "黄海航警49/26",
     "points": [],
     "revoked": false,
     "title": "关于“河牛169”轮试航作业的航行警告—黄海航警49/26",
