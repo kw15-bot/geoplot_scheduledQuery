@@ -3,6 +3,8 @@ name: Viewer key sync
 # ビューア(geoplot-mil.html)のkey入力で照合するハッシュ(KEY_GATE_HASH)を、Secret VIEWER_KEY から
 # 作り直してコミットする。keyを変えるときは「Secret VIEWER_KEY を更新 → このワークフローを手動実行」。
 # key そのものはどこにも出力しない(ページに載るのはPBKDF2のハッシュだけ。HANDOFF_NOTAM.md §21)。
+# 2026-09-29: ビューアの「レイヤー → 航空路」用の暗号化データ(aip/cn_routes_layer.enc)も、同じ VIEWER_KEY で作り直す
+# (AIP索引の復号に AIPDS_KEY も使う。HANDOFF_NOTAM.md §22)。AIRACの更新で索引を差し替えたときも、このワークフローを実行する。
 on:
   workflow_dispatch: {}
 
@@ -42,15 +44,33 @@ jobs:
           print("KEY_GATE_HASH updated" if new != html else "KEY_GATE_HASH already up to date")
           PY
 
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild routes layer from the AIP index
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+          AIPDS_KEY: ${{ secrets.AIPDS_KEY }}
+        run: |
+          if [ -z "$AIPDS_KEY" ] || [ ! -f aip/cn_aip_index.json.gz.enc ]; then
+            echo "::warning::AIPDS_KEY not set; routes layer not rebuilt"; exit 0
+          fi
+          openssl enc -d -aes-256-cbc -pbkdf2 -pass env:AIPDS_KEY \
+            -in aip/cn_aip_index.json.gz.enc -out "$RUNNER_TEMP/aip_index.json.gz"
+          pip install -q cryptography
+          python aip_build_routes_layer.py --index "$RUNNER_TEMP/aip_index.json.gz" --out aip/cn_routes_layer.enc
+
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add geoplot-mil.html
+          if [ -f aip/cn_routes_layer.enc ]; then git add aip/cn_routes_layer.enc; fi
           if git diff --staged --quiet; then
             echo "no changes"; exit 0
           fi
-          git commit -m "Viewer: sync key hash from VIEWER_KEY"
+          git commit -m "Viewer: sync key hash and routes layer from VIEWER_KEY"
           for i in 1 2 3 4 5; do
             git pull --rebase origin main && git push origin HEAD:main && exit 0
             sleep $((i * 5))
