@@ -94,30 +94,9 @@ body{
 }
 .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--phosphor);box-shadow:0 0 8px var(--phosphor);}
 .brand small{font-family:var(--sans);font-weight:400;letter-spacing:0;color:var(--text-dim);font-size:11px;margin-left:4px;}
-/* ヘッダー中央の「現在有効な警報」流れるボックス。中身を2回複製して並べ、
-   translateX(0)→translateX(-50%)でループさせる定番のマーキー実装(継ぎ目が
-   出ない)。件数0のときも「現在有効な〜はありません」を同じように流す。 */
-.header-ticker{flex:1;min-width:0;overflow:hidden;position:relative;height:30px;
-  margin:0 14px;border-radius:6px;background:var(--panel-alt);border:1px solid var(--border);}
-.header-ticker-track{position:absolute;top:0;left:0;height:100%;display:flex;align-items:center;
-  white-space:nowrap;will-change:transform;animation:header-ticker-scroll linear infinite;}
-.header-ticker-pane:hover .header-ticker-track{animation-play-state:paused;}
-.header-ticker-track .htick-item{padding:0 30px;font-size:12px;color:var(--text-dim);position:relative;}
-.header-ticker-track .htick-item::after{content:'';position:absolute;right:0;top:50%;
-  transform:translateY(-50%);width:4px;height:4px;border-radius:50%;background:var(--text-faint);}
-.header-ticker-track .htick-item.htick-empty{color:var(--text-faint);}
-.header-ticker-track .htick-item.htick-empty::after{display:none;}
-@keyframes header-ticker-scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
-/* 手動モードでは警報一覧そのものを扱わないので、ティッカーは表示しない(旧
-   header-spacerと同じ、見た目には何も無いflex:1の空き領域に戻す。レイアウト用に
-   要素自体は両モードで存在させたまま、枠と中身だけをCSSで消す)。 */
-/* NOTAMモードではNOTAMの「現在有効(Active)」を同じ見た目で流す(2026-09-29)。
-   モードごとの中身は .header-ticker-pane[data-ticker] に分け、表示中のモードの分だけ出す。 */
-.header-ticker-pane{position:absolute;inset:0;}
-.app:not(.mode-notam) .header-ticker-pane[data-ticker="notam"],
-.app.mode-notam .header-ticker-pane[data-ticker="auto"]{display:none;}
-.app.mode-manual .header-ticker{background:transparent;border-color:transparent;}
-.app.mode-manual .header-ticker-pane{display:none;}
+/* ヘッダー中央は、タブと右端(版数・通知)の間を空けるだけの空き領域。
+   (v1.8.5〜2026-09-29 は「現在有効な警報」のティッカーを流していたが、不要になったので削除) */
+.header-spacer{flex:1;min-width:0;}
 .notif-wrap{position:relative;}
 .notif-bell{
   position:relative;background:transparent;border:1px solid transparent;border-radius:8px;
@@ -545,10 +524,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <button class="mode-tab" data-mode="notam">NOTAM(Beta)</button>
       <button class="mode-tab" data-mode="manual">手動</button>
     </div>
-    <div class="header-ticker" id="headerTicker">
-      <div class="header-ticker-pane" data-ticker="auto"><div class="header-ticker-track" id="headerTickerTrack"></div></div>
-      <div class="header-ticker-pane" data-ticker="notam"><div class="header-ticker-track" id="headerTickerTrackNotam"></div></div>
-    </div>
+    <div class="header-spacer"></div>
     <span class="app-version" id="appVersion"></span>
     <div class="notif-wrap">
       <button id="btnNotifBell" class="notif-bell" title="新着の警告・NOTAM">🔔<span id="notifBadge" class="notif-badge" style="display:none;">0</span></button>
@@ -738,6 +714,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 // v1.8.6: ヘッダーのティッカーはMAP（手動）では不要なので、手動モード中は枠・中身
 // ともCSSで非表示にし、旧header-spacerと同じ「見た目には何も無いflex:1の空き
 // 領域」に戻るようにした(要素自体はレイアウト崩れ防止のため両モードで残す)。
+// 2026-09-29: ティッカーは航行警報・NOTAMとも不要になったので削除し、ヘッダー中央は空き領域(.header-spacer)に戻した。
 // v1.8.7: 地図上のポリゴン/マーカー(msaLayer側、自動巡回モードのみ)をクリックすると、
 // 左パネルの該当カードまでスクロールして一時的にハイライトするように(selectItemInPanel())。
 // タブが違ってカードが出ていない場合は、その項目のstatusに合うタブに自動で切り替える。
@@ -2904,7 +2881,6 @@ function renderWarnList(){
     });
   });
 
-  updateHeaderTicker(base);
 }
 
 // Would `it` actually show up in the left panel under the *current* tab/filter
@@ -2939,75 +2915,6 @@ function selectItemInPanel(it){
   card.classList.add('map-selected');
   clearTimeout(card._selectTimer);
   card._selectTimer = setTimeout(()=> card.classList.remove('map-selected'), 1800);
-}
-
-// ヘッダー中央の流れるボックス: 「現在有効(Active/期間不明)」な警報のタイトルを
-// 右から左へ流し続ける。renderWarnList()のたびに呼ばれ、常に最新の状態を反映する。
-// 実装は中身を2回複製して並べ、track全体の半分(=複製前の1コピー分)だけ左へ動かして
-// ループする定番のマーキー方式(継ぎ目が出ない)。速度は件数に関わらずほぼ一定になる
-// よう、実際の描画幅から所要時間を逆算している。
-const HEADER_TICKER_SPEED_PX_S = 55; // 流れる速さ(px/秒)。大きいほど速い。
-function updateHeaderTicker(base){
-  const activeTitles = base
-    .filter(it => { const s = getValidityStatus(it); return s === 'active' || s === 'unknown'; })
-    .sort((a,b)=> (b.date||'').localeCompare(a.date||''))
-    .map(it => it.title);
-  fillHeaderTicker($('#headerTickerTrack'), activeTitles, '現在有効な警報はありません');
-}
-// NOTAM版: 一覧のActiveタブと同じもの(地図に出せる図形があり、DOM以外、同一NOTAMは1件)を、
-// 開始が新しい順に「FIR 番号」で流す。renderNotamList()のたびに呼ばれる。
-function updateNotamHeaderTicker(){
-  const titles = notamActiveFeatures
-    .filter(f => notamStatusOf(f) === 'active' && notamHasRealPolygon(f)
-      && !((f.properties || {}).classification === 'DOM'))
-    .sort((a,b)=> ((b.properties||{}).valid_start||'').localeCompare((a.properties||{}).valid_start||''))
-    .map(notamHeading);
-  fillHeaderTicker($('#headerTickerTrackNotam'), titles, '現在有効なNOTAMはありません');
-}
-function fillHeaderTicker(track, titles, emptyText){
-  if (!track) return;
-  // 0件のときも「現在有効な〜はありません」を同じように流す(2026-09-29、ユーザー要望)。
-  // 文言だけは薄い色(.htick-empty)にし、区切りの点は付けない。
-  track._baseHtml = titles.length
-    ? titles.map(t => `<span class="htick-item">${esc(t)}</span>`).join('')
-    : `<span class="htick-item htick-empty">${esc(emptyText)}</span>`;
-  track.style.animation = 'none';
-  track.innerHTML = track._baseHtml;
-  requestAnimationFrame(()=> startHeaderTicker(track));
-}
-// 1コピー分がティッカーの枠より短い(件数が少ない・0件の文言だけ)と、同じ文字が同時に2つ見えて
-// 途切れたように見えるので、枠の幅に届くまで繰り返してから、それを2回並べてループさせる。
-// 非表示のモード側(display:none)では幅が0で計れないので、表示されたときに計り直す(syncHeaderTickers)。
-function startHeaderTicker(track){
-  if (!track._baseHtml) return;
-  track.innerHTML = track._baseHtml;
-  const baseWidth = track.scrollWidth;
-  const boxWidth = track.parentElement.clientWidth;
-  // 非表示(幅0)で計れなかったものは印を付けておき、表示されたときに syncHeaderTickers() で流し始める。
-  // (style.animation を 'none' にしても読み返すと 'auto ease 0s 1 normal none running none' になるので、
-  //  その値では判定できない。以前はこれでNOTAM側のティッカーが止まったままだった)
-  track._needsStart = !baseWidth || !boxWidth;
-  if (track._needsStart){ track.style.animation = 'none'; return; }
-  const copy = track._baseHtml.repeat(Math.max(1, Math.ceil(boxWidth / baseWidth)));
-  track.innerHTML = copy + copy; // 2回複製(ループの継ぎ目を隠すため)
-  const oneCopyWidth = track.scrollWidth / 2;
-  const duration = Math.max(8, oneCopyWidth / HEADER_TICKER_SPEED_PX_S);
-  track.style.animation = `header-ticker-scroll ${duration.toFixed(1)}s linear infinite`;
-}
-// 画面幅が変わると繰り返し回数が合わなくなるので、表示中のティッカーを計り直す
-let _tickerResizeTimer = null;
-window.addEventListener('resize', ()=>{
-  clearTimeout(_tickerResizeTimer);
-  _tickerResizeTimer = setTimeout(()=> ['#headerTickerTrack', '#headerTickerTrackNotam'].forEach(sel => {
-    const t = $(sel);
-    if (t) startHeaderTicker(t);
-  }), 250);
-});
-function syncHeaderTickers(){
-  requestAnimationFrame(()=> ['#headerTickerTrack', '#headerTickerTrackNotam'].forEach(sel => {
-    const t = $(sel);
-    if (t && t._needsStart) startHeaderTicker(t);
-  }));
 }
 
 function popupHtml(it, extra=''){
@@ -3683,7 +3590,6 @@ function renderNotamList(){
   $('#notamCountUpcoming').textContent = upcomingCount;
   $('#notamCountArchive').textContent = archiveCount;
   $('#notamCountAll').textContent = activeCount + upcomingCount + archiveCount;
-  updateNotamHeaderTicker();
 
   // ポリゴン条件は満たすがFIR絞り込み前、という段階でFIRドロップダウンの選択肢を作る
   // (航行警報側のArchive/All局ドロップダウンと同じ「今のスコープに実在する値だけ出す」方式)。
@@ -3903,7 +3809,6 @@ function enterMode(mode){
   app.classList.remove('mode-auto','mode-manual','mode-notam');
   app.classList.add(mode === 'manual' ? 'mode-manual' : mode === 'notam' ? 'mode-notam' : 'mode-auto');
   $$('#modeTabs .mode-tab').forEach(btn=> btn.classList.toggle('active', btn.dataset.mode === mode));
-  syncHeaderTickers(); // 非表示だった側のティッカーは幅0で計れていないので、表示されたここで流し始める
   // 3モードとも地図上の表示は排他 -- auto(msaLayer) / manual(manualLayerGroup) / notam(notamLayer)。
   // Each mode only shows its own shapes on the map. Without this, switching modes left the
   // previous mode's shapes visibly on the map.
