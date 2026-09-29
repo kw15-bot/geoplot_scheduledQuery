@@ -78723,8 +78723,8 @@
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "1512N12033E",
-  "effective_end": "2026-10-02T10:00:00.000Z",
-  "effective_start": "2026-09-29T11:19:00.000Z",
+  "effective_end": "2026-10-02T10:00:00Z",
+  "effective_start": "2026-09-29T11:19:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": true,
@@ -79001,25 +79001,703 @@
   "icao_location": "RPLC",
   "icao_text": "B5168/26 NOTAMR B4973/26\r\nQ) RPHI/QMXLC/IV/BO /A /000/999/1512N12033E005\r\nA) RPLC B) 2609291119 C) 2610021000EST\r\nE) PORTION OF TWY A (FM TWY F3 TO F4) CLSD DUE WIP (TWY WIDENING).\r\n\r\nRMK: PRESENCE OF MEN AND EQPT.",
   "id": "1790680786764000",
-  "issued": "2026-09-29T11:19:00.000Z",
-  "last_updated": "2026-09-29T11:19:00.000Z",
+  "issued": "2026-09-29T11:19:00Z",
+  "last_updated": "2026-09-29T11:20:00Z",
   "local_text": null,
   "location": "RPLC",
   "lower": null,
   "max_fl": "999",
   "min_fl": "000",
   "number": "B5168/26",
-  "purpose": "BO ",
+  "purpose": "BO",
   "q_code": "QMXLC",
   "qline_offset_nm": null,
   "radius_nm": 5.0,
   "ref_number": "B4973/26",
   "schedule": null,
-  "scope": "A ",
+  "scope": "A",
   "series": "B",
   "text": "PORTION OF TWY A (FM TWY F3 TO F4) CLSD DUE WIP (TWY WIDENING).\r\n\r\nRMK: PRESENCE OF MEN AND EQPT.",
   "traffic": "IV",
   "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790680936042000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2235N12020E",
+  "effective_end": "2027-01-11T09:00:00.000Z",
+  "effective_start": "2026-10-15T00:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-09-29T11:30:35+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.333333,
+      22.59997
+     ],
+     [
+      120.335099,
+      22.59989
+     ],
+     [
+      120.336849,
+      22.59965
+     ],
+     [
+      120.338564,
+      22.599254
+     ],
+     [
+      120.340229,
+      22.598704
+     ],
+     [
+      120.341827,
+      22.598006
+     ],
+     [
+      120.343344,
+      22.597166
+     ],
+     [
+      120.344764,
+      22.596194
+     ],
+     [
+      120.346074,
+      22.595097
+     ],
+     [
+      120.347262,
+      22.593888
+     ],
+     [
+      120.348315,
+      22.592576
+     ],
+     [
+      120.349224,
+      22.591176
+     ],
+     [
+      120.34998,
+      22.5897
+     ],
+     [
+      120.350576,
+      22.588163
+     ],
+     [
+      120.351005,
+      22.586579
+     ],
+     [
+      120.351265,
+      22.584964
+     ],
+     [
+      120.351352,
+      22.583333
+     ],
+     [
+      120.351265,
+      22.581703
+     ],
+     [
+      120.351005,
+      22.580088
+     ],
+     [
+      120.350576,
+      22.578504
+     ],
+     [
+      120.34998,
+      22.576967
+     ],
+     [
+      120.349224,
+      22.575491
+     ],
+     [
+      120.348315,
+      22.57409
+     ],
+     [
+      120.347262,
+      22.572779
+     ],
+     [
+      120.346074,
+      22.571569
+     ],
+     [
+      120.344764,
+      22.570473
+     ],
+     [
+      120.343344,
+      22.5695
+     ],
+     [
+      120.341827,
+      22.568661
+     ],
+     [
+      120.340229,
+      22.567963
+     ],
+     [
+      120.338564,
+      22.567413
+     ],
+     [
+      120.336849,
+      22.567016
+     ],
+     [
+      120.335099,
+      22.566777
+     ],
+     [
+      120.333333,
+      22.566697
+     ],
+     [
+      120.331567,
+      22.566777
+     ],
+     [
+      120.329818,
+      22.567016
+     ],
+     [
+      120.328103,
+      22.567413
+     ],
+     [
+      120.326438,
+      22.567963
+     ],
+     [
+      120.32484,
+      22.568661
+     ],
+     [
+      120.323323,
+      22.5695
+     ],
+     [
+      120.321903,
+      22.570473
+     ],
+     [
+      120.320592,
+      22.571569
+     ],
+     [
+      120.319405,
+      22.572779
+     ],
+     [
+      120.318352,
+      22.57409
+     ],
+     [
+      120.317443,
+      22.575491
+     ],
+     [
+      120.316687,
+      22.576967
+     ],
+     [
+      120.316091,
+      22.578504
+     ],
+     [
+      120.315661,
+      22.580088
+     ],
+     [
+      120.315402,
+      22.581703
+     ],
+     [
+      120.315315,
+      22.583333
+     ],
+     [
+      120.315402,
+      22.584964
+     ],
+     [
+      120.315661,
+      22.586579
+     ],
+     [
+      120.316091,
+      22.588163
+     ],
+     [
+      120.316687,
+      22.5897
+     ],
+     [
+      120.317443,
+      22.591176
+     ],
+     [
+      120.318352,
+      22.592576
+     ],
+     [
+      120.319405,
+      22.593888
+     ],
+     [
+      120.320592,
+      22.595097
+     ],
+     [
+      120.321903,
+      22.596194
+     ],
+     [
+      120.323323,
+      22.597166
+     ],
+     [
+      120.32484,
+      22.598006
+     ],
+     [
+      120.326438,
+      22.598704
+     ],
+     [
+      120.328103,
+      22.599254
+     ],
+     [
+      120.329818,
+      22.59965
+     ],
+     [
+      120.331567,
+      22.59989
+     ],
+     [
+      120.333333,
+      22.59997
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCKH",
+  "icao_text": "A3585/26 NOTAMN\r\nQ) RCAA/QOBCE/IV/M/A/000/001/2235N12020E001\r\nA) RCKH\r\nB) 2610150000 C) 2701110900\r\nD) 0000-0900\r\nE) CRANES ERECTED DUE TO WIP, THE INFO AS FLW:\r\n1.OPR AREA:\r\n  223444.5N 1201959.2E\r\n  223443.7N 1202036.0E\r\n2.MAX HGT: 16M AMSL\r\n3.LOW-INTENSITY TYPE C OBST LGT ON TOP.",
+  "id": "1790680936042000",
+  "issued": "2026-09-29T11:22:00.000Z",
+  "last_updated": "2026-09-29T11:22:00.000Z",
+  "local_text": null,
+  "location": "RCKH",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3585/26",
+  "purpose": "M",
+  "q_code": "QOBCE",
+  "qline_offset_nm": null,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": "0000-0900",
+  "scope": "A",
+  "series": "A",
+  "text": "CRANES ERECTED DUE TO WIP, THE INFO AS FLW:\r\n1.OPR AREA:\r\n  223444.5N 1201959.2E\r\n  223443.7N 1202036.0E\r\n2.MAX HGT: 16M AMSL\r\n3.LOW-INTENSITY TYPE C OBST LGT ON TOP.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790680990658000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1512N12033E",
+  "effective_end": "2026-12-29T10:00:00.000Z",
+  "effective_start": "2026-09-29T11:22:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-09-29T11:30:35+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.550906,
+      15.180928
+     ],
+     [
+      120.552103,
+      15.180911
+     ],
+     [
+      120.551639,
+      15.179769
+     ],
+     [
+      120.550406,
+      15.179672
+     ],
+     [
+      120.550906,
+      15.180928
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPLC",
+  "icao_text": "B5169/26 NOTAMR B2920/26\r\nQ) RPHI/QMNLC/IV/NBO/A /000/999/1512N12033E005\r\nA) RPLC B) 2609291122 C) 2612291000\r\nE) PORTION OF J RAMP CLSD DUE WIP (CONST OF DRAINAGE LINE) WI:\r\n151051.34N 1203303.26E -\r\n151051.28N 1203307.57E -\r\n151047.17N 1203305.90E -\r\n151046.82N 1203301.46E -\r\n151051.34N 1203303.26E.",
+  "id": "1790680990658000",
+  "issued": "2026-09-29T11:22:00.000Z",
+  "last_updated": "2026-09-29T11:23:00.000Z",
+  "local_text": null,
+  "location": "RPLC",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5169/26",
+  "purpose": "NBO",
+  "q_code": "QMNLC",
+  "qline_offset_nm": 1.2,
+  "radius_nm": 5.0,
+  "ref_number": "B2920/26",
+  "schedule": null,
+  "scope": "A ",
+  "series": "B",
+  "text": "PORTION OF J RAMP CLSD DUE WIP (CONST OF DRAINAGE LINE) WI:\r\n151051.34N 1203303.26E -\r\n151051.28N 1203307.57E -\r\n151047.17N 1203305.90E -\r\n151046.82N 1203301.46E -\r\n151051.34N 1203303.26E.",
+  "traffic": "IV",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790681367040000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2505N12114E",
+  "effective_end": "2026-10-31T23:59:00.000Z",
+  "effective_start": "2026-10-01T00:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-09-29T11:30:35+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.233333,
+      25.166517
+     ],
+     [
+      121.242336,
+      25.166116
+     ],
+     [
+      121.251251,
+      25.164919
+     ],
+     [
+      121.259995,
+      25.162935
+     ],
+     [
+      121.268481,
+      25.160185
+     ],
+     [
+      121.276629,
+      25.156695
+     ],
+     [
+      121.28436,
+      25.152498
+     ],
+     [
+      121.291599,
+      25.147635
+     ],
+     [
+      121.298278,
+      25.142153
+     ],
+     [
+      121.304331,
+      25.136104
+     ],
+     [
+      121.3097,
+      25.129548
+     ],
+     [
+      121.314334,
+      25.122546
+     ],
+     [
+      121.318187,
+      25.115166
+     ],
+     [
+      121.321224,
+      25.10748
+     ],
+     [
+      121.323414,
+      25.099562
+     ],
+     [
+      121.324736,
+      25.091487
+     ],
+     [
+      121.325179,
+      25.083333
+     ],
+     [
+      121.324736,
+      25.07518
+     ],
+     [
+      121.323414,
+      25.067105
+     ],
+     [
+      121.321224,
+      25.059186
+     ],
+     [
+      121.318187,
+      25.0515
+     ],
+     [
+      121.314334,
+      25.044121
+     ],
+     [
+      121.3097,
+      25.037119
+     ],
+     [
+      121.304331,
+      25.030562
+     ],
+     [
+      121.298278,
+      25.024514
+     ],
+     [
+      121.291599,
+      25.019032
+     ],
+     [
+      121.28436,
+      25.014169
+     ],
+     [
+      121.276629,
+      25.009972
+     ],
+     [
+      121.268481,
+      25.006482
+     ],
+     [
+      121.259995,
+      25.003732
+     ],
+     [
+      121.251251,
+      25.001748
+     ],
+     [
+      121.242336,
+      25.00055
+     ],
+     [
+      121.233333,
+      25.00015
+     ],
+     [
+      121.224331,
+      25.00055
+     ],
+     [
+      121.215415,
+      25.001748
+     ],
+     [
+      121.206672,
+      25.003732
+     ],
+     [
+      121.198186,
+      25.006482
+     ],
+     [
+      121.190038,
+      25.009972
+     ],
+     [
+      121.182307,
+      25.014169
+     ],
+     [
+      121.175067,
+      25.019032
+     ],
+     [
+      121.168389,
+      25.024514
+     ],
+     [
+      121.162336,
+      25.030562
+     ],
+     [
+      121.156967,
+      25.037119
+     ],
+     [
+      121.152333,
+      25.044121
+     ],
+     [
+      121.148479,
+      25.0515
+     ],
+     [
+      121.145443,
+      25.059186
+     ],
+     [
+      121.143253,
+      25.067105
+     ],
+     [
+      121.14193,
+      25.07518
+     ],
+     [
+      121.141488,
+      25.083333
+     ],
+     [
+      121.14193,
+      25.091487
+     ],
+     [
+      121.143253,
+      25.099562
+     ],
+     [
+      121.145443,
+      25.10748
+     ],
+     [
+      121.148479,
+      25.115166
+     ],
+     [
+      121.152333,
+      25.122546
+     ],
+     [
+      121.156967,
+      25.129548
+     ],
+     [
+      121.162336,
+      25.136104
+     ],
+     [
+      121.168389,
+      25.142153
+     ],
+     [
+      121.175067,
+      25.147635
+     ],
+     [
+      121.182307,
+      25.152498
+     ],
+     [
+      121.190038,
+      25.156695
+     ],
+     [
+      121.198186,
+      25.160185
+     ],
+     [
+      121.206672,
+      25.162935
+     ],
+     [
+      121.215415,
+      25.164919
+     ],
+     [
+      121.224331,
+      25.166116
+     ],
+     [
+      121.233333,
+      25.166517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCTP",
+  "icao_text": "A3586/26 NOTAMN\r\nQ) RCAA/QFAHX/IV/NBO/A/000/999/2505N12114E005\r\nA) RCTP\r\nB) 2610010000 C) 2610312359\r\nE) BIRD CONCENTRATION DRG 2100-1100:\r\n1.IN THE VCY OF THE AP, AND AT AP\r\n  IN THE APPROACH PATH OF RWY 05R/23L AND RWY 05L,\r\n  BIRD TYPE: GREY HERON\r\n  HGT: 0-1500FT WT: 1020-2070 GRAMS.\r\n2.IN THE VCY OF THE AP AND AT AP\r\n  IN THE APPROACH PATH OF RWY 05R/23L AND RWY 05L,\r\n  BIRD TYPE: GREAT EGRET \r\n  HGT: 0-1500FT WT: 700-1500 GRAMS.\r\n3.IN THE VCY OF THE AP\r\n  BIRD TYPE: OSPERY\r\n  HGT: 0-1000FT WT: 900-2100 GRAMS.\r\n4.IN THE VCY OF THE AP, AND AT AP\r\n  IN THE APPROACH PATH OF RWY 05L/23R AND RWY 05R/23L,\r\n  BIRD TYPE: EASTERN SPOT-BILLED DUCK\r\n  HGT: 0-300FT WT: 750-1500 GRAMS.",
+  "id": "1790681367040000",
+  "issued": "2026-09-29T11:29:00.000Z",
+  "last_updated": "2026-09-29T11:29:00.000Z",
+  "local_text": null,
+  "location": "RCTP",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3586/26",
+  "purpose": "NBO",
+  "q_code": "QFAHX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "A",
+  "text": "BIRD CONCENTRATION DRG 2100-1100:\r\n1.IN THE VCY OF THE AP, AND AT AP\r\n  IN THE APPROACH PATH OF RWY 05R/23L AND RWY 05L,\r\n  BIRD TYPE: GREY HERON\r\n  HGT: 0-1500FT WT: 1020-2070 GRAMS.\r\n2.IN THE VCY OF THE AP AND AT AP\r\n  IN THE APPROACH PATH OF RWY 05R/23L AND RWY 05L,\r\n  BIRD TYPE: GREAT EGRET \r\n  HGT: 0-1500FT WT: 700-1500 GRAMS.\r\n3.IN THE VCY OF THE AP\r\n  BIRD TYPE: OSPERY\r\n  HGT: 0-1000FT WT: 900-2100 GRAMS.\r\n4.IN THE VCY OF THE AP, AND AT AP\r\n  IN THE APPROACH PATH OF RWY 05L/23R AND RWY 05R/23L,\r\n  BIRD TYPE: EASTERN SPOT-BILLED DUCK\r\n  HGT: 0-300FT WT: 750-1500 GRAMS.",
+  "traffic": "IV",
+  "type": "N",
   "upper": null,
   "year": "2026"
  }
