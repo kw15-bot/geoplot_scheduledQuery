@@ -240,7 +240,7 @@ _REF = re.compile(r"(\S+/\d+)\s+NOTAM([NRC])(?:\s+(\S+/\d+))?")
 # 2026-09-27追加: (a)の緯度の数字の途中に空白が1つ入った表記(N39 5808E1012905、N39345 0E1052608。
 #   FAA NOTAM SearchのPDFで確認)も読む。空白は緯度の桁の間だけ・1文字ずつ許し、読み取り後に取り除く。
 _TEXT_COORD = re.compile(
-    r"(?:(?P<ns1>[NS])(?P<lat1>\d(?:[ \t]?\d){3}(?:(?:[ \t]?\d){2})?)\s*(?P<ew1>[EW])(?P<lon1>\d{5}(?:\d{2})?))"
+    r"(?:(?P<ns1>[NS])(?P<lat1>\d(?:[ \t]?\d){3}(?:(?:[ \t]?\d){2}(?:\.\d+)?)?)\s*(?P<ew1>[EW])(?P<lon1>\d{5}(?:\d{2}(?:\.\d+)?)?))"
     r"|(?:(?P<lat2>\d{4}(?:\d{2}(?:\.\d+)?)?)(?P<ns2>[NS])\s*(?P<lon2>\d{5}(?:\d{2}(?:\.\d+)?)?)(?P<ew2>[EW]))"
 )
 
@@ -293,7 +293,7 @@ _SPLIT_DIGITS = re.compile(r"(?<=\d)[ \t]*\r?\n[ \t]*(?=\d)")
 _R = r"(?P<r>\d+(?:\.\d+)?)\s*(?P<u>NM|KM|M)\b"
 _CIRCLE_BEFORE = re.compile(
     r"(?:CIRCLE\s+(?:WITH\s+)?(?:A\s+)?RADIUS\s+(?:OF\s+)?" + _R + r"\s+CENT(?:ER|RE)(?:ED|D)?\s+(?:ON|AT)"
-    r"|" + _R.replace("?P<r>", "?P<r2>").replace("?P<u>", "?P<u2>") + r"\s+(?:RADIUS|RAD)\s+(?:OF|CENT(?:ER|RE)(?:ED|D)?\s+ON|AROUND))\s*$",
+    r"|" + _R.replace("?P<r>", "?P<r2>").replace("?P<u>", "?P<u2>") + r"\s+(?:RADIUS|RAD)\s+(?:OF|CENT(?:ER|RE)(?:ED|D)?\s+(?:ON|AT)|AROUND))\s*$",
     re.I)
 # E項の帯状エリア: "1NM EITHER SIDE OF LINE <座標>-<座標>-..." (線の両側に指定幅)
 _CORRIDOR = re.compile(r"(?P<w>\d+(?:\.\d+)?)\s*(?P<u>NM|KM)\s+EITHER\s+SIDE\s+OF\s+(?:THE\s+)?(?:CENT(?:ER|RE)\s*)?LINE", re.I)
