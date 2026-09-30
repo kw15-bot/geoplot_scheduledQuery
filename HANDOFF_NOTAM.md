@@ -827,7 +827,7 @@ NOTAMモードの地図ツールバーに「レイヤー」ボタンを置き、
 
 ## 23. ビューアのレイヤー（FIR）（2026-09-30、v2.6.0）
 
-- NOTAMモードのレイヤーに「FIR（ICAO）」を追加。境界は細い青の破線、ラベルは ICAOCODE（ズーム3以上で表示、`syncFirLabels()`）、線にマウスを乗せると `ZBPE  FIR BEIJING` のように FIR名。
+- NOTAMモードのレイヤーに「FIR（ICAO）」を追加。境界は細い灰色の実線、ラベルも灰色（v2.6.1で青の破線から変更、ユーザー指示）、ラベルは ICAOCODE（ズーム3以上で表示、`syncFirLabels()`）、線にマウスを乗せると `ZBPE  FIR BEIJING` のように FIR名。
 - 元データ: ArcGIS Online のアイテム「ICAO Flight Information Region」（`4b70cff99cf14565b6671a314c8ea6e8`、
   FeatureServer `services5.arcgis.com/62o2qANhRqripAuB/.../ICAO_Flight_Information_Region/FeatureServer/12`、344件、ICAO 2020-12-18版）。
   アイテムの説明は「公式・航法用ではない、デモ用」、ライセンス欄は空。参考表示として使う。
