@@ -794,7 +794,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v2.5.0';
+const APP_VERSION = 'v2.5.1';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -826,6 +826,7 @@ const APP_VERSION = 'v2.5.0';
 // v2.4.0 (2026-09-30): レイヤーボタンをNAVWARモードにも出し、NAVWARには「NOTAM（All）」、NOTAMには「航行警報（All）」を追加
 //  (他モードの全件を参考として下に重ねる。notamShapesLayer()/msaItemShapes() を両モードで共用)。
 // v2.5.0 (2026-09-30): 「NOTAM」「航行警報」のレイヤーに、Active/Upcoming/Archive を選ぶチェックをぶら下げた(既定は Active と Upcoming)。
+// v2.5.1: 航行警報(military.geojson)の自動再読込を30分→10分に(収集間隔に合わせ、NOTAMと同じに)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3440,7 +3441,8 @@ function handleImportFile(file){
        when opened via a local static file server (see start_msa_loop.bat),
        which is what makes fully hands-off startup possible.
 --------------------------------------------------------------- */
-const FILE_REFRESH_MS = 30 * 60 * 1000; // 30 minutes, matching the scraper's typical cadence
+// 2026-09-30: 30分 → 10分。航行警報の収集(scrape.yml)は cron-job.org から10分おきに動いているので、それに合わせる(NOTAMと同じ)
+const FILE_REFRESH_MS = 10 * 60 * 1000;
 const supportsFSAccess = 'showOpenFilePicker' in window;
 let connectedFileHandle = null;
 let connectedUrl = null;
@@ -3457,11 +3459,11 @@ function updateConnectionUI(){
   if (!el) return;
   if (connectedFileHandle){
     el.style.display = 'block';
-    el.innerHTML = `🔗 接続中: <b style="color:var(--text)">${esc(connectedFileHandle.name)}</b><br>30分ごとに自動再読込します（次回目安 ${fmtClock(new Date(Date.now()+FILE_REFRESH_MS))}）<div class="btn-row" style="margin-top:6px;"><button class="btn small ghost" id="btnDisconnectFile">接続を解除</button></div>`;
+    el.innerHTML = `🔗 接続中: <b style="color:var(--text)">${esc(connectedFileHandle.name)}</b><br>${FILE_REFRESH_MS / 60000}分ごとに自動再読込します（次回目安 ${fmtClock(new Date(Date.now()+FILE_REFRESH_MS))}）<div class="btn-row" style="margin-top:6px;"><button class="btn small ghost" id="btnDisconnectFile">接続を解除</button></div>`;
     $('#btnDisconnectFile').addEventListener('click', disconnectFile);
   } else if (connectedUrl){
     el.style.display = 'block';
-    el.innerHTML = `🔗 接続中(URL): <b style="color:var(--text)">${esc(connectedUrl)}</b><br>30分ごとに自動再読込します（次回目安 ${fmtClock(new Date(Date.now()+FILE_REFRESH_MS))}）<div class="btn-row" style="margin-top:6px;"><button class="btn small ghost" id="btnDisconnectFile">接続を解除</button></div>`;
+    el.innerHTML = `🔗 接続中(URL): <b style="color:var(--text)">${esc(connectedUrl)}</b><br>${FILE_REFRESH_MS / 60000}分ごとに自動再読込します（次回目安 ${fmtClock(new Date(Date.now()+FILE_REFRESH_MS))}）<div class="btn-row" style="margin-top:6px;"><button class="btn small ghost" id="btnDisconnectFile">接続を解除</button></div>`;
     $('#btnDisconnectFile').addEventListener('click', disconnectFile);
   } else {
     el.style.display = 'none';
@@ -3488,7 +3490,7 @@ async function connectFileHandle(handle){
   updateConnectionUI();
   if (fileRefreshTimer) clearInterval(fileRefreshTimer);
   fileRefreshTimer = setInterval(rereadConnectedFile, FILE_REFRESH_MS);
-  logLine(`フォルダ接続完了: ${handle.name}（30分ごとに自動再読込します）`, 'l-ok');
+  logLine(`フォルダ接続完了: ${handle.name}（${FILE_REFRESH_MS / 60000}分ごとに自動再読込します）`, 'l-ok');
 }
 
 async function rereadConnectedFile(){
@@ -3516,7 +3518,7 @@ async function connectUrl(url){
   updateConnectionUI();
   if (fileRefreshTimer) clearInterval(fileRefreshTimer);
   fileRefreshTimer = setInterval(rereadConnectedUrl, FILE_REFRESH_MS);
-  logLine(`URL接続完了: ${url}（30分ごとに自動再読込します）`, 'l-ok');
+  logLine(`URL接続完了: ${url}（${FILE_REFRESH_MS / 60000}分ごとに自動再読込します）`, 'l-ok');
 }
 
 async function rereadConnectedUrl(){
@@ -4142,7 +4144,7 @@ function enterMode(mode){
     ? '手動貼り付けモードで開始しました。座標を貼り付けてプロットしてください。'
     : mode === 'notam'
     ? 'NOTAMモードで開始しました。notam_out/notam_cn.geojsonへ自動接続します（10分ごとに自動再取込）。'
-    : '自動収集モードで開始しました。?geojson=<URL> 付きで開くとmilitary.geojsonへ自動接続し、30分ごとに自動再取込します。'
+    : '自動収集モードで開始しました。?geojson=<URL> 付きで開くとmilitary.geojsonへ自動接続し、10分ごとに自動再取込します。'
   );
 }
 $$('#modeTabs .mode-tab').forEach(btn=>{
