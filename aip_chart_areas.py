@@ -13,6 +13,9 @@ NOTAMが挙げた点の順に結んだ線(LineString)を返す。区域の外側
 面ではなく境界の線だけを描く。geometry_source は "aip-chart-line"。
 
 点を足すとき: 図の名前(例 ZWWW-3P-5)ごとに、点の名前 -> (緯度, 経度)。図の版(EFF)をコメントに残す。
+
+図の番号ではなく空港の本文(AD 2.20 など)で決められた線は NAMED_LINES に持つ(例: 南京 ZSNJ の制限線 B-C-D-E)。
+NOTAMの本文に、その空港(指標・地名)と線の呼び名が両方あれば、その線を返す。
 """
 
 import re
@@ -30,6 +33,27 @@ CHART_POINTS = {
 }
 # ZWWW-3P-6 SID RNAV RWY26L/R(VARMI)、EFF2507091600。注記・G/H/J/K の座標は 3P-5 と同じ(照合済み)。
 CHART_POINTS["ZWWW-3P-6"] = CHART_POINTS["ZWWW-3P-5"]
+
+
+def _dms(v):
+    """N313950 / E1175950 形式(度分秒) -> 10進の度。"""
+    h, d = v[0], v[1:]
+    w = 2 if h in "NS" else 3
+    x = int(d[:w]) + int(d[w:w + 2]) / 60 + int(d[w + 2:w + 4]) / 3600
+    return -x if h in "SW" else x
+
+
+# 空港の本文で決められた線。match: 本文に両方が必要な語(空港, 線の呼び名)の正規表現、points: 順に(緯度, 経度)。
+NAMED_LINES = [
+    # ZSNJ AD 2.20 6.1 Warning(AIRAC AMDT 09/26、EFF2609021600):
+    # All aircraft flying across south of restriction line without ATC clearance is forbidden strictly.
+    # The restriction line is connection of B, C, D and E.
+    {"name": "ZSNJ AD 2.20 6.1 restriction line (B-C-D-E)",
+     "airport": re.compile(r"\b(ZSNJ|NANJING|LUKOU)\b"),
+     "line": re.compile(r"RESTRICTION\s+LINE|CONTROL\s+LINE|\bB\s*-\s*C\s*-\s*D\s*-\s*E\b"),
+     "points": [(_dms("N313950"), _dms("E1175950")), (_dms("N313640"), _dms("E1182930")),
+                (_dms("N313400"), _dms("E1184208")), (_dms("N313200"), _dms("E1190200"))]},
+]
 
 _CHART_REF = re.compile(r"\b([A-Z]{4}-\d+[A-Z]?-\d+[A-Z]?)\b")
 # (WEST AND NORTH OF G-H-J-K) のような「<方角> OF <点>-<点>-...」
@@ -49,8 +73,13 @@ def chart_refs_missing(e_text):
 
 
 def chart_boundary_geometry(e_text):
-    """E項が図(CHART_POINTS にあるもの)を参照し、その図の点を並べていれば LineString を返す。無ければ None。"""
+    """E項が図(CHART_POINTS にあるもの)を参照し、その図の点を並べていれば LineString を返す。
+    空港の本文で決められた線(NAMED_LINES)に当たればその線。無ければ None。"""
     t = (e_text or "").upper()
+    for nl in NAMED_LINES:
+        if nl["airport"].search(t) and nl["line"].search(t):
+            return {"type": "LineString",
+                    "coordinates": [[round(lon, 6), round(lat, 6)] for lat, lon in nl["points"]]}
     if "AIP" not in t:
         return None
     charts = [c for c in _CHART_REF.findall(t) if c in CHART_POINTS]
