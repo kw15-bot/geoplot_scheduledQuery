@@ -56314,11 +56314,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/f47e61f7b8e6418fbe9424819efd5d5f.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-09-30",
     "detail_fetched": false,
     "first_seen": "2026-09-30T11:50:37+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警895/26",
     "points": [],
     "revoked": false,
     "title": "GCL THAMES、IRINI N. LEMOS和NEW PROSPECT轮航经虾峙门外深水航槽—浙航警895/26",
