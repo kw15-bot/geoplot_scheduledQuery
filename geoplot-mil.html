@@ -794,7 +794,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v2.5.1';
+const APP_VERSION = 'v2.5.2';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -827,6 +827,7 @@ const APP_VERSION = 'v2.5.1';
 //  (他モードの全件を参考として下に重ねる。notamShapesLayer()/msaItemShapes() を両モードで共用)。
 // v2.5.0 (2026-09-30): 「NOTAM」「航行警報」のレイヤーに、Active/Upcoming/Archive を選ぶチェックをぶら下げた(既定は Active と Upcoming)。
 // v2.5.1: 航行警報(military.geojson)の自動再読込を30分→10分に(収集間隔に合わせ、NOTAMと同じに)。
+// v2.5.2: 航空路閉鎖の線の20kmの帯(v2.1.0)をやめ、線だけに戻した(地図・PDFとも)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -2351,15 +2352,8 @@ async function generatePdf(){
     // 対象1件だけを航行警報側と同じActive色で一時的に描き直す(終了後にrebuildNotamMapLayer()で元に戻す)。
     const activeColor = statusColor('active');
     notamLayer.clearLayers();
-    // 航空路閉鎖の線は、地図と同じく20kmの帯も一緒に出す
-    const pdfFeat = notamForLeaflet(pdfTarget.feature);
-    const pdfLines = pdfFeat.geometry.type === 'MultiLineString'
-      ? pdfFeat.geometry.coordinates.map(c => ({ type:'Feature', properties: pdfFeat.properties, geometry: { type:'LineString', coordinates: c } }))
-      : [pdfFeat];
-    const pdfBands = pdfLines.map(routeBandPart).filter(Boolean);
-    L.geoJSON({ type:'FeatureCollection', features: pdfBands.concat([pdfFeat]) }, {
-      style: f => f._band ? routeBandStyle(activeColor)
-        : ({ color: activeColor.line, weight: /LineString$/.test(f.geometry.type) ? 2.2 : 1.5, fillColor: activeColor.fill, fillOpacity: 0.14, opacity: 0.9 }),
+    L.geoJSON(notamForLeaflet(pdfTarget.feature), {
+      style: f => ({ color: activeColor.line, weight: /LineString$/.test(f.geometry.type) ? 2.2 : 1.5, fillColor: activeColor.fill, fillOpacity: 0.14, opacity: 0.9 }),
       pointToLayer: (f, latlng)=> L.circleMarker(latlng, { radius:4, color: activeColor.line, weight:1.3, fillColor: activeColor.fill, fillOpacity:0.55 }),
     }).addTo(notamLayer);
   } else {
@@ -3782,44 +3776,6 @@ function notamForLeaflet(f){
   return { type:'Feature', properties: f.properties, geometry: notamUnwrapGeometry(f.geometry), _notamOrig: f._notamOrig || f };
 }
 
-// 航空路閉鎖の線(route-segment)に重ねて描く帯。中国の飛行基本規則 第十五条「航路的宽度为20公里，
-// 其中心线两侧各10公里」に合わせ、中心線の左右10km(計20km)。区間ごとの実際の幅(8kmまで狭めうる)は
-// AIPが優先するので、あくまで目安。端は平ら。coords は描画用(経度の折り返し済み)の [lon,lat] 列。
-const ROUTE_BAND_HALF_KM = 10;
-function routeBandRing(coords, halfKm){
-  const k = Math.PI / 180 * 6371.0088;                     // 緯度1度あたりのkm
-  const cosLat = la => Math.max(Math.cos(la * Math.PI / 180), 0.01);
-  const segN = [];
-  for (let i = 0; i < coords.length - 1; i++){
-    const [lo1, la1] = coords[i], [lo2, la2] = coords[i + 1];
-    const dx = (lo2 - lo1) * k * cosLat((la1 + la2) / 2), dy = (la2 - la1) * k;
-    const d = Math.hypot(dx, dy) || 1;
-    segN.push([-dy / d, dx / d]);
-  }
-  const left = [], right = [];
-  coords.forEach(([lo, la], i) => {
-    const ns = [segN[i - 1], segN[i]].filter(Boolean);
-    let nx = ns.reduce((a, v) => a + v[0], 0), ny = ns.reduce((a, v) => a + v[1], 0);
-    const ln = Math.hypot(nx, ny) || 1; nx /= ln; ny /= ln;
-    const off = halfKm / Math.max(nx * ns[0][0] + ny * ns[0][1], 0.5);   // 曲がり角での幅の補正(上限2倍)
-    left.push([lo + nx * off / (k * cosLat(la)), la + ny * off / k]);
-    right.push([lo - nx * off / (k * cosLat(la)), la - ny * off / k]);
-  });
-  const ring = left.concat(right.reverse());
-  ring.push(ring[0]);
-  return ring;
-}
-// 描画用の part(LineString、経度折り返し済み)から帯の Feature を作る。航空路閉鎖の線でなければ null。
-function routeBandPart(part){
-  if (!part.geometry || part.geometry.type !== 'LineString' || (part.properties || {}).geometry_source !== 'route-segment') return null;
-  return { type:'Feature', properties: part.properties, _notamOrig: part._notamOrig || part, _band: true,
-           geometry: { type:'Polygon', coordinates: [routeBandRing(part.geometry.coordinates, ROUTE_BAND_HALF_KM)] } };
-}
-// 帯の見た目: 線と同じ色で、薄い塗りと細い縁だけ(線が主役)。
-function routeBandStyle(color){
-  return { color: color.line, weight: 0.6, opacity: 0.5, fillColor: color.fill, fillOpacity: 0.12, dashArray: null };
-}
-
 function rebuildNotamMapLayer(){
   notamLayer.clearLayers();
   if (!notamLayerVisibleOnMap) return;
@@ -3861,11 +3817,8 @@ function notamShapesLayer(feats, { panelSync = false } = {}){
   // ラベルの番号は Active を先頭にする(同じ状態どうしは元の並びのまま)
   labelGroups.forEach(grp => labelOf.set(grp.first,
     grp.numbers.slice().sort((a, b) => b.rank - a.rank).map(x => x.num).join('・')));
-  // 航空路閉鎖の20kmの帯は、ほかのどの図形よりも下に敷く(帯どうしも Active が上)。ラベルは付けない。
-  const bands = parts.map(routeBandPart).filter(Boolean);
-  return L.geoJSON({ type:'FeatureCollection', features: bands.concat(parts) }, {
-    style: f => f._band ? routeBandStyle(statusColor(notamStatusOf(f) === 'active' ? 'active'
-      : notamStatusOf(f) === 'upcoming' ? 'notice' : 'archive')) : notamStyle(f),
+  return L.geoJSON({ type:'FeatureCollection', features: parts }, {
+    style: notamStyle,
     pointToLayer: notamPointToLayer,
     onEachFeature: (part, layer) => {
       const f = part._notamOrig || part;
