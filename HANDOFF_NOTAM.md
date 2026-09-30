@@ -824,3 +824,16 @@ NOTAMモードの地図ツールバーに「レイヤー」ボタンを置き、
 - 2026-09-30 変更（v2.5.1）: ビューアの航行警報（military.geojson）の自動再読込を30分→10分に（収集の cron-job.org 10分おきに合わせ、NOTAMと同じ）。
 - 2026-09-30 変更（v2.5.2）: 航空路閉鎖の線の20kmの帯（v2.1.0）はやめ、線だけに戻した（地図・PDF出力とも。ユーザー判断）。
 - 2026-09-30 修正: 中心の座標が先で半径が後の円 `A CIRCLE CENTERED AT <座標> WITH RADIUS OF 45KM`（ZSHA A5020〜A5022/26、厦門付近の飛行検査区域）を読む（`_CENTER_BEFORE`/`_RADIUS_AFTER`）。
+
+## 23. ビューアのレイヤー（FIR）（2026-09-30、v2.6.0）
+
+- NOTAMモードのレイヤーに「FIR（ICAO）」を追加。境界は細い青の破線、ラベルは ICAOCODE（ズーム3以上で表示、`syncFirLabels()`）、線にマウスを乗せると `ZBPE  FIR BEIJING` のように FIR名。
+- 元データ: ArcGIS Online のアイテム「ICAO Flight Information Region」（`4b70cff99cf14565b6671a314c8ea6e8`、
+  FeatureServer `services5.arcgis.com/62o2qANhRqripAuB/.../ICAO_Flight_Information_Region/FeatureServer/12`、344件、ICAO 2020-12-18版）。
+  アイテムの説明は「公式・航法用ではない、デモ用」、ライセンス欄は空。参考表示として使う。
+- 公開データなので暗号化しない（`layers/fir.geojson`、OVERLAYS の `plain: true` は暗号化なしで fetch する）。
+- 作り方: `fir_build_layer.py <ArcGISから取得したGeoJSON>`（取得URLは docstring）。この環境からは arcgis.com に直接つながらず、TinyFish の fetch で取得した。
+  - 西経30度より西にある FIR は +360度（地図の範囲 東経-60〜330度、NOTAMと同じ）。西経30度をまたぐ大西洋の FIR はそのまま。
+  - 日付変更線で東西2件に分かれている FIR（KZAK・NZZO・PAZN・UHMM・NFFF など）は、経度±180の辺を線にしない。ラベルはそれぞれに出る（KZAK はグアム側・ハワイ側の2つ）。
+  - centlong/centlat が入っていない（0,0）もの（OBBB・OEJD・SBAO など6件）は、いちばん大きいリングの重心にラベルを置く。
+  - 線は 0.02度で間引き（約3.4万点、590KB）。
