@@ -28,6 +28,8 @@ CHART_POINTS = {
         "K": (44 + 0.3 / 60, 87 + 21.5 / 60),
     },
 }
+# ZWWW-3P-6 SID RNAV RWY26L/R(VARMI)、EFF2507091600。注記・G/H/J/K の座標は 3P-5 と同じ(照合済み)。
+CHART_POINTS["ZWWW-3P-6"] = CHART_POINTS["ZWWW-3P-5"]
 
 _CHART_REF = re.compile(r"\b([A-Z]{4}-\d+[A-Z]?-\d+[A-Z]?)\b")
 # (WEST AND NORTH OF G-H-J-K) のような「<方角> OF <点>-<点>-...」
