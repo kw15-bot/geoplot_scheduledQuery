@@ -702,6 +702,15 @@ class AipChartAreas(unittest.TestCase):
         self.assertIsNone(f("REF AIP CHINA ZWWW-3P-5, AREA WEST OF G-X ACTIVE"))
         self.assertIsNone(f("RWY 08 CLSD"))
 
+    def test_zsnj_restriction_line(self):
+        f = C.aip_chart_areas.chart_boundary_geometry
+        g = f("REF AIP ZSNJ AD2.20, ACFT SHALL NOT FLY ACROSS SOUTH OF RESTRICTION LINE WITHOUT ATC CLR")
+        self.assertEqual(g["type"], "LineString")
+        self.assertEqual(g["coordinates"][0], [117.997222, 31.663889])   # B N313950 E1175950
+        self.assertEqual(g["coordinates"][-1], [119.033333, 31.533333])  # E N313200 E1190200
+        self.assertIsNone(f("ZSNJ RWY06/24 CLSD"))
+        self.assertIsNone(f("RESTRICTION LINE ACTIVE"))
+
     def test_missing_chart_refs(self):
         m = C.aip_chart_areas.chart_refs_missing
         self.assertEqual(m(self.W1338), [])                      # 登録済みで線にできる
