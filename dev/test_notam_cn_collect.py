@@ -702,6 +702,12 @@ class AipChartAreas(unittest.TestCase):
         self.assertIsNone(f("REF AIP CHINA ZWWW-3P-5, AREA WEST OF G-X ACTIVE"))
         self.assertIsNone(f("RWY 08 CLSD"))
 
+    def test_missing_chart_refs(self):
+        m = C.aip_chart_areas.chart_refs_missing
+        self.assertEqual(m(self.W1338), [])                      # 登録済みで線にできる
+        self.assertEqual(m("REF AIP CHINA ZBAA-3P-5, AREA WEST OF A-B ACTIVE"), ["ZBAA-3P-5"])
+        self.assertEqual(m("RWY 08 CLSD"), [])
+
 
 # ----------------------------------------------------------------------------- APIモード（同一プロセス内モック）
 class MockState:
