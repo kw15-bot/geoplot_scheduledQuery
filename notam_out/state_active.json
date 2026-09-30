@@ -14823,52 +14823,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790591775276000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-01T10:33:00.000Z",
-  "effective_start": "2026-09-28T10:33:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZPKM",
-  "first_seen": "2026-09-28T10:40:26+00:00",
-  "geometry": {
-   "coordinates": [
-    90.911667,
-    29.296667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZULS",
-  "icao_text": "U4451/26 NOTAMC U4446/26\r\nQ)ZPKM/QNMAK//M//000/999/\r\nA)ZULS B)2609281033 \r\nE) CNL.\r\n",
-  "id": "1790591775276000",
-  "issued": "2026-09-28T10:34:00.000Z",
-  "last_updated": "2026-09-28T10:36:00.000Z",
-  "local_text": null,
-  "location": "ZULS",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "U4451/26",
-  "purpose": "M",
-  "q_code": "QNMAK",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "U4446/26",
-  "schedule": null,
-  "scope": null,
-  "series": "U",
-  "text": "CNL.",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
  "1790592882030000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
@@ -67224,98 +67178,6 @@
   "text": "A5024/26 NOTAMC A4979/26\r\nQ)ZLHW/QARXX//M//000/999/\r\nA)ZLHW B)2609300249 \r\nE) CNL NTM.",
   "traffic": null,
   "type": "C",
-  "upper": null,
-  "year": "2026"
- },
- "1790736961354000": {
-  "account_id": "SNOWTAM",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-30T10:36:00.000Z",
-  "effective_start": "2026-09-30T02:36:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": null,
-  "first_seen": "2026-09-30T03:00:45+00:00",
-  "geometry": {
-   "coordinates": [
-    119.826667,
-    49.205
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZBLA",
-  "icao_text": null,
-  "id": "1790736961354000",
-  "issued": "2026-09-30T02:53:00.000Z",
-  "last_updated": "2026-09-30T02:56:00.000Z",
-  "local_text": null,
-  "location": "ZBLA",
-  "lower": null,
-  "max_fl": null,
-  "min_fl": null,
-  "number": "0196",
-  "purpose": null,
-  "q_code": null,
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": "SWZX",
-  "text": "SWZX0196 ZBLA 09300236\r (SNOWTAM 0196\r ZBLA\r 09300236 09 5/5/5 100/100/100 NR/NR/NR WET/WET/WET\r )",
-  "traffic": null,
-  "type": null,
-  "upper": null,
-  "year": "2026"
- },
- "1790737008074554": {
-  "account_id": "SNOWTAM",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-30T10:36:00Z",
-  "effective_start": "2026-09-30T02:36:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": null,
-  "first_seen": "2026-09-30T03:00:45+00:00",
-  "geometry": {
-   "coordinates": [
-    119.826667,
-    49.205
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZBLA",
-  "icao_text": "SWZX0196 ZBLA 09300236\r\n(SNOWTAM 0196\r\nZBLA\r\n09300236 09 5/5/5 100/100/100 NR/NR/NR WET/WET/WET\r\n)",
-  "id": "1790737008074554",
-  "issued": "2026-09-30T02:53:00Z",
-  "last_updated": "2026-09-30T02:56:00Z",
-  "local_text": null,
-  "location": "ZBLA",
-  "lower": null,
-  "max_fl": null,
-  "min_fl": null,
-  "number": "SWZX0196/26",
-  "purpose": null,
-  "q_code": null,
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": "SWZX",
-  "text": "WZX0196 ZBLA 09300236\r\n(SNOWTAM 0196\r\nZBLA\r\n09300236 09 5/5/5 100/100/100 NR/NR/NR WET/WET/WET\r\n)",
-  "traffic": null,
-  "type": null,
   "upper": null,
   "year": "2026"
  },
@@ -125947,8 +125809,8 @@
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "2257N12013E",
-  "effective_end": "2026-10-15T20:30:00.000Z",
-  "effective_start": "2026-10-03T14:00:00.000Z",
+  "effective_end": "2026-10-15T20:30:00Z",
+  "effective_start": "2026-10-03T14:00:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
@@ -126225,8 +126087,8 @@
   "icao_location": "RCNN",
   "icao_text": "A3625/26 NOTAMN\r\nQ) RCAA/QMXHW/IV/M/A/000/999/2257N12013E005\r\nA) RCNN\r\nB) 2610031400 C) 2610152030\r\nD) OCT 03-05 12-15 1400-2030\r\nE) FLW TWY WIP DUE TO RUBBER DEPOSITS CLEANING AND\r\nLINE RE-MARKING WORK:\r\n1.TWY B.\r\n2.PORTION OF TWY E BTN TWY A(INCLUDED) AND TWY D(INCLUDED).\r\nRMK: EMERG FLT WITH 15 MIN PRIOR PERMISSION FOR\r\nPERSONNEL AND EQPT EVACUATION.",
   "id": "1790764179876000",
-  "issued": "2026-09-30T10:29:00.000Z",
-  "last_updated": "2026-09-30T10:29:00.000Z",
+  "issued": "2026-09-30T10:29:00Z",
+  "last_updated": "2026-09-30T10:30:00Z",
   "local_text": null,
   "location": "RCNN",
   "lower": null,
@@ -126245,6 +126107,444 @@
   "traffic": "IV",
   "type": "N",
   "upper": null,
+  "year": "2026"
+ },
+ "1790764316224000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1944N12923E",
+  "effective_end": "2026-10-07T04:53:00Z",
+  "effective_start": "2026-10-07T03:23:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-09-30T10:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      128.756111,
+      21.0
+     ],
+     [
+      129.977222,
+      21.0
+     ],
+     [
+      129.998333,
+      18.459167
+     ],
+     [
+      129.109444,
+      18.356111
+     ],
+     [
+      128.756111,
+      21.0
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPHI",
+  "icao_text": "B5205/26 NOTAMN\r\nQ) RPHI/QWMLW/IV/BO /W /000/999/1944N12923E086\r\nA) RPHI B) 2610070323 C) 2610070453\r\nE) SPECIAL OPS (AEROSPACE FLT ACT) WILL BE CONDUCTED BY KOREA.\r\nEST FALL AREA OF UNBURNED DEBRIS WI:\r\n210000N 1284522E -\r\n210000N 1295838E -\r\n182733N 1295954E -\r\n182122N 1290634E -\r\n210000N 1284522E\r\n(380NM EAST OF BASCO PRINCIPAL AP (CLASS 2))\r\nF) SFC G) UNL",
+  "id": "1790764316224000",
+  "issued": "2026-09-30T10:31:00Z",
+  "last_updated": "2026-09-30T10:32:00Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5205/26",
+  "purpose": "BO",
+  "q_code": "QWMLW",
+  "qline_offset_nm": 4.7,
+  "radius_nm": 86.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "B",
+  "text": "SPECIAL OPS (AEROSPACE FLT ACT) WILL BE CONDUCTED BY KOREA.\r\nEST FALL AREA OF UNBURNED DEBRIS WI:\r\n210000N 1284522E -\r\n210000N 1295838E -\r\n182733N 1295954E -\r\n182122N 1290634E -\r\n210000N 1284522E\r\n(380NM EAST OF BASCO PRINCIPAL AP (CLASS 2))",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1790764391161000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1027N12958E",
+  "effective_end": "2026-10-03T10:32:00.000Z",
+  "effective_start": "2026-09-30T10:32:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-09-30T10:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      129.966667,
+      12.862325
+     ],
+     [
+      130.207104,
+      12.850709
+     ],
+     [
+      130.445225,
+      12.815973
+     ],
+     [
+      130.678738,
+      12.758451
+     ],
+     [
+      130.905394,
+      12.678698
+     ],
+     [
+      131.123008,
+      12.577481
+     ],
+     [
+      131.329487,
+      12.455775
+     ],
+     [
+      131.522841,
+      12.314752
+     ],
+     [
+      131.701208,
+      12.155771
+     ],
+     [
+      131.86287,
+      11.980363
+     ],
+     [
+      132.006271,
+      11.790216
+     ],
+     [
+      132.13003,
+      11.587162
+     ],
+     [
+      132.232954,
+      11.373157
+     ],
+     [
+      132.314052,
+      11.150261
+     ],
+     [
+      132.372544,
+      10.920621
+     ],
+     [
+      132.407866,
+      10.686449
+     ],
+     [
+      132.419678,
+      10.45
+     ],
+     [
+      132.407866,
+      10.213551
+     ],
+     [
+      132.372544,
+      9.979379
+     ],
+     [
+      132.314052,
+      9.749739
+     ],
+     [
+      132.232954,
+      9.526843
+     ],
+     [
+      132.13003,
+      9.312838
+     ],
+     [
+      132.006271,
+      9.109784
+     ],
+     [
+      131.86287,
+      8.919637
+     ],
+     [
+      131.701208,
+      8.744229
+     ],
+     [
+      131.522841,
+      8.585248
+     ],
+     [
+      131.329487,
+      8.444225
+     ],
+     [
+      131.123008,
+      8.322519
+     ],
+     [
+      130.905394,
+      8.221302
+     ],
+     [
+      130.678738,
+      8.141549
+     ],
+     [
+      130.445225,
+      8.084027
+     ],
+     [
+      130.207104,
+      8.049291
+     ],
+     [
+      129.966667,
+      8.037675
+     ],
+     [
+      129.726229,
+      8.049291
+     ],
+     [
+      129.488108,
+      8.084027
+     ],
+     [
+      129.254595,
+      8.141549
+     ],
+     [
+      129.02794,
+      8.221302
+     ],
+     [
+      128.810325,
+      8.322519
+     ],
+     [
+      128.603846,
+      8.444225
+     ],
+     [
+      128.410493,
+      8.585248
+     ],
+     [
+      128.232126,
+      8.744229
+     ],
+     [
+      128.070463,
+      8.919637
+     ],
+     [
+      127.927062,
+      9.109784
+     ],
+     [
+      127.803304,
+      9.312838
+     ],
+     [
+      127.70038,
+      9.526843
+     ],
+     [
+      127.619281,
+      9.749739
+     ],
+     [
+      127.560789,
+      9.979379
+     ],
+     [
+      127.525467,
+      10.213551
+     ],
+     [
+      127.513655,
+      10.45
+     ],
+     [
+      127.525467,
+      10.686449
+     ],
+     [
+      127.560789,
+      10.920621
+     ],
+     [
+      127.619281,
+      11.150261
+     ],
+     [
+      127.70038,
+      11.373157
+     ],
+     [
+      127.803304,
+      11.587162
+     ],
+     [
+      127.927062,
+      11.790216
+     ],
+     [
+      128.070463,
+      11.980363
+     ],
+     [
+      128.232126,
+      12.155771
+     ],
+     [
+      128.410493,
+      12.314752
+     ],
+     [
+      128.603846,
+      12.455775
+     ],
+     [
+      128.810325,
+      12.577481
+     ],
+     [
+      129.02794,
+      12.678698
+     ],
+     [
+      129.254595,
+      12.758451
+     ],
+     [
+      129.488108,
+      12.815973
+     ],
+     [
+      129.726229,
+      12.850709
+     ],
+     [
+      129.966667,
+      12.862325
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPHI",
+  "icao_text": "B5206/26 NOTAMC B4913/26\r\nQ) RPHI/QWMXX/IV/BO /W /000/999/1027N12958E145\r\nA) RPHI B) 2609301032\r\nE) SPECIAL OPS (AEROSPACE FLT ACT) NEW NOTAM TO FLW.",
+  "id": "1790764391161000",
+  "issued": "2026-09-30T10:32:00.000Z",
+  "last_updated": "2026-09-30T10:33:00.000Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5206/26",
+  "purpose": "BO ",
+  "q_code": "QWMXX",
+  "qline_offset_nm": null,
+  "radius_nm": 145.0,
+  "ref_number": "B4913/26",
+  "schedule": null,
+  "scope": "W ",
+  "series": "B",
+  "text": "SPECIAL OPS (AEROSPACE FLT ACT) NEW NOTAM TO FLW.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790764633796000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1027N12958E",
+  "effective_end": "2026-10-07T04:53:00.000Z",
+  "effective_start": "2026-10-07T03:23:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-09-30T10:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      129.433889,
+      12.750556
+     ],
+     [
+      130.0,
+      12.808611
+     ],
+     [
+      130.0,
+      8.081111
+     ],
+     [
+      129.946111,
+      8.075833
+     ],
+     [
+      129.433889,
+      12.750556
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPHI",
+  "icao_text": "B5207/26 NOTAMN\r\nQ) RPHI/QWMLW/IV/BO /W /000/999/1027N12958E145\r\nA) RPHI B) 2610070323 C) 2610070453\r\nE) SPECIAL OPS (AEROSPACE FLT ACT) WILL BE CONDUCTED BY KOREA.\r\nEST FALL AREA OF UNBURNED DEBRIS WI:\r\n124502N 1292602E -\r\n124831N 1300000E -\r\n080452N 1300000E -\r\n080433N 1295646E -\r\n124502N 1292602E\r\n(220NM EAST OF BISLIG COMMUNITY AP).\r\nF) SFC G) UNL",
+  "id": "1790764633796000",
+  "issued": "2026-09-30T10:36:00.000Z",
+  "last_updated": "2026-09-30T10:37:00.000Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5207/26",
+  "purpose": "BO ",
+  "q_code": "QWMLW",
+  "qline_offset_nm": 7.3,
+  "radius_nm": 145.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W ",
+  "series": "B",
+  "text": "SPECIAL OPS (AEROSPACE FLT ACT) WILL BE CONDUCTED BY KOREA.\r\nEST FALL AREA OF UNBURNED DEBRIS WI:\r\n124502N 1292602E -\r\n124831N 1300000E -\r\n080452N 1300000E -\r\n080433N 1295646E -\r\n124502N 1292602E\r\n(220NM EAST OF BISLIG COMMUNITY AP).",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
   "year": "2026"
  }
 }
