@@ -844,6 +844,6 @@ NOTAMモードの地図ツールバーに「レイヤー」ボタンを置き、
 - `aip_chart_areas.py` に図から読み取った点を持ち（`CHART_POINTS`、図ごと・点の名前→緯度経度）、NOTAMが挙げた点の順に結んだ LineString にする（geometry_source `aip-chart-line`）。
   区域の外側の境界は図にも無い（「G-H-J-K の西と北」）ので、面ではなく境界線だけ。ビューア・日次レポート・backfill は route-segment と同じく線として扱う。
 - 登録済み: ZWWW-3P-5（SID RNAV RWY26L/R(NIXER)、EFF2507091600）の G N43°52.5′ E087°13.1′／H N43°52.2′ E087°18.9′／J N43°53.5′ E087°20.8′／K N44°00.3′ E087°21.5′。
-  ユーザーから受け取ったのは 3P-5 のみ（2つの添付が同じファイルだった）。3P-6 は未確認で、NOTAMが 3P-5 も挙げていれば 3P-5 の点で描く。
+  ZWWW-3P-6（SID RNAV RWY26L/R(VARMI)、同版、ファイル `389e61709e81e6dac061254734c93e46.pdf`）も同じ注記・同じ4点（照合済み）なので同じ点で登録。
 - 図を足すとき: eAIP の `Data/EAIP.../Terminal/` の PDF はファイル名が内容の MD5（例 3P-5 = `d59fcb6db7d904cd2d0ff4d21c2e3b5e.pdf`）。PDF のタイトルに `AIP-ZWWW-3P-5_...` と入っている。
 - 2026-09-30 適用: archive の W1338/26 を qline-circle → aip-chart-line に描き直した。
