@@ -130908,5 +130908,671 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1790776855311346": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-02T20:19:00Z",
+  "effective_start": "2026-10-02T18:08:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-30T14:10:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -121.7,
+      30.466667
+     ],
+     [
+      -122.05,
+      30.116667
+     ],
+     [
+      -122.0,
+      29.866667
+     ],
+     [
+      -121.85,
+      29.466667
+     ],
+     [
+      -121.616667,
+      29.433333
+     ],
+     [
+      -121.216667,
+      29.466667
+     ],
+     [
+      -120.866667,
+      29.816667
+     ],
+     [
+      -120.9,
+      30.066667
+     ],
+     [
+      -121.4,
+      30.45
+     ],
+     [
+      -121.7,
+      30.466667
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4773/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/999/\nA) KZAK\nB) 2610021808\nC) 2610022019\nE) ZAK AIRSPACE DCC SX TRANSPORTER 18 26-63 STNR ALT RESERVATION \nAREA B WI AN AREA DEFINED AS 302800N1214200W TO 300700N1220300W TO 295200N1220000W TO 292800N1215100W TO 292600N1213700W TO 292800N1211300W TO 294900N1205200W TO 300400N1205400W TO 302700N1212400W TO POINT OF ORIGIN\nF) SFC\nG) UNL",
+  "id": "1790776855311346",
+  "issued": "2026-09-30T14:00:00Z",
+  "last_updated": "2026-09-30T14:01:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4773/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE DCC SX TRANSPORTER 18 26-63 STNR ALT RESERVATION \nAREA B WI AN AREA DEFINED AS 302800N1214200W TO 300700N1220300W TO 295200N1220000W TO 292800N1215100W TO 292600N1213700W TO 292800N1211300W TO 294900N1205200W TO 300400N1205400W TO 302700N1212400W TO POINT OF ORIGIN",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1790776857984103": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-02T20:19:00Z",
+  "effective_start": "2026-10-02T18:08:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-30T14:10:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -121.7,
+      30.466667
+     ],
+     [
+      -122.05,
+      30.116667
+     ],
+     [
+      -122.0,
+      29.866667
+     ],
+     [
+      -121.85,
+      29.466667
+     ],
+     [
+      -121.616667,
+      29.433333
+     ],
+     [
+      -121.216667,
+      29.466667
+     ],
+     [
+      -120.866667,
+      29.816667
+     ],
+     [
+      -120.9,
+      30.066667
+     ],
+     [
+      -121.4,
+      30.45
+     ],
+     [
+      -121.7,
+      30.466667
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790776857984103",
+  "issued": "2026-09-30T14:00:00Z",
+  "last_updated": "2026-09-30T14:01:00Z",
+  "local_text": "!CARF 09/384 ZAK AIRSPACE DCC SX TRANSPORTER 18 26-63 STNR ALT RESERVATION AREA B WI AN AREA DEFINED AS 302800N1214200W TO 300700N1220300W TO 295200N1220000W TO 292800N1215100W TO 292600N1213700W TO 292800N1211300W TO 294900N1205200W TO 300400N1205400W TO 302700N1212400W TO POINT OF ORIGIN SFC-UNL 2610021808-2610022019",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "09/384",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 09/384 ZAK AIRSPACE DCC SX TRANSPORTER 18 26-63 STNR ALT RESERVATION AREA B WI AN AREA DEFINED AS 302800N1214200W TO 300700N1220300W TO 295200N1220000W TO 292800N1215100W TO 292600N1213700W TO 292800N1211300W TO 294900N1205200W TO 300400N1205400W TO 302700N1212400W TO POINT OF ORIGIN SFC-UNL",
+  "traffic": null,
+  "type": null,
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1790777192640181": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-02T19:59:00Z",
+  "effective_start": "2026-10-02T18:08:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-30T14:10:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -121.266667,
+      30.7
+     ],
+     [
+      -121.4,
+      30.45
+     ],
+     [
+      -121.7,
+      30.466667
+     ],
+     [
+      -121.5,
+      30.833333
+     ],
+     [
+      -120.9,
+      33.483333
+     ],
+     [
+      -120.716667,
+      34.55
+     ],
+     [
+      -120.633333,
+      34.666667
+     ],
+     [
+      -120.5,
+      34.666667
+     ],
+     [
+      -120.466667,
+      34.483333
+     ],
+     [
+      -120.683333,
+      33.483333
+     ],
+     [
+      -121.15,
+      31.683333
+     ],
+     [
+      -121.266667,
+      30.7
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790777192640181",
+  "issued": "2026-09-30T14:05:00Z",
+  "last_updated": "2026-09-30T14:05:00Z",
+  "local_text": "!CARF 09/388 ZAK AIRSPACE DCC SX TRANSPORTER 18 26-63 STNR ALT RESERVATION AREA A WI AN AREA DEFINED AS 304200N1211600W TO 302700N1212400W TO 302800N1214200W TO 305000N1213000W TO 332900N1205400W TO 343300N1204300W TO 344000N1203800W TO 344000N1203000W TO 342900N1202800W TO 332900N1204100W TO 314100N1210900W TO POINT OF ORIGIN SFC-UNL 2610021808-2610021959",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "09/388",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 09/388 ZAK AIRSPACE DCC SX TRANSPORTER 18 26-63 STNR ALT RESERVATION AREA A WI AN AREA DEFINED AS 304200N1211600W TO 302700N1212400W TO 302800N1214200W TO 305000N1213000W TO 332900N1205400W TO 343300N1204300W TO 344000N1203800W TO 344000N1203000W TO 342900N1202800W TO 332900N1204100W TO 314100N1210900W TO POINT OF ORIGIN SFC-UNL",
+  "traffic": null,
+  "type": null,
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1790777194747914": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-02T19:59:00Z",
+  "effective_start": "2026-10-02T18:08:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-30T14:10:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -121.266667,
+      30.7
+     ],
+     [
+      -121.4,
+      30.45
+     ],
+     [
+      -121.7,
+      30.466667
+     ],
+     [
+      -121.5,
+      30.833333
+     ],
+     [
+      -120.9,
+      33.483333
+     ],
+     [
+      -120.716667,
+      34.55
+     ],
+     [
+      -120.633333,
+      34.666667
+     ],
+     [
+      -120.5,
+      34.666667
+     ],
+     [
+      -120.466667,
+      34.483333
+     ],
+     [
+      -120.683333,
+      33.483333
+     ],
+     [
+      -121.15,
+      31.683333
+     ],
+     [
+      -121.266667,
+      30.7
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4774/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/999/\nA) KZAK\nB) 2610021808\nC) 2610021959\nE) ZAK AIRSPACE DCC SX TRANSPORTER 18 26-63 STNR ALT RESERVATION \nAREA A WI AN AREA DEFINED AS 304200N1211600W TO 302700N1212400W TO 302800N1214200W TO 305000N1213000W TO 332900N1205400W TO 343300N1204300W TO 344000N1203800W TO 344000N1203000W TO 342900N1202800W TO 332900N1204100W TO 314100N1210900W TO POINT OF ORIGIN SFC-UNL\nF) SFC\nG) UNL",
+  "id": "1790777194747914",
+  "issued": "2026-09-30T14:05:00Z",
+  "last_updated": "2026-09-30T14:05:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4774/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE DCC SX TRANSPORTER 18 26-63 STNR ALT RESERVATION \nAREA A WI AN AREA DEFINED AS 304200N1211600W TO 302700N1212400W TO 302800N1214200W TO 305000N1213000W TO 332900N1205400W TO 343300N1204300W TO 344000N1203800W TO 344000N1203000W TO 342900N1202800W TO 332900N1204100W TO 314100N1210900W TO POINT OF ORIGIN SFC-UNL",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1790777369161000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3109N12148E",
+  "effective_end": "2026-09-30T22:15:00.000Z",
+  "effective_start": "2026-09-30T17:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZSHA",
+  "first_seen": "2026-09-30T14:10:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.8,
+      31.233184
+     ],
+     [
+      121.809527,
+      31.232783
+     ],
+     [
+      121.818962,
+      31.231585
+     ],
+     [
+      121.828215,
+      31.229602
+     ],
+     [
+      121.837196,
+      31.226852
+     ],
+     [
+      121.845819,
+      31.223361
+     ],
+     [
+      121.854,
+      31.219165
+     ],
+     [
+      121.861662,
+      31.214302
+     ],
+     [
+      121.868729,
+      31.20882
+     ],
+     [
+      121.875135,
+      31.202771
+     ],
+     [
+      121.880817,
+      31.196214
+     ],
+     [
+      121.885721,
+      31.189212
+     ],
+     [
+      121.889799,
+      31.181833
+     ],
+     [
+      121.893013,
+      31.174147
+     ],
+     [
+      121.89533,
+      31.166228
+     ],
+     [
+      121.89673,
+      31.158153
+     ],
+     [
+      121.897198,
+      31.15
+     ],
+     [
+      121.89673,
+      31.141847
+     ],
+     [
+      121.89533,
+      31.133772
+     ],
+     [
+      121.893013,
+      31.125853
+     ],
+     [
+      121.889799,
+      31.118167
+     ],
+     [
+      121.885721,
+      31.110788
+     ],
+     [
+      121.880817,
+      31.103786
+     ],
+     [
+      121.875135,
+      31.097229
+     ],
+     [
+      121.868729,
+      31.09118
+     ],
+     [
+      121.861662,
+      31.085698
+     ],
+     [
+      121.854,
+      31.080835
+     ],
+     [
+      121.845819,
+      31.076639
+     ],
+     [
+      121.837196,
+      31.073148
+     ],
+     [
+      121.828215,
+      31.070398
+     ],
+     [
+      121.818962,
+      31.068415
+     ],
+     [
+      121.809527,
+      31.067217
+     ],
+     [
+      121.8,
+      31.066816
+     ],
+     [
+      121.790473,
+      31.067217
+     ],
+     [
+      121.781038,
+      31.068415
+     ],
+     [
+      121.771785,
+      31.070398
+     ],
+     [
+      121.762804,
+      31.073148
+     ],
+     [
+      121.754181,
+      31.076639
+     ],
+     [
+      121.746,
+      31.080835
+     ],
+     [
+      121.738338,
+      31.085698
+     ],
+     [
+      121.731271,
+      31.09118
+     ],
+     [
+      121.724865,
+      31.097229
+     ],
+     [
+      121.719183,
+      31.103786
+     ],
+     [
+      121.714279,
+      31.110788
+     ],
+     [
+      121.710201,
+      31.118167
+     ],
+     [
+      121.706987,
+      31.125853
+     ],
+     [
+      121.70467,
+      31.133772
+     ],
+     [
+      121.70327,
+      31.141847
+     ],
+     [
+      121.702802,
+      31.15
+     ],
+     [
+      121.70327,
+      31.158153
+     ],
+     [
+      121.70467,
+      31.166228
+     ],
+     [
+      121.706987,
+      31.174147
+     ],
+     [
+      121.710201,
+      31.181833
+     ],
+     [
+      121.714279,
+      31.189212
+     ],
+     [
+      121.719183,
+      31.196214
+     ],
+     [
+      121.724865,
+      31.202771
+     ],
+     [
+      121.731271,
+      31.20882
+     ],
+     [
+      121.738338,
+      31.214302
+     ],
+     [
+      121.746,
+      31.219165
+     ],
+     [
+      121.754181,
+      31.223361
+     ],
+     [
+      121.762804,
+      31.226852
+     ],
+     [
+      121.771785,
+      31.229602
+     ],
+     [
+      121.781038,
+      31.231585
+     ],
+     [
+      121.790473,
+      31.232783
+     ],
+     [
+      121.8,
+      31.233184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZSPD",
+  "icao_text": "F4130/26 NOTAMN\r\nQ)ZSHA/QICAS/I/NBO/A/000/999/3109N12148E005\r\nA)ZSPD B)2609301730 C)2609302215 \r\nE) RWY17L/35R ILS U/S.\r\n ",
+  "id": "1790777369161000",
+  "issued": "2026-09-30T14:07:00.000Z",
+  "last_updated": "2026-09-30T14:09:00.000Z",
+  "local_text": null,
+  "location": "ZSPD",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "F4130/26",
+  "purpose": "NBO",
+  "q_code": "QICAS",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "F",
+  "text": "RWY17L/35R ILS U/S.",
+  "traffic": "I",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
  }
 }
