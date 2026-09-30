@@ -180,6 +180,9 @@ def off_map_reason(it):
     gs = it["geometry_source"]
     if not it["has_geometry"]:
         return "位置情報なし(本文にもQ項にも座標なし)"
+    charts = C.aip_chart_areas.chart_refs_missing(it.get("e_text"))
+    if charts:
+        return f"AIPの図（{'、'.join(charts)}）を参照しているが点が未登録（図を登録すれば線にできる、aip_chart_areas.py）"
     if C.notam_route_segments.find_closures(it.get("e_text")):
         return "航空路の区間閉鎖だが線にできなかった(AIP索引が無い、または区間を航空路上で特定できない)"
     if gs in ("qline-circle", "qline-point"):
