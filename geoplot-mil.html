@@ -286,9 +286,9 @@ body.base-sat .leaflet-control-attribution{
 .layer-row:has(> .check-row input:not(:checked)) .layer-sub{opacity:.45;}
 .layer-row[hidden]{display:none;}
 /* FIRのラベル(ICAOコード)。マウスは下の図形に通す。広域(ズーム3未満)では出さない */
-.fir-label{font:600 10px/1 var(--mono, monospace);color:#2f5f93;letter-spacing:.04em;text-align:center;
+.fir-label{font:600 10px/1 var(--mono, monospace);color:#707070;letter-spacing:.04em;text-align:center;
   text-shadow:0 0 2px #fff,0 0 2px #fff,0 0 3px #fff;pointer-events:none;white-space:nowrap;}
-body.dark-mode .fir-label{color:#8fb8e8;text-shadow:0 0 2px #000,0 0 2px #000,0 0 3px #000;}
+body.dark-mode .fir-label{color:#a8a8a8;text-shadow:0 0 2px #000,0 0 2px #000,0 0 3px #000;}
 .fir-labels-off .fir-label{display:none;}
 .layer-control{position:absolute;top:12px;right:12px;z-index:500;}
 .layer-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;
@@ -804,7 +804,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v2.6.0';
+const APP_VERSION = 'v2.6.1';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -840,6 +840,7 @@ const APP_VERSION = 'v2.6.0';
 // v2.5.2: 航空路閉鎖の線の20kmの帯(v2.1.0)をやめ、線だけに戻した(地図・PDFとも)。
 // v2.6.0: NOTAMモードのレイヤーに「FIR（ICAO）」を追加(ICAOのFIR図 2020-12-18版、layers/fir.geojson)。
 //  境界は細い破線、ラベルは ICAOCODE(ズーム3以上)、線にマウスを乗せると FIR名。
+// v2.6.1: FIRの境界を実線にし、線・ラベルとも灰色に(ユーザー指示)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -1688,7 +1689,7 @@ const OVERLAYS = [
     build: data => {
       const g = L.layerGroup();
       L.geoJSON(data, {
-        style: () => ({ color: '#3a6ea5', weight: 1, opacity: 0.6, dashArray: '5 4' }),
+        style: () => ({ color: '#808080', weight: 1, opacity: 0.7 }),
         onEachFeature: (f, layer) => layer.bindTooltip(`${f.properties.icao}  ${f.properties.name || ''}`,
           { sticky: true, className: 'poly-label' }),
       }).addTo(g);
