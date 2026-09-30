@@ -67647,78 +67647,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790686046890000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-30T03:37:00.000Z",
-  "effective_start": "2026-09-30T02:17:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZWUQ",
-  "first_seen": "2026-09-29T12:50:28+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      88.708333,
-      38.575
-     ],
-     [
-      90.341944,
-      38.798611
-     ],
-     [
-      90.950278,
-      38.875833
-     ]
-    ],
-    [
-     [
-      90.701667,
-      38.683333
-     ],
-     [
-      90.341944,
-      38.798611
-     ],
-     [
-      87.879559,
-      39.523417
-     ]
-    ]
-   ],
-   "type": "MultiLineString"
-  },
-  "geometry_source": "route-segment",
-  "icao_location": "ZWUQ",
-  "icao_text": "A5009/26 NOTAMN\r\nQ)ZWUQ/QARLC/IV/NBO/E/000/999/\r\nA)ZWUQ B)2609300217 C)2609300337 \r\nE) FLW SEGMENT OF ATS RTE CLSD:\r\n1.W112: NOLEP-ADMUX.\r\n2.Y1: MAGOD-260KM WEST OF MAGOD.\r\nF)GND G)UNL",
-  "id": "1790686046890000",
-  "issued": "2026-09-29T12:46:00.000Z",
-  "last_updated": "2026-09-29T12:47:00.000Z",
-  "local_text": null,
-  "location": "ZWUQ",
-  "lower": "GND",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A5009/26",
-  "purpose": "NBO",
-  "q_code": "QARLC",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "A",
-  "text": "FLW SEGMENT OF ATS RTE CLSD:\r\n1.W112: NOLEP-ADMUX.\r\n2.Y1: MAGOD-260KM WEST OF MAGOD.",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "UNL",
-  "year": "2026"
- },
  "1790686253780000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -81008,6 +80936,964 @@
   "text": "APN WIP (CONST AT COORD: 085655.8N 1252856.9E).\r\n\r\nRMK: EXER CTN WHEN OPR IN THE APN.",
   "traffic": "IV",
   "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790736038575000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2237N10810E",
+  "effective_end": "2026-10-31T15:59:00Z",
+  "effective_start": "2026-09-30T02:34:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZGZU",
+  "first_seen": "2026-09-30T02:50:24+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      108.166667,
+      22.69985
+     ],
+     [
+      108.175499,
+      22.69945
+     ],
+     [
+      108.184247,
+      22.698252
+     ],
+     [
+      108.192825,
+      22.696268
+     ],
+     [
+      108.201152,
+      22.693518
+     ],
+     [
+      108.209146,
+      22.690028
+     ],
+     [
+      108.216731,
+      22.685831
+     ],
+     [
+      108.223834,
+      22.680968
+     ],
+     [
+      108.230387,
+      22.675486
+     ],
+     [
+      108.236325,
+      22.669438
+     ],
+     [
+      108.241593,
+      22.662881
+     ],
+     [
+      108.24614,
+      22.655879
+     ],
+     [
+      108.249921,
+      22.6485
+     ],
+     [
+      108.2529,
+      22.640814
+     ],
+     [
+      108.255049,
+      22.632895
+     ],
+     [
+      108.256346,
+      22.62482
+     ],
+     [
+      108.25678,
+      22.616667
+     ],
+     [
+      108.256346,
+      22.608513
+     ],
+     [
+      108.255049,
+      22.600438
+     ],
+     [
+      108.2529,
+      22.59252
+     ],
+     [
+      108.249921,
+      22.584834
+     ],
+     [
+      108.24614,
+      22.577454
+     ],
+     [
+      108.241593,
+      22.570452
+     ],
+     [
+      108.236325,
+      22.563896
+     ],
+     [
+      108.230387,
+      22.557847
+     ],
+     [
+      108.223834,
+      22.552365
+     ],
+     [
+      108.216731,
+      22.547502
+     ],
+     [
+      108.209146,
+      22.543305
+     ],
+     [
+      108.201152,
+      22.539815
+     ],
+     [
+      108.192825,
+      22.537065
+     ],
+     [
+      108.184247,
+      22.535081
+     ],
+     [
+      108.175499,
+      22.533884
+     ],
+     [
+      108.166667,
+      22.533483
+     ],
+     [
+      108.157834,
+      22.533884
+     ],
+     [
+      108.149086,
+      22.535081
+     ],
+     [
+      108.140508,
+      22.537065
+     ],
+     [
+      108.132182,
+      22.539815
+     ],
+     [
+      108.124187,
+      22.543305
+     ],
+     [
+      108.116602,
+      22.547502
+     ],
+     [
+      108.109499,
+      22.552365
+     ],
+     [
+      108.102947,
+      22.557847
+     ],
+     [
+      108.097008,
+      22.563896
+     ],
+     [
+      108.09174,
+      22.570452
+     ],
+     [
+      108.087194,
+      22.577454
+     ],
+     [
+      108.083413,
+      22.584834
+     ],
+     [
+      108.080433,
+      22.59252
+     ],
+     [
+      108.078285,
+      22.600438
+     ],
+     [
+      108.076987,
+      22.608513
+     ],
+     [
+      108.076553,
+      22.616667
+     ],
+     [
+      108.076987,
+      22.62482
+     ],
+     [
+      108.078285,
+      22.632895
+     ],
+     [
+      108.080433,
+      22.640814
+     ],
+     [
+      108.083413,
+      22.6485
+     ],
+     [
+      108.087194,
+      22.655879
+     ],
+     [
+      108.09174,
+      22.662881
+     ],
+     [
+      108.097008,
+      22.669438
+     ],
+     [
+      108.102947,
+      22.675486
+     ],
+     [
+      108.109499,
+      22.680968
+     ],
+     [
+      108.116602,
+      22.685831
+     ],
+     [
+      108.124187,
+      22.690028
+     ],
+     [
+      108.132182,
+      22.693518
+     ],
+     [
+      108.140508,
+      22.696268
+     ],
+     [
+      108.149086,
+      22.698252
+     ],
+     [
+      108.157834,
+      22.69945
+     ],
+     [
+      108.166667,
+      22.69985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZGNN",
+  "icao_text": "G4387/26 NOTAMR G3992/26\r\nQ)ZGZU/QFAHX/IV/NBO/A/000/999/2237N10810E005\r\nA)ZGNN B)2609300234 C)2610311559 \r\nE) ACTIVITIES OF BIRD FLOCKS AND MIGRATION WILL TAKE PLACE AROUND \r\nAD:\r\n1. ALT:0M-3,000M\r\n2. ACTIVITY ROUTE:FROM RWY NORTHEAST TO SOUTHWEST \r\n   ACTIVITY TIME:0400-0600\r\n   MIGRATION TIME:2200-2359,0200-0700,1000-2000,INCREASE RISK OF \r\nBIRDS CROSSING RWY EXTENSION LINE\r\n3. BIRD STRIKE RISK INCREASE,AERODROME AUTHORITY RESORTS TO \r\nDISPERSAL METHODS TO REDUCE BIRD ACTIVITIES. EXERCISE CAUTION \r\nWHILE LANDING AND TAKE-OFF.",
+  "id": "1790736038575000",
+  "issued": "2026-09-30T02:39:00Z",
+  "last_updated": "2026-09-30T02:41:00Z",
+  "local_text": null,
+  "location": "ZGNN",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "G4387/26",
+  "purpose": "NBO",
+  "q_code": "QFAHX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "G3992/26",
+  "schedule": null,
+  "scope": "A",
+  "series": "G",
+  "text": "ACTIVITIES OF BIRD FLOCKS AND MIGRATION WILL TAKE PLACE AROUND \r\nAD:\r\n1. ALT:0M-3,000M\r\n2. ACTIVITY ROUTE:FROM RWY NORTHEAST TO SOUTHWEST \r\n   ACTIVITY TIME:0400-0600\r\n   MIGRATION TIME:2200-2359,0200-0700,1000-2000,INCREASE RISK OF \r\nBIRDS CROSSING RWY EXTENSION LINE\r\n3. BIRD STRIKE RISK INCREASE,AERODROME AUTHORITY RESORTS TO \r\nDISPERSAL METHODS TO REDUCE BIRD ACTIVITIES. EXERCISE CAUTION \r\nWHILE LANDING AND TAKE-OFF.",
+  "traffic": "IV",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790736126433000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3017N10427E",
+  "effective_end": "2026-10-10T22:30:00.000Z",
+  "effective_start": "2026-10-10T18:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZPKM",
+  "first_seen": "2026-09-30T02:50:24+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      104.45,
+      30.366517
+     ],
+     [
+      104.459442,
+      30.366116
+     ],
+     [
+      104.468793,
+      30.364919
+     ],
+     [
+      104.477963,
+      30.362935
+     ],
+     [
+      104.486863,
+      30.360185
+     ],
+     [
+      104.495409,
+      30.356695
+     ],
+     [
+      104.503517,
+      30.352498
+     ],
+     [
+      104.51111,
+      30.347635
+     ],
+     [
+      104.518114,
+      30.342153
+     ],
+     [
+      104.524463,
+      30.336104
+     ],
+     [
+      104.530094,
+      30.329548
+     ],
+     [
+      104.534954,
+      30.322546
+     ],
+     [
+      104.538996,
+      30.315166
+     ],
+     [
+      104.54218,
+      30.30748
+     ],
+     [
+      104.544477,
+      30.299562
+     ],
+     [
+      104.545865,
+      30.291487
+     ],
+     [
+      104.546328,
+      30.283333
+     ],
+     [
+      104.545865,
+      30.27518
+     ],
+     [
+      104.544477,
+      30.267105
+     ],
+     [
+      104.54218,
+      30.259186
+     ],
+     [
+      104.538996,
+      30.2515
+     ],
+     [
+      104.534954,
+      30.244121
+     ],
+     [
+      104.530094,
+      30.237119
+     ],
+     [
+      104.524463,
+      30.230562
+     ],
+     [
+      104.518114,
+      30.224514
+     ],
+     [
+      104.51111,
+      30.219032
+     ],
+     [
+      104.503517,
+      30.214169
+     ],
+     [
+      104.495409,
+      30.209972
+     ],
+     [
+      104.486863,
+      30.206482
+     ],
+     [
+      104.477963,
+      30.203732
+     ],
+     [
+      104.468793,
+      30.201748
+     ],
+     [
+      104.459442,
+      30.20055
+     ],
+     [
+      104.45,
+      30.20015
+     ],
+     [
+      104.440558,
+      30.20055
+     ],
+     [
+      104.431207,
+      30.201748
+     ],
+     [
+      104.422037,
+      30.203732
+     ],
+     [
+      104.413137,
+      30.206482
+     ],
+     [
+      104.404591,
+      30.209972
+     ],
+     [
+      104.396483,
+      30.214169
+     ],
+     [
+      104.38889,
+      30.219032
+     ],
+     [
+      104.381886,
+      30.224514
+     ],
+     [
+      104.375537,
+      30.230562
+     ],
+     [
+      104.369906,
+      30.237119
+     ],
+     [
+      104.365046,
+      30.244121
+     ],
+     [
+      104.361004,
+      30.2515
+     ],
+     [
+      104.35782,
+      30.259186
+     ],
+     [
+      104.355523,
+      30.267105
+     ],
+     [
+      104.354135,
+      30.27518
+     ],
+     [
+      104.353672,
+      30.283333
+     ],
+     [
+      104.354135,
+      30.291487
+     ],
+     [
+      104.355523,
+      30.299562
+     ],
+     [
+      104.35782,
+      30.30748
+     ],
+     [
+      104.361004,
+      30.315166
+     ],
+     [
+      104.365046,
+      30.322546
+     ],
+     [
+      104.369906,
+      30.329548
+     ],
+     [
+      104.375537,
+      30.336104
+     ],
+     [
+      104.381886,
+      30.342153
+     ],
+     [
+      104.38889,
+      30.347635
+     ],
+     [
+      104.396483,
+      30.352498
+     ],
+     [
+      104.404591,
+      30.356695
+     ],
+     [
+      104.413137,
+      30.360185
+     ],
+     [
+      104.422037,
+      30.362935
+     ],
+     [
+      104.431207,
+      30.364919
+     ],
+     [
+      104.440558,
+      30.366116
+     ],
+     [
+      104.45,
+      30.366517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZUTF",
+  "icao_text": "U4470/26 NOTAMN\r\nQ)ZPKM/QMXLC/IV/M/A/000/999/3017N10427E005\r\nA)ZUTF B)2610101830 C)2610102230 \r\nE) FLW TWY CLSD DUE TO MAINT :\r\n1.TWY D BTN TWY D1 AND TWY Y4.\r\n2.TWY G BTN TWY D17 AND TWY Y4.\r\n3.TWY T4,T5 CLSD BTN TWY Y4 AND TWY G.\r\n4.TWY K BTN TWY V5 AND TWY K5.\r\n5.TWY V6 BTN TWY K AND TWY V3.  \r\n6.TWY V4 BTN TWY M AND TWY D24.\r\n7.TWY E,E1,E2,E4-E9,E11,E12,D1,D2,D4,D6,D9,D12,D15,D17-D20,D24 \r\n,M,M1-M3,K1-K5.\r\n ",
+  "id": "1790736126433000",
+  "issued": "2026-09-30T02:41:00.000Z",
+  "last_updated": "2026-09-30T02:42:00.000Z",
+  "local_text": null,
+  "location": "ZUTF",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U4470/26",
+  "purpose": "M",
+  "q_code": "QMXLC",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "U",
+  "text": "FLW TWY CLSD DUE TO MAINT :\r\n1.TWY D BTN TWY D1 AND TWY Y4.\r\n2.TWY G BTN TWY D17 AND TWY Y4.\r\n3.TWY T4,T5 CLSD BTN TWY Y4 AND TWY G.\r\n4.TWY K BTN TWY V5 AND TWY K5.\r\n5.TWY V6 BTN TWY K AND TWY V3.  \r\n6.TWY V4 BTN TWY M AND TWY D24.\r\n7.TWY E,E1,E2,E4-E9,E11,E12,D1,D2,D4,D6,D9,D12,D15,D17-D20,D24 \r\n,M,M1-M3,K1-K5.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790736133292000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3017N10427E",
+  "effective_end": "2026-10-11T22:30:00.000Z",
+  "effective_start": "2026-10-11T18:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZPKM",
+  "first_seen": "2026-09-30T02:50:24+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      104.45,
+      30.366517
+     ],
+     [
+      104.459442,
+      30.366116
+     ],
+     [
+      104.468793,
+      30.364919
+     ],
+     [
+      104.477963,
+      30.362935
+     ],
+     [
+      104.486863,
+      30.360185
+     ],
+     [
+      104.495409,
+      30.356695
+     ],
+     [
+      104.503517,
+      30.352498
+     ],
+     [
+      104.51111,
+      30.347635
+     ],
+     [
+      104.518114,
+      30.342153
+     ],
+     [
+      104.524463,
+      30.336104
+     ],
+     [
+      104.530094,
+      30.329548
+     ],
+     [
+      104.534954,
+      30.322546
+     ],
+     [
+      104.538996,
+      30.315166
+     ],
+     [
+      104.54218,
+      30.30748
+     ],
+     [
+      104.544477,
+      30.299562
+     ],
+     [
+      104.545865,
+      30.291487
+     ],
+     [
+      104.546328,
+      30.283333
+     ],
+     [
+      104.545865,
+      30.27518
+     ],
+     [
+      104.544477,
+      30.267105
+     ],
+     [
+      104.54218,
+      30.259186
+     ],
+     [
+      104.538996,
+      30.2515
+     ],
+     [
+      104.534954,
+      30.244121
+     ],
+     [
+      104.530094,
+      30.237119
+     ],
+     [
+      104.524463,
+      30.230562
+     ],
+     [
+      104.518114,
+      30.224514
+     ],
+     [
+      104.51111,
+      30.219032
+     ],
+     [
+      104.503517,
+      30.214169
+     ],
+     [
+      104.495409,
+      30.209972
+     ],
+     [
+      104.486863,
+      30.206482
+     ],
+     [
+      104.477963,
+      30.203732
+     ],
+     [
+      104.468793,
+      30.201748
+     ],
+     [
+      104.459442,
+      30.20055
+     ],
+     [
+      104.45,
+      30.20015
+     ],
+     [
+      104.440558,
+      30.20055
+     ],
+     [
+      104.431207,
+      30.201748
+     ],
+     [
+      104.422037,
+      30.203732
+     ],
+     [
+      104.413137,
+      30.206482
+     ],
+     [
+      104.404591,
+      30.209972
+     ],
+     [
+      104.396483,
+      30.214169
+     ],
+     [
+      104.38889,
+      30.219032
+     ],
+     [
+      104.381886,
+      30.224514
+     ],
+     [
+      104.375537,
+      30.230562
+     ],
+     [
+      104.369906,
+      30.237119
+     ],
+     [
+      104.365046,
+      30.244121
+     ],
+     [
+      104.361004,
+      30.2515
+     ],
+     [
+      104.35782,
+      30.259186
+     ],
+     [
+      104.355523,
+      30.267105
+     ],
+     [
+      104.354135,
+      30.27518
+     ],
+     [
+      104.353672,
+      30.283333
+     ],
+     [
+      104.354135,
+      30.291487
+     ],
+     [
+      104.355523,
+      30.299562
+     ],
+     [
+      104.35782,
+      30.30748
+     ],
+     [
+      104.361004,
+      30.315166
+     ],
+     [
+      104.365046,
+      30.322546
+     ],
+     [
+      104.369906,
+      30.329548
+     ],
+     [
+      104.375537,
+      30.336104
+     ],
+     [
+      104.381886,
+      30.342153
+     ],
+     [
+      104.38889,
+      30.347635
+     ],
+     [
+      104.396483,
+      30.352498
+     ],
+     [
+      104.404591,
+      30.356695
+     ],
+     [
+      104.413137,
+      30.360185
+     ],
+     [
+      104.422037,
+      30.362935
+     ],
+     [
+      104.431207,
+      30.364919
+     ],
+     [
+      104.440558,
+      30.366116
+     ],
+     [
+      104.45,
+      30.366517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZUTF",
+  "icao_text": "U4471/26 NOTAMN\r\nQ)ZPKM/QMXLC/IV/M/A/000/999/3017N10427E005\r\nA)ZUTF B)2610111830 C)2610112230 \r\nE) FLW TWY CLSD DUE TO MAINT:\r\n1.TWY D BTN TWY T1 AND TWY V1.\r\n2.TWY G NORTH OF TWY T1.\r\n3.TWY V4 BTN TWY V1 AND TWY V2,INTERSECTION CLSD BTN TWY V4 AND \r\nTWY V1,BTN TWY V4 AND TWY V2.\r\n4.TWY V1,V2 CLSD BTN TWY G AND TWY V4.\r\n ",
+  "id": "1790736133292000",
+  "issued": "2026-09-30T02:42:00.000Z",
+  "last_updated": "2026-09-30T02:42:00.000Z",
+  "local_text": null,
+  "location": "ZUTF",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U4471/26",
+  "purpose": "M",
+  "q_code": "QMXLC",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "U",
+  "text": "FLW TWY CLSD DUE TO MAINT:\r\n1.TWY D BTN TWY T1 AND TWY V1.\r\n2.TWY G NORTH OF TWY T1.\r\n3.TWY V4 BTN TWY V1 AND TWY V2,INTERSECTION CLSD BTN TWY V4 AND \r\nTWY V1,BTN TWY V4 AND TWY V2.\r\n4.TWY V1,V2 CLSD BTN TWY G AND TWY V4.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790736221613000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-03T02:42:00Z",
+  "effective_start": "2026-09-30T02:42:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZWUQ",
+  "first_seen": "2026-09-30T02:50:24+00:00",
+  "geometry": null,
+  "geometry_source": null,
+  "icao_location": "ZWUQ",
+  "icao_text": "A5023/26 NOTAMC A5009/26\r\nQ)ZWUQ/QARAK//M//000/999/\r\nA)ZWUQ B)2609300242 \r\nE) CNL NTM.",
+  "id": "1790736221613000",
+  "issued": "2026-09-30T02:43:00Z",
+  "last_updated": "2026-09-30T02:44:00Z",
+  "local_text": null,
+  "location": "ZWUQ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A5023/26",
+  "purpose": "M",
+  "q_code": "QARAK",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "A5009/26",
+  "schedule": null,
+  "scope": null,
+  "series": "A",
+  "text": "A5023/26 NOTAMC A5009/26\r\nQ)ZWUQ/QARAK//M//000/999/\r\nA)ZWUQ B)2609300242 \r\nE) CNL NTM.",
+  "traffic": null,
+  "type": "C",
   "upper": null,
   "year": "2026"
  }
