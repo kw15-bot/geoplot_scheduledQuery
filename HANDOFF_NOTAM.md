@@ -837,3 +837,13 @@ NOTAMモードの地図ツールバーに「レイヤー」ボタンを置き、
   - 日付変更線で東西2件に分かれている FIR（KZAK・NZZO・PAZN・UHMM・NFFF など）は、経度±180の辺を線にしない。ラベルはそれぞれに出る（KZAK はグアム側・ハワイ側の2つ）。
   - centlong/centlat が入っていない（0,0）もの（OBBB・OEJD・SBAO など6件）は、いちばん大きいリングの重心にラベルを置く。
   - 線は 0.02度で間引き（約3.4万点、590KB）。
+
+## 24. AIPの図を参照する区域を線で描く（2026-09-30、v2.7.0）
+
+- 例: ZWUQ W1338/26 `REF AIP CHINA ZWWW-3P-5 AND ZWWW-3P-6 ,THE RESTRICTION AREA(WEST AND NORTH OF G-H-J-K)ACTIVE`。本文に座標が無い。
+- `aip_chart_areas.py` に図から読み取った点を持ち（`CHART_POINTS`、図ごと・点の名前→緯度経度）、NOTAMが挙げた点の順に結んだ LineString にする（geometry_source `aip-chart-line`）。
+  区域の外側の境界は図にも無い（「G-H-J-K の西と北」）ので、面ではなく境界線だけ。ビューア・日次レポート・backfill は route-segment と同じく線として扱う。
+- 登録済み: ZWWW-3P-5（SID RNAV RWY26L/R(NIXER)、EFF2507091600）の G N43°52.5′ E087°13.1′／H N43°52.2′ E087°18.9′／J N43°53.5′ E087°20.8′／K N44°00.3′ E087°21.5′。
+  ユーザーから受け取ったのは 3P-5 のみ（2つの添付が同じファイルだった）。3P-6 は未確認で、NOTAMが 3P-5 も挙げていれば 3P-5 の点で描く。
+- 図を足すとき: eAIP の `Data/EAIP.../Terminal/` の PDF はファイル名が内容の MD5（例 3P-5 = `d59fcb6db7d904cd2d0ff4d21c2e3b5e.pdf`）。PDF のタイトルに `AIP-ZWWW-3P-5_...` と入っている。
+- 2026-09-30 適用: archive の W1338/26 を qline-circle → aip-chart-line に描き直した。

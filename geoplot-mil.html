@@ -804,7 +804,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v2.6.1';
+const APP_VERSION = 'v2.7.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -841,6 +841,7 @@ const APP_VERSION = 'v2.6.1';
 // v2.6.0: NOTAMモードのレイヤーに「FIR（ICAO）」を追加(ICAOのFIR図 2020-12-18版、layers/fir.geojson)。
 //  境界は細い破線、ラベルは ICAOCODE(ズーム3以上)、線にマウスを乗せると FIR名。
 // v2.6.1: FIRの境界を実線にし、線・ラベルとも灰色に(ユーザー指示)。
+// v2.7.0: AIPの図を参照する区域の境界線(geometry_source: aip-chart-line、例: ZWUQ W1338 の G-H-J-K)を表示する。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3656,14 +3657,15 @@ function guessNotamUrl(geojsonUrl){
 }
 function notamStatusOf(f){ return (f.properties && f.properties.status) || 'active'; }
 // E項に実座標があるポリゴン系と、航空路の区間閉鎖をAIPデータセットの航空路で線にしたもの
-// (geometry_source: route-segment、LineString/MultiLineString)を表示する。Q項の座標/半径から作った円・点
+// (geometry_source: route-segment、LineString/MultiLineString)と、AIPの図の点で区域の境界を線にしたもの
+// (aip-chart-line、例: ZWUQ W1338 の G-H-J-K)を表示する。Q項の座標/半径から作った円・点
 // (geometry_source: qline-circle/qline-point)や図形なしは、「参考として意味のある形状情報が
 // 本文に無い」ため一覧・地図の両方から除外する(収集自体はnotam_cn_collect.py側で継続し、
 // notam_out系ファイルには残る。除外はこのビューワの表示範囲に限定される)。
 function notamHasRealPolygon(f){
   const t = f.geometry && f.geometry.type, src = f.properties && f.properties.geometry_source;
   return (src === 'text-polygon' && (t === 'Polygon' || t === 'MultiPolygon'))
-    || (src === 'route-segment' && (t === 'LineString' || t === 'MultiLineString'));
+    || ((src === 'route-segment' || src === 'aip-chart-line') && (t === 'LineString' || t === 'MultiLineString'));
 }
 // 見出し・FIRドロップダウンに使うFIRコード。Q項のFIR(fir)を使うが、複数FIRにまたがる
 // NOTAMはQ項が国コード+XX(例: ZXXX)になり、代わりにA項に各FIRが並ぶ決まりなので、
