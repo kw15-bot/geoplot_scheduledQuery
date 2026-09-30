@@ -52,6 +52,7 @@ import urllib.request
 from pathlib import Path
 
 import notam_route_segments
+import aip_chart_areas  # AIPの図の点で区域の境界を線にする(HANDOFF_NOTAM.md §24)
 
 SCHEMA_VERSION = 1
 HOSTS = {
@@ -464,6 +465,10 @@ def build_geometry(feature, n, e_text=""):
     line = notam_route_segments.route_closure_geometry(e_text)
     if line:
         return line, "route-segment"
+    # AIPの図を参照する区域(REF AIP CHINA ZWWW-3P-5 ... WEST AND NORTH OF G-H-J-K)。図の点を結んだ境界線
+    line = aip_chart_areas.chart_boundary_geometry(e_text)
+    if line:
+        return line, "aip-chart-line"
     c = parse_qline_coord(n.get("coordinates"))
     try:
         r = float(n.get("radius")) if n.get("radius") not in (None, "") else None

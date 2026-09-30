@@ -105,11 +105,18 @@ def reconcile_state_active_record(rec, e_text_source):
         return True
     if rec.get("geometry_source") == "route-segment" and not C.notam_route_segments.load_index():
         return False  # 索引が無い環境では線を作り直せないだけなので、既存の線を残す
+    # AIPの図の点で作る境界線(aip-chart-line、aip_chart_areas.py)
+    cline = C.aip_chart_areas.chart_boundary_geometry(e_text)
+    if cline:
+        if rec.get("geometry_source") == "aip-chart-line" and rec.get("geometry") == cline:
+            return False
+        rec["geometry"], rec["geometry_source"], rec["qline_offset_nm"] = cline, "aip-chart-line", None
+        return True
 
     if rec.get("geometry_source") == "text-polygon" and not C.notam_route_segments.load_index() \
             and C.notam_route_segments.has_named_center_circle(e_text):
         return False  # 地点名を中心にした円は索引が無いと作り直せないので、既存の円を残す
-    if rec.get("geometry_source") not in ("text-polygon", "route-segment"):
+    if rec.get("geometry_source") not in ("text-polygon", "route-segment", "aip-chart-line"):
         return False  # 元々多角形以外(円・点・None)で、新たな多角形も無い → 触らない
 
     # ここに来るのは「旧パーサでは多角形と誤認していたが、修正後は多角形が無い」ケース
@@ -162,11 +169,17 @@ def reconcile_archive_feature(feat):
         return True
     if p.get("geometry_source") == "route-segment" and not C.notam_route_segments.load_index():
         return False
+    cline = C.aip_chart_areas.chart_boundary_geometry(e_text)
+    if cline:
+        if p.get("geometry_source") == "aip-chart-line" and feat.get("geometry") == cline:
+            return False
+        feat["geometry"], p["geometry_source"] = cline, "aip-chart-line"
+        return True
 
     if p.get("geometry_source") == "text-polygon" and not C.notam_route_segments.load_index() \
             and C.notam_route_segments.has_named_center_circle(e_text):
         return False
-    if p.get("geometry_source") not in ("text-polygon", "route-segment"):
+    if p.get("geometry_source") not in ("text-polygon", "route-segment", "aip-chart-line"):
         return False
 
     # Archive側は円・点へのフォールバックに必要なQ項生座標を保持していないため、

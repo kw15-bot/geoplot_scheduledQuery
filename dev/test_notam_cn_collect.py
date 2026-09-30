@@ -683,6 +683,26 @@ class RouteSegments(unittest.TestCase):
         self.assertEqual(src, "qline-point")
 
 
+class AipChartAreas(unittest.TestCase):
+    """AIPの図の点で区域の境界を線にする(aip_chart_areas.py)。ZWUQ W1338/26 の本文。"""
+    W1338 = ("REF AIP CHINA ZWWW-3P-5 AND ZWWW-3P-6 ,THE RESTRICTION \nAREA(WEST AND NORTH OF G-H-J-K)ACTIVE, "
+             "AIRCRAFT FLYING INTO THE \nAREA IS FORBIDDEN.")
+
+    def test_w1338_boundary_line(self):
+        g, src = C.build_geometry({}, {"coordinates": "4354N08728E", "radius": "5"}, self.W1338)
+        self.assertEqual(src, "aip-chart-line")
+        self.assertEqual(g["type"], "LineString")
+        self.assertEqual(len(g["coordinates"]), 4)
+        self.assertAlmostEqual(g["coordinates"][0][0], 87.218333, places=4)   # G
+        self.assertAlmostEqual(g["coordinates"][-1][1], 44.005, places=4)     # K
+
+    def test_unknown_chart_or_points(self):
+        f = C.aip_chart_areas.chart_boundary_geometry
+        self.assertIsNone(f("REF AIP CHINA ZBAA-3P-5, AREA WEST OF G-H ACTIVE"))
+        self.assertIsNone(f("REF AIP CHINA ZWWW-3P-5, AREA WEST OF G-X ACTIVE"))
+        self.assertIsNone(f("RWY 08 CLSD"))
+
+
 # ----------------------------------------------------------------------------- APIモード（同一プロセス内モック）
 class MockState:
     feats = []
