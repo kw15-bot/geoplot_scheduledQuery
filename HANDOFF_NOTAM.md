@@ -849,5 +849,6 @@ NOTAMモードの地図ツールバーに「レイヤー」ボタンを置き、
 - 2026-09-30 適用: archive の W1338/26 を qline-circle → aip-chart-line に描き直した。
 - 2026-09-30 追加: eAIP の Terminal フォルダ全体（PDF 3194件）を `aip_chart_extract.py` で走査した（ユーザーのPCで実行、結果の JSON だけ受領）。
   「点の名前:座標」の書き方があったのは3件だけ: ZWWW-3P-5・3P-6（登録済み）と、図名の無い空港本文PDF `363e96ce5e136fcb4cdbe74b5b086b39.pdf`
-  （B N31°39.8′ E117°59.8′ 〜 E N31°32.0′ E119°02.0′ の東西の制限線、「6.1 All aircraft flying across south of restriction line ... forbidden」。位置から南京 ZSNJ と推定、未確定のため未登録）。
+  （B N31°39.8′ E117°59.8′ 〜 E N31°32.0′ E119°02.0′ の東西の制限線、「6.1 All aircraft flying across south of restriction line ... forbidden」。ユーザーから PDF を受領し ZSNJ AD 2.20「6. Warning 6.1」（AIRAC AMDT 09/26、EFF2609021600）と確定、
+  `NAMED_LINES` に登録。本文に ZSNJ/NANJING/LUKOU のどれかと RESTRICTION LINE/CONTROL LINE/B-C-D-E のどれかがあれば線にする）。
 - 日次レポート §7 の理由に「AIPの図（名前）を参照しているが点が未登録」を追加（`aip_chart_areas.chart_refs_missing()`）。図を送ってもらえば登録できる。
