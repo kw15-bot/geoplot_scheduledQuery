@@ -84770,5 +84770,753 @@
   "type": "N",
   "upper": "2900FT AMSL",
   "year": "2026"
+ },
+ "1790741444489000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2411N12038E",
+  "effective_end": "2026-11-14T16:00:00Z",
+  "effective_start": "2026-10-06T16:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-09-30T04:20:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.709444,
+      24.12
+     ],
+     [
+      120.561111,
+      24.114722
+     ],
+     [
+      120.547222,
+      24.200278
+     ],
+     [
+      120.621111,
+      24.197222
+     ],
+     [
+      120.701111,
+      24.243333
+     ],
+     [
+      120.709444,
+      24.12
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCMQ",
+  "icao_text": "U2512/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/024/2411N12038E006\r\nA) RCMQ\r\nB) 2610061600 C) 2611141600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260907001101\r\n2.LCA:XITUN DISTRICT, TAICHUNG CITY\r\n3.THE AREA OVERLAPS PART OF CHINA MEDICAL UNIVERSITY HOSPITAL \r\n  HELIPORT, PART OF VFR CORRIDOR C3 AND C35, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0983-304528, 0912-218136\r\n5.AREA AS FLW:\r\n240712N 1204234E\r\n240653N 1203340E\r\n241201N 1203250E\r\n241150N 1203716E\r\n241436N 1204204E\r\n240712N 1204234E\r\nF) SFC G) 2400FT AMSL",
+  "id": "1790741444489000",
+  "issued": "2026-09-30T04:10:00Z",
+  "last_updated": "2026-09-30T04:11:00Z",
+  "local_text": null,
+  "location": "RCMQ",
+  "lower": "SFC",
+  "max_fl": "024",
+  "min_fl": "000",
+  "number": "U2512/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.6,
+  "radius_nm": 6.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260907001101\r\n2.LCA:XITUN DISTRICT, TAICHUNG CITY\r\n3.THE AREA OVERLAPS PART OF CHINA MEDICAL UNIVERSITY HOSPITAL \r\n  HELIPORT, PART OF VFR CORRIDOR C3 AND C35, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0983-304528, 0912-218136\r\n5.AREA AS FLW:\r\n240712N 1204234E\r\n240653N 1203340E\r\n241201N 1203250E\r\n241150N 1203716E\r\n241436N 1204204E\r\n240712N 1204234E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "2400FT AMSL",
+  "year": "2026"
+ },
+ "1790741534993000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2238N12018E",
+  "effective_end": "2026-12-11T16:00:00.000Z",
+  "effective_start": "2026-10-11T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-09-30T04:20:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.265278,
+      22.664167
+     ],
+     [
+      120.303611,
+      22.665556
+     ],
+     [
+      120.321944,
+      22.608333
+     ],
+     [
+      120.283333,
+      22.602778
+     ],
+     [
+      120.265278,
+      22.664167
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCKH",
+  "icao_text": "U2513/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/020/2238N12018E003\r\nA) RCKH\r\nB) 2610111600 C) 2612111600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260914001501\r\n2.LCA:GUSHAN DISTRICT, KAOHSIUNG CITY\r\n3.THE AREA OVERLAPS RCR27 AND PART OF VFR CORRIDOR C9,\r\n  ACFT ARE CTN ADZ.\r\n4.UAS WILL NOT ENTER RCR27.\r\n5.COOR TEL:0919-610622, 0973-577792\r\n6.AREA AS FLW:\r\n223951N 1201555E\r\n223956N 1201813E\r\n223630N 1201919E\r\n223610N 1201700E\r\n223951N 1201555E\r\nF) SFC G) 2000FT AMSL",
+  "id": "1790741534993000",
+  "issued": "2026-09-30T04:12:00.000Z",
+  "last_updated": "2026-09-30T04:12:00.000Z",
+  "local_text": null,
+  "location": "RCKH",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2513/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 3.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260914001501\r\n2.LCA:GUSHAN DISTRICT, KAOHSIUNG CITY\r\n3.THE AREA OVERLAPS RCR27 AND PART OF VFR CORRIDOR C9,\r\n  ACFT ARE CTN ADZ.\r\n4.UAS WILL NOT ENTER RCR27.\r\n5.COOR TEL:0919-610622, 0973-577792\r\n6.AREA AS FLW:\r\n223951N 1201555E\r\n223956N 1201813E\r\n223630N 1201919E\r\n223610N 1201700E\r\n223951N 1201555E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "2000FT AMSL",
+  "year": "2026"
+ },
+ "1790741546533000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "4354N08728E",
+  "effective_end": "2026-10-01T11:30:00.000Z",
+  "effective_start": "2026-10-01T04:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZWUQ",
+  "first_seen": "2026-09-30T04:20:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      87.466667,
+      43.983184
+     ],
+     [
+      87.477982,
+      43.982783
+     ],
+     [
+      87.489189,
+      43.981585
+     ],
+     [
+      87.500178,
+      43.979602
+     ],
+     [
+      87.510845,
+      43.976852
+     ],
+     [
+      87.521087,
+      43.973361
+     ],
+     [
+      87.530804,
+      43.969165
+     ],
+     [
+      87.539904,
+      43.964302
+     ],
+     [
+      87.548298,
+      43.95882
+     ],
+     [
+      87.555906,
+      43.952771
+     ],
+     [
+      87.562655,
+      43.946214
+     ],
+     [
+      87.56848,
+      43.939212
+     ],
+     [
+      87.573323,
+      43.931833
+     ],
+     [
+      87.57714,
+      43.924147
+     ],
+     [
+      87.579893,
+      43.916228
+     ],
+     [
+      87.581555,
+      43.908153
+     ],
+     [
+      87.582111,
+      43.9
+     ],
+     [
+      87.581555,
+      43.891847
+     ],
+     [
+      87.579893,
+      43.883772
+     ],
+     [
+      87.57714,
+      43.875853
+     ],
+     [
+      87.573323,
+      43.868167
+     ],
+     [
+      87.56848,
+      43.860788
+     ],
+     [
+      87.562655,
+      43.853786
+     ],
+     [
+      87.555906,
+      43.847229
+     ],
+     [
+      87.548298,
+      43.84118
+     ],
+     [
+      87.539904,
+      43.835698
+     ],
+     [
+      87.530804,
+      43.830835
+     ],
+     [
+      87.521087,
+      43.826639
+     ],
+     [
+      87.510845,
+      43.823148
+     ],
+     [
+      87.500178,
+      43.820398
+     ],
+     [
+      87.489189,
+      43.818415
+     ],
+     [
+      87.477982,
+      43.817217
+     ],
+     [
+      87.466667,
+      43.816816
+     ],
+     [
+      87.455351,
+      43.817217
+     ],
+     [
+      87.444145,
+      43.818415
+     ],
+     [
+      87.433155,
+      43.820398
+     ],
+     [
+      87.422488,
+      43.823148
+     ],
+     [
+      87.412247,
+      43.826639
+     ],
+     [
+      87.402529,
+      43.830835
+     ],
+     [
+      87.393429,
+      43.835698
+     ],
+     [
+      87.385035,
+      43.84118
+     ],
+     [
+      87.377427,
+      43.847229
+     ],
+     [
+      87.370678,
+      43.853786
+     ],
+     [
+      87.364854,
+      43.860788
+     ],
+     [
+      87.36001,
+      43.868167
+     ],
+     [
+      87.356193,
+      43.875853
+     ],
+     [
+      87.35344,
+      43.883772
+     ],
+     [
+      87.351778,
+      43.891847
+     ],
+     [
+      87.351222,
+      43.9
+     ],
+     [
+      87.351778,
+      43.908153
+     ],
+     [
+      87.35344,
+      43.916228
+     ],
+     [
+      87.356193,
+      43.924147
+     ],
+     [
+      87.36001,
+      43.931833
+     ],
+     [
+      87.364854,
+      43.939212
+     ],
+     [
+      87.370678,
+      43.946214
+     ],
+     [
+      87.377427,
+      43.952771
+     ],
+     [
+      87.385035,
+      43.95882
+     ],
+     [
+      87.393429,
+      43.964302
+     ],
+     [
+      87.402529,
+      43.969165
+     ],
+     [
+      87.412247,
+      43.973361
+     ],
+     [
+      87.422488,
+      43.976852
+     ],
+     [
+      87.433155,
+      43.979602
+     ],
+     [
+      87.444145,
+      43.981585
+     ],
+     [
+      87.455351,
+      43.982783
+     ],
+     [
+      87.466667,
+      43.983184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZWWW",
+  "icao_text": "W1347/26 NOTAMN\r\nQ)ZWUQ/QMXLC/IV/M/A/000/999/4354N08728E005\r\nA)ZWWW B)2610010430 C)2610011130 \r\nE) TWY K CLSD BTN TWY E1 AND TWY N1, DUE TO MAINT.\r\n ",
+  "id": "1790741546533000",
+  "issued": "2026-09-30T04:12:00.000Z",
+  "last_updated": "2026-09-30T04:12:00.000Z",
+  "local_text": null,
+  "location": "ZWWW",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "W1347/26",
+  "purpose": "M",
+  "q_code": "QMXLC",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "W",
+  "text": "TWY K CLSD BTN TWY E1 AND TWY N1, DUE TO MAINT.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790741653414000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1219N12205E",
+  "effective_end": "2026-10-31T08:00:00.000Z",
+  "effective_start": "2026-09-30T04:13:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": true,
+  "fir": "RPHI",
+  "first_seen": "2026-09-30T04:20:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      122.083333,
+      12.39985
+     ],
+     [
+      122.091679,
+      12.39945
+     ],
+     [
+      122.099944,
+      12.398252
+     ],
+     [
+      122.108049,
+      12.396268
+     ],
+     [
+      122.115916,
+      12.393518
+     ],
+     [
+      122.12347,
+      12.390028
+     ],
+     [
+      122.130636,
+      12.385831
+     ],
+     [
+      122.137348,
+      12.380968
+     ],
+     [
+      122.143539,
+      12.375486
+     ],
+     [
+      122.14915,
+      12.369438
+     ],
+     [
+      122.154127,
+      12.362881
+     ],
+     [
+      122.158423,
+      12.355879
+     ],
+     [
+      122.161995,
+      12.3485
+     ],
+     [
+      122.16481,
+      12.340814
+     ],
+     [
+      122.166841,
+      12.332895
+     ],
+     [
+      122.168067,
+      12.32482
+     ],
+     [
+      122.168477,
+      12.316667
+     ],
+     [
+      122.168067,
+      12.308513
+     ],
+     [
+      122.166841,
+      12.300438
+     ],
+     [
+      122.16481,
+      12.29252
+     ],
+     [
+      122.161995,
+      12.284834
+     ],
+     [
+      122.158423,
+      12.277454
+     ],
+     [
+      122.154127,
+      12.270452
+     ],
+     [
+      122.14915,
+      12.263896
+     ],
+     [
+      122.143539,
+      12.257847
+     ],
+     [
+      122.137348,
+      12.252365
+     ],
+     [
+      122.130636,
+      12.247502
+     ],
+     [
+      122.12347,
+      12.243305
+     ],
+     [
+      122.115916,
+      12.239815
+     ],
+     [
+      122.108049,
+      12.237065
+     ],
+     [
+      122.099944,
+      12.235081
+     ],
+     [
+      122.091679,
+      12.233884
+     ],
+     [
+      122.083333,
+      12.233483
+     ],
+     [
+      122.074988,
+      12.233884
+     ],
+     [
+      122.066723,
+      12.235081
+     ],
+     [
+      122.058618,
+      12.237065
+     ],
+     [
+      122.05075,
+      12.239815
+     ],
+     [
+      122.043197,
+      12.243305
+     ],
+     [
+      122.03603,
+      12.247502
+     ],
+     [
+      122.029319,
+      12.252365
+     ],
+     [
+      122.023128,
+      12.257847
+     ],
+     [
+      122.017517,
+      12.263896
+     ],
+     [
+      122.012539,
+      12.270452
+     ],
+     [
+      122.008244,
+      12.277454
+     ],
+     [
+      122.004671,
+      12.284834
+     ],
+     [
+      122.001856,
+      12.29252
+     ],
+     [
+      121.999826,
+      12.300438
+     ],
+     [
+      121.9986,
+      12.308513
+     ],
+     [
+      121.99819,
+      12.316667
+     ],
+     [
+      121.9986,
+      12.32482
+     ],
+     [
+      121.999826,
+      12.332895
+     ],
+     [
+      122.001856,
+      12.340814
+     ],
+     [
+      122.004671,
+      12.3485
+     ],
+     [
+      122.008244,
+      12.355879
+     ],
+     [
+      122.012539,
+      12.362881
+     ],
+     [
+      122.017517,
+      12.369438
+     ],
+     [
+      122.023128,
+      12.375486
+     ],
+     [
+      122.029319,
+      12.380968
+     ],
+     [
+      122.03603,
+      12.385831
+     ],
+     [
+      122.043197,
+      12.390028
+     ],
+     [
+      122.05075,
+      12.393518
+     ],
+     [
+      122.058618,
+      12.396268
+     ],
+     [
+      122.066723,
+      12.398252
+     ],
+     [
+      122.074988,
+      12.39945
+     ],
+     [
+      122.083333,
+      12.39985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPVU",
+  "icao_text": "C1262/26 NOTAMR C1001/26\r\nQ) RPHI/QFAAH/IV/BO /A /000/999/1219N12205E005\r\nA) RPVU B) 2609300413 C) 2610310800EST\r\nE) AP HR OF OPS CHANGED TO: 0000-0800.",
+  "id": "1790741653414000",
+  "issued": "2026-09-30T04:13:00.000Z",
+  "last_updated": "2026-09-30T04:14:00.000Z",
+  "local_text": null,
+  "location": "RPVU",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "C1262/26",
+  "purpose": "BO ",
+  "q_code": "QFAAH",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "C1001/26",
+  "schedule": null,
+  "scope": "A ",
+  "series": "C",
+  "text": "AP HR OF OPS CHANGED TO: 0000-0800.",
+  "traffic": "IV",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
  }
 }
