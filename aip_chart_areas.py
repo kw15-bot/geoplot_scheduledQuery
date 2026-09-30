@@ -36,6 +36,18 @@ _CHART_REF = re.compile(r"\b([A-Z]{4}-\d+[A-Z]?-\d+[A-Z]?)\b")
 _POINT_CHAIN = re.compile(r"\bOF\s+([A-Z0-9]{1,5}(?:\s*-\s*[A-Z0-9]{1,5})+)\b")
 
 
+def chart_refs_missing(e_text):
+    """E項が参照しているAIPの図のうち、線にできないもの(点が未登録の図、または挙げた点が図に無い)の名前。
+    日次レポートで「どの図を登録すれば描けるか」を示すのに使う。"""
+    t = (e_text or "").upper()
+    if "AIP" not in t:
+        return []
+    charts = sorted(set(_CHART_REF.findall(t)))
+    if not charts or chart_boundary_geometry(e_text):
+        return []
+    return charts
+
+
 def chart_boundary_geometry(e_text):
     """E項が図(CHART_POINTS にあるもの)を参照し、その図の点を並べていれば LineString を返す。無ければ None。"""
     t = (e_text or "").upper()
