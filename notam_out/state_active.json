@@ -130466,5 +130466,137 @@
   "type": "N",
   "upper": "FL270",
   "year": "2026"
+ },
+ "1790793419879454": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-03T09:02:00Z",
+  "effective_start": "2026-10-03T07:25:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-30T18:40:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -129.433333,
+      37.933333
+     ],
+     [
+      -127.25,
+      36.55
+     ],
+     [
+      -132.566667,
+      31.016667
+     ],
+     [
+      -134.616667,
+      32.4
+     ],
+     [
+      -129.433333,
+      37.933333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790793419879454",
+  "issued": "2026-09-30T18:36:00Z",
+  "last_updated": "2026-09-30T18:36:00Z",
+  "local_text": "!CARF 09/394 ZAK AIRSPACE DCC EROP X4057 F HVY NROL97 STNR ALT RESERVATION AREA C REENTRY WI AN AREA DEFINED AS 375600N1292600W TO 363300N1271500W TO 310100N1323400W TO 322400N1343700W TO POINT OF ORIGIN SFC-UNL 2610030725-2610030902",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "09/394",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 09/394 ZAK AIRSPACE DCC EROP X4057 F HVY NROL97 STNR ALT RESERVATION AREA C REENTRY WI AN AREA DEFINED AS 375600N1292600W TO 363300N1271500W TO 310100N1323400W TO 322400N1343700W TO POINT OF ORIGIN SFC-UNL",
+  "traffic": null,
+  "type": null,
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1790793419885315": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-03T09:02:00Z",
+  "effective_start": "2026-10-03T07:25:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-30T18:40:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -129.433333,
+      37.933333
+     ],
+     [
+      -127.25,
+      36.55
+     ],
+     [
+      -132.566667,
+      31.016667
+     ],
+     [
+      -134.616667,
+      32.4
+     ],
+     [
+      -129.433333,
+      37.933333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4777/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/999/\nA) KZAK\nB) 2610030725\nC) 2610030902\nE) ZAK AIRSPACE DCC EROP X4057 F HVY NROL97 STNR ALT RESERVATION \nAREA C REENTRY WI AN AREA DEFINED AS 375600N1292600W TO 363300N1271500W TO 310100N1323400W TO 322400N1343700W TO POINT OF ORIGIN\nF) SFC\nG) UNL",
+  "id": "1790793419885315",
+  "issued": "2026-09-30T18:36:00Z",
+  "last_updated": "2026-09-30T18:36:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4777/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE DCC EROP X4057 F HVY NROL97 STNR ALT RESERVATION \nAREA C REENTRY WI AN AREA DEFINED AS 375600N1292600W TO 363300N1271500W TO 310100N1323400W TO 322400N1343700W TO POINT OF ORIGIN",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
+  "year": "2026"
  }
 }
