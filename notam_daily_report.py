@@ -164,7 +164,7 @@ def load_items(out, now):
     for it in items.values():
         it["firs"] = firs_of(it["fir"], it["locations"])
         it["subject"] = subject_of(it["q_code"])
-        it["on_map"] = (it["geometry_source"] in ("text-polygon", "route-segment") and it["has_geometry"]
+        it["on_map"] = (it["geometry_source"] in ("text-polygon", "route-segment", "aip-chart-line") and it["has_geometry"]
                         and it["classification"] != "DOM" and it["notam_type"] != "C")
     return list(items.values())
 
