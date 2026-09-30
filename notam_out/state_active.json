@@ -82836,5 +82836,223 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1790739670510000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2505N12116E",
+  "effective_end": "2026-11-27T16:00:00.000Z",
+  "effective_start": "2026-10-05T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-09-30T03:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.266111,
+      25.069167
+     ],
+     [
+      121.2525,
+      25.090278
+     ],
+     [
+      121.268611,
+      25.099722
+     ],
+     [
+      121.285556,
+      25.083333
+     ],
+     [
+      121.282222,
+      25.079444
+     ],
+     [
+      121.271111,
+      25.077778
+     ],
+     [
+      121.266111,
+      25.069167
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCTP",
+  "icao_text": "U2494/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/025/2505N12116E002\r\nA) RCTP\r\nB) 2610051600 C) 2611271600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260914001001\r\n2.LCA:DAYUAN DISTRICT, TAOYUAN CITY\r\n3.THE AREA OVERLAPS PART OF VFR HEL RTE H1, ACFT ARE CTN ADZ.\r\n4.COOR TEL:04-23012328 EXTENSION 28, 0933-454538, 0920-061485\r\n5.AREA AS FLW:\r\n250409N 1211558E\r\n250525N 1211509E\r\n250559N 1211607E\r\n250500N 1211708E\r\n250446N 1211656E\r\n250440N 1211616E\r\n250409N 1211558E\r\nF) SFC G) 2500FT AMSL",
+  "id": "1790739670510000",
+  "issued": "2026-09-30T03:40:00.000Z",
+  "last_updated": "2026-09-30T03:41:00.000Z",
+  "local_text": null,
+  "location": "RCTP",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2494/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.2,
+  "radius_nm": 2.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260914001001\r\n2.LCA:DAYUAN DISTRICT, TAOYUAN CITY\r\n3.THE AREA OVERLAPS PART OF VFR HEL RTE H1, ACFT ARE CTN ADZ.\r\n4.COOR TEL:04-23012328 EXTENSION 28, 0933-454538, 0920-061485\r\n5.AREA AS FLW:\r\n250409N 1211558E\r\n250525N 1211509E\r\n250559N 1211607E\r\n250500N 1211708E\r\n250446N 1211656E\r\n250440N 1211616E\r\n250409N 1211558E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "2500FT AMSL",
+  "year": "2026"
+ },
+ "1790739883980000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2504N12115E",
+  "effective_end": "2026-11-27T16:00:00.000Z",
+  "effective_start": "2026-10-05T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-09-30T03:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.216944,
+      25.051944
+     ],
+     [
+      121.258889,
+      25.082222
+     ],
+     [
+      121.268333,
+      25.073333
+     ],
+     [
+      121.266389,
+      25.058611
+     ],
+     [
+      121.236944,
+      25.036111
+     ],
+     [
+      121.223333,
+      25.040278
+     ],
+     [
+      121.216944,
+      25.051944
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCTP",
+  "icao_text": "U2495/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/025/2504N12115E003\r\nA) RCTP\r\nB) 2610051600 C) 2611271600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260914001002\r\n2.LCA:DAYUAN DISTRICT, TAOYUAN CITY\r\n3.COOR TEL:04-23012328 EXTENSION 28, 0933-454538, 0920-061485\r\n4.AREA AS FLW:\r\n250307N 1211301E\r\n250456N 1211532E\r\n250424N 1211606E\r\n250331N 1211559E\r\n250210N 1211413E\r\n250225N 1211324E\r\n250307N 1211301E\r\nF) SFC G) 2500FT AMSL",
+  "id": "1790739883980000",
+  "issued": "2026-09-30T03:44:00.000Z",
+  "last_updated": "2026-09-30T03:44:00.000Z",
+  "local_text": null,
+  "location": "RCTP",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2495/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.6,
+  "radius_nm": 3.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260914001002\r\n2.LCA:DAYUAN DISTRICT, TAOYUAN CITY\r\n3.COOR TEL:04-23012328 EXTENSION 28, 0933-454538, 0920-061485\r\n4.AREA AS FLW:\r\n250307N 1211301E\r\n250456N 1211532E\r\n250424N 1211606E\r\n250331N 1211559E\r\n250210N 1211413E\r\n250225N 1211324E\r\n250307N 1211301E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "2500FT AMSL",
+  "year": "2026"
+ },
+ "1790739990785000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2503N12112E",
+  "effective_end": "2026-11-27T16:00:00.000Z",
+  "effective_start": "2026-10-05T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-09-30T03:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.205833,
+      25.027778
+     ],
+     [
+      121.191389,
+      25.064722
+     ],
+     [
+      121.206667,
+      25.066944
+     ],
+     [
+      121.211667,
+      25.061389
+     ],
+     [
+      121.225556,
+      25.038611
+     ],
+     [
+      121.205833,
+      25.027778
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCTP",
+  "icao_text": "U2496/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/025/2503N12112E002\r\nA) RCTP\r\nB) 2610051600 C) 2611271600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260914001003\r\n2.LCA:DAYUAN DISTRICT, TAOYUAN CITY\r\n3.COOR TEL:04-23012328 EXTENSION 28, 0933-454538, 0920-061485\r\n4.AREA AS FLW:\r\n250140N 1211221E\r\n250353N 1211129E\r\n250401N 1211224E\r\n250341N 1211242E\r\n250219N 1211332E\r\n250140N 1211221E\r\nF) SFC G) 2500FT AMSL",
+  "id": "1790739990785000",
+  "issued": "2026-09-30T03:46:00.000Z",
+  "last_updated": "2026-09-30T03:46:00.000Z",
+  "local_text": null,
+  "location": "RCTP",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2496/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 2.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260914001003\r\n2.LCA:DAYUAN DISTRICT, TAOYUAN CITY\r\n3.COOR TEL:04-23012328 EXTENSION 28, 0933-454538, 0920-061485\r\n4.AREA AS FLW:\r\n250140N 1211221E\r\n250353N 1211129E\r\n250401N 1211224E\r\n250341N 1211242E\r\n250219N 1211332E\r\n250140N 1211221E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "2500FT AMSL",
+  "year": "2026"
  }
 }
