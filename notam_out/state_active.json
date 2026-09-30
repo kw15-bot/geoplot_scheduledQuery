@@ -21613,236 +21613,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790647329123297": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-30T08:00:00Z",
-  "effective_start": "2026-09-29T19:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-09-29T02:10:24+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": "A4741/26 NOTAMN\nQ) KZAK/QARCA/IV/BO/E/000/999\nA) KZAK\nB) 2609291900\nC) 2609300800\nE) (TDM TRK A 260929190001 2609291900 2609300800 LILIA DOGIF 26N170W 28N180E 29N170E 31N160E 32N150E TONIK RTS/PHNL KEOLA LILIA TONIK G223 BEGAD RMK/TRK B NOT AVAILABLE)",
-  "id": "1790647329123297",
-  "issued": "2026-09-29T02:01:00Z",
-  "last_updated": "2026-09-29T02:01:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": null,
-  "max_fl": null,
-  "min_fl": null,
-  "number": "A4741/26",
-  "purpose": "BO",
-  "q_code": "QARCA",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": "A",
-  "text": "(TDM TRK A 260929190001 2609291900 2609300800 LILIA DOGIF 26N170W 28N180E 29N170E 31N160E 32N150E TONIK RTS/PHNL KEOLA LILIA TONIK G223 BEGAD RMK/TRK B NOT AVAILABLE)",
-  "traffic": null,
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1790647444384514": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-30T08:00:00Z",
-  "effective_start": "2026-09-29T19:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-09-29T02:10:24+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": "A4742/26 NOTAMN\nQ) KZAK/QARCA/IV/BO/E/000/999\nA) KZAK\nB) 2609291900\nC) 2609300800\nE) (TDM TRK H 260929190001 2609291900 2609300800 ALCOA BUTEN BOSKE 38N140W 39N150W 40N160W 38N170W 36N180E 34N170E 32N160E 30N150E 28N140E CANAI RTS/KSFO GNNRR ALCOA KLAX MCKEY LIBBO BRINY ALCOA CANAI V75 NHC RMK/TRK H ONLY AVAILABLE TO ACFT LANDING RCTP OR SOUTH )",
-  "id": "1790647444384514",
-  "issued": "2026-09-29T02:03:00Z",
-  "last_updated": "2026-09-29T02:03:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": null,
-  "max_fl": null,
-  "min_fl": null,
-  "number": "A4742/26",
-  "purpose": "BO",
-  "q_code": "QARCA",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": "A",
-  "text": "(TDM TRK H 260929190001 2609291900 2609300800 ALCOA BUTEN BOSKE 38N140W 39N150W 40N160W 38N170W 36N180E 34N170E 32N160E 30N150E 28N140E CANAI RTS/KSFO GNNRR ALCOA KLAX MCKEY LIBBO BRINY ALCOA CANAI V75 NHC RMK/TRK H ONLY AVAILABLE TO ACFT LANDING RCTP OR SOUTH )",
-  "traffic": null,
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1790647483592804": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-30T08:00:00Z",
-  "effective_start": "2026-09-29T19:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-09-29T02:10:24+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": "A4743/26 NOTAMN\nQ) KZAK/QARCA/IV/BO/E/000/999\nA) KZAK\nB) 2609291900\nC) 2609300800\nE) (TDM TRK E 260929190001 2609291900 2609300800 ALCOA CEPAS COBAD 40N140W 41N150W 43N160W 42N170W 40N180E 39N170E 38N160E EMRON RTS/KSFO GNNRR ALCOA KLAX MCKEY LIBBO BRINY ALCOA EMRON OTR7 ADNAP RMK/0)",
-  "id": "1790647483592804",
-  "issued": "2026-09-29T02:03:00Z",
-  "last_updated": "2026-09-29T02:04:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": null,
-  "max_fl": null,
-  "min_fl": null,
-  "number": "A4743/26",
-  "purpose": "BO",
-  "q_code": "QARCA",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": "A",
-  "text": "(TDM TRK E 260929190001 2609291900 2609300800 ALCOA CEPAS COBAD 40N140W 41N150W 43N160W 42N170W 40N180E 39N170E 38N160E EMRON RTS/KSFO GNNRR ALCOA KLAX MCKEY LIBBO BRINY ALCOA EMRON OTR7 ADNAP RMK/0)",
-  "traffic": null,
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1790647485361721": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-30T08:00:00Z",
-  "effective_start": "2026-09-29T19:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-09-29T02:10:24+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": "A4745/26 NOTAMN\nQ) KZAK/QARCA/IV/BO/E/000/999\nA) KZAK\nB) 2609291900\nC) 2609300800\nE) (TDM TRK C 260929190001 2609291900 2609300800 JOWEN LOHNE ARCAL PORGE ORVIL NAYLD NULUK NANDY NATES NIKLL NYMPH NUZAN NRKEY NIPPI RTS/CYVR UQQ JOWEN KSEA TOU FINGS JOWEN KPDX TOU FINGS JOWEN KSFO TOU FINGS JOWEN KLAX TOU FINGS JOWEN NIPPI R220 NANAC RMK/0)",
-  "id": "1790647485361721",
-  "issued": "2026-09-29T02:03:00Z",
-  "last_updated": "2026-09-29T02:04:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": null,
-  "max_fl": null,
-  "min_fl": null,
-  "number": "A4745/26",
-  "purpose": "BO",
-  "q_code": "QARCA",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": "A",
-  "text": "(TDM TRK C 260929190001 2609291900 2609300800 JOWEN LOHNE ARCAL PORGE ORVIL NAYLD NULUK NANDY NATES NIKLL NYMPH NUZAN NRKEY NIPPI RTS/CYVR UQQ JOWEN KSEA TOU FINGS JOWEN KPDX TOU FINGS JOWEN KSFO TOU FINGS JOWEN KLAX TOU FINGS JOWEN NIPPI R220 NANAC RMK/0)",
-  "traffic": null,
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1790647485364130": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-09-30T08:00:00Z",
-  "effective_start": "2026-09-29T19:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-09-29T02:10:24+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": "A4744/26 NOTAMN\nQ) KZAK/QARCA/IV/BO/E/000/999\nA) KZAK\nB) 2609291900\nC) 2609300800\nE) (TDM TRK F 260929190001 2609291900 2609300800 ALCOA BUTEN BOSKE 38N140W 39N150W 40N160W 39N170W 37N180E 36N170E 35N160E 35N150E SEALS RTS/KSFO GNNRR ALCOA KLAX MCKEY LIBBO BRINY ALCOA SEALS OTR13 LAPIL RMK/0)",
-  "id": "1790647485364130",
-  "issued": "2026-09-29T02:03:00Z",
-  "last_updated": "2026-09-29T02:04:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": null,
-  "max_fl": null,
-  "min_fl": null,
-  "number": "A4744/26",
-  "purpose": "BO",
-  "q_code": "QARCA",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": "A",
-  "text": "(TDM TRK F 260929190001 2609291900 2609300800 ALCOA BUTEN BOSKE 38N140W 39N150W 40N160W 39N170W 37N180E 36N170E 35N160E 35N150E SEALS RTS/KSFO GNNRR ALCOA KLAX MCKEY LIBBO BRINY ALCOA SEALS OTR13 LAPIL RMK/0)",
-  "traffic": null,
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790647721515000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
@@ -99608,6 +99378,312 @@
   "scope": "A",
   "series": "G",
   "text": "TWY N CLSD BTN TWY T12 AND TWY T13,DUE TO OPERATION \r\nREQUIREMENT.",
+  "traffic": "IV",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790754679133000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2324N11319E",
+  "effective_end": "2026-09-30T15:59:00.000Z",
+  "effective_start": "2026-09-30T07:48:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZGZU",
+  "first_seen": "2026-09-30T08:00:44+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      113.316667,
+      23.483184
+     ],
+     [
+      113.325551,
+      23.482783
+     ],
+     [
+      113.334349,
+      23.481585
+     ],
+     [
+      113.342978,
+      23.479602
+     ],
+     [
+      113.351352,
+      23.476852
+     ],
+     [
+      113.359393,
+      23.473361
+     ],
+     [
+      113.367023,
+      23.469165
+     ],
+     [
+      113.374167,
+      23.464302
+     ],
+     [
+      113.380758,
+      23.45882
+     ],
+     [
+      113.386731,
+      23.452771
+     ],
+     [
+      113.39203,
+      23.446214
+     ],
+     [
+      113.396602,
+      23.439212
+     ],
+     [
+      113.400405,
+      23.431833
+     ],
+     [
+      113.403402,
+      23.424147
+     ],
+     [
+      113.405563,
+      23.416228
+     ],
+     [
+      113.406868,
+      23.408153
+     ],
+     [
+      113.407305,
+      23.4
+     ],
+     [
+      113.406868,
+      23.391847
+     ],
+     [
+      113.405563,
+      23.383772
+     ],
+     [
+      113.403402,
+      23.375853
+     ],
+     [
+      113.400405,
+      23.368167
+     ],
+     [
+      113.396602,
+      23.360788
+     ],
+     [
+      113.39203,
+      23.353786
+     ],
+     [
+      113.386731,
+      23.347229
+     ],
+     [
+      113.380758,
+      23.34118
+     ],
+     [
+      113.374167,
+      23.335698
+     ],
+     [
+      113.367023,
+      23.330835
+     ],
+     [
+      113.359393,
+      23.326639
+     ],
+     [
+      113.351352,
+      23.323148
+     ],
+     [
+      113.342978,
+      23.320398
+     ],
+     [
+      113.334349,
+      23.318415
+     ],
+     [
+      113.325551,
+      23.317217
+     ],
+     [
+      113.316667,
+      23.316816
+     ],
+     [
+      113.307783,
+      23.317217
+     ],
+     [
+      113.298984,
+      23.318415
+     ],
+     [
+      113.290356,
+      23.320398
+     ],
+     [
+      113.281981,
+      23.323148
+     ],
+     [
+      113.27394,
+      23.326639
+     ],
+     [
+      113.266311,
+      23.330835
+     ],
+     [
+      113.259166,
+      23.335698
+     ],
+     [
+      113.252576,
+      23.34118
+     ],
+     [
+      113.246602,
+      23.347229
+     ],
+     [
+      113.241304,
+      23.353786
+     ],
+     [
+      113.236731,
+      23.360788
+     ],
+     [
+      113.232928,
+      23.368167
+     ],
+     [
+      113.229931,
+      23.375853
+     ],
+     [
+      113.22777,
+      23.383772
+     ],
+     [
+      113.226465,
+      23.391847
+     ],
+     [
+      113.226028,
+      23.4
+     ],
+     [
+      113.226465,
+      23.408153
+     ],
+     [
+      113.22777,
+      23.416228
+     ],
+     [
+      113.229931,
+      23.424147
+     ],
+     [
+      113.232928,
+      23.431833
+     ],
+     [
+      113.236731,
+      23.439212
+     ],
+     [
+      113.241304,
+      23.446214
+     ],
+     [
+      113.246602,
+      23.452771
+     ],
+     [
+      113.252576,
+      23.45882
+     ],
+     [
+      113.259166,
+      23.464302
+     ],
+     [
+      113.266311,
+      23.469165
+     ],
+     [
+      113.27394,
+      23.473361
+     ],
+     [
+      113.281981,
+      23.476852
+     ],
+     [
+      113.290356,
+      23.479602
+     ],
+     [
+      113.298984,
+      23.481585
+     ],
+     [
+      113.307783,
+      23.482783
+     ],
+     [
+      113.316667,
+      23.483184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZGGG",
+  "icao_text": "G4391/26 NOTAMR G3241/26\r\nQ)ZGZU/QMPLC/IV/BO/A/000/999/2324N11319E005\r\nA)ZGGG B)2609300748 C)2609301559 \r\nE) PARKING STAND FX14 CLSD DUE TO MAINT.\r\n ",
+  "id": "1790754679133000",
+  "issued": "2026-09-30T07:49:00.000Z",
+  "last_updated": "2026-09-30T07:51:00.000Z",
+  "local_text": null,
+  "location": "ZGGG",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "G4391/26",
+  "purpose": "BO",
+  "q_code": "QMPLC",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "G3241/26",
+  "schedule": null,
+  "scope": "A",
+  "series": "G",
+  "text": "PARKING STAND FX14 CLSD DUE TO MAINT.",
   "traffic": "IV",
   "type": "R",
   "upper": null,
