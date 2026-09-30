@@ -2753,312 +2753,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790563736099000": {
-  "account_id": "VHHHYNYX",
-  "area_group": "HK",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2219N11355E",
-  "effective_end": "2026-09-30T22:45:00Z",
-  "effective_start": "2026-09-30T17:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "VHHK",
-  "first_seen": "2026-09-28T02:50:26+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      113.916667,
-      22.39985
-     ],
-     [
-      113.92548,
-      22.39945
-     ],
-     [
-      113.934209,
-      22.398252
-     ],
-     [
-      113.942769,
-      22.396268
-     ],
-     [
-      113.951077,
-      22.393518
-     ],
-     [
-      113.959054,
-      22.390028
-     ],
-     [
-      113.966623,
-      22.385831
-     ],
-     [
-      113.97371,
-      22.380968
-     ],
-     [
-      113.980249,
-      22.375486
-     ],
-     [
-      113.986175,
-      22.369438
-     ],
-     [
-      113.991431,
-      22.362881
-     ],
-     [
-      113.995968,
-      22.355879
-     ],
-     [
-      113.999741,
-      22.3485
-     ],
-     [
-      114.002713,
-      22.340814
-     ],
-     [
-      114.004857,
-      22.332895
-     ],
-     [
-      114.006152,
-      22.32482
-     ],
-     [
-      114.006585,
-      22.316667
-     ],
-     [
-      114.006152,
-      22.308513
-     ],
-     [
-      114.004857,
-      22.300438
-     ],
-     [
-      114.002713,
-      22.29252
-     ],
-     [
-      113.999741,
-      22.284834
-     ],
-     [
-      113.995968,
-      22.277454
-     ],
-     [
-      113.991431,
-      22.270452
-     ],
-     [
-      113.986175,
-      22.263896
-     ],
-     [
-      113.980249,
-      22.257847
-     ],
-     [
-      113.97371,
-      22.252365
-     ],
-     [
-      113.966623,
-      22.247502
-     ],
-     [
-      113.959054,
-      22.243305
-     ],
-     [
-      113.951077,
-      22.239815
-     ],
-     [
-      113.942769,
-      22.237065
-     ],
-     [
-      113.934209,
-      22.235081
-     ],
-     [
-      113.92548,
-      22.233884
-     ],
-     [
-      113.916667,
-      22.233483
-     ],
-     [
-      113.907853,
-      22.233884
-     ],
-     [
-      113.899124,
-      22.235081
-     ],
-     [
-      113.890565,
-      22.237065
-     ],
-     [
-      113.882256,
-      22.239815
-     ],
-     [
-      113.874279,
-      22.243305
-     ],
-     [
-      113.866711,
-      22.247502
-     ],
-     [
-      113.859623,
-      22.252365
-     ],
-     [
-      113.853085,
-      22.257847
-     ],
-     [
-      113.847159,
-      22.263896
-     ],
-     [
-      113.841902,
-      22.270452
-     ],
-     [
-      113.837366,
-      22.277454
-     ],
-     [
-      113.833593,
-      22.284834
-     ],
-     [
-      113.83062,
-      22.29252
-     ],
-     [
-      113.828476,
-      22.300438
-     ],
-     [
-      113.827181,
-      22.308513
-     ],
-     [
-      113.826748,
-      22.316667
-     ],
-     [
-      113.827181,
-      22.32482
-     ],
-     [
-      113.828476,
-      22.332895
-     ],
-     [
-      113.83062,
-      22.340814
-     ],
-     [
-      113.833593,
-      22.3485
-     ],
-     [
-      113.837366,
-      22.355879
-     ],
-     [
-      113.841902,
-      22.362881
-     ],
-     [
-      113.847159,
-      22.369438
-     ],
-     [
-      113.853085,
-      22.375486
-     ],
-     [
-      113.859623,
-      22.380968
-     ],
-     [
-      113.866711,
-      22.385831
-     ],
-     [
-      113.874279,
-      22.390028
-     ],
-     [
-      113.882256,
-      22.393518
-     ],
-     [
-      113.890565,
-      22.396268
-     ],
-     [
-      113.899124,
-      22.398252
-     ],
-     [
-      113.907853,
-      22.39945
-     ],
-     [
-      113.916667,
-      22.39985
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "VHHH",
-  "icao_text": "A2257/26 NOTAMN\r\nQ) VHHK/QMXLC/IV/BO /A /000/999/2219N11355E005\r\nA) VHHH B) 2609301700 C) 2609302245\r\nE) THE FLW TWY CLSD DUE WIP:\r\nTWY C BTN TWY D8 AND TWY E\r\nTWY Z BTN TWY D AND TWY Z1",
-  "id": "1790563736099000",
-  "issued": "2026-09-28T02:48:00Z",
-  "last_updated": "2026-09-28T02:49:00Z",
-  "local_text": null,
-  "location": "VHHH",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A2257/26",
-  "purpose": "BO",
-  "q_code": "QMXLC",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "A",
-  "series": "A",
-  "text": "THE FLW TWY CLSD DUE WIP:\r\nTWY C BTN TWY D8 AND TWY E\r\nTWY Z BTN TWY D AND TWY Z1",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790563737815000": {
   "account_id": "VHHHYNYX",
   "area_group": "HK",
@@ -127675,6 +127369,374 @@
   "traffic": null,
   "type": "N",
   "upper": null,
+  "year": "2026"
+ },
+ "1790808128992552": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-01T23:00:00Z",
+  "effective_start": "2026-10-01T18:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-30T22:50:27+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4783/26 NOTAMN\nQ) KZAK/QROLT/IV/NBO/W/000/270/\nA) KZAK\nB) 2610011800\nC) 2610012300\nE) AIRSPACE W237J ACT\nF) SFC\nG) FL270",
+  "id": "1790808128992552",
+  "issued": "2026-09-30T22:40:00Z",
+  "last_updated": "2026-09-30T22:41:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "270",
+  "min_fl": "000",
+  "number": "A4783/26",
+  "purpose": "NBO",
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "AIRSPACE W237J ACT",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL270",
+  "year": "2026"
+ },
+ "1790808129447116": {
+  "account_id": "SUAW",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-01T23:00:00Z",
+  "effective_start": "2026-10-01T18:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-30T22:50:27+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790808129447116",
+  "issued": "2026-09-30T22:40:00Z",
+  "last_updated": "2026-09-30T22:41:00Z",
+  "local_text": "!SUAW 09/447 ZAK AIRSPACE W237J ACT SFC-FL270 2610011800-2610012300",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "09/447",
+  "purpose": null,
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!SUAW 09/447 ZAK AIRSPACE W237J ACT SFC-FL270",
+  "traffic": null,
+  "type": null,
+  "upper": "FL270",
+  "year": "2026"
+ },
+ "1790808172056578": {
+  "account_id": "SUAW",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-01T23:00:00Z",
+  "effective_start": "2026-10-01T17:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-30T22:50:27+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790808172056578",
+  "issued": "2026-09-30T22:41:00Z",
+  "last_updated": "2026-09-30T22:42:00Z",
+  "local_text": "!SUAW 09/448 ZAK AIRSPACE W237H ACT SFC-FL270 2610011700-2610012300",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "09/448",
+  "purpose": null,
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!SUAW 09/448 ZAK AIRSPACE W237H ACT SFC-FL270",
+  "traffic": null,
+  "type": null,
+  "upper": "FL270",
+  "year": "2026"
+ },
+ "1790808172419390": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-01T23:00:00Z",
+  "effective_start": "2026-10-01T17:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-30T22:50:27+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4784/26 NOTAMN\nQ) KZAK/QROLT/IV/NBO/W/000/270/\nA) KZAK\nB) 2610011700\nC) 2610012300\nE) AIRSPACE W237H ACT\nF) SFC\nG) FL270",
+  "id": "1790808172419390",
+  "issued": "2026-09-30T22:41:00Z",
+  "last_updated": "2026-09-30T22:42:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "270",
+  "min_fl": "000",
+  "number": "A4784/26",
+  "purpose": "NBO",
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "AIRSPACE W237H ACT",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL270",
+  "year": "2026"
+ },
+ "1790808216309716": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-01T23:00:00Z",
+  "effective_start": "2026-10-01T17:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-30T22:50:27+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4786/26 NOTAMN\nQ) KZAK/QROLT/IV/NBO/W/000/270/\nA) KZAK\nB) 2610011700\nC) 2610012300\nE) AIRSPACE W237J ACT\nF) SFC\nG) FL270",
+  "id": "1790808216309716",
+  "issued": "2026-09-30T22:42:00Z",
+  "last_updated": "2026-09-30T22:42:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "270",
+  "min_fl": "000",
+  "number": "A4786/26",
+  "purpose": "NBO",
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "AIRSPACE W237J ACT",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL270",
+  "year": "2026"
+ },
+ "1790808218745915": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-01T23:00:00Z",
+  "effective_start": "2026-10-01T18:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-30T22:50:27+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4785/26 NOTAMN\nQ) KZAK/QROLT/IV/NBO/W/000/270/\nA) KZAK\nB) 2610011800\nC) 2610012300\nE) AIRSPACE W237H ACT\nF) SFC\nG) FL270",
+  "id": "1790808218745915",
+  "issued": "2026-09-30T22:42:00Z",
+  "last_updated": "2026-09-30T22:42:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "270",
+  "min_fl": "000",
+  "number": "A4785/26",
+  "purpose": "NBO",
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "AIRSPACE W237H ACT",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL270",
+  "year": "2026"
+ },
+ "1790808218746587": {
+  "account_id": "SUAW",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-01T23:00:00Z",
+  "effective_start": "2026-10-01T17:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-30T22:50:27+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790808218746587",
+  "issued": "2026-09-30T22:42:00Z",
+  "last_updated": "2026-09-30T22:42:00Z",
+  "local_text": "!SUAW 09/452 ZAK AIRSPACE W237J ACT SFC-FL270 2610011700-2610012300",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "09/452",
+  "purpose": null,
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!SUAW 09/452 ZAK AIRSPACE W237J ACT SFC-FL270",
+  "traffic": null,
+  "type": null,
+  "upper": "FL270",
+  "year": "2026"
+ },
+ "1790808218864911": {
+  "account_id": "SUAW",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-01T23:00:00Z",
+  "effective_start": "2026-10-01T18:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-09-30T22:50:27+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790808218864911",
+  "issued": "2026-09-30T22:42:00Z",
+  "last_updated": "2026-09-30T22:42:00Z",
+  "local_text": "!SUAW 09/451 ZAK AIRSPACE W237H ACT SFC-FL270 2610011800-2610012300",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "09/451",
+  "purpose": null,
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!SUAW 09/451 ZAK AIRSPACE W237H ACT SFC-FL270",
+  "traffic": null,
+  "type": null,
+  "upper": "FL270",
   "year": "2026"
  }
 }
