@@ -277,19 +277,22 @@ body.base-sat .leaflet-control-attribution{
 .coord-pin{width:18px;height:26px;}
 /* レイヤー選択(NOTAMモードのみ。2026-09-29) */
 .app:not(.mode-notam) .notam-only{display:none;}
+.app.mode-manual .layer-control{display:none;}
+.layer-row + .layer-row{margin-top:6px;}
+.layer-row[hidden]{display:none;}
 .layer-control{position:absolute;top:12px;right:12px;z-index:500;}
 .layer-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;
   background:rgba(255,255,255,.92);backdrop-filter:blur(3px);border:1px solid var(--border-bright);border-radius:6px;
   color:var(--text-dim);box-shadow:0 1px 4px rgba(0,0,0,.1);transition:.15s;}
 .layer-btn:hover,.layer-btn.open{color:var(--cyan);border-color:var(--cyan);}
 body.dark-mode .layer-btn{background:rgba(18,17,15,.85);}
-.layer-panel{display:none;position:absolute;top:calc(100% + 6px);right:0;min-width:180px;z-index:600;
+.layer-panel{display:none;position:absolute;top:calc(100% + 6px);right:0;min-width:180px;z-index:600;white-space:nowrap;
   background:var(--panel);border:1px solid var(--border-bright);border-radius:8px;padding:10px 12px;
   box-shadow:0 4px 16px rgba(0,0,0,.12);font-size:12px;}
 .layer-panel.open{display:block;}
 .layer-panel .check-row{display:flex;align-items:center;gap:6px;margin:0;cursor:pointer;}
 .layer-note{margin-top:6px;font-size:10.5px;line-height:1.5;color:var(--red);}
-.layer-src{margin:3px 0 0 22px;font-size:10.5px;color:var(--text-faint);white-space:nowrap;}
+.layer-src{margin-top:8px;padding-top:6px;border-top:1px solid var(--border);font-size:10.5px;color:var(--text-faint);white-space:nowrap;}
 .layer-src:empty{display:none;}
 body.dark-mode .layer-panel{background:rgba(24,23,20,.97);}
 .toolbar-sep{width:1px;align-self:stretch;background:rgba(0,0,0,.15);margin:2px 0;}
@@ -674,14 +677,27 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
              spellcheck="false" autocomplete="off" title="座標(度分秒 例: 350737N1000535E)を入力すると、その地点にズームしてピンを立てます。消すとピンも消えます">
     </div>
     <!-- 地図右上のレイヤー選択(NOTAMモードのみ)。アイコンは地図アプリでおなじみの「重なった層」(Material Icons "layers"、Apache-2.0) -->
-    <div class="layer-control notam-only">
+    <div class="layer-control">
       <button class="layer-btn" id="btnLayers" type="button" title="レイヤー" aria-label="レイヤー">
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M11.99 18.54l-7.37-5.73L3 14.07l9 7 9-7-1.63-1.27-7.38 5.74zM12 16l7.36-5.73L21 9l-9-7-9 7 1.63 1.27L12 16z"/></svg>
       </button>
       <div class="layer-panel" id="layerPanel">
-        <label class="check-row"><input type="checkbox" id="layerRoutes"> 航空路（中国）</label>
-        <div class="layer-src" id="layerRoutesSrc"></div>
-        <div class="layer-note err" id="layerRoutesNote" hidden></div>
+        <!-- data-modes: その行を出すモード(NAVWAR=auto / NOTAM=notam) -->
+        <div class="layer-row" data-modes="auto">
+          <label class="check-row"><input type="checkbox" id="layer-notamAll" data-overlay="notamAll"> NOTAM（All）</label>
+        </div>
+        <div class="layer-row" data-modes="notam">
+          <label class="check-row"><input type="checkbox" id="layer-msaAll" data-overlay="msaAll"> 航行警報（All）</label>
+        </div>
+        <div class="layer-row" data-modes="notam">
+          <label class="check-row"><input type="checkbox" id="layer-routes" data-overlay="routes"> 航空路（中国）</label>
+          <div class="layer-note err" id="layerNote-routes" hidden></div>
+        </div>
+        <div class="layer-row" data-modes="notam">
+          <label class="check-row"><input type="checkbox" id="layer-points" data-overlay="points"> ウェイポイント（中国）</label>
+          <div class="layer-note err" id="layerNote-points" hidden></div>
+        </div>
+        <div class="layer-row layer-src" id="layerSrc" data-modes="notam"></div>
       </div>
     </div>
     <div class="measure-panel" id="measurePanel">
@@ -763,7 +779,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v2.2.2';
+const APP_VERSION = 'v2.4.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -790,6 +806,10 @@ const APP_VERSION = 'v2.2.2';
 //  (暗号化した aip/cn_routes_layer.enc を起動時のkeyで復号。NOTAMの図形の下に細い線で敷き、マウスを乗せると航空路名)。
 // v2.2.1: レイヤーボタンを地図右上へ移し、アイコン(重なった層)だけのボタンに。一覧の本数・説明文を削除(エラー時のみ表示)。
 // v2.2.2: レイヤー一覧の航空路の下に資料の時点(例: 資料: 中国AIP AIRAC 2611（2026-10-29発効）)を表示。
+// v2.3.0 (2026-09-30): レイヤーに「ウェイポイント（中国）」を追加(aip/cn_points_layer.enc。ウェイポイントは小さな点、
+//  VOR/DME・NDBは白抜きの点、マウスを乗せると名前)。レイヤーの処理を OVERLAYS の一覧で共通化し、資料の時点は一覧の下に1行。
+// v2.4.0 (2026-09-30): レイヤーボタンをNAVWARモードにも出し、NAVWARには「NOTAM（All）」、NOTAMには「航行警報（All）」を追加
+//  (他モードの全件を参考として下に重ねる。notamShapesLayer()/msaItemShapes() を両モードで共用)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -1613,9 +1633,39 @@ const notamLayer = L.layerGroup().addTo(map);
 // NOTAMの図形より下に敷く。別のpane(別のcanvas)にすると上のcanvasにマウスを取られて航空路名が出ないので、
 // 同じcanvasに先に描き、そのあとNOTAMの図形を描き直して上に重ねる(syncOverlayLayers)。
 let viewerKey = null;
-const ROUTES_LAYER_URL = 'aip/cn_routes_layer.enc';
-const routesLayer = L.layerGroup();
-let routesLoaded = null;                                    // 読み込み中/済みの Promise
+// 参考レイヤーの一覧。どれも中国AIPデータセットから作り、暗号化して置いてある(aip_build_routes_layer.py)。
+// 描く順(下から): 他モードの全件 → 航空路 → ウェイポイント → そのモード自身の図形。
+const OVERLAYS = [
+  // 他モードの全件を参考として重ねる(2026-09-30)。暗号化データではなく、読み込み済みのデータから作る(dynamic)。
+  // NAVWARモードに NOTAM の全件(Active/Upcoming/Archive。地図に描ける図形があり DOM 以外)
+  { id: 'notamAll', modes: ['auto'], dynamic: () => {
+      let feats = notamActiveFeatures.slice();
+      notamArchiveFeatures.forEach(arr => { feats = feats.concat(arr); });
+      feats = feats.filter(f => notamHasRealPolygon(f) && (f.properties || {}).classification !== 'DOM');
+      return feats.length ? notamShapesLayer(feats) : L.layerGroup();
+    } },
+  // NOTAMモードに航行警報の全件(Active/予告/Archive)
+  { id: 'msaAll', modes: ['notam'], dynamic: () => L.layerGroup(
+      [...warningsByUrl.values()].filter(it => it.groups && it.groups.length).flatMap(it => msaItemShapes(it))) },
+  { id: 'routes', modes: ['notam'], url: 'aip/cn_routes_layer.enc',
+    build: data => L.geoJSON(data, {
+      style: () => ({ color: '#6f6a5e', weight: 1, opacity: 0.55 }),
+      onEachFeature: (f, layer) => layer.bindTooltip(f.properties.route, { sticky: true, className: 'poly-label' }),
+    }) },
+  // ウェイポイントは小さな塗りの点、航法施設(VOR/DME・NDB)は少し大きい白抜きの点。マウスを乗せると名前
+  { id: 'points', modes: ['notam'], url: 'aip/cn_points_layer.enc',
+    build: data => L.geoJSON(data, {
+      pointToLayer: (f, ll) => f.properties.kind === 'WPT'
+        ? L.circleMarker(ll, { radius: 2.2, weight: 0, fillColor: '#6f6a5e', fillOpacity: 0.75 })
+        : L.circleMarker(ll, { radius: 3.6, weight: 1.2, color: '#4f4b42', fillColor: '#ffffff', fillOpacity: 0.9 }),
+      onEachFeature: (f, layer) => layer.bindTooltip(
+        f.properties.kind === 'WPT' ? f.properties.name : `${f.properties.name}（${f.properties.kind.replace('_', '/')}）`,
+        { direction: 'top', offset: [0, -4], className: 'poly-label' }),
+    }) },
+];
+OVERLAYS.forEach(o => { o.layer = L.layerGroup(); o.loaded = null; });
+const overlayById = id => OVERLAYS.find(o => o.id === id);
+const routesLayer = overlayById('routes').layer;           // 既存コード・テストからの参照用
 function b64bytes(s){ return Uint8Array.from(atob(s), c => c.charCodeAt(0)); }
 // 暗号化ファイルの外側(平文)の情報。資料の時点(airac・effective)を、復号する前からパネルに出すのに使う。
 let layerBoxCache = new Map();
@@ -1650,49 +1700,73 @@ async function decryptLayerFile(url){
   const text = await new Response(new Blob([gz]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
   return { data: JSON.parse(text), box };
 }
-function loadRoutesLayer(){
-  if (!routesLoaded){
-    routesLoaded = decryptLayerFile(ROUTES_LAYER_URL).then(({ data }) => {
-      L.geoJSON(data, {
-        style: () => ({ color: '#6f6a5e', weight: 1, opacity: 0.55 }),
-        onEachFeature: (f, layer) => layer.bindTooltip(f.properties.route, { sticky: true, className: 'poly-label' }),
-      }).addTo(routesLayer);
-      $('#layerRoutesNote').hidden = true;
-    }).catch(err => {
-      routesLoaded = null;                                  // 次にチェックしたときに読み直す
-      $('#layerRoutes').checked = false;
-      $('#layerRoutesNote').hidden = false;
-      $('#layerRoutesNote').textContent = '航空路を読み込めませんでした: ' + err.message;
-    });
-  }
-  return routesLoaded;
+function fillDynamicOverlay(o){
+  o.layer.clearLayers();
+  o.layer.addLayer(o.dynamic());
 }
-// 航空路レイヤーは NOTAMモードで、チェックが入っているときだけ出す
-function syncOverlayLayers(){
-  const want = $('#layerRoutes').checked && $('#mainApp').classList.contains('mode-notam');
-  if (want){
-    loadRoutesLayer().then(()=>{
-      if ($('#layerRoutes').checked && $('#mainApp').classList.contains('mode-notam') && !map.hasLayer(routesLayer)){
-        routesLayer.addTo(map);
-        rebuildNotamMapLayer();                             // NOTAMの図形を描き直して航空路の上に出す
-      }
-    });
-  } else if (map.hasLayer(routesLayer)) {
-    map.removeLayer(routesLayer);
+function loadOverlay(o){
+  if (o.dynamic){
+    if (!o.layer.getLayers().length) fillDynamicOverlay(o);
+    return Promise.resolve();
   }
+  if (!o.loaded){
+    o.loaded = decryptLayerFile(o.url).then(({ data }) => {
+      o.build(data).addTo(o.layer);
+      $(`#layerNote-${o.id}`).hidden = true;
+    }).catch(err => {
+      o.loaded = null;                                      // 次にチェックしたときに読み直す
+      $(`#layer-${o.id}`).checked = false;
+      $(`#layerNote-${o.id}`).hidden = false;
+      $(`#layerNote-${o.id}`).textContent = '読み込めませんでした: ' + err.message;
+      throw err;
+    });
+  }
+  return o.loaded;
+}
+// 参考レイヤーは NOTAMモードで、チェックが入っているときだけ出す。重なり順を保つため、
+// 変わるたびに一度すべて外し、下から順に載せ直してから NOTAMの図形を描き直して一番上に出す。
+function currentMapMode(){
+  const app = $('#mainApp');
+  return app.classList.contains('mode-notam') ? 'notam' : app.classList.contains('mode-manual') ? 'manual' : 'auto';
+}
+function syncOverlayLayers(force){
+  const mode = currentMapMode();
+  // パネルは今のモードで使える行だけ出す
+  $$('#layerPanel .layer-row').forEach(r => { r.hidden = !r.dataset.modes.split(' ').includes(mode); });
+  const wanted = OVERLAYS.filter(o => o.modes.includes(mode) && $(`#layer-${o.id}`).checked);
+  Promise.all(wanted.map(o => loadOverlay(o).catch(() => null))).then(() => {
+    const nowMode = currentMapMode();
+    const show = OVERLAYS.filter(o => o.modes.includes(nowMode) && $(`#layer-${o.id}`).checked && o.layer.getLayers().length);
+    const same = OVERLAYS.every(o => map.hasLayer(o.layer) === show.includes(o));
+    if (same && !force) return;
+    OVERLAYS.forEach(o => { if (map.hasLayer(o.layer)) map.removeLayer(o.layer); });
+    show.forEach(o => o.layer.addTo(map));
+    if (!show.length) return;
+    // そのモード自身の図形を、参考レイヤーの上に描き直す(同じcanvasは後から載せたものが上)
+    if (nowMode === 'notam') rebuildNotamMapLayer();
+    else if (nowMode === 'auto' && map.hasLayer(msaLayer)){ map.removeLayer(msaLayer); msaLayer.addTo(map); }
+  });
+}
+// 他モードの全件レイヤーを、データが更新されたときに作り直す(表示中なら載せ直す)
+function refreshDynamicOverlay(id){
+  const o = overlayById(id);
+  if (!o || !o.layer.getLayers().length) return;          // まだ一度も作っていなければ、表示するときに作る
+  fillDynamicOverlay(o);
+  if (map.hasLayer(o.layer)) syncOverlayLayers(true);
 }
 $('#btnLayers').addEventListener('click', (e)=>{
   e.stopPropagation();
   const opened = $('#layerPanel').classList.toggle('open');
   $('#btnLayers').classList.toggle('open', opened);
-  // 開いたときに資料の時点を出す(ファイルの外側だけ読む。復号はチェックを入れたときに行う)
-  if (opened && !$('#layerRoutesSrc').textContent){
-    fetchLayerBox(ROUTES_LAYER_URL).then(box => { $('#layerRoutesSrc').textContent = layerSourceText(box); }).catch(()=>{});
+  // 開いたときに資料の時点を出す(ファイルの外側だけ読む。復号はチェックを入れたときに行う)。
+  // どのレイヤーも同じ AIP 索引から作るので、1行だけ出す。
+  if (opened && !$('#layerSrc').textContent){
+    fetchLayerBox(overlayById('routes').url).then(box => { $('#layerSrc').textContent = layerSourceText(box); }).catch(()=>{});
   }
 });
 $('#layerPanel').addEventListener('click', e => e.stopPropagation());
 document.addEventListener('click', ()=>{ $('#layerPanel').classList.remove('open'); $('#btnLayers').classList.remove('open'); });
-$('#layerRoutes').addEventListener('change', syncOverlayLayers);
+$$('#layerPanel input[data-overlay]').forEach(cb => cb.addEventListener('change', syncOverlayLayers));
 const historyLayers = new Map(); // id -> layerGroup
 const historyMeta = new Map(); // id -> { title, raw_text } -- used by manual-mode popups + PDF export
 
@@ -3112,6 +3186,15 @@ function plotMsaItem(it){
   const status = getValidityStatus(it);
   const isArchive = status === 'archive';
   if (it._mapVisible === undefined) it._mapVisible = !isArchive; // Active/Notice/unknown shown by default; Archive hidden until opted in
+  // Map -> left panel sync (see selectItemInPanel()). Leaflet fires this alongside the
+  // popup's own click handling from bindPopup(), not instead of it, so the popup still opens as before.
+  it._shapes = msaItemShapes(it, () => selectItemInPanel(it));
+  if (it._mapVisible) it._shapes.forEach(s => s.addTo(msaLayer));
+}
+// 航行警報1件の図形(点・線・面とラベル)。自動巡回モードの地図(plotMsaItem)と、NOTAMモードの参考レイヤー
+// 「航行警報（All）」の両方で使う。onClick があればクリック時に呼ぶ。
+function msaItemShapes(it, onClick){
+  const shapes = [];
   const label = shortLabel(it.title);
   it.groups.forEach((grp, gi)=>{
     let shape;
@@ -3138,13 +3221,10 @@ function plotMsaItem(it){
       shape.bindPopup(popupHtml(it, areaNote));
       shape.bindTooltip(label, { permanent:true, direction:'center', className:'poly-label' });
     }
-    // Map -> left panel sync (see selectItemInPanel()). Leaflet fires this alongside the
-    // popup's own click handling from bindPopup() above, not instead of it, so the popup
-    // still opens as before.
-    shape.on('click', ()=> selectItemInPanel(it));
-    it._shapes.push(shape);
-    if (it._mapVisible) shape.addTo(msaLayer);
+    if (onClick) shape.on('click', onClick);
+    shapes.push(shape);
   });
+  return shapes;
 }
 
 function setItemMapVisible(it, visible){
@@ -3298,6 +3378,7 @@ function importGeoJSON(text, sourceLabel='インポート'){
   });
 
   registerImportedItemsForNotifications(importedItems);
+  refreshDynamicOverlay('msaAll');
   logLine(`インポート完了: ${n}件の警告・${totalPts}点をプロットしました（${sourceLabel}）`, 'l-ok');
   renderWarnList();
   if (allLatLngs.length) map.fitBounds(L.latLngBounds(allLatLngs).pad(0.3));
@@ -3711,6 +3792,11 @@ function rebuildNotamMapLayer(){
   notamArchiveFeatures.forEach(arr => { feats = feats.concat(arr); });
   feats = feats.filter(f => f.geometry && notamPassesFilter(f) && notamIsOnMap(f));
   if (!feats.length) return;
+  notamShapesLayer(feats, { panelSync: true }).addTo(notamLayer);
+}
+// NOTAMの図形(面・線・帯・ラベル)を1つの L.geoJSON にする。NOTAMモードの地図(rebuildNotamMapLayer)と、
+// NAVWARモードの参考レイヤー「NOTAM（All）」の両方で使う。panelSync=true なら、クリックで左の一覧のカードに飛ぶ。
+function notamShapesLayer(feats, { panelSync = false } = {}){
   // エリアが複数あるNOTAM(MultiPolygon、例: L1539/26のAREA 1/AREA 2)は、エリアごとに別の図形に
   // 分けて描く。Leafletは1図形に1つしかツールチップを出せないので、こうしないとNOTAM番号が
   // 片方のエリアにしか付かない。ポップアップ等は元のfeature(_notamOrig)から作る。
@@ -3742,7 +3828,7 @@ function rebuildNotamMapLayer(){
     grp.numbers.slice().sort((a, b) => b.rank - a.rank).map(x => x.num).join('・')));
   // 航空路閉鎖の20kmの帯は、ほかのどの図形よりも下に敷く(帯どうしも Active が上)。ラベルは付けない。
   const bands = parts.map(routeBandPart).filter(Boolean);
-  L.geoJSON({ type:'FeatureCollection', features: bands.concat(parts) }, {
+  return L.geoJSON({ type:'FeatureCollection', features: bands.concat(parts) }, {
     style: f => f._band ? routeBandStyle(statusColor(notamStatusOf(f) === 'active' ? 'active'
       : notamStatusOf(f) === 'upcoming' ? 'notice' : 'archive')) : notamStyle(f),
     pointToLayer: notamPointToLayer,
@@ -3750,7 +3836,7 @@ function rebuildNotamMapLayer(){
       const f = part._notamOrig || part;
       layer.bindPopup(notamPopupHtml(f));
       // 地図→左パネルの追従(航行警報側のselectItemInPanel()と同じ)。ポップアップも従来どおり開く。
-      layer.on('click', ()=> selectNotamInPanel(f));
+      if (panelSync) layer.on('click', ()=> selectNotamInPanel(f));
       // 航行警報側と同じく、図形の上にNOTAM番号(例: A3757/26)を常時表示する
       const label = labelOf.get(part); // 同じ範囲の2つ目以降の図形はundefined(ラベルを付けない)
       if (label){
@@ -3760,7 +3846,7 @@ function rebuildNotamMapLayer(){
           : { permanent:true, direction:'center', className:'poly-label' });
       }
     },
-  }).addTo(notamLayer);
+  });
 }
 
 function renderNotamList(){
@@ -3881,6 +3967,7 @@ async function rereadNotamUrl(){
   updateNotamConnectionUI();
   logLine(`NOTAM自動再読込: ${connectedNotamUrl}（${notamActiveFeatures.length}件）`, 'l-ok');
   await loadAllNotamArchives();
+  refreshDynamicOverlay('notamAll');
 }
 
 async function connectNotamUrl(url){
