@@ -12,7 +12,8 @@ aip_build_routes_layer.py
 
 暗号化: gzip した GeoJSON を AES-256-GCM で暗号化する。鍵は PBKDF2-HMAC-SHA256(key, salt, ITER) で作る。
 ブラウザの WebCrypto(PBKDF2 + AES-GCM)と DecompressionStream('gzip') でそのまま復号できる形式。
-出力(JSON): {"v":1,"kdf":"PBKDF2-SHA256","iter":ITER,"salt":b64,"iv":b64,"ct":b64,"airac":"202611"}
+出力(JSON): {"v":1,"kdf":"PBKDF2-SHA256","iter":ITER,"salt":b64,"iv":b64,"ct":b64,
+            "airac":"202611","effective":"2026-10-28T16:00:00Z"}   (airac/effective は資料の時点。暗号化しない)
 
 使い方(通常は Actions の Viewer key sync が実行する):
   AIPDS_INDEX=/path/to/aip_index.json.gz VIEWER_KEY=... python aip_build_routes_layer.py [--out aip/cn_routes_layer.enc]
@@ -57,7 +58,7 @@ def build_routes_geojson(idx):
     return {"type": "FeatureCollection", "features": feats}
 
 
-def encrypt(data_bytes, key, airac=None):
+def encrypt(data_bytes, key, airac=None, effective=None):
     from cryptography.hazmat.primitives import hashes
     from cryptography.hazmat.primitives.ciphers.aead import AESGCM
     from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
@@ -65,7 +66,8 @@ def encrypt(data_bytes, key, airac=None):
     k = PBKDF2HMAC(algorithm=hashes.SHA256(), length=32, salt=salt, iterations=ITER).derive(key.encode("utf-8"))
     ct = AESGCM(k).encrypt(iv, gzip.compress(data_bytes, mtime=0), None)   # 末尾16バイトが認証タグ(WebCryptoと同じ並び)
     b64 = lambda b: base64.b64encode(b).decode("ascii")
-    return {"v": 1, "kdf": "PBKDF2-SHA256", "iter": ITER, "salt": b64(salt), "iv": b64(iv), "ct": b64(ct), "airac": airac}
+    return {"v": 1, "kdf": "PBKDF2-SHA256", "iter": ITER, "salt": b64(salt), "iv": b64(iv), "ct": b64(ct), "airac": airac,
+            "effective": effective}
 
 
 def main():
@@ -81,7 +83,8 @@ def main():
     idx = load_index(a.index)
     gj = build_routes_geojson(idx)
     data = json.dumps(gj, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
-    out = encrypt(data, key, (idx.get("meta") or {}).get("pubNo"))
+    meta = idx.get("meta") or {}
+    out = encrypt(data, key, meta.get("pubNo"), meta.get("effectiveTime"))
     os.makedirs(os.path.dirname(a.out), exist_ok=True)
     with open(a.out, "w", encoding="utf-8") as fh:
         json.dump(out, fh, separators=(",", ":"))
