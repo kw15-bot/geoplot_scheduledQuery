@@ -823,3 +823,4 @@ NOTAMモードの地図ツールバーに「レイヤー」ボタンを置き、
   （既定は Active と Upcoming。`overlaySubSelection()`）。航行警報はエリアごとの状態（`getGroupStatus()`、期間不明は Active 扱い）で選ぶ。
 - 2026-09-30 変更（v2.5.1）: ビューアの航行警報（military.geojson）の自動再読込を30分→10分に（収集の cron-job.org 10分おきに合わせ、NOTAMと同じ）。
 - 2026-09-30 変更（v2.5.2）: 航空路閉鎖の線の20kmの帯（v2.1.0）はやめ、線だけに戻した（地図・PDF出力とも。ユーザー判断）。
+- 2026-09-30 修正: 中心の座標が先で半径が後の円 `A CIRCLE CENTERED AT <座標> WITH RADIUS OF 45KM`（ZSHA A5020〜A5022/26、厦門付近の飛行検査区域）を読む（`_CENTER_BEFORE`/`_RADIUS_AFTER`）。

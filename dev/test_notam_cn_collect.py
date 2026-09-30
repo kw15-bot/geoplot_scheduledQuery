@@ -585,6 +585,17 @@ class TextShapes20260929(unittest.TestCase):
         self.assertEqual(len(rings[0]), 5)
         self.assertAlmostEqual(rings[0][0][0], 113 + 57 / 60 + 59.5 / 3600, places=5)
 
+    def test_center_first_circle(self):
+        # 2026-09-30 ZSHA A5020/26: 中心の座標が先で、半径が後
+        e = ("FLW AREA IMPLEMENT FLTCK: AREA 9: LATERAL LIMITS: THE AREA WITHIN A CIRCLE CENTERED AT N243116E1182018 "
+             "WITH RADIUS OF 45KM. VERTICAL LIMITS (QNE):3,000M(INCLUSIVE)-6,600M(INCLUSIVE).")
+        rings = C.parse_text_polygons(e)
+        self.assertEqual(len(rings), 1)
+        lat0 = 24 + 31 / 60 + 16 / 3600
+        self.assertAlmostEqual(max(p[1] for p in rings[0]) - lat0, 45 / 111.2, delta=0.01)
+        # 座標の後に半径が続かないもの(ただの中心点の記載)は円にしない
+        self.assertEqual(C.parse_text_polygons("CENTERED AT N243116E1182018 FOR REF ONLY."), [])
+
     def test_radius_centered_at(self):
         # KZAK A4740/26: "404NM RADIUS CENTERED AT <座標>"(以前は CENTERED ON だけ読めた)
         e = "MAY NOT BE AVBL WI A 404NM RADIUS CENTERED AT 325229N1145314W (BZA280016) FL400-UNL, 358NM RADIUS AT FL250"

@@ -295,6 +295,9 @@ _CIRCLE_BEFORE = re.compile(
     r"(?:CIRCLE\s+(?:WITH\s+)?(?:A\s+)?RADIUS\s+(?:OF\s+)?" + _R + r"\s+CENT(?:ER|RE)(?:ED|D)?\s+(?:ON|AT)"
     r"|" + _R.replace("?P<r>", "?P<r2>").replace("?P<u>", "?P<u2>") + r"\s+(?:RADIUS|RAD)\s+(?:OF|CENT(?:ER|RE)(?:ED|D)?\s+(?:ON|AT)|AROUND))\s*$",
     re.I)
+# 中心の座標が先で半径が後の円: "A CIRCLE CENTERED AT <座標> WITH RADIUS OF 45KM" (ZSHA A5020/26、2026-09-30追加)
+_CENTER_BEFORE = re.compile(r"CENT(?:ER|RE)(?:ED|D)?\s+(?:AT|ON)\s*$", re.I)
+_RADIUS_AFTER = re.compile(r"\s*,?\s*(?:WITH\s+)?(?:A\s+)?RAD(?:IUS)?\s+(?:OF\s+)?" + _R, re.I)
 # E項の帯状エリア: "1NM EITHER SIDE OF LINE <座標>-<座標>-..." (線の両側に指定幅)
 _CORRIDOR = re.compile(r"(?P<w>\d+(?:\.\d+)?)\s*(?P<u>NM|KM)\s+EITHER\s+SIDE\s+OF\s+(?:THE\s+)?(?:CENT(?:ER|RE)\s*)?LINE", re.I)
 TEXT_CIRCLE_MAX_NM = 500
@@ -363,10 +366,12 @@ def parse_text_polygons(e_text):
         gap = t[prev_end:m.start()] if prev_end is not None else t[:m.start()]
 
         c = _CIRCLE_BEFORE.search(t[max(0, m.start() - 120):m.start()])
+        if not c and _CENTER_BEFORE.search(t[max(0, m.start() - 40):m.start()]):
+            c = _RADIUS_AFTER.match(t, m.end())            # 中心が先・半径が後
         if c:
             flush()
             cur, corridor = [], None
-            r_nm = _to_nm(float(c["r"] or c["r2"]), c["u"] or c["u2"])
+            r_nm = _to_nm(float(c.groupdict().get("r") or c.groupdict().get("r2")), c.groupdict().get("u") or c.groupdict().get("u2"))
             if 0 < r_nm <= TEXT_CIRCLE_MAX_NM:
                 rings.append(circle_ring(pt[1], pt[0], r_nm))
             prev_end = m.end()
