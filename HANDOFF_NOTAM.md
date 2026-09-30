@@ -819,3 +819,5 @@ NOTAMモードの地図ツールバーに「レイヤー」ボタンを置き、
   - 「（All）」は他モードの全件（Active/予告/Archive）を、読み込み済みのデータからその場で作る（暗号化データではない）。
     他モードの図形は下に敷き、そのモード自身の図形を上に描き直す。データが更新されたら作り直す（`refreshDynamicOverlay()`）。
   - Viewer key sync は `cn_routes_layer.enc` と `cn_points_layer.enc` の両方を作り直す。
+- 2026-09-30 変更（v2.5.0）: 他モードのレイヤーは「NOTAM」「航行警報」という名前にし、それぞれに Active／Upcoming／Archive を選ぶチェックをぶら下げた
+  （既定は Active と Upcoming。`overlaySubSelection()`）。航行警報はエリアごとの状態（`getGroupStatus()`、期間不明は Active 扱い）で選ぶ。
