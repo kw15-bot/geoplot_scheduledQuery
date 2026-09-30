@@ -96158,5 +96158,51 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1790749202304000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-03T06:19:00.000Z",
+  "effective_start": "2026-09-30T06:19:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZJSA",
+  "first_seen": "2026-09-30T06:20:28+00:00",
+  "geometry": {
+   "coordinates": [
+    110.46,
+    19.933333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "ZJHK",
+  "icao_text": "G4388/26 NOTAMC G3947/26\r\nQ)ZJSA/QFAXX//M//000/999/\r\nA)ZJHK B)2609300619 \r\nE) SEE NEXT NTM.\r\n",
+  "id": "1790749202304000",
+  "issued": "2026-09-30T06:19:00.000Z",
+  "last_updated": "2026-09-30T06:20:00.000Z",
+  "local_text": null,
+  "location": "ZJHK",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "G4388/26",
+  "purpose": "M",
+  "q_code": "QFAXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "G3947/26",
+  "schedule": null,
+  "scope": null,
+  "series": "G",
+  "text": "SEE NEXT NTM.",
+  "traffic": null,
+  "type": "C",
+  "upper": null,
+  "year": "2026"
  }
 }
