@@ -279,6 +279,11 @@ body.base-sat .leaflet-control-attribution{
 .app:not(.mode-notam) .notam-only{display:none;}
 .app.mode-manual .layer-control{display:none;}
 .layer-row + .layer-row{margin-top:6px;}
+/* 他モードのレイヤーにぶら下がる Active/Upcoming/Archive の選択。親が外れている間は薄くする */
+.layer-sub{display:flex;gap:10px;margin:3px 0 0 22px;font-size:11px;color:var(--text-dim);}
+.layer-sub label{display:flex;align-items:center;gap:3px;cursor:pointer;}
+.layer-sub input{margin:0;}
+.layer-row:has(> .check-row input:not(:checked)) .layer-sub{opacity:.45;}
 .layer-row[hidden]{display:none;}
 .layer-control{position:absolute;top:12px;right:12px;z-index:500;}
 .layer-btn{width:36px;height:36px;display:flex;align-items:center;justify-content:center;cursor:pointer;
@@ -684,10 +689,20 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <div class="layer-panel" id="layerPanel">
         <!-- data-modes: その行を出すモード(NAVWAR=auto / NOTAM=notam) -->
         <div class="layer-row" data-modes="auto">
-          <label class="check-row"><input type="checkbox" id="layer-notamAll" data-overlay="notamAll"> NOTAM（All）</label>
+          <label class="check-row"><input type="checkbox" id="layer-notamAll" data-overlay="notamAll"> NOTAM</label>
+          <div class="layer-sub">
+            <label><input type="checkbox" data-sub="notamAll" value="active" checked> Active</label>
+            <label><input type="checkbox" data-sub="notamAll" value="upcoming" checked> Upcoming</label>
+            <label><input type="checkbox" data-sub="notamAll" value="archive"> Archive</label>
+          </div>
         </div>
         <div class="layer-row" data-modes="notam">
-          <label class="check-row"><input type="checkbox" id="layer-msaAll" data-overlay="msaAll"> 航行警報（All）</label>
+          <label class="check-row"><input type="checkbox" id="layer-msaAll" data-overlay="msaAll"> 航行警報</label>
+          <div class="layer-sub">
+            <label><input type="checkbox" data-sub="msaAll" value="active" checked> Active</label>
+            <label><input type="checkbox" data-sub="msaAll" value="notice" checked> Upcoming</label>
+            <label><input type="checkbox" data-sub="msaAll" value="archive"> Archive</label>
+          </div>
         </div>
         <div class="layer-row" data-modes="notam">
           <label class="check-row"><input type="checkbox" id="layer-routes" data-overlay="routes"> 航空路（中国）</label>
@@ -779,7 +794,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v2.4.0';
+const APP_VERSION = 'v2.5.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -810,6 +825,7 @@ const APP_VERSION = 'v2.4.0';
 //  VOR/DME・NDBは白抜きの点、マウスを乗せると名前)。レイヤーの処理を OVERLAYS の一覧で共通化し、資料の時点は一覧の下に1行。
 // v2.4.0 (2026-09-30): レイヤーボタンをNAVWARモードにも出し、NAVWARには「NOTAM（All）」、NOTAMには「航行警報（All）」を追加
 //  (他モードの全件を参考として下に重ねる。notamShapesLayer()/msaItemShapes() を両モードで共用)。
+// v2.5.0 (2026-09-30): 「NOTAM」「航行警報」のレイヤーに、Active/Upcoming/Archive を選ぶチェックをぶら下げた(既定は Active と Upcoming)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -1637,16 +1653,21 @@ let viewerKey = null;
 // 描く順(下から): 他モードの全件 → 航空路 → ウェイポイント → そのモード自身の図形。
 const OVERLAYS = [
   // 他モードの全件を参考として重ねる(2026-09-30)。暗号化データではなく、読み込み済みのデータから作る(dynamic)。
-  // NAVWARモードに NOTAM の全件(Active/Upcoming/Archive。地図に描ける図形があり DOM 以外)
+  // NAVWARモードに NOTAM(地図に描ける図形があり DOM 以外)。ぶら下がりのチェックで Active/Upcoming/Archive を選ぶ
   { id: 'notamAll', modes: ['auto'], dynamic: () => {
+      const sel = overlaySubSelection('notamAll');
+      const statusKey = f => f._notamArchive ? 'archive' : notamStatusOf(f) === 'upcoming' ? 'upcoming' : 'active';
       let feats = notamActiveFeatures.slice();
       notamArchiveFeatures.forEach(arr => { feats = feats.concat(arr); });
-      feats = feats.filter(f => notamHasRealPolygon(f) && (f.properties || {}).classification !== 'DOM');
+      feats = feats.filter(f => notamHasRealPolygon(f) && (f.properties || {}).classification !== 'DOM' && sel.has(statusKey(f)));
       return feats.length ? notamShapesLayer(feats) : L.layerGroup();
     } },
-  // NOTAMモードに航行警報の全件(Active/予告/Archive)
-  { id: 'msaAll', modes: ['notam'], dynamic: () => L.layerGroup(
-      [...warningsByUrl.values()].filter(it => it.groups && it.groups.length).flatMap(it => msaItemShapes(it))) },
+  // NOTAMモードに航行警報。エリアごとの状態(getGroupStatus: active/notice/archive、期間不明は active 扱い)で選ぶ
+  { id: 'msaAll', modes: ['notam'], dynamic: () => {
+      const sel = overlaySubSelection('msaAll');
+      return L.layerGroup([...warningsByUrl.values()].filter(it => it.groups && it.groups.length)
+        .flatMap(it => msaItemShapes(it, null, gs => sel.has(gs === 'unknown' ? 'active' : gs))));
+    } },
   { id: 'routes', modes: ['notam'], url: 'aip/cn_routes_layer.enc',
     build: data => L.geoJSON(data, {
       style: () => ({ color: '#6f6a5e', weight: 1, opacity: 0.55 }),
@@ -1665,6 +1686,10 @@ const OVERLAYS = [
 ];
 OVERLAYS.forEach(o => { o.layer = L.layerGroup(); o.loaded = null; });
 const overlayById = id => OVERLAYS.find(o => o.id === id);
+// ぶら下がりのチェックで選ばれている状態(active/upcoming(notice)/archive)
+function overlaySubSelection(id){
+  return new Set($$(`#layerPanel input[data-sub="${id}"]:checked`).map(x => x.value));
+}
 const routesLayer = overlayById('routes').layer;           // 既存コード・テストからの参照用
 function b64bytes(s){ return Uint8Array.from(atob(s), c => c.charCodeAt(0)); }
 // 暗号化ファイルの外側(平文)の情報。資料の時点(airac・effective)を、復号する前からパネルに出すのに使う。
@@ -1766,7 +1791,14 @@ $('#btnLayers').addEventListener('click', (e)=>{
 });
 $('#layerPanel').addEventListener('click', e => e.stopPropagation());
 document.addEventListener('click', ()=>{ $('#layerPanel').classList.remove('open'); $('#btnLayers').classList.remove('open'); });
-$$('#layerPanel input[data-overlay]').forEach(cb => cb.addEventListener('change', syncOverlayLayers));
+$$('#layerPanel input[data-overlay]').forEach(cb => cb.addEventListener('change', ()=> syncOverlayLayers()));
+// ぶら下がりの Active/Upcoming/Archive を変えたら、そのレイヤーを作り直す
+$$('#layerPanel input[data-sub]').forEach(cb => cb.addEventListener('change', ()=>{
+  const o = overlayById(cb.dataset.sub);
+  if (!o.layer.getLayers().length) return;                  // まだ一度も表示していなければ、表示するときに作る
+  fillDynamicOverlay(o);
+  syncOverlayLayers(true);
+}));
 const historyLayers = new Map(); // id -> layerGroup
 const historyMeta = new Map(); // id -> { title, raw_text } -- used by manual-mode popups + PDF export
 
@@ -3193,13 +3225,14 @@ function plotMsaItem(it){
 }
 // 航行警報1件の図形(点・線・面とラベル)。自動巡回モードの地図(plotMsaItem)と、NOTAMモードの参考レイヤー
 // 「航行警報（All）」の両方で使う。onClick があればクリック時に呼ぶ。
-function msaItemShapes(it, onClick){
+function msaItemShapes(it, onClick, groupFilter){
   const shapes = [];
   const label = shortLabel(it.title);
   it.groups.forEach((grp, gi)=>{
     let shape;
     // colour/opacity per AREA, not per article -- see getGroupStatus()
     const gStatus = getGroupStatus(it, gi);
+    if (groupFilter && !groupFilter(gStatus)) return;      // 参考レイヤーで、選ばれていない状態のエリアは描かない
     const c = statusColor(gStatus);
     const gArchive = gStatus === 'archive';
     const areaNote = areaValidityNote(it, gi);
