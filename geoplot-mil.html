@@ -289,6 +289,8 @@ body.dark-mode .layer-btn{background:rgba(18,17,15,.85);}
 .layer-panel.open{display:block;}
 .layer-panel .check-row{display:flex;align-items:center;gap:6px;margin:0;cursor:pointer;}
 .layer-note{margin-top:6px;font-size:10.5px;line-height:1.5;color:var(--red);}
+.layer-src{margin:3px 0 0 22px;font-size:10.5px;color:var(--text-faint);white-space:nowrap;}
+.layer-src:empty{display:none;}
 body.dark-mode .layer-panel{background:rgba(24,23,20,.97);}
 .toolbar-sep{width:1px;align-self:stretch;background:rgba(0,0,0,.15);margin:2px 0;}
 body.dark-mode .toolbar-sep{background:rgba(255,255,255,.18);}
@@ -678,6 +680,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       </button>
       <div class="layer-panel" id="layerPanel">
         <label class="check-row"><input type="checkbox" id="layerRoutes"> 航空路（中国）</label>
+        <div class="layer-src" id="layerRoutesSrc"></div>
         <div class="layer-note err" id="layerRoutesNote" hidden></div>
       </div>
     </div>
@@ -760,7 +763,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v2.2.1';
+const APP_VERSION = 'v2.2.2';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -786,6 +789,7 @@ const APP_VERSION = 'v2.2.1';
 // v2.2.0 (2026-09-29): NOTAMモードの地図に「レイヤー」ボタンを追加し、1つ目のレイヤーとして中国の全航空路を表示できるように
 //  (暗号化した aip/cn_routes_layer.enc を起動時のkeyで復号。NOTAMの図形の下に細い線で敷き、マウスを乗せると航空路名)。
 // v2.2.1: レイヤーボタンを地図右上へ移し、アイコン(重なった層)だけのボタンに。一覧の本数・説明文を削除(エラー時のみ表示)。
+// v2.2.2: レイヤー一覧の航空路の下に資料の時点(例: 資料: 中国AIP AIRAC 2611（2026-10-29発効）)を表示。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -1613,10 +1617,29 @@ const ROUTES_LAYER_URL = 'aip/cn_routes_layer.enc';
 const routesLayer = L.layerGroup();
 let routesLoaded = null;                                    // 読み込み中/済みの Promise
 function b64bytes(s){ return Uint8Array.from(atob(s), c => c.charCodeAt(0)); }
+// 暗号化ファイルの外側(平文)の情報。資料の時点(airac・effective)を、復号する前からパネルに出すのに使う。
+let layerBoxCache = new Map();
+function fetchLayerBox(url){
+  if (!layerBoxCache.has(url)){
+    layerBoxCache.set(url, fetch(url, { cache:'no-store' }).then(res => {
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      return res.json();
+    }).catch(err => { layerBoxCache.delete(url); throw err; }));
+  }
+  return layerBoxCache.get(url);
+}
+// 資料の時点の表示: "中国AIP AIRAC 2611（2026-10-29発効）"。発効日は北京時間(UTC+8)の日付
+// (AIPの発効時刻は北京時間0時 = UTC 16:00 前日)。
+function layerSourceText(box){
+  if (!box || !box.airac) return '';
+  const cycle = String(box.airac).length === 6 ? String(box.airac).slice(2) : String(box.airac);
+  let eff = '';
+  const t = Date.parse(box.effective || '');
+  if (!isNaN(t)) eff = `（${new Date(t + 8 * 3600 * 1000).toISOString().slice(0, 10)}発効）`;
+  return `資料: 中国AIP AIRAC ${cycle}${eff}`;
+}
 async function decryptLayerFile(url){
-  const res = await fetch(url, { cache:'no-store' });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const box = await res.json();
+  const box = await fetchLayerBox(url);
   const enc = new TextEncoder();
   const base = await crypto.subtle.importKey('raw', enc.encode(viewerKey || ''), 'PBKDF2', false, ['deriveKey']);
   const aes = await crypto.subtle.deriveKey({ name:'PBKDF2', hash:'SHA-256', salt: b64bytes(box.salt), iterations: box.iter },
@@ -1625,17 +1648,16 @@ async function decryptLayerFile(url){
   try { gz = await crypto.subtle.decrypt({ name:'AES-GCM', iv: b64bytes(box.iv) }, aes, b64bytes(box.ct)); }
   catch (e) { throw new Error('復号できません(レイヤーのデータが今のkeyで作られていない可能性。Actions の Viewer key sync を実行してください)'); }
   const text = await new Response(new Blob([gz]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
-  return { data: JSON.parse(text), airac: box.airac };
+  return { data: JSON.parse(text), box };
 }
 function loadRoutesLayer(){
   if (!routesLoaded){
-    routesLoaded = decryptLayerFile(ROUTES_LAYER_URL).then(({ data, airac }) => {
+    routesLoaded = decryptLayerFile(ROUTES_LAYER_URL).then(({ data }) => {
       L.geoJSON(data, {
         style: () => ({ color: '#6f6a5e', weight: 1, opacity: 0.55 }),
         onEachFeature: (f, layer) => layer.bindTooltip(f.properties.route, { sticky: true, className: 'poly-label' }),
       }).addTo(routesLayer);
       $('#layerRoutesNote').hidden = true;
-      $('#layerRoutes').parentElement.title = airac ? `中国AIP AIRAC ${airac}` : '';
     }).catch(err => {
       routesLoaded = null;                                  // 次にチェックしたときに読み直す
       $('#layerRoutes').checked = false;
@@ -1661,7 +1683,12 @@ function syncOverlayLayers(){
 }
 $('#btnLayers').addEventListener('click', (e)=>{
   e.stopPropagation();
-  $('#btnLayers').classList.toggle('open', $('#layerPanel').classList.toggle('open'));
+  const opened = $('#layerPanel').classList.toggle('open');
+  $('#btnLayers').classList.toggle('open', opened);
+  // 開いたときに資料の時点を出す(ファイルの外側だけ読む。復号はチェックを入れたときに行う)
+  if (opened && !$('#layerRoutesSrc').textContent){
+    fetchLayerBox(ROUTES_LAYER_URL).then(box => { $('#layerRoutesSrc').textContent = layerSourceText(box); }).catch(()=>{});
+  }
 });
 $('#layerPanel').addEventListener('click', e => e.stopPropagation());
 document.addEventListener('click', ()=>{ $('#layerPanel').classList.remove('open'); $('#btnLayers').classList.remove('open'); });
