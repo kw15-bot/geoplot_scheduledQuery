@@ -821,3 +821,4 @@ NOTAMモードの地図ツールバーに「レイヤー」ボタンを置き、
   - Viewer key sync は `cn_routes_layer.enc` と `cn_points_layer.enc` の両方を作り直す。
 - 2026-09-30 変更（v2.5.0）: 他モードのレイヤーは「NOTAM」「航行警報」という名前にし、それぞれに Active／Upcoming／Archive を選ぶチェックをぶら下げた
   （既定は Active と Upcoming。`overlaySubSelection()`）。航行警報はエリアごとの状態（`getGroupStatus()`、期間不明は Active 扱い）で選ぶ。
+- 2026-09-30 変更（v2.5.1）: ビューアの航行警報（military.geojson）の自動再読込を30分→10分に（収集の cron-job.org 10分おきに合わせ、NOTAMと同じ）。
