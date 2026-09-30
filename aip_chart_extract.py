@@ -11,6 +11,8 @@ eAIP の図(Terminal フォルダの PDF)から、「点の名前:座標」(例 
 使い方(Windows):
   py -m pip install pymupdf
   py aip_chart_extract.py "C:\...\EAIP2026-09.V1.3_Web\Data\EAIP2026-09.V1.3\Terminal"
+  (zip を展開していなければ zip のままでもよい:
+   py aip_chart_extract.py "C:\...\EAIP2026-09.V1.3_Web.zip\EAIP2026-09.V1.3_Web\Data\EAIP2026-09.V1.3\Terminal")
   -> 同じフォルダに aip_chart_points.json ができる(--out で変更可)
 
 出力: {"charts": [{"file": "<PDF名>", "chart": "ZWWW-3P-5", "title": "...", "eff": "EFF2507091600",
@@ -55,9 +57,28 @@ def parse_points(text):
     return pts
 
 
+def list_pdfs(target):
+    """(表示名, PDFのバイト列を返す関数) の一覧。フォルダでも、zip(やzipの中のフォルダ)でもよい。
+    エクスプローラーで zip を開いたときのパス(...\\xxx.zip\\中のフォルダ)もそのまま使える。"""
+    import zipfile
+    parts = re.split(r"[\\/]", target)
+    for k in range(len(parts), 0, -1):
+        head = os.sep.join(parts[:k]) if parts[0] else os.sep + os.sep.join(parts[1:k])
+        if head.lower().endswith(".zip") and os.path.isfile(head):
+            inner = "/".join(p for p in parts[k:] if p).lower()
+            z = zipfile.ZipFile(head)
+            names = [nm for nm in z.namelist() if nm.lower().endswith(".pdf")
+                     and (not inner or nm.lower().replace("\\", "/").startswith(inner + "/"))]
+            return [(os.path.basename(nm), (lambda nm=nm: z.read(nm))) for nm in sorted(names)]
+    if not os.path.isdir(target):
+        sys.exit(f"フォルダが見つかりません: {target}")
+    files = sorted(os.path.join(r, f) for r, _, fs in os.walk(target) for f in fs if f.lower().endswith(".pdf"))
+    return [(os.path.basename(f), (lambda f=f: open(f, "rb").read())) for f in files]
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("folder", help="Terminal フォルダ(中のフォルダもすべて読む)")
+    ap.add_argument("folder", help="Terminal フォルダ(中のフォルダもすべて読む)。zip のままでもよい")
     ap.add_argument("--out", default="aip_chart_points.json")
     a = ap.parse_args()
     try:
@@ -68,23 +89,26 @@ def main():
         except ImportError:
             sys.exit("PyMuPDF がありません: py -m pip install pymupdf")
     charts, errors, n = [], [], 0
-    files = [os.path.join(r, f) for r, _, fs in os.walk(a.folder) for f in fs if f.lower().endswith(".pdf")]
-    for i, path in enumerate(sorted(files), 1):
+    files = list_pdfs(a.folder)
+    if not files:
+        sys.exit(f"PDF が1件もありません: {a.folder}")
+    print(f"PDF {len(files)} 件を読みます", file=sys.stderr)
+    for i, (name, read) in enumerate(files, 1):
         n += 1
         try:
-            doc = fitz.open(path)
+            doc = fitz.open(stream=read(), filetype="pdf")
             title = (doc.metadata or {}).get("title") or ""
             text = "\n".join(p.get_text() for p in doc)
             doc.close()
         except Exception as e:                          # 壊れたPDFなどは飛ばす
-            errors.append({"file": os.path.basename(path), "error": str(e)[:200]})
+            errors.append({"file": name, "error": str(e)[:200]})
             continue
         pts = parse_points(text)
         if pts:
             cm = _CHART.search(title)
             em = _EFF.search(text)
             notes = [re.sub(r"\s+", " ", ln).strip() for ln in text.splitlines() if _NOTE.search(ln)]
-            charts.append({"file": os.path.basename(path), "chart": cm.group(1) if cm else None, "title": title,
+            charts.append({"file": name, "chart": cm.group(1) if cm else None, "title": title,
                            "eff": em.group(0) if em else None, "points": pts, "notes": notes[:20]})
         if i % 200 == 0:
             print(f"{i}/{len(files)} ... 見つかった図 {len(charts)}", file=sys.stderr)
