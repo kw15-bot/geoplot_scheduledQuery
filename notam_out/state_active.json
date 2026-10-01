@@ -25241,72 +25241,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790654411268000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "0928N12507E",
-  "effective_end": "2026-10-05T06:00:00.000Z",
-  "effective_start": "2026-09-30T22:00:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RPHI",
-  "first_seen": "2026-09-29T04:00:44+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      124.693611,
-      9.762778
-     ],
-     [
-      125.398333,
-      9.902778
-     ],
-     [
-      125.542222,
-      9.18
-     ],
-     [
-      124.834167,
-      9.043056
-     ],
-     [
-      124.693611,
-      9.762778
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RPMS",
-  "icao_text": "B5138/26 NOTAMN\r\nQ) RPHI/QWYLW/IV/M  /AW/000/050/0928N12507E032\r\nA) RPMS B) 2609302200 C) 2610050600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n094546N 1244137E -\r\n095410N 1252354E -\r\n091048N 1253232E -\r\n090235N 1245003E -\r\n094546N 1244137E\r\n(BUTUAN BAY).\r\nF) SFC G) 5000FT AMSL",
-  "id": "1790654411268000",
-  "issued": "2026-09-29T03:59:00.000Z",
-  "last_updated": "2026-09-29T04:00:00.000Z",
-  "local_text": null,
-  "location": "RPMS",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5138/26",
-  "purpose": "M  ",
-  "q_code": "QWYLW",
-  "qline_offset_nm": 0.3,
-  "radius_nm": 32.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "AW",
-  "series": "B",
-  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n094546N 1244137E -\r\n095410N 1252354E -\r\n091048N 1253232E -\r\n090235N 1245003E -\r\n094546N 1244137E\r\n(BUTUAN BAY).",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
  "1790654715422000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
@@ -132323,6 +132257,72 @@
   "traffic": "IV",
   "type": "N",
   "upper": "10000FT AMSL",
+  "year": "2026"
+ },
+ "1790820498883000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0928N12507E",
+  "effective_end": "2026-10-20T06:00:00.000Z",
+  "effective_start": "2026-10-01T02:07:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-01T02:10:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      124.693611,
+      9.762778
+     ],
+     [
+      125.398333,
+      9.902778
+     ],
+     [
+      125.542222,
+      9.18
+     ],
+     [
+      124.834167,
+      9.043056
+     ],
+     [
+      124.693611,
+      9.762778
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPMS",
+  "icao_text": "B5216/26 NOTAMR B5138/26\r\nQ) RPHI/QWYLW/IV/M  /AW/000/050/0928N12507E032\r\nA) RPMS B) 2610010207 C) 2610200600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n094546N 1244137E -\r\n095410N 1252354E -\r\n091048N 1253232E -\r\n090235N 1245003E -\r\n094546N 1244137E\r\n(BUTUAN BAY).\r\nF) SFC G) 5000FT AMSL",
+  "id": "1790820498883000",
+  "issued": "2026-10-01T02:07:00.000Z",
+  "last_updated": "2026-10-01T02:08:00.000Z",
+  "local_text": null,
+  "location": "RPMS",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5216/26",
+  "purpose": "M  ",
+  "q_code": "QWYLW",
+  "qline_offset_nm": 0.3,
+  "radius_nm": 32.0,
+  "ref_number": "B5138/26",
+  "schedule": null,
+  "scope": "AW",
+  "series": "B",
+  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n094546N 1244137E -\r\n095410N 1252354E -\r\n091048N 1253232E -\r\n090235N 1245003E -\r\n094546N 1244137E\r\n(BUTUAN BAY).",
+  "traffic": "IV",
+  "type": "R",
+  "upper": "5000FT AMSL",
   "year": "2026"
  }
 }
