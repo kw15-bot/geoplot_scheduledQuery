@@ -30322,7 +30322,10 @@
     "military": false,
     "own_id": "云航警162/26",
     "points": [],
-    "revoked": false,
+    "revoked": true,
+    "revoked_by": [
+      "云航警163/26"
+    ],
     "title": "黄海南部“SHENTON WAY”轮失去动力—云航警162/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/73d0147797b7416f842065fd77349d88.html"
   },
@@ -47141,11 +47144,15 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/bf5b18470b1a499ab397fd6085543b64.html": {
     "bureau": "连云港海事局",
+    "cancels": [
+      "云航警162/26"
+    ],
     "date": "2026-10-01",
     "detail_fetched": false,
     "first_seen": "2026-10-01T00:20:32+00:00",
     "groups": [],
     "military": false,
+    "own_id": "云航警163/26",
     "points": [],
     "revoked": false,
     "title": "撤销云航警162/26—云航警163/26",
