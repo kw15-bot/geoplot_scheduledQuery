@@ -218,6 +218,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--out-dir", default="./notam_out", help="notam_cn_collect.py と同じ --out-dir")
     ap.add_argument("--apply", action="store_true", help="指定しなければdry-run(表示のみ)")
+    ap.add_argument("--rebuild-geojson", action="store_true", help="変更が無くても notam_cn.geojson を作り直す(--apply と併用)")
     a = ap.parse_args()
     out = Path(a.out_dir)
 
@@ -229,7 +230,8 @@ def main():
     else:
         print("  -> 対象なし(修正が必要なレコードは見つかりませんでした)")
 
-    if changed and a.apply:
+    # --rebuild-geojson: 変更が無くても作り直す(main との衝突で notam_cn.geojson だけ main 側を採ったとき用)
+    if a.apply and (changed or a.rebuild_geojson):
         now = dt.datetime.now(dt.timezone.utc)
         features = sorted(
             (C.to_feature(r, now) for r in active.values() if r.get("type") != "C" and r.get("geometry")),
