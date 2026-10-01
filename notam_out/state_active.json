@@ -109799,178 +109799,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790771006907043": {
-  "account_id": "CARF",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "DOM",
-  "coordinates": null,
-  "effective_end": "2026-10-01T20:19:00Z",
-  "effective_start": "2026-10-01T18:08:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-09-30T12:30:35+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      -121.7,
-      30.466667
-     ],
-     [
-      -122.05,
-      30.116667
-     ],
-     [
-      -122.0,
-      29.866667
-     ],
-     [
-      -121.85,
-      29.466667
-     ],
-     [
-      -121.616667,
-      29.433333
-     ],
-     [
-      -121.216667,
-      29.466667
-     ],
-     [
-      -120.866667,
-      29.816667
-     ],
-     [
-      -120.9,
-      30.066667
-     ],
-     [
-      -121.4,
-      30.45
-     ],
-     [
-      -121.7,
-      30.466667
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "KZAK",
-  "icao_text": null,
-  "id": "1790771006907043",
-  "issued": "2026-09-30T12:22:00Z",
-  "last_updated": "2026-09-30T12:23:00Z",
-  "local_text": "!CARF 09/370 ZAK AIRSPACE DCC SX TRANSPORTER 18 26-63 STNR ALT RESERVATION AREA B WI AN AREA DEFINED AS 302800N1214200W TO 300700N1220300W TO 295200N1220000W TO 292800N1215100W TO 292600N1213700W TO 292800N1211300W TO 294900N1205200W TO 300400N1205400W TO 302700N1212400W TO POINT OF ORIGIN SFC-UNL 2610011808-2610012019",
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": null,
-  "min_fl": null,
-  "number": "09/370",
-  "purpose": null,
-  "q_code": "QRACA",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": null,
-  "text": "!CARF 09/370 ZAK AIRSPACE DCC SX TRANSPORTER 18 26-63 STNR ALT RESERVATION AREA B WI AN AREA DEFINED AS 302800N1214200W TO 300700N1220300W TO 295200N1220000W TO 292800N1215100W TO 292600N1213700W TO 292800N1211300W TO 294900N1205200W TO 300400N1205400W TO 302700N1212400W TO POINT OF ORIGIN SFC-UNL",
-  "traffic": null,
-  "type": null,
-  "upper": "UNL",
-  "year": "2026"
- },
- "1790771006932577": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-01T20:19:00Z",
-  "effective_start": "2026-10-01T18:08:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-09-30T12:30:35+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      -121.7,
-      30.466667
-     ],
-     [
-      -122.05,
-      30.116667
-     ],
-     [
-      -122.0,
-      29.866667
-     ],
-     [
-      -121.85,
-      29.466667
-     ],
-     [
-      -121.616667,
-      29.433333
-     ],
-     [
-      -121.216667,
-      29.466667
-     ],
-     [
-      -120.866667,
-      29.816667
-     ],
-     [
-      -120.9,
-      30.066667
-     ],
-     [
-      -121.4,
-      30.45
-     ],
-     [
-      -121.7,
-      30.466667
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "KZAK",
-  "icao_text": "A4771/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/999/\nA) KZAK\nB) 2610011808\nC) 2610012019\nE) ZAK AIRSPACE DCC SX TRANSPORTER 18 26-63 STNR ALT RESERVATION \nAREA B WI AN AREA DEFINED AS 302800N1214200W TO 300700N1220300W TO 295200N1220000W TO 292800N1215100W TO 292600N1213700W TO 292800N1211300W TO 294900N1205200W TO 300400N1205400W TO 302700N1212400W TO POINT OF ORIGIN\nF) SFC\nG) UNL",
-  "id": "1790771006932577",
-  "issued": "2026-09-30T12:22:00Z",
-  "last_updated": "2026-09-30T12:23:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A4771/26",
-  "purpose": "NBO",
-  "q_code": "QRACA",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "W",
-  "series": "A",
-  "text": "ZAK AIRSPACE DCC SX TRANSPORTER 18 26-63 STNR ALT RESERVATION \nAREA B WI AN AREA DEFINED AS 302800N1214200W TO 300700N1220300W TO 295200N1220000W TO 292800N1215100W TO 292600N1213700W TO 292800N1211300W TO 294900N1205200W TO 300400N1205400W TO 302700N1212400W TO POINT OF ORIGIN",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "UNL",
-  "year": "2026"
- },
  "1790772781638000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -139152,6 +138980,52 @@
   "scope": "AE",
   "series": "A",
   "text": "A4797/26 NOTAMC A4779/26\nQ) KZAK/QPFXX/IV/NBO/AE/000/999/\nA) KZAK\nB) 2610011914\nE) ATTENTION ACFT OPR AND DISPATCHERS OPERATING WI OAKLAND OCEANIC (KZAK\nCANCELED",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790882523814858": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-04T19:20:00Z",
+  "effective_start": "2026-10-01T19:20:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-01T19:30:37+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4798/26 NOTAMC A4771/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2610011920\nE) ZAK AIRSPACE DCC SX TRANSPORTER 18 26-63 STNR ALT RESERVATION \nCANCELED",
+  "id": "1790882523814858",
+  "issued": "2026-10-01T19:20:00Z",
+  "last_updated": "2026-10-01T19:21:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4798/26",
+  "purpose": "NBO",
+  "q_code": "QRAXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "A4771/26",
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "A4798/26 NOTAMC A4771/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2610011920\nE) ZAK AIRSPACE DCC SX TRANSPORTER 18 26-63 STNR ALT RESERVATION \nCANCELED",
   "traffic": "IV",
   "type": "C",
   "upper": null,
