@@ -25241,270 +25241,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790654715422000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "0831N12624E",
-  "effective_end": "2026-10-05T06:00:00.000Z",
-  "effective_start": "2026-09-30T22:00:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RPHI",
-  "first_seen": "2026-09-29T04:10:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      125.855278,
-      8.869444
-     ],
-     [
-      126.753333,
-      9.041389
-     ],
-     [
-      126.930278,
-      8.151389
-     ],
-     [
-      126.040278,
-      7.978333
-     ],
-     [
-      125.855278,
-      8.869444
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RPMF",
-  "icao_text": "B5139/26 NOTAMN\r\nQ) RPHI/QWYLW/IV/M  /AW/000/050/0831N12624E040\r\nA) RPMF B) 2609302200 C) 2610050600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n085210N 1255119E -\r\n090229N 1264512E -\r\n080905N 1265549E -\r\n075842N 1260225E -\r\n085210N 1255119E\r\n(LIANGA AND BISLIG BAY).\r\nF) SFC G) 5000FT AMSL",
-  "id": "1790654715422000",
-  "issued": "2026-09-29T04:04:00.000Z",
-  "last_updated": "2026-09-29T04:05:00.000Z",
-  "local_text": null,
-  "location": "RPMF",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5139/26",
-  "purpose": "M  ",
-  "q_code": "QWYLW",
-  "qline_offset_nm": 0.5,
-  "radius_nm": 40.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "AW",
-  "series": "B",
-  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n085210N 1255119E -\r\n090229N 1264512E -\r\n080905N 1265549E -\r\n075842N 1260225E -\r\n085210N 1255119E\r\n(LIANGA AND BISLIG BAY).",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
- "1790655106162000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "0831N12529E",
-  "effective_end": "2026-10-05T06:00:00.000Z",
-  "effective_start": "2026-09-30T22:00:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RPHI",
-  "first_seen": "2026-09-29T04:20:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      124.913611,
-      9.058056
-     ],
-     [
-      125.781667,
-      9.227222
-     ],
-     [
-      126.040278,
-      7.978333
-     ],
-     [
-      125.150278,
-      7.83
-     ],
-     [
-      124.913611,
-      9.058056
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RPME",
-  "icao_text": "B5140/26 NOTAMN\r\nQ) RPHI/QWYLW/IV/M  /AW/000/050/0831N12529E048\r\nA) RPME B) 2609302200 C) 2610050600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n090329N 1245449E -\r\n091338N 1254654E -\r\n075842N 1260225E -\r\n074948N 1250901E -\r\n090329N 1245449E\r\n(AGUSAN DEL NORTE AND AGUSAN DEL SUR).\r\nF) SFC G) 5000FT AMSL",
-  "id": "1790655106162000",
-  "issued": "2026-09-29T04:11:00.000Z",
-  "last_updated": "2026-09-29T04:11:00.000Z",
-  "local_text": null,
-  "location": "RPME",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5140/26",
-  "purpose": "M  ",
-  "q_code": "QWYLW",
-  "qline_offset_nm": 0.8,
-  "radius_nm": 48.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "AW",
-  "series": "B",
-  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n090329N 1245449E -\r\n091338N 1254654E -\r\n075842N 1260225E -\r\n074948N 1250901E -\r\n090329N 1245449E\r\n(AGUSAN DEL NORTE AND AGUSAN DEL SUR).",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
- "1790655452523000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "0716N12543E",
-  "effective_end": "2026-10-05T06:00:00.000Z",
-  "effective_start": "2026-09-30T22:00:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RPHI",
-  "first_seen": "2026-09-29T04:20:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      125.150278,
-      7.83
-     ],
-     [
-      126.040278,
-      7.978333
-     ],
-     [
-      126.298056,
-      6.721667
-     ],
-     [
-      125.404167,
-      6.561111
-     ],
-     [
-      125.150278,
-      7.83
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RPHI",
-  "icao_text": "B5141/26 NOTAMN\r\nQ) RPHI/QWYLW/IV/M  /W /000/050/0716N12543E049\r\nA) RPHI B) 2609302200 C) 2610050600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n074948N 1250901E -\r\n075842N 1260225E -\r\n064318N 1261753E -\r\n063340N 1252415E -\r\n074948N 1250901E\r\n(DAVAO DEL NORTE AND DAVAO CITY).\r\nF) SFC G) 5000FT AMSL",
-  "id": "1790655452523000",
-  "issued": "2026-09-29T04:17:00.000Z",
-  "last_updated": "2026-09-29T04:17:00.000Z",
-  "local_text": null,
-  "location": "RPHI",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5141/26",
-  "purpose": "M  ",
-  "q_code": "QWYLW",
-  "qline_offset_nm": 0.5,
-  "radius_nm": 49.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "W ",
-  "series": "B",
-  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n074948N 1250901E -\r\n075842N 1260225E -\r\n064318N 1261753E -\r\n063340N 1252415E -\r\n074948N 1250901E\r\n(DAVAO DEL NORTE AND DAVAO CITY).",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
- "1790655713762000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "0607N12557E",
-  "effective_end": "2026-10-05T06:00:00.000Z",
-  "effective_start": "2026-09-30T22:00:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RPHI",
-  "first_seen": "2026-09-29T04:30:35+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      125.404167,
-      6.561111
-     ],
-     [
-      126.298056,
-      6.721667
-     ],
-     [
-      126.5125,
-      5.695278
-     ],
-     [
-      125.610278,
-      5.513333
-     ],
-     [
-      125.404167,
-      6.561111
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RPHI",
-  "icao_text": "B5142/26 NOTAMN\r\nQ) RPHI/QWYLW/IV/M  /W /000/050/0607N12557E043\r\nA) RPHI B) 2609302200 C) 2610050600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n063340N 1252415E -\r\n064318N 1261753E -\r\n054143N 1263045E -\r\n053048N 1253637E -\r\n063340N 1252415E\r\n(DAVAO GULF).\r\nF) SFC G) 5000FT AMSL",
-  "id": "1790655713762000",
-  "issued": "2026-09-29T04:21:00.000Z",
-  "last_updated": "2026-09-29T04:21:00.000Z",
-  "local_text": null,
-  "location": "RPHI",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5142/26",
-  "purpose": "M  ",
-  "q_code": "QWYLW",
-  "qline_offset_nm": 0.5,
-  "radius_nm": 43.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "W ",
-  "series": "B",
-  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n063340N 1252415E -\r\n064318N 1261753E -\r\n054143N 1263045E -\r\n053048N 1253637E -\r\n063340N 1252415E\r\n(DAVAO GULF).",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
  "1790656372970000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
@@ -132320,6 +132056,270 @@
   "scope": "AW",
   "series": "B",
   "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n094546N 1244137E -\r\n095410N 1252354E -\r\n091048N 1253232E -\r\n090235N 1245003E -\r\n094546N 1244137E\r\n(BUTUAN BAY).",
+  "traffic": "IV",
+  "type": "R",
+  "upper": "5000FT AMSL",
+  "year": "2026"
+ },
+ "1790820721379000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0831N12624E",
+  "effective_end": "2026-10-20T06:00:00.000Z",
+  "effective_start": "2026-10-01T02:11:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-01T02:20:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      125.855278,
+      8.869444
+     ],
+     [
+      126.753333,
+      9.041389
+     ],
+     [
+      126.930278,
+      8.151389
+     ],
+     [
+      126.040278,
+      7.978333
+     ],
+     [
+      125.855278,
+      8.869444
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPMF",
+  "icao_text": "B5217/26 NOTAMR B5139/26\r\nQ) RPHI/QWYLW/IV/M  /AW/000/050/0831N12624E040\r\nA) RPMF B) 2610010211 C) 2610200600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n085210N 1255119E -\r\n090229N 1264512E -\r\n080905N 1265549E -\r\n075842N 1260225E -\r\n085210N 1255119E\r\n(LIANGA AND BISLIG BAY).\r\nF) SFC G) 5000FT AMSL",
+  "id": "1790820721379000",
+  "issued": "2026-10-01T02:11:00.000Z",
+  "last_updated": "2026-10-01T02:12:00.000Z",
+  "local_text": null,
+  "location": "RPMF",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5217/26",
+  "purpose": "M  ",
+  "q_code": "QWYLW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 40.0,
+  "ref_number": "B5139/26",
+  "schedule": null,
+  "scope": "AW",
+  "series": "B",
+  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n085210N 1255119E -\r\n090229N 1264512E -\r\n080905N 1265549E -\r\n075842N 1260225E -\r\n085210N 1255119E\r\n(LIANGA AND BISLIG BAY).",
+  "traffic": "IV",
+  "type": "R",
+  "upper": "5000FT AMSL",
+  "year": "2026"
+ },
+ "1790820850942000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0831N12529E",
+  "effective_end": "2026-10-20T06:00:00.000Z",
+  "effective_start": "2026-10-01T02:13:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-01T02:20:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      124.913611,
+      9.058056
+     ],
+     [
+      125.781667,
+      9.227222
+     ],
+     [
+      126.040278,
+      7.978333
+     ],
+     [
+      125.150278,
+      7.83
+     ],
+     [
+      124.913611,
+      9.058056
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPME",
+  "icao_text": "B5218/26 NOTAMR B5140/26\r\nQ) RPHI/QWYLW/IV/M  /AW/000/050/0831N12529E048\r\nA) RPME B) 2610010213 C) 2610200600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n090329N 1245449E -\r\n091338N 1254654E -\r\n075842N 1260225E -\r\n074948N 1250901E -\r\n090329N 1245449E\r\n(AGUSAN DEL NORTE AND AGUSAN DEL SUR).\r\nF) SFC G) 5000FT AMSL",
+  "id": "1790820850942000",
+  "issued": "2026-10-01T02:13:00.000Z",
+  "last_updated": "2026-10-01T02:14:00.000Z",
+  "local_text": null,
+  "location": "RPME",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5218/26",
+  "purpose": "M  ",
+  "q_code": "QWYLW",
+  "qline_offset_nm": 0.8,
+  "radius_nm": 48.0,
+  "ref_number": "B5140/26",
+  "schedule": null,
+  "scope": "AW",
+  "series": "B",
+  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n090329N 1245449E -\r\n091338N 1254654E -\r\n075842N 1260225E -\r\n074948N 1250901E -\r\n090329N 1245449E\r\n(AGUSAN DEL NORTE AND AGUSAN DEL SUR).",
+  "traffic": "IV",
+  "type": "R",
+  "upper": "5000FT AMSL",
+  "year": "2026"
+ },
+ "1790820970818000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0716N12543E",
+  "effective_end": "2026-10-20T06:00:00.000Z",
+  "effective_start": "2026-10-01T02:15:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-01T02:20:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      125.150278,
+      7.83
+     ],
+     [
+      126.040278,
+      7.978333
+     ],
+     [
+      126.298056,
+      6.721667
+     ],
+     [
+      125.404167,
+      6.561111
+     ],
+     [
+      125.150278,
+      7.83
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPHI",
+  "icao_text": "B5219/26 NOTAMR B5141/26\r\nQ) RPHI/QWYLW/IV/M  /W /000/050/0716N12543E049\r\nA) RPHI B) 2610010215 C) 2610200600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n074948N 1250901E -\r\n075842N 1260225E -\r\n064318N 1261753E -\r\n063340N 1252415E -\r\n074948N 1250901E\r\n(DAVAO DEL NORTE AND DAVAO CITY).\r\nF) SFC G) 5000FT AMSL",
+  "id": "1790820970818000",
+  "issued": "2026-10-01T02:15:00.000Z",
+  "last_updated": "2026-10-01T02:16:00.000Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5219/26",
+  "purpose": "M  ",
+  "q_code": "QWYLW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 49.0,
+  "ref_number": "B5141/26",
+  "schedule": null,
+  "scope": "W ",
+  "series": "B",
+  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n074948N 1250901E -\r\n075842N 1260225E -\r\n064318N 1261753E -\r\n063340N 1252415E -\r\n074948N 1250901E\r\n(DAVAO DEL NORTE AND DAVAO CITY).",
+  "traffic": "IV",
+  "type": "R",
+  "upper": "5000FT AMSL",
+  "year": "2026"
+ },
+ "1790821159235000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0607N12557E",
+  "effective_end": "2026-10-20T06:00:00.000Z",
+  "effective_start": "2026-10-01T02:19:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-01T02:20:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      125.404167,
+      6.561111
+     ],
+     [
+      126.298056,
+      6.721667
+     ],
+     [
+      126.5125,
+      5.695278
+     ],
+     [
+      125.610278,
+      5.513333
+     ],
+     [
+      125.404167,
+      6.561111
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPHI",
+  "icao_text": "B5220/26 NOTAMR B5142/26\r\nQ) RPHI/QWYLW/IV/M  /W /000/050/0607N12557E043\r\nA) RPHI B) 2610010219 C) 2610200600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n063340N 1252415E -\r\n064318N 1261753E -\r\n054143N 1263045E -\r\n053048N 1253637E -\r\n063340N 1252415E\r\n(DAVAO GULF).\r\nF) SFC G) 5000FT AMSL",
+  "id": "1790821159235000",
+  "issued": "2026-10-01T02:19:00.000Z",
+  "last_updated": "2026-10-01T02:19:00.000Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5220/26",
+  "purpose": "M  ",
+  "q_code": "QWYLW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 43.0,
+  "ref_number": "B5142/26",
+  "schedule": null,
+  "scope": "W ",
+  "series": "B",
+  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n063340N 1252415E -\r\n064318N 1261753E -\r\n054143N 1263045E -\r\n053048N 1253637E -\r\n063340N 1252415E\r\n(DAVAO GULF).",
   "traffic": "IV",
   "type": "R",
   "upper": "5000FT AMSL",
