@@ -576,6 +576,15 @@ _FAKE_AIP = {
 class TextShapes20260929(unittest.TestCase):
     """2026-09-29 日次チェックで見つけた読み漏れ(索引は不要)。"""
 
+    def test_seconds_sixty_carry(self):
+        # KZAK A4776/26: 秒がちょうど60の誤記(342460N = 34°25′00″)
+        rings = C.text_rings("ZAK AIRSPACE DCC KELLY THREE STNR ALT RESERVATION WI AN AREA DEFINED AS "
+                             "80NM RADIUS OF 342460N1293000W")
+        self.assertEqual(len(rings), 1)
+        lat_c = sum(p[1] for p in rings[0][:-1]) / (len(rings[0]) - 1)
+        self.assertAlmostEqual(lat_c, 34 + 25 / 60, delta=0.05)
+        self.assertIsNone(C._dms("342461", 2))                   # 61秒は読まない
+
     def test_symbol_first_with_decimal_seconds(self):
         # ZGZU G3522/26・G4364/26: 記号が先で秒に小数が付く座標
         e = ("ADD TEMPO MOVING OBSTACLE MARKED WITH LGTS WI FLW AREA: N223141.6E1135759.5-N223141.6E1135806.0-"

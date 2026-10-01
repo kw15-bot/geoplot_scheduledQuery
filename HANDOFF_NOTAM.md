@@ -852,3 +852,5 @@ NOTAMモードの地図ツールバーに「レイヤー」ボタンを置き、
   （B N31°39.8′ E117°59.8′ 〜 E N31°32.0′ E119°02.0′ の東西の制限線、「6.1 All aircraft flying across south of restriction line ... forbidden」。ユーザーから PDF を受領し ZSNJ AD 2.20「6. Warning 6.1」（AIRAC AMDT 09/26、EFF2609021600）と確定、
   `NAMED_LINES` に登録。本文に ZSNJ/NANJING/LUKOU のどれかと RESTRICTION LINE/CONTROL LINE/B-C-D-E のどれかがあれば線にする）。
 - 日次レポート §7 の理由に「AIPの図（名前）を参照しているが点が未登録」を追加（`aip_chart_areas.chart_refs_missing()`）。図を送ってもらえば登録できる。
+- 2026-10-01 日次チェックで修正: 秒がちょうど60の誤記 `80NM RADIUS OF 342460N1293000W`（KZAK A4776/26 ALTRV KELLY THREE、34°24′60″=34°25′）を繰り上げて読む（`_dms`、61秒以上は従来どおり読まない）。api-point → text-polygon（80NMの円）。
+- 2026-10-01 追加: `notam_backfill_text_polygon.py --apply --rebuild-geojson` で、変更が無くても `notam_cn.geojson` を state_active.json から作り直す（main との衝突で notam_cn.geojson だけ main 側を採ったとき、修正が地図用データから落ちるのを防ぐ）。
