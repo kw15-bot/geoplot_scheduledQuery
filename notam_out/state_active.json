@@ -37865,46 +37865,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790673471754000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-02T09:15:00.000Z",
-  "effective_start": "2026-09-29T09:15:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZWUQ",
-  "first_seen": "2026-09-29T09:20:34+00:00",
-  "geometry": null,
-  "geometry_source": null,
-  "icao_location": "ZWUQ",
-  "icao_text": "A5008/26 NOTAMC A4972/26\r\nQ)ZWUQ/QARAK//M//000/999/\r\nA)ZWUQ B)2609290915 \r\nE) CNL NTM.",
-  "id": "1790673471754000",
-  "issued": "2026-09-29T09:17:00.000Z",
-  "last_updated": "2026-10-01T00:46:00.000Z",
-  "local_text": null,
-  "location": "ZWUQ",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A5008/26",
-  "purpose": "M",
-  "q_code": "QARAK",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "A4972/26",
-  "schedule": null,
-  "scope": null,
-  "series": "A",
-  "text": "CNL NTM.",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
  "1790673701264000": {
   "account_id": "RCTPYNYX",
   "area_group": "TW",
@@ -135154,6 +135114,358 @@
   "scope": "W",
   "series": "A",
   "text": "A3635/26 NOTAMC A3326/26\r\nQ) RCAA/QWECC/IV/BO/W/000/250/2215N12107E021\r\nA) RCAA\r\nB) 2610010815\r\nE) AIR EXER CMPL.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790845837388000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2219N12115E",
+  "effective_end": "2026-10-04T08:21:00Z",
+  "effective_start": "2026-10-01T08:21:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-01T09:20:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.25,
+      22.732585
+     ],
+     [
+      121.294068,
+      22.730582
+     ],
+     [
+      121.337711,
+      22.724593
+     ],
+     [
+      121.38051,
+      22.714675
+     ],
+     [
+      121.422052,
+      22.700925
+     ],
+     [
+      121.461937,
+      22.683474
+     ],
+     [
+      121.49978,
+      22.66249
+     ],
+     [
+      121.535219,
+      22.638176
+     ],
+     [
+      121.56791,
+      22.610765
+     ],
+     [
+      121.59754,
+      22.580522
+     ],
+     [
+      121.623823,
+      22.547738
+     ],
+     [
+      121.646506,
+      22.512729
+     ],
+     [
+      121.66537,
+      22.475832
+     ],
+     [
+      121.680234,
+      22.437401
+     ],
+     [
+      121.690954,
+      22.397808
+     ],
+     [
+      121.697428,
+      22.357434
+     ],
+     [
+      121.699593,
+      22.316667
+     ],
+     [
+      121.697428,
+      22.2759
+     ],
+     [
+      121.690954,
+      22.235525
+     ],
+     [
+      121.680234,
+      22.195932
+     ],
+     [
+      121.66537,
+      22.157502
+     ],
+     [
+      121.646506,
+      22.120604
+     ],
+     [
+      121.623823,
+      22.085595
+     ],
+     [
+      121.59754,
+      22.052811
+     ],
+     [
+      121.56791,
+      22.022568
+     ],
+     [
+      121.535219,
+      21.995158
+     ],
+     [
+      121.49978,
+      21.970843
+     ],
+     [
+      121.461937,
+      21.94986
+     ],
+     [
+      121.422052,
+      21.932408
+     ],
+     [
+      121.38051,
+      21.918658
+     ],
+     [
+      121.337711,
+      21.90874
+     ],
+     [
+      121.294068,
+      21.902751
+     ],
+     [
+      121.25,
+      21.900749
+     ],
+     [
+      121.205932,
+      21.902751
+     ],
+     [
+      121.162289,
+      21.90874
+     ],
+     [
+      121.11949,
+      21.918658
+     ],
+     [
+      121.077948,
+      21.932408
+     ],
+     [
+      121.038063,
+      21.94986
+     ],
+     [
+      121.00022,
+      21.970843
+     ],
+     [
+      120.964781,
+      21.995158
+     ],
+     [
+      120.93209,
+      22.022568
+     ],
+     [
+      120.90246,
+      22.052811
+     ],
+     [
+      120.876177,
+      22.085595
+     ],
+     [
+      120.853494,
+      22.120604
+     ],
+     [
+      120.83463,
+      22.157502
+     ],
+     [
+      120.819766,
+      22.195932
+     ],
+     [
+      120.809046,
+      22.235525
+     ],
+     [
+      120.802572,
+      22.2759
+     ],
+     [
+      120.800407,
+      22.316667
+     ],
+     [
+      120.802572,
+      22.357434
+     ],
+     [
+      120.809046,
+      22.397808
+     ],
+     [
+      120.819766,
+      22.437401
+     ],
+     [
+      120.83463,
+      22.475832
+     ],
+     [
+      120.853494,
+      22.512729
+     ],
+     [
+      120.876177,
+      22.547738
+     ],
+     [
+      120.90246,
+      22.580522
+     ],
+     [
+      120.93209,
+      22.610765
+     ],
+     [
+      120.964781,
+      22.638176
+     ],
+     [
+      121.00022,
+      22.66249
+     ],
+     [
+      121.038063,
+      22.683474
+     ],
+     [
+      121.077948,
+      22.700925
+     ],
+     [
+      121.11949,
+      22.714675
+     ],
+     [
+      121.162289,
+      22.724593
+     ],
+     [
+      121.205932,
+      22.730582
+     ],
+     [
+      121.25,
+      22.732585
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCAA",
+  "icao_text": "A3636/26 NOTAMC A3328/26\r\nQ) RCAA/QWMCN/IV/BO/W/000/999/2219N12115E025\r\nA) RCAA\r\nB) 2610010821\r\nE) GUN FRNG CNL.",
+  "id": "1790845837388000",
+  "issued": "2026-10-01T08:21:00Z",
+  "last_updated": "2026-10-01T09:11:00Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3636/26",
+  "purpose": "BO",
+  "q_code": "QWMCN",
+  "qline_offset_nm": null,
+  "radius_nm": 25.0,
+  "ref_number": "A3328/26",
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "A3636/26 NOTAMC A3328/26\r\nQ) RCAA/QWMCN/IV/BO/W/000/999/2219N12115E025\r\nA) RCAA\r\nB) 2610010821\r\nE) GUN FRNG CNL.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790846273012000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2502N12039E",
+  "effective_end": "2026-10-04T08:22:00Z",
+  "effective_start": "2026-10-01T08:22:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-01T09:20:28+00:00",
+  "geometry": {
+   "coordinates": [
+    120.65,
+    25.033333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RCAA",
+  "icao_text": "A3637/26 NOTAMC A3329/26\r\nQ) RCAA/QARXX/IV/NBO/E/000/999/2502N12039E299\r\nA) RCAA\r\nB) 2610010822\r\nE) ROUTE RESTRICTIONS CNL.",
+  "id": "1790846273012000",
+  "issued": "2026-10-01T08:22:00Z",
+  "last_updated": "2026-10-01T09:18:00Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3637/26",
+  "purpose": "NBO",
+  "q_code": "QARXX",
+  "qline_offset_nm": null,
+  "radius_nm": 299.0,
+  "ref_number": "A3329/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "A3637/26 NOTAMC A3329/26\r\nQ) RCAA/QARXX/IV/NBO/E/000/999/2502N12039E299\r\nA) RCAA\r\nB) 2610010822\r\nE) ROUTE RESTRICTIONS CNL.",
   "traffic": "IV",
   "type": "C",
   "upper": null,
