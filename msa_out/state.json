@@ -58647,5 +58647,17 @@
     "revoked": false,
     "title": "拖带作业—津航警217/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ffd118e8ac0a43758f8ce82569126866.html?hav=1jWj6r2hy2JdE5xfLWl5eo8KU1"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ffe22e02e2c0469fbb3bf94ae04fd888.html": {
+    "bureau": "天津海事局",
+    "date": "2026-10-01",
+    "detail_fetched": false,
+    "first_seen": "2026-10-01T13:10:37+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "施工作业—津航警345/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ffe22e02e2c0469fbb3bf94ae04fd888.html"
   }
 }
