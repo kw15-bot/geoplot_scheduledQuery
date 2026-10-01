@@ -254,7 +254,8 @@ def _dms(digits, deg_len):
     sec = int(digits[deg_len + 2:deg_len + 4]) if len(digits) > deg_len + 2 else 0
     if frac and len(digits) > deg_len + 2:
         sec += float("0." + frac)
-    if m >= 60 or sec >= 60:
+    # 秒がちょうど60の誤記(342460N = 34°24′60″ = 34°25′。KZAK A4776/26で確認)は繰り上げて読む
+    if m >= 60 or sec > 60:
         return None
     return d + m / 60.0 + sec / 3600.0
 
