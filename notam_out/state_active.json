@@ -13661,250 +13661,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790590582729900": {
-  "account_id": "CARF",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "DOM",
-  "coordinates": null,
-  "effective_end": "2026-10-01T05:00:00Z",
-  "effective_start": "2026-09-30T23:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-09-28T10:20:28+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      -124.316667,
-      36.333333
-     ],
-     [
-      -123.0,
-      35.483333
-     ],
-     [
-      -122.166667,
-      35.316667
-     ],
-     [
-      -121.65,
-      35.55
-     ],
-     [
-      -121.533333,
-      35.616667
-     ],
-     [
-      -121.1,
-      35.25
-     ],
-     [
-      -120.8,
-      35.066667
-     ],
-     [
-      -120.7,
-      35.0
-     ],
-     [
-      -120.5,
-      34.766667
-     ],
-     [
-      -120.533333,
-      34.65
-     ],
-     [
-      -120.5,
-      34.4
-     ],
-     [
-      -120.916667,
-      34.266667
-     ],
-     [
-      -120.983333,
-      34.183333
-     ],
-     [
-      -121.433333,
-      34.116667
-     ],
-     [
-      -122.633333,
-      33.783333
-     ],
-     [
-      -122.833333,
-      34.083333
-     ],
-     [
-      -125.533333,
-      35.85
-     ],
-     [
-      -124.9,
-      36.516667
-     ],
-     [
-      -124.316667,
-      36.333333
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "KZAK",
-  "icao_text": null,
-  "id": "1790590582729900",
-  "issued": "2026-09-28T10:15:00Z",
-  "last_updated": "2026-09-28T10:15:00Z",
-  "local_text": "!CARF 09/349 ZAK AIRSPACE DCC QUEEN OF THE SKIES 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS 362000N1241900W TO 352900N1230000W TO 351900N1221000W TO 353300N1213900W TO 353700N1213200W TO 351500N1210600W TO 350400N1204800W TO 350000N1204200W TO 344600N1203000W TO 343900N1203200W TO 342400N1203000W TO 341600N1205500W TO 341100N1205900W TO 340700N1212600W TO 334700N1223800W TO 340500N1225000W TO 355100N1253200W TO 363100N1245400W TO POINT OF ORIGIN SFC-UNL 2609302300-2610010500",
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": null,
-  "min_fl": null,
-  "number": "09/349",
-  "purpose": null,
-  "q_code": "QRACA",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": null,
-  "text": "!CARF 09/349 ZAK AIRSPACE DCC QUEEN OF THE SKIES 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS 362000N1241900W TO 352900N1230000W TO 351900N1221000W TO 353300N1213900W TO 353700N1213200W TO 351500N1210600W TO 350400N1204800W TO 350000N1204200W TO 344600N1203000W TO 343900N1203200W TO 342400N1203000W TO 341600N1205500W TO 341100N1205900W TO 340700N1212600W TO 334700N1223800W TO 340500N1225000W TO 355100N1253200W TO 363100N1245400W TO POINT OF ORIGIN SFC-UNL",
-  "traffic": null,
-  "type": null,
-  "upper": "UNL",
-  "year": "2026"
- },
- "1790590582902249": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-01T05:00:00Z",
-  "effective_start": "2026-09-30T23:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-09-28T10:20:28+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      -124.316667,
-      36.333333
-     ],
-     [
-      -123.0,
-      35.483333
-     ],
-     [
-      -122.166667,
-      35.316667
-     ],
-     [
-      -121.65,
-      35.55
-     ],
-     [
-      -121.533333,
-      35.616667
-     ],
-     [
-      -121.1,
-      35.25
-     ],
-     [
-      -120.8,
-      35.066667
-     ],
-     [
-      -120.7,
-      35.0
-     ],
-     [
-      -120.5,
-      34.766667
-     ],
-     [
-      -120.533333,
-      34.65
-     ],
-     [
-      -120.5,
-      34.4
-     ],
-     [
-      -120.916667,
-      34.266667
-     ],
-     [
-      -120.983333,
-      34.183333
-     ],
-     [
-      -121.433333,
-      34.116667
-     ],
-     [
-      -122.633333,
-      33.783333
-     ],
-     [
-      -122.833333,
-      34.083333
-     ],
-     [
-      -125.533333,
-      35.85
-     ],
-     [
-      -124.9,
-      36.516667
-     ],
-     [
-      -124.316667,
-      36.333333
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "KZAK",
-  "icao_text": "A4721/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/999/\nA) KZAK\nB) 2609302300\nC) 2610010500\nE) ZAK AIRSPACE DCC QUEEN OF THE SKIES 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS 362000N1241900W TO 352900N1230000W TO 351900N1221000W TO 353300N1213900W TO 353700N1213200W TO 351500N1210600W TO 350400N1204800W TO 350000N1204200W TO 344600N1203000W TO 343900N1203200W TO 342400N1203000W TO 341600N1205500W TO 341100N1205900W TO 340700N1212600W TO 334700N1223800W TO 340500N1225000W TO 355100N1253200W TO 363100N1245400W TO POINT OF ORIGIN\nF) SFC\nG) UNL",
-  "id": "1790590582902249",
-  "issued": "2026-09-28T10:15:00Z",
-  "last_updated": "2026-09-28T10:15:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A4721/26",
-  "purpose": "NBO",
-  "q_code": "QRACA",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "W",
-  "series": "A",
-  "text": "ZAK AIRSPACE DCC QUEEN OF THE SKIES 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS 362000N1241900W TO 352900N1230000W TO 351900N1221000W TO 353300N1213900W TO 353700N1213200W TO 351500N1210600W TO 350400N1204800W TO 350000N1204200W TO 344600N1203000W TO 343900N1203200W TO 342400N1203000W TO 341600N1205500W TO 341100N1205900W TO 340700N1212600W TO 334700N1223800W TO 340500N1225000W TO 355100N1253200W TO 363100N1245400W TO POINT OF ORIGIN",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "UNL",
-  "year": "2026"
- },
  "1790591354378000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -131814,6 +131570,52 @@
   "text": "CHECKLIST \r\nYEAR=2025 0162 0519 \r\nYEAR=2026 0812 0846 0859 0930 0937 0990 0991 1013 1027 1040 1041 \r\n1043 1044 1047 1054 1059 1139 1166 1167 1168 1178 1207 1257 1332 \r\n1419 1454 1465 1466 1478 1480 1481 1482 1483 1484 1485 1487 \r\nLATEST PUBLICATIONS\r\nAIP-AMDT:NR.11/26(2026-9-17)\r\nAIP-SUP:NR.22/26(2026-9-17)\r\nAIC:NR.12/26(2026-9-17)\r\nCHECKLIST OF AIP SUPPLEMENTS IN FORCE:\r\n05/08,16/21,16/25,17/25,04/26,08/26,09/26,13/26,14/26,16/26,17/26,1\r\n8/26,19/26,20/26,21/26,22/26\r\nCHECKLIST OF AIC IN FORCE:\r\n01/04,06/07,02/13,04/15,10/20,02/21,05/21,10/21,11/21,01/23,09/23,1\r\n0/23,14/24,21/24,04/25,09/25,14/25,02/26,03/26,04/26,05/26,06/26,07\r\n/26,08/26,10/26,11/26,12/26.",
   "traffic": "K",
   "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790816874696270": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-04T01:06:00Z",
+  "effective_start": "2026-10-01T01:06:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-01T01:10:27+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4787/26 NOTAMC A4721/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2610010106\nE) ZAK AIRSPACE DCC QUEEN OF THE SKIES 26-4 STNR ALT RESERVATION WI AN A\nCANCELED",
+  "id": "1790816874696270",
+  "issued": "2026-10-01T01:06:00Z",
+  "last_updated": "2026-10-01T01:07:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4787/26",
+  "purpose": "NBO",
+  "q_code": "QRAXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "A4721/26",
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "A4787/26 NOTAMC A4721/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2610010106\nE) ZAK AIRSPACE DCC QUEEN OF THE SKIES 26-4 STNR ALT RESERVATION WI AN A\nCANCELED",
+  "traffic": "IV",
+  "type": "C",
   "upper": null,
   "year": "2026"
  }
