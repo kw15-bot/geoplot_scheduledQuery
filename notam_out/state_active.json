@@ -75433,52 +75433,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790745739595000": {
-  "account_id": "RCTPYNYX",
-  "area_group": "TW",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2502N12039E",
-  "effective_end": "2026-10-07T07:50:00.000Z",
-  "effective_start": "2026-09-30T05:30:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RCAA",
-  "first_seen": "2026-09-30T05:30:36+00:00",
-  "geometry": {
-   "coordinates": [
-    120.65,
-    25.033333
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "RCAA",
-  "icao_text": "A3592/26 NOTAMN\r\nQ) RCAA/QARLT/IV/NBO/E/000/999/2502N12039E299\r\nA) RCAA\r\nB) 2609300530 C) 2610070750\r\nD) SEP 30 0530-0750,\r\nOCT 01 06 07 0500-0750\r\nE) ROUTE RESTRICTIONS DUE TO GUN FRNG (REF NOTAM A3590/26) AS FLW:\r\n1.AFFECTED ROUTE:\r\n  AWY B591 BTN GID AND HCN,\r\n  AWY G581 BTN TULTO AND HCN,\r\n  Q11, Q12, Q13, J5 TRANSITION.\r\n2.TFC DEP FM RCTP VIA AWY B591/Q11 WILL CHANGE RTE VIA THE WEST\r\n  COAST USING T5 RNAV TRANSITION, FM PARPA DCT POTIB.\r\n3.TFC FROM SALMI OR BULAN VIA AWY B591/Q11 WILL CHANGE RTE VIA \r\n  THE WEST COAST USING DRAKE A1 APU W4 TO TNN JOIN AWY A577/Q14.\r\n4.THE BLOCKED TIME AT EACH POINT OF BDRY FOR INBD TFC VIA GUN FRNG\r\n  AREA AS FLW:\r\n  ELATO, ENVAR AND KAPLI: \r\n  SEP 30 0530-0745, OCT 01 06 07 0500-0745\r\n  IGURU: SEP 30 0550-0750, OCT 01 06 07 0520-0750\r\n  GUMBO: SEP 30 0610-0750, OCT 01 06 07 0540-0750",
-  "id": "1790745739595000",
-  "issued": "2026-09-30T05:22:00.000Z",
-  "last_updated": "2026-09-30T05:22:00.000Z",
-  "local_text": null,
-  "location": "RCAA",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A3592/26",
-  "purpose": "NBO",
-  "q_code": "QARLT",
-  "qline_offset_nm": null,
-  "radius_nm": 299.0,
-  "ref_number": null,
-  "schedule": "SEP 30 0530-0750,\r\nOCT 01 06 07 0500-0750",
-  "scope": "E",
-  "series": "A",
-  "text": "ROUTE RESTRICTIONS DUE TO GUN FRNG (REF NOTAM A3590/26) AS FLW:\r\n1.AFFECTED ROUTE:\r\n  AWY B591 BTN GID AND HCN,\r\n  AWY G581 BTN TULTO AND HCN,\r\n  Q11, Q12, Q13, J5 TRANSITION.\r\n2.TFC DEP FM RCTP VIA AWY B591/Q11 WILL CHANGE RTE VIA THE WEST\r\n  COAST USING T5 RNAV TRANSITION, FM PARPA DCT POTIB.\r\n3.TFC FROM SALMI OR BULAN VIA AWY B591/Q11 WILL CHANGE RTE VIA \r\n  THE WEST COAST USING DRAKE A1 APU W4 TO TNN JOIN AWY A577/Q14.\r\n4.THE BLOCKED TIME AT EACH POINT OF BDRY FOR INBD TFC VIA GUN FRNG\r\n  AREA AS FLW:\r\n  ELATO, ENVAR AND KAPLI: \r\n  SEP 30 0530-0745, OCT 01 06 07 0500-0745\r\n  IGURU: SEP 30 0550-0750, OCT 01 06 07 0520-0750\r\n  GUMBO: SEP 30 0610-0750, OCT 01 06 07 0540-0750",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790745959337000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -133258,6 +133212,358 @@
   "text": "GUN FRNG CMPL.",
   "traffic": "IV",
   "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790822456872000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2502N12039E",
+  "effective_end": "2026-10-04T02:40:00Z",
+  "effective_start": "2026-10-01T02:40:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-01T02:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    120.65,
+    25.033333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RCAA",
+  "icao_text": "A3630/26 NOTAMC A3592/26\r\nQ) RCAA/QARCC/IV/NBO/E/000/999/2502N12039E299\r\nA) RCAA\r\nB) 2610010240\r\nE) ROUTE RESTRICTIONS CMPL.",
+  "id": "1790822456872000",
+  "issued": "2026-10-01T02:40:00Z",
+  "last_updated": "2026-10-01T02:41:00Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3630/26",
+  "purpose": "NBO",
+  "q_code": "QARCC",
+  "qline_offset_nm": null,
+  "radius_nm": 299.0,
+  "ref_number": "A3592/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "A3630/26 NOTAMC A3592/26\r\nQ) RCAA/QARCC/IV/NBO/E/000/999/2502N12039E299\r\nA) RCAA\r\nB) 2610010240\r\nE) ROUTE RESTRICTIONS CMPL.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790822576321000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2240N12028E",
+  "effective_end": "2026-10-04T10:00:00Z",
+  "effective_start": "2026-10-03T00:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-01T02:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.466667,
+      22.74985
+     ],
+     [
+      120.475503,
+      22.74945
+     ],
+     [
+      120.484253,
+      22.748252
+     ],
+     [
+      120.492835,
+      22.746268
+     ],
+     [
+      120.501164,
+      22.743518
+     ],
+     [
+      120.509161,
+      22.740028
+     ],
+     [
+      120.516749,
+      22.735831
+     ],
+     [
+      120.523855,
+      22.730968
+     ],
+     [
+      120.53041,
+      22.725486
+     ],
+     [
+      120.536351,
+      22.719438
+     ],
+     [
+      120.541621,
+      22.712881
+     ],
+     [
+      120.546169,
+      22.705879
+     ],
+     [
+      120.549951,
+      22.6985
+     ],
+     [
+      120.552931,
+      22.690814
+     ],
+     [
+      120.555081,
+      22.682895
+     ],
+     [
+      120.556379,
+      22.67482
+     ],
+     [
+      120.556813,
+      22.666667
+     ],
+     [
+      120.556379,
+      22.658513
+     ],
+     [
+      120.555081,
+      22.650438
+     ],
+     [
+      120.552931,
+      22.64252
+     ],
+     [
+      120.549951,
+      22.634834
+     ],
+     [
+      120.546169,
+      22.627454
+     ],
+     [
+      120.541621,
+      22.620452
+     ],
+     [
+      120.536351,
+      22.613896
+     ],
+     [
+      120.53041,
+      22.607847
+     ],
+     [
+      120.523855,
+      22.602365
+     ],
+     [
+      120.516749,
+      22.597502
+     ],
+     [
+      120.509161,
+      22.593305
+     ],
+     [
+      120.501164,
+      22.589815
+     ],
+     [
+      120.492835,
+      22.587065
+     ],
+     [
+      120.484253,
+      22.585081
+     ],
+     [
+      120.475503,
+      22.583884
+     ],
+     [
+      120.466667,
+      22.583483
+     ],
+     [
+      120.457831,
+      22.583884
+     ],
+     [
+      120.44908,
+      22.585081
+     ],
+     [
+      120.440499,
+      22.587065
+     ],
+     [
+      120.432169,
+      22.589815
+     ],
+     [
+      120.424172,
+      22.593305
+     ],
+     [
+      120.416584,
+      22.597502
+     ],
+     [
+      120.409478,
+      22.602365
+     ],
+     [
+      120.402924,
+      22.607847
+     ],
+     [
+      120.396983,
+      22.613896
+     ],
+     [
+      120.391713,
+      22.620452
+     ],
+     [
+      120.387165,
+      22.627454
+     ],
+     [
+      120.383382,
+      22.634834
+     ],
+     [
+      120.380402,
+      22.64252
+     ],
+     [
+      120.378253,
+      22.650438
+     ],
+     [
+      120.376954,
+      22.658513
+     ],
+     [
+      120.37652,
+      22.666667
+     ],
+     [
+      120.376954,
+      22.67482
+     ],
+     [
+      120.378253,
+      22.682895
+     ],
+     [
+      120.380402,
+      22.690814
+     ],
+     [
+      120.383382,
+      22.6985
+     ],
+     [
+      120.387165,
+      22.705879
+     ],
+     [
+      120.391713,
+      22.712881
+     ],
+     [
+      120.396983,
+      22.719438
+     ],
+     [
+      120.402924,
+      22.725486
+     ],
+     [
+      120.409478,
+      22.730968
+     ],
+     [
+      120.416584,
+      22.735831
+     ],
+     [
+      120.424172,
+      22.740028
+     ],
+     [
+      120.432169,
+      22.743518
+     ],
+     [
+      120.440499,
+      22.746268
+     ],
+     [
+      120.44908,
+      22.748252
+     ],
+     [
+      120.457831,
+      22.74945
+     ],
+     [
+      120.466667,
+      22.74985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCDC",
+  "icao_text": "A3631/26 NOTAMN\r\nQ) RCAA/QMHXX/IV/BO/A/000/999/2240N12028E005\r\nA) RCDC\r\nB) 2610030000 C) 2610041000\r\nE) ARST EQPT MA-1A FOR RWY 09 WIP.\r\nACFT CTN ADZ.",
+  "id": "1790822576321000",
+  "issued": "2026-10-01T02:42:00Z",
+  "last_updated": "2026-10-01T02:43:00Z",
+  "local_text": null,
+  "location": "RCDC",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3631/26",
+  "purpose": "BO",
+  "q_code": "QMHXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "A",
+  "text": "ARST EQPT MA-1A FOR RWY 09 WIP.\r\nACFT CTN ADZ.",
+  "traffic": "IV",
+  "type": "N",
   "upper": null,
   "year": "2026"
  }
