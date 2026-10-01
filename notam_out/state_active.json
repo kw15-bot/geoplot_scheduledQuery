@@ -112569,98 +112569,6 @@
   "upper": "FL800",
   "year": "2026"
  },
- "1790801168394947": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-01T20:19:00Z",
-  "effective_start": "2026-10-01T18:08:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-09-30T20:50:28+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": "A4781/26 NOTAMN\nQ) KZAK/QROLT/IV/NBO/W/000/800/\nA) KZAK\nB) 2610011808\nC) 2610012019\nE) AIRSPACE W291W ACT\nF) SFC\nG) FL800",
-  "id": "1790801168394947",
-  "issued": "2026-09-30T20:45:00Z",
-  "last_updated": "2026-09-30T20:46:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": "800",
-  "min_fl": "000",
-  "number": "A4781/26",
-  "purpose": "NBO",
-  "q_code": "QROLT",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "W",
-  "series": "A",
-  "text": "AIRSPACE W291W ACT",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "FL800",
-  "year": "2026"
- },
- "1790801170711778": {
-  "account_id": "SUAW",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "DOM",
-  "coordinates": null,
-  "effective_end": "2026-10-01T20:19:00Z",
-  "effective_start": "2026-10-01T18:08:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-09-30T20:50:28+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": null,
-  "id": "1790801170711778",
-  "issued": "2026-09-30T20:45:00Z",
-  "last_updated": "2026-09-30T20:46:00Z",
-  "local_text": "!SUAW 09/426 ZAK AIRSPACE W291W ACT SFC-FL800 2610011808-2610012019",
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": null,
-  "min_fl": null,
-  "number": "09/426",
-  "purpose": null,
-  "q_code": "QROLT",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": null,
-  "text": "!SUAW 09/426 ZAK AIRSPACE W291W ACT SFC-FL800",
-  "traffic": null,
-  "type": null,
-  "upper": "FL800",
-  "year": "2026"
- },
  "1790801648898025": {
   "account_id": "KZAK",
   "area_group": "REF",
@@ -138723,6 +138631,98 @@
   "traffic": "IV",
   "type": "C",
   "upper": null,
+  "year": "2026"
+ },
+ "1790885557484133": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-14T04:53:00Z",
+  "effective_start": "2026-10-07T03:33:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-01T20:20:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      [
+       128.689722,
+       21.493889
+      ],
+      [
+       129.897222,
+       21.633056
+      ],
+      [
+       130.293333,
+       18.495278
+      ],
+      [
+       129.109444,
+       18.356111
+      ],
+      [
+       128.689722,
+       21.493889
+      ]
+     ]
+    ],
+    [
+     [
+      [
+       129.433889,
+       12.750556
+      ],
+      [
+       131.083056,
+       12.921389
+      ],
+      [
+       131.570278,
+       8.246944
+      ],
+      [
+       129.946111,
+       8.075833
+      ],
+      [
+       129.433889,
+       12.750556
+      ]
+     ]
+    ]
+   ],
+   "type": "MultiPolygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4799/26 NOTAMN\nQ) KZAK/QRALW/IV/NBO/W/000/999/\nA) KZAK\nB) 2610070333\nC) 2610140453\nD) DLY 0333-0453\nE) THE KOREA AEROSPACE RESEARCH INSTITUTE HAS PLANNED A SPACE VEHICLE LAUNCH. DEBRIS FROM THIS LAUNCH WILL FALL WI TWO SEPARATE AREAS. THE FAIRING AREA IS DEFINED AS 212938N 1284123E 213759N 1295350E 182943N 1301736E 182122N 1290634E TO POINT OF ORIGIN. THE SECOND STAGE AREA IS DEFINED AS 124502N 1292602E 125517N 1310459E 081449N 1313413E 080433N 1295646E TO POINT OF ORIGIN. IN THE INTEREST OF SAFETY, ALL NON-PARTICIPATING AIR TRAFFIC ARE ADVISED TO AVOID THE NOTAMED AREA. IFR AIRCRAFT UNDER ATC JURISDICTION SHOULD ANTICIPATE CLEARANCE AROUND THE NOTAMED AREA.\nF) SFC\nG) UNL",
+  "id": "1790885557484133",
+  "issued": "2026-10-01T20:11:00Z",
+  "last_updated": "2026-10-01T20:11:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4799/26",
+  "purpose": "NBO",
+  "q_code": "QRALW",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": "DLY 0333-0453",
+  "scope": "W",
+  "series": "A",
+  "text": "THE KOREA AEROSPACE RESEARCH INSTITUTE HAS PLANNED A SPACE VEHICLE LAUNCH. DEBRIS FROM THIS LAUNCH WILL FALL WI TWO SEPARATE AREAS. THE FAIRING AREA IS DEFINED AS 212938N 1284123E 213759N 1295350E 182943N 1301736E 182122N 1290634E TO POINT OF ORIGIN. THE SECOND STAGE AREA IS DEFINED AS 124502N 1292602E 125517N 1310459E 081449N 1313413E 080433N 1295646E TO POINT OF ORIGIN. IN THE INTEREST OF SAFETY, ALL NON-PARTICIPATING AIR TRAFFIC ARE ADVISED TO AVOID THE NOTAMED AREA. IFR AIRCRAFT UNDER ATC JURISDICTION SHOULD ANTICIPATE CLEARANCE AROUND THE NOTAMED AREA.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
   "year": "2026"
  }
 }
