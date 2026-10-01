@@ -131970,5 +131970,359 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1790819495419000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2610N11956E",
+  "effective_end": "2026-10-03T16:00:00.000Z",
+  "effective_start": "2026-10-02T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-01T02:00:42+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      119.957778,
+      26.173333
+     ],
+     [
+      119.936111,
+      26.131389
+     ],
+     [
+      119.903889,
+      26.14
+     ],
+     [
+      119.911389,
+      26.183056
+     ],
+     [
+      119.957778,
+      26.173333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCFG",
+  "icao_text": "U2515/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/015/2610N11956E003\r\nA) RCFG\r\nB) 2610021600 C) 2610031600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260903000801\r\n2.LCA:NANGAN TOWNSHIP, LIANJIANG COUNTY\r\n3.COOR TEL:0911-759562, 0935-713825\r\n4.AREA AS FLW:\r\n261024N 1195728E\r\n260753N 1195610E\r\n260824N 1195414E\r\n261059N 1195441E\r\n261024N 1195728E\r\nF) SFC G) 1500FT AMSL",
+  "id": "1790819495419000",
+  "issued": "2026-10-01T01:51:00.000Z",
+  "last_updated": "2026-10-01T01:51:00.000Z",
+  "local_text": null,
+  "location": "RCFG",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2515/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.7,
+  "radius_nm": 3.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260903000801\r\n2.LCA:NANGAN TOWNSHIP, LIANJIANG COUNTY\r\n3.COOR TEL:0911-759562, 0935-713825\r\n4.AREA AS FLW:\r\n261024N 1195728E\r\n260753N 1195610E\r\n260824N 1195414E\r\n261059N 1195441E\r\n261024N 1195728E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "1500FT AMSL",
+  "year": "2026"
+ },
+ "1790819520257000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2415N12038E",
+  "effective_end": "2026-10-31T16:00:00.000Z",
+  "effective_start": "2026-10-08T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-01T02:00:42+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.6375,
+      24.250556
+     ],
+     [
+      120.640833,
+      24.250833
+     ],
+     [
+      120.639722,
+      24.249167
+     ],
+     [
+      120.637778,
+      24.249167
+     ],
+     [
+      120.6375,
+      24.250556
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCMQ",
+  "icao_text": "U2516/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/010/2415N12038E001\r\nA) RCMQ\r\nB) 2610081600 C) 2610311600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260923000101\r\n2.LCA:DAYA DISTRICT, TAICHUNG CITY\r\n3.COOR TEL:0977-068247, 0989-129753, 0981-118188\r\n4.AREA AS FLW:\r\n241502N 1203815E\r\n241503N 1203827E\r\n241457N 1203823E\r\n241457N 1203816E\r\n241502N 1203815E\r\n5.MAX HGT: 400FT AGL\r\nF) SFC G) 1000FT AMSL",
+  "id": "1790819520257000",
+  "issued": "2026-10-01T01:51:00.000Z",
+  "last_updated": "2026-10-01T01:52:00.000Z",
+  "local_text": null,
+  "location": "RCMQ",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2516/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.3,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260923000101\r\n2.LCA:DAYA DISTRICT, TAICHUNG CITY\r\n3.COOR TEL:0977-068247, 0989-129753, 0981-118188\r\n4.AREA AS FLW:\r\n241502N 1203815E\r\n241503N 1203827E\r\n241457N 1203823E\r\n241457N 1203816E\r\n241502N 1203815E\r\n5.MAX HGT: 400FT AGL",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "1000FT AMSL",
+  "year": "2026"
+ },
+ "1790819562775000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2232N12038E",
+  "effective_end": "2026-12-31T16:00:00Z",
+  "effective_start": "2026-10-25T16:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-01T02:00:42+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.611111,
+      22.723611
+     ],
+     [
+      120.644444,
+      22.723611
+     ],
+     [
+      120.649444,
+      22.520278
+     ],
+     [
+      120.648611,
+      22.342778
+     ],
+     [
+      120.611389,
+      22.342778
+     ],
+     [
+      120.616111,
+      22.520278
+     ],
+     [
+      120.611111,
+      22.723611
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2517/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/000/100/2232N12038E012\r\nA) RCAA\r\nB) 2610251600 C) 2612311600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260708000601\r\n2.LCA:HENGCHUN TOWNSHIP, PINGTUNG COUNTY\r\n3.THE AREA OVERLAPS PART OF ULM AIRSPACE SAIJIA,\r\n  RCR6 AND PART OF VFR CORRIDOR C9, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n5.AREA AS FLW:\r\n224325N 1203640E\r\n224325N 1203840E\r\n223113N 1203858E\r\n222034N 1203855E\r\n222034N 1203641E\r\n223113N 1203658E\r\n224325N 1203640E\r\nF) SFC G) 10000FT AMSL",
+  "id": "1790819562775000",
+  "issued": "2026-10-01T01:52:00Z",
+  "last_updated": "2026-10-01T01:53:00Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "SFC",
+  "max_fl": "100",
+  "min_fl": "000",
+  "number": "U2517/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.3,
+  "radius_nm": 12.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260708000601\r\n2.LCA:HENGCHUN TOWNSHIP, PINGTUNG COUNTY\r\n3.THE AREA OVERLAPS PART OF ULM AIRSPACE SAIJIA,\r\n  RCR6 AND PART OF VFR CORRIDOR C9, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n5.AREA AS FLW:\r\n224325N 1203640E\r\n224325N 1203840E\r\n223113N 1203858E\r\n222034N 1203855E\r\n222034N 1203641E\r\n223113N 1203658E\r\n224325N 1203640E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "10000FT AMSL",
+  "year": "2026"
+ },
+ "1790819596098000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2212N12040E",
+  "effective_end": "2026-12-31T16:00:00.000Z",
+  "effective_start": "2026-10-25T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-01T02:00:42+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.664444,
+      22.189722
+     ],
+     [
+      120.611389,
+      22.342778
+     ],
+     [
+      120.648611,
+      22.342778
+     ],
+     [
+      120.7,
+      22.198889
+     ],
+     [
+      120.709722,
+      22.073611
+     ],
+     [
+      120.671944,
+      22.073611
+     ],
+     [
+      120.664444,
+      22.189722
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCKW",
+  "icao_text": "U2518/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/100/2212N12040E010\r\nA) RCKW\r\nB) 2610251600 C) 2612311600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260708000602\r\n2.LCA:HENGCHUN TOWNSHIP, PINGTUNG COUNTY\r\n3.THE AREA OVERLAPS PART OF HENGCHUN MIL TRAINING AREA,\r\n  RCR34, PART OF VFR CORRIDOR C9 AND C15, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n5.AREA AS FLW:\r\n221123N 1203952E\r\n222034N 1203641E\r\n222034N 1203855E\r\n221156N 1204200E\r\n220425N 1204235E\r\n220425N 1204019E\r\n221123N 1203952E\r\nF) SFC G) 10000FT AMSL",
+  "id": "1790819596098000",
+  "issued": "2026-10-01T01:53:00.000Z",
+  "last_updated": "2026-10-01T01:53:00.000Z",
+  "local_text": null,
+  "location": "RCKW",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2518/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.2,
+  "radius_nm": 10.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260708000602\r\n2.LCA:HENGCHUN TOWNSHIP, PINGTUNG COUNTY\r\n3.THE AREA OVERLAPS PART OF HENGCHUN MIL TRAINING AREA,\r\n  RCR34, PART OF VFR CORRIDOR C9 AND C15, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n5.AREA AS FLW:\r\n221123N 1203952E\r\n222034N 1203641E\r\n222034N 1203855E\r\n221156N 1204200E\r\n220425N 1204235E\r\n220425N 1204019E\r\n221123N 1203952E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "10000FT AMSL",
+  "year": "2026"
+ },
+ "1790819619286000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2156N12041E",
+  "effective_end": "2026-12-31T16:00:00.000Z",
+  "effective_start": "2026-10-25T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-01T02:00:42+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.653333,
+      22.012778
+     ],
+     [
+      120.671944,
+      22.073611
+     ],
+     [
+      120.709722,
+      22.073611
+     ],
+     [
+      120.706389,
+      22.004444
+     ],
+     [
+      120.684444,
+      21.783056
+     ],
+     [
+      120.6475,
+      21.787778
+     ],
+     [
+      120.653333,
+      22.012778
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCKW",
+  "icao_text": "U2519/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/100/2156N12041E010\r\nA) RCKW\r\nB) 2610251600 C) 2612311600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260708000603\r\n2.LCA:HENGCHUN TOWNSHIP, PINGTUNG COUNTY\r\n3.THE AREA OVERLAPS PART OF HENGCHUN MIL TRAINING AREA,\r\n  PART OF VFR CORRIDOR C8, C9 AND C15, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n5.AREA AS FLW:\r\n220046N 1203912E\r\n220425N 1204019E\r\n220425N 1204235E\r\n220016N 1204223E\r\n214659N 1204104E\r\n214716N 1203851E\r\n220046N 1203912E\r\nF) SFC G) 10000FT AMSL",
+  "id": "1790819619286000",
+  "issued": "2026-10-01T01:53:00.000Z",
+  "last_updated": "2026-10-01T01:53:00.000Z",
+  "local_text": null,
+  "location": "RCKW",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2519/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 1.4,
+  "radius_nm": 10.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260708000603\r\n2.LCA:HENGCHUN TOWNSHIP, PINGTUNG COUNTY\r\n3.THE AREA OVERLAPS PART OF HENGCHUN MIL TRAINING AREA,\r\n  PART OF VFR CORRIDOR C8, C9 AND C15, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n5.AREA AS FLW:\r\n220046N 1203912E\r\n220425N 1204019E\r\n220425N 1204235E\r\n220016N 1204223E\r\n214659N 1204104E\r\n214716N 1203851E\r\n220046N 1203912E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "10000FT AMSL",
+  "year": "2026"
  }
 }
