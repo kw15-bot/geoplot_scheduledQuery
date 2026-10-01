@@ -9165,11 +9165,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/207a19c4dff14a4fb0ef8fa570de87ec.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-10-01",
     "detail_fetched": false,
     "first_seen": "2026-10-01T01:20:31+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警716/26",
     "points": [],
     "revoked": false,
     "title": "“海洋石油684”轮拖带“南海二号”—粤航警716/26",
