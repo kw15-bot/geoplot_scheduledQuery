@@ -38467,11 +38467,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8d307928b2044a7c96a6ca43353507b2.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-10-01",
     "detail_fetched": false,
     "first_seen": "2026-10-01T08:40:29+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警717/26",
     "points": [],
     "revoked": false,
     "title": "拖带作业—粤航警717/26",
