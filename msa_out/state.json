@@ -38439,11 +38439,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8c5e6ce7597441f8ace22ad715ba96a2.html": {
     "bureau": "辽宁海事局",
+    "cancels": [],
     "date": "2026-10-01",
     "detail_fetched": false,
     "first_seen": "2026-10-02T00:00:53+00:00",
     "groups": [],
     "military": false,
+    "own_id": "辽航警412/26",
     "points": [],
     "revoked": false,
     "title": "宁海拖8001拖轮拖带中油海19平台—辽航警412/26",
