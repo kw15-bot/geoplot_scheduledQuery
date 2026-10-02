@@ -139599,8 +139599,8 @@
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "3021N11502E",
-  "effective_end": "2027-01-01T01:30:00.000Z",
-  "effective_start": "2026-10-03T01:30:00.000Z",
+  "effective_end": "2027-01-01T01:30:00Z",
+  "effective_start": "2026-10-03T01:30:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
@@ -139875,10 +139875,10 @@
   },
   "geometry_source": "qline-circle",
   "icao_location": "ZHEC",
-  "icao_text": "G4409/26 NOTAMN\r\nQ)ZHWH/QMPLC/IV/BO/A/000/999/3021N11502E005\r\nA)ZHEC B)2610030130 C)2701010130 \r\nE) PARKING STAND NR.355,356,357 CLSD DUE TO MAINT.\r\n ",
+  "icao_text": "G4409/26 NOTAMN\r\nQ)ZHWH/QMPLC/IV/BO/A/000/999/3021N11502E005\r\nA)ZHEC B)2610030130 C)2701010130 \r\nE) PARKING STAND NR.355,356,357 CLSD DUE TO MAINT.",
   "id": "1790904591865000",
-  "issued": "2026-10-02T01:28:00.000Z",
-  "last_updated": "2026-10-02T01:29:00.000Z",
+  "issued": "2026-10-02T01:28:00Z",
+  "last_updated": "2026-10-02T01:30:00Z",
   "local_text": null,
   "location": "ZHEC",
   "lower": null,
@@ -139897,6 +139897,286 @@
   "traffic": "IV",
   "type": "N",
   "upper": null,
+  "year": "2026"
+ },
+ "1790904692403000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2256N12014E",
+  "effective_end": "2026-10-22T16:00:00.000Z",
+  "effective_start": "2026-10-07T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-02T01:40:24+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.216944,
+      22.948056
+     ],
+     [
+      120.244167,
+      22.950278
+     ],
+     [
+      120.248611,
+      22.918889
+     ],
+     [
+      120.203611,
+      22.916389
+     ],
+     [
+      120.203889,
+      22.925833
+     ],
+     [
+      120.217778,
+      22.926111
+     ],
+     [
+      120.216944,
+      22.948056
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCNN",
+  "icao_text": "U2521/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/025/2256N12014E003\r\nA) RCNN\r\nB) 2610071600 C) 2610221600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260721002305\r\n2.LCA:RENDE DISTRICT, TAINAN CITY\r\n3.THE AREA OVERLAPS PART OF GUEIREN MIL TRAINING AREA\r\n  AND PART OF VFR CORRIDOR C13, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0952-123316, 0955-963530\r\n5.AREA AS FLW:\r\n225653N 1201301E\r\n225701N 1201439E\r\n225508N 1201455E\r\n225459N 1201213E\r\n225533N 1201214E\r\n225534N 1201304E\r\n225653N 1201301E\r\nF) SFC G) 2500FT AMSL",
+  "id": "1790904692403000",
+  "issued": "2026-10-02T01:31:00.000Z",
+  "last_updated": "2026-10-02T01:31:00.000Z",
+  "local_text": null,
+  "location": "RCNN",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2521/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.6,
+  "radius_nm": 3.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260721002305\r\n2.LCA:RENDE DISTRICT, TAINAN CITY\r\n3.THE AREA OVERLAPS PART OF GUEIREN MIL TRAINING AREA\r\n  AND PART OF VFR CORRIDOR C13, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0952-123316, 0955-963530\r\n5.AREA AS FLW:\r\n225653N 1201301E\r\n225701N 1201439E\r\n225508N 1201455E\r\n225459N 1201213E\r\n225533N 1201214E\r\n225534N 1201304E\r\n225653N 1201301E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "2500FT AMSL",
+  "year": "2026"
+ },
+ "1790904837207000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2234N12021E",
+  "effective_end": "2026-11-07T16:00:00Z",
+  "effective_start": "2026-10-07T16:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-02T01:40:24+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.313056,
+      22.588889
+     ],
+     [
+      120.328333,
+      22.597778
+     ],
+     [
+      120.34,
+      22.5725
+     ],
+     [
+      120.354444,
+      22.5725
+     ],
+     [
+      120.371944,
+      22.550833
+     ],
+     [
+      120.3475,
+      22.551389
+     ],
+     [
+      120.313056,
+      22.588889
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCKH",
+  "icao_text": "U2522/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/006/2234N12021E003\r\nA) RCKH\r\nB) 2610071600 C) 2611071600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260823000601\r\n2.LCA:XIAOGANG DISTRICT, KAOHSIUNG CITY\r\n3.THE AREA OVERLAPS PART OF HELIPORT OF KAOHSIUNG\r\n  EMERGENCY OPERATION CENTER, PART OF VFR CORRIDOR\r\n  C9 AND C15, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0910-551384, 0965-454118\r\n5.AREA AS FLW:\r\n223520N 1201847E\r\n223552N 1201942E\r\n223421N 1202024E\r\n223421N 1202116E\r\n223303N 1202219E\r\n223305N 1202051E\r\n223520N 1201847E\r\nF) SFC G) 600FT AMSL",
+  "id": "1790904837207000",
+  "issued": "2026-10-02T01:33:00Z",
+  "last_updated": "2026-10-02T01:34:00Z",
+  "local_text": null,
+  "location": "RCKH",
+  "lower": "SFC",
+  "max_fl": "006",
+  "min_fl": "000",
+  "number": "U2522/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 3.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260823000601\r\n2.LCA:XIAOGANG DISTRICT, KAOHSIUNG CITY\r\n3.THE AREA OVERLAPS PART OF HELIPORT OF KAOHSIUNG\r\n  EMERGENCY OPERATION CENTER, PART OF VFR CORRIDOR\r\n  C9 AND C15, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0910-551384, 0965-454118\r\n5.AREA AS FLW:\r\n223520N 1201847E\r\n223552N 1201942E\r\n223421N 1202024E\r\n223421N 1202116E\r\n223303N 1202219E\r\n223305N 1202051E\r\n223520N 1201847E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "600FT AMSL",
+  "year": "2026"
+ },
+ "1790904897891000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2506N12133E",
+  "effective_end": "2026-10-31T16:00:00Z",
+  "effective_start": "2026-10-07T16:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-02T01:40:24+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.547222,
+      25.096667
+     ],
+     [
+      121.545556,
+      25.1
+     ],
+     [
+      121.550278,
+      25.102222
+     ],
+     [
+      121.551944,
+      25.099167
+     ],
+     [
+      121.547222,
+      25.096667
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCSS",
+  "icao_text": "U2523/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/020/2506N12133E001\r\nA) RCSS\r\nB) 2610071600 C) 2610311600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260731001801\r\n2.LCA:SHILIN DISTRICT, TAIPEI CITY\r\n3.THE AREA OVERLAPS RCR16, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0988-108565, 0925-608969, 0912-218136\r\n5.AREA AS FLW:\r\n250548N 1213250E\r\n250600N 1213244E\r\n250608N 1213301E\r\n250557N 1213307E\r\n250548N 1213250E\r\nF) SFC G) 2000FT AMSL",
+  "id": "1790904897891000",
+  "issued": "2026-10-02T01:34:00Z",
+  "last_updated": "2026-10-02T01:35:00Z",
+  "local_text": null,
+  "location": "RCSS",
+  "lower": "SFC",
+  "max_fl": "020",
+  "min_fl": "000",
+  "number": "U2523/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.1,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260731001801\r\n2.LCA:SHILIN DISTRICT, TAIPEI CITY\r\n3.THE AREA OVERLAPS RCR16, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0988-108565, 0925-608969, 0912-218136\r\n5.AREA AS FLW:\r\n250548N 1213250E\r\n250600N 1213244E\r\n250608N 1213301E\r\n250557N 1213307E\r\n250548N 1213250E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "2000FT AMSL",
+  "year": "2026"
+ },
+ "1790904984724000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2505N12133E",
+  "effective_end": "2026-10-31T16:00:00Z",
+  "effective_start": "2026-10-07T16:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-02T01:40:24+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.560278,
+      25.081389
+     ],
+     [
+      121.553889,
+      25.078889
+     ],
+     [
+      121.550278,
+      25.086111
+     ],
+     [
+      121.558889,
+      25.083889
+     ],
+     [
+      121.560278,
+      25.081389
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCSS",
+  "icao_text": "U2524/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/020/2505N12133E001\r\nA) RCSS\r\nB) 2610071600 C) 2610311600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260731001802\r\n2.LCA:ZHONGSHAN DISTRICT, TAIPEI CITY\r\n3.THE AREA OVERLAPS RCR16, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0988-108565, 0925-608969, 0912-218136\r\n5.AREA AS FLW:\r\n250453N 1213337E\r\n250444N 1213314E\r\n250510N 1213301E\r\n250502N 1213332E\r\n250453N 1213337E\r\nF) SFC G) 2000FT AMSL",
+  "id": "1790904984724000",
+  "issued": "2026-10-02T01:36:00Z",
+  "last_updated": "2026-10-02T01:37:00Z",
+  "local_text": null,
+  "location": "RCSS",
+  "lower": "SFC",
+  "max_fl": "020",
+  "min_fl": "000",
+  "number": "U2524/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.3,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260731001802\r\n2.LCA:ZHONGSHAN DISTRICT, TAIPEI CITY\r\n3.THE AREA OVERLAPS RCR16, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0988-108565, 0925-608969, 0912-218136\r\n5.AREA AS FLW:\r\n250453N 1213337E\r\n250444N 1213314E\r\n250510N 1213301E\r\n250502N 1213332E\r\n250453N 1213337E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "2000FT AMSL",
   "year": "2026"
  }
 }
