@@ -136496,5 +136496,617 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1790902229931000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0750N12328E",
+  "effective_end": "2026-12-09T23:59:00.000Z",
+  "effective_start": "2026-11-26T00:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-02T01:00:43+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      123.466667,
+      7.916517
+     ],
+     [
+      123.474897,
+      7.916116
+     ],
+     [
+      123.483048,
+      7.914919
+     ],
+     [
+      123.491041,
+      7.912935
+     ],
+     [
+      123.498799,
+      7.910185
+     ],
+     [
+      123.506249,
+      7.906695
+     ],
+     [
+      123.513316,
+      7.902498
+     ],
+     [
+      123.519935,
+      7.897635
+     ],
+     [
+      123.52604,
+      7.892153
+     ],
+     [
+      123.531574,
+      7.886104
+     ],
+     [
+      123.536483,
+      7.879548
+     ],
+     [
+      123.540719,
+      7.872546
+     ],
+     [
+      123.544242,
+      7.865166
+     ],
+     [
+      123.547018,
+      7.85748
+     ],
+     [
+      123.54902,
+      7.849562
+     ],
+     [
+      123.550229,
+      7.841487
+     ],
+     [
+      123.550634,
+      7.833333
+     ],
+     [
+      123.550229,
+      7.82518
+     ],
+     [
+      123.54902,
+      7.817105
+     ],
+     [
+      123.547018,
+      7.809186
+     ],
+     [
+      123.544242,
+      7.8015
+     ],
+     [
+      123.540719,
+      7.794121
+     ],
+     [
+      123.536483,
+      7.787119
+     ],
+     [
+      123.531574,
+      7.780562
+     ],
+     [
+      123.52604,
+      7.774514
+     ],
+     [
+      123.519935,
+      7.769032
+     ],
+     [
+      123.513316,
+      7.764169
+     ],
+     [
+      123.506249,
+      7.759972
+     ],
+     [
+      123.498799,
+      7.756482
+     ],
+     [
+      123.491041,
+      7.753732
+     ],
+     [
+      123.483048,
+      7.751748
+     ],
+     [
+      123.474897,
+      7.75055
+     ],
+     [
+      123.466667,
+      7.75015
+     ],
+     [
+      123.458436,
+      7.75055
+     ],
+     [
+      123.450285,
+      7.751748
+     ],
+     [
+      123.442292,
+      7.753732
+     ],
+     [
+      123.434534,
+      7.756482
+     ],
+     [
+      123.427085,
+      7.759972
+     ],
+     [
+      123.420017,
+      7.764169
+     ],
+     [
+      123.413398,
+      7.769032
+     ],
+     [
+      123.407293,
+      7.774514
+     ],
+     [
+      123.401759,
+      7.780562
+     ],
+     [
+      123.396851,
+      7.787119
+     ],
+     [
+      123.392614,
+      7.794121
+     ],
+     [
+      123.389091,
+      7.8015
+     ],
+     [
+      123.386315,
+      7.809186
+     ],
+     [
+      123.384313,
+      7.817105
+     ],
+     [
+      123.383104,
+      7.82518
+     ],
+     [
+      123.3827,
+      7.833333
+     ],
+     [
+      123.383104,
+      7.841487
+     ],
+     [
+      123.384313,
+      7.849562
+     ],
+     [
+      123.386315,
+      7.85748
+     ],
+     [
+      123.389091,
+      7.865166
+     ],
+     [
+      123.392614,
+      7.872546
+     ],
+     [
+      123.396851,
+      7.879548
+     ],
+     [
+      123.401759,
+      7.886104
+     ],
+     [
+      123.407293,
+      7.892153
+     ],
+     [
+      123.413398,
+      7.897635
+     ],
+     [
+      123.420017,
+      7.902498
+     ],
+     [
+      123.427085,
+      7.906695
+     ],
+     [
+      123.434534,
+      7.910185
+     ],
+     [
+      123.442292,
+      7.912935
+     ],
+     [
+      123.450285,
+      7.914919
+     ],
+     [
+      123.458436,
+      7.916116
+     ],
+     [
+      123.466667,
+      7.916517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPMP",
+  "icao_text": "C1271/26 NOTAMN\r\nQ) RPHI/QFATT/IV/BO /A /000/999/0750N12328E005\r\nA) RPMP B) 2611260000 C) 2612092359\r\nE) TRIGGER NOTAM - PERM AIRAC AIP AMDT NR 007/26 WEF 26 NOV 2026.\r\n\r\nCHANGES IN THE FLW PAGES:\r\nA. REVISION TO AD GEOGRAPHICAL AND ADMINISTRATIVE DATA (REF RPMP AD \r\n2-1)\r\nB. REVISION TO OPR HR (REF RPMP AD 2-1)\r\nC. REVISION TO RFFS (REF RPMP AD 2-2)\r\nD. REVISION TO APN, TWY AND CK LCA/PSN DATA (REF RPMP AD 2-2)\r\nE. REVISION TO SFC MOV GUIDANCE AND CTL SYSTEM AND MARKINGS (REF \r\nRPMP AD 2-2)\r\nF. REVISION TO RWY PHYSICAL CHARACTERISTICS (REF RPMP AD 2-3).",
+  "id": "1790902229931000",
+  "issued": "2026-10-02T00:50:00.000Z",
+  "last_updated": "2026-10-02T00:50:00.000Z",
+  "local_text": null,
+  "location": "RPMP",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "C1271/26",
+  "purpose": "BO ",
+  "q_code": "QFATT",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A ",
+  "series": "C",
+  "text": "TRIGGER NOTAM - PERM AIRAC AIP AMDT NR 007/26 WEF 26 NOV 2026.\r\n\r\nCHANGES IN THE FLW PAGES:\r\nA. REVISION TO AD GEOGRAPHICAL AND ADMINISTRATIVE DATA (REF RPMP AD \r\n2-1)\r\nB. REVISION TO OPR HR (REF RPMP AD 2-1)\r\nC. REVISION TO RFFS (REF RPMP AD 2-2)\r\nD. REVISION TO APN, TWY AND CK LCA/PSN DATA (REF RPMP AD 2-2)\r\nE. REVISION TO SFC MOV GUIDANCE AND CTL SYSTEM AND MARKINGS (REF \r\nRPMP AD 2-2)\r\nF. REVISION TO RWY PHYSICAL CHARACTERISTICS (REF RPMP AD 2-3).",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790902525364000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0750N12328E",
+  "effective_end": "2026-12-09T23:59:00.000Z",
+  "effective_start": "2026-11-26T00:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-02T01:00:43+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      123.466667,
+      7.916517
+     ],
+     [
+      123.474897,
+      7.916116
+     ],
+     [
+      123.483048,
+      7.914919
+     ],
+     [
+      123.491041,
+      7.912935
+     ],
+     [
+      123.498799,
+      7.910185
+     ],
+     [
+      123.506249,
+      7.906695
+     ],
+     [
+      123.513316,
+      7.902498
+     ],
+     [
+      123.519935,
+      7.897635
+     ],
+     [
+      123.52604,
+      7.892153
+     ],
+     [
+      123.531574,
+      7.886104
+     ],
+     [
+      123.536483,
+      7.879548
+     ],
+     [
+      123.540719,
+      7.872546
+     ],
+     [
+      123.544242,
+      7.865166
+     ],
+     [
+      123.547018,
+      7.85748
+     ],
+     [
+      123.54902,
+      7.849562
+     ],
+     [
+      123.550229,
+      7.841487
+     ],
+     [
+      123.550634,
+      7.833333
+     ],
+     [
+      123.550229,
+      7.82518
+     ],
+     [
+      123.54902,
+      7.817105
+     ],
+     [
+      123.547018,
+      7.809186
+     ],
+     [
+      123.544242,
+      7.8015
+     ],
+     [
+      123.540719,
+      7.794121
+     ],
+     [
+      123.536483,
+      7.787119
+     ],
+     [
+      123.531574,
+      7.780562
+     ],
+     [
+      123.52604,
+      7.774514
+     ],
+     [
+      123.519935,
+      7.769032
+     ],
+     [
+      123.513316,
+      7.764169
+     ],
+     [
+      123.506249,
+      7.759972
+     ],
+     [
+      123.498799,
+      7.756482
+     ],
+     [
+      123.491041,
+      7.753732
+     ],
+     [
+      123.483048,
+      7.751748
+     ],
+     [
+      123.474897,
+      7.75055
+     ],
+     [
+      123.466667,
+      7.75015
+     ],
+     [
+      123.458436,
+      7.75055
+     ],
+     [
+      123.450285,
+      7.751748
+     ],
+     [
+      123.442292,
+      7.753732
+     ],
+     [
+      123.434534,
+      7.756482
+     ],
+     [
+      123.427085,
+      7.759972
+     ],
+     [
+      123.420017,
+      7.764169
+     ],
+     [
+      123.413398,
+      7.769032
+     ],
+     [
+      123.407293,
+      7.774514
+     ],
+     [
+      123.401759,
+      7.780562
+     ],
+     [
+      123.396851,
+      7.787119
+     ],
+     [
+      123.392614,
+      7.794121
+     ],
+     [
+      123.389091,
+      7.8015
+     ],
+     [
+      123.386315,
+      7.809186
+     ],
+     [
+      123.384313,
+      7.817105
+     ],
+     [
+      123.383104,
+      7.82518
+     ],
+     [
+      123.3827,
+      7.833333
+     ],
+     [
+      123.383104,
+      7.841487
+     ],
+     [
+      123.384313,
+      7.849562
+     ],
+     [
+      123.386315,
+      7.85748
+     ],
+     [
+      123.389091,
+      7.865166
+     ],
+     [
+      123.392614,
+      7.872546
+     ],
+     [
+      123.396851,
+      7.879548
+     ],
+     [
+      123.401759,
+      7.886104
+     ],
+     [
+      123.407293,
+      7.892153
+     ],
+     [
+      123.413398,
+      7.897635
+     ],
+     [
+      123.420017,
+      7.902498
+     ],
+     [
+      123.427085,
+      7.906695
+     ],
+     [
+      123.434534,
+      7.910185
+     ],
+     [
+      123.442292,
+      7.912935
+     ],
+     [
+      123.450285,
+      7.914919
+     ],
+     [
+      123.458436,
+      7.916116
+     ],
+     [
+      123.466667,
+      7.916517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPMP",
+  "icao_text": "C1272/26 NOTAMN\r\nQ) RPHI/QFATT/IV/BO /A /000/999/0750N12328E005\r\nA) RPMP B) 2611260000 C) 2612092359\r\nE) TRIGGER NOTAM - PERM AIRAC AIP AMDT NR 007/26 WEF 26 NOV 2026.\r\n\r\nCHANGES IN THE FLW PAGES:\r\nG. REVISION TO APCH AND RWY LGT (REF RPMP AD 2-3 TO 2-4)\r\nH. REVISION TO OTHER LGT, SRY PWR SUPPLY (REF RPMP AD 2-4)\r\nI. REVISION TO ATS AIRSPACE (REF RPMP AD 2-4)\r\nJ. REVISION TO ATS COM FAC (REF RPMP AD 2-5)\r\nK. REVISION TO FLT PROC (REF RPMP AD 2-11)\r\nL. REVISION TO TFC CIRCUIT CHART (RWY 02) (REF RPMP AD CHART 2-1)\r\nM. REVISION TO TFC CIRCUIT CHART (RWY 20) (REF RPMP AD CHART 2-2).",
+  "id": "1790902525364000",
+  "issued": "2026-10-02T00:55:00.000Z",
+  "last_updated": "2026-10-02T00:55:00.000Z",
+  "local_text": null,
+  "location": "RPMP",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "C1272/26",
+  "purpose": "BO ",
+  "q_code": "QFATT",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A ",
+  "series": "C",
+  "text": "TRIGGER NOTAM - PERM AIRAC AIP AMDT NR 007/26 WEF 26 NOV 2026.\r\n\r\nCHANGES IN THE FLW PAGES:\r\nG. REVISION TO APCH AND RWY LGT (REF RPMP AD 2-3 TO 2-4)\r\nH. REVISION TO OTHER LGT, SRY PWR SUPPLY (REF RPMP AD 2-4)\r\nI. REVISION TO ATS AIRSPACE (REF RPMP AD 2-4)\r\nJ. REVISION TO ATS COM FAC (REF RPMP AD 2-5)\r\nK. REVISION TO FLT PROC (REF RPMP AD 2-11)\r\nL. REVISION TO TFC CIRCUIT CHART (RWY 02) (REF RPMP AD CHART 2-1)\r\nM. REVISION TO TFC CIRCUIT CHART (RWY 20) (REF RPMP AD CHART 2-2).",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
  }
 }
