@@ -51289,98 +51289,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790738287384000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T03:00:00Z",
-  "effective_start": "2026-09-30T03:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-09-30T03:20:26+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4047/26 NOTAMC F4023/26\r\nQ)ZSHA/QMRXX//M//000/999/\r\nA)ZSPD B)2609300300 \r\nE) CNL",
-  "id": "1790738287384000",
-  "issued": "2026-09-30T03:16:00Z",
-  "last_updated": "2026-10-01T00:47:00Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4047/26",
-  "purpose": "M",
-  "q_code": "QMRXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4023/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "F4047/26 NOTAMC F4023/26\r\nQ)ZSHA/QMRXX//M//000/999/\r\nA)ZSPD B)2609300300 \r\nE) CNL",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
- "1790738288918000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T02:54:00Z",
-  "effective_start": "2026-09-30T02:54:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-09-30T03:20:26+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4048/26 NOTAMC F4012/26\r\nQ)ZSHA/QMRXX//M//000/999/\r\nA)ZSPD B)2609300254 \r\nE) CNL NTM.",
-  "id": "1790738288918000",
-  "issued": "2026-09-30T03:16:00Z",
-  "last_updated": "2026-10-01T00:47:00Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4048/26",
-  "purpose": "M",
-  "q_code": "QMRXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4012/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "F4048/26 NOTAMC F4012/26\r\nQ)ZSHA/QMRXX//M//000/999/\r\nA)ZSPD B)2609300254 \r\nE) CNL NTM.",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
  "1790738290936000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -51684,98 +51592,6 @@
   "text": "RWY16L/34R CLSD",
   "traffic": "IV",
   "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1790738293482000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T03:00:00Z",
-  "effective_start": "2026-09-30T03:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-09-30T03:20:26+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4050/26 NOTAMC F4024/26\r\nQ)ZSHA/QMXXX//M//000/999/\r\nA)ZSPD B)2609300300 \r\nE) CNL",
-  "id": "1790738293482000",
-  "issued": "2026-09-30T03:16:00Z",
-  "last_updated": "2026-10-01T00:47:00Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4050/26",
-  "purpose": "M",
-  "q_code": "QMXXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4024/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "F4050/26 NOTAMC F4024/26\r\nQ)ZSHA/QMXXX//M//000/999/\r\nA)ZSPD B)2609300300 \r\nE) CNL",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
- "1790738301617000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T02:55:00Z",
-  "effective_start": "2026-09-30T02:55:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-09-30T03:20:26+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4052/26 NOTAMC F4014/26\r\nQ)ZSHA/QMXXX//M//000/999/\r\nA)ZSPD B)2609300255 \r\nE) CNL NTM.",
-  "id": "1790738301617000",
-  "issued": "2026-09-30T03:17:00Z",
-  "last_updated": "2026-10-01T00:47:00Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4052/26",
-  "purpose": "M",
-  "q_code": "QMXXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4014/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "F4052/26 NOTAMC F4014/26\r\nQ)ZSHA/QMXXX//M//000/999/\r\nA)ZSPD B)2609300255 \r\nE) CNL NTM.",
-  "traffic": null,
-  "type": "C",
   "upper": null,
   "year": "2026"
  },
@@ -52085,98 +51901,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790738420844000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T03:00:00Z",
-  "effective_start": "2026-09-30T03:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-09-30T03:20:26+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4055/26 NOTAMC F4025/26\r\nQ)ZSHA/QMXXX//M//000/999/\r\nA)ZSPD B)2609300300 \r\nE) CNL",
-  "id": "1790738420844000",
-  "issued": "2026-09-30T03:18:00Z",
-  "last_updated": "2026-10-01T00:47:00Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4055/26",
-  "purpose": "M",
-  "q_code": "QMXXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4025/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "F4055/26 NOTAMC F4025/26\r\nQ)ZSHA/QMXXX//M//000/999/\r\nA)ZSPD B)2609300300 \r\nE) CNL",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
- "1790738422617000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T02:55:00Z",
-  "effective_start": "2026-09-30T02:55:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-09-30T03:20:26+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4056/26 NOTAMC F4017/26\r\nQ)ZSHA/QMXXX//M//000/999/\r\nA)ZSPD B)2609300255 \r\nE) CNL NTM.",
-  "id": "1790738422617000",
-  "issued": "2026-09-30T03:18:00Z",
-  "last_updated": "2026-10-01T00:47:00Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4056/26",
-  "purpose": "M",
-  "q_code": "QMXXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4017/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "F4056/26 NOTAMC F4017/26\r\nQ)ZSHA/QMXXX//M//000/999/\r\nA)ZSPD B)2609300255 \r\nE) CNL NTM.",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
  "1790738423917000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -52480,98 +52204,6 @@
   "text": "FLW TWY CLSD:\r\n1. TWY W4,W5 CLSD BTN TWY L22 AND TWY T4.\r\n2. TWY T3 BTN TWY W3 AND TWY W6.",
   "traffic": "IV",
   "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1790738429894000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T03:00:00Z",
-  "effective_start": "2026-09-30T03:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-09-30T03:30:36+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4059/26 NOTAMC F4027/26\r\nQ)ZSHA/QMRXX//M//000/999/\r\nA)ZSPD B)2609300300 \r\nE) CNL",
-  "id": "1790738429894000",
-  "issued": "2026-09-30T03:19:00Z",
-  "last_updated": "2026-10-01T00:47:00Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4059/26",
-  "purpose": "M",
-  "q_code": "QMRXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4027/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "F4059/26 NOTAMC F4027/26\r\nQ)ZSHA/QMRXX//M//000/999/\r\nA)ZSPD B)2609300300 \r\nE) CNL",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
- "1790738434201000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T02:55:00Z",
-  "effective_start": "2026-09-30T02:55:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-09-30T03:30:36+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4060/26 NOTAMC F4016/26\r\nQ)ZSHA/QMXXX//M//000/999/\r\nA)ZSPD B)2609300255 \r\nE) CNL NTM",
-  "id": "1790738434201000",
-  "issued": "2026-09-30T03:19:00Z",
-  "last_updated": "2026-10-01T00:47:00Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4060/26",
-  "purpose": "M",
-  "q_code": "QMXXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4016/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "F4060/26 NOTAMC F4016/26\r\nQ)ZSHA/QMXXX//M//000/999/\r\nA)ZSPD B)2609300255 \r\nE) CNL NTM",
-  "traffic": null,
-  "type": "C",
   "upper": null,
   "year": "2026"
  },
@@ -52881,98 +52513,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790738437000000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T03:01:00Z",
-  "effective_start": "2026-09-30T03:01:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-09-30T03:30:36+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4062/26 NOTAMC F4029/26\r\nQ)ZSHA/QMXXX//M//000/999/\r\nA)ZSPD B)2609300301 \r\nE) CNL",
-  "id": "1790738437000000",
-  "issued": "2026-09-30T03:19:00Z",
-  "last_updated": "2026-10-01T00:47:00Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4062/26",
-  "purpose": "M",
-  "q_code": "QMXXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4029/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "F4062/26 NOTAMC F4029/26\r\nQ)ZSHA/QMXXX//M//000/999/\r\nA)ZSPD B)2609300301 \r\nE) CNL",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
- "1790738440836000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T02:56:00Z",
-  "effective_start": "2026-09-30T02:56:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-09-30T03:30:36+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4064/26 NOTAMC F4015/26\r\nQ)ZSHA/QMXXX//M//000/999/\r\nA)ZSPD B)2609300256 \r\nE) CNL NTM",
-  "id": "1790738440836000",
-  "issued": "2026-09-30T03:20:00Z",
-  "last_updated": "2026-10-01T00:47:00Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4064/26",
-  "purpose": "M",
-  "q_code": "QMXXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4015/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "F4064/26 NOTAMC F4015/26\r\nQ)ZSHA/QMXXX//M//000/999/\r\nA)ZSPD B)2609300256 \r\nE) CNL NTM",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
  "1790738553994000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -53276,98 +52816,6 @@
   "text": "FLW TWY CLSD:\r\n1. TWY B4,B6 CLSD BTN TWY A AND TWY L04 .\r\n2. TWY B BTN TWY P6 AND TWY T2,ACFT SHALL CROSS TWY B VIA TWY \r\nB5,P4,B3,T3,P3.\r\n3. TWY B2 BTN TWY B AND TWY L02,INTERSECTION CLSD BTN TWY B AND \r\nTWY B2.\r\n4. TWY L22 BTN TWY B AND TWY W1,INTERSECTION CLSD BTN TWY B AND \r\nTWY L22.\r\n5. TWY P2 BTN TWY D AND TWY L02,ACFT SHALL CROSS TWY P2 VIA TWY A.\r\n6. TWY P5 BTN TWY D AND TWY L04,ACFT SHALL CROSS TWY P5 VIA TWY A.\r\n7. TWY T4 BTN TWY A AND TWY W1.",
   "traffic": "IV",
   "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1790738556043000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T02:56:00Z",
-  "effective_start": "2026-09-30T02:56:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-09-30T03:30:36+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4067/26 NOTAMC F4013/26\r\nQ)ZSHA/QMRXX//M//000/999/\r\nA)ZSPD B)2609300256 \r\nE) CNL NTM.",
-  "id": "1790738556043000",
-  "issued": "2026-09-30T03:20:00Z",
-  "last_updated": "2026-10-01T00:47:00Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4067/26",
-  "purpose": "M",
-  "q_code": "QMRXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4013/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "F4067/26 NOTAMC F4013/26\r\nQ)ZSHA/QMRXX//M//000/999/\r\nA)ZSPD B)2609300256 \r\nE) CNL NTM.",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
- "1790738558061000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T03:01:00Z",
-  "effective_start": "2026-09-30T03:01:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-09-30T03:30:36+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4068/26 NOTAMC F4031/26\r\nQ)ZSHA/QMRXX//M//000/999/\r\nA)ZSPD B)2609300301 \r\nE) CNL",
-  "id": "1790738558061000",
-  "issued": "2026-09-30T03:20:00Z",
-  "last_updated": "2026-10-01T00:47:00Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4068/26",
-  "purpose": "M",
-  "q_code": "QMRXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4031/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "F4068/26 NOTAMC F4031/26\r\nQ)ZSHA/QMRXX//M//000/999/\r\nA)ZSPD B)2609300301 \r\nE) CNL",
-  "traffic": null,
-  "type": "C",
   "upper": null,
   "year": "2026"
  },
@@ -141012,6 +140460,618 @@
   "scope": "A ",
   "series": "C",
   "text": "TRIGGER NOTAM - AIRAC AIP SUP 067/26 WEF 26 NOV 2026.\r\nREVISIONS TO CWY AND DECLARED DIST OF DUMAGUETE PRINCIPAL AP (CLASS \r\n1) (RPVD).",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790911109464000": {
+  "account_id": "VHHHYNYX",
+  "area_group": "HK",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2219N11355E",
+  "effective_end": "2026-10-04T20:30:00Z",
+  "effective_start": "2026-10-04T18:01:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "VHHK",
+  "first_seen": "2026-10-02T03:20:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      113.916667,
+      22.39985
+     ],
+     [
+      113.92548,
+      22.39945
+     ],
+     [
+      113.934209,
+      22.398252
+     ],
+     [
+      113.942769,
+      22.396268
+     ],
+     [
+      113.951077,
+      22.393518
+     ],
+     [
+      113.959054,
+      22.390028
+     ],
+     [
+      113.966623,
+      22.385831
+     ],
+     [
+      113.97371,
+      22.380968
+     ],
+     [
+      113.980249,
+      22.375486
+     ],
+     [
+      113.986175,
+      22.369438
+     ],
+     [
+      113.991431,
+      22.362881
+     ],
+     [
+      113.995968,
+      22.355879
+     ],
+     [
+      113.999741,
+      22.3485
+     ],
+     [
+      114.002713,
+      22.340814
+     ],
+     [
+      114.004857,
+      22.332895
+     ],
+     [
+      114.006152,
+      22.32482
+     ],
+     [
+      114.006585,
+      22.316667
+     ],
+     [
+      114.006152,
+      22.308513
+     ],
+     [
+      114.004857,
+      22.300438
+     ],
+     [
+      114.002713,
+      22.29252
+     ],
+     [
+      113.999741,
+      22.284834
+     ],
+     [
+      113.995968,
+      22.277454
+     ],
+     [
+      113.991431,
+      22.270452
+     ],
+     [
+      113.986175,
+      22.263896
+     ],
+     [
+      113.980249,
+      22.257847
+     ],
+     [
+      113.97371,
+      22.252365
+     ],
+     [
+      113.966623,
+      22.247502
+     ],
+     [
+      113.959054,
+      22.243305
+     ],
+     [
+      113.951077,
+      22.239815
+     ],
+     [
+      113.942769,
+      22.237065
+     ],
+     [
+      113.934209,
+      22.235081
+     ],
+     [
+      113.92548,
+      22.233884
+     ],
+     [
+      113.916667,
+      22.233483
+     ],
+     [
+      113.907853,
+      22.233884
+     ],
+     [
+      113.899124,
+      22.235081
+     ],
+     [
+      113.890565,
+      22.237065
+     ],
+     [
+      113.882256,
+      22.239815
+     ],
+     [
+      113.874279,
+      22.243305
+     ],
+     [
+      113.866711,
+      22.247502
+     ],
+     [
+      113.859623,
+      22.252365
+     ],
+     [
+      113.853085,
+      22.257847
+     ],
+     [
+      113.847159,
+      22.263896
+     ],
+     [
+      113.841902,
+      22.270452
+     ],
+     [
+      113.837366,
+      22.277454
+     ],
+     [
+      113.833593,
+      22.284834
+     ],
+     [
+      113.83062,
+      22.29252
+     ],
+     [
+      113.828476,
+      22.300438
+     ],
+     [
+      113.827181,
+      22.308513
+     ],
+     [
+      113.826748,
+      22.316667
+     ],
+     [
+      113.827181,
+      22.32482
+     ],
+     [
+      113.828476,
+      22.332895
+     ],
+     [
+      113.83062,
+      22.340814
+     ],
+     [
+      113.833593,
+      22.3485
+     ],
+     [
+      113.837366,
+      22.355879
+     ],
+     [
+      113.841902,
+      22.362881
+     ],
+     [
+      113.847159,
+      22.369438
+     ],
+     [
+      113.853085,
+      22.375486
+     ],
+     [
+      113.859623,
+      22.380968
+     ],
+     [
+      113.866711,
+      22.385831
+     ],
+     [
+      113.874279,
+      22.390028
+     ],
+     [
+      113.882256,
+      22.393518
+     ],
+     [
+      113.890565,
+      22.396268
+     ],
+     [
+      113.899124,
+      22.398252
+     ],
+     [
+      113.907853,
+      22.39945
+     ],
+     [
+      113.916667,
+      22.39985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "VHHH",
+  "icao_text": "A2283/26 NOTAMN\r\nQ) VHHK/QMXLC/IV/BO /A /000/999/2219N11355E005\r\nA) VHHH B) 2610041801 C) 2610042030\r\nE) TWY B BTN TXL M AND TXL P CLSD DUE WIP",
+  "id": "1790911109464000",
+  "issued": "2026-10-02T03:18:00Z",
+  "last_updated": "2026-10-02T03:19:00Z",
+  "local_text": null,
+  "location": "VHHH",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A2283/26",
+  "purpose": "BO",
+  "q_code": "QMXLC",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "A",
+  "text": "TWY B BTN TXL M AND TXL P CLSD DUE WIP",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790911208561000": {
+  "account_id": "VHHHYNYX",
+  "area_group": "HK",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2219N11355E",
+  "effective_end": "2026-10-09T14:00:00.000Z",
+  "effective_start": "2026-10-05T08:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "VHHK",
+  "first_seen": "2026-10-02T03:20:25+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      113.916667,
+      22.39985
+     ],
+     [
+      113.92548,
+      22.39945
+     ],
+     [
+      113.934209,
+      22.398252
+     ],
+     [
+      113.942769,
+      22.396268
+     ],
+     [
+      113.951077,
+      22.393518
+     ],
+     [
+      113.959054,
+      22.390028
+     ],
+     [
+      113.966623,
+      22.385831
+     ],
+     [
+      113.97371,
+      22.380968
+     ],
+     [
+      113.980249,
+      22.375486
+     ],
+     [
+      113.986175,
+      22.369438
+     ],
+     [
+      113.991431,
+      22.362881
+     ],
+     [
+      113.995968,
+      22.355879
+     ],
+     [
+      113.999741,
+      22.3485
+     ],
+     [
+      114.002713,
+      22.340814
+     ],
+     [
+      114.004857,
+      22.332895
+     ],
+     [
+      114.006152,
+      22.32482
+     ],
+     [
+      114.006585,
+      22.316667
+     ],
+     [
+      114.006152,
+      22.308513
+     ],
+     [
+      114.004857,
+      22.300438
+     ],
+     [
+      114.002713,
+      22.29252
+     ],
+     [
+      113.999741,
+      22.284834
+     ],
+     [
+      113.995968,
+      22.277454
+     ],
+     [
+      113.991431,
+      22.270452
+     ],
+     [
+      113.986175,
+      22.263896
+     ],
+     [
+      113.980249,
+      22.257847
+     ],
+     [
+      113.97371,
+      22.252365
+     ],
+     [
+      113.966623,
+      22.247502
+     ],
+     [
+      113.959054,
+      22.243305
+     ],
+     [
+      113.951077,
+      22.239815
+     ],
+     [
+      113.942769,
+      22.237065
+     ],
+     [
+      113.934209,
+      22.235081
+     ],
+     [
+      113.92548,
+      22.233884
+     ],
+     [
+      113.916667,
+      22.233483
+     ],
+     [
+      113.907853,
+      22.233884
+     ],
+     [
+      113.899124,
+      22.235081
+     ],
+     [
+      113.890565,
+      22.237065
+     ],
+     [
+      113.882256,
+      22.239815
+     ],
+     [
+      113.874279,
+      22.243305
+     ],
+     [
+      113.866711,
+      22.247502
+     ],
+     [
+      113.859623,
+      22.252365
+     ],
+     [
+      113.853085,
+      22.257847
+     ],
+     [
+      113.847159,
+      22.263896
+     ],
+     [
+      113.841902,
+      22.270452
+     ],
+     [
+      113.837366,
+      22.277454
+     ],
+     [
+      113.833593,
+      22.284834
+     ],
+     [
+      113.83062,
+      22.29252
+     ],
+     [
+      113.828476,
+      22.300438
+     ],
+     [
+      113.827181,
+      22.308513
+     ],
+     [
+      113.826748,
+      22.316667
+     ],
+     [
+      113.827181,
+      22.32482
+     ],
+     [
+      113.828476,
+      22.332895
+     ],
+     [
+      113.83062,
+      22.340814
+     ],
+     [
+      113.833593,
+      22.3485
+     ],
+     [
+      113.837366,
+      22.355879
+     ],
+     [
+      113.841902,
+      22.362881
+     ],
+     [
+      113.847159,
+      22.369438
+     ],
+     [
+      113.853085,
+      22.375486
+     ],
+     [
+      113.859623,
+      22.380968
+     ],
+     [
+      113.866711,
+      22.385831
+     ],
+     [
+      113.874279,
+      22.390028
+     ],
+     [
+      113.882256,
+      22.393518
+     ],
+     [
+      113.890565,
+      22.396268
+     ],
+     [
+      113.899124,
+      22.398252
+     ],
+     [
+      113.907853,
+      22.39945
+     ],
+     [
+      113.916667,
+      22.39985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "VHHH",
+  "icao_text": "A2284/26 NOTAMN\r\nQ) VHHK/QMXLC/IV/BO /A /000/999/2219N11355E005\r\nA) VHHH B) 2610050800 C) 2610091400\r\nD) DLY 0800-1400\r\nE) TWY F BTN TWY E2 AND TWY D CLSD DUE WIP",
+  "id": "1790911208561000",
+  "issued": "2026-10-02T03:19:00.000Z",
+  "last_updated": "2026-10-02T03:20:00.000Z",
+  "local_text": null,
+  "location": "VHHH",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A2284/26",
+  "purpose": "BO ",
+  "q_code": "QMXLC",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": "DLY 0800-1400",
+  "scope": "A ",
+  "series": "A",
+  "text": "TWY F BTN TWY E2 AND TWY D CLSD DUE WIP",
   "traffic": "IV",
   "type": "N",
   "upper": null,
