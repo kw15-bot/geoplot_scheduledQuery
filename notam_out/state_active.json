@@ -91621,52 +91621,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790761752165000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T09:45:00Z",
-  "effective_start": "2026-09-30T09:45:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZBPE",
-  "first_seen": "2026-09-30T09:50:27+00:00",
-  "geometry": {
-   "coordinates": [
-    111.823333,
-    40.848333
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZBHH",
-  "icao_text": "E3933/26 NOTAMC E3884/26\r\nQ)ZBPE/QMRAK//M//000/999/\r\nA)ZBHH B)2609300945 \r\nE) CNL NTM.",
-  "id": "1790761752165000",
-  "issued": "2026-09-30T09:49:00Z",
-  "last_updated": "2026-10-01T00:47:00Z",
-  "local_text": null,
-  "location": "ZBHH",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "E3933/26",
-  "purpose": "M",
-  "q_code": "QMRAK",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "E3884/26",
-  "schedule": null,
-  "scope": null,
-  "series": "E",
-  "text": "E3933/26 NOTAMC E3884/26\r\nQ)ZBPE/QMRAK//M//000/999/\r\nA)ZBHH B)2609300945 \r\nE) CNL NTM.",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
  "1790761786877000": {
   "account_id": "RCTPYNYX",
   "area_group": "TW",
@@ -91731,52 +91685,6 @@
   "traffic": "IV",
   "type": "N",
   "upper": "5000FT AMSL",
-  "year": "2026"
- },
- "1790761800183000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T09:47:00Z",
-  "effective_start": "2026-09-30T09:47:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZBPE",
-  "first_seen": "2026-09-30T09:50:27+00:00",
-  "geometry": {
-   "coordinates": [
-    111.823333,
-    40.848333
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZBHH",
-  "icao_text": "E3934/26 NOTAMC E3883/26\r\nQ)ZBPE/QMXAK//M//000/999/\r\nA)ZBHH B)2609300947 \r\nE) CNL NTM.",
-  "id": "1790761800183000",
-  "issued": "2026-09-30T09:49:00Z",
-  "last_updated": "2026-10-01T00:47:00Z",
-  "local_text": null,
-  "location": "ZBHH",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "E3934/26",
-  "purpose": "M",
-  "q_code": "QMXAK",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "E3883/26",
-  "schedule": null,
-  "scope": null,
-  "series": "E",
-  "text": "E3934/26 NOTAMC E3883/26\r\nQ)ZBPE/QMXAK//M//000/999/\r\nA)ZBHH B)2609300947 \r\nE) CNL NTM.",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
   "year": "2026"
  },
  "1790761890415000": {
@@ -146275,6 +146183,898 @@
   "traffic": "I",
   "type": "R",
   "upper": null,
+  "year": "2026"
+ },
+ "1790934201255812": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-04T21:00:00Z",
+  "effective_start": "2026-10-04T17:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-02T09:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -125.25,
+      39.75
+     ],
+     [
+      -125.25,
+      39.25
+     ],
+     [
+      -127.0,
+      39.25
+     ],
+     [
+      -138.25,
+      38.866667
+     ],
+     [
+      -138.25,
+      39.916667
+     ],
+     [
+      -127.0,
+      39.75
+     ],
+     [
+      -125.25,
+      39.75
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790934201255812",
+  "issued": "2026-10-02T09:42:00Z",
+  "last_updated": "2026-10-02T09:42:00Z",
+  "local_text": "!CARF 10/007 ZAK AIRSPACE DCC BREAKER STNR ALT RESERVATION WI AN AREA DEFINED AS 394500N1251500W TO 391500N1251500W TO 391500N1270000W TO 385200N1381500W TO 395500N1381500W TO 394500N1270000W TO POINT OF ORIGIN 10000FT-FL280 2610041700-2610042100",
+  "location": "ZAK",
+  "lower": "10000FT AMSL",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "10/007",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 10/007 ZAK AIRSPACE DCC BREAKER STNR ALT RESERVATION WI AN AREA DEFINED AS 394500N1251500W TO 391500N1251500W TO 391500N1270000W TO 385200N1381500W TO 395500N1381500W TO 394500N1270000W TO POINT OF ORIGIN 10000FT-FL280",
+  "traffic": null,
+  "type": null,
+  "upper": "FL280",
+  "year": "2026"
+ },
+ "1790934201353996": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-04T21:00:00Z",
+  "effective_start": "2026-10-04T17:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-02T09:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -125.25,
+      39.75
+     ],
+     [
+      -125.25,
+      39.25
+     ],
+     [
+      -127.0,
+      39.25
+     ],
+     [
+      -138.25,
+      38.866667
+     ],
+     [
+      -138.25,
+      39.916667
+     ],
+     [
+      -127.0,
+      39.75
+     ],
+     [
+      -125.25,
+      39.75
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4815/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/100/280/\nA) KZAK\nB) 2610041700\nC) 2610042100\nE) ZAK AIRSPACE DCC BREAKER STNR ALT RESERVATION WI AN AREA DEFINED AS 394500N1251500W TO 391500N1251500W TO 391500N1270000W TO 385200N1381500W TO 395500N1381500W TO 394500N1270000W TO POINT OF ORIGIN 10000FT-FL280\nF) 10000FT AMSL\nG) FL280",
+  "id": "1790934201353996",
+  "issued": "2026-10-02T09:42:00Z",
+  "last_updated": "2026-10-02T09:42:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "10000FT AMSL",
+  "max_fl": "280",
+  "min_fl": "100",
+  "number": "A4815/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE DCC BREAKER STNR ALT RESERVATION WI AN AREA DEFINED AS 394500N1251500W TO 391500N1251500W TO 391500N1270000W TO 385200N1381500W TO 395500N1381500W TO 394500N1270000W TO POINT OF ORIGIN 10000FT-FL280",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL280",
+  "year": "2026"
+ },
+ "1790934241473254": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-05T06:43:00Z",
+  "effective_start": "2026-10-05T03:43:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-02T09:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -129.5,
+      35.747605
+     ],
+     [
+      -129.341863,
+      35.741196
+     ],
+     [
+      -129.18525,
+      35.722031
+     ],
+     [
+      -129.031667,
+      35.690295
+     ],
+     [
+      -128.882595,
+      35.646293
+     ],
+     [
+      -128.739469,
+      35.590449
+     ],
+     [
+      -128.603667,
+      35.523301
+     ],
+     [
+      -128.476497,
+      35.445496
+     ],
+     [
+      -128.359184,
+      35.357782
+     ],
+     [
+      -128.252858,
+      35.261005
+     ],
+     [
+      -128.158542,
+      35.156096
+     ],
+     [
+      -128.077146,
+      35.044067
+     ],
+     [
+      -128.009452,
+      34.925995
+     ],
+     [
+      -127.956113,
+      34.803018
+     ],
+     [
+      -127.917643,
+      34.67632
+     ],
+     [
+      -127.894411,
+      34.547122
+     ],
+     [
+      -127.886643,
+      34.416667
+     ],
+     [
+      -127.894411,
+      34.286212
+     ],
+     [
+      -127.917643,
+      34.157014
+     ],
+     [
+      -127.956113,
+      34.030316
+     ],
+     [
+      -128.009452,
+      33.907339
+     ],
+     [
+      -128.077146,
+      33.789267
+     ],
+     [
+      -128.158542,
+      33.677238
+     ],
+     [
+      -128.252858,
+      33.572329
+     ],
+     [
+      -128.359184,
+      33.475552
+     ],
+     [
+      -128.476497,
+      33.387838
+     ],
+     [
+      -128.603667,
+      33.310033
+     ],
+     [
+      -128.739469,
+      33.242885
+     ],
+     [
+      -128.882595,
+      33.187041
+     ],
+     [
+      -129.031667,
+      33.143039
+     ],
+     [
+      -129.18525,
+      33.111303
+     ],
+     [
+      -129.341863,
+      33.092138
+     ],
+     [
+      -129.5,
+      33.085729
+     ],
+     [
+      -129.658137,
+      33.092138
+     ],
+     [
+      -129.81475,
+      33.111303
+     ],
+     [
+      -129.968333,
+      33.143039
+     ],
+     [
+      -130.117405,
+      33.187041
+     ],
+     [
+      -130.260531,
+      33.242885
+     ],
+     [
+      -130.396333,
+      33.310033
+     ],
+     [
+      -130.523503,
+      33.387838
+     ],
+     [
+      -130.640816,
+      33.475552
+     ],
+     [
+      -130.747142,
+      33.572329
+     ],
+     [
+      -130.841458,
+      33.677238
+     ],
+     [
+      -130.922854,
+      33.789267
+     ],
+     [
+      -130.990548,
+      33.907339
+     ],
+     [
+      -131.043887,
+      34.030316
+     ],
+     [
+      -131.082357,
+      34.157014
+     ],
+     [
+      -131.105589,
+      34.286212
+     ],
+     [
+      -131.113357,
+      34.416667
+     ],
+     [
+      -131.105589,
+      34.547122
+     ],
+     [
+      -131.082357,
+      34.67632
+     ],
+     [
+      -131.043887,
+      34.803018
+     ],
+     [
+      -130.990548,
+      34.925995
+     ],
+     [
+      -130.922854,
+      35.044067
+     ],
+     [
+      -130.841458,
+      35.156096
+     ],
+     [
+      -130.747142,
+      35.261005
+     ],
+     [
+      -130.640816,
+      35.357782
+     ],
+     [
+      -130.523503,
+      35.445496
+     ],
+     [
+      -130.396333,
+      35.523301
+     ],
+     [
+      -130.260531,
+      35.590449
+     ],
+     [
+      -130.117405,
+      35.646293
+     ],
+     [
+      -129.968333,
+      35.690295
+     ],
+     [
+      -129.81475,
+      35.722031
+     ],
+     [
+      -129.658137,
+      35.741196
+     ],
+     [
+      -129.5,
+      35.747605
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4816/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/270/\nA) KZAK\nB) 2610050343\nC) 2610050643\nE) ZAK AIRSPACE DCC KELLY THREE STNR ALT RESERVATION WI AN AREA DEFINED AS 80NM RADIUS OF 342460N1293000W SFC-FL270\nF) SFC\nG) FL270",
+  "id": "1790934241473254",
+  "issued": "2026-10-02T09:43:00Z",
+  "last_updated": "2026-10-02T09:44:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "270",
+  "min_fl": "000",
+  "number": "A4816/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE DCC KELLY THREE STNR ALT RESERVATION WI AN AREA DEFINED AS 80NM RADIUS OF 342460N1293000W SFC-FL270",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL270",
+  "year": "2026"
+ },
+ "1790934242978852": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-05T00:31:00Z",
+  "effective_start": "2026-10-04T21:31:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-02T09:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -127.166667,
+      40.666667
+     ],
+     [
+      -132.0,
+      40.666667
+     ],
+     [
+      -132.0,
+      37.5
+     ],
+     [
+      -127.166667,
+      37.5
+     ],
+     [
+      -127.166667,
+      40.666667
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790934242978852",
+  "issued": "2026-10-02T09:43:00Z",
+  "last_updated": "2026-10-02T09:44:00Z",
+  "local_text": "!CARF 10/010 ZAK AIRSPACE DCC BRAVO THREE STNR ALT RESERVATION WI AN AREA DEFINED AS 404000N1271000W TO 404000N1320000W TO 373000N1320000W TO 373000N1271000W TO POINT OF ORIGIN SFC-FL270 2610042131-2610050031",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "10/010",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 10/010 ZAK AIRSPACE DCC BRAVO THREE STNR ALT RESERVATION WI AN AREA DEFINED AS 404000N1271000W TO 404000N1320000W TO 373000N1320000W TO 373000N1271000W TO POINT OF ORIGIN SFC-FL270",
+  "traffic": null,
+  "type": null,
+  "upper": "FL270",
+  "year": "2026"
+ },
+ "1790934243100829": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-05T00:31:00Z",
+  "effective_start": "2026-10-04T21:31:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-02T09:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -127.166667,
+      40.666667
+     ],
+     [
+      -132.0,
+      40.666667
+     ],
+     [
+      -132.0,
+      37.5
+     ],
+     [
+      -127.166667,
+      37.5
+     ],
+     [
+      -127.166667,
+      40.666667
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4817/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/270/\nA) KZAK\nB) 2610042131\nC) 2610050031\nE) ZAK AIRSPACE DCC BRAVO THREE STNR ALT RESERVATION WI AN AREA DEFINED AS 404000N1271000W TO 404000N1320000W TO 373000N1320000W TO 373000N1271000W TO POINT OF ORIGIN SFC-FL270\nF) SFC\nG) FL270",
+  "id": "1790934243100829",
+  "issued": "2026-10-02T09:43:00Z",
+  "last_updated": "2026-10-02T09:44:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "270",
+  "min_fl": "000",
+  "number": "A4817/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE DCC BRAVO THREE STNR ALT RESERVATION WI AN AREA DEFINED AS 404000N1271000W TO 404000N1320000W TO 373000N1320000W TO 373000N1271000W TO POINT OF ORIGIN SFC-FL270",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL270",
+  "year": "2026"
+ },
+ "1790934243388266": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-05T06:43:00Z",
+  "effective_start": "2026-10-05T03:43:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-02T09:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -129.5,
+      35.747605
+     ],
+     [
+      -129.341863,
+      35.741196
+     ],
+     [
+      -129.18525,
+      35.722031
+     ],
+     [
+      -129.031667,
+      35.690295
+     ],
+     [
+      -128.882595,
+      35.646293
+     ],
+     [
+      -128.739469,
+      35.590449
+     ],
+     [
+      -128.603667,
+      35.523301
+     ],
+     [
+      -128.476497,
+      35.445496
+     ],
+     [
+      -128.359184,
+      35.357782
+     ],
+     [
+      -128.252858,
+      35.261005
+     ],
+     [
+      -128.158542,
+      35.156096
+     ],
+     [
+      -128.077146,
+      35.044067
+     ],
+     [
+      -128.009452,
+      34.925995
+     ],
+     [
+      -127.956113,
+      34.803018
+     ],
+     [
+      -127.917643,
+      34.67632
+     ],
+     [
+      -127.894411,
+      34.547122
+     ],
+     [
+      -127.886643,
+      34.416667
+     ],
+     [
+      -127.894411,
+      34.286212
+     ],
+     [
+      -127.917643,
+      34.157014
+     ],
+     [
+      -127.956113,
+      34.030316
+     ],
+     [
+      -128.009452,
+      33.907339
+     ],
+     [
+      -128.077146,
+      33.789267
+     ],
+     [
+      -128.158542,
+      33.677238
+     ],
+     [
+      -128.252858,
+      33.572329
+     ],
+     [
+      -128.359184,
+      33.475552
+     ],
+     [
+      -128.476497,
+      33.387838
+     ],
+     [
+      -128.603667,
+      33.310033
+     ],
+     [
+      -128.739469,
+      33.242885
+     ],
+     [
+      -128.882595,
+      33.187041
+     ],
+     [
+      -129.031667,
+      33.143039
+     ],
+     [
+      -129.18525,
+      33.111303
+     ],
+     [
+      -129.341863,
+      33.092138
+     ],
+     [
+      -129.5,
+      33.085729
+     ],
+     [
+      -129.658137,
+      33.092138
+     ],
+     [
+      -129.81475,
+      33.111303
+     ],
+     [
+      -129.968333,
+      33.143039
+     ],
+     [
+      -130.117405,
+      33.187041
+     ],
+     [
+      -130.260531,
+      33.242885
+     ],
+     [
+      -130.396333,
+      33.310033
+     ],
+     [
+      -130.523503,
+      33.387838
+     ],
+     [
+      -130.640816,
+      33.475552
+     ],
+     [
+      -130.747142,
+      33.572329
+     ],
+     [
+      -130.841458,
+      33.677238
+     ],
+     [
+      -130.922854,
+      33.789267
+     ],
+     [
+      -130.990548,
+      33.907339
+     ],
+     [
+      -131.043887,
+      34.030316
+     ],
+     [
+      -131.082357,
+      34.157014
+     ],
+     [
+      -131.105589,
+      34.286212
+     ],
+     [
+      -131.113357,
+      34.416667
+     ],
+     [
+      -131.105589,
+      34.547122
+     ],
+     [
+      -131.082357,
+      34.67632
+     ],
+     [
+      -131.043887,
+      34.803018
+     ],
+     [
+      -130.990548,
+      34.925995
+     ],
+     [
+      -130.922854,
+      35.044067
+     ],
+     [
+      -130.841458,
+      35.156096
+     ],
+     [
+      -130.747142,
+      35.261005
+     ],
+     [
+      -130.640816,
+      35.357782
+     ],
+     [
+      -130.523503,
+      35.445496
+     ],
+     [
+      -130.396333,
+      35.523301
+     ],
+     [
+      -130.260531,
+      35.590449
+     ],
+     [
+      -130.117405,
+      35.646293
+     ],
+     [
+      -129.968333,
+      35.690295
+     ],
+     [
+      -129.81475,
+      35.722031
+     ],
+     [
+      -129.658137,
+      35.741196
+     ],
+     [
+      -129.5,
+      35.747605
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1790934243388266",
+  "issued": "2026-10-02T09:43:00Z",
+  "last_updated": "2026-10-02T09:44:00Z",
+  "local_text": "!CARF 10/009 ZAK AIRSPACE DCC KELLY THREE STNR ALT RESERVATION WI AN AREA DEFINED AS 80NM RADIUS OF 342460N1293000W SFC-FL270 2610050343-2610050643",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "10/009",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 10/009 ZAK AIRSPACE DCC KELLY THREE STNR ALT RESERVATION WI AN AREA DEFINED AS 80NM RADIUS OF 342460N1293000W SFC-FL270",
+  "traffic": null,
+  "type": null,
+  "upper": "FL270",
   "year": "2026"
  }
 }
