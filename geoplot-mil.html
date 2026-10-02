@@ -804,7 +804,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v2.7.0';
+const APP_VERSION = 'v2.7.1';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -842,6 +842,7 @@ const APP_VERSION = 'v2.7.0';
 //  境界は細い破線、ラベルは ICAOCODE(ズーム3以上)、線にマウスを乗せると FIR名。
 // v2.6.1: FIRの境界を実線にし、線・ラベルとも灰色に(ユーザー指示)。
 // v2.7.0: AIPの図を参照する区域の境界線(geometry_source: aip-chart-line、例: ZWUQ W1338 の G-H-J-K)を表示する。
+// v2.7.1: 開始前に取消・置換されたNOTAMは「撤回済み・A3636/26により、開始前に撤回」と表示する。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3765,9 +3766,14 @@ function notamPeriodUtc(p){
 }
 // 取消・置換で打ち切られたNOTAMの「〜により撤回」表示(航行警報側の revoked_by と同じ考え方)。
 // ended_by_type: C=取消 → 撤回、R=置換 → 置換。種別の無い古いデータは撤回として扱う。
+// 開始前に取消・置換されたもの(終了が開始以前)は「撤回済み・A3636/26により、開始前に撤回」とする(v2.7.1)。
 function notamRevokedText(p){
   if (notamStatusOf({ properties: p }) !== 'cancelled') return '';
   const how = p.ended_by_type === 'R' ? '置換' : '撤回';
+  const s = Date.parse(p.valid_start || ''), e = Date.parse(p.valid_end || '');
+  if (!isNaN(s) && !isNaN(e) && e <= s){
+    return p.ended_by ? `${how}済み・${p.ended_by}により、開始前に${how}` : `${how}済み・開始前に${how}`;
+  }
   return p.ended_by ? `${how}済み ・ ${p.ended_by}により${how}` : '撤回済み';
 }
 function notamPopupHtml(f){

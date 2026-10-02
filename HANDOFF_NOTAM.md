@@ -854,3 +854,4 @@ NOTAMモードの地図ツールバーに「レイヤー」ボタンを置き、
 - 日次レポート §7 の理由に「AIPの図（名前）を参照しているが点が未登録」を追加（`aip_chart_areas.chart_refs_missing()`）。図を送ってもらえば登録できる。
 - 2026-10-01 日次チェックで修正: 秒がちょうど60の誤記 `80NM RADIUS OF 342460N1293000W`（KZAK A4776/26 ALTRV KELLY THREE、34°24′60″=34°25′）を繰り上げて読む（`_dms`、61秒以上は従来どおり読まない）。api-point → text-polygon（80NMの円）。
 - 2026-10-01 追加: `notam_backfill_text_polygon.py --apply --rebuild-geojson` で、変更が無くても `notam_cn.geojson` を state_active.json から作り直す（main との衝突で notam_cn.geojson だけ main 側を採ったとき、修正が地図用データから落ちるのを防ぐ）。
+- 2026-10-02 変更（v2.7.1）: 開始前に取消・置換されたNOTAM（終了が開始以前）は「撤回済み・A3636/26により、開始前に撤回」と表示（有効期間は B項 〜 打ち切り時刻のまま。ユーザー指定の表現）。
