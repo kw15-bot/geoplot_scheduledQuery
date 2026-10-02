@@ -44557,98 +44557,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790732782857000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": "2026-10-01T00:46:00.000Z",
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T01:45:00Z",
-  "effective_start": "2026-09-30T01:45:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZGZU",
-  "first_seen": "2026-09-30T01:50:27+00:00",
-  "geometry": {
-   "coordinates": [
-    108.173333,
-    22.61
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZGNN",
-  "icao_text": "G4382/26 NOTAMC G4349/26\r\nQ)ZGZU/QFTXX//M//000/999/\r\nA)ZGNN B)2609300145 \r\nE) CNL NTM.",
-  "id": "1790732782857000",
-  "issued": "2026-09-30T01:46:00Z",
-  "last_updated": "2026-10-01T00:47:00Z",
-  "local_text": null,
-  "location": "ZGNN",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "G4382/26",
-  "purpose": "M",
-  "q_code": "QFTXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "G4349/26",
-  "schedule": null,
-  "scope": null,
-  "series": "G",
-  "text": "G4382/26 NOTAMC G4349/26\r\nQ)ZGZU/QFTXX//M//000/999/\r\nA)ZGNN B)2609300145 \r\nE) CNL NTM.",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
- "1790733051398840": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-03T01:50:00Z",
-  "effective_start": "2026-09-30T01:50:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-09-30T02:00:42+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": "A4769/26 NOTAMC A4753/26\nQ) KZAK/QRAXX/IV/NBO/W/000/430/\nA) KZAK\nB) 2609300150\nE) ZAK AIRSPACE DCC KING 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS\nCANCELED",
-  "id": "1790733051398840",
-  "issued": "2026-09-30T01:50:00Z",
-  "last_updated": "2026-09-30T01:50:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": null,
-  "max_fl": "430",
-  "min_fl": "000",
-  "number": "A4769/26",
-  "purpose": "NBO",
-  "q_code": "QRAXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "A4753/26",
-  "schedule": null,
-  "scope": "W",
-  "series": "A",
-  "text": "A4769/26 NOTAMC A4753/26\nQ) KZAK/QRAXX/IV/NBO/W/000/430/\nA) KZAK\nB) 2609300150\nE) ZAK AIRSPACE DCC KING 26-4 STNR ALT RESERVATION WI AN AREA DEFINED AS\nCANCELED",
-  "traffic": "IV",
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
  "1790733368444000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -140177,6 +140085,358 @@
   "traffic": "IV",
   "type": "N",
   "upper": "2000FT AMSL",
+  "year": "2026"
+ },
+ "1790905353337000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1202N12434E",
+  "effective_end": "2026-12-09T23:59:00Z",
+  "effective_start": "2026-11-26T00:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-02T01:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    124.566667,
+    12.033333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RPHI",
+  "icao_text": "C1280/26 NOTAMN\r\nQ) RPHI/QAFTT/IV/BO /E /000/999/1202N12434E999\r\nA) RPHI B) 2611260000 C) 2612092359\r\nE) TRIGGER NOTAM - AIRAC AIP SUP 063/26 WEF 26 NOV 2026.\r\nSTRENGTH RATING OF AD PAVEMENTS FOR VARIOUS AP.",
+  "id": "1790905353337000",
+  "issued": "2026-10-02T01:42:00Z",
+  "last_updated": "2026-10-02T01:43:00Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "C1280/26",
+  "purpose": "BO",
+  "q_code": "QAFTT",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "C",
+  "text": "TRIGGER NOTAM - AIRAC AIP SUP 063/26 WEF 26 NOV 2026.\r\nSTRENGTH RATING OF AD PAVEMENTS FOR VARIOUS AP.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790905753089000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0934N12346E",
+  "effective_end": "2026-12-09T23:59:00.000Z",
+  "effective_start": "2026-11-26T00:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-02T01:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      123.766667,
+      9.64985
+     ],
+     [
+      123.774935,
+      9.64945
+     ],
+     [
+      123.783124,
+      9.648252
+     ],
+     [
+      123.791154,
+      9.646268
+     ],
+     [
+      123.798949,
+      9.643518
+     ],
+     [
+      123.806432,
+      9.640028
+     ],
+     [
+      123.813533,
+      9.635831
+     ],
+     [
+      123.820182,
+      9.630968
+     ],
+     [
+      123.826316,
+      9.625486
+     ],
+     [
+      123.831875,
+      9.619438
+     ],
+     [
+      123.836807,
+      9.612881
+     ],
+     [
+      123.841063,
+      9.605879
+     ],
+     [
+      123.844602,
+      9.5985
+     ],
+     [
+      123.847391,
+      9.590814
+     ],
+     [
+      123.849403,
+      9.582895
+     ],
+     [
+      123.850617,
+      9.57482
+     ],
+     [
+      123.851023,
+      9.566667
+     ],
+     [
+      123.850617,
+      9.558513
+     ],
+     [
+      123.849403,
+      9.550438
+     ],
+     [
+      123.847391,
+      9.54252
+     ],
+     [
+      123.844602,
+      9.534834
+     ],
+     [
+      123.841063,
+      9.527454
+     ],
+     [
+      123.836807,
+      9.520452
+     ],
+     [
+      123.831875,
+      9.513896
+     ],
+     [
+      123.826316,
+      9.507847
+     ],
+     [
+      123.820182,
+      9.502365
+     ],
+     [
+      123.813533,
+      9.497502
+     ],
+     [
+      123.806432,
+      9.493305
+     ],
+     [
+      123.798949,
+      9.489815
+     ],
+     [
+      123.791154,
+      9.487065
+     ],
+     [
+      123.783124,
+      9.485081
+     ],
+     [
+      123.774935,
+      9.483884
+     ],
+     [
+      123.766667,
+      9.483483
+     ],
+     [
+      123.758398,
+      9.483884
+     ],
+     [
+      123.750209,
+      9.485081
+     ],
+     [
+      123.742179,
+      9.487065
+     ],
+     [
+      123.734385,
+      9.489815
+     ],
+     [
+      123.726901,
+      9.493305
+     ],
+     [
+      123.719801,
+      9.497502
+     ],
+     [
+      123.713151,
+      9.502365
+     ],
+     [
+      123.707017,
+      9.507847
+     ],
+     [
+      123.701458,
+      9.513896
+     ],
+     [
+      123.696527,
+      9.520452
+     ],
+     [
+      123.692271,
+      9.527454
+     ],
+     [
+      123.688731,
+      9.534834
+     ],
+     [
+      123.685942,
+      9.54252
+     ],
+     [
+      123.683931,
+      9.550438
+     ],
+     [
+      123.682716,
+      9.558513
+     ],
+     [
+      123.68231,
+      9.566667
+     ],
+     [
+      123.682716,
+      9.57482
+     ],
+     [
+      123.683931,
+      9.582895
+     ],
+     [
+      123.685942,
+      9.590814
+     ],
+     [
+      123.688731,
+      9.5985
+     ],
+     [
+      123.692271,
+      9.605879
+     ],
+     [
+      123.696527,
+      9.612881
+     ],
+     [
+      123.701458,
+      9.619438
+     ],
+     [
+      123.707017,
+      9.625486
+     ],
+     [
+      123.713151,
+      9.630968
+     ],
+     [
+      123.719801,
+      9.635831
+     ],
+     [
+      123.726901,
+      9.640028
+     ],
+     [
+      123.734385,
+      9.643518
+     ],
+     [
+      123.742179,
+      9.646268
+     ],
+     [
+      123.750209,
+      9.648252
+     ],
+     [
+      123.758398,
+      9.64945
+     ],
+     [
+      123.766667,
+      9.64985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPSP",
+  "icao_text": "C1281/26 NOTAMN\r\nQ) RPHI/QFFTT/IV/BO /A /000/999/0934N12346E005\r\nA) RPSP B) 2611260000 C) 2612092359\r\nE) TRIGGER NOTAM - AIRAC AIP SUP 064/26 WEF 26 NOV 2026.\r\nREVISIONS TO RFFS OF BOHOL-PANGLAO INTL AP (RPSP).",
+  "id": "1790905753089000",
+  "issued": "2026-10-02T01:48:00.000Z",
+  "last_updated": "2026-10-02T01:49:00.000Z",
+  "local_text": null,
+  "location": "RPSP",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "C1281/26",
+  "purpose": "BO ",
+  "q_code": "QFFTT",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A ",
+  "series": "C",
+  "text": "TRIGGER NOTAM - AIRAC AIP SUP 064/26 WEF 26 NOV 2026.\r\nREVISIONS TO RFFS OF BOHOL-PANGLAO INTL AP (RPSP).",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
   "year": "2026"
  }
 }
