@@ -4572,11 +4572,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/139351a1894d49b09754de4d05b3a3bc.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-10-02",
     "detail_fetched": false,
     "first_seen": "2026-10-02T03:40:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "东部航警36/26",
     "points": [],
     "revoked": false,
     "title": "有效航警简报—东部航警36/26",
