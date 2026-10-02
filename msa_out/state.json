@@ -20889,11 +20889,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4c4d041adc064e3982582c99d1939b1c.html": {
     "bureau": "浙江海事局",
+    "cancels": [],
     "date": "2026-10-02",
     "detail_fetched": false,
     "first_seen": "2026-10-02T12:30:43+00:00",
     "groups": [],
     "military": false,
+    "own_id": "浙航警896/26",
     "points": [],
     "revoked": false,
     "title": "OSCAR轮航经虾峙门外深水航槽—浙航警896/26",
