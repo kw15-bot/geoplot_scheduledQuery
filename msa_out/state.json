@@ -31063,6 +31063,99 @@
     "title": "“大西洋 天顶”轮船舶试航—粤航警537/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/78712e098a4549b8a7f1323c8c7307e6.html?hav=1jWj6r2hy3yfaJwAHHOJw5nlTh"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7890b619a8094e40be4822f0b89dfda7.html": {
+    "bureau": "天津海事局",
+    "cancels": [],
+    "date": "2026-10-02",
+    "detail_fail_count": 0,
+    "detail_fetched": true,
+    "detail_gave_up": false,
+    "extraction_version": 20,
+    "first_seen": "2026-10-02T06:20:31+00:00",
+    "groups": [
+      [
+        {
+          "end": 44,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.91266666666667,
+          "lon": 119.73733333333334,
+          "raw": "38-54.76N 119-44.24E",
+          "start": 24
+        },
+        {
+          "end": 65,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.91266666666667,
+          "lon": 119.7605,
+          "raw": "38-54.76N 119-45.63E",
+          "start": 45
+        },
+        {
+          "end": 86,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.894666666666666,
+          "lon": 119.7605,
+          "raw": "38-53.68N 119-45.63E",
+          "start": 66
+        },
+        {
+          "end": 107,
+          "fmt": "DDM_HYPHEN",
+          "lat": 38.894666666666666,
+          "lon": 119.73733333333334,
+          "raw": "38-53.68N 119-44.24E",
+          "start": 87
+        }
+      ]
+    ],
+    "military": true,
+    "points": [
+      {
+        "end": 44,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.91266666666667,
+        "lon": 119.73733333333334,
+        "raw": "38-54.76N 119-44.24E",
+        "start": 24
+      },
+      {
+        "end": 65,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.91266666666667,
+        "lon": 119.7605,
+        "raw": "38-54.76N 119-45.63E",
+        "start": 45
+      },
+      {
+        "end": 86,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.894666666666666,
+        "lon": 119.7605,
+        "raw": "38-53.68N 119-45.63E",
+        "start": 66
+      },
+      {
+        "end": 107,
+        "fmt": "DDM_HYPHEN",
+        "lat": 38.894666666666666,
+        "lon": 119.73733333333334,
+        "raw": "38-53.68N 119-44.24E",
+        "start": 87
+      }
+    ],
+    "raw_text": "渤海，10月4日0000时至16日2400时，在38-54.76N 119-44.24E、38-54.76N 119-45.63E、38-53.68N 119-45.63E和38-53.68N 119-44.24E四点连线水域进行军事活动，参与船舶：“永泰6”轮、“海旺889”轮和“瀛海工58”轮，无关船舶禁止驶入。",
+    "revoked": false,
+    "title": "军事活动—津航警346/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7890b619a8094e40be4822f0b89dfda7.html",
+    "validity": {
+      "end": "2026-10-16T16:00:00+00:00",
+      "period_count": 1,
+      "raw": [
+        "10月4日0000时至16日2400时"
+      ],
+      "start": "2026-10-03T16:00:00+00:00"
+    }
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/7896b2a47a1f47e6b5f2556862831f80.html": {
     "bureau": "广西海事局",
     "cancels": [],
