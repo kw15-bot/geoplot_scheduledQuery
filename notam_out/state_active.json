@@ -139480,5 +139480,423 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1790904491363000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1202N12434E",
+  "effective_end": "2026-12-09T23:59:00.000Z",
+  "effective_start": "2026-11-26T00:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-02T01:30:36+00:00",
+  "geometry": {
+   "coordinates": [
+    124.566667,
+    12.033333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RPHI",
+  "icao_text": "C1279/26 NOTAMN\r\nQ) RPHI/QAFTT/IV/BO /E /000/999/1202N12434E686\r\nA) RPHI B) 2611260000 C) 2612092359\r\nE) TRIGGER NOTAM - PERM AIRAC AIP AMDT NR 007/26 WEF 26 NOV 2026.\r\n\r\nEDITORIAL CHANGES:\r\nA. REVISION TO DIFFERENCES FM ICAO SARPS AND PROC (REF GEN 1.7-1 TO \r\n1.7-99)\r\nB. REVISION TO AERONAUTICAL CHARTS (REF GEN 3.2-4 TO 3.2-15)\r\nC. REVISION TO ATS (REF GEN 3.3-3 TO 3.3-7)\r\nD. REVISION TO AD/HLP CHARGES (REF GEN 4.1-30 TO 4.1-31)\r\nE. REVISION TO ATS SURVEILLANCE SER AND PROC (REF ENR 1.6-1).",
+  "id": "1790904491363000",
+  "issued": "2026-10-02T01:27:00.000Z",
+  "last_updated": "2026-10-02T01:28:00.000Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "C1279/26",
+  "purpose": "BO ",
+  "q_code": "QAFTT",
+  "qline_offset_nm": null,
+  "radius_nm": 686.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E ",
+  "series": "C",
+  "text": "TRIGGER NOTAM - PERM AIRAC AIP AMDT NR 007/26 WEF 26 NOV 2026.\r\n\r\nEDITORIAL CHANGES:\r\nA. REVISION TO DIFFERENCES FM ICAO SARPS AND PROC (REF GEN 1.7-1 TO \r\n1.7-99)\r\nB. REVISION TO AERONAUTICAL CHARTS (REF GEN 3.2-4 TO 3.2-15)\r\nC. REVISION TO ATS (REF GEN 3.3-3 TO 3.3-7)\r\nD. REVISION TO AD/HLP CHARGES (REF GEN 4.1-30 TO 4.1-31)\r\nE. REVISION TO ATS SURVEILLANCE SER AND PROC (REF ENR 1.6-1).",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1790904539791000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2401N12138E",
+  "effective_end": "2026-12-04T16:00:00Z",
+  "effective_start": "2026-10-07T16:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-02T01:30:36+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.637778,
+      24.016667
+     ],
+     [
+      121.6425,
+      24.016389
+     ],
+     [
+      121.640556,
+      24.012778
+     ],
+     [
+      121.636111,
+      24.014722
+     ],
+     [
+      121.637778,
+      24.016667
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCYU",
+  "icao_text": "U2520/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/006/2401N12138E001\r\nA) RCYU\r\nB) 2610071600 C) 2612041600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260828000601\r\n2.LCA:HUALIEN CITY, HUALIEN COUNTY\r\n3.THE AREA OVERLAPS PART OF VFR CORRIDOR C4 AND C6,\r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0916-515170, 0988-621521\r\n5.AREA AS FLW:\r\n240100N 1213816E\r\n240059N 1213833E\r\n240046N 1213826E\r\n240053N 1213810E\r\n240100N 1213816E\r\nF) SFC G) 600FT AMSL",
+  "id": "1790904539791000",
+  "issued": "2026-10-02T01:28:00Z",
+  "last_updated": "2026-10-02T01:29:00Z",
+  "local_text": null,
+  "location": "RCYU",
+  "lower": "SFC",
+  "max_fl": "006",
+  "min_fl": "000",
+  "number": "U2520/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.3,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260828000601\r\n2.LCA:HUALIEN CITY, HUALIEN COUNTY\r\n3.THE AREA OVERLAPS PART OF VFR CORRIDOR C4 AND C6,\r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0916-515170, 0988-621521\r\n5.AREA AS FLW:\r\n240100N 1213816E\r\n240059N 1213833E\r\n240046N 1213826E\r\n240053N 1213810E\r\n240100N 1213816E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "600FT AMSL",
+  "year": "2026"
+ },
+ "1790904591865000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3021N11502E",
+  "effective_end": "2027-01-01T01:30:00.000Z",
+  "effective_start": "2026-10-03T01:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZHWH",
+  "first_seen": "2026-10-02T01:30:36+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      115.033333,
+      30.433184
+     ],
+     [
+      115.042782,
+      30.432783
+     ],
+     [
+      115.052139,
+      30.431585
+     ],
+     [
+      115.061315,
+      30.429602
+     ],
+     [
+      115.070222,
+      30.426852
+     ],
+     [
+      115.078773,
+      30.423361
+     ],
+     [
+      115.086887,
+      30.419165
+     ],
+     [
+      115.094485,
+      30.414302
+     ],
+     [
+      115.101494,
+      30.40882
+     ],
+     [
+      115.107847,
+      30.402771
+     ],
+     [
+      115.113482,
+      30.396214
+     ],
+     [
+      115.118345,
+      30.389212
+     ],
+     [
+      115.12239,
+      30.381833
+     ],
+     [
+      115.125577,
+      30.374147
+     ],
+     [
+      115.127875,
+      30.366228
+     ],
+     [
+      115.129263,
+      30.358153
+     ],
+     [
+      115.129727,
+      30.35
+     ],
+     [
+      115.129263,
+      30.341847
+     ],
+     [
+      115.127875,
+      30.333772
+     ],
+     [
+      115.125577,
+      30.325853
+     ],
+     [
+      115.12239,
+      30.318167
+     ],
+     [
+      115.118345,
+      30.310788
+     ],
+     [
+      115.113482,
+      30.303786
+     ],
+     [
+      115.107847,
+      30.297229
+     ],
+     [
+      115.101494,
+      30.29118
+     ],
+     [
+      115.094485,
+      30.285698
+     ],
+     [
+      115.086887,
+      30.280835
+     ],
+     [
+      115.078773,
+      30.276639
+     ],
+     [
+      115.070222,
+      30.273148
+     ],
+     [
+      115.061315,
+      30.270398
+     ],
+     [
+      115.052139,
+      30.268415
+     ],
+     [
+      115.042782,
+      30.267217
+     ],
+     [
+      115.033333,
+      30.266816
+     ],
+     [
+      115.023885,
+      30.267217
+     ],
+     [
+      115.014528,
+      30.268415
+     ],
+     [
+      115.005352,
+      30.270398
+     ],
+     [
+      114.996445,
+      30.273148
+     ],
+     [
+      114.987894,
+      30.276639
+     ],
+     [
+      114.97978,
+      30.280835
+     ],
+     [
+      114.972182,
+      30.285698
+     ],
+     [
+      114.965173,
+      30.29118
+     ],
+     [
+      114.95882,
+      30.297229
+     ],
+     [
+      114.953185,
+      30.303786
+     ],
+     [
+      114.948321,
+      30.310788
+     ],
+     [
+      114.944277,
+      30.318167
+     ],
+     [
+      114.94109,
+      30.325853
+     ],
+     [
+      114.938792,
+      30.333772
+     ],
+     [
+      114.937404,
+      30.341847
+     ],
+     [
+      114.936939,
+      30.35
+     ],
+     [
+      114.937404,
+      30.358153
+     ],
+     [
+      114.938792,
+      30.366228
+     ],
+     [
+      114.94109,
+      30.374147
+     ],
+     [
+      114.944277,
+      30.381833
+     ],
+     [
+      114.948321,
+      30.389212
+     ],
+     [
+      114.953185,
+      30.396214
+     ],
+     [
+      114.95882,
+      30.402771
+     ],
+     [
+      114.965173,
+      30.40882
+     ],
+     [
+      114.972182,
+      30.414302
+     ],
+     [
+      114.97978,
+      30.419165
+     ],
+     [
+      114.987894,
+      30.423361
+     ],
+     [
+      114.996445,
+      30.426852
+     ],
+     [
+      115.005352,
+      30.429602
+     ],
+     [
+      115.014528,
+      30.431585
+     ],
+     [
+      115.023885,
+      30.432783
+     ],
+     [
+      115.033333,
+      30.433184
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZHEC",
+  "icao_text": "G4409/26 NOTAMN\r\nQ)ZHWH/QMPLC/IV/BO/A/000/999/3021N11502E005\r\nA)ZHEC B)2610030130 C)2701010130 \r\nE) PARKING STAND NR.355,356,357 CLSD DUE TO MAINT.\r\n ",
+  "id": "1790904591865000",
+  "issued": "2026-10-02T01:28:00.000Z",
+  "last_updated": "2026-10-02T01:29:00.000Z",
+  "local_text": null,
+  "location": "ZHEC",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "G4409/26",
+  "purpose": "BO",
+  "q_code": "QMPLC",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "G",
+  "text": "PARKING STAND NR.355,356,357 CLSD DUE TO MAINT.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
  }
 }
