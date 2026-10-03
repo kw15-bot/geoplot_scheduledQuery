@@ -148702,5 +148702,51 @@
   "type": "N",
   "upper": "FL800",
   "year": "2026"
+ },
+ "1791052438420833": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-04T21:00:00Z",
+  "effective_start": "2026-10-04T05:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-03T18:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4833/26 NOTAMN\nQ) KZAK/QARCA/IV/BO/E/000/999\nA) KZAK\nB) 2610040500\nC) 2610042100\nE) (TDM TRK J 261004050001 2610040500 2610042100 ALCOA BUTEN BOSKE 38N140W 37N150W 34N160W 32N170W 31N180E 30N170E 29N160E 29N150E 28N140E CANAI RTS/KSFO GNNRR ALCOA KLAX MCKEY LIBBO BRINY ALCOA CANAI V75 NHC RMK/0)",
+  "id": "1791052438420833",
+  "issued": "2026-10-03T18:32:00Z",
+  "last_updated": "2026-10-03T18:33:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": null,
+  "max_fl": null,
+  "min_fl": null,
+  "number": "A4833/26",
+  "purpose": "BO",
+  "q_code": "QARCA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": "A",
+  "text": "(TDM TRK J 261004050001 2610040500 2610042100 ALCOA BUTEN BOSKE 38N140W 37N150W 34N160W 32N170W 31N180E 30N170E 29N160E 29N150E 28N140E CANAI RTS/KSFO GNNRR ALCOA KLAX MCKEY LIBBO BRINY ALCOA CANAI V75 NHC RMK/0)",
+  "traffic": null,
+  "type": "N",
+  "upper": null,
+  "year": "2026"
  }
 }
