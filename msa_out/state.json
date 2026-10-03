@@ -24213,11 +24213,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/56f4a3690b924afb84065aced9868e1c.html": {
     "bureau": "广东海事局",
+    "cancels": [],
     "date": "2026-10-03",
     "detail_fetched": false,
     "first_seen": "2026-10-03T06:20:30+00:00",
     "groups": [],
     "military": false,
+    "own_id": "粤航警718/26",
     "points": [],
     "revoked": false,
     "title": "“德泽”轮拖带“南海十号”—粤航警718/26",
