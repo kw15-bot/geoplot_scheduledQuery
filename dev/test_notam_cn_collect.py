@@ -725,6 +725,9 @@ class AipChartAreas(unittest.TestCase):
         self.assertEqual(m(self.W1338), [])                      # 登録済みで線にできる
         self.assertEqual(m("REF AIP CHINA ZBAA-3P-5, AREA WEST OF A-B ACTIVE"), ["ZBAA-3P-5"])
         self.assertEqual(m("RWY 08 CLSD"), [])
+        # 手順の図を挙げているだけ(区域の点の並びが無い)ものは対象外(ZGZU G4414/26)
+        self.assertEqual(m("DUE TO YUANTAN VOR/DME 'TAN' U/S,FLW PROCEDUER U/S: 1.SID RWY01L/01R(ZGGG-3V-5) :SAREX-1. "
+                           "3.REF AIP SUP 08/26 :SID RWY01L/01R/02L/02R/03/19L/19R(ZGGG-3V-9):AGVIL-1."), [])
 
 
 # ----------------------------------------------------------------------------- APIモード（同一プロセス内モック）
