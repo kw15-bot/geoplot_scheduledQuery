@@ -109379,98 +109379,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790929966606199": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-05T08:31:00Z",
-  "effective_start": "2026-10-02T08:31:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-10-02T08:40:27+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": "A4813/26 NOTAMC A4749/26\nQ) KZAK/QPFXX/IV/NBO/AE/000/999/\nA) KZAK\nB) 2610020831\nE) ATTENTION ACFT OPR AND DISPATCHERS OPERATING WI OAKLAND OCEANIC (KZAK\nCANCELED",
-  "id": "1790929966606199",
-  "issued": "2026-10-02T08:31:00Z",
-  "last_updated": "2026-10-02T08:31:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A4813/26",
-  "purpose": "NBO",
-  "q_code": "QPFXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "A4749/26",
-  "schedule": null,
-  "scope": "AE",
-  "series": "A",
-  "text": "A4813/26 NOTAMC A4749/26\nQ) KZAK/QPFXX/IV/NBO/AE/000/999/\nA) KZAK\nB) 2610020831\nE) ATTENTION ACFT OPR AND DISPATCHERS OPERATING WI OAKLAND OCEANIC (KZAK\nCANCELED",
-  "traffic": "IV",
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
- "1790930067642227": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-05T08:33:00Z",
-  "effective_start": "2026-10-02T08:33:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-10-02T08:40:27+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": "A4814/26 NOTAMC A4777/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2610020833\nE) ZAK AIRSPACE DCC EROP X4057 F HVY NROL97 STNR ALT RESERVATION \nCANCELED",
-  "id": "1790930067642227",
-  "issued": "2026-10-02T08:33:00Z",
-  "last_updated": "2026-10-02T08:33:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A4814/26",
-  "purpose": "NBO",
-  "q_code": "QRAXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "A4777/26",
-  "schedule": null,
-  "scope": "W",
-  "series": "A",
-  "text": "A4814/26 NOTAMC A4777/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2610020833\nE) ZAK AIRSPACE DCC EROP X4057 F HVY NROL97 STNR ALT RESERVATION \nCANCELED",
-  "traffic": "IV",
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
  "1790932072282000": {
   "account_id": "RCTPYNYX",
   "area_group": "TW",
@@ -119770,1230 +119678,6 @@
   "text": "A4823/26 NOTAMC A4725/26\nQ) KZAK/QRAXX/IV/NBO/W/000/500/\nA) KZAK\nB) 2610022159\nE) AIRSPACE BOEING EAST BOX. AN AREA DEFINED AS 180000N1540000W TO 18000\nCANCELED",
   "traffic": "IV",
   "type": "C",
-  "upper": null,
-  "year": "2026"
- },
- "1790991511806000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3109N12148E",
-  "effective_end": "2026-10-04T22:15:00.000Z",
-  "effective_start": "2026-10-04T17:30:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-10-03T01:40:24+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      121.8,
-      31.233184
-     ],
-     [
-      121.809527,
-      31.232783
-     ],
-     [
-      121.818962,
-      31.231585
-     ],
-     [
-      121.828215,
-      31.229602
-     ],
-     [
-      121.837196,
-      31.226852
-     ],
-     [
-      121.845819,
-      31.223361
-     ],
-     [
-      121.854,
-      31.219165
-     ],
-     [
-      121.861662,
-      31.214302
-     ],
-     [
-      121.868729,
-      31.20882
-     ],
-     [
-      121.875135,
-      31.202771
-     ],
-     [
-      121.880817,
-      31.196214
-     ],
-     [
-      121.885721,
-      31.189212
-     ],
-     [
-      121.889799,
-      31.181833
-     ],
-     [
-      121.893013,
-      31.174147
-     ],
-     [
-      121.89533,
-      31.166228
-     ],
-     [
-      121.89673,
-      31.158153
-     ],
-     [
-      121.897198,
-      31.15
-     ],
-     [
-      121.89673,
-      31.141847
-     ],
-     [
-      121.89533,
-      31.133772
-     ],
-     [
-      121.893013,
-      31.125853
-     ],
-     [
-      121.889799,
-      31.118167
-     ],
-     [
-      121.885721,
-      31.110788
-     ],
-     [
-      121.880817,
-      31.103786
-     ],
-     [
-      121.875135,
-      31.097229
-     ],
-     [
-      121.868729,
-      31.09118
-     ],
-     [
-      121.861662,
-      31.085698
-     ],
-     [
-      121.854,
-      31.080835
-     ],
-     [
-      121.845819,
-      31.076639
-     ],
-     [
-      121.837196,
-      31.073148
-     ],
-     [
-      121.828215,
-      31.070398
-     ],
-     [
-      121.818962,
-      31.068415
-     ],
-     [
-      121.809527,
-      31.067217
-     ],
-     [
-      121.8,
-      31.066816
-     ],
-     [
-      121.790473,
-      31.067217
-     ],
-     [
-      121.781038,
-      31.068415
-     ],
-     [
-      121.771785,
-      31.070398
-     ],
-     [
-      121.762804,
-      31.073148
-     ],
-     [
-      121.754181,
-      31.076639
-     ],
-     [
-      121.746,
-      31.080835
-     ],
-     [
-      121.738338,
-      31.085698
-     ],
-     [
-      121.731271,
-      31.09118
-     ],
-     [
-      121.724865,
-      31.097229
-     ],
-     [
-      121.719183,
-      31.103786
-     ],
-     [
-      121.714279,
-      31.110788
-     ],
-     [
-      121.710201,
-      31.118167
-     ],
-     [
-      121.706987,
-      31.125853
-     ],
-     [
-      121.70467,
-      31.133772
-     ],
-     [
-      121.70327,
-      31.141847
-     ],
-     [
-      121.702802,
-      31.15
-     ],
-     [
-      121.70327,
-      31.158153
-     ],
-     [
-      121.70467,
-      31.166228
-     ],
-     [
-      121.706987,
-      31.174147
-     ],
-     [
-      121.710201,
-      31.181833
-     ],
-     [
-      121.714279,
-      31.189212
-     ],
-     [
-      121.719183,
-      31.196214
-     ],
-     [
-      121.724865,
-      31.202771
-     ],
-     [
-      121.731271,
-      31.20882
-     ],
-     [
-      121.738338,
-      31.214302
-     ],
-     [
-      121.746,
-      31.219165
-     ],
-     [
-      121.754181,
-      31.223361
-     ],
-     [
-      121.762804,
-      31.226852
-     ],
-     [
-      121.771785,
-      31.229602
-     ],
-     [
-      121.781038,
-      31.231585
-     ],
-     [
-      121.790473,
-      31.232783
-     ],
-     [
-      121.8,
-      31.233184
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "ZSPD",
-  "icao_text": "F4165/26 NOTAMN\r\nQ)ZSHA/QICCT/I/NBO/A/000/999/3109N12148E005\r\nA)ZSPD B)2610041730 C)2610042215 \r\nE) RWY17L/35R ILS ON TEST,DO NOT USE,DUE TO MAINT.\r\n ",
-  "id": "1790991511806000",
-  "issued": "2026-10-03T01:38:00.000Z",
-  "last_updated": "2026-10-03T01:38:00.000Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4165/26",
-  "purpose": "NBO",
-  "q_code": "QICCT",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "A",
-  "series": "F",
-  "text": "RWY17L/35R ILS ON TEST,DO NOT USE,DUE TO MAINT.",
-  "traffic": "I",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1790991539146000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3109N12148E",
-  "effective_end": "2026-10-04T22:15:00Z",
-  "effective_start": "2026-10-04T17:30:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-10-03T01:40:24+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      121.8,
-      31.233184
-     ],
-     [
-      121.809527,
-      31.232783
-     ],
-     [
-      121.818962,
-      31.231585
-     ],
-     [
-      121.828215,
-      31.229602
-     ],
-     [
-      121.837196,
-      31.226852
-     ],
-     [
-      121.845819,
-      31.223361
-     ],
-     [
-      121.854,
-      31.219165
-     ],
-     [
-      121.861662,
-      31.214302
-     ],
-     [
-      121.868729,
-      31.20882
-     ],
-     [
-      121.875135,
-      31.202771
-     ],
-     [
-      121.880817,
-      31.196214
-     ],
-     [
-      121.885721,
-      31.189212
-     ],
-     [
-      121.889799,
-      31.181833
-     ],
-     [
-      121.893013,
-      31.174147
-     ],
-     [
-      121.89533,
-      31.166228
-     ],
-     [
-      121.89673,
-      31.158153
-     ],
-     [
-      121.897198,
-      31.15
-     ],
-     [
-      121.89673,
-      31.141847
-     ],
-     [
-      121.89533,
-      31.133772
-     ],
-     [
-      121.893013,
-      31.125853
-     ],
-     [
-      121.889799,
-      31.118167
-     ],
-     [
-      121.885721,
-      31.110788
-     ],
-     [
-      121.880817,
-      31.103786
-     ],
-     [
-      121.875135,
-      31.097229
-     ],
-     [
-      121.868729,
-      31.09118
-     ],
-     [
-      121.861662,
-      31.085698
-     ],
-     [
-      121.854,
-      31.080835
-     ],
-     [
-      121.845819,
-      31.076639
-     ],
-     [
-      121.837196,
-      31.073148
-     ],
-     [
-      121.828215,
-      31.070398
-     ],
-     [
-      121.818962,
-      31.068415
-     ],
-     [
-      121.809527,
-      31.067217
-     ],
-     [
-      121.8,
-      31.066816
-     ],
-     [
-      121.790473,
-      31.067217
-     ],
-     [
-      121.781038,
-      31.068415
-     ],
-     [
-      121.771785,
-      31.070398
-     ],
-     [
-      121.762804,
-      31.073148
-     ],
-     [
-      121.754181,
-      31.076639
-     ],
-     [
-      121.746,
-      31.080835
-     ],
-     [
-      121.738338,
-      31.085698
-     ],
-     [
-      121.731271,
-      31.09118
-     ],
-     [
-      121.724865,
-      31.097229
-     ],
-     [
-      121.719183,
-      31.103786
-     ],
-     [
-      121.714279,
-      31.110788
-     ],
-     [
-      121.710201,
-      31.118167
-     ],
-     [
-      121.706987,
-      31.125853
-     ],
-     [
-      121.70467,
-      31.133772
-     ],
-     [
-      121.70327,
-      31.141847
-     ],
-     [
-      121.702802,
-      31.15
-     ],
-     [
-      121.70327,
-      31.158153
-     ],
-     [
-      121.70467,
-      31.166228
-     ],
-     [
-      121.706987,
-      31.174147
-     ],
-     [
-      121.710201,
-      31.181833
-     ],
-     [
-      121.714279,
-      31.189212
-     ],
-     [
-      121.719183,
-      31.196214
-     ],
-     [
-      121.724865,
-      31.202771
-     ],
-     [
-      121.731271,
-      31.20882
-     ],
-     [
-      121.738338,
-      31.214302
-     ],
-     [
-      121.746,
-      31.219165
-     ],
-     [
-      121.754181,
-      31.223361
-     ],
-     [
-      121.762804,
-      31.226852
-     ],
-     [
-      121.771785,
-      31.229602
-     ],
-     [
-      121.781038,
-      31.231585
-     ],
-     [
-      121.790473,
-      31.232783
-     ],
-     [
-      121.8,
-      31.233184
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "ZSPD",
-  "icao_text": "F4166/26 NOTAMN\r\nQ)ZSHA/QIDCT/I/NBO/A/000/999/3109N12148E005\r\nA)ZSPD B)2610041730 C)2610042215 \r\nE) DUE TO MAINT:\r\n1.DME 17L 'IPD' CH44X ON TEST DO NOT USE .\r\n2.DME 35R 'INN' CH56X ON TEST DO NOT USE .",
-  "id": "1790991539146000",
-  "issued": "2026-10-03T01:38:00Z",
-  "last_updated": "2026-10-03T01:39:00Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4166/26",
-  "purpose": "NBO",
-  "q_code": "QIDCT",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "A",
-  "series": "F",
-  "text": "DUE TO MAINT:\r\n1.DME 17L &apos;IPD&apos; CH44X ON TEST DO NOT USE .\r\n2.DME 35R &apos;INN&apos; CH56X ON TEST DO NOT USE .",
-  "traffic": "I",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1790991558371000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3109N12148E",
-  "effective_end": "2026-10-04T22:15:00.000Z",
-  "effective_start": "2026-10-04T17:30:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-10-03T01:40:24+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      121.8,
-      31.233184
-     ],
-     [
-      121.809527,
-      31.232783
-     ],
-     [
-      121.818962,
-      31.231585
-     ],
-     [
-      121.828215,
-      31.229602
-     ],
-     [
-      121.837196,
-      31.226852
-     ],
-     [
-      121.845819,
-      31.223361
-     ],
-     [
-      121.854,
-      31.219165
-     ],
-     [
-      121.861662,
-      31.214302
-     ],
-     [
-      121.868729,
-      31.20882
-     ],
-     [
-      121.875135,
-      31.202771
-     ],
-     [
-      121.880817,
-      31.196214
-     ],
-     [
-      121.885721,
-      31.189212
-     ],
-     [
-      121.889799,
-      31.181833
-     ],
-     [
-      121.893013,
-      31.174147
-     ],
-     [
-      121.89533,
-      31.166228
-     ],
-     [
-      121.89673,
-      31.158153
-     ],
-     [
-      121.897198,
-      31.15
-     ],
-     [
-      121.89673,
-      31.141847
-     ],
-     [
-      121.89533,
-      31.133772
-     ],
-     [
-      121.893013,
-      31.125853
-     ],
-     [
-      121.889799,
-      31.118167
-     ],
-     [
-      121.885721,
-      31.110788
-     ],
-     [
-      121.880817,
-      31.103786
-     ],
-     [
-      121.875135,
-      31.097229
-     ],
-     [
-      121.868729,
-      31.09118
-     ],
-     [
-      121.861662,
-      31.085698
-     ],
-     [
-      121.854,
-      31.080835
-     ],
-     [
-      121.845819,
-      31.076639
-     ],
-     [
-      121.837196,
-      31.073148
-     ],
-     [
-      121.828215,
-      31.070398
-     ],
-     [
-      121.818962,
-      31.068415
-     ],
-     [
-      121.809527,
-      31.067217
-     ],
-     [
-      121.8,
-      31.066816
-     ],
-     [
-      121.790473,
-      31.067217
-     ],
-     [
-      121.781038,
-      31.068415
-     ],
-     [
-      121.771785,
-      31.070398
-     ],
-     [
-      121.762804,
-      31.073148
-     ],
-     [
-      121.754181,
-      31.076639
-     ],
-     [
-      121.746,
-      31.080835
-     ],
-     [
-      121.738338,
-      31.085698
-     ],
-     [
-      121.731271,
-      31.09118
-     ],
-     [
-      121.724865,
-      31.097229
-     ],
-     [
-      121.719183,
-      31.103786
-     ],
-     [
-      121.714279,
-      31.110788
-     ],
-     [
-      121.710201,
-      31.118167
-     ],
-     [
-      121.706987,
-      31.125853
-     ],
-     [
-      121.70467,
-      31.133772
-     ],
-     [
-      121.70327,
-      31.141847
-     ],
-     [
-      121.702802,
-      31.15
-     ],
-     [
-      121.70327,
-      31.158153
-     ],
-     [
-      121.70467,
-      31.166228
-     ],
-     [
-      121.706987,
-      31.174147
-     ],
-     [
-      121.710201,
-      31.181833
-     ],
-     [
-      121.714279,
-      31.189212
-     ],
-     [
-      121.719183,
-      31.196214
-     ],
-     [
-      121.724865,
-      31.202771
-     ],
-     [
-      121.731271,
-      31.20882
-     ],
-     [
-      121.738338,
-      31.214302
-     ],
-     [
-      121.746,
-      31.219165
-     ],
-     [
-      121.754181,
-      31.223361
-     ],
-     [
-      121.762804,
-      31.226852
-     ],
-     [
-      121.771785,
-      31.229602
-     ],
-     [
-      121.781038,
-      31.231585
-     ],
-     [
-      121.790473,
-      31.232783
-     ],
-     [
-      121.8,
-      31.233184
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "ZSPD",
-  "icao_text": "F4167/26 NOTAMN\r\nQ)ZSHA/QICCT/I/NBO/A/000/999/3109N12148E005\r\nA)ZSPD B)2610041730 C)2610042215 \r\nE) RWY16L/34R ILS ON TEST,DO NOT USE,DUE TO MAINT.\r\n ",
-  "id": "1790991558371000",
-  "issued": "2026-10-03T01:39:00.000Z",
-  "last_updated": "2026-10-03T01:39:00.000Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4167/26",
-  "purpose": "NBO",
-  "q_code": "QICCT",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "A",
-  "series": "F",
-  "text": "RWY16L/34R ILS ON TEST,DO NOT USE,DUE TO MAINT.",
-  "traffic": "I",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1790991689286000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "3109N12148E",
-  "effective_end": "2026-10-04T22:15:00Z",
-  "effective_start": "2026-10-04T17:30:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-10-03T01:50:24+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      121.8,
-      31.233184
-     ],
-     [
-      121.809527,
-      31.232783
-     ],
-     [
-      121.818962,
-      31.231585
-     ],
-     [
-      121.828215,
-      31.229602
-     ],
-     [
-      121.837196,
-      31.226852
-     ],
-     [
-      121.845819,
-      31.223361
-     ],
-     [
-      121.854,
-      31.219165
-     ],
-     [
-      121.861662,
-      31.214302
-     ],
-     [
-      121.868729,
-      31.20882
-     ],
-     [
-      121.875135,
-      31.202771
-     ],
-     [
-      121.880817,
-      31.196214
-     ],
-     [
-      121.885721,
-      31.189212
-     ],
-     [
-      121.889799,
-      31.181833
-     ],
-     [
-      121.893013,
-      31.174147
-     ],
-     [
-      121.89533,
-      31.166228
-     ],
-     [
-      121.89673,
-      31.158153
-     ],
-     [
-      121.897198,
-      31.15
-     ],
-     [
-      121.89673,
-      31.141847
-     ],
-     [
-      121.89533,
-      31.133772
-     ],
-     [
-      121.893013,
-      31.125853
-     ],
-     [
-      121.889799,
-      31.118167
-     ],
-     [
-      121.885721,
-      31.110788
-     ],
-     [
-      121.880817,
-      31.103786
-     ],
-     [
-      121.875135,
-      31.097229
-     ],
-     [
-      121.868729,
-      31.09118
-     ],
-     [
-      121.861662,
-      31.085698
-     ],
-     [
-      121.854,
-      31.080835
-     ],
-     [
-      121.845819,
-      31.076639
-     ],
-     [
-      121.837196,
-      31.073148
-     ],
-     [
-      121.828215,
-      31.070398
-     ],
-     [
-      121.818962,
-      31.068415
-     ],
-     [
-      121.809527,
-      31.067217
-     ],
-     [
-      121.8,
-      31.066816
-     ],
-     [
-      121.790473,
-      31.067217
-     ],
-     [
-      121.781038,
-      31.068415
-     ],
-     [
-      121.771785,
-      31.070398
-     ],
-     [
-      121.762804,
-      31.073148
-     ],
-     [
-      121.754181,
-      31.076639
-     ],
-     [
-      121.746,
-      31.080835
-     ],
-     [
-      121.738338,
-      31.085698
-     ],
-     [
-      121.731271,
-      31.09118
-     ],
-     [
-      121.724865,
-      31.097229
-     ],
-     [
-      121.719183,
-      31.103786
-     ],
-     [
-      121.714279,
-      31.110788
-     ],
-     [
-      121.710201,
-      31.118167
-     ],
-     [
-      121.706987,
-      31.125853
-     ],
-     [
-      121.70467,
-      31.133772
-     ],
-     [
-      121.70327,
-      31.141847
-     ],
-     [
-      121.702802,
-      31.15
-     ],
-     [
-      121.70327,
-      31.158153
-     ],
-     [
-      121.70467,
-      31.166228
-     ],
-     [
-      121.706987,
-      31.174147
-     ],
-     [
-      121.710201,
-      31.181833
-     ],
-     [
-      121.714279,
-      31.189212
-     ],
-     [
-      121.719183,
-      31.196214
-     ],
-     [
-      121.724865,
-      31.202771
-     ],
-     [
-      121.731271,
-      31.20882
-     ],
-     [
-      121.738338,
-      31.214302
-     ],
-     [
-      121.746,
-      31.219165
-     ],
-     [
-      121.754181,
-      31.223361
-     ],
-     [
-      121.762804,
-      31.226852
-     ],
-     [
-      121.771785,
-      31.229602
-     ],
-     [
-      121.781038,
-      31.231585
-     ],
-     [
-      121.790473,
-      31.232783
-     ],
-     [
-      121.8,
-      31.233184
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "ZSPD",
-  "icao_text": "F4168/26 NOTAMN\r\nQ)ZSHA/QIDCT/I/NBO/A/000/999/3109N12148E005\r\nA)ZSPD B)2610041730 C)2610042215 \r\nE) DUE TO MAINT:\r\n1.DME 16L 'IHL' CH52X ON TEST,DO NOT USE.\r\n2.DME 34R 'IPR' CH26X ON TEST,DO NOT USE.",
-  "id": "1790991689286000",
-  "issued": "2026-10-03T01:40:00Z",
-  "last_updated": "2026-10-03T01:42:00Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4168/26",
-  "purpose": "NBO",
-  "q_code": "QIDCT",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "A",
-  "series": "F",
-  "text": "DUE TO MAINT:\r\n1.DME 16L &apos;IHL&apos; CH52X ON TEST,DO NOT USE.\r\n2.DME 34R &apos;IPR&apos; CH26X ON TEST,DO NOT USE.",
-  "traffic": "I",
-  "type": "N",
   "upper": null,
   "year": "2026"
  },
@@ -145314,6 +143998,190 @@
   "text": "WZX0199 ZYTX 10040815\r\n(SNOWTAM 0199\r\nZYTX\r\n10040815 06 5/5/5 100/100/100 NR/NR/NR WET/WET/WET\r\n)",
   "traffic": null,
   "type": null,
+  "upper": null,
+  "year": "2026"
+ },
+ "1791103097047000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-07T08:35:00.000Z",
+  "effective_start": "2026-10-04T08:35:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZSHA",
+  "first_seen": "2026-10-04T08:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    121.793333,
+    31.145
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "ZSPD",
+  "icao_text": "F4187/26 NOTAMC F4165/26\r\nQ)ZSHA/QICAK//M//000/999/\r\nA)ZSPD B)2610040835 \r\nE) CNL NTM.\r\n",
+  "id": "1791103097047000",
+  "issued": "2026-10-04T08:37:00.000Z",
+  "last_updated": "2026-10-04T08:38:00.000Z",
+  "local_text": null,
+  "location": "ZSPD",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "F4187/26",
+  "purpose": "M",
+  "q_code": "QICAK",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "F4165/26",
+  "schedule": null,
+  "scope": null,
+  "series": "F",
+  "text": "CNL NTM.",
+  "traffic": null,
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791103098836000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-07T08:35:00.000Z",
+  "effective_start": "2026-10-04T08:35:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZSHA",
+  "first_seen": "2026-10-04T08:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    121.793333,
+    31.145
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "ZSPD",
+  "icao_text": "F4188/26 NOTAMC F4166/26\r\nQ)ZSHA/QIDAK//M//000/999/\r\nA)ZSPD B)2610040835 \r\nE) CNL NTM.\r\n",
+  "id": "1791103098836000",
+  "issued": "2026-10-04T08:37:00.000Z",
+  "last_updated": "2026-10-04T08:38:00.000Z",
+  "local_text": null,
+  "location": "ZSPD",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "F4188/26",
+  "purpose": "M",
+  "q_code": "QIDAK",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "F4166/26",
+  "schedule": null,
+  "scope": null,
+  "series": "F",
+  "text": "CNL NTM.",
+  "traffic": null,
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791103100621000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-07T08:36:00.000Z",
+  "effective_start": "2026-10-04T08:36:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZSHA",
+  "first_seen": "2026-10-04T08:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    121.793333,
+    31.145
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "ZSPD",
+  "icao_text": "F4189/26 NOTAMC F4167/26\r\nQ)ZSHA/QICAK//M//000/999/\r\nA)ZSPD B)2610040836 \r\nE) CNL NTM.\r\n",
+  "id": "1791103100621000",
+  "issued": "2026-10-04T08:38:00.000Z",
+  "last_updated": "2026-10-04T08:38:00.000Z",
+  "local_text": null,
+  "location": "ZSPD",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "F4189/26",
+  "purpose": "M",
+  "q_code": "QICAK",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "F4167/26",
+  "schedule": null,
+  "scope": null,
+  "series": "F",
+  "text": "CNL NTM.",
+  "traffic": null,
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791103103027000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-07T08:36:00.000Z",
+  "effective_start": "2026-10-04T08:36:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZSHA",
+  "first_seen": "2026-10-04T08:40:26+00:00",
+  "geometry": {
+   "coordinates": [
+    121.793333,
+    31.145
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "ZSPD",
+  "icao_text": "F4190/26 NOTAMC F4168/26\r\nQ)ZSHA/QIDAK//M//000/999/\r\nA)ZSPD B)2610040836 \r\nE) CNL NTM.\r\n",
+  "id": "1791103103027000",
+  "issued": "2026-10-04T08:38:00.000Z",
+  "last_updated": "2026-10-04T08:38:00.000Z",
+  "local_text": null,
+  "location": "ZSPD",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "F4190/26",
+  "purpose": "M",
+  "q_code": "QIDAK",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "F4168/26",
+  "schedule": null,
+  "scope": null,
+  "series": "F",
+  "text": "CNL NTM.",
+  "traffic": null,
+  "type": "C",
   "upper": null,
   "year": "2026"
  }
