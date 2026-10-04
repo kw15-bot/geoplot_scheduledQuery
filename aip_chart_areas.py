@@ -67,7 +67,9 @@ def chart_refs_missing(e_text):
     if "AIP" not in t:
         return []
     charts = sorted(set(_CHART_REF.findall(t)))
-    if not charts or chart_boundary_geometry(e_text):
+    # 区域を図の点で示しているもの(「OF G-H-J-K」のような点の並び)だけ。手順の図を挙げて
+    # 「SID ... U/S」と言っているだけのもの(ZGZU G4414/26 等)は図があっても描く区域が無いので対象外
+    if not charts or not _POINT_CHAIN.search(t) or chart_boundary_geometry(e_text):
         return []
     return charts
 
