@@ -138742,5 +138742,71 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1791172789344000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2357N12058E",
+  "effective_end": "2026-12-01T16:00:00.000Z",
+  "effective_start": "2026-10-12T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-05T04:00:45+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.970278,
+      23.947778
+     ],
+     [
+      120.970278,
+      23.948333
+     ],
+     [
+      120.970833,
+      23.948333
+     ],
+     [
+      120.970833,
+      23.947778
+     ],
+     [
+      120.970278,
+      23.947778
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2535/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/000/033/2357N12058E001\r\nA) RCAA\r\nB) 2610121600 C) 2612011600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260916003001\r\n2.LCA:PULI TOWNSHIP, NANTOU COUNTY\r\n3.COOR TEL:0989-310732, 0953-830118\r\n4.AREA AS FLW:\r\n235652N 1205813E\r\n235654N 1205813E\r\n235654N 1205815E\r\n235652N 1205815E\r\n235652N 1205813E\r\nF) SFC G) 3300FT AMSL",
+  "id": "1791172789344000",
+  "issued": "2026-10-05T03:59:00.000Z",
+  "last_updated": "2026-10-05T03:59:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2535/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.2,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260916003001\r\n2.LCA:PULI TOWNSHIP, NANTOU COUNTY\r\n3.COOR TEL:0989-310732, 0953-830118\r\n4.AREA AS FLW:\r\n235652N 1205813E\r\n235654N 1205813E\r\n235654N 1205815E\r\n235652N 1205815E\r\n235652N 1205813E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "3300FT AMSL",
+  "year": "2026"
  }
 }
