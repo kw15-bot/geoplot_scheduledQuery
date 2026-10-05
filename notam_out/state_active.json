@@ -132411,98 +132411,6 @@
   "upper": null,
   "year": "2026"
  },
- "1791152395711000": {
-  "account_id": "SNOWTAM",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-05T06:05:00.000Z",
-  "effective_start": "2026-10-04T22:05:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": null,
-  "first_seen": "2026-10-04T22:20:26+00:00",
-  "geometry": {
-   "coordinates": [
-    123.485,
-    41.641667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZYTX",
-  "icao_text": null,
-  "id": "1791152395711000",
-  "issued": "2026-10-04T22:17:00.000Z",
-  "last_updated": "2026-10-04T22:19:00.000Z",
-  "local_text": null,
-  "location": "ZYTX",
-  "lower": null,
-  "max_fl": null,
-  "min_fl": null,
-  "number": "0201",
-  "purpose": null,
-  "q_code": null,
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": "SWZX",
-  "text": "SWZX0201 ZYTX 10042205\r (SNOWTAM 0201\r ZYTX\r 10042205 06 6/6/6 NR/NR/NR NR/NR/NR DRY/DRY/DRY\r )",
-  "traffic": null,
-  "type": null,
-  "upper": null,
-  "year": "2026"
- },
- "1791152438310619": {
-  "account_id": "SNOWTAM",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-05T06:05:00Z",
-  "effective_start": "2026-10-04T22:05:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": null,
-  "first_seen": "2026-10-04T22:30:35+00:00",
-  "geometry": {
-   "coordinates": [
-    123.485,
-    41.641667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZYTX",
-  "icao_text": "SWZX0201 ZYTX 10042205\r\n(SNOWTAM 0201\r\nZYTX\r\n10042205 06 6/6/6 NR/NR/NR NR/NR/NR DRY/DRY/DRY\r\n)",
-  "id": "1791152438310619",
-  "issued": "2026-10-04T22:17:00Z",
-  "last_updated": "2026-10-04T22:19:00Z",
-  "local_text": null,
-  "location": "ZYTX",
-  "lower": null,
-  "max_fl": null,
-  "min_fl": null,
-  "number": "SWZX0201/26",
-  "purpose": null,
-  "q_code": null,
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": "SWZX",
-  "text": "WZX0201 ZYTX 10042205\r\n(SNOWTAM 0201\r\nZYTX\r\n10042205 06 6/6/6 NR/NR/NR NR/NR/NR DRY/DRY/DRY\r\n)",
-  "traffic": null,
-  "type": null,
-  "upper": null,
-  "year": "2026"
- },
  "1791163340163000": {
   "account_id": "VHHHYNYX",
   "area_group": "HK",
@@ -142770,6 +142678,312 @@
   "text": "TWY EDGE LGT TWY C RESUMED NML OPS.",
   "traffic": "IV",
   "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791180208780000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1431N12101E",
+  "effective_end": "2026-10-30T23:59:00.000Z",
+  "effective_start": "2026-10-05T06:03:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-05T06:10:27+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.016667,
+      14.59985
+     ],
+     [
+      121.025089,
+      14.59945
+     ],
+     [
+      121.03343,
+      14.598252
+     ],
+     [
+      121.04161,
+      14.596268
+     ],
+     [
+      121.049549,
+      14.593518
+     ],
+     [
+      121.057172,
+      14.590028
+     ],
+     [
+      121.064405,
+      14.585831
+     ],
+     [
+      121.071178,
+      14.580968
+     ],
+     [
+      121.077426,
+      14.575486
+     ],
+     [
+      121.083089,
+      14.569438
+     ],
+     [
+      121.088112,
+      14.562881
+     ],
+     [
+      121.092447,
+      14.555879
+     ],
+     [
+      121.096053,
+      14.5485
+     ],
+     [
+      121.098894,
+      14.540814
+     ],
+     [
+      121.100942,
+      14.532895
+     ],
+     [
+      121.10218,
+      14.52482
+     ],
+     [
+      121.102594,
+      14.516667
+     ],
+     [
+      121.10218,
+      14.508513
+     ],
+     [
+      121.100942,
+      14.500438
+     ],
+     [
+      121.098894,
+      14.49252
+     ],
+     [
+      121.096053,
+      14.484834
+     ],
+     [
+      121.092447,
+      14.477454
+     ],
+     [
+      121.088112,
+      14.470452
+     ],
+     [
+      121.083089,
+      14.463896
+     ],
+     [
+      121.077426,
+      14.457847
+     ],
+     [
+      121.071178,
+      14.452365
+     ],
+     [
+      121.064405,
+      14.447502
+     ],
+     [
+      121.057172,
+      14.443305
+     ],
+     [
+      121.049549,
+      14.439815
+     ],
+     [
+      121.04161,
+      14.437065
+     ],
+     [
+      121.03343,
+      14.435081
+     ],
+     [
+      121.025089,
+      14.433884
+     ],
+     [
+      121.016667,
+      14.433483
+     ],
+     [
+      121.008244,
+      14.433884
+     ],
+     [
+      120.999903,
+      14.435081
+     ],
+     [
+      120.991723,
+      14.437065
+     ],
+     [
+      120.983784,
+      14.439815
+     ],
+     [
+      120.976161,
+      14.443305
+     ],
+     [
+      120.968928,
+      14.447502
+     ],
+     [
+      120.962155,
+      14.452365
+     ],
+     [
+      120.955907,
+      14.457847
+     ],
+     [
+      120.950244,
+      14.463896
+     ],
+     [
+      120.945221,
+      14.470452
+     ],
+     [
+      120.940886,
+      14.477454
+     ],
+     [
+      120.937281,
+      14.484834
+     ],
+     [
+      120.93444,
+      14.49252
+     ],
+     [
+      120.932391,
+      14.500438
+     ],
+     [
+      120.931154,
+      14.508513
+     ],
+     [
+      120.93074,
+      14.516667
+     ],
+     [
+      120.931154,
+      14.52482
+     ],
+     [
+      120.932391,
+      14.532895
+     ],
+     [
+      120.93444,
+      14.540814
+     ],
+     [
+      120.937281,
+      14.5485
+     ],
+     [
+      120.940886,
+      14.555879
+     ],
+     [
+      120.945221,
+      14.562881
+     ],
+     [
+      120.950244,
+      14.569438
+     ],
+     [
+      120.955907,
+      14.575486
+     ],
+     [
+      120.962155,
+      14.580968
+     ],
+     [
+      120.968928,
+      14.585831
+     ],
+     [
+      120.976161,
+      14.590028
+     ],
+     [
+      120.983784,
+      14.593518
+     ],
+     [
+      120.991723,
+      14.596268
+     ],
+     [
+      120.999903,
+      14.598252
+     ],
+     [
+      121.008244,
+      14.59945
+     ],
+     [
+      121.016667,
+      14.59985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPLL",
+  "icao_text": "B5306/26 NOTAMN\r\nQ) RPHI/QMAXX/IV/BO /A /000/999/1431N12101E005\r\nA) RPLL B) 2610050603 C) 2610302359\r\nE) EXER CTN WHEN OPR GA MOV AREA DUE PRESENCE OF POTHOLE AT COORD: \r\n143118.11N 1210006.70E.",
+  "id": "1791180208780000",
+  "issued": "2026-10-05T06:03:00.000Z",
+  "last_updated": "2026-10-05T06:03:00.000Z",
+  "local_text": null,
+  "location": "RPLL",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5306/26",
+  "purpose": "BO ",
+  "q_code": "QMAXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A ",
+  "series": "B",
+  "text": "EXER CTN WHEN OPR GA MOV AREA DUE PRESENCE OF POTHOLE AT COORD: \r\n143118.11N 1210006.70E.",
+  "traffic": "IV",
+  "type": "N",
   "upper": null,
   "year": "2026"
  }
