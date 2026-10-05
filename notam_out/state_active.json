@@ -147031,312 +147031,6 @@
   "upper": null,
   "year": "2026"
  },
- "1791221800883000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "1431N12101E",
-  "effective_end": "2026-10-08T13:59:00Z",
-  "effective_start": "2026-10-05T17:36:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RPHI",
-  "first_seen": "2026-10-05T17:40:29+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      121.016667,
-      14.59985
-     ],
-     [
-      121.025089,
-      14.59945
-     ],
-     [
-      121.03343,
-      14.598252
-     ],
-     [
-      121.04161,
-      14.596268
-     ],
-     [
-      121.049549,
-      14.593518
-     ],
-     [
-      121.057172,
-      14.590028
-     ],
-     [
-      121.064405,
-      14.585831
-     ],
-     [
-      121.071178,
-      14.580968
-     ],
-     [
-      121.077426,
-      14.575486
-     ],
-     [
-      121.083089,
-      14.569438
-     ],
-     [
-      121.088112,
-      14.562881
-     ],
-     [
-      121.092447,
-      14.555879
-     ],
-     [
-      121.096053,
-      14.5485
-     ],
-     [
-      121.098894,
-      14.540814
-     ],
-     [
-      121.100942,
-      14.532895
-     ],
-     [
-      121.10218,
-      14.52482
-     ],
-     [
-      121.102594,
-      14.516667
-     ],
-     [
-      121.10218,
-      14.508513
-     ],
-     [
-      121.100942,
-      14.500438
-     ],
-     [
-      121.098894,
-      14.49252
-     ],
-     [
-      121.096053,
-      14.484834
-     ],
-     [
-      121.092447,
-      14.477454
-     ],
-     [
-      121.088112,
-      14.470452
-     ],
-     [
-      121.083089,
-      14.463896
-     ],
-     [
-      121.077426,
-      14.457847
-     ],
-     [
-      121.071178,
-      14.452365
-     ],
-     [
-      121.064405,
-      14.447502
-     ],
-     [
-      121.057172,
-      14.443305
-     ],
-     [
-      121.049549,
-      14.439815
-     ],
-     [
-      121.04161,
-      14.437065
-     ],
-     [
-      121.03343,
-      14.435081
-     ],
-     [
-      121.025089,
-      14.433884
-     ],
-     [
-      121.016667,
-      14.433483
-     ],
-     [
-      121.008244,
-      14.433884
-     ],
-     [
-      120.999903,
-      14.435081
-     ],
-     [
-      120.991723,
-      14.437065
-     ],
-     [
-      120.983784,
-      14.439815
-     ],
-     [
-      120.976161,
-      14.443305
-     ],
-     [
-      120.968928,
-      14.447502
-     ],
-     [
-      120.962155,
-      14.452365
-     ],
-     [
-      120.955907,
-      14.457847
-     ],
-     [
-      120.950244,
-      14.463896
-     ],
-     [
-      120.945221,
-      14.470452
-     ],
-     [
-      120.940886,
-      14.477454
-     ],
-     [
-      120.937281,
-      14.484834
-     ],
-     [
-      120.93444,
-      14.49252
-     ],
-     [
-      120.932391,
-      14.500438
-     ],
-     [
-      120.931154,
-      14.508513
-     ],
-     [
-      120.93074,
-      14.516667
-     ],
-     [
-      120.931154,
-      14.52482
-     ],
-     [
-      120.932391,
-      14.532895
-     ],
-     [
-      120.93444,
-      14.540814
-     ],
-     [
-      120.937281,
-      14.5485
-     ],
-     [
-      120.940886,
-      14.555879
-     ],
-     [
-      120.945221,
-      14.562881
-     ],
-     [
-      120.950244,
-      14.569438
-     ],
-     [
-      120.955907,
-      14.575486
-     ],
-     [
-      120.962155,
-      14.580968
-     ],
-     [
-      120.968928,
-      14.585831
-     ],
-     [
-      120.976161,
-      14.590028
-     ],
-     [
-      120.983784,
-      14.593518
-     ],
-     [
-      120.991723,
-      14.596268
-     ],
-     [
-      120.999903,
-      14.598252
-     ],
-     [
-      121.008244,
-      14.59945
-     ],
-     [
-      121.016667,
-      14.59985
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "RPLL",
-  "icao_text": "B5309/26 NOTAMR B5174/26\r\nQ) RPHI/QMXXX/IV/M  /A /000/999/1431N12101E005\r\nA) RPLL B) 2610051736 C) 2610081359\r\nE) EXER CTN WHEN TAX TWY H3 DUE WIP (CONST OF TWY) \r\nAT COORD: 143124.39N 1210011.19E - 143126.18N 1210012.25E.",
-  "id": "1791221800883000",
-  "issued": "2026-10-05T17:36:00Z",
-  "last_updated": "2026-10-05T17:37:00Z",
-  "local_text": null,
-  "location": "RPLL",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5309/26",
-  "purpose": "M",
-  "q_code": "QMXXX",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": "B5174/26",
-  "schedule": null,
-  "scope": "A",
-  "series": "B",
-  "text": "EXER CTN WHEN TAX TWY H3 DUE WIP (CONST OF TWY) \r\nAT COORD: 143124.39N 1210011.19E - 143126.18N 1210012.25E.",
-  "traffic": "IV",
-  "type": "R",
-  "upper": null,
-  "year": "2026"
- },
  "1791221993108000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
@@ -147643,19 +147337,249 @@
   "upper": null,
   "year": "2026"
  },
- "1791222120973000": {
+ "1791232948100964": {
+  "account_id": "SUAW",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-07T06:59:00Z",
+  "effective_start": "2026-10-06T13:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-05T20:46:08+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1791232948100964",
+  "issued": "2026-10-05T20:41:00Z",
+  "last_updated": "2026-10-05T20:41:00Z",
+  "local_text": "!SUAW 10/523 ZAK AIRSPACE W291E ACT SFC-FL800 2610061300-2610070659",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "10/523",
+  "purpose": null,
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!SUAW 10/523 ZAK AIRSPACE W291E ACT SFC-FL800",
+  "traffic": null,
+  "type": null,
+  "upper": "FL800",
+  "year": "2026"
+ },
+ "1791232949577205": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-07T06:59:00Z",
+  "effective_start": "2026-10-06T13:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-05T20:46:08+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4853/26 NOTAMN\nQ) KZAK/QROLT/IV/NBO/W/000/800/\nA) KZAK\nB) 2610061300\nC) 2610070659\nE) AIRSPACE W291E ACT\nF) SFC\nG) FL800",
+  "id": "1791232949577205",
+  "issued": "2026-10-05T20:41:00Z",
+  "last_updated": "2026-10-05T20:41:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "800",
+  "min_fl": "000",
+  "number": "A4853/26",
+  "purpose": "NBO",
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "AIRSPACE W291E ACT",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL800",
+  "year": "2026"
+ },
+ "1791232981181348": {
+  "account_id": "SUAW",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-06T20:19:00Z",
+  "effective_start": "2026-10-06T18:08:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-05T20:46:08+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1791232981181348",
+  "issued": "2026-10-05T20:41:00Z",
+  "last_updated": "2026-10-05T20:42:00Z",
+  "local_text": "!SUAW 10/524 ZAK AIRSPACE W291W ACT SFC-FL800 2610061808-2610062019",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "10/524",
+  "purpose": null,
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!SUAW 10/524 ZAK AIRSPACE W291W ACT SFC-FL800",
+  "traffic": null,
+  "type": null,
+  "upper": "FL800",
+  "year": "2026"
+ },
+ "1791232981183783": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-06T20:19:00Z",
+  "effective_start": "2026-10-06T18:08:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-05T20:46:08+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4854/26 NOTAMN\nQ) KZAK/QROLT/IV/NBO/W/000/800/\nA) KZAK\nB) 2610061808\nC) 2610062019\nE) AIRSPACE W291W ACT\nF) SFC\nG) FL800",
+  "id": "1791232981183783",
+  "issued": "2026-10-05T20:41:00Z",
+  "last_updated": "2026-10-05T20:42:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "800",
+  "min_fl": "000",
+  "number": "A4854/26",
+  "purpose": "NBO",
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "AIRSPACE W291W ACT",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL800",
+  "year": "2026"
+ },
+ "1791234368431486": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-06T21:00:00Z",
+  "effective_start": "2026-10-06T05:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-05T21:16:02+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4855/26 NOTAMN\nQ) KZAK/QARCA/IV/BO/E/000/999\nA) KZAK\nB) 2610060500\nC) 2610062100\nE) (TDM TRK J 261006050001 2610060500 2610062100 ALCOA BUTEN BOSKE 37N140W 35N150W 34N160W 33N170W 32N180E 30N170E 28N160E 27N150E 27N140E CANAI RTS/KSFO GNNRR ALCOA KLAX MCKEY LIBBO BRINY ALCOA CANAI V75 NHC RMK/WIND DATA USED TO GENERATE TRACK IS GREATER THAN 12HRS OLD)",
+  "id": "1791234368431486",
+  "issued": "2026-10-05T21:05:00Z",
+  "last_updated": "2026-10-05T21:05:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": null,
+  "max_fl": null,
+  "min_fl": null,
+  "number": "A4855/26",
+  "purpose": "BO",
+  "q_code": "QARCA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": "A",
+  "text": "(TDM TRK J 261006050001 2610060500 2610062100 ALCOA BUTEN BOSKE 37N140W 35N150W 34N160W 33N170W 32N180E 30N170E 28N160E 27N150E 27N140E CANAI RTS/KSFO GNNRR ALCOA KLAX MCKEY LIBBO BRINY ALCOA CANAI V75 NHC RMK/WIND DATA USED TO GENERATE TRACK IS GREATER THAN 12HRS OLD)",
+  "traffic": null,
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791234819593000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "1431N12101E",
-  "effective_end": "2026-11-24T23:59:00.000Z",
-  "effective_start": "2026-10-08T20:01:00.000Z",
+  "effective_end": "2026-10-08T13:59:00Z",
+  "effective_start": "2026-10-05T21:13:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
   "fir": "RPHI",
-  "first_seen": "2026-10-05T17:50:28+00:00",
+  "first_seen": "2026-10-05T21:16:02+00:00",
   "geometry": {
    "coordinates": [
     [
@@ -147925,212 +147849,334 @@
   },
   "geometry_source": "qline-circle",
   "icao_location": "RPLL",
-  "icao_text": "B5311/26 NOTAMN\r\nQ) RPHI/QMXXX/IV/M  /A /000/999/1431N12101E005\r\nA) RPLL B) 2610082001 C) 2611242359\r\nE) EXER CTN WHEN TAX TWY H3 DUE WIP (CONST OF TWY) \r\nAT COORD: 143124.39N 1210011.19E - 143126.18N 1210012.25E.",
-  "id": "1791222120973000",
-  "issued": "2026-10-05T17:41:00.000Z",
-  "last_updated": "2026-10-05T17:42:00.000Z",
+  "icao_text": "B5312/26 NOTAMR B5309/26\r\nQ) RPHI/QMXXX/IV/M  /A /000/999/1431N12101E005\r\nA) RPLL B) 2610052113 C) 2610081359\r\nE) EXER CTN WHEN TAX TWY H3 DUE WIP (CONST OF TWY \r\nFM COORD: 143124.39N 1210011.19E TO 143126.18N 1210012.25E).",
+  "id": "1791234819593000",
+  "issued": "2026-10-05T21:13:00Z",
+  "last_updated": "2026-10-05T21:14:00Z",
   "local_text": null,
   "location": "RPLL",
   "lower": null,
   "max_fl": "999",
   "min_fl": "000",
-  "number": "B5311/26",
+  "number": "B5312/26",
+  "purpose": "M",
+  "q_code": "QMXXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "B5309/26",
+  "schedule": null,
+  "scope": "A",
+  "series": "B",
+  "text": "EXER CTN WHEN TAX TWY H3 DUE WIP (CONST OF TWY \r\nFM COORD: 143124.39N 1210011.19E TO 143126.18N 1210012.25E).",
+  "traffic": "IV",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791234892842000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1431N12101E",
+  "effective_end": "2026-10-08T21:14:00.000Z",
+  "effective_start": "2026-10-05T21:14:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-05T21:16:02+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.016667,
+      14.59985
+     ],
+     [
+      121.025089,
+      14.59945
+     ],
+     [
+      121.03343,
+      14.598252
+     ],
+     [
+      121.04161,
+      14.596268
+     ],
+     [
+      121.049549,
+      14.593518
+     ],
+     [
+      121.057172,
+      14.590028
+     ],
+     [
+      121.064405,
+      14.585831
+     ],
+     [
+      121.071178,
+      14.580968
+     ],
+     [
+      121.077426,
+      14.575486
+     ],
+     [
+      121.083089,
+      14.569438
+     ],
+     [
+      121.088112,
+      14.562881
+     ],
+     [
+      121.092447,
+      14.555879
+     ],
+     [
+      121.096053,
+      14.5485
+     ],
+     [
+      121.098894,
+      14.540814
+     ],
+     [
+      121.100942,
+      14.532895
+     ],
+     [
+      121.10218,
+      14.52482
+     ],
+     [
+      121.102594,
+      14.516667
+     ],
+     [
+      121.10218,
+      14.508513
+     ],
+     [
+      121.100942,
+      14.500438
+     ],
+     [
+      121.098894,
+      14.49252
+     ],
+     [
+      121.096053,
+      14.484834
+     ],
+     [
+      121.092447,
+      14.477454
+     ],
+     [
+      121.088112,
+      14.470452
+     ],
+     [
+      121.083089,
+      14.463896
+     ],
+     [
+      121.077426,
+      14.457847
+     ],
+     [
+      121.071178,
+      14.452365
+     ],
+     [
+      121.064405,
+      14.447502
+     ],
+     [
+      121.057172,
+      14.443305
+     ],
+     [
+      121.049549,
+      14.439815
+     ],
+     [
+      121.04161,
+      14.437065
+     ],
+     [
+      121.03343,
+      14.435081
+     ],
+     [
+      121.025089,
+      14.433884
+     ],
+     [
+      121.016667,
+      14.433483
+     ],
+     [
+      121.008244,
+      14.433884
+     ],
+     [
+      120.999903,
+      14.435081
+     ],
+     [
+      120.991723,
+      14.437065
+     ],
+     [
+      120.983784,
+      14.439815
+     ],
+     [
+      120.976161,
+      14.443305
+     ],
+     [
+      120.968928,
+      14.447502
+     ],
+     [
+      120.962155,
+      14.452365
+     ],
+     [
+      120.955907,
+      14.457847
+     ],
+     [
+      120.950244,
+      14.463896
+     ],
+     [
+      120.945221,
+      14.470452
+     ],
+     [
+      120.940886,
+      14.477454
+     ],
+     [
+      120.937281,
+      14.484834
+     ],
+     [
+      120.93444,
+      14.49252
+     ],
+     [
+      120.932391,
+      14.500438
+     ],
+     [
+      120.931154,
+      14.508513
+     ],
+     [
+      120.93074,
+      14.516667
+     ],
+     [
+      120.931154,
+      14.52482
+     ],
+     [
+      120.932391,
+      14.532895
+     ],
+     [
+      120.93444,
+      14.540814
+     ],
+     [
+      120.937281,
+      14.5485
+     ],
+     [
+      120.940886,
+      14.555879
+     ],
+     [
+      120.945221,
+      14.562881
+     ],
+     [
+      120.950244,
+      14.569438
+     ],
+     [
+      120.955907,
+      14.575486
+     ],
+     [
+      120.962155,
+      14.580968
+     ],
+     [
+      120.968928,
+      14.585831
+     ],
+     [
+      120.976161,
+      14.590028
+     ],
+     [
+      120.983784,
+      14.593518
+     ],
+     [
+      120.991723,
+      14.596268
+     ],
+     [
+      120.999903,
+      14.598252
+     ],
+     [
+      121.008244,
+      14.59945
+     ],
+     [
+      121.016667,
+      14.59985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPLL",
+  "icao_text": "B5313/26 NOTAMC B5311/26\r\nQ) RPHI/QMXXX/IV/M  /A /000/999/1431N12101E005\r\nA) RPLL B) 2610052114\r\nE) TWY H3 NEW NOTAM TO FLW.",
+  "id": "1791234892842000",
+  "issued": "2026-10-05T21:14:00.000Z",
+  "last_updated": "2026-10-05T21:14:00.000Z",
+  "local_text": null,
+  "location": "RPLL",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5313/26",
   "purpose": "M  ",
   "q_code": "QMXXX",
   "qline_offset_nm": null,
   "radius_nm": 5.0,
-  "ref_number": null,
+  "ref_number": "B5311/26",
   "schedule": null,
   "scope": "A ",
   "series": "B",
-  "text": "EXER CTN WHEN TAX TWY H3 DUE WIP (CONST OF TWY) \r\nAT COORD: 143124.39N 1210011.19E - 143126.18N 1210012.25E.",
+  "text": "TWY H3 NEW NOTAM TO FLW.",
   "traffic": "IV",
-  "type": "N",
+  "type": "C",
   "upper": null,
-  "year": "2026"
- },
- "1791232948100964": {
-  "account_id": "SUAW",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "DOM",
-  "coordinates": null,
-  "effective_end": "2026-10-07T06:59:00Z",
-  "effective_start": "2026-10-06T13:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-10-05T20:46:08+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": null,
-  "id": "1791232948100964",
-  "issued": "2026-10-05T20:41:00Z",
-  "last_updated": "2026-10-05T20:41:00Z",
-  "local_text": "!SUAW 10/523 ZAK AIRSPACE W291E ACT SFC-FL800 2610061300-2610070659",
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": null,
-  "min_fl": null,
-  "number": "10/523",
-  "purpose": null,
-  "q_code": "QROLT",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": null,
-  "text": "!SUAW 10/523 ZAK AIRSPACE W291E ACT SFC-FL800",
-  "traffic": null,
-  "type": null,
-  "upper": "FL800",
-  "year": "2026"
- },
- "1791232949577205": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-07T06:59:00Z",
-  "effective_start": "2026-10-06T13:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-10-05T20:46:08+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": "A4853/26 NOTAMN\nQ) KZAK/QROLT/IV/NBO/W/000/800/\nA) KZAK\nB) 2610061300\nC) 2610070659\nE) AIRSPACE W291E ACT\nF) SFC\nG) FL800",
-  "id": "1791232949577205",
-  "issued": "2026-10-05T20:41:00Z",
-  "last_updated": "2026-10-05T20:41:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": "800",
-  "min_fl": "000",
-  "number": "A4853/26",
-  "purpose": "NBO",
-  "q_code": "QROLT",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "W",
-  "series": "A",
-  "text": "AIRSPACE W291E ACT",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "FL800",
-  "year": "2026"
- },
- "1791232981181348": {
-  "account_id": "SUAW",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "DOM",
-  "coordinates": null,
-  "effective_end": "2026-10-06T20:19:00Z",
-  "effective_start": "2026-10-06T18:08:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-10-05T20:46:08+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": null,
-  "id": "1791232981181348",
-  "issued": "2026-10-05T20:41:00Z",
-  "last_updated": "2026-10-05T20:42:00Z",
-  "local_text": "!SUAW 10/524 ZAK AIRSPACE W291W ACT SFC-FL800 2610061808-2610062019",
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": null,
-  "min_fl": null,
-  "number": "10/524",
-  "purpose": null,
-  "q_code": "QROLT",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": null,
-  "text": "!SUAW 10/524 ZAK AIRSPACE W291W ACT SFC-FL800",
-  "traffic": null,
-  "type": null,
-  "upper": "FL800",
-  "year": "2026"
- },
- "1791232981183783": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-06T20:19:00Z",
-  "effective_start": "2026-10-06T18:08:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-10-05T20:46:08+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": "A4854/26 NOTAMN\nQ) KZAK/QROLT/IV/NBO/W/000/800/\nA) KZAK\nB) 2610061808\nC) 2610062019\nE) AIRSPACE W291W ACT\nF) SFC\nG) FL800",
-  "id": "1791232981183783",
-  "issued": "2026-10-05T20:41:00Z",
-  "last_updated": "2026-10-05T20:42:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": "800",
-  "min_fl": "000",
-  "number": "A4854/26",
-  "purpose": "NBO",
-  "q_code": "QROLT",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "W",
-  "series": "A",
-  "text": "AIRSPACE W291W ACT",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "FL800",
   "year": "2026"
  }
 }
