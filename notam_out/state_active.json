@@ -139204,5 +139204,211 @@
   "type": "N",
   "upper": "8000FT AMSL",
   "year": "2026"
+ },
+ "1791173488628000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2218N11958E",
+  "effective_end": "2027-01-22T16:00:00.000Z",
+  "effective_start": "2026-10-27T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-05T04:20:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      119.850833,
+      22.312778
+     ],
+     [
+      120.1,
+      22.313333
+     ],
+     [
+      120.099444,
+      22.280278
+     ],
+     [
+      119.85,
+      22.279167
+     ],
+     [
+      119.850833,
+      22.312778
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2542/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/000/080/2218N11958E008\r\nA) RCAA\r\nB) 2610271600 C) 2701221600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260922000903\r\n2.LCA:LIUQIU TOWNSHIP, PINGTUNG COUNTY\r\n3.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n4.AREA AS FLW:\r\n221846N 1195103E\r\n221848N 1200600E\r\n221649N 1200558E\r\n221645N 1195100E\r\n221846N 1195103E\r\nF) SFC G) 8000FT AMSL",
+  "id": "1791173488628000",
+  "issued": "2026-10-05T04:11:00.000Z",
+  "last_updated": "2026-10-05T04:11:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2542/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 8.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260922000903\r\n2.LCA:LIUQIU TOWNSHIP, PINGTUNG COUNTY\r\n3.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n4.AREA AS FLW:\r\n221846N 1195103E\r\n221848N 1200600E\r\n221649N 1200558E\r\n221645N 1195100E\r\n221846N 1195103E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "8000FT AMSL",
+  "year": "2026"
+ },
+ "1791173583696000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2218N11946E",
+  "effective_end": "2027-01-22T16:00:00.000Z",
+  "effective_start": "2026-10-27T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-05T04:20:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      119.669444,
+      22.312222
+     ],
+     [
+      119.850556,
+      22.3125
+     ],
+     [
+      119.850278,
+      22.281111
+     ],
+     [
+      119.671111,
+      22.279444
+     ],
+     [
+      119.669444,
+      22.312222
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2543/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/000/080/2218N11946E006\r\nA) RCAA\r\nB) 2610271600 C) 2701221600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260922000904\r\n2.LCA:LIUQIU TOWNSHIP, PINGTUNG COUNTY\r\n3.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n4.AREA AS FLW:\r\n221844N 1194010E\r\n221845N 1195102E\r\n221652N 1195101E\r\n221646N 1194016E\r\n221844N 1194010E\r\nF) SFC G) 8000FT AMSL",
+  "id": "1791173583696000",
+  "issued": "2026-10-05T04:12:00.000Z",
+  "last_updated": "2026-10-05T04:13:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2543/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 6.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260922000904\r\n2.LCA:LIUQIU TOWNSHIP, PINGTUNG COUNTY\r\n3.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n4.AREA AS FLW:\r\n221844N 1194010E\r\n221845N 1195102E\r\n221652N 1195101E\r\n221646N 1194016E\r\n221844N 1194010E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "8000FT AMSL",
+  "year": "2026"
+ },
+ "1791173807196000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2208N12031E",
+  "effective_end": "2027-01-22T16:00:00Z",
+  "effective_start": "2026-10-27T16:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-05T04:20:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.545,
+      22.089722
+     ],
+     [
+      120.699444,
+      22.214167
+     ],
+     [
+      120.701111,
+      22.178889
+     ],
+     [
+      120.5425,
+      22.055833
+     ],
+     [
+      120.326667,
+      22.0575
+     ],
+     [
+      120.326944,
+      22.093056
+     ],
+     [
+      120.545,
+      22.089722
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCKW",
+  "icao_text": "U2544/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/040/080/2208N12031E012\r\nA) RCKW\r\nB) 2610271600 C) 2701221600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260922000801\r\n2.LCA:SHIZI TOWNSHIP, PINGTUNG COUNTY\r\n3.THE AREA OVERLAPS RCR34, PART OF VFR CORRIDOR C9 AND C15,\r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n5.AREA AS FLW:\r\n220523N 1203242E\r\n221251N 1204158E\r\n221044N 1204204E\r\n220321N 1203233E\r\n220327N 1201936E\r\n220535N 1201937E\r\n220523N 1203242E\r\nF) 4000FT AMSL G) 8000FT AMSL",
+  "id": "1791173807196000",
+  "issued": "2026-10-05T04:16:00Z",
+  "last_updated": "2026-10-05T04:17:00Z",
+  "local_text": null,
+  "location": "RCKW",
+  "lower": "4000FT AMSL",
+  "max_fl": "080",
+  "min_fl": "040",
+  "number": "U2544/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 1.2,
+  "radius_nm": 12.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260922000801\r\n2.LCA:SHIZI TOWNSHIP, PINGTUNG COUNTY\r\n3.THE AREA OVERLAPS RCR34, PART OF VFR CORRIDOR C9 AND C15,\r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n5.AREA AS FLW:\r\n220523N 1203242E\r\n221251N 1204158E\r\n221044N 1204204E\r\n220321N 1203233E\r\n220327N 1201936E\r\n220535N 1201937E\r\n220523N 1203242E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "8000FT AMSL",
+  "year": "2026"
  }
 }
