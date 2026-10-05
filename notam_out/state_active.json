@@ -143154,5 +143154,51 @@
   "type": "R",
   "upper": null,
   "year": "2026"
+ },
+ "1791186143740000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2502N12039E",
+  "effective_end": "2026-10-06T03:00:00Z",
+  "effective_start": "2026-10-06T01:20:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-05T07:50:31+00:00",
+  "geometry": {
+   "coordinates": [
+    120.65,
+    25.033333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RCAA",
+  "icao_text": "A3684/26 NOTAMN\r\nQ) RCAA/QARXX/IV/NBO/E/000/999/2502N12039E299\r\nA) RCAA\r\nB) 2610060120 C) 2610060300\r\nE) REF AIP SUP 23/26, AIRSPACE BLOCKED DUE TO FLIGHT TESTING AND\r\nRELATED ALTERNATE ROUTES AND MEASURES.\r\nOCT 06 0200-0300 SUSPENDED,\r\nRELATED ALTERNATE ROUTES AND MEASURES DRG\r\nOCT 06 0120-0300 SUSPENDED.",
+  "id": "1791186143740000",
+  "issued": "2026-10-05T07:42:00Z",
+  "last_updated": "2026-10-05T07:43:00Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3684/26",
+  "purpose": "NBO",
+  "q_code": "QARXX",
+  "qline_offset_nm": null,
+  "radius_nm": 299.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "REF AIP SUP 23/26, AIRSPACE BLOCKED DUE TO FLIGHT TESTING AND\r\nRELATED ALTERNATE ROUTES AND MEASURES.\r\nOCT 06 0200-0300 SUSPENDED,\r\nRELATED ALTERNATE ROUTES AND MEASURES DRG\r\nOCT 06 0120-0300 SUSPENDED.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
  }
 }
