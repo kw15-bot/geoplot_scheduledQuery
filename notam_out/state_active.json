@@ -143276,5 +143276,71 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1791191075192000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1023N11422E",
+  "effective_end": "2026-11-14T13:00:00.000Z",
+  "effective_start": "2026-11-07T00:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-05T09:10:33+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      114.309444,
+      10.419444
+     ],
+     [
+      114.43,
+      10.421389
+     ],
+     [
+      114.434722,
+      10.349167
+     ],
+     [
+      114.309444,
+      10.336667
+     ],
+     [
+      114.309444,
+      10.419444
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCSP",
+  "icao_text": "A3687/26 NOTAMN\r\nQ) RCAA/QWMLW/IV/BO/AW/000/120/1023N11422E005\r\nA) RCSP\r\nB) 2611070000 C) 2611141300\r\nD) NOV 07 14 0000-1300\r\nE) GUN FRNG WILL TAKE PLACE AT NANSHA ISLAND:\r\n1.AIRSPACE BLOCKED.\r\n2.OPR TEL: 07-6988820 EXTENSION 763210,\r\n           07-2781001 EXTENSION 692202,\r\n           0932-845433, 0983-838622\r\n3.AREA AS FLW:\r\n102510N 1141834E\r\n102517N 1142548E\r\n102057N 1142605E\r\n102012N 1141834E\r\n102510N 1141834E\r\nF) SFC G) 12000FT AMSL",
+  "id": "1791191075192000",
+  "issued": "2026-10-05T09:04:00.000Z",
+  "last_updated": "2026-10-05T09:04:00.000Z",
+  "local_text": null,
+  "location": "RCSP",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3687/26",
+  "purpose": "BO",
+  "q_code": "QWMLW",
+  "qline_offset_nm": 0.3,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": "NOV 07 14 0000-1300",
+  "scope": "AW",
+  "series": "A",
+  "text": "GUN FRNG WILL TAKE PLACE AT NANSHA ISLAND:\r\n1.AIRSPACE BLOCKED.\r\n2.OPR TEL: 07-6988820 EXTENSION 763210,\r\n           07-2781001 EXTENSION 692202,\r\n           0932-845433, 0983-838622\r\n3.AREA AS FLW:\r\n102510N 1141834E\r\n102517N 1142548E\r\n102057N 1142605E\r\n102012N 1141834E\r\n102510N 1141834E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "12000FT AMSL",
+  "year": "2026"
  }
 }
