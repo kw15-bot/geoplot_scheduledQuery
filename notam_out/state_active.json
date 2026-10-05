@@ -129639,312 +129639,6 @@
   "upper": null,
   "year": "2026"
  },
- "1791168144005000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "1046N11714E",
-  "effective_end": "2026-10-05T16:00:00.000Z",
-  "effective_start": "2026-10-05T02:42:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": true,
-  "fir": "RPHI",
-  "first_seen": "2026-10-05T02:50:26+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      117.233333,
-      13.378632
-     ],
-     [
-      117.493938,
-      13.366055
-     ],
-     [
-      117.752034,
-      13.328444
-     ],
-     [
-      118.005134,
-      13.266162
-     ],
-     [
-      118.250801,
-      13.179808
-     ],
-     [
-      118.486669,
-      13.070215
-     ],
-     [
-      118.710467,
-      12.938437
-     ],
-     [
-      118.920039,
-      12.785743
-     ],
-     [
-      119.113368,
-      12.613605
-     ],
-     [
-      119.288591,
-      12.42368
-     ],
-     [
-      119.44402,
-      12.217797
-     ],
-     [
-      119.578159,
-      11.997939
-     ],
-     [
-      119.689717,
-      11.766223
-     ],
-     [
-      119.777618,
-      11.52488
-     ],
-     [
-      119.841016,
-      11.276236
-     ],
-     [
-      119.879301,
-      11.022684
-     ],
-     [
-      119.892104,
-      10.766667
-     ],
-     [
-      119.879301,
-      10.510649
-     ],
-     [
-      119.841016,
-      10.257097
-     ],
-     [
-      119.777618,
-      10.008453
-     ],
-     [
-      119.689717,
-      9.767111
-     ],
-     [
-      119.578159,
-      9.535395
-     ],
-     [
-      119.44402,
-      9.315536
-     ],
-     [
-      119.288591,
-      9.109653
-     ],
-     [
-      119.113368,
-      8.919728
-     ],
-     [
-      118.920039,
-      8.74759
-     ],
-     [
-      118.710467,
-      8.594897
-     ],
-     [
-      118.486669,
-      8.463119
-     ],
-     [
-      118.250801,
-      8.353525
-     ],
-     [
-      118.005134,
-      8.267172
-     ],
-     [
-      117.752034,
-      8.204889
-     ],
-     [
-      117.493938,
-      8.167278
-     ],
-     [
-      117.233333,
-      8.154701
-     ],
-     [
-      116.972728,
-      8.167278
-     ],
-     [
-      116.714633,
-      8.204889
-     ],
-     [
-      116.461533,
-      8.267172
-     ],
-     [
-      116.215866,
-      8.353525
-     ],
-     [
-      115.979998,
-      8.463119
-     ],
-     [
-      115.7562,
-      8.594897
-     ],
-     [
-      115.546627,
-      8.74759
-     ],
-     [
-      115.353299,
-      8.919728
-     ],
-     [
-      115.178076,
-      9.109653
-     ],
-     [
-      115.022647,
-      9.315536
-     ],
-     [
-      114.888507,
-      9.535395
-     ],
-     [
-      114.77695,
-      9.767111
-     ],
-     [
-      114.689049,
-      10.008453
-     ],
-     [
-      114.625651,
-      10.257097
-     ],
-     [
-      114.587366,
-      10.510649
-     ],
-     [
-      114.574563,
-      10.766667
-     ],
-     [
-      114.587366,
-      11.022684
-     ],
-     [
-      114.625651,
-      11.276236
-     ],
-     [
-      114.689049,
-      11.52488
-     ],
-     [
-      114.77695,
-      11.766223
-     ],
-     [
-      114.888507,
-      11.997939
-     ],
-     [
-      115.022647,
-      12.217797
-     ],
-     [
-      115.178076,
-      12.42368
-     ],
-     [
-      115.353299,
-      12.613605
-     ],
-     [
-      115.546627,
-      12.785743
-     ],
-     [
-      115.7562,
-      12.938437
-     ],
-     [
-      115.979998,
-      13.070215
-     ],
-     [
-      116.215866,
-      13.179808
-     ],
-     [
-      116.461533,
-      13.266162
-     ],
-     [
-      116.714633,
-      13.328444
-     ],
-     [
-      116.972728,
-      13.366055
-     ],
-     [
-      117.233333,
-      13.378632
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "RPHI",
-  "icao_text": "B5300/26 NOTAMR B5298/26\r\nQ) RPHI/QANLT/I /NBO/E /000/999/1046N11714E157\r\nA) RPHI B) 2610050242 C) 2610051600EST\r\nE) RNAV RTE FL ALLOCATION LTD TO:\r\nM767 (TOKON - TEGID) - FL320, FL360, FL400\r\nN884 (LAXOR - LULBU) - FL310, FL350, FL390\r\nDUE TO ACTIVATION OF LARGE SCALE WX DEV (LSWD) PROC.",
-  "id": "1791168144005000",
-  "issued": "2026-10-05T02:42:00.000Z",
-  "last_updated": "2026-10-05T02:42:00.000Z",
-  "local_text": null,
-  "location": "RPHI",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5300/26",
-  "purpose": "NBO",
-  "q_code": "QANLT",
-  "qline_offset_nm": null,
-  "radius_nm": 157.0,
-  "ref_number": "B5298/26",
-  "schedule": null,
-  "scope": "E ",
-  "series": "B",
-  "text": "RNAV RTE FL ALLOCATION LTD TO:\r\nM767 (TOKON - TEGID) - FL320, FL360, FL400\r\nN884 (LAXOR - LULBU) - FL310, FL350, FL390\r\nDUE TO ACTIVATION OF LARGE SCALE WX DEV (LSWD) PROC.",
-  "traffic": "I ",
-  "type": "R",
-  "upper": null,
-  "year": "2026"
- },
  "1791168188191000": {
   "account_id": "RCTPYNYX",
   "area_group": "TW",
@@ -136171,52 +135865,6 @@
   "traffic": "IV",
   "type": "N",
   "upper": "8000FT AMSL",
-  "year": "2026"
- },
- "1791176089795000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "1402N11441E",
-  "effective_end": "2026-10-05T16:00:00Z",
-  "effective_start": "2026-10-05T04:54:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": true,
-  "fir": "RPHI",
-  "first_seen": "2026-10-05T05:00:45+00:00",
-  "geometry": {
-   "coordinates": [
-    114.683333,
-    14.033333
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "RPHI",
-  "icao_text": "B5304/26 NOTAMR B5299/26\r\nQ) RPHI/QANLT/I /NBO/E /000/999/1402N11441E257\r\nA) RPHI B) 2610050454 C) 2610051600EST\r\nE) RNAV RTE M772 LTD TO FL300 WI MANILA FIR DUE\r\nLARGE SCALE WX DEV (LSWD).",
-  "id": "1791176089795000",
-  "issued": "2026-10-05T04:54:00Z",
-  "last_updated": "2026-10-05T04:55:00Z",
-  "local_text": null,
-  "location": "RPHI",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5304/26",
-  "purpose": "NBO",
-  "q_code": "QANLT",
-  "qline_offset_nm": null,
-  "radius_nm": 257.0,
-  "ref_number": "B5299/26",
-  "schedule": null,
-  "scope": "E",
-  "series": "B",
-  "text": "RNAV RTE M772 LTD TO FL300 WI MANILA FIR DUE\r\nLARGE SCALE WX DEV (LSWD).",
-  "traffic": "I",
-  "type": "R",
-  "upper": null,
   "year": "2026"
  },
  "1791176251730000": {
@@ -146532,6 +146180,358 @@
   "text": "TWY L03 CLSD DUE TO WIP.",
   "traffic": "IV",
   "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791207426429000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1046N11714E",
+  "effective_end": "2026-10-06T03:00:00.000Z",
+  "effective_start": "2026-10-05T13:36:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": true,
+  "fir": "RPHI",
+  "first_seen": "2026-10-05T13:40:33+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      117.233333,
+      13.378632
+     ],
+     [
+      117.493938,
+      13.366055
+     ],
+     [
+      117.752034,
+      13.328444
+     ],
+     [
+      118.005134,
+      13.266162
+     ],
+     [
+      118.250801,
+      13.179808
+     ],
+     [
+      118.486669,
+      13.070215
+     ],
+     [
+      118.710467,
+      12.938437
+     ],
+     [
+      118.920039,
+      12.785743
+     ],
+     [
+      119.113368,
+      12.613605
+     ],
+     [
+      119.288591,
+      12.42368
+     ],
+     [
+      119.44402,
+      12.217797
+     ],
+     [
+      119.578159,
+      11.997939
+     ],
+     [
+      119.689717,
+      11.766223
+     ],
+     [
+      119.777618,
+      11.52488
+     ],
+     [
+      119.841016,
+      11.276236
+     ],
+     [
+      119.879301,
+      11.022684
+     ],
+     [
+      119.892104,
+      10.766667
+     ],
+     [
+      119.879301,
+      10.510649
+     ],
+     [
+      119.841016,
+      10.257097
+     ],
+     [
+      119.777618,
+      10.008453
+     ],
+     [
+      119.689717,
+      9.767111
+     ],
+     [
+      119.578159,
+      9.535395
+     ],
+     [
+      119.44402,
+      9.315536
+     ],
+     [
+      119.288591,
+      9.109653
+     ],
+     [
+      119.113368,
+      8.919728
+     ],
+     [
+      118.920039,
+      8.74759
+     ],
+     [
+      118.710467,
+      8.594897
+     ],
+     [
+      118.486669,
+      8.463119
+     ],
+     [
+      118.250801,
+      8.353525
+     ],
+     [
+      118.005134,
+      8.267172
+     ],
+     [
+      117.752034,
+      8.204889
+     ],
+     [
+      117.493938,
+      8.167278
+     ],
+     [
+      117.233333,
+      8.154701
+     ],
+     [
+      116.972728,
+      8.167278
+     ],
+     [
+      116.714633,
+      8.204889
+     ],
+     [
+      116.461533,
+      8.267172
+     ],
+     [
+      116.215866,
+      8.353525
+     ],
+     [
+      115.979998,
+      8.463119
+     ],
+     [
+      115.7562,
+      8.594897
+     ],
+     [
+      115.546627,
+      8.74759
+     ],
+     [
+      115.353299,
+      8.919728
+     ],
+     [
+      115.178076,
+      9.109653
+     ],
+     [
+      115.022647,
+      9.315536
+     ],
+     [
+      114.888507,
+      9.535395
+     ],
+     [
+      114.77695,
+      9.767111
+     ],
+     [
+      114.689049,
+      10.008453
+     ],
+     [
+      114.625651,
+      10.257097
+     ],
+     [
+      114.587366,
+      10.510649
+     ],
+     [
+      114.574563,
+      10.766667
+     ],
+     [
+      114.587366,
+      11.022684
+     ],
+     [
+      114.625651,
+      11.276236
+     ],
+     [
+      114.689049,
+      11.52488
+     ],
+     [
+      114.77695,
+      11.766223
+     ],
+     [
+      114.888507,
+      11.997939
+     ],
+     [
+      115.022647,
+      12.217797
+     ],
+     [
+      115.178076,
+      12.42368
+     ],
+     [
+      115.353299,
+      12.613605
+     ],
+     [
+      115.546627,
+      12.785743
+     ],
+     [
+      115.7562,
+      12.938437
+     ],
+     [
+      115.979998,
+      13.070215
+     ],
+     [
+      116.215866,
+      13.179808
+     ],
+     [
+      116.461533,
+      13.266162
+     ],
+     [
+      116.714633,
+      13.328444
+     ],
+     [
+      116.972728,
+      13.366055
+     ],
+     [
+      117.233333,
+      13.378632
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPHI",
+  "icao_text": "B5307/26 NOTAMR B5300/26\r\nQ) RPHI/QANLT/I /NBO/E /000/999/1046N11714E157\r\nA) RPHI B) 2610051336 C) 2610060300EST\r\nE) RNAV RTE FL ALLOCATION LTD TO:\r\nM767 (TOKON - TEGID) - FL320, FL360, FL400\r\nN884 (LAXOR - LULBU) - FL310, FL350, FL390\r\nDUE TO ACTIVATION OF LARGE SCALE WX DEV (LSWD) PROC.",
+  "id": "1791207426429000",
+  "issued": "2026-10-05T13:36:00.000Z",
+  "last_updated": "2026-10-05T13:37:00.000Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5307/26",
+  "purpose": "NBO",
+  "q_code": "QANLT",
+  "qline_offset_nm": null,
+  "radius_nm": 157.0,
+  "ref_number": "B5300/26",
+  "schedule": null,
+  "scope": "E ",
+  "series": "B",
+  "text": "RNAV RTE FL ALLOCATION LTD TO:\r\nM767 (TOKON - TEGID) - FL320, FL360, FL400\r\nN884 (LAXOR - LULBU) - FL310, FL350, FL390\r\nDUE TO ACTIVATION OF LARGE SCALE WX DEV (LSWD) PROC.",
+  "traffic": "I ",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791207573804000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1402N11441E",
+  "effective_end": "2026-10-06T03:00:00.000Z",
+  "effective_start": "2026-10-05T13:38:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": true,
+  "fir": "RPHI",
+  "first_seen": "2026-10-05T13:40:33+00:00",
+  "geometry": {
+   "coordinates": [
+    114.683333,
+    14.033333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RPHI",
+  "icao_text": "B5308/26 NOTAMR B5304/26\r\nQ) RPHI/QANLT/I /NBO/E /000/999/1402N11441E257\r\nA) RPHI B) 2610051338 C) 2610060300EST\r\nE) RNAV RTE M772 LTD TO FL300 WI MANILA FIR DUE\r\nLARGE SCALE WX DEV (LSWD).",
+  "id": "1791207573804000",
+  "issued": "2026-10-05T13:39:00.000Z",
+  "last_updated": "2026-10-05T13:39:00.000Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5308/26",
+  "purpose": "NBO",
+  "q_code": "QANLT",
+  "qline_offset_nm": null,
+  "radius_nm": 257.0,
+  "ref_number": "B5304/26",
+  "schedule": null,
+  "scope": "E ",
+  "series": "B",
+  "text": "RNAV RTE M772 LTD TO FL300 WI MANILA FIR DUE\r\nLARGE SCALE WX DEV (LSWD).",
+  "traffic": "I ",
+  "type": "R",
   "upper": null,
   "year": "2026"
  }
