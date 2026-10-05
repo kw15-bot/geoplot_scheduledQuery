@@ -132947,358 +132947,6 @@
   "upper": null,
   "year": "2026"
  },
- "1791147904787000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "1402N11441E",
-  "effective_end": "2026-10-05T03:00:00.000Z",
-  "effective_start": "2026-10-04T21:04:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": true,
-  "fir": "RPHI",
-  "first_seen": "2026-10-04T21:10:28+00:00",
-  "geometry": {
-   "coordinates": [
-    114.683333,
-    14.033333
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "RPHI",
-  "icao_text": "B5297/26 NOTAMN\r\nQ) RPHI/QANLC/I /NBO/E /240/460/1402N11441E257\r\nA) RPHI B) 2610042104 C) 2610050300EST\r\nE) RNAV RTE M772 CLSD WI MANILA FIR DUE TO LARGE SCALE WX DEV (LSWD).\r\n\r\nALTN RTE:\r\nVINIK M754 AKOTA A583 SABNO.",
-  "id": "1791147904787000",
-  "issued": "2026-10-04T21:04:00.000Z",
-  "last_updated": "2026-10-04T21:05:00.000Z",
-  "local_text": null,
-  "location": "RPHI",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5297/26",
-  "purpose": "NBO",
-  "q_code": "QANLC",
-  "qline_offset_nm": null,
-  "radius_nm": 257.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E ",
-  "series": "B",
-  "text": "RNAV RTE M772 CLSD WI MANILA FIR DUE TO LARGE SCALE WX DEV (LSWD).\r\n\r\nALTN RTE:\r\nVINIK M754 AKOTA A583 SABNO.",
-  "traffic": "I ",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1791148053446000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "1046N11714E",
-  "effective_end": "2026-10-05T03:00:00.000Z",
-  "effective_start": "2026-10-04T21:07:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": true,
-  "fir": "RPHI",
-  "first_seen": "2026-10-04T21:10:28+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      117.233333,
-      13.378632
-     ],
-     [
-      117.493938,
-      13.366055
-     ],
-     [
-      117.752034,
-      13.328444
-     ],
-     [
-      118.005134,
-      13.266162
-     ],
-     [
-      118.250801,
-      13.179808
-     ],
-     [
-      118.486669,
-      13.070215
-     ],
-     [
-      118.710467,
-      12.938437
-     ],
-     [
-      118.920039,
-      12.785743
-     ],
-     [
-      119.113368,
-      12.613605
-     ],
-     [
-      119.288591,
-      12.42368
-     ],
-     [
-      119.44402,
-      12.217797
-     ],
-     [
-      119.578159,
-      11.997939
-     ],
-     [
-      119.689717,
-      11.766223
-     ],
-     [
-      119.777618,
-      11.52488
-     ],
-     [
-      119.841016,
-      11.276236
-     ],
-     [
-      119.879301,
-      11.022684
-     ],
-     [
-      119.892104,
-      10.766667
-     ],
-     [
-      119.879301,
-      10.510649
-     ],
-     [
-      119.841016,
-      10.257097
-     ],
-     [
-      119.777618,
-      10.008453
-     ],
-     [
-      119.689717,
-      9.767111
-     ],
-     [
-      119.578159,
-      9.535395
-     ],
-     [
-      119.44402,
-      9.315536
-     ],
-     [
-      119.288591,
-      9.109653
-     ],
-     [
-      119.113368,
-      8.919728
-     ],
-     [
-      118.920039,
-      8.74759
-     ],
-     [
-      118.710467,
-      8.594897
-     ],
-     [
-      118.486669,
-      8.463119
-     ],
-     [
-      118.250801,
-      8.353525
-     ],
-     [
-      118.005134,
-      8.267172
-     ],
-     [
-      117.752034,
-      8.204889
-     ],
-     [
-      117.493938,
-      8.167278
-     ],
-     [
-      117.233333,
-      8.154701
-     ],
-     [
-      116.972728,
-      8.167278
-     ],
-     [
-      116.714633,
-      8.204889
-     ],
-     [
-      116.461533,
-      8.267172
-     ],
-     [
-      116.215866,
-      8.353525
-     ],
-     [
-      115.979998,
-      8.463119
-     ],
-     [
-      115.7562,
-      8.594897
-     ],
-     [
-      115.546627,
-      8.74759
-     ],
-     [
-      115.353299,
-      8.919728
-     ],
-     [
-      115.178076,
-      9.109653
-     ],
-     [
-      115.022647,
-      9.315536
-     ],
-     [
-      114.888507,
-      9.535395
-     ],
-     [
-      114.77695,
-      9.767111
-     ],
-     [
-      114.689049,
-      10.008453
-     ],
-     [
-      114.625651,
-      10.257097
-     ],
-     [
-      114.587366,
-      10.510649
-     ],
-     [
-      114.574563,
-      10.766667
-     ],
-     [
-      114.587366,
-      11.022684
-     ],
-     [
-      114.625651,
-      11.276236
-     ],
-     [
-      114.689049,
-      11.52488
-     ],
-     [
-      114.77695,
-      11.766223
-     ],
-     [
-      114.888507,
-      11.997939
-     ],
-     [
-      115.022647,
-      12.217797
-     ],
-     [
-      115.178076,
-      12.42368
-     ],
-     [
-      115.353299,
-      12.613605
-     ],
-     [
-      115.546627,
-      12.785743
-     ],
-     [
-      115.7562,
-      12.938437
-     ],
-     [
-      115.979998,
-      13.070215
-     ],
-     [
-      116.215866,
-      13.179808
-     ],
-     [
-      116.461533,
-      13.266162
-     ],
-     [
-      116.714633,
-      13.328444
-     ],
-     [
-      116.972728,
-      13.366055
-     ],
-     [
-      117.233333,
-      13.378632
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "RPHI",
-  "icao_text": "B5298/26 NOTAMN\r\nQ) RPHI/QANLT/I /NBO/E /000/999/1046N11714E157\r\nA) RPHI B) 2610042107 C) 2610050300EST\r\nE) RNAV RTE FL ALLOCATION LTD TO:\r\nM767 (TOKON - TEGID) - FL320, FL360, FL400\r\nN884 (LAXOR - LULBU) - FL310, FL350, FL390\r\nDUE TO ACTIVATION OF LARGE SCALE WX DEV (LSWD) PROC.",
-  "id": "1791148053446000",
-  "issued": "2026-10-04T21:07:00.000Z",
-  "last_updated": "2026-10-04T21:07:00.000Z",
-  "local_text": null,
-  "location": "RPHI",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5298/26",
-  "purpose": "NBO",
-  "q_code": "QANLT",
-  "qline_offset_nm": null,
-  "radius_nm": 157.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E ",
-  "series": "B",
-  "text": "RNAV RTE FL ALLOCATION LTD TO:\r\nM767 (TOKON - TEGID) - FL320, FL360, FL400\r\nN884 (LAXOR - LULBU) - FL310, FL350, FL390\r\nDUE TO ACTIVATION OF LARGE SCALE WX DEV (LSWD) PROC.",
-  "traffic": "I ",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1791152395711000": {
   "account_id": "SNOWTAM",
   "area_group": "CN",
@@ -135241,6 +134889,1064 @@
   "traffic": "IV",
   "type": "N",
   "upper": null,
+  "year": "2026"
+ },
+ "1791168055604000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1402N11441E",
+  "effective_end": "2026-10-05T16:00:00Z",
+  "effective_start": "2026-10-05T02:40:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": true,
+  "fir": "RPHI",
+  "first_seen": "2026-10-05T02:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    114.683333,
+    14.033333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RPHI",
+  "icao_text": "B5299/26 NOTAMR B5297/26\r\nQ) RPHI/QANLC/I /NBO/E /240/460/1402N11441E257\r\nA) RPHI B) 2610050240 C) 2610051600EST\r\nE) RNAV RTE M772 CLSD WI MANILA FIR DUE TO LARGE SCALE WX DEV (LSWD).\r\n\r\nALTN RTE:\r\nVINIK M754 AKOTA A583 SABNO.",
+  "id": "1791168055604000",
+  "issued": "2026-10-05T02:40:00Z",
+  "last_updated": "2026-10-05T02:41:00Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": null,
+  "max_fl": "460",
+  "min_fl": "240",
+  "number": "B5299/26",
+  "purpose": "NBO",
+  "q_code": "QANLC",
+  "qline_offset_nm": null,
+  "radius_nm": 257.0,
+  "ref_number": "B5297/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "B",
+  "text": "RNAV RTE M772 CLSD WI MANILA FIR DUE TO LARGE SCALE WX DEV (LSWD).\r\n\r\nALTN RTE:\r\nVINIK M754 AKOTA A583 SABNO.",
+  "traffic": "I",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791168144005000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1046N11714E",
+  "effective_end": "2026-10-05T16:00:00.000Z",
+  "effective_start": "2026-10-05T02:42:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": true,
+  "fir": "RPHI",
+  "first_seen": "2026-10-05T02:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      117.233333,
+      13.378632
+     ],
+     [
+      117.493938,
+      13.366055
+     ],
+     [
+      117.752034,
+      13.328444
+     ],
+     [
+      118.005134,
+      13.266162
+     ],
+     [
+      118.250801,
+      13.179808
+     ],
+     [
+      118.486669,
+      13.070215
+     ],
+     [
+      118.710467,
+      12.938437
+     ],
+     [
+      118.920039,
+      12.785743
+     ],
+     [
+      119.113368,
+      12.613605
+     ],
+     [
+      119.288591,
+      12.42368
+     ],
+     [
+      119.44402,
+      12.217797
+     ],
+     [
+      119.578159,
+      11.997939
+     ],
+     [
+      119.689717,
+      11.766223
+     ],
+     [
+      119.777618,
+      11.52488
+     ],
+     [
+      119.841016,
+      11.276236
+     ],
+     [
+      119.879301,
+      11.022684
+     ],
+     [
+      119.892104,
+      10.766667
+     ],
+     [
+      119.879301,
+      10.510649
+     ],
+     [
+      119.841016,
+      10.257097
+     ],
+     [
+      119.777618,
+      10.008453
+     ],
+     [
+      119.689717,
+      9.767111
+     ],
+     [
+      119.578159,
+      9.535395
+     ],
+     [
+      119.44402,
+      9.315536
+     ],
+     [
+      119.288591,
+      9.109653
+     ],
+     [
+      119.113368,
+      8.919728
+     ],
+     [
+      118.920039,
+      8.74759
+     ],
+     [
+      118.710467,
+      8.594897
+     ],
+     [
+      118.486669,
+      8.463119
+     ],
+     [
+      118.250801,
+      8.353525
+     ],
+     [
+      118.005134,
+      8.267172
+     ],
+     [
+      117.752034,
+      8.204889
+     ],
+     [
+      117.493938,
+      8.167278
+     ],
+     [
+      117.233333,
+      8.154701
+     ],
+     [
+      116.972728,
+      8.167278
+     ],
+     [
+      116.714633,
+      8.204889
+     ],
+     [
+      116.461533,
+      8.267172
+     ],
+     [
+      116.215866,
+      8.353525
+     ],
+     [
+      115.979998,
+      8.463119
+     ],
+     [
+      115.7562,
+      8.594897
+     ],
+     [
+      115.546627,
+      8.74759
+     ],
+     [
+      115.353299,
+      8.919728
+     ],
+     [
+      115.178076,
+      9.109653
+     ],
+     [
+      115.022647,
+      9.315536
+     ],
+     [
+      114.888507,
+      9.535395
+     ],
+     [
+      114.77695,
+      9.767111
+     ],
+     [
+      114.689049,
+      10.008453
+     ],
+     [
+      114.625651,
+      10.257097
+     ],
+     [
+      114.587366,
+      10.510649
+     ],
+     [
+      114.574563,
+      10.766667
+     ],
+     [
+      114.587366,
+      11.022684
+     ],
+     [
+      114.625651,
+      11.276236
+     ],
+     [
+      114.689049,
+      11.52488
+     ],
+     [
+      114.77695,
+      11.766223
+     ],
+     [
+      114.888507,
+      11.997939
+     ],
+     [
+      115.022647,
+      12.217797
+     ],
+     [
+      115.178076,
+      12.42368
+     ],
+     [
+      115.353299,
+      12.613605
+     ],
+     [
+      115.546627,
+      12.785743
+     ],
+     [
+      115.7562,
+      12.938437
+     ],
+     [
+      115.979998,
+      13.070215
+     ],
+     [
+      116.215866,
+      13.179808
+     ],
+     [
+      116.461533,
+      13.266162
+     ],
+     [
+      116.714633,
+      13.328444
+     ],
+     [
+      116.972728,
+      13.366055
+     ],
+     [
+      117.233333,
+      13.378632
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPHI",
+  "icao_text": "B5300/26 NOTAMR B5298/26\r\nQ) RPHI/QANLT/I /NBO/E /000/999/1046N11714E157\r\nA) RPHI B) 2610050242 C) 2610051600EST\r\nE) RNAV RTE FL ALLOCATION LTD TO:\r\nM767 (TOKON - TEGID) - FL320, FL360, FL400\r\nN884 (LAXOR - LULBU) - FL310, FL350, FL390\r\nDUE TO ACTIVATION OF LARGE SCALE WX DEV (LSWD) PROC.",
+  "id": "1791168144005000",
+  "issued": "2026-10-05T02:42:00.000Z",
+  "last_updated": "2026-10-05T02:42:00.000Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5300/26",
+  "purpose": "NBO",
+  "q_code": "QANLT",
+  "qline_offset_nm": null,
+  "radius_nm": 157.0,
+  "ref_number": "B5298/26",
+  "schedule": null,
+  "scope": "E ",
+  "series": "B",
+  "text": "RNAV RTE FL ALLOCATION LTD TO:\r\nM767 (TOKON - TEGID) - FL320, FL360, FL400\r\nN884 (LAXOR - LULBU) - FL310, FL350, FL390\r\nDUE TO ACTIVATION OF LARGE SCALE WX DEV (LSWD) PROC.",
+  "traffic": "I ",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791168188191000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2254N12012E",
+  "effective_end": "2026-11-29T09:30:00.000Z",
+  "effective_start": "2026-10-11T21:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-05T02:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.205,
+      22.893333
+     ],
+     [
+      120.206111,
+      22.893333
+     ],
+     [
+      120.206111,
+      22.892222
+     ],
+     [
+      120.204444,
+      22.891667
+     ],
+     [
+      120.204167,
+      22.8925
+     ],
+     [
+      120.205,
+      22.893333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCNN",
+  "icao_text": "U2525/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/005/2254N12012E001\r\nA) RCNN\r\nB) 2610112130 C) 2611290930\r\nD) 2130-0930\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260915001001\r\n2.LCA:QIEDING DISTRICT, KAOHSIUNG CITY\r\n3.COOR TEL:0989-645100, 0958-667656\r\n4.AREA AS FLW:\r\n225336N 1201218E\r\n225336N 1201222E\r\n225332N 1201222E\r\n225330N 1201216E\r\n225333N 1201215E\r\n225336N 1201218E\r\nF) SFC G) 500FT AMSL",
+  "id": "1791168188191000",
+  "issued": "2026-10-05T02:42:00.000Z",
+  "last_updated": "2026-10-05T02:43:00.000Z",
+  "local_text": null,
+  "location": "RCNN",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2525/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": "2130-0930",
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260915001001\r\n2.LCA:QIEDING DISTRICT, KAOHSIUNG CITY\r\n3.COOR TEL:0989-645100, 0958-667656\r\n4.AREA AS FLW:\r\n225336N 1201218E\r\n225336N 1201222E\r\n225332N 1201222E\r\n225330N 1201216E\r\n225333N 1201215E\r\n225336N 1201218E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "500FT AMSL",
+  "year": "2026"
+ },
+ "1791168285206000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3631N10337E",
+  "effective_end": "2027-01-08T15:59:00.000Z",
+  "effective_start": "2026-10-05T02:37:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZLHW",
+  "first_seen": "2026-10-05T02:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      103.616667,
+      36.59985
+     ],
+     [
+      103.626812,
+      36.59945
+     ],
+     [
+      103.636859,
+      36.598252
+     ],
+     [
+      103.646712,
+      36.596268
+     ],
+     [
+      103.656276,
+      36.593518
+     ],
+     [
+      103.665458,
+      36.590028
+     ],
+     [
+      103.67417,
+      36.585831
+     ],
+     [
+      103.682328,
+      36.580968
+     ],
+     [
+      103.689854,
+      36.575486
+     ],
+     [
+      103.696676,
+      36.569438
+     ],
+     [
+      103.702726,
+      36.562881
+     ],
+     [
+      103.707948,
+      36.555879
+     ],
+     [
+      103.712291,
+      36.5485
+     ],
+     [
+      103.715713,
+      36.540814
+     ],
+     [
+      103.718181,
+      36.532895
+     ],
+     [
+      103.719671,
+      36.52482
+     ],
+     [
+      103.72017,
+      36.516667
+     ],
+     [
+      103.719671,
+      36.508513
+     ],
+     [
+      103.718181,
+      36.500438
+     ],
+     [
+      103.715713,
+      36.49252
+     ],
+     [
+      103.712291,
+      36.484834
+     ],
+     [
+      103.707948,
+      36.477454
+     ],
+     [
+      103.702726,
+      36.470452
+     ],
+     [
+      103.696676,
+      36.463896
+     ],
+     [
+      103.689854,
+      36.457847
+     ],
+     [
+      103.682328,
+      36.452365
+     ],
+     [
+      103.67417,
+      36.447502
+     ],
+     [
+      103.665458,
+      36.443305
+     ],
+     [
+      103.656276,
+      36.439815
+     ],
+     [
+      103.646712,
+      36.437065
+     ],
+     [
+      103.636859,
+      36.435081
+     ],
+     [
+      103.626812,
+      36.433884
+     ],
+     [
+      103.616667,
+      36.433483
+     ],
+     [
+      103.606522,
+      36.433884
+     ],
+     [
+      103.596474,
+      36.435081
+     ],
+     [
+      103.586621,
+      36.437065
+     ],
+     [
+      103.577058,
+      36.439815
+     ],
+     [
+      103.567876,
+      36.443305
+     ],
+     [
+      103.559164,
+      36.447502
+     ],
+     [
+      103.551005,
+      36.452365
+     ],
+     [
+      103.543479,
+      36.457847
+     ],
+     [
+      103.536658,
+      36.463896
+     ],
+     [
+      103.530607,
+      36.470452
+     ],
+     [
+      103.525385,
+      36.477454
+     ],
+     [
+      103.521042,
+      36.484834
+     ],
+     [
+      103.517621,
+      36.49252
+     ],
+     [
+      103.515153,
+      36.500438
+     ],
+     [
+      103.513662,
+      36.508513
+     ],
+     [
+      103.513164,
+      36.516667
+     ],
+     [
+      103.513662,
+      36.52482
+     ],
+     [
+      103.515153,
+      36.532895
+     ],
+     [
+      103.517621,
+      36.540814
+     ],
+     [
+      103.521042,
+      36.5485
+     ],
+     [
+      103.525385,
+      36.555879
+     ],
+     [
+      103.530607,
+      36.562881
+     ],
+     [
+      103.536658,
+      36.569438
+     ],
+     [
+      103.543479,
+      36.575486
+     ],
+     [
+      103.551005,
+      36.580968
+     ],
+     [
+      103.559164,
+      36.585831
+     ],
+     [
+      103.567876,
+      36.590028
+     ],
+     [
+      103.577058,
+      36.593518
+     ],
+     [
+      103.586621,
+      36.596268
+     ],
+     [
+      103.596474,
+      36.598252
+     ],
+     [
+      103.606522,
+      36.59945
+     ],
+     [
+      103.616667,
+      36.59985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZLLL",
+  "icao_text": "L1578/26 NOTAMR L0900/26\r\nQ)ZLHW/QMOXX/IV/B/A/000/999/3631N10337E005\r\nA)ZLLL B)2610050237 C)2701081559 \r\nE) TWY STOP BAR LGTS ON TEST DO NOT USE,ACFT FLW ATC \r\nINSTRUCTION TO TAXI.\r\n ",
+  "id": "1791168285206000",
+  "issued": "2026-10-05T02:44:00.000Z",
+  "last_updated": "2026-10-05T02:44:00.000Z",
+  "local_text": null,
+  "location": "ZLLL",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "L1578/26",
+  "purpose": "B",
+  "q_code": "QMOXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "L0900/26",
+  "schedule": null,
+  "scope": "A",
+  "series": "L",
+  "text": "TWY STOP BAR LGTS ON TEST DO NOT USE,ACFT FLW ATC \r\nINSTRUCTION TO TAXI.",
+  "traffic": "IV",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791168309833000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2416N12037E",
+  "effective_end": "2026-11-16T16:00:00.000Z",
+  "effective_start": "2026-10-11T16:01:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-05T02:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.645278,
+      24.328889
+     ],
+     [
+      120.653611,
+      24.205278
+     ],
+     [
+      120.596667,
+      24.200556
+     ],
+     [
+      120.588333,
+      24.325833
+     ],
+     [
+      120.645278,
+      24.328889
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCMQ",
+  "icao_text": "U2526/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/015/2416N12037E005\r\nA) RCMQ\r\nB) 2610111601 C) 2611161600\r\nD) 1601-1600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260824000101\r\n2.LCA:XITUN DISTRICT, TAICHUNG CITY\r\n3.THE AREA OVERLAPS PART OF VFR CORRIDOR C3 AND C33, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0912-671266\r\n5.AREA AS FLW:\r\n241944N 1203843E\r\n241219N 1203913E\r\n241202N 1203548E\r\n241933N 1203518E\r\n241944N 1203843E\r\nF) SFC G) 1500FT AMSL",
+  "id": "1791168309833000",
+  "issued": "2026-10-05T02:44:00.000Z",
+  "last_updated": "2026-10-05T02:45:00.000Z",
+  "local_text": null,
+  "location": "RCMQ",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2526/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.3,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": "1601-1600",
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260824000101\r\n2.LCA:XITUN DISTRICT, TAICHUNG CITY\r\n3.THE AREA OVERLAPS PART OF VFR CORRIDOR C3 AND C33, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0912-671266\r\n5.AREA AS FLW:\r\n241944N 1203843E\r\n241219N 1203913E\r\n241202N 1203548E\r\n241933N 1203518E\r\n241944N 1203843E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "1500FT AMSL",
+  "year": "2026"
+ },
+ "1791168374073000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2503N12131E",
+  "effective_end": "2026-10-23T10:00:00.000Z",
+  "effective_start": "2026-10-11T22:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-05T02:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.512778,
+      25.058889
+     ],
+     [
+      121.520278,
+      25.058889
+     ],
+     [
+      121.520278,
+      25.051944
+     ],
+     [
+      121.512778,
+      25.051944
+     ],
+     [
+      121.512778,
+      25.058889
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCSS",
+  "icao_text": "U2527/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/005/2503N12131E001\r\nA) RCSS\r\nB) 2610112200 C) 2610231000\r\nD) 2200-1000\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260820002002\r\n2.LCA:DATONG DISTRICT, TAIPEI CITY\r\n3.THE AREA OVERLAPS PART OF VFR HEL RTE H1 AND H2, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0971-750309, 0958-841009\r\n5.AREA AS FLW:\r\n250332N 1213046E\r\n250332N 1213113E\r\n250307N 1213113E\r\n250307N 1213046E\r\n250332N 1213046E\r\nF) SFC G) 500FT AMSL",
+  "id": "1791168374073000",
+  "issued": "2026-10-05T02:45:00.000Z",
+  "last_updated": "2026-10-05T02:46:00.000Z",
+  "local_text": null,
+  "location": "RCSS",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2527/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.3,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": "2200-1000",
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260820002002\r\n2.LCA:DATONG DISTRICT, TAIPEI CITY\r\n3.THE AREA OVERLAPS PART OF VFR HEL RTE H1 AND H2, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0971-750309, 0958-841009\r\n5.AREA AS FLW:\r\n250332N 1213046E\r\n250332N 1213113E\r\n250307N 1213113E\r\n250307N 1213046E\r\n250332N 1213046E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "500FT AMSL",
+  "year": "2026"
+ },
+ "1791168454290000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2503N12135E",
+  "effective_end": "2026-10-23T10:00:00Z",
+  "effective_start": "2026-10-11T22:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-05T02:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.579167,
+      25.054444
+     ],
+     [
+      121.6,
+      25.060556
+     ],
+     [
+      121.602222,
+      25.049167
+     ],
+     [
+      121.582222,
+      25.045
+     ],
+     [
+      121.579167,
+      25.054444
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCSS",
+  "icao_text": "U2528/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/006/2503N12135E002\r\nA) RCSS\r\nB) 2610112200 C) 2610231000\r\nD) 2200-1000\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260820002003\r\n2.LCA:NANGANG DISTRICT, TAIPEI CITY\r\n3.COOR TEL:0971-750309, 0958-841009\r\n4.AREA AS FLW:\r\n250316N 1213445E\r\n250338N 1213600E\r\n250257N 1213608E\r\n250242N 1213456E\r\n250316N 1213445E\r\nF) SFC G) 600FT AMSL",
+  "id": "1791168454290000",
+  "issued": "2026-10-05T02:47:00Z",
+  "last_updated": "2026-10-05T02:48:00Z",
+  "local_text": null,
+  "location": "RCSS",
+  "lower": "SFC",
+  "max_fl": "006",
+  "min_fl": "000",
+  "number": "U2528/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 2.0,
+  "ref_number": null,
+  "schedule": "2200-1000",
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260820002003\r\n2.LCA:NANGANG DISTRICT, TAIPEI CITY\r\n3.COOR TEL:0971-750309, 0958-841009\r\n4.AREA AS FLW:\r\n250316N 1213445E\r\n250338N 1213600E\r\n250257N 1213608E\r\n250242N 1213456E\r\n250316N 1213445E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "600FT AMSL",
+  "year": "2026"
+ },
+ "1791168511711000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2505N12130E",
+  "effective_end": "2026-10-23T10:00:00.000Z",
+  "effective_start": "2026-10-11T22:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-05T02:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.494722,
+      25.093889
+     ],
+     [
+      121.507778,
+      25.094167
+     ],
+     [
+      121.508611,
+      25.086667
+     ],
+     [
+      121.496111,
+      25.084722
+     ],
+     [
+      121.494722,
+      25.093889
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCSS",
+  "icao_text": "U2529/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/005/2505N12130E001\r\nA) RCSS\r\nB) 2610112200 C) 2610231000\r\nD) 2200-1000\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260820002004\r\n2.LCA:SHILIN DISTRICT, TAIPEI CITY\r\n3.THE AREA OVERLAPS PART OF VFR HEL RTE H1 AND H2, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0971-750309, 0958-841009\r\n5.AREA AS FLW:\r\n250538N 1212941E\r\n250539N 1213028E\r\n250512N 1213031E\r\n250505N 1212946E\r\n250538N 1212941E\r\nF) SFC G) 500FT AMSL",
+  "id": "1791168511711000",
+  "issued": "2026-10-05T02:48:00.000Z",
+  "last_updated": "2026-10-05T02:48:00.000Z",
+  "local_text": null,
+  "location": "RCSS",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2529/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": "2200-1000",
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260820002004\r\n2.LCA:SHILIN DISTRICT, TAIPEI CITY\r\n3.THE AREA OVERLAPS PART OF VFR HEL RTE H1 AND H2, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0971-750309, 0958-841009\r\n5.AREA AS FLW:\r\n250538N 1212941E\r\n250539N 1213028E\r\n250512N 1213031E\r\n250505N 1212946E\r\n250538N 1212941E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "500FT AMSL",
+  "year": "2026"
+ },
+ "1791168587524000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2504N12131E",
+  "effective_end": "2026-12-01T11:00:00.000Z",
+  "effective_start": "2026-10-11T21:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-05T02:50:26+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.53,
+      25.074722
+     ],
+     [
+      121.53,
+      25.06
+     ],
+     [
+      121.509444,
+      25.060833
+     ],
+     [
+      121.516111,
+      25.08
+     ],
+     [
+      121.53,
+      25.074722
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCSS",
+  "icao_text": "U2530/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/005/2504N12131E001\r\nA) RCSS\r\nB) 2610112100 C) 2612011100\r\nD) 2100-1100\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260916000801\r\n2.LCA:ZHONGSHAN DISTRICT, TAIPEI CITY\r\n3.THE AREA OVERLAPS PART OF VFR HEL RTE H1 AND H2, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0987-522656, 0912-218136\r\n5.AREA AS FLW:\r\n250429N 1213148E\r\n250336N 1213148E\r\n250339N 1213034E\r\n250448N 1213058E\r\n250429N 1213148E\r\nF) SFC G) 500FT AMSL",
+  "id": "1791168587524000",
+  "issued": "2026-10-05T02:49:00.000Z",
+  "last_updated": "2026-10-05T02:49:00.000Z",
+  "local_text": null,
+  "location": "RCSS",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2530/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.3,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": "2100-1100",
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260916000801\r\n2.LCA:ZHONGSHAN DISTRICT, TAIPEI CITY\r\n3.THE AREA OVERLAPS PART OF VFR HEL RTE H1 AND H2, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0987-522656, 0912-218136\r\n5.AREA AS FLW:\r\n250429N 1213148E\r\n250336N 1213148E\r\n250339N 1213034E\r\n250448N 1213058E\r\n250429N 1213148E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "500FT AMSL",
   "year": "2026"
  }
 }
