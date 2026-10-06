@@ -107477,52 +107477,6 @@
   "upper": null,
   "year": "2026"
  },
- "1791101585502000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-07T08:11:00.000Z",
-  "effective_start": "2026-10-04T08:11:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZJSA",
-  "first_seen": "2026-10-04T08:20:27+00:00",
-  "geometry": {
-   "coordinates": [
-    110.46,
-    19.933333
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZJHK",
-  "icao_text": "G4428/26 NOTAMC G4383/26\r\nQ)ZJSA/QMRXX//M//000/999/\r\nA)ZJHK B)2610040811 \r\nE) SEE NEXT NTM.\r\n",
-  "id": "1791101585502000",
-  "issued": "2026-10-04T08:12:00.000Z",
-  "last_updated": "2026-10-04T08:13:00.000Z",
-  "local_text": null,
-  "location": "ZJHK",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "G4428/26",
-  "purpose": "M",
-  "q_code": "QMRXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "G4383/26",
-  "schedule": null,
-  "scope": null,
-  "series": "G",
-  "text": "SEE NEXT NTM.",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
  "1791101596176000": {
   "account_id": "RCTPYNYX",
   "area_group": "TW",
@@ -108397,52 +108351,6 @@
   "traffic": "IV",
   "type": "N",
   "upper": "5000FT AMSL",
-  "year": "2026"
- },
- "1791101787988000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-07T08:13:00.000Z",
-  "effective_start": "2026-10-04T08:13:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZJSA",
-  "first_seen": "2026-10-04T08:20:27+00:00",
-  "geometry": {
-   "coordinates": [
-    110.46,
-    19.933333
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZJHK",
-  "icao_text": "G4430/26 NOTAMC G4384/26\r\nQ)ZJSA/QMXXX//M//000/999/\r\nA)ZJHK B)2610040813 \r\nE) SEE NEXT NTM.\r\n",
-  "id": "1791101787988000",
-  "issued": "2026-10-04T08:14:00.000Z",
-  "last_updated": "2026-10-04T08:16:00.000Z",
-  "local_text": null,
-  "location": "ZJHK",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "G4430/26",
-  "purpose": "M",
-  "q_code": "QMXXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "G4384/26",
-  "schedule": null,
-  "scope": null,
-  "series": "G",
-  "text": "SEE NEXT NTM.",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
   "year": "2026"
  },
  "1791101836916000": {
@@ -130099,74 +130007,6 @@
   "upper": null,
   "year": "2026"
  },
- "1791248214244000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-06T10:00:00Z",
-  "effective_start": "2026-10-06T00:54:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZJSA",
-  "first_seen": "2026-10-06T01:00:48+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      112.955,
-      17.858333
-     ],
-     [
-      112.283333,
-      17.0
-     ],
-     [
-      111.05,
-      15.358333
-     ]
-    ],
-    [
-     [
-      112.021667,
-      14.703333
-     ],
-     [
-      113.68,
-      17.033333
-     ]
-    ]
-   ],
-   "type": "MultiLineString"
-  },
-  "geometry_source": "route-segment",
-  "icao_location": "ZJSA",
-  "icao_text": "A5032/26 NOTAMR A5031/26\r\nQ)ZJSA/QARLT/IV/NBO/E/000/999/\r\nA)ZJSA B)2610060054 C)2610061000 \r\nE) FLIGHT LEVEL LIMITS FOR FLW SEGMENTS OF ATS RTE,DUE TO WEATHER:\r\n1. L642: EPKAL-EXOTO, FL320,FL360,FL400 AVBL ONLY.\r\n2. M771: DONDA-DOSUT, FL310,FL350,FL390 AVBL ONLY.",
-  "id": "1791248214244000",
-  "issued": "2026-10-06T00:56:00Z",
-  "last_updated": "2026-10-06T00:57:00Z",
-  "local_text": null,
-  "location": "ZJSA",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A5032/26",
-  "purpose": "NBO",
-  "q_code": "QARLT",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "A5031/26",
-  "schedule": null,
-  "scope": "E",
-  "series": "A",
-  "text": "FLIGHT LEVEL LIMITS FOR FLW SEGMENTS OF ATS RTE,DUE TO WEATHER:\r\n1. L642: EPKAL-EXOTO, FL320,FL360,FL400 AVBL ONLY.\r\n2. M771: DONDA-DOSUT, FL310,FL350,FL390 AVBL ONLY.",
-  "traffic": "IV",
-  "type": "R",
-  "upper": null,
-  "year": "2026"
- },
  "1791248824119000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
@@ -139314,6 +139154,380 @@
   "text": "RWY 06/24 WIP (ASPH OVERLAY, CONST OF RWY EXTENSION, TURNING PAD, \r\nPERIMETER FENCE AND SHOULDER GRADE COR) AT RWY 06.\r\n\r\nRMK: EXER CTN DRG LDG/TKOF.",
   "traffic": "IV",
   "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791274314576000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-06T15:59:00Z",
+  "effective_start": "2026-10-06T08:08:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZJSA",
+  "first_seen": "2026-10-06T08:20:33+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      112.955,
+      17.858333
+     ],
+     [
+      112.283333,
+      17.0
+     ],
+     [
+      111.05,
+      15.358333
+     ]
+    ],
+    [
+     [
+      112.021667,
+      14.703333
+     ],
+     [
+      113.68,
+      17.033333
+     ]
+    ]
+   ],
+   "type": "MultiLineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZJSA",
+  "icao_text": "A5033/26 NOTAMR A5032/26\r\nQ)ZJSA/QARLT/IV/NBO/E/000/999/\r\nA)ZJSA B)2610060808 C)2610061559 \r\nE) FLIGHT LEVEL LIMITS FOR FLW SEGMENTS OF ATS RTE,DUE TO WEATHER:\r\n1. L642: EPKAL-EXOTO, FL320,FL360,FL400 AVBL ONLY.\r\n2. M771: DONDA-DOSUT, FL310,FL350,FL390 AVBL ONLY.",
+  "id": "1791274314576000",
+  "issued": "2026-10-06T08:09:00Z",
+  "last_updated": "2026-10-06T08:12:00Z",
+  "local_text": null,
+  "location": "ZJSA",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A5033/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "A5032/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "FLIGHT LEVEL LIMITS FOR FLW SEGMENTS OF ATS RTE,DUE TO WEATHER:\r\n1. L642: EPKAL-EXOTO, FL320,FL360,FL400 AVBL ONLY.\r\n2. M771: DONDA-DOSUT, FL310,FL350,FL390 AVBL ONLY.",
+  "traffic": "IV",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791274349434000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2426N11822E",
+  "effective_end": "2026-10-07T09:00:00.000Z",
+  "effective_start": "2026-10-07T04:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T08:20:33+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      118.366667,
+      24.516517
+     ],
+     [
+      118.375622,
+      24.516116
+     ],
+     [
+      118.384491,
+      24.514919
+     ],
+     [
+      118.393189,
+      24.512935
+     ],
+     [
+      118.401631,
+      24.510185
+     ],
+     [
+      118.409736,
+      24.506695
+     ],
+     [
+      118.417427,
+      24.502498
+     ],
+     [
+      118.424629,
+      24.497635
+     ],
+     [
+      118.431272,
+      24.492153
+     ],
+     [
+      118.437294,
+      24.486104
+     ],
+     [
+      118.442635,
+      24.479548
+     ],
+     [
+      118.447244,
+      24.472546
+     ],
+     [
+      118.451078,
+      24.465166
+     ],
+     [
+      118.454099,
+      24.45748
+     ],
+     [
+      118.456277,
+      24.449562
+     ],
+     [
+      118.457593,
+      24.441487
+     ],
+     [
+      118.458033,
+      24.433333
+     ],
+     [
+      118.457593,
+      24.42518
+     ],
+     [
+      118.456277,
+      24.417105
+     ],
+     [
+      118.454099,
+      24.409186
+     ],
+     [
+      118.451078,
+      24.4015
+     ],
+     [
+      118.447244,
+      24.394121
+     ],
+     [
+      118.442635,
+      24.387119
+     ],
+     [
+      118.437294,
+      24.380562
+     ],
+     [
+      118.431272,
+      24.374514
+     ],
+     [
+      118.424629,
+      24.369032
+     ],
+     [
+      118.417427,
+      24.364169
+     ],
+     [
+      118.409736,
+      24.359972
+     ],
+     [
+      118.401631,
+      24.356482
+     ],
+     [
+      118.393189,
+      24.353732
+     ],
+     [
+      118.384491,
+      24.351748
+     ],
+     [
+      118.375622,
+      24.35055
+     ],
+     [
+      118.366667,
+      24.35015
+     ],
+     [
+      118.357711,
+      24.35055
+     ],
+     [
+      118.348842,
+      24.351748
+     ],
+     [
+      118.340144,
+      24.353732
+     ],
+     [
+      118.331702,
+      24.356482
+     ],
+     [
+      118.323597,
+      24.359972
+     ],
+     [
+      118.315906,
+      24.364169
+     ],
+     [
+      118.308705,
+      24.369032
+     ],
+     [
+      118.302061,
+      24.374514
+     ],
+     [
+      118.29604,
+      24.380562
+     ],
+     [
+      118.290699,
+      24.387119
+     ],
+     [
+      118.286089,
+      24.394121
+     ],
+     [
+      118.282255,
+      24.4015
+     ],
+     [
+      118.279235,
+      24.409186
+     ],
+     [
+      118.277056,
+      24.417105
+     ],
+     [
+      118.275741,
+      24.42518
+     ],
+     [
+      118.275301,
+      24.433333
+     ],
+     [
+      118.275741,
+      24.441487
+     ],
+     [
+      118.277056,
+      24.449562
+     ],
+     [
+      118.279235,
+      24.45748
+     ],
+     [
+      118.282255,
+      24.465166
+     ],
+     [
+      118.286089,
+      24.472546
+     ],
+     [
+      118.290699,
+      24.479548
+     ],
+     [
+      118.29604,
+      24.486104
+     ],
+     [
+      118.302061,
+      24.492153
+     ],
+     [
+      118.308705,
+      24.497635
+     ],
+     [
+      118.315906,
+      24.502498
+     ],
+     [
+      118.323597,
+      24.506695
+     ],
+     [
+      118.331702,
+      24.510185
+     ],
+     [
+      118.340144,
+      24.512935
+     ],
+     [
+      118.348842,
+      24.514919
+     ],
+     [
+      118.357711,
+      24.516116
+     ],
+     [
+      118.366667,
+      24.516517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCBS",
+  "icao_text": "A3697/26 NOTAMN\r\nQ) RCAA/QMXLC/IV/BO/A/000/999/2426N11822E005\r\nA) RCBS\r\nB) 2610070430 C) 2610070900\r\nE) PORTION OF TWY N BTN BAY 9 AND TWY C(EXCLUDED) CLSD DUE TO\r\nEXER.",
+  "id": "1791274349434000",
+  "issued": "2026-10-06T08:12:00.000Z",
+  "last_updated": "2026-10-06T08:12:00.000Z",
+  "local_text": null,
+  "location": "RCBS",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3697/26",
+  "purpose": "BO",
+  "q_code": "QMXLC",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "A",
+  "text": "PORTION OF TWY N BTN BAY 9 AND TWY C(EXCLUDED) CLSD DUE TO\r\nEXER.",
+  "traffic": "IV",
+  "type": "N",
   "upper": null,
   "year": "2026"
  }
