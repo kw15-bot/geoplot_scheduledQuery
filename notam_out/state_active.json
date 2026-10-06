@@ -109271,190 +109271,6 @@
   "upper": null,
   "year": "2026"
  },
- "1791103097047000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-07T08:35:00.000Z",
-  "effective_start": "2026-10-04T08:35:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-10-04T08:40:26+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4187/26 NOTAMC F4165/26\r\nQ)ZSHA/QICAK//M//000/999/\r\nA)ZSPD B)2610040835 \r\nE) CNL NTM.\r\n",
-  "id": "1791103097047000",
-  "issued": "2026-10-04T08:37:00.000Z",
-  "last_updated": "2026-10-04T08:38:00.000Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4187/26",
-  "purpose": "M",
-  "q_code": "QICAK",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4165/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "CNL NTM.",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
- "1791103098836000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-07T08:35:00.000Z",
-  "effective_start": "2026-10-04T08:35:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-10-04T08:40:26+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4188/26 NOTAMC F4166/26\r\nQ)ZSHA/QIDAK//M//000/999/\r\nA)ZSPD B)2610040835 \r\nE) CNL NTM.\r\n",
-  "id": "1791103098836000",
-  "issued": "2026-10-04T08:37:00.000Z",
-  "last_updated": "2026-10-04T08:38:00.000Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4188/26",
-  "purpose": "M",
-  "q_code": "QIDAK",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4166/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "CNL NTM.",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
- "1791103100621000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-07T08:36:00.000Z",
-  "effective_start": "2026-10-04T08:36:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-10-04T08:40:26+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4189/26 NOTAMC F4167/26\r\nQ)ZSHA/QICAK//M//000/999/\r\nA)ZSPD B)2610040836 \r\nE) CNL NTM.\r\n",
-  "id": "1791103100621000",
-  "issued": "2026-10-04T08:38:00.000Z",
-  "last_updated": "2026-10-04T08:38:00.000Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4189/26",
-  "purpose": "M",
-  "q_code": "QICAK",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4167/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "CNL NTM.",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
- "1791103103027000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-07T08:36:00.000Z",
-  "effective_start": "2026-10-04T08:36:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-10-04T08:40:26+00:00",
-  "geometry": {
-   "coordinates": [
-    121.793333,
-    31.145
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSPD",
-  "icao_text": "F4190/26 NOTAMC F4168/26\r\nQ)ZSHA/QIDAK//M//000/999/\r\nA)ZSPD B)2610040836 \r\nE) CNL NTM.\r\n",
-  "id": "1791103103027000",
-  "issued": "2026-10-04T08:38:00.000Z",
-  "last_updated": "2026-10-04T08:38:00.000Z",
-  "local_text": null,
-  "location": "ZSPD",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "F4190/26",
-  "purpose": "M",
-  "q_code": "QIDAK",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "F4168/26",
-  "schedule": null,
-  "scope": null,
-  "series": "F",
-  "text": "CNL NTM.",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
  "1791107794707457": {
   "account_id": "KZAK",
   "area_group": "REF",
@@ -140141,6 +139957,312 @@
   "traffic": "IV",
   "type": "N",
   "upper": null,
+  "year": "2026"
+ },
+ "1791275880901000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2407N12036E",
+  "effective_end": "2026-10-31T02:22:00.000Z",
+  "effective_start": "2026-10-20T02:02:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T08:40:34+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.603333,
+      24.204851
+     ],
+     [
+      120.612266,
+      24.20445
+     ],
+     [
+      120.621114,
+      24.203252
+     ],
+     [
+      120.62979,
+      24.201269
+     ],
+     [
+      120.638212,
+      24.198519
+     ],
+     [
+      120.646297,
+      24.195028
+     ],
+     [
+      120.653969,
+      24.190832
+     ],
+     [
+      120.661153,
+      24.185969
+     ],
+     [
+      120.66778,
+      24.180487
+     ],
+     [
+      120.673787,
+      24.174438
+     ],
+     [
+      120.679115,
+      24.167881
+     ],
+     [
+      120.683713,
+      24.160879
+     ],
+     [
+      120.687537,
+      24.1535
+     ],
+     [
+      120.690551,
+      24.145814
+     ],
+     [
+      120.692724,
+      24.137895
+     ],
+     [
+      120.694036,
+      24.12982
+     ],
+     [
+      120.694475,
+      24.121667
+     ],
+     [
+      120.694036,
+      24.113514
+     ],
+     [
+      120.692724,
+      24.105439
+     ],
+     [
+      120.690551,
+      24.09752
+     ],
+     [
+      120.687537,
+      24.089834
+     ],
+     [
+      120.683713,
+      24.082455
+     ],
+     [
+      120.679115,
+      24.075453
+     ],
+     [
+      120.673787,
+      24.068896
+     ],
+     [
+      120.66778,
+      24.062847
+     ],
+     [
+      120.661153,
+      24.057365
+     ],
+     [
+      120.653969,
+      24.052502
+     ],
+     [
+      120.646297,
+      24.048306
+     ],
+     [
+      120.638212,
+      24.044815
+     ],
+     [
+      120.62979,
+      24.042065
+     ],
+     [
+      120.621114,
+      24.040082
+     ],
+     [
+      120.612266,
+      24.038884
+     ],
+     [
+      120.603333,
+      24.038483
+     ],
+     [
+      120.5944,
+      24.038884
+     ],
+     [
+      120.585552,
+      24.040082
+     ],
+     [
+      120.576876,
+      24.042065
+     ],
+     [
+      120.568454,
+      24.044815
+     ],
+     [
+      120.560369,
+      24.048306
+     ],
+     [
+      120.552697,
+      24.052502
+     ],
+     [
+      120.545513,
+      24.057365
+     ],
+     [
+      120.538886,
+      24.062847
+     ],
+     [
+      120.532879,
+      24.068896
+     ],
+     [
+      120.527551,
+      24.075453
+     ],
+     [
+      120.522953,
+      24.082455
+     ],
+     [
+      120.519129,
+      24.089834
+     ],
+     [
+      120.516115,
+      24.09752
+     ],
+     [
+      120.513942,
+      24.105439
+     ],
+     [
+      120.51263,
+      24.113514
+     ],
+     [
+      120.512191,
+      24.121667
+     ],
+     [
+      120.51263,
+      24.12982
+     ],
+     [
+      120.513942,
+      24.137895
+     ],
+     [
+      120.516115,
+      24.145814
+     ],
+     [
+      120.519129,
+      24.1535
+     ],
+     [
+      120.522953,
+      24.160879
+     ],
+     [
+      120.527551,
+      24.167881
+     ],
+     [
+      120.532879,
+      24.174438
+     ],
+     [
+      120.538886,
+      24.180487
+     ],
+     [
+      120.545513,
+      24.185969
+     ],
+     [
+      120.552697,
+      24.190832
+     ],
+     [
+      120.560369,
+      24.195028
+     ],
+     [
+      120.568454,
+      24.198519
+     ],
+     [
+      120.576876,
+      24.201269
+     ],
+     [
+      120.585552,
+      24.203252
+     ],
+     [
+      120.5944,
+      24.20445
+     ],
+     [
+      120.603333,
+      24.204851
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCMQ",
+  "icao_text": "A3699/26 NOTAMN\r\nQ) RCAA/QWELW/IV/BO/AW/000/020/2407N12036E006\r\nA) RCMQ\r\nB) 2610200202 C) 2610310222\r\nD) OCT 20 22-24 31 0202-0222\r\nE) AIR EXER WILL TAKE PLACE:\r\n1.DOCUMENT NR: 1150030717\r\n2.AIRSPACE BLOCKED.\r\n3.ALL SID OF RWY 18 ARE NOT AVBL.\r\n4.ALL IAP ARE NOT AVBL.\r\n5.2000FT AND BELOW OF VFR CORRIDOR C8, C22 ARE CLSD.\r\n6.COOR TEL: 03-4792111 EXTENSION 339455, 0965-102259, 0921-387757\r\n7.AREA AS FLW:\r\n5NM RADIUS CENTRED ON 240718N 1203612E\r\nF) SFC G) 2000FT AMSL",
+  "id": "1791275880901000",
+  "issued": "2026-10-06T08:37:00.000Z",
+  "last_updated": "2026-10-06T08:38:00.000Z",
+  "local_text": null,
+  "location": "RCMQ",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3699/26",
+  "purpose": "BO",
+  "q_code": "QWELW",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 6.0,
+  "ref_number": null,
+  "schedule": "OCT 20 22-24 31 0202-0222",
+  "scope": "AW",
+  "series": "A",
+  "text": "AIR EXER WILL TAKE PLACE:\r\n1.DOCUMENT NR: 1150030717\r\n2.AIRSPACE BLOCKED.\r\n3.ALL SID OF RWY 18 ARE NOT AVBL.\r\n4.ALL IAP ARE NOT AVBL.\r\n5.2000FT AND BELOW OF VFR CORRIDOR C8, C22 ARE CLSD.\r\n6.COOR TEL: 03-4792111 EXTENSION 339455, 0965-102259, 0921-387757\r\n7.AREA AS FLW:\r\n5NM RADIUS CENTRED ON 240718N 1203612E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "2000FT AMSL",
   "year": "2026"
  }
 }
