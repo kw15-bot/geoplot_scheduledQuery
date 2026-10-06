@@ -73329,138 +73329,6 @@
   "upper": "10000FT AMSL",
   "year": "2026"
  },
- "1790820970818000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "0716N12543E",
-  "effective_end": "2026-10-20T06:00:00.000Z",
-  "effective_start": "2026-10-01T02:15:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RPHI",
-  "first_seen": "2026-10-01T02:20:25+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      125.150278,
-      7.83
-     ],
-     [
-      126.040278,
-      7.978333
-     ],
-     [
-      126.298056,
-      6.721667
-     ],
-     [
-      125.404167,
-      6.561111
-     ],
-     [
-      125.150278,
-      7.83
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RPHI",
-  "icao_text": "B5219/26 NOTAMR B5141/26\r\nQ) RPHI/QWYLW/IV/M  /W /000/050/0716N12543E049\r\nA) RPHI B) 2610010215 C) 2610200600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n074948N 1250901E -\r\n075842N 1260225E -\r\n064318N 1261753E -\r\n063340N 1252415E -\r\n074948N 1250901E\r\n(DAVAO DEL NORTE AND DAVAO CITY).\r\nF) SFC G) 5000FT AMSL",
-  "id": "1790820970818000",
-  "issued": "2026-10-01T02:15:00.000Z",
-  "last_updated": "2026-10-01T02:16:00.000Z",
-  "local_text": null,
-  "location": "RPHI",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5219/26",
-  "purpose": "M  ",
-  "q_code": "QWYLW",
-  "qline_offset_nm": 0.5,
-  "radius_nm": 49.0,
-  "ref_number": "B5141/26",
-  "schedule": null,
-  "scope": "W ",
-  "series": "B",
-  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n074948N 1250901E -\r\n075842N 1260225E -\r\n064318N 1261753E -\r\n063340N 1252415E -\r\n074948N 1250901E\r\n(DAVAO DEL NORTE AND DAVAO CITY).",
-  "traffic": "IV",
-  "type": "R",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
- "1790821159235000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "0607N12557E",
-  "effective_end": "2026-10-20T06:00:00.000Z",
-  "effective_start": "2026-10-01T02:19:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RPHI",
-  "first_seen": "2026-10-01T02:20:25+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      125.404167,
-      6.561111
-     ],
-     [
-      126.298056,
-      6.721667
-     ],
-     [
-      126.5125,
-      5.695278
-     ],
-     [
-      125.610278,
-      5.513333
-     ],
-     [
-      125.404167,
-      6.561111
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RPHI",
-  "icao_text": "B5220/26 NOTAMR B5142/26\r\nQ) RPHI/QWYLW/IV/M  /W /000/050/0607N12557E043\r\nA) RPHI B) 2610010219 C) 2610200600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n063340N 1252415E -\r\n064318N 1261753E -\r\n054143N 1263045E -\r\n053048N 1253637E -\r\n063340N 1252415E\r\n(DAVAO GULF).\r\nF) SFC G) 5000FT AMSL",
-  "id": "1790821159235000",
-  "issued": "2026-10-01T02:19:00.000Z",
-  "last_updated": "2026-10-01T02:19:00.000Z",
-  "local_text": null,
-  "location": "RPHI",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5220/26",
-  "purpose": "M  ",
-  "q_code": "QWYLW",
-  "qline_offset_nm": 0.5,
-  "radius_nm": 43.0,
-  "ref_number": "B5142/26",
-  "schedule": null,
-  "scope": "W ",
-  "series": "B",
-  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n063340N 1252415E -\r\n064318N 1261753E -\r\n054143N 1263045E -\r\n053048N 1253637E -\r\n063340N 1252415E\r\n(DAVAO GULF).",
-  "traffic": "IV",
-  "type": "R",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
  "1790821853128000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -139669,8 +139537,8 @@
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "2211N11332E",
-  "effective_end": "2026-10-06T12:20:00.000Z",
-  "effective_start": "2026-10-06T12:00:00.000Z",
+  "effective_end": "2026-10-06T12:20:00Z",
+  "effective_start": "2026-10-06T12:00:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
@@ -139947,15 +139815,15 @@
   "icao_location": "VMMC",
   "icao_text": "A0338/26 NOTAMN\r\nQ) ZGZU/QWULW/IV/BO /AW/000/010/2211N11332E001\r\nA) VMMC B) 2610061200 C) 2610061220\r\nE) UNMANNED AIRCRAFT SYSTEM LIGHT SHOW WILL TAKE PLACE WITHIN 300M \r\nRADIUS CENTRED ON 221043N1133223E.\r\nF) GND G) 300M AMSL",
   "id": "1791257395497000",
-  "issued": "2026-10-06T03:29:00.000Z",
-  "last_updated": "2026-10-06T03:29:00.000Z",
+  "issued": "2026-10-06T03:29:00Z",
+  "last_updated": "2026-10-06T03:30:00Z",
   "local_text": null,
   "location": "VMMC",
   "lower": "GND",
-  "max_fl": "999",
+  "max_fl": "010",
   "min_fl": "000",
   "number": "A0338/26",
-  "purpose": "BO ",
+  "purpose": "BO",
   "q_code": "QWULW",
   "qline_offset_nm": 0.5,
   "radius_nm": 1.0,
@@ -139967,6 +139835,204 @@
   "traffic": "IV",
   "type": "N",
   "upper": "300M AMSL",
+  "year": "2026"
+ },
+ "1791257459653000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0716N12543E",
+  "effective_end": "2026-10-20T08:00:00Z",
+  "effective_start": "2026-10-06T03:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-06T03:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      125.150278,
+      7.83
+     ],
+     [
+      126.040278,
+      7.978333
+     ],
+     [
+      126.298056,
+      6.721667
+     ],
+     [
+      125.404167,
+      6.561111
+     ],
+     [
+      125.150278,
+      7.83
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPHI",
+  "icao_text": "B5325/26 NOTAMR B5219/26\r\nQ) RPHI/QWYLW/IV/M  /W /000/100/0716N12543E049\r\nA) RPHI B) 2610060330 C) 2610200800\r\nD) 2200-0800\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n074948N 1250901E -\r\n075842N 1260225E -\r\n064318N 1261753E -\r\n063340N 1252415E -\r\n074948N 1250901E\r\n(DAVAO DEL NORTE AND DAVAO CITY).\r\nF) SFC G) 10000FT AMSL",
+  "id": "1791257459653000",
+  "issued": "2026-10-06T03:30:00Z",
+  "last_updated": "2026-10-06T03:31:00Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": "SFC",
+  "max_fl": "100",
+  "min_fl": "000",
+  "number": "B5325/26",
+  "purpose": "M",
+  "q_code": "QWYLW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 49.0,
+  "ref_number": "B5219/26",
+  "schedule": "2200-0800",
+  "scope": "W",
+  "series": "B",
+  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n074948N 1250901E -\r\n075842N 1260225E -\r\n064318N 1261753E -\r\n063340N 1252415E -\r\n074948N 1250901E\r\n(DAVAO DEL NORTE AND DAVAO CITY).",
+  "traffic": "IV",
+  "type": "R",
+  "upper": "10000FT AMSL",
+  "year": "2026"
+ },
+ "1791257492992000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2258N12011E",
+  "effective_end": "2026-10-31T10:00:00.000Z",
+  "effective_start": "2026-10-12T22:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T03:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.197222,
+      22.965833
+     ],
+     [
+      120.198611,
+      22.963889
+     ],
+     [
+      120.182778,
+      22.949444
+     ],
+     [
+      120.168611,
+      22.969722
+     ],
+     [
+      120.197222,
+      22.965833
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCNN",
+  "icao_text": "U2557/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/005/2258N12011E002\r\nA) RCNN\r\nB) 2610122200 C) 2610311000\r\nD) 2200-1000\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260825002102\r\n2.LCA:SOUTH DISTRICT, TAINAN CITY\r\n3.COOR TEL:0912-791987, 0933-793803\r\n4.AREA AS FLW:\r\n225757N 1201150E\r\n225750N 1201155E\r\n225658N 1201058E\r\n225811N 1201007E\r\n225757N 1201150E\r\nF) SFC G) 500FT AMSL",
+  "id": "1791257492992000",
+  "issued": "2026-10-06T03:31:00.000Z",
+  "last_updated": "2026-10-06T03:31:00.000Z",
+  "local_text": null,
+  "location": "RCNN",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2557/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.3,
+  "radius_nm": 2.0,
+  "ref_number": null,
+  "schedule": "2200-1000",
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260825002102\r\n2.LCA:SOUTH DISTRICT, TAINAN CITY\r\n3.COOR TEL:0912-791987, 0933-793803\r\n4.AREA AS FLW:\r\n225757N 1201150E\r\n225750N 1201155E\r\n225658N 1201058E\r\n225811N 1201007E\r\n225757N 1201150E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "500FT AMSL",
+  "year": "2026"
+ },
+ "1791257562021000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0607N12557E",
+  "effective_end": "2026-10-20T08:00:00.000Z",
+  "effective_start": "2026-10-06T03:32:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-06T03:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      125.404167,
+      6.561111
+     ],
+     [
+      126.298056,
+      6.721667
+     ],
+     [
+      126.5125,
+      5.695278
+     ],
+     [
+      125.610278,
+      5.513333
+     ],
+     [
+      125.404167,
+      6.561111
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPHI",
+  "icao_text": "B5326/26 NOTAMR B5220/26\r\nQ) RPHI/QWYLW/IV/M  /W /000/100/0607N12557E043\r\nA) RPHI B) 2610060332 C) 2610200800\r\nD) 2200-0800\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n063340N 1252415E -\r\n064318N 1261753E -\r\n054143N 1263045E -\r\n053048N 1253637E -\r\n063340N 1252415E\r\n(DAVAO GULF).\r\nF) SFC G) 10000FT AMSL",
+  "id": "1791257562021000",
+  "issued": "2026-10-06T03:32:00.000Z",
+  "last_updated": "2026-10-06T03:32:00.000Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5326/26",
+  "purpose": "M  ",
+  "q_code": "QWYLW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 43.0,
+  "ref_number": "B5220/26",
+  "schedule": "2200-0800",
+  "scope": "W ",
+  "series": "B",
+  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n063340N 1252415E -\r\n064318N 1261753E -\r\n054143N 1263045E -\r\n053048N 1253637E -\r\n063340N 1252415E\r\n(DAVAO GULF).",
+  "traffic": "IV",
+  "type": "R",
+  "upper": "10000FT AMSL",
   "year": "2026"
  }
 }
