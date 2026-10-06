@@ -135343,74 +135343,6 @@
   "upper": null,
   "year": "2026"
  },
- "1791274314576000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-06T15:59:00Z",
-  "effective_start": "2026-10-06T08:08:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZJSA",
-  "first_seen": "2026-10-06T08:20:33+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      112.955,
-      17.858333
-     ],
-     [
-      112.283333,
-      17.0
-     ],
-     [
-      111.05,
-      15.358333
-     ]
-    ],
-    [
-     [
-      112.021667,
-      14.703333
-     ],
-     [
-      113.68,
-      17.033333
-     ]
-    ]
-   ],
-   "type": "MultiLineString"
-  },
-  "geometry_source": "route-segment",
-  "icao_location": "ZJSA",
-  "icao_text": "A5033/26 NOTAMR A5032/26\r\nQ)ZJSA/QARLT/IV/NBO/E/000/999/\r\nA)ZJSA B)2610060808 C)2610061559 \r\nE) FLIGHT LEVEL LIMITS FOR FLW SEGMENTS OF ATS RTE,DUE TO WEATHER:\r\n1. L642: EPKAL-EXOTO, FL320,FL360,FL400 AVBL ONLY.\r\n2. M771: DONDA-DOSUT, FL310,FL350,FL390 AVBL ONLY.",
-  "id": "1791274314576000",
-  "issued": "2026-10-06T08:09:00Z",
-  "last_updated": "2026-10-06T08:12:00Z",
-  "local_text": null,
-  "location": "ZJSA",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A5033/26",
-  "purpose": "NBO",
-  "q_code": "QARLT",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "A5032/26",
-  "schedule": null,
-  "scope": "E",
-  "series": "A",
-  "text": "FLIGHT LEVEL LIMITS FOR FLW SEGMENTS OF ATS RTE,DUE TO WEATHER:\r\n1. L642: EPKAL-EXOTO, FL320,FL360,FL400 AVBL ONLY.\r\n2. M771: DONDA-DOSUT, FL310,FL350,FL390 AVBL ONLY.",
-  "traffic": "IV",
-  "type": "R",
-  "upper": null,
-  "year": "2026"
- },
  "1791274349434000": {
   "account_id": "RCTPYNYX",
   "area_group": "TW",
@@ -148243,8 +148175,8 @@
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "2502N12039E",
-  "effective_end": "2026-10-07T05:00:00.000Z",
-  "effective_start": "2026-10-06T12:00:00.000Z",
+  "effective_end": "2026-10-07T05:00:00Z",
+  "effective_start": "2026-10-06T12:00:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
@@ -148261,8 +148193,8 @@
   "icao_location": "RCAA",
   "icao_text": "A3727/26 NOTAMN\r\nQ) RCAA/QPFCA/IV/NBO/E/000/999/2502N12039E299\r\nA) RCAA\r\nB) 2610061200 C) 2610070500\r\nE) CONSEQUENT TO FLOW CTL IMPOSED BY MANILA ACC,\r\nFLOW CTL AT FIR BDRY AS FLW:\r\nACFT DEP FM KOREA/JAPAN OVERFLYING TAIPEI FIR ENTERING\r\nMANILA FIR VIA KABAM IS SUBJECT TO THE FLW RESTRICTIONS:\r\n(1) 10 MIN INTERVAL REGARDLESS OF ALT AT SALMI\r\n(2) 15 MIN INTERVAL REGARDLESS OF ALT AT BULAN\r\n(3) 12 MIN INTERVAL REGARDLESS OF ALT AT IGURU\r\n(DEP FM KOREA VIA SALMI ONLY)\r\n(DEP FM JAPAN VIA BULAN/IGURU ONLY)\r\n(VVDN BE EXCLUDED)",
   "id": "1791283837500000",
-  "issued": "2026-10-06T10:50:00.000Z",
-  "last_updated": "2026-10-06T10:50:00.000Z",
+  "issued": "2026-10-06T10:50:00Z",
+  "last_updated": "2026-10-06T10:51:00Z",
   "local_text": null,
   "location": "RCAA",
   "lower": null,
@@ -148280,6 +148212,74 @@
   "text": "CONSEQUENT TO FLOW CTL IMPOSED BY MANILA ACC,\r\nFLOW CTL AT FIR BDRY AS FLW:\r\nACFT DEP FM KOREA/JAPAN OVERFLYING TAIPEI FIR ENTERING\r\nMANILA FIR VIA KABAM IS SUBJECT TO THE FLW RESTRICTIONS:\r\n(1) 10 MIN INTERVAL REGARDLESS OF ALT AT SALMI\r\n(2) 15 MIN INTERVAL REGARDLESS OF ALT AT BULAN\r\n(3) 12 MIN INTERVAL REGARDLESS OF ALT AT IGURU\r\n(DEP FM KOREA VIA SALMI ONLY)\r\n(DEP FM JAPAN VIA BULAN/IGURU ONLY)\r\n(VVDN BE EXCLUDED)",
   "traffic": "IV",
   "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791284211698000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-07T04:00:00Z",
+  "effective_start": "2026-10-06T10:54:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZJSA",
+  "first_seen": "2026-10-06T11:00:51+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      112.955,
+      17.858333
+     ],
+     [
+      112.283333,
+      17.0
+     ],
+     [
+      111.05,
+      15.358333
+     ]
+    ],
+    [
+     [
+      112.021667,
+      14.703333
+     ],
+     [
+      113.68,
+      17.033333
+     ]
+    ]
+   ],
+   "type": "MultiLineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZJSA",
+  "icao_text": "A5034/26 NOTAMR A5033/26\r\nQ)ZJSA/QARLT/IV/NBO/E/000/999/\r\nA)ZJSA B)2610061054 C)2610070400 \r\nE) FLIGHT LEVEL LIMITS FOR FLW SEGMENTS OF ATS RTE,DUE TO WEATHER:\r\n1. L642: EPKAL-EXOTO, FL320,FL360,FL400 AVBL ONLY.\r\n2. M771: DONDA-DOSUT, FL310,FL350,FL390 AVBL ONLY.",
+  "id": "1791284211698000",
+  "issued": "2026-10-06T10:56:00Z",
+  "last_updated": "2026-10-06T10:57:00Z",
+  "local_text": null,
+  "location": "ZJSA",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A5034/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "A5033/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "FLIGHT LEVEL LIMITS FOR FLW SEGMENTS OF ATS RTE,DUE TO WEATHER:\r\n1. L642: EPKAL-EXOTO, FL320,FL360,FL400 AVBL ONLY.\r\n2. M771: DONDA-DOSUT, FL310,FL350,FL390 AVBL ONLY.",
+  "traffic": "IV",
+  "type": "R",
   "upper": null,
   "year": "2026"
  }
