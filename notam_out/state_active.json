@@ -129391,312 +129391,6 @@
   "upper": "2000FT AMSL",
   "year": "2026"
  },
- "1791259689768000": {
-  "account_id": "VHHHYNYX",
-  "area_group": "HK",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2003N11500E",
-  "effective_end": "2026-10-06T16:00:00.000Z",
-  "effective_start": "2026-10-06T03:58:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": true,
-  "fir": "VHHK",
-  "first_seen": "2026-10-06T04:20:29+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      115.0,
-      23.610259
-     ],
-     [
-      115.37148,
-      23.593115
-     ],
-     [
-      115.739383,
-      23.541849
-     ],
-     [
-      116.100165,
-      23.456955
-     ],
-     [
-      116.450352,
-      23.33925
-     ],
-     [
-      116.786572,
-      23.189868
-     ],
-     [
-      117.105585,
-      23.010247
-     ],
-     [
-      117.404321,
-      22.802117
-     ],
-     [
-      117.679902,
-      22.567483
-     ],
-     [
-      117.929674,
-      22.308604
-     ],
-     [
-      118.151231,
-      22.027974
-     ],
-     [
-      118.342441,
-      21.728294
-     ],
-     [
-      118.50146,
-      21.412452
-     ],
-     [
-      118.626759,
-      21.083489
-     ],
-     [
-      118.717131,
-      20.744572
-     ],
-     [
-      118.771704,
-      20.398966
-     ],
-     [
-      118.789953,
-      20.05
-     ],
-     [
-      118.771704,
-      19.701034
-     ],
-     [
-      118.717131,
-      19.355428
-     ],
-     [
-      118.626759,
-      19.016511
-     ],
-     [
-      118.50146,
-      18.687548
-     ],
-     [
-      118.342441,
-      18.371706
-     ],
-     [
-      118.151231,
-      18.072026
-     ],
-     [
-      117.929674,
-      17.791396
-     ],
-     [
-      117.679902,
-      17.532517
-     ],
-     [
-      117.404321,
-      17.297883
-     ],
-     [
-      117.105585,
-      17.089753
-     ],
-     [
-      116.786572,
-      16.910132
-     ],
-     [
-      116.450352,
-      16.76075
-     ],
-     [
-      116.100165,
-      16.643045
-     ],
-     [
-      115.739383,
-      16.558151
-     ],
-     [
-      115.37148,
-      16.506885
-     ],
-     [
-      115.0,
-      16.489741
-     ],
-     [
-      114.62852,
-      16.506885
-     ],
-     [
-      114.260617,
-      16.558151
-     ],
-     [
-      113.899835,
-      16.643045
-     ],
-     [
-      113.549648,
-      16.76075
-     ],
-     [
-      113.213428,
-      16.910132
-     ],
-     [
-      112.894415,
-      17.089753
-     ],
-     [
-      112.595679,
-      17.297883
-     ],
-     [
-      112.320098,
-      17.532517
-     ],
-     [
-      112.070326,
-      17.791396
-     ],
-     [
-      111.848769,
-      18.072026
-     ],
-     [
-      111.657559,
-      18.371706
-     ],
-     [
-      111.49854,
-      18.687548
-     ],
-     [
-      111.373241,
-      19.016511
-     ],
-     [
-      111.282869,
-      19.355428
-     ],
-     [
-      111.228296,
-      19.701034
-     ],
-     [
-      111.210047,
-      20.05
-     ],
-     [
-      111.228296,
-      20.398966
-     ],
-     [
-      111.282869,
-      20.744572
-     ],
-     [
-      111.373241,
-      21.083489
-     ],
-     [
-      111.49854,
-      21.412452
-     ],
-     [
-      111.657559,
-      21.728294
-     ],
-     [
-      111.848769,
-      22.027974
-     ],
-     [
-      112.070326,
-      22.308604
-     ],
-     [
-      112.320098,
-      22.567483
-     ],
-     [
-      112.595679,
-      22.802117
-     ],
-     [
-      112.894415,
-      23.010247
-     ],
-     [
-      113.213428,
-      23.189868
-     ],
-     [
-      113.549648,
-      23.33925
-     ],
-     [
-      113.899835,
-      23.456955
-     ],
-     [
-      114.260617,
-      23.541849
-     ],
-     [
-      114.62852,
-      23.593115
-     ],
-     [
-      115.0,
-      23.610259
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "VHHK",
-  "icao_text": "A2318/26 NOTAMR A2316/26\r\nQ) VHHK/QPFCA/IV/NBO/E /000/999/2003N11500E214\r\nA) VHHK B) 2610060358 C) 2610061600EST\r\nE) DUE TO WEATHER DEVIATION IN HONG KONG FIR,\r\n\r\n1. ALL TRAFFIC VIA A1 IKELA, EASTBOUND:\r\n20NM AND 40NM LONGITUDINAL SPACING ARE SUSPENDED \r\n5 MINUTES OR 7 MINUTES LONGITUDINAL SPACING IN THE CASE OF CATCHING \r\nUP TRAFFIC SHALL BE APPLIED\r\n\r\n2. ALL TRAFFIC VIA G86 KAPLI, WESTBOUND:\r\nDUE TO BAD WEATHER IN HONG KONG FIR, F400 IS NOT AVILABLE FOR \r\nWESTBOUND TRAFFIC VIA KAPLI BUT ACCEPT INDIVIDUAL COORDINATION\r\n\r\n3.ALL TRAFFIC VIA G86 KAPLI, WESTBOUND:\r\n20NM AND 40NM LONGITUDINAL SPACING ARE SUSPENDED\r\n5 MINUTES OR 7 MINUTES LONGITUDINAL SPACING IN THE CASE OF CATCHING \r\nUP TRAFFIC SHALL BE APPLIED\r\n\r\nRMK: FLOW CONTROL MAY BE ADJUSTED SUBJECT TO SITUATION AND \r\nDISCRETION OF HONG KONG ATS WATCH SUPERVISOR.",
-  "id": "1791259689768000",
-  "issued": "2026-10-06T04:07:00.000Z",
-  "last_updated": "2026-10-06T04:08:00.000Z",
-  "local_text": null,
-  "location": "VHHK",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A2318/26",
-  "purpose": "NBO",
-  "q_code": "QPFCA",
-  "qline_offset_nm": null,
-  "radius_nm": 214.0,
-  "ref_number": "A2316/26",
-  "schedule": null,
-  "scope": "E ",
-  "series": "A",
-  "text": "DUE TO WEATHER DEVIATION IN HONG KONG FIR,\r\n\r\n1. ALL TRAFFIC VIA A1 IKELA, EASTBOUND:\r\n20NM AND 40NM LONGITUDINAL SPACING ARE SUSPENDED \r\n5 MINUTES OR 7 MINUTES LONGITUDINAL SPACING IN THE CASE OF CATCHING \r\nUP TRAFFIC SHALL BE APPLIED\r\n\r\n2. ALL TRAFFIC VIA G86 KAPLI, WESTBOUND:\r\nDUE TO BAD WEATHER IN HONG KONG FIR, F400 IS NOT AVILABLE FOR \r\nWESTBOUND TRAFFIC VIA KAPLI BUT ACCEPT INDIVIDUAL COORDINATION\r\n\r\n3.ALL TRAFFIC VIA G86 KAPLI, WESTBOUND:\r\n20NM AND 40NM LONGITUDINAL SPACING ARE SUSPENDED\r\n5 MINUTES OR 7 MINUTES LONGITUDINAL SPACING IN THE CASE OF CATCHING \r\nUP TRAFFIC SHALL BE APPLIED\r\n\r\nRMK: FLOW CONTROL MAY BE ADJUSTED SUBJECT TO SITUATION AND \r\nDISCRETION OF HONG KONG ATS WATCH SUPERVISOR.",
-  "traffic": "IV",
-  "type": "R",
-  "upper": null,
-  "year": "2026"
- },
  "1791262735965000": {
   "account_id": "VMMCYNYX",
   "area_group": "MO",
@@ -155246,6 +154940,312 @@
   "text": "TWY D CLSD BTN TWY D9 AND TWY D11",
   "traffic": "IV",
   "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791302428844000": {
+  "account_id": "VHHHYNYX",
+  "area_group": "HK",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2003N11500E",
+  "effective_end": "2026-10-07T02:00:00.000Z",
+  "effective_start": "2026-10-06T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": true,
+  "fir": "VHHK",
+  "first_seen": "2026-10-06T16:00:49+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      115.0,
+      23.610259
+     ],
+     [
+      115.37148,
+      23.593115
+     ],
+     [
+      115.739383,
+      23.541849
+     ],
+     [
+      116.100165,
+      23.456955
+     ],
+     [
+      116.450352,
+      23.33925
+     ],
+     [
+      116.786572,
+      23.189868
+     ],
+     [
+      117.105585,
+      23.010247
+     ],
+     [
+      117.404321,
+      22.802117
+     ],
+     [
+      117.679902,
+      22.567483
+     ],
+     [
+      117.929674,
+      22.308604
+     ],
+     [
+      118.151231,
+      22.027974
+     ],
+     [
+      118.342441,
+      21.728294
+     ],
+     [
+      118.50146,
+      21.412452
+     ],
+     [
+      118.626759,
+      21.083489
+     ],
+     [
+      118.717131,
+      20.744572
+     ],
+     [
+      118.771704,
+      20.398966
+     ],
+     [
+      118.789953,
+      20.05
+     ],
+     [
+      118.771704,
+      19.701034
+     ],
+     [
+      118.717131,
+      19.355428
+     ],
+     [
+      118.626759,
+      19.016511
+     ],
+     [
+      118.50146,
+      18.687548
+     ],
+     [
+      118.342441,
+      18.371706
+     ],
+     [
+      118.151231,
+      18.072026
+     ],
+     [
+      117.929674,
+      17.791396
+     ],
+     [
+      117.679902,
+      17.532517
+     ],
+     [
+      117.404321,
+      17.297883
+     ],
+     [
+      117.105585,
+      17.089753
+     ],
+     [
+      116.786572,
+      16.910132
+     ],
+     [
+      116.450352,
+      16.76075
+     ],
+     [
+      116.100165,
+      16.643045
+     ],
+     [
+      115.739383,
+      16.558151
+     ],
+     [
+      115.37148,
+      16.506885
+     ],
+     [
+      115.0,
+      16.489741
+     ],
+     [
+      114.62852,
+      16.506885
+     ],
+     [
+      114.260617,
+      16.558151
+     ],
+     [
+      113.899835,
+      16.643045
+     ],
+     [
+      113.549648,
+      16.76075
+     ],
+     [
+      113.213428,
+      16.910132
+     ],
+     [
+      112.894415,
+      17.089753
+     ],
+     [
+      112.595679,
+      17.297883
+     ],
+     [
+      112.320098,
+      17.532517
+     ],
+     [
+      112.070326,
+      17.791396
+     ],
+     [
+      111.848769,
+      18.072026
+     ],
+     [
+      111.657559,
+      18.371706
+     ],
+     [
+      111.49854,
+      18.687548
+     ],
+     [
+      111.373241,
+      19.016511
+     ],
+     [
+      111.282869,
+      19.355428
+     ],
+     [
+      111.228296,
+      19.701034
+     ],
+     [
+      111.210047,
+      20.05
+     ],
+     [
+      111.228296,
+      20.398966
+     ],
+     [
+      111.282869,
+      20.744572
+     ],
+     [
+      111.373241,
+      21.083489
+     ],
+     [
+      111.49854,
+      21.412452
+     ],
+     [
+      111.657559,
+      21.728294
+     ],
+     [
+      111.848769,
+      22.027974
+     ],
+     [
+      112.070326,
+      22.308604
+     ],
+     [
+      112.320098,
+      22.567483
+     ],
+     [
+      112.595679,
+      22.802117
+     ],
+     [
+      112.894415,
+      23.010247
+     ],
+     [
+      113.213428,
+      23.189868
+     ],
+     [
+      113.549648,
+      23.33925
+     ],
+     [
+      113.899835,
+      23.456955
+     ],
+     [
+      114.260617,
+      23.541849
+     ],
+     [
+      114.62852,
+      23.593115
+     ],
+     [
+      115.0,
+      23.610259
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "VHHK",
+  "icao_text": "A2323/26 NOTAMR A2318/26\r\nQ) VHHK/QPFCA/IV/NBO/E /000/999/2003N11500E214\r\nA) VHHK B) 2610061600 C) 2610070200EST\r\nE) DUE TO BAD WEATHER IN HONG KONG FIR,\r\n\r\n1. ALL TRAFFIC VIA A1 IKELA EASTBOUND TO DESTINATIONS WITHIN INCHEON \r\nFIR:\r\n20NM AND 40NM LONGITUDINAL SPACING ARE SUSPENDED \r\n5 MINUTES LONGITUDINAL SPACING OR 12 MINUTES LONGITUDINAL SPACING IN \r\nTHE CASE OF CATCHING UP TRAFFIC SHALL BE APPLIED\r\n\r\n2. ALL TRAFFIC VIA A1 IKELA, EASTBOUND:\r\n20NM AND 40NM LONGITUDINAL SPACING ARE SUSPENDED \r\n5 MINUTES OR 7 MINUTES LONGITUDINAL SPACING IN THE CASE OF CATCHING \r\nUP TRAFFIC SHALL BE APPLIED\r\n\r\n3.ALL TRAFFIC VIA G86 KAPLI, WESTBOUND:\r\n20NM AND 40NM LONGITUDINAL SPACING ARE SUSPENDED\r\n5 MINUTES OR 7 MINUTES LONGITUDINAL SPACING IN THE CASE OF CATCHING \r\nUP TRAFFIC SHALL BE APPLIED\r\n\r\nRMK: FLOW CONTROL MAY BE ADJUSTED SUBJECT TO SITUATION AND \r\nDISCRETION OF HONG KONG ATS WATCH SUPERVISOR.",
+  "id": "1791302428844000",
+  "issued": "2026-10-06T16:00:00.000Z",
+  "last_updated": "2026-10-06T16:00:00.000Z",
+  "local_text": null,
+  "location": "VHHK",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A2323/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 214.0,
+  "ref_number": "A2318/26",
+  "schedule": null,
+  "scope": "E ",
+  "series": "A",
+  "text": "DUE TO BAD WEATHER IN HONG KONG FIR,\r\n\r\n1. ALL TRAFFIC VIA A1 IKELA EASTBOUND TO DESTINATIONS WITHIN INCHEON \r\nFIR:\r\n20NM AND 40NM LONGITUDINAL SPACING ARE SUSPENDED \r\n5 MINUTES LONGITUDINAL SPACING OR 12 MINUTES LONGITUDINAL SPACING IN \r\nTHE CASE OF CATCHING UP TRAFFIC SHALL BE APPLIED\r\n\r\n2. ALL TRAFFIC VIA A1 IKELA, EASTBOUND:\r\n20NM AND 40NM LONGITUDINAL SPACING ARE SUSPENDED \r\n5 MINUTES OR 7 MINUTES LONGITUDINAL SPACING IN THE CASE OF CATCHING \r\nUP TRAFFIC SHALL BE APPLIED\r\n\r\n3.ALL TRAFFIC VIA G86 KAPLI, WESTBOUND:\r\n20NM AND 40NM LONGITUDINAL SPACING ARE SUSPENDED\r\n5 MINUTES OR 7 MINUTES LONGITUDINAL SPACING IN THE CASE OF CATCHING \r\nUP TRAFFIC SHALL BE APPLIED\r\n\r\nRMK: FLOW CONTROL MAY BE ADJUSTED SUBJECT TO SITUATION AND \r\nDISCRETION OF HONG KONG ATS WATCH SUPERVISOR.",
+  "traffic": "IV",
+  "type": "R",
   "upper": null,
   "year": "2026"
  }
