@@ -73329,204 +73329,6 @@
   "upper": "10000FT AMSL",
   "year": "2026"
  },
- "1790820498883000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "0928N12507E",
-  "effective_end": "2026-10-20T06:00:00.000Z",
-  "effective_start": "2026-10-01T02:07:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RPHI",
-  "first_seen": "2026-10-01T02:10:25+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      124.693611,
-      9.762778
-     ],
-     [
-      125.398333,
-      9.902778
-     ],
-     [
-      125.542222,
-      9.18
-     ],
-     [
-      124.834167,
-      9.043056
-     ],
-     [
-      124.693611,
-      9.762778
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RPMS",
-  "icao_text": "B5216/26 NOTAMR B5138/26\r\nQ) RPHI/QWYLW/IV/M  /AW/000/050/0928N12507E032\r\nA) RPMS B) 2610010207 C) 2610200600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n094546N 1244137E -\r\n095410N 1252354E -\r\n091048N 1253232E -\r\n090235N 1245003E -\r\n094546N 1244137E\r\n(BUTUAN BAY).\r\nF) SFC G) 5000FT AMSL",
-  "id": "1790820498883000",
-  "issued": "2026-10-01T02:07:00.000Z",
-  "last_updated": "2026-10-01T02:08:00.000Z",
-  "local_text": null,
-  "location": "RPMS",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5216/26",
-  "purpose": "M  ",
-  "q_code": "QWYLW",
-  "qline_offset_nm": 0.3,
-  "radius_nm": 32.0,
-  "ref_number": "B5138/26",
-  "schedule": null,
-  "scope": "AW",
-  "series": "B",
-  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n094546N 1244137E -\r\n095410N 1252354E -\r\n091048N 1253232E -\r\n090235N 1245003E -\r\n094546N 1244137E\r\n(BUTUAN BAY).",
-  "traffic": "IV",
-  "type": "R",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
- "1790820721379000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "0831N12624E",
-  "effective_end": "2026-10-20T06:00:00.000Z",
-  "effective_start": "2026-10-01T02:11:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RPHI",
-  "first_seen": "2026-10-01T02:20:25+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      125.855278,
-      8.869444
-     ],
-     [
-      126.753333,
-      9.041389
-     ],
-     [
-      126.930278,
-      8.151389
-     ],
-     [
-      126.040278,
-      7.978333
-     ],
-     [
-      125.855278,
-      8.869444
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RPMF",
-  "icao_text": "B5217/26 NOTAMR B5139/26\r\nQ) RPHI/QWYLW/IV/M  /AW/000/050/0831N12624E040\r\nA) RPMF B) 2610010211 C) 2610200600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n085210N 1255119E -\r\n090229N 1264512E -\r\n080905N 1265549E -\r\n075842N 1260225E -\r\n085210N 1255119E\r\n(LIANGA AND BISLIG BAY).\r\nF) SFC G) 5000FT AMSL",
-  "id": "1790820721379000",
-  "issued": "2026-10-01T02:11:00.000Z",
-  "last_updated": "2026-10-01T02:12:00.000Z",
-  "local_text": null,
-  "location": "RPMF",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5217/26",
-  "purpose": "M  ",
-  "q_code": "QWYLW",
-  "qline_offset_nm": 0.5,
-  "radius_nm": 40.0,
-  "ref_number": "B5139/26",
-  "schedule": null,
-  "scope": "AW",
-  "series": "B",
-  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n085210N 1255119E -\r\n090229N 1264512E -\r\n080905N 1265549E -\r\n075842N 1260225E -\r\n085210N 1255119E\r\n(LIANGA AND BISLIG BAY).",
-  "traffic": "IV",
-  "type": "R",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
- "1790820850942000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "0831N12529E",
-  "effective_end": "2026-10-20T06:00:00.000Z",
-  "effective_start": "2026-10-01T02:13:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RPHI",
-  "first_seen": "2026-10-01T02:20:25+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      124.913611,
-      9.058056
-     ],
-     [
-      125.781667,
-      9.227222
-     ],
-     [
-      126.040278,
-      7.978333
-     ],
-     [
-      125.150278,
-      7.83
-     ],
-     [
-      124.913611,
-      9.058056
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RPME",
-  "icao_text": "B5218/26 NOTAMR B5140/26\r\nQ) RPHI/QWYLW/IV/M  /AW/000/050/0831N12529E048\r\nA) RPME B) 2610010213 C) 2610200600\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n090329N 1245449E -\r\n091338N 1254654E -\r\n075842N 1260225E -\r\n074948N 1250901E -\r\n090329N 1245449E\r\n(AGUSAN DEL NORTE AND AGUSAN DEL SUR).\r\nF) SFC G) 5000FT AMSL",
-  "id": "1790820850942000",
-  "issued": "2026-10-01T02:13:00.000Z",
-  "last_updated": "2026-10-01T02:14:00.000Z",
-  "local_text": null,
-  "location": "RPME",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5218/26",
-  "purpose": "M  ",
-  "q_code": "QWYLW",
-  "qline_offset_nm": 0.8,
-  "radius_nm": 48.0,
-  "ref_number": "B5140/26",
-  "schedule": null,
-  "scope": "AW",
-  "series": "B",
-  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n090329N 1245449E -\r\n091338N 1254654E -\r\n075842N 1260225E -\r\n074948N 1250901E -\r\n090329N 1245449E\r\n(AGUSAN DEL NORTE AND AGUSAN DEL SUR).",
-  "traffic": "IV",
-  "type": "R",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
  "1790820970818000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
@@ -139525,6 +139327,646 @@
   "traffic": null,
   "type": "C",
   "upper": null,
+  "year": "2026"
+ },
+ "1791256875295000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2241N12029E",
+  "effective_end": "2026-12-31T16:00:00.000Z",
+  "effective_start": "2026-10-31T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T03:30:39+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.476389,
+      22.684722
+     ],
+     [
+      120.489167,
+      22.687778
+     ],
+     [
+      120.4925,
+      22.676667
+     ],
+     [
+      120.479167,
+      22.674722
+     ],
+     [
+      120.476389,
+      22.684722
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2555/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/000/008/2241N12029E001\r\nA) RCAA\r\nB) 2610311600 C) 2612311600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260708004301\r\n2.LCA:PINGTUNG CITY, PINGTUNG COUNTY\r\n3.COOR TEL:0953-311088, 0986-197958, 0912-218136\r\n4.AREA AS FLW:\r\n224105N 1202835E\r\n224116N 1202921E\r\n224036N 1202933E\r\n224029N 1202845E\r\n224105N 1202835E\r\nF) SFC G) 800FT AMSL",
+  "id": "1791256875295000",
+  "issued": "2026-10-06T03:21:00.000Z",
+  "last_updated": "2026-10-06T03:21:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2555/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.2,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260708004301\r\n2.LCA:PINGTUNG CITY, PINGTUNG COUNTY\r\n3.COOR TEL:0953-311088, 0986-197958, 0912-218136\r\n4.AREA AS FLW:\r\n224105N 1202835E\r\n224116N 1202921E\r\n224036N 1202933E\r\n224029N 1202845E\r\n224105N 1202835E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "800FT AMSL",
+  "year": "2026"
+ },
+ "1791256977856000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0928N12507E",
+  "effective_end": "2026-10-20T08:00:00.000Z",
+  "effective_start": "2026-10-06T03:22:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-06T03:30:39+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      124.693611,
+      9.762778
+     ],
+     [
+      125.398333,
+      9.902778
+     ],
+     [
+      125.542222,
+      9.18
+     ],
+     [
+      124.834167,
+      9.043056
+     ],
+     [
+      124.693611,
+      9.762778
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPMS",
+  "icao_text": "B5322/26 NOTAMR B5216/26\r\nQ) RPHI/QWYLW/IV/M  /AW/000/100/0928N12507E032\r\nA) RPMS B) 2610060322 C) 2610200800\r\nD) 2200-0800\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n094546N 1244137E -\r\n095410N 1252354E -\r\n091048N 1253232E -\r\n090235N 1245003E -\r\n094546N 1244137E\r\n(BUTUAN BAY).\r\nF) SFC G) 10000FT AMSL",
+  "id": "1791256977856000",
+  "issued": "2026-10-06T03:22:00.000Z",
+  "last_updated": "2026-10-06T03:22:00.000Z",
+  "local_text": null,
+  "location": "RPMS",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5322/26",
+  "purpose": "M  ",
+  "q_code": "QWYLW",
+  "qline_offset_nm": 0.3,
+  "radius_nm": 32.0,
+  "ref_number": "B5216/26",
+  "schedule": "2200-0800",
+  "scope": "AW",
+  "series": "B",
+  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n094546N 1244137E -\r\n095410N 1252354E -\r\n091048N 1253232E -\r\n090235N 1245003E -\r\n094546N 1244137E\r\n(BUTUAN BAY).",
+  "traffic": "IV",
+  "type": "R",
+  "upper": "10000FT AMSL",
+  "year": "2026"
+ },
+ "1791256997918000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2259N12011E",
+  "effective_end": "2026-10-31T10:00:00.000Z",
+  "effective_start": "2026-10-12T22:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T03:30:39+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.181111,
+      22.982222
+     ],
+     [
+      120.188333,
+      22.981111
+     ],
+     [
+      120.187778,
+      22.974722
+     ],
+     [
+      120.187222,
+      22.975
+     ],
+     [
+      120.180833,
+      22.981389
+     ],
+     [
+      120.181111,
+      22.982222
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCNN",
+  "icao_text": "U2556/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/005/2259N12011E001\r\nA) RCNN\r\nB) 2610122200 C) 2610311000\r\nD) 2200-1000\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260825002101\r\n2.LCA:SOUTH DISTRICT, TAINAN CITY\r\n3.COOR TEL:0912-791987, 0933-793803\r\n4.AREA AS FLW:\r\n225856N 1201052E\r\n225852N 1201118E\r\n225829N 1201116E\r\n225830N 1201114E\r\n225853N 1201051E\r\n225856N 1201052E\r\nF) SFC G) 500FT AMSL",
+  "id": "1791256997918000",
+  "issued": "2026-10-06T03:23:00.000Z",
+  "last_updated": "2026-10-06T03:23:00.000Z",
+  "local_text": null,
+  "location": "RCNN",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2556/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.3,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": "2200-1000",
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260825002101\r\n2.LCA:SOUTH DISTRICT, TAINAN CITY\r\n3.COOR TEL:0912-791987, 0933-793803\r\n4.AREA AS FLW:\r\n225856N 1201052E\r\n225852N 1201118E\r\n225829N 1201116E\r\n225830N 1201114E\r\n225853N 1201051E\r\n225856N 1201052E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "500FT AMSL",
+  "year": "2026"
+ },
+ "1791257120960000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0831N12624E",
+  "effective_end": "2026-10-20T08:00:00.000Z",
+  "effective_start": "2026-10-06T03:25:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-06T03:30:39+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      125.855278,
+      8.869444
+     ],
+     [
+      126.753333,
+      9.041389
+     ],
+     [
+      126.930278,
+      8.151389
+     ],
+     [
+      126.040278,
+      7.978333
+     ],
+     [
+      125.855278,
+      8.869444
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPMF",
+  "icao_text": "B5323/26 NOTAMR B5217/26\r\nQ) RPHI/QWYLW/IV/M  /AW/000/100/0831N12624E040\r\nA) RPMF B) 2610060325 C) 2610200800\r\nD) 2200-0800\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n085210N 1255119E -\r\n090229N 1264512E -\r\n080905N 1265549E -\r\n075842N 1260225E -\r\n085210N 1255119E\r\n(LIANGA AND BISLIG BAY).\r\nF) SFC G) 10000FT AMSL",
+  "id": "1791257120960000",
+  "issued": "2026-10-06T03:25:00.000Z",
+  "last_updated": "2026-10-06T03:25:00.000Z",
+  "local_text": null,
+  "location": "RPMF",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5323/26",
+  "purpose": "M  ",
+  "q_code": "QWYLW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 40.0,
+  "ref_number": "B5217/26",
+  "schedule": "2200-0800",
+  "scope": "AW",
+  "series": "B",
+  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n085210N 1255119E -\r\n090229N 1264512E -\r\n080905N 1265549E -\r\n075842N 1260225E -\r\n085210N 1255119E\r\n(LIANGA AND BISLIG BAY).",
+  "traffic": "IV",
+  "type": "R",
+  "upper": "10000FT AMSL",
+  "year": "2026"
+ },
+ "1791257319382000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0831N12529E",
+  "effective_end": "2026-10-20T08:00:00.000Z",
+  "effective_start": "2026-10-06T03:28:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-06T03:30:39+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      124.913611,
+      9.058056
+     ],
+     [
+      125.781667,
+      9.227222
+     ],
+     [
+      126.040278,
+      7.978333
+     ],
+     [
+      125.150278,
+      7.83
+     ],
+     [
+      124.913611,
+      9.058056
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPME",
+  "icao_text": "B5324/26 NOTAMR B5218/26\r\nQ) RPHI/QWYLW/IV/M  /AW/000/100/0831N12529E048\r\nA) RPME B) 2610060328 C) 2610200800\r\nD) 2200-0800\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n090329N 1245449E -\r\n091338N 1254654E -\r\n075842N 1260225E -\r\n074948N 1250901E -\r\n090329N 1245449E\r\n(AGUSAN DEL NORTE AND AGUSAN DEL SUR).\r\nF) SFC G) 10000FT AMSL",
+  "id": "1791257319382000",
+  "issued": "2026-10-06T03:28:00.000Z",
+  "last_updated": "2026-10-06T03:28:00.000Z",
+  "local_text": null,
+  "location": "RPME",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5324/26",
+  "purpose": "M  ",
+  "q_code": "QWYLW",
+  "qline_offset_nm": 0.8,
+  "radius_nm": 48.0,
+  "ref_number": "B5218/26",
+  "schedule": "2200-0800",
+  "scope": "AW",
+  "series": "B",
+  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n090329N 1245449E -\r\n091338N 1254654E -\r\n075842N 1260225E -\r\n074948N 1250901E -\r\n090329N 1245449E\r\n(AGUSAN DEL NORTE AND AGUSAN DEL SUR).",
+  "traffic": "IV",
+  "type": "R",
+  "upper": "10000FT AMSL",
+  "year": "2026"
+ },
+ "1791257395497000": {
+  "account_id": "VMMCYNYX",
+  "area_group": "MO",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2211N11332E",
+  "effective_end": "2026-10-06T12:20:00.000Z",
+  "effective_start": "2026-10-06T12:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZGZU",
+  "first_seen": "2026-10-06T03:30:39+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      113.539722,
+      22.181306
+     ],
+     [
+      113.540007,
+      22.181293
+     ],
+     [
+      113.54029,
+      22.181254
+     ],
+     [
+      113.540567,
+      22.18119
+     ],
+     [
+      113.540836,
+      22.181101
+     ],
+     [
+      113.541094,
+      22.180988
+     ],
+     [
+      113.541339,
+      22.180852
+     ],
+     [
+      113.541568,
+      22.180694
+     ],
+     [
+      113.54178,
+      22.180517
+     ],
+     [
+      113.541972,
+      22.180321
+     ],
+     [
+      113.542142,
+      22.180108
+     ],
+     [
+      113.542289,
+      22.179881
+     ],
+     [
+      113.542411,
+      22.179642
+     ],
+     [
+      113.542507,
+      22.179393
+     ],
+     [
+      113.542576,
+      22.179137
+     ],
+     [
+      113.542618,
+      22.178875
+     ],
+     [
+      113.542632,
+      22.178611
+     ],
+     [
+      113.542618,
+      22.178347
+     ],
+     [
+      113.542576,
+      22.178085
+     ],
+     [
+      113.542507,
+      22.177829
+     ],
+     [
+      113.542411,
+      22.17758
+     ],
+     [
+      113.542289,
+      22.177341
+     ],
+     [
+      113.542142,
+      22.177114
+     ],
+     [
+      113.541972,
+      22.176901
+     ],
+     [
+      113.54178,
+      22.176705
+     ],
+     [
+      113.541568,
+      22.176528
+     ],
+     [
+      113.541339,
+      22.17637
+     ],
+     [
+      113.541094,
+      22.176234
+     ],
+     [
+      113.540836,
+      22.176121
+     ],
+     [
+      113.540567,
+      22.176032
+     ],
+     [
+      113.54029,
+      22.175968
+     ],
+     [
+      113.540007,
+      22.175929
+     ],
+     [
+      113.539722,
+      22.175916
+     ],
+     [
+      113.539437,
+      22.175929
+     ],
+     [
+      113.539154,
+      22.175968
+     ],
+     [
+      113.538877,
+      22.176032
+     ],
+     [
+      113.538608,
+      22.176121
+     ],
+     [
+      113.53835,
+      22.176234
+     ],
+     [
+      113.538105,
+      22.17637
+     ],
+     [
+      113.537876,
+      22.176528
+     ],
+     [
+      113.537664,
+      22.176705
+     ],
+     [
+      113.537472,
+      22.176901
+     ],
+     [
+      113.537302,
+      22.177114
+     ],
+     [
+      113.537155,
+      22.177341
+     ],
+     [
+      113.537033,
+      22.17758
+     ],
+     [
+      113.536937,
+      22.177829
+     ],
+     [
+      113.536868,
+      22.178085
+     ],
+     [
+      113.536826,
+      22.178347
+     ],
+     [
+      113.536812,
+      22.178611
+     ],
+     [
+      113.536826,
+      22.178875
+     ],
+     [
+      113.536868,
+      22.179137
+     ],
+     [
+      113.536937,
+      22.179393
+     ],
+     [
+      113.537033,
+      22.179642
+     ],
+     [
+      113.537155,
+      22.179881
+     ],
+     [
+      113.537302,
+      22.180108
+     ],
+     [
+      113.537472,
+      22.180321
+     ],
+     [
+      113.537664,
+      22.180517
+     ],
+     [
+      113.537876,
+      22.180694
+     ],
+     [
+      113.538105,
+      22.180852
+     ],
+     [
+      113.53835,
+      22.180988
+     ],
+     [
+      113.538608,
+      22.181101
+     ],
+     [
+      113.538877,
+      22.18119
+     ],
+     [
+      113.539154,
+      22.181254
+     ],
+     [
+      113.539437,
+      22.181293
+     ],
+     [
+      113.539722,
+      22.181306
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "VMMC",
+  "icao_text": "A0338/26 NOTAMN\r\nQ) ZGZU/QWULW/IV/BO /AW/000/010/2211N11332E001\r\nA) VMMC B) 2610061200 C) 2610061220\r\nE) UNMANNED AIRCRAFT SYSTEM LIGHT SHOW WILL TAKE PLACE WITHIN 300M \r\nRADIUS CENTRED ON 221043N1133223E.\r\nF) GND G) 300M AMSL",
+  "id": "1791257395497000",
+  "issued": "2026-10-06T03:29:00.000Z",
+  "last_updated": "2026-10-06T03:29:00.000Z",
+  "local_text": null,
+  "location": "VMMC",
+  "lower": "GND",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A0338/26",
+  "purpose": "BO ",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "A",
+  "text": "UNMANNED AIRCRAFT SYSTEM LIGHT SHOW WILL TAKE PLACE WITHIN 300M \r\nRADIUS CENTRED ON 221043N1133223E.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "300M AMSL",
   "year": "2026"
  }
 }
