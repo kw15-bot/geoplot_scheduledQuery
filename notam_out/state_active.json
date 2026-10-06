@@ -140034,5 +140034,141 @@
   "type": "R",
   "upper": "10000FT AMSL",
   "year": "2026"
+ },
+ "1791258402333000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2300N12012E",
+  "effective_end": "2026-12-08T16:00:00.000Z",
+  "effective_start": "2026-10-12T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T03:50:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.177222,
+      23.009444
+     ],
+     [
+      120.234167,
+      23.011389
+     ],
+     [
+      120.234722,
+      22.980833
+     ],
+     [
+      120.178889,
+      22.980833
+     ],
+     [
+      120.177222,
+      23.009444
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCNN",
+  "icao_text": "U2558/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/010/2300N12012E003\r\nA) RCNN\r\nB) 2610121600 C) 2612081600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260921000301\r\n2.LCA:WEST CENTRAL DISTRICT, TAINAN CITY\r\n3.THE AREA OVERLAPS PART OF VFR CORRIDOR C13, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0976-187983, 0933-631168\r\n5.AREA AS FLW:\r\n230034N 1201038E\r\n230041N 1201403E\r\n225851N 1201405E\r\n225851N 1201044E\r\n230034N 1201038E\r\nF) SFC G) 1000FT AMSL",
+  "id": "1791258402333000",
+  "issued": "2026-10-06T03:46:00.000Z",
+  "last_updated": "2026-10-06T03:46:00.000Z",
+  "local_text": null,
+  "location": "RCNN",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2558/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 3.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260921000301\r\n2.LCA:WEST CENTRAL DISTRICT, TAINAN CITY\r\n3.THE AREA OVERLAPS PART OF VFR CORRIDOR C13, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0976-187983, 0933-631168\r\n5.AREA AS FLW:\r\n230034N 1201038E\r\n230041N 1201403E\r\n225851N 1201405E\r\n225851N 1201044E\r\n230034N 1201038E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "1000FT AMSL",
+  "year": "2026"
+ },
+ "1791258501553000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2306N12017E",
+  "effective_end": "2026-11-27T16:00:00.000Z",
+  "effective_start": "2026-10-12T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T03:50:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.220833,
+      23.090556
+     ],
+     [
+      120.256667,
+      23.157778
+     ],
+     [
+      120.321667,
+      23.120278
+     ],
+     [
+      120.318333,
+      23.06
+     ],
+     [
+      120.2725,
+      23.057222
+     ],
+     [
+      120.220833,
+      23.090556
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCNN",
+  "icao_text": "U2559/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/060/2306N12017E004\r\nA) RCNN\r\nB) 2610121600 C) 2611271600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260917001902\r\n2.LCA:XINSHI DISTRICT, TAINAN CITY\r\n3.THE AREA OVERLAPS PART OF GUEIREN MIL TRAINING AREA, \r\n  PART OF VFR CORRIDOR C13 AND C35, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0937-832983, 0925-439479, 0983-253983\r\n5.AREA AS FLW:\r\n230526N 1201315E\r\n230928N 1201524E\r\n230713N 1201918E\r\n230336N 1201906E\r\n230326N 1201621E\r\n230526N 1201315E\r\nF) SFC G) 6000FT AMSL",
+  "id": "1791258501553000",
+  "issued": "2026-10-06T03:48:00.000Z",
+  "last_updated": "2026-10-06T03:48:00.000Z",
+  "local_text": null,
+  "location": "RCNN",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2559/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.3,
+  "radius_nm": 4.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260917001902\r\n2.LCA:XINSHI DISTRICT, TAINAN CITY\r\n3.THE AREA OVERLAPS PART OF GUEIREN MIL TRAINING AREA, \r\n  PART OF VFR CORRIDOR C13 AND C35, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0937-832983, 0925-439479, 0983-253983\r\n5.AREA AS FLW:\r\n230526N 1201315E\r\n230928N 1201524E\r\n230713N 1201918E\r\n230336N 1201906E\r\n230326N 1201621E\r\n230526N 1201315E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "6000FT AMSL",
+  "year": "2026"
  }
 }
