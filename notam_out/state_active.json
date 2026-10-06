@@ -153320,5 +153320,209 @@
   "type": null,
   "upper": "FL800",
   "year": "2026"
+ },
+ "1791322719449152": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-08T16:05:00Z",
+  "effective_start": "2026-10-08T15:20:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-06T21:40:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -133.65,
+      20.6
+     ],
+     [
+      -129.85,
+      24.866667
+     ],
+     [
+      -127.05,
+      27.75
+     ],
+     [
+      -125.35,
+      28.65
+     ],
+     [
+      -124.916667,
+      28.266667
+     ],
+     [
+      -123.85,
+      27.933333
+     ],
+     [
+      -123.416667,
+      27.55
+     ],
+     [
+      -123.316667,
+      27.116667
+     ],
+     [
+      -124.166667,
+      25.5
+     ],
+     [
+      -126.9,
+      22.616667
+     ],
+     [
+      -130.65,
+      18.35
+     ],
+     [
+      -131.9,
+      19.383333
+     ],
+     [
+      -132.4,
+      19.55
+     ],
+     [
+      -133.65,
+      20.6
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4880/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/999/\nA) KZAK\nB) 2610081520\nC) 2610081605\nE) ZAK AIRSPACE DCC NASA CREW12 REENTRY 08OCT ASCENDING ISS STNR ALT RESERVATION WI AN AREA DEFINED AS 203600N1333900W TO 245200N1295100W TO 274500N1270300W TO 283900N1252100W TO 281600N1245500W TO 275600N1235100W TO 273300N1232500W TO 270700N1231900W TO 253000N1241000W TO 223700N1265400W TO 182100N1303900W TO 192300N1315400W TO 193300N1322400W TO POINT OF ORIGIN\nF) SFC\nG) UNL",
+  "id": "1791322719449152",
+  "issued": "2026-10-06T21:37:00Z",
+  "last_updated": "2026-10-06T21:37:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4880/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE DCC NASA CREW12 REENTRY 08OCT ASCENDING ISS STNR ALT RESERVATION WI AN AREA DEFINED AS 203600N1333900W TO 245200N1295100W TO 274500N1270300W TO 283900N1252100W TO 281600N1245500W TO 275600N1235100W TO 273300N1232500W TO 270700N1231900W TO 253000N1241000W TO 223700N1265400W TO 182100N1303900W TO 192300N1315400W TO 193300N1322400W TO POINT OF ORIGIN",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1791322722397509": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-08T16:05:00Z",
+  "effective_start": "2026-10-08T15:20:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-06T21:40:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -133.65,
+      20.6
+     ],
+     [
+      -129.85,
+      24.866667
+     ],
+     [
+      -127.05,
+      27.75
+     ],
+     [
+      -125.35,
+      28.65
+     ],
+     [
+      -124.916667,
+      28.266667
+     ],
+     [
+      -123.85,
+      27.933333
+     ],
+     [
+      -123.416667,
+      27.55
+     ],
+     [
+      -123.316667,
+      27.116667
+     ],
+     [
+      -124.166667,
+      25.5
+     ],
+     [
+      -126.9,
+      22.616667
+     ],
+     [
+      -130.65,
+      18.35
+     ],
+     [
+      -131.9,
+      19.383333
+     ],
+     [
+      -132.4,
+      19.55
+     ],
+     [
+      -133.65,
+      20.6
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1791322722397509",
+  "issued": "2026-10-06T21:37:00Z",
+  "last_updated": "2026-10-06T21:37:00Z",
+  "local_text": "!CARF 10/054 ZAK AIRSPACE DCC NASA CREW12 REENTRY 08OCT ASCENDING ISS STNR ALT RESERVATION WI AN AREA DEFINED AS 203600N1333900W TO 245200N1295100W TO 274500N1270300W TO 283900N1252100W TO 281600N1245500W TO 275600N1235100W TO 273300N1232500W TO 270700N1231900W TO 253000N1241000W TO 223700N1265400W TO 182100N1303900W TO 192300N1315400W TO 193300N1322400W TO POINT OF ORIGIN SFC-UNL 2610081520-2610081605",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "10/054",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 10/054 ZAK AIRSPACE DCC NASA CREW12 REENTRY 08OCT ASCENDING ISS STNR ALT RESERVATION WI AN AREA DEFINED AS 203600N1333900W TO 245200N1295100W TO 274500N1270300W TO 283900N1252100W TO 281600N1245500W TO 275600N1235100W TO 273300N1232500W TO 270700N1231900W TO 253000N1241000W TO 223700N1265400W TO 182100N1303900W TO 192300N1315400W TO 193300N1322400W TO POINT OF ORIGIN SFC-UNL",
+  "traffic": null,
+  "type": null,
+  "upper": "UNL",
+  "year": "2026"
  }
 }
