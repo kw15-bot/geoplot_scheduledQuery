@@ -105377,1080 +105377,6 @@
   "upper": null,
   "year": "2026"
  },
- "1791101267713000": {
-  "account_id": "RCTPYNYX",
-  "area_group": "TW",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2442N12050E",
-  "effective_end": "2026-10-07T23:33:00Z",
-  "effective_start": "2026-10-06T22:09:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RCAA",
-  "first_seen": "2026-10-04T08:10:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      120.754167,
-      24.569167
-     ],
-     [
-      120.684722,
-      24.646667
-     ],
-     [
-      120.913056,
-      24.814722
-     ],
-     [
-      120.982222,
-      24.736944
-     ],
-     [
-      120.754167,
-      24.569167
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RCMQ",
-  "icao_text": "A3668/26 NOTAMN\r\nQ) RCAA/QWELW/IV/BO/AW/000/070/2442N12050E009\r\nA) RCMQ\r\nB) 2610062209 C) 2610072333\r\nD) 2209-2214 2321-2333\r\nE) AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.TFC OF RCMQ MAYBE DELAYED.\r\n3.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n243409N 1204515E\r\n243848N 1204105E\r\n244853N 1205447E\r\n244413N 1205856E\r\n243409N 1204515E\r\nF) SFC G) 7000FT AMSL",
-  "id": "1791101267713000",
-  "issued": "2026-10-04T08:07:00Z",
-  "last_updated": "2026-10-04T08:08:00Z",
-  "local_text": null,
-  "location": "RCMQ",
-  "lower": "SFC",
-  "max_fl": "070",
-  "min_fl": "000",
-  "number": "A3668/26",
-  "purpose": "BO",
-  "q_code": "QWELW",
-  "qline_offset_nm": 0.5,
-  "radius_nm": 9.0,
-  "ref_number": null,
-  "schedule": "2209-2214 2321-2333",
-  "scope": "AW",
-  "series": "A",
-  "text": "AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.TFC OF RCMQ MAYBE DELAYED.\r\n3.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n243409N 1204515E\r\n243848N 1204105E\r\n244853N 1205447E\r\n244413N 1205856E\r\n243409N 1204515E",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "7000FT AMSL",
-  "year": "2026"
- },
- "1791101325996000": {
-  "account_id": "RCTPYNYX",
-  "area_group": "TW",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2449N12105E",
-  "effective_end": "2026-10-07T23:37:00.000Z",
-  "effective_start": "2026-10-06T22:12:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RCAA",
-  "first_seen": "2026-10-04T08:10:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      120.945278,
-      24.698889
-     ],
-     [
-      120.921944,
-      24.724722
-     ],
-     [
-      121.224167,
-      24.946944
-     ],
-     [
-      121.246944,
-      24.920833
-     ],
-     [
-      120.945278,
-      24.698889
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RCSS",
-  "icao_text": "A3669/26 NOTAMN\r\nQ) RCAA/QWELW/IV/BO/AW/000/050/2449N12105E011\r\nA) RCSS\r\nB) 2610062212 C) 2610072337\r\nD) 2212-2218 2331-2337\r\nE) AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.TFC OF RCSS MAYBE DELAYED.\r\n3.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n244156N 1205643E\r\n244329N 1205519E\r\n245649N 1211327E\r\n245515N 1211449E\r\n244156N 1205643E\r\nF) SFC G) 5000FT AMSL",
-  "id": "1791101325996000",
-  "issued": "2026-10-04T08:08:00.000Z",
-  "last_updated": "2026-10-04T08:08:00.000Z",
-  "local_text": null,
-  "location": "RCSS",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A3669/26",
-  "purpose": "BO",
-  "q_code": "QWELW",
-  "qline_offset_nm": 0.4,
-  "radius_nm": 11.0,
-  "ref_number": null,
-  "schedule": "2212-2218 2331-2337",
-  "scope": "AW",
-  "series": "A",
-  "text": "AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.TFC OF RCSS MAYBE DELAYED.\r\n3.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n244156N 1205643E\r\n244329N 1205519E\r\n245649N 1211327E\r\n245515N 1211449E\r\n244156N 1205643E",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
- "1791101381796000": {
-  "account_id": "RCTPYNYX",
-  "area_group": "TW",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2500N12119E",
-  "effective_end": "2026-10-07T23:39:00Z",
-  "effective_start": "2026-10-06T22:16:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RCAA",
-  "first_seen": "2026-10-04T08:10:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      121.246944,
-      24.920833
-     ],
-     [
-      121.224167,
-      24.946944
-     ],
-     [
-      121.392778,
-      25.070556
-     ],
-     [
-      121.416111,
-      25.044722
-     ],
-     [
-      121.246944,
-      24.920833
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RCSS",
-  "icao_text": "A3670/26 NOTAMN\r\nQ) RCAA/QWELW/IV/BO/AW/000/050/2500N12119E007\r\nA) RCSS\r\nB) 2610062216 C) 2610072339\r\nD) 2216-2219 2335-2339\r\nE) AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.NOT AVBL FOR LDG/TKOF.\r\n3.LIAISON OFFICER AT TAIPEI APP AND SONGSHAN TWR,\r\n  TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n245515N 1211449E\r\n245649N 1211327E\r\n250414N 1212334E\r\n250241N 1212458E\r\n245515N 1211449E\r\nF) SFC G) 5000FT AMSL",
-  "id": "1791101381796000",
-  "issued": "2026-10-04T08:09:00Z",
-  "last_updated": "2026-10-04T08:10:00Z",
-  "local_text": null,
-  "location": "RCSS",
-  "lower": "SFC",
-  "max_fl": "050",
-  "min_fl": "000",
-  "number": "A3670/26",
-  "purpose": "BO",
-  "q_code": "QWELW",
-  "qline_offset_nm": 0.3,
-  "radius_nm": 7.0,
-  "ref_number": null,
-  "schedule": "2216-2219 2335-2339",
-  "scope": "AW",
-  "series": "A",
-  "text": "AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.NOT AVBL FOR LDG/TKOF.\r\n3.LIAISON OFFICER AT TAIPEI APP AND SONGSHAN TWR,\r\n  TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n245515N 1211449E\r\n245649N 1211327E\r\n250414N 1212334E\r\n250241N 1212458E\r\n245515N 1211449E",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
- "1791101416794000": {
-  "account_id": "RCTPYNYX",
-  "area_group": "TW",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2502N12131E",
-  "effective_end": "2026-10-07T23:43:00.000Z",
-  "effective_start": "2026-10-06T22:16:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RCAA",
-  "first_seen": "2026-10-04T08:10:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      121.512778,
-      25.122906
-     ],
-     [
-      121.521777,
-      25.122505
-     ],
-     [
-      121.53069,
-      25.121307
-     ],
-     [
-      121.53943,
-      25.119324
-     ],
-     [
-      121.547913,
-      25.116574
-     ],
-     [
-      121.556058,
-      25.113083
-     ],
-     [
-      121.563786,
-      25.108887
-     ],
-     [
-      121.571023,
-      25.104024
-     ],
-     [
-      121.577699,
-      25.098542
-     ],
-     [
-      121.58375,
-      25.092493
-     ],
-     [
-      121.589117,
-      25.085936
-     ],
-     [
-      121.59375,
-      25.078934
-     ],
-     [
-      121.597602,
-      25.071555
-     ],
-     [
-      121.600637,
-      25.063869
-     ],
-     [
-      121.602827,
-      25.05595
-     ],
-     [
-      121.604149,
-      25.047875
-     ],
-     [
-      121.604591,
-      25.039722
-     ],
-     [
-      121.604149,
-      25.031569
-     ],
-     [
-      121.602827,
-      25.023494
-     ],
-     [
-      121.600637,
-      25.015575
-     ],
-     [
-      121.597602,
-      25.007889
-     ],
-     [
-      121.59375,
-      25.00051
-     ],
-     [
-      121.589117,
-      24.993508
-     ],
-     [
-      121.58375,
-      24.986951
-     ],
-     [
-      121.577699,
-      24.980902
-     ],
-     [
-      121.571023,
-      24.97542
-     ],
-     [
-      121.563786,
-      24.970557
-     ],
-     [
-      121.556058,
-      24.966361
-     ],
-     [
-      121.547913,
-      24.96287
-     ],
-     [
-      121.53943,
-      24.96012
-     ],
-     [
-      121.53069,
-      24.958137
-     ],
-     [
-      121.521777,
-      24.956939
-     ],
-     [
-      121.512778,
-      24.956538
-     ],
-     [
-      121.503779,
-      24.956939
-     ],
-     [
-      121.494866,
-      24.958137
-     ],
-     [
-      121.486126,
-      24.96012
-     ],
-     [
-      121.477643,
-      24.96287
-     ],
-     [
-      121.469498,
-      24.966361
-     ],
-     [
-      121.46177,
-      24.970557
-     ],
-     [
-      121.454533,
-      24.97542
-     ],
-     [
-      121.447857,
-      24.980902
-     ],
-     [
-      121.441806,
-      24.986951
-     ],
-     [
-      121.436439,
-      24.993508
-     ],
-     [
-      121.431806,
-      25.00051
-     ],
-     [
-      121.427954,
-      25.007889
-     ],
-     [
-      121.424919,
-      25.015575
-     ],
-     [
-      121.422729,
-      25.023494
-     ],
-     [
-      121.421407,
-      25.031569
-     ],
-     [
-      121.420965,
-      25.039722
-     ],
-     [
-      121.421407,
-      25.047875
-     ],
-     [
-      121.422729,
-      25.05595
-     ],
-     [
-      121.424919,
-      25.063869
-     ],
-     [
-      121.427954,
-      25.071555
-     ],
-     [
-      121.431806,
-      25.078934
-     ],
-     [
-      121.436439,
-      25.085936
-     ],
-     [
-      121.441806,
-      25.092493
-     ],
-     [
-      121.447857,
-      25.098542
-     ],
-     [
-      121.454533,
-      25.104024
-     ],
-     [
-      121.46177,
-      25.108887
-     ],
-     [
-      121.469498,
-      25.113083
-     ],
-     [
-      121.477643,
-      25.116574
-     ],
-     [
-      121.486126,
-      25.119324
-     ],
-     [
-      121.494866,
-      25.121307
-     ],
-     [
-      121.503779,
-      25.122505
-     ],
-     [
-      121.512778,
-      25.122906
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RCSS",
-  "icao_text": "A3671/26 NOTAMN\r\nQ) RCAA/QWELW/IV/BO/AW/000/060/2502N12131E006\r\nA) RCSS\r\nB) 2610062216 C) 2610072343\r\nD) 2216-2325 2335-2343\r\nE) AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.NOT AVBL FOR LDG/TKOF.\r\n3.LIAISON OFFICER AT TAIPEI APP AND SONGSHAN TWR,\r\n  TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n5NM RADIUS CENTRED ON 250223N 1213046E\r\nF) SFC G) 6000FT AMSL",
-  "id": "1791101416794000",
-  "issued": "2026-10-04T08:10:00.000Z",
-  "last_updated": "2026-10-04T08:10:00.000Z",
-  "local_text": null,
-  "location": "RCSS",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A3671/26",
-  "purpose": "BO",
-  "q_code": "QWELW",
-  "qline_offset_nm": 0.4,
-  "radius_nm": 6.0,
-  "ref_number": null,
-  "schedule": "2216-2325 2335-2343",
-  "scope": "AW",
-  "series": "A",
-  "text": "AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.NOT AVBL FOR LDG/TKOF.\r\n3.LIAISON OFFICER AT TAIPEI APP AND SONGSHAN TWR,\r\n  TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n5NM RADIUS CENTRED ON 250223N 1213046E",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "6000FT AMSL",
-  "year": "2026"
- },
- "1791101462314000": {
-  "account_id": "RCTPYNYX",
-  "area_group": "TW",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2507N12128E",
-  "effective_end": "2026-10-07T23:43:00.000Z",
-  "effective_start": "2026-10-06T22:19:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RCAA",
-  "first_seen": "2026-10-04T08:20:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      121.411389,
-      25.166944
-     ],
-     [
-      121.419722,
-      25.181944
-     ],
-     [
-      121.548333,
-      25.125833
-     ],
-     [
-      121.4225,
-      25.061389
-     ],
-     [
-      121.411389,
-      25.166944
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RCSS",
-  "icao_text": "A3672/26 NOTAMN\r\nQ) RCAA/QWELW/IV/BO/AW/000/060/2507N12128E005\r\nA) RCSS\r\nB) 2610062219 C) 2610072343\r\nD) 2219-2224 2240-2245 2259-2325 2336-2343\r\nE) AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.NOT AVBL FOR LDG/TKOF.\r\n3.LIAISON OFFICER AT TAIPEI APP AND SONGSHAN TWR,\r\n  TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n251001N 1212441E\r\n251055N 1212511E\r\n250733N 1213254E\r\n250341N 1212521E\r\n251001N 1212441E\r\nF) SFC G) 6000FT AMSL",
-  "id": "1791101462314000",
-  "issued": "2026-10-04T08:10:00.000Z",
-  "last_updated": "2026-10-04T08:11:00.000Z",
-  "local_text": null,
-  "location": "RCSS",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A3672/26",
-  "purpose": "BO",
-  "q_code": "QWELW",
-  "qline_offset_nm": 1.4,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": "2219-2224 2240-2245 2259-2325 2336-2343",
-  "scope": "AW",
-  "series": "A",
-  "text": "AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.NOT AVBL FOR LDG/TKOF.\r\n3.LIAISON OFFICER AT TAIPEI APP AND SONGSHAN TWR,\r\n  TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n251001N 1212441E\r\n251055N 1212511E\r\n250733N 1213254E\r\n250341N 1212521E\r\n251001N 1212441E",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "6000FT AMSL",
-  "year": "2026"
- },
- "1791101556580000": {
-  "account_id": "RCTPYNYX",
-  "area_group": "TW",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2505N12114E",
-  "effective_end": "2026-10-07T23:43:00.000Z",
-  "effective_start": "2026-10-06T22:19:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RCAA",
-  "first_seen": "2026-10-04T08:20:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      121.233333,
-      25.166517
-     ],
-     [
-      121.242336,
-      25.166116
-     ],
-     [
-      121.251251,
-      25.164919
-     ],
-     [
-      121.259995,
-      25.162935
-     ],
-     [
-      121.268481,
-      25.160185
-     ],
-     [
-      121.276629,
-      25.156695
-     ],
-     [
-      121.28436,
-      25.152498
-     ],
-     [
-      121.291599,
-      25.147635
-     ],
-     [
-      121.298278,
-      25.142153
-     ],
-     [
-      121.304331,
-      25.136104
-     ],
-     [
-      121.3097,
-      25.129548
-     ],
-     [
-      121.314334,
-      25.122546
-     ],
-     [
-      121.318187,
-      25.115166
-     ],
-     [
-      121.321224,
-      25.10748
-     ],
-     [
-      121.323414,
-      25.099562
-     ],
-     [
-      121.324736,
-      25.091487
-     ],
-     [
-      121.325179,
-      25.083333
-     ],
-     [
-      121.324736,
-      25.07518
-     ],
-     [
-      121.323414,
-      25.067105
-     ],
-     [
-      121.321224,
-      25.059186
-     ],
-     [
-      121.318187,
-      25.0515
-     ],
-     [
-      121.314334,
-      25.044121
-     ],
-     [
-      121.3097,
-      25.037119
-     ],
-     [
-      121.304331,
-      25.030562
-     ],
-     [
-      121.298278,
-      25.024514
-     ],
-     [
-      121.291599,
-      25.019032
-     ],
-     [
-      121.28436,
-      25.014169
-     ],
-     [
-      121.276629,
-      25.009972
-     ],
-     [
-      121.268481,
-      25.006482
-     ],
-     [
-      121.259995,
-      25.003732
-     ],
-     [
-      121.251251,
-      25.001748
-     ],
-     [
-      121.242336,
-      25.00055
-     ],
-     [
-      121.233333,
-      25.00015
-     ],
-     [
-      121.224331,
-      25.00055
-     ],
-     [
-      121.215415,
-      25.001748
-     ],
-     [
-      121.206672,
-      25.003732
-     ],
-     [
-      121.198186,
-      25.006482
-     ],
-     [
-      121.190038,
-      25.009972
-     ],
-     [
-      121.182307,
-      25.014169
-     ],
-     [
-      121.175067,
-      25.019032
-     ],
-     [
-      121.168389,
-      25.024514
-     ],
-     [
-      121.162336,
-      25.030562
-     ],
-     [
-      121.156967,
-      25.037119
-     ],
-     [
-      121.152333,
-      25.044121
-     ],
-     [
-      121.148479,
-      25.0515
-     ],
-     [
-      121.145443,
-      25.059186
-     ],
-     [
-      121.143253,
-      25.067105
-     ],
-     [
-      121.14193,
-      25.07518
-     ],
-     [
-      121.141488,
-      25.083333
-     ],
-     [
-      121.14193,
-      25.091487
-     ],
-     [
-      121.143253,
-      25.099562
-     ],
-     [
-      121.145443,
-      25.10748
-     ],
-     [
-      121.148479,
-      25.115166
-     ],
-     [
-      121.152333,
-      25.122546
-     ],
-     [
-      121.156967,
-      25.129548
-     ],
-     [
-      121.162336,
-      25.136104
-     ],
-     [
-      121.168389,
-      25.142153
-     ],
-     [
-      121.175067,
-      25.147635
-     ],
-     [
-      121.182307,
-      25.152498
-     ],
-     [
-      121.190038,
-      25.156695
-     ],
-     [
-      121.198186,
-      25.160185
-     ],
-     [
-      121.206672,
-      25.162935
-     ],
-     [
-      121.215415,
-      25.164919
-     ],
-     [
-      121.224331,
-      25.166116
-     ],
-     [
-      121.233333,
-      25.166517
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "RCTP",
-  "icao_text": "A3673/26 NOTAMN\r\nQ) RCAA/QFALT/IV/NBO/A/000/999/2505N12114E005\r\nA) RCTP\r\nB) 2610062219 C) 2610072343\r\nD) 2219-2224 2240-2245 2259-2325 2336-2343\r\nE) REFER NOTAM A3672/26.\r\n1.RWY 23L/23R/05R NOT AVBL FOR LDG.\r\n2.TFC OF RCTP MAY BE DELAYED.",
-  "id": "1791101556580000",
-  "issued": "2026-10-04T08:12:00.000Z",
-  "last_updated": "2026-10-04T08:12:00.000Z",
-  "local_text": null,
-  "location": "RCTP",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A3673/26",
-  "purpose": "NBO",
-  "q_code": "QFALT",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": "2219-2224 2240-2245 2259-2325 2336-2343",
-  "scope": "A",
-  "series": "A",
-  "text": "REFER NOTAM A3672/26.\r\n1.RWY 23L/23R/05R NOT AVBL FOR LDG.\r\n2.TFC OF RCTP MAY BE DELAYED.",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1791101596176000": {
-  "account_id": "RCTPYNYX",
-  "area_group": "TW",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2516N12113E",
-  "effective_end": "2026-10-07T23:38:00.000Z",
-  "effective_start": "2026-10-06T23:08:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RCAA",
-  "first_seen": "2026-10-04T08:20:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      121.411389,
-      25.166944
-     ],
-     [
-      120.997778,
-      25.350833
-     ],
-     [
-      121.006111,
-      25.365833
-     ],
-     [
-      121.419722,
-      25.181944
-     ],
-     [
-      121.411389,
-      25.166944
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RCTP",
-  "icao_text": "A3674/26 NOTAMN\r\nQ) RCAA/QWELW/IV/BO/AW/000/050/2516N12113E013\r\nA) RCTP\r\nB) 2610062308 C) 2610072338\r\nD) 2308-2319 2331-2338\r\nE) AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.RWY 05L/05R NOT AVBL FOR LDG/TKOF.\r\n3.RWY 23L/23R NOT AVBL FOR LDG.\r\n4.TFC OF RCTP MAY BE DELAYED.\r\n5.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n6.COOR TEL: 0911-602117\r\n7.AREA AS FLW:\r\n251001N 1212441E\r\n252103N 1205952E\r\n252157N 1210022E\r\n251055N 1212511E\r\n251001N 1212441E\r\nF) SFC G) 5000FT AMSL",
-  "id": "1791101596176000",
-  "issued": "2026-10-04T08:13:00.000Z",
-  "last_updated": "2026-10-04T08:13:00.000Z",
-  "local_text": null,
-  "location": "RCTP",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A3674/26",
-  "purpose": "BO",
-  "q_code": "QWELW",
-  "qline_offset_nm": 0.4,
-  "radius_nm": 13.0,
-  "ref_number": null,
-  "schedule": "2308-2319 2331-2338",
-  "scope": "AW",
-  "series": "A",
-  "text": "AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.RWY 05L/05R NOT AVBL FOR LDG/TKOF.\r\n3.RWY 23L/23R NOT AVBL FOR LDG.\r\n4.TFC OF RCTP MAY BE DELAYED.\r\n5.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n6.COOR TEL: 0911-602117\r\n7.AREA AS FLW:\r\n251001N 1212441E\r\n252103N 1205952E\r\n252157N 1210022E\r\n251055N 1212511E\r\n251001N 1212441E",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
- "1791101626652000": {
-  "account_id": "RCTPYNYX",
-  "area_group": "TW",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2520N12118E",
-  "effective_end": "2026-10-07T23:38:00Z",
-  "effective_start": "2026-10-06T22:22:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RCAA",
-  "first_seen": "2026-10-04T08:20:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      121.188056,
-      25.4775
-     ],
-     [
-      121.203333,
-      25.486389
-     ],
-     [
-      121.423333,
-      25.178889
-     ],
-     [
-      121.407778,
-      25.169722
-     ],
-     [
-      121.188056,
-      25.4775
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RCTP",
-  "icao_text": "A3675/26 NOTAMN\r\nQ) RCAA/QWELW/IV/BO/AW/000/050/2520N12118E012\r\nA) RCTP\r\nB) 2610062222 C) 2610072338\r\nD) 2222-2232 2309-2319 2332-2338\r\nE) AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.RWY 23L/23R/05R NOT AVBL FOR LDG.\r\n3.TFC OF RCTP MAY BE DELAYED.\r\n4.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n5.COOR TEL: 0911-602117\r\n6.AREA AS FLW:\r\n252839N 1211117E\r\n252911N 1211212E\r\n251044N 1212524E\r\n251011N 1212428E\r\n252839N 1211117E\r\nF) SFC G) 5000FT AMSL",
-  "id": "1791101626652000",
-  "issued": "2026-10-04T08:13:00Z",
-  "last_updated": "2026-10-04T08:14:00Z",
-  "local_text": null,
-  "location": "RCTP",
-  "lower": "SFC",
-  "max_fl": "050",
-  "min_fl": "000",
-  "number": "A3675/26",
-  "purpose": "BO",
-  "q_code": "QWELW",
-  "qline_offset_nm": 0.4,
-  "radius_nm": 12.0,
-  "ref_number": null,
-  "schedule": "2222-2232 2309-2319 2332-2338",
-  "scope": "AW",
-  "series": "A",
-  "text": "AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.RWY 23L/23R/05R NOT AVBL FOR LDG.\r\n3.TFC OF RCTP MAY BE DELAYED.\r\n4.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n5.COOR TEL: 0911-602117\r\n6.AREA AS FLW:\r\n252839N 1211117E\r\n252911N 1211212E\r\n251044N 1212524E\r\n251011N 1212428E\r\n252839N 1211117E",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
- "1791101665259000": {
-  "account_id": "RCTPYNYX",
-  "area_group": "TW",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2511N12105E",
-  "effective_end": "2026-10-07T23:22:00.000Z",
-  "effective_start": "2026-10-06T23:13:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RCAA",
-  "first_seen": "2026-10-04T08:20:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      120.7525,
-      25.178333
-     ],
-     [
-      120.752778,
-      25.195
-     ],
-     [
-      121.415833,
-      25.182778
-     ],
-     [
-      121.417778,
-      25.166389
-     ],
-     [
-      120.7525,
-      25.178333
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RCTP",
-  "icao_text": "A3676/26 NOTAMN\r\nQ) RCAA/QWELW/IV/BO/AW/000/050/2511N12105E019\r\nA) RCTP\r\nB) 2610062313 C) 2610072322\r\nD) 2313-2322\r\nE) AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.NOT AVBL FOR LDG/TKOF.\r\n3.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n251042N 1204509E\r\n251142N 1204510E\r\n251058N 1212457E\r\n250959N 1212504E\r\n251042N 1204509E\r\nF) SFC G) 5000FT AMSL",
-  "id": "1791101665259000",
-  "issued": "2026-10-04T08:14:00.000Z",
-  "last_updated": "2026-10-04T08:14:00.000Z",
-  "local_text": null,
-  "location": "RCTP",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A3676/26",
-  "purpose": "BO",
-  "q_code": "QWELW",
-  "qline_offset_nm": 0.2,
-  "radius_nm": 19.0,
-  "ref_number": null,
-  "schedule": "2313-2322",
-  "scope": "AW",
-  "series": "A",
-  "text": "AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.NOT AVBL FOR LDG/TKOF.\r\n3.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n251042N 1204509E\r\n251142N 1204510E\r\n251058N 1212457E\r\n250959N 1212504E\r\n251042N 1204509E",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
  "1791101668552000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -106752,684 +105678,6 @@
   "scope": "A",
   "series": "G",
   "text": "RWY09/27 CLSD DUE TO WIP.",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1791101744622000": {
-  "account_id": "RCTPYNYX",
-  "area_group": "TW",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2504N12133E",
-  "effective_end": "2026-10-07T23:22:00Z",
-  "effective_start": "2026-10-06T23:13:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RCAA",
-  "first_seen": "2026-10-04T08:20:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      121.55,
-      25.14985
-     ],
-     [
-      121.559001,
-      25.14945
-     ],
-     [
-      121.567916,
-      25.148252
-     ],
-     [
-      121.576658,
-      25.146268
-     ],
-     [
-      121.585143,
-      25.143518
-     ],
-     [
-      121.59329,
-      25.140028
-     ],
-     [
-      121.60102,
-      25.135831
-     ],
-     [
-      121.608258,
-      25.130968
-     ],
-     [
-      121.614936,
-      25.125486
-     ],
-     [
-      121.620988,
-      25.119438
-     ],
-     [
-      121.626356,
-      25.112881
-     ],
-     [
-      121.630989,
-      25.105879
-     ],
-     [
-      121.634842,
-      25.0985
-     ],
-     [
-      121.637879,
-      25.090814
-     ],
-     [
-      121.640068,
-      25.082895
-     ],
-     [
-      121.641391,
-      25.07482
-     ],
-     [
-      121.641833,
-      25.066667
-     ],
-     [
-      121.641391,
-      25.058513
-     ],
-     [
-      121.640068,
-      25.050438
-     ],
-     [
-      121.637879,
-      25.04252
-     ],
-     [
-      121.634842,
-      25.034834
-     ],
-     [
-      121.630989,
-      25.027454
-     ],
-     [
-      121.626356,
-      25.020452
-     ],
-     [
-      121.620988,
-      25.013896
-     ],
-     [
-      121.614936,
-      25.007847
-     ],
-     [
-      121.608258,
-      25.002365
-     ],
-     [
-      121.60102,
-      24.997502
-     ],
-     [
-      121.59329,
-      24.993305
-     ],
-     [
-      121.585143,
-      24.989815
-     ],
-     [
-      121.576658,
-      24.987065
-     ],
-     [
-      121.567916,
-      24.985081
-     ],
-     [
-      121.559001,
-      24.983884
-     ],
-     [
-      121.55,
-      24.983483
-     ],
-     [
-      121.540999,
-      24.983884
-     ],
-     [
-      121.532084,
-      24.985081
-     ],
-     [
-      121.523342,
-      24.987065
-     ],
-     [
-      121.514857,
-      24.989815
-     ],
-     [
-      121.50671,
-      24.993305
-     ],
-     [
-      121.49898,
-      24.997502
-     ],
-     [
-      121.491742,
-      25.002365
-     ],
-     [
-      121.485064,
-      25.007847
-     ],
-     [
-      121.479012,
-      25.013896
-     ],
-     [
-      121.473644,
-      25.020452
-     ],
-     [
-      121.469011,
-      25.027454
-     ],
-     [
-      121.465158,
-      25.034834
-     ],
-     [
-      121.462121,
-      25.04252
-     ],
-     [
-      121.459932,
-      25.050438
-     ],
-     [
-      121.458609,
-      25.058513
-     ],
-     [
-      121.458167,
-      25.066667
-     ],
-     [
-      121.458609,
-      25.07482
-     ],
-     [
-      121.459932,
-      25.082895
-     ],
-     [
-      121.462121,
-      25.090814
-     ],
-     [
-      121.465158,
-      25.0985
-     ],
-     [
-      121.469011,
-      25.105879
-     ],
-     [
-      121.473644,
-      25.112881
-     ],
-     [
-      121.479012,
-      25.119438
-     ],
-     [
-      121.485064,
-      25.125486
-     ],
-     [
-      121.491742,
-      25.130968
-     ],
-     [
-      121.49898,
-      25.135831
-     ],
-     [
-      121.50671,
-      25.140028
-     ],
-     [
-      121.514857,
-      25.143518
-     ],
-     [
-      121.523342,
-      25.146268
-     ],
-     [
-      121.532084,
-      25.148252
-     ],
-     [
-      121.540999,
-      25.14945
-     ],
-     [
-      121.55,
-      25.14985
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "RCSS",
-  "icao_text": "A3677/26 NOTAMN\r\nQ) RCAA/QFALT/IV/NBO/A/000/999/2504N12133E005\r\nA) RCSS\r\nB) 2610062313 C) 2610072322\r\nD) 2313-2322\r\nE) REFER NOTAM A3676/26.\r\n1.RWY 10 NOT AVBL FOR LDG.\r\n2.TFC OF RCSS MAY BE DELAYED.",
-  "id": "1791101744622000",
-  "issued": "2026-10-04T08:15:00Z",
-  "last_updated": "2026-10-04T08:16:00Z",
-  "local_text": null,
-  "location": "RCSS",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A3677/26",
-  "purpose": "NBO",
-  "q_code": "QFALT",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": "2313-2322",
-  "scope": "A",
-  "series": "A",
-  "text": "REFER NOTAM A3676/26.\r\n1.RWY 10 NOT AVBL FOR LDG.\r\n2.TFC OF RCSS MAY BE DELAYED.",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1791101781501000": {
-  "account_id": "RCTPYNYX",
-  "area_group": "TW",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2505N12058E",
-  "effective_end": "2026-10-07T23:22:00.000Z",
-  "effective_start": "2026-10-06T23:10:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RCAA",
-  "first_seen": "2026-10-04T08:20:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      120.524444,
-      24.967222
-     ],
-     [
-      120.52,
-      24.983333
-     ],
-     [
-      121.413333,
-      25.1825
-     ],
-     [
-      121.417778,
-      25.166389
-     ],
-     [
-      120.524444,
-      24.967222
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RCTP",
-  "icao_text": "A3678/26 NOTAMN\r\nQ) RCAA/QWELW/IV/BO/AW/000/050/2505N12058E026\r\nA) RCTP\r\nB) 2610062310 C) 2610072322\r\nD) 2310-2322\r\nE) AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.NOT AVBL FOR LDG/TKOF.\r\n3.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n245802N 1203128E\r\n245900N 1203112E\r\n251057N 1212448E\r\n250959N 1212504E\r\n245802N 1203128E\r\nF) SFC G) 5000FT AMSL",
-  "id": "1791101781501000",
-  "issued": "2026-10-04T08:16:00.000Z",
-  "last_updated": "2026-10-04T08:16:00.000Z",
-  "local_text": null,
-  "location": "RCTP",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A3678/26",
-  "purpose": "BO",
-  "q_code": "QWELW",
-  "qline_offset_nm": 0.5,
-  "radius_nm": 26.0,
-  "ref_number": null,
-  "schedule": "2310-2322",
-  "scope": "AW",
-  "series": "A",
-  "text": "AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.NOT AVBL FOR LDG/TKOF.\r\n3.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n245802N 1203128E\r\n245900N 1203112E\r\n251057N 1212448E\r\n250959N 1212504E\r\n245802N 1203128E",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "5000FT AMSL",
-  "year": "2026"
- },
- "1791101836916000": {
-  "account_id": "RCTPYNYX",
-  "area_group": "TW",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2504N12133E",
-  "effective_end": "2026-10-07T23:22:00.000Z",
-  "effective_start": "2026-10-06T23:10:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RCAA",
-  "first_seen": "2026-10-04T08:20:27+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      121.55,
-      25.14985
-     ],
-     [
-      121.559001,
-      25.14945
-     ],
-     [
-      121.567916,
-      25.148252
-     ],
-     [
-      121.576658,
-      25.146268
-     ],
-     [
-      121.585143,
-      25.143518
-     ],
-     [
-      121.59329,
-      25.140028
-     ],
-     [
-      121.60102,
-      25.135831
-     ],
-     [
-      121.608258,
-      25.130968
-     ],
-     [
-      121.614936,
-      25.125486
-     ],
-     [
-      121.620988,
-      25.119438
-     ],
-     [
-      121.626356,
-      25.112881
-     ],
-     [
-      121.630989,
-      25.105879
-     ],
-     [
-      121.634842,
-      25.0985
-     ],
-     [
-      121.637879,
-      25.090814
-     ],
-     [
-      121.640068,
-      25.082895
-     ],
-     [
-      121.641391,
-      25.07482
-     ],
-     [
-      121.641833,
-      25.066667
-     ],
-     [
-      121.641391,
-      25.058513
-     ],
-     [
-      121.640068,
-      25.050438
-     ],
-     [
-      121.637879,
-      25.04252
-     ],
-     [
-      121.634842,
-      25.034834
-     ],
-     [
-      121.630989,
-      25.027454
-     ],
-     [
-      121.626356,
-      25.020452
-     ],
-     [
-      121.620988,
-      25.013896
-     ],
-     [
-      121.614936,
-      25.007847
-     ],
-     [
-      121.608258,
-      25.002365
-     ],
-     [
-      121.60102,
-      24.997502
-     ],
-     [
-      121.59329,
-      24.993305
-     ],
-     [
-      121.585143,
-      24.989815
-     ],
-     [
-      121.576658,
-      24.987065
-     ],
-     [
-      121.567916,
-      24.985081
-     ],
-     [
-      121.559001,
-      24.983884
-     ],
-     [
-      121.55,
-      24.983483
-     ],
-     [
-      121.540999,
-      24.983884
-     ],
-     [
-      121.532084,
-      24.985081
-     ],
-     [
-      121.523342,
-      24.987065
-     ],
-     [
-      121.514857,
-      24.989815
-     ],
-     [
-      121.50671,
-      24.993305
-     ],
-     [
-      121.49898,
-      24.997502
-     ],
-     [
-      121.491742,
-      25.002365
-     ],
-     [
-      121.485064,
-      25.007847
-     ],
-     [
-      121.479012,
-      25.013896
-     ],
-     [
-      121.473644,
-      25.020452
-     ],
-     [
-      121.469011,
-      25.027454
-     ],
-     [
-      121.465158,
-      25.034834
-     ],
-     [
-      121.462121,
-      25.04252
-     ],
-     [
-      121.459932,
-      25.050438
-     ],
-     [
-      121.458609,
-      25.058513
-     ],
-     [
-      121.458167,
-      25.066667
-     ],
-     [
-      121.458609,
-      25.07482
-     ],
-     [
-      121.459932,
-      25.082895
-     ],
-     [
-      121.462121,
-      25.090814
-     ],
-     [
-      121.465158,
-      25.0985
-     ],
-     [
-      121.469011,
-      25.105879
-     ],
-     [
-      121.473644,
-      25.112881
-     ],
-     [
-      121.479012,
-      25.119438
-     ],
-     [
-      121.485064,
-      25.125486
-     ],
-     [
-      121.491742,
-      25.130968
-     ],
-     [
-      121.49898,
-      25.135831
-     ],
-     [
-      121.50671,
-      25.140028
-     ],
-     [
-      121.514857,
-      25.143518
-     ],
-     [
-      121.523342,
-      25.146268
-     ],
-     [
-      121.532084,
-      25.148252
-     ],
-     [
-      121.540999,
-      25.14945
-     ],
-     [
-      121.55,
-      25.14985
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "RCSS",
-  "icao_text": "A3679/26 NOTAMN\r\nQ) RCAA/QFALT/IV/NBO/A/000/999/2504N12133E005\r\nA) RCSS\r\nB) 2610062310 C) 2610072322\r\nD) 2310-2322\r\nE) REFER NOTAM A3678/26.\r\n1.RWY 10 NOT AVBL FOR LDG.\r\n2.TFC OF RCSS MAY BE DELAYED.",
-  "id": "1791101836916000",
-  "issued": "2026-10-04T08:17:00.000Z",
-  "last_updated": "2026-10-04T08:17:00.000Z",
-  "local_text": null,
-  "location": "RCSS",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A3679/26",
-  "purpose": "NBO",
-  "q_code": "QFALT",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": "2310-2322",
-  "scope": "A",
-  "series": "A",
-  "text": "REFER NOTAM A3678/26.\r\n1.RWY 10 NOT AVBL FOR LDG.\r\n2.TFC OF RCSS MAY BE DELAYED.",
   "traffic": "IV",
   "type": "N",
   "upper": null,
@@ -142454,6 +140702,4256 @@
   "text": "A4867/26 NOTAMC A4852/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2610060959\nE) ZAK AIRSPACE DCC SX SDA-T1A 26-64 STNR ALT RESERVATION \nCANCELED",
   "traffic": "IV",
   "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791280985257000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2442N12050E",
+  "effective_end": "2026-10-09T10:02:00.000Z",
+  "effective_start": "2026-10-06T10:02:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.833333,
+      24.849731
+     ],
+     [
+      120.849487,
+      24.84901
+     ],
+     [
+      120.865486,
+      24.846853
+     ],
+     [
+      120.881175,
+      24.843283
+     ],
+     [
+      120.896403,
+      24.838333
+     ],
+     [
+      120.911024,
+      24.832051
+     ],
+     [
+      120.924896,
+      24.824496
+     ],
+     [
+      120.937887,
+      24.815743
+     ],
+     [
+      120.949871,
+      24.805875
+     ],
+     [
+      120.960733,
+      24.794988
+     ],
+     [
+      120.970367,
+      24.783186
+     ],
+     [
+      120.978682,
+      24.770582
+     ],
+     [
+      120.985597,
+      24.757299
+     ],
+     [
+      120.991046,
+      24.743464
+     ],
+     [
+      120.994976,
+      24.729211
+     ],
+     [
+      120.997349,
+      24.714676
+     ],
+     [
+      120.998143,
+      24.7
+     ],
+     [
+      120.997349,
+      24.685324
+     ],
+     [
+      120.994976,
+      24.670789
+     ],
+     [
+      120.991046,
+      24.656536
+     ],
+     [
+      120.985597,
+      24.642701
+     ],
+     [
+      120.978682,
+      24.629418
+     ],
+     [
+      120.970367,
+      24.616814
+     ],
+     [
+      120.960733,
+      24.605012
+     ],
+     [
+      120.949871,
+      24.594125
+     ],
+     [
+      120.937887,
+      24.584257
+     ],
+     [
+      120.924896,
+      24.575504
+     ],
+     [
+      120.911024,
+      24.567949
+     ],
+     [
+      120.896403,
+      24.561667
+     ],
+     [
+      120.881175,
+      24.556717
+     ],
+     [
+      120.865486,
+      24.553147
+     ],
+     [
+      120.849487,
+      24.55099
+     ],
+     [
+      120.833333,
+      24.550269
+     ],
+     [
+      120.817179,
+      24.55099
+     ],
+     [
+      120.801181,
+      24.553147
+     ],
+     [
+      120.785492,
+      24.556717
+     ],
+     [
+      120.770264,
+      24.561667
+     ],
+     [
+      120.755643,
+      24.567949
+     ],
+     [
+      120.74177,
+      24.575504
+     ],
+     [
+      120.728779,
+      24.584257
+     ],
+     [
+      120.716796,
+      24.594125
+     ],
+     [
+      120.705934,
+      24.605012
+     ],
+     [
+      120.696299,
+      24.616814
+     ],
+     [
+      120.687985,
+      24.629418
+     ],
+     [
+      120.681069,
+      24.642701
+     ],
+     [
+      120.675621,
+      24.656536
+     ],
+     [
+      120.671691,
+      24.670789
+     ],
+     [
+      120.669318,
+      24.685324
+     ],
+     [
+      120.668524,
+      24.7
+     ],
+     [
+      120.669318,
+      24.714676
+     ],
+     [
+      120.671691,
+      24.729211
+     ],
+     [
+      120.675621,
+      24.743464
+     ],
+     [
+      120.681069,
+      24.757299
+     ],
+     [
+      120.687985,
+      24.770582
+     ],
+     [
+      120.696299,
+      24.783186
+     ],
+     [
+      120.705934,
+      24.794988
+     ],
+     [
+      120.716796,
+      24.805875
+     ],
+     [
+      120.728779,
+      24.815743
+     ],
+     [
+      120.74177,
+      24.824496
+     ],
+     [
+      120.755643,
+      24.832051
+     ],
+     [
+      120.770264,
+      24.838333
+     ],
+     [
+      120.785492,
+      24.843283
+     ],
+     [
+      120.801181,
+      24.846853
+     ],
+     [
+      120.817179,
+      24.84901
+     ],
+     [
+      120.833333,
+      24.849731
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCMQ",
+  "icao_text": "A3702/26 NOTAMC A3668/26\r\nQ) RCAA/QWEXX/IV/BO/AW/000/070/2442N12050E009\r\nA) RCMQ\r\nB) 2610061002\r\nE) AIR EXER: NEW NOTAM TO FLW.",
+  "id": "1791280985257000",
+  "issued": "2026-10-06T10:02:00.000Z",
+  "last_updated": "2026-10-06T10:03:00.000Z",
+  "local_text": null,
+  "location": "RCMQ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3702/26",
+  "purpose": "BO",
+  "q_code": "QWEXX",
+  "qline_offset_nm": null,
+  "radius_nm": 9.0,
+  "ref_number": "A3668/26",
+  "schedule": null,
+  "scope": "AW",
+  "series": "A",
+  "text": "AIR EXER: NEW NOTAM TO FLW.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791281001279000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2449N12105E",
+  "effective_end": "2026-10-09T10:03:00.000Z",
+  "effective_start": "2026-10-06T10:03:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.083333,
+      24.999671
+     ],
+     [
+      121.103096,
+      24.998789
+     ],
+     [
+      121.122668,
+      24.996154
+     ],
+     [
+      121.141861,
+      24.991791
+     ],
+     [
+      121.160491,
+      24.98574
+     ],
+     [
+      121.178378,
+      24.978062
+     ],
+     [
+      121.195349,
+      24.968829
+     ],
+     [
+      121.211241,
+      24.958131
+     ],
+     [
+      121.225902,
+      24.94607
+     ],
+     [
+      121.23919,
+      24.932763
+     ],
+     [
+      121.250976,
+      24.918338
+     ],
+     [
+      121.261149,
+      24.902934
+     ],
+     [
+      121.269608,
+      24.886699
+     ],
+     [
+      121.276274,
+      24.86979
+     ],
+     [
+      121.281082,
+      24.852369
+     ],
+     [
+      121.283985,
+      24.834604
+     ],
+     [
+      121.284956,
+      24.816667
+     ],
+     [
+      121.283985,
+      24.798729
+     ],
+     [
+      121.281082,
+      24.780964
+     ],
+     [
+      121.276274,
+      24.763543
+     ],
+     [
+      121.269608,
+      24.746634
+     ],
+     [
+      121.261149,
+      24.730399
+     ],
+     [
+      121.250976,
+      24.714995
+     ],
+     [
+      121.23919,
+      24.70057
+     ],
+     [
+      121.225902,
+      24.687263
+     ],
+     [
+      121.211241,
+      24.675203
+     ],
+     [
+      121.195349,
+      24.664504
+     ],
+     [
+      121.178378,
+      24.655272
+     ],
+     [
+      121.160491,
+      24.647593
+     ],
+     [
+      121.141861,
+      24.641543
+     ],
+     [
+      121.122668,
+      24.637179
+     ],
+     [
+      121.103096,
+      24.634544
+     ],
+     [
+      121.083333,
+      24.633663
+     ],
+     [
+      121.063571,
+      24.634544
+     ],
+     [
+      121.043999,
+      24.637179
+     ],
+     [
+      121.024805,
+      24.641543
+     ],
+     [
+      121.006176,
+      24.647593
+     ],
+     [
+      120.988289,
+      24.655272
+     ],
+     [
+      120.971318,
+      24.664504
+     ],
+     [
+      120.955425,
+      24.675203
+     ],
+     [
+      120.940765,
+      24.687263
+     ],
+     [
+      120.927477,
+      24.70057
+     ],
+     [
+      120.91569,
+      24.714995
+     ],
+     [
+      120.905518,
+      24.730399
+     ],
+     [
+      120.897058,
+      24.746634
+     ],
+     [
+      120.890392,
+      24.763543
+     ],
+     [
+      120.885585,
+      24.780964
+     ],
+     [
+      120.882681,
+      24.798729
+     ],
+     [
+      120.881711,
+      24.816667
+     ],
+     [
+      120.882681,
+      24.834604
+     ],
+     [
+      120.885585,
+      24.852369
+     ],
+     [
+      120.890392,
+      24.86979
+     ],
+     [
+      120.897058,
+      24.886699
+     ],
+     [
+      120.905518,
+      24.902934
+     ],
+     [
+      120.91569,
+      24.918338
+     ],
+     [
+      120.927477,
+      24.932763
+     ],
+     [
+      120.940765,
+      24.94607
+     ],
+     [
+      120.955425,
+      24.958131
+     ],
+     [
+      120.971318,
+      24.968829
+     ],
+     [
+      120.988289,
+      24.978062
+     ],
+     [
+      121.006176,
+      24.98574
+     ],
+     [
+      121.024805,
+      24.991791
+     ],
+     [
+      121.043999,
+      24.996154
+     ],
+     [
+      121.063571,
+      24.998789
+     ],
+     [
+      121.083333,
+      24.999671
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCSS",
+  "icao_text": "A3703/26 NOTAMC A3669/26\r\nQ) RCAA/QWEXX/IV/BO/AW/000/050/2449N12105E011\r\nA) RCSS\r\nB) 2610061003\r\nE) AIR EXER: NEW NOTAM TO FLW.",
+  "id": "1791281001279000",
+  "issued": "2026-10-06T10:03:00.000Z",
+  "last_updated": "2026-10-06T10:03:00.000Z",
+  "local_text": null,
+  "location": "RCSS",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3703/26",
+  "purpose": "BO",
+  "q_code": "QWEXX",
+  "qline_offset_nm": null,
+  "radius_nm": 11.0,
+  "ref_number": "A3669/26",
+  "schedule": null,
+  "scope": "AW",
+  "series": "A",
+  "text": "AIR EXER: NEW NOTAM TO FLW.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791281054723000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2500N12119E",
+  "effective_end": "2026-10-09T10:03:00.000Z",
+  "effective_start": "2026-10-06T10:03:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.316667,
+      25.116457
+     ],
+     [
+      121.329261,
+      25.115896
+     ],
+     [
+      121.341735,
+      25.114219
+     ],
+     [
+      121.353967,
+      25.111442
+     ],
+     [
+      121.36584,
+      25.107592
+     ],
+     [
+      121.377239,
+      25.102706
+     ],
+     [
+      121.388055,
+      25.096831
+     ],
+     [
+      121.398184,
+      25.090023
+     ],
+     [
+      121.407527,
+      25.082348
+     ],
+     [
+      121.415996,
+      25.07388
+     ],
+     [
+      121.423507,
+      25.0647
+     ],
+     [
+      121.42999,
+      25.054897
+     ],
+     [
+      121.435382,
+      25.044566
+     ],
+     [
+      121.43963,
+      25.033806
+     ],
+     [
+      121.442694,
+      25.02272
+     ],
+     [
+      121.444544,
+      25.011415
+     ],
+     [
+      121.445163,
+      25.0
+     ],
+     [
+      121.444544,
+      24.988585
+     ],
+     [
+      121.442694,
+      24.97728
+     ],
+     [
+      121.43963,
+      24.966194
+     ],
+     [
+      121.435382,
+      24.955434
+     ],
+     [
+      121.42999,
+      24.945103
+     ],
+     [
+      121.423507,
+      24.9353
+     ],
+     [
+      121.415996,
+      24.92612
+     ],
+     [
+      121.407527,
+      24.917652
+     ],
+     [
+      121.398184,
+      24.909977
+     ],
+     [
+      121.388055,
+      24.903169
+     ],
+     [
+      121.377239,
+      24.897294
+     ],
+     [
+      121.36584,
+      24.892408
+     ],
+     [
+      121.353967,
+      24.888558
+     ],
+     [
+      121.341735,
+      24.885781
+     ],
+     [
+      121.329261,
+      24.884104
+     ],
+     [
+      121.316667,
+      24.883543
+     ],
+     [
+      121.304072,
+      24.884104
+     ],
+     [
+      121.291598,
+      24.885781
+     ],
+     [
+      121.279366,
+      24.888558
+     ],
+     [
+      121.267493,
+      24.892408
+     ],
+     [
+      121.256094,
+      24.897294
+     ],
+     [
+      121.245278,
+      24.903169
+     ],
+     [
+      121.23515,
+      24.909977
+     ],
+     [
+      121.225806,
+      24.917652
+     ],
+     [
+      121.217338,
+      24.92612
+     ],
+     [
+      121.209826,
+      24.9353
+     ],
+     [
+      121.203343,
+      24.945103
+     ],
+     [
+      121.197952,
+      24.955434
+     ],
+     [
+      121.193704,
+      24.966194
+     ],
+     [
+      121.19064,
+      24.97728
+     ],
+     [
+      121.188789,
+      24.988585
+     ],
+     [
+      121.188171,
+      25.0
+     ],
+     [
+      121.188789,
+      25.011415
+     ],
+     [
+      121.19064,
+      25.02272
+     ],
+     [
+      121.193704,
+      25.033806
+     ],
+     [
+      121.197952,
+      25.044566
+     ],
+     [
+      121.203343,
+      25.054897
+     ],
+     [
+      121.209826,
+      25.0647
+     ],
+     [
+      121.217338,
+      25.07388
+     ],
+     [
+      121.225806,
+      25.082348
+     ],
+     [
+      121.23515,
+      25.090023
+     ],
+     [
+      121.245278,
+      25.096831
+     ],
+     [
+      121.256094,
+      25.102706
+     ],
+     [
+      121.267493,
+      25.107592
+     ],
+     [
+      121.279366,
+      25.111442
+     ],
+     [
+      121.291598,
+      25.114219
+     ],
+     [
+      121.304072,
+      25.115896
+     ],
+     [
+      121.316667,
+      25.116457
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCSS",
+  "icao_text": "A3704/26 NOTAMC A3670/26\r\nQ) RCAA/QWEXX/IV/BO/AW/000/050/2500N12119E007\r\nA) RCSS\r\nB) 2610061003\r\nE) AIR EXER: NEW NOTAM TO FLW.",
+  "id": "1791281054723000",
+  "issued": "2026-10-06T10:04:00.000Z",
+  "last_updated": "2026-10-06T10:04:00.000Z",
+  "local_text": null,
+  "location": "RCSS",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3704/26",
+  "purpose": "BO",
+  "q_code": "QWEXX",
+  "qline_offset_nm": null,
+  "radius_nm": 7.0,
+  "ref_number": "A3670/26",
+  "schedule": null,
+  "scope": "AW",
+  "series": "A",
+  "text": "AIR EXER: NEW NOTAM TO FLW.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791281072679000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2502N12131E",
+  "effective_end": "2026-10-09T10:04:00.000Z",
+  "effective_start": "2026-10-06T10:04:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.516667,
+      25.133154
+     ],
+     [
+      121.527465,
+      25.132673
+     ],
+     [
+      121.53816,
+      25.131236
+     ],
+     [
+      121.548647,
+      25.128855
+     ],
+     [
+      121.558827,
+      25.125555
+     ],
+     [
+      121.5686,
+      25.121367
+     ],
+     [
+      121.577874,
+      25.116331
+     ],
+     [
+      121.586557,
+      25.110495
+     ],
+     [
+      121.594568,
+      25.103917
+     ],
+     [
+      121.601829,
+      25.096659
+     ],
+     [
+      121.608269,
+      25.088791
+     ],
+     [
+      121.613827,
+      25.080388
+     ],
+     [
+      121.61845,
+      25.071533
+     ],
+     [
+      121.622092,
+      25.06231
+     ],
+     [
+      121.624719,
+      25.052807
+     ],
+     [
+      121.626306,
+      25.043117
+     ],
+     [
+      121.626836,
+      25.033333
+     ],
+     [
+      121.626306,
+      25.023549
+     ],
+     [
+      121.624719,
+      25.013859
+     ],
+     [
+      121.622092,
+      25.004357
+     ],
+     [
+      121.61845,
+      24.995134
+     ],
+     [
+      121.613827,
+      24.986278
+     ],
+     [
+      121.608269,
+      24.977876
+     ],
+     [
+      121.601829,
+      24.970008
+     ],
+     [
+      121.594568,
+      24.96275
+     ],
+     [
+      121.586557,
+      24.956171
+     ],
+     [
+      121.577874,
+      24.950336
+     ],
+     [
+      121.5686,
+      24.9453
+     ],
+     [
+      121.558827,
+      24.941111
+     ],
+     [
+      121.548647,
+      24.937811
+     ],
+     [
+      121.53816,
+      24.935431
+     ],
+     [
+      121.527465,
+      24.933994
+     ],
+     [
+      121.516667,
+      24.933513
+     ],
+     [
+      121.505868,
+      24.933994
+     ],
+     [
+      121.495174,
+      24.935431
+     ],
+     [
+      121.484686,
+      24.937811
+     ],
+     [
+      121.474507,
+      24.941111
+     ],
+     [
+      121.464733,
+      24.9453
+     ],
+     [
+      121.45546,
+      24.950336
+     ],
+     [
+      121.446776,
+      24.956171
+     ],
+     [
+      121.438765,
+      24.96275
+     ],
+     [
+      121.431505,
+      24.970008
+     ],
+     [
+      121.425064,
+      24.977876
+     ],
+     [
+      121.419506,
+      24.986278
+     ],
+     [
+      121.414883,
+      24.995134
+     ],
+     [
+      121.411241,
+      25.004357
+     ],
+     [
+      121.408614,
+      25.013859
+     ],
+     [
+      121.407028,
+      25.023549
+     ],
+     [
+      121.406497,
+      25.033333
+     ],
+     [
+      121.407028,
+      25.043117
+     ],
+     [
+      121.408614,
+      25.052807
+     ],
+     [
+      121.411241,
+      25.06231
+     ],
+     [
+      121.414883,
+      25.071533
+     ],
+     [
+      121.419506,
+      25.080388
+     ],
+     [
+      121.425064,
+      25.088791
+     ],
+     [
+      121.431505,
+      25.096659
+     ],
+     [
+      121.438765,
+      25.103917
+     ],
+     [
+      121.446776,
+      25.110495
+     ],
+     [
+      121.45546,
+      25.116331
+     ],
+     [
+      121.464733,
+      25.121367
+     ],
+     [
+      121.474507,
+      25.125555
+     ],
+     [
+      121.484686,
+      25.128855
+     ],
+     [
+      121.495174,
+      25.131236
+     ],
+     [
+      121.505868,
+      25.132673
+     ],
+     [
+      121.516667,
+      25.133154
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCSS",
+  "icao_text": "A3705/26 NOTAMC A3671/26\r\nQ) RCAA/QWEXX/IV/BO/AW/000/060/2502N12131E006\r\nA) RCSS\r\nB) 2610061004\r\nE) AIR EXER: NEW NOTAM TO FLW.",
+  "id": "1791281072679000",
+  "issued": "2026-10-06T10:04:00.000Z",
+  "last_updated": "2026-10-06T10:04:00.000Z",
+  "local_text": null,
+  "location": "RCSS",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3705/26",
+  "purpose": "BO",
+  "q_code": "QWEXX",
+  "qline_offset_nm": null,
+  "radius_nm": 6.0,
+  "ref_number": "A3671/26",
+  "schedule": null,
+  "scope": "AW",
+  "series": "A",
+  "text": "AIR EXER: NEW NOTAM TO FLW.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791281112682000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2507N12128E",
+  "effective_end": "2026-10-09T10:04:00.000Z",
+  "effective_start": "2026-10-06T10:04:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.466667,
+      25.19985
+     ],
+     [
+      121.475672,
+      25.19945
+     ],
+     [
+      121.48459,
+      25.198252
+     ],
+     [
+      121.493335,
+      25.196268
+     ],
+     [
+      121.501824,
+      25.193518
+     ],
+     [
+      121.509974,
+      25.190028
+     ],
+     [
+      121.517707,
+      25.185831
+     ],
+     [
+      121.524949,
+      25.180968
+     ],
+     [
+      121.531629,
+      25.175486
+     ],
+     [
+      121.537683,
+      25.169438
+     ],
+     [
+      121.543054,
+      25.162881
+     ],
+     [
+      121.547689,
+      25.155879
+     ],
+     [
+      121.551544,
+      25.1485
+     ],
+     [
+      121.554581,
+      25.140814
+     ],
+     [
+      121.556772,
+      25.132895
+     ],
+     [
+      121.558095,
+      25.12482
+     ],
+     [
+      121.558537,
+      25.116667
+     ],
+     [
+      121.558095,
+      25.108513
+     ],
+     [
+      121.556772,
+      25.100438
+     ],
+     [
+      121.554581,
+      25.09252
+     ],
+     [
+      121.551544,
+      25.084834
+     ],
+     [
+      121.547689,
+      25.077454
+     ],
+     [
+      121.543054,
+      25.070452
+     ],
+     [
+      121.537683,
+      25.063896
+     ],
+     [
+      121.531629,
+      25.057847
+     ],
+     [
+      121.524949,
+      25.052365
+     ],
+     [
+      121.517707,
+      25.047502
+     ],
+     [
+      121.509974,
+      25.043305
+     ],
+     [
+      121.501824,
+      25.039815
+     ],
+     [
+      121.493335,
+      25.037065
+     ],
+     [
+      121.48459,
+      25.035081
+     ],
+     [
+      121.475672,
+      25.033884
+     ],
+     [
+      121.466667,
+      25.033483
+     ],
+     [
+      121.457662,
+      25.033884
+     ],
+     [
+      121.448744,
+      25.035081
+     ],
+     [
+      121.439998,
+      25.037065
+     ],
+     [
+      121.431509,
+      25.039815
+     ],
+     [
+      121.423359,
+      25.043305
+     ],
+     [
+      121.415626,
+      25.047502
+     ],
+     [
+      121.408385,
+      25.052365
+     ],
+     [
+      121.401704,
+      25.057847
+     ],
+     [
+      121.39565,
+      25.063896
+     ],
+     [
+      121.390279,
+      25.070452
+     ],
+     [
+      121.385644,
+      25.077454
+     ],
+     [
+      121.381789,
+      25.084834
+     ],
+     [
+      121.378752,
+      25.09252
+     ],
+     [
+      121.376562,
+      25.100438
+     ],
+     [
+      121.375239,
+      25.108513
+     ],
+     [
+      121.374796,
+      25.116667
+     ],
+     [
+      121.375239,
+      25.12482
+     ],
+     [
+      121.376562,
+      25.132895
+     ],
+     [
+      121.378752,
+      25.140814
+     ],
+     [
+      121.381789,
+      25.1485
+     ],
+     [
+      121.385644,
+      25.155879
+     ],
+     [
+      121.390279,
+      25.162881
+     ],
+     [
+      121.39565,
+      25.169438
+     ],
+     [
+      121.401704,
+      25.175486
+     ],
+     [
+      121.408385,
+      25.180968
+     ],
+     [
+      121.415626,
+      25.185831
+     ],
+     [
+      121.423359,
+      25.190028
+     ],
+     [
+      121.431509,
+      25.193518
+     ],
+     [
+      121.439998,
+      25.196268
+     ],
+     [
+      121.448744,
+      25.198252
+     ],
+     [
+      121.457662,
+      25.19945
+     ],
+     [
+      121.466667,
+      25.19985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCSS",
+  "icao_text": "A3706/26 NOTAMC A3672/26\r\nQ) RCAA/QWEXX/IV/BO/AW/000/060/2507N12128E005\r\nA) RCSS\r\nB) 2610061004\r\nE) AIR EXER: NEW NOTAM TO FLW.",
+  "id": "1791281112682000",
+  "issued": "2026-10-06T10:04:00.000Z",
+  "last_updated": "2026-10-06T10:05:00.000Z",
+  "local_text": null,
+  "location": "RCSS",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3706/26",
+  "purpose": "BO",
+  "q_code": "QWEXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "A3672/26",
+  "schedule": null,
+  "scope": "AW",
+  "series": "A",
+  "text": "AIR EXER: NEW NOTAM TO FLW.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791281144409000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2505N12114E",
+  "effective_end": "2026-10-09T10:05:00Z",
+  "effective_start": "2026-10-06T10:05:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.233333,
+      25.166517
+     ],
+     [
+      121.242336,
+      25.166116
+     ],
+     [
+      121.251251,
+      25.164919
+     ],
+     [
+      121.259995,
+      25.162935
+     ],
+     [
+      121.268481,
+      25.160185
+     ],
+     [
+      121.276629,
+      25.156695
+     ],
+     [
+      121.28436,
+      25.152498
+     ],
+     [
+      121.291599,
+      25.147635
+     ],
+     [
+      121.298278,
+      25.142153
+     ],
+     [
+      121.304331,
+      25.136104
+     ],
+     [
+      121.3097,
+      25.129548
+     ],
+     [
+      121.314334,
+      25.122546
+     ],
+     [
+      121.318187,
+      25.115166
+     ],
+     [
+      121.321224,
+      25.10748
+     ],
+     [
+      121.323414,
+      25.099562
+     ],
+     [
+      121.324736,
+      25.091487
+     ],
+     [
+      121.325179,
+      25.083333
+     ],
+     [
+      121.324736,
+      25.07518
+     ],
+     [
+      121.323414,
+      25.067105
+     ],
+     [
+      121.321224,
+      25.059186
+     ],
+     [
+      121.318187,
+      25.0515
+     ],
+     [
+      121.314334,
+      25.044121
+     ],
+     [
+      121.3097,
+      25.037119
+     ],
+     [
+      121.304331,
+      25.030562
+     ],
+     [
+      121.298278,
+      25.024514
+     ],
+     [
+      121.291599,
+      25.019032
+     ],
+     [
+      121.28436,
+      25.014169
+     ],
+     [
+      121.276629,
+      25.009972
+     ],
+     [
+      121.268481,
+      25.006482
+     ],
+     [
+      121.259995,
+      25.003732
+     ],
+     [
+      121.251251,
+      25.001748
+     ],
+     [
+      121.242336,
+      25.00055
+     ],
+     [
+      121.233333,
+      25.00015
+     ],
+     [
+      121.224331,
+      25.00055
+     ],
+     [
+      121.215415,
+      25.001748
+     ],
+     [
+      121.206672,
+      25.003732
+     ],
+     [
+      121.198186,
+      25.006482
+     ],
+     [
+      121.190038,
+      25.009972
+     ],
+     [
+      121.182307,
+      25.014169
+     ],
+     [
+      121.175067,
+      25.019032
+     ],
+     [
+      121.168389,
+      25.024514
+     ],
+     [
+      121.162336,
+      25.030562
+     ],
+     [
+      121.156967,
+      25.037119
+     ],
+     [
+      121.152333,
+      25.044121
+     ],
+     [
+      121.148479,
+      25.0515
+     ],
+     [
+      121.145443,
+      25.059186
+     ],
+     [
+      121.143253,
+      25.067105
+     ],
+     [
+      121.14193,
+      25.07518
+     ],
+     [
+      121.141488,
+      25.083333
+     ],
+     [
+      121.14193,
+      25.091487
+     ],
+     [
+      121.143253,
+      25.099562
+     ],
+     [
+      121.145443,
+      25.10748
+     ],
+     [
+      121.148479,
+      25.115166
+     ],
+     [
+      121.152333,
+      25.122546
+     ],
+     [
+      121.156967,
+      25.129548
+     ],
+     [
+      121.162336,
+      25.136104
+     ],
+     [
+      121.168389,
+      25.142153
+     ],
+     [
+      121.175067,
+      25.147635
+     ],
+     [
+      121.182307,
+      25.152498
+     ],
+     [
+      121.190038,
+      25.156695
+     ],
+     [
+      121.198186,
+      25.160185
+     ],
+     [
+      121.206672,
+      25.162935
+     ],
+     [
+      121.215415,
+      25.164919
+     ],
+     [
+      121.224331,
+      25.166116
+     ],
+     [
+      121.233333,
+      25.166517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCTP",
+  "icao_text": "A3707/26 NOTAMC A3673/26\r\nQ) RCAA/QFAXX/IV/NBO/A/000/999/2505N12114E005\r\nA) RCTP\r\nB) 2610061005\r\nE) AD: NEW NOTAM TO FLW.",
+  "id": "1791281144409000",
+  "issued": "2026-10-06T10:05:00Z",
+  "last_updated": "2026-10-06T10:06:00Z",
+  "local_text": null,
+  "location": "RCTP",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3707/26",
+  "purpose": "NBO",
+  "q_code": "QFAXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "A3673/26",
+  "schedule": null,
+  "scope": "A",
+  "series": "A",
+  "text": "A3707/26 NOTAMC A3673/26\r\nQ) RCAA/QFAXX/IV/NBO/A/000/999/2505N12114E005\r\nA) RCTP\r\nB) 2610061005\r\nE) AD: NEW NOTAM TO FLW.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791281164387327": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-08T08:49:00Z",
+  "effective_start": "2026-10-08T07:44:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -120.166667,
+      30.15
+     ],
+     [
+      -120.0,
+      30.0
+     ],
+     [
+      -120.0,
+      29.183333
+     ],
+     [
+      -120.383333,
+      29.5
+     ],
+     [
+      -120.45,
+      29.866667
+     ],
+     [
+      -120.166667,
+      30.15
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1791281164387327",
+  "issued": "2026-10-06T10:04:00Z",
+  "last_updated": "2026-10-06T10:05:00Z",
+  "local_text": "!CARF 10/039 ZAK AIRSPACE DCC SX SDA-T1A 26-64 STNR ALT RESERVATION AREA C WI AN AREA DEFINED AS 300900N1201000W TO 300000N1200000W TO 291100N1200000W TO 293000N1202300W TO 295200N1202700W TO POINT OF ORIGIN SFC-UNL 2610080744-2610080849",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "10/039",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 10/039 ZAK AIRSPACE DCC SX SDA-T1A 26-64 STNR ALT RESERVATION AREA C WI AN AREA DEFINED AS 300900N1201000W TO 300000N1200000W TO 291100N1200000W TO 293000N1202300W TO 295200N1202700W TO POINT OF ORIGIN SFC-UNL",
+  "traffic": null,
+  "type": null,
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1791281164480986": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-08T08:49:00Z",
+  "effective_start": "2026-10-08T07:44:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -120.166667,
+      30.15
+     ],
+     [
+      -120.0,
+      30.0
+     ],
+     [
+      -120.0,
+      29.183333
+     ],
+     [
+      -120.383333,
+      29.5
+     ],
+     [
+      -120.45,
+      29.866667
+     ],
+     [
+      -120.166667,
+      30.15
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4868/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/999/\nA) KZAK\nB) 2610080744\nC) 2610080849\nE) ZAK AIRSPACE DCC SX SDA-T1A 26-64 STNR ALT RESERVATION \nAREA C WI AN AREA DEFINED AS 300900N1201000W TO 300000N1200000W TO 291100N1200000W TO 293000N1202300W TO 295200N1202700W TO POINT OF ORIGIN\nF) SFC\nG) UNL",
+  "id": "1791281164480986",
+  "issued": "2026-10-06T10:04:00Z",
+  "last_updated": "2026-10-06T10:05:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4868/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE DCC SX SDA-T1A 26-64 STNR ALT RESERVATION \nAREA C WI AN AREA DEFINED AS 300900N1201000W TO 300000N1200000W TO 291100N1200000W TO 293000N1202300W TO 295200N1202700W TO POINT OF ORIGIN",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1791281198194000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2516N12113E",
+  "effective_end": "2026-10-09T10:05:00.000Z",
+  "effective_start": "2026-10-06T10:05:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.216667,
+      25.482944
+     ],
+     [
+      121.240108,
+      25.481903
+     ],
+     [
+      121.263324,
+      25.478788
+     ],
+     [
+      121.28609,
+      25.473631
+     ],
+     [
+      121.308188,
+      25.466481
+     ],
+     [
+      121.329405,
+      25.457406
+     ],
+     [
+      121.349535,
+      25.446495
+     ],
+     [
+      121.368386,
+      25.433851
+     ],
+     [
+      121.385776,
+      25.419598
+     ],
+     [
+      121.401538,
+      25.403872
+     ],
+     [
+      121.415519,
+      25.386824
+     ],
+     [
+      121.427585,
+      25.368619
+     ],
+     [
+      121.437619,
+      25.349432
+     ],
+     [
+      121.445526,
+      25.329449
+     ],
+     [
+      121.451229,
+      25.30886
+     ],
+     [
+      121.454672,
+      25.287866
+     ],
+     [
+      121.455824,
+      25.266667
+     ],
+     [
+      121.454672,
+      25.245468
+     ],
+     [
+      121.451229,
+      25.224473
+     ],
+     [
+      121.445526,
+      25.203885
+     ],
+     [
+      121.437619,
+      25.183901
+     ],
+     [
+      121.427585,
+      25.164714
+     ],
+     [
+      121.415519,
+      25.146509
+     ],
+     [
+      121.401538,
+      25.129462
+     ],
+     [
+      121.385776,
+      25.113735
+     ],
+     [
+      121.368386,
+      25.099482
+     ],
+     [
+      121.349535,
+      25.086839
+     ],
+     [
+      121.329405,
+      25.075927
+     ],
+     [
+      121.308188,
+      25.066852
+     ],
+     [
+      121.28609,
+      25.059702
+     ],
+     [
+      121.263324,
+      25.054545
+     ],
+     [
+      121.240108,
+      25.051431
+     ],
+     [
+      121.216667,
+      25.050389
+     ],
+     [
+      121.193225,
+      25.051431
+     ],
+     [
+      121.170009,
+      25.054545
+     ],
+     [
+      121.147243,
+      25.059702
+     ],
+     [
+      121.125145,
+      25.066852
+     ],
+     [
+      121.103929,
+      25.075927
+     ],
+     [
+      121.083798,
+      25.086839
+     ],
+     [
+      121.064947,
+      25.099482
+     ],
+     [
+      121.047557,
+      25.113735
+     ],
+     [
+      121.031796,
+      25.129462
+     ],
+     [
+      121.017815,
+      25.146509
+     ],
+     [
+      121.005749,
+      25.164714
+     ],
+     [
+      120.995714,
+      25.183901
+     ],
+     [
+      120.987807,
+      25.203885
+     ],
+     [
+      120.982105,
+      25.224473
+     ],
+     [
+      120.978661,
+      25.245468
+     ],
+     [
+      120.977509,
+      25.266667
+     ],
+     [
+      120.978661,
+      25.287866
+     ],
+     [
+      120.982105,
+      25.30886
+     ],
+     [
+      120.987807,
+      25.329449
+     ],
+     [
+      120.995714,
+      25.349432
+     ],
+     [
+      121.005749,
+      25.368619
+     ],
+     [
+      121.017815,
+      25.386824
+     ],
+     [
+      121.031796,
+      25.403872
+     ],
+     [
+      121.047557,
+      25.419598
+     ],
+     [
+      121.064947,
+      25.433851
+     ],
+     [
+      121.083798,
+      25.446495
+     ],
+     [
+      121.103929,
+      25.457406
+     ],
+     [
+      121.125145,
+      25.466481
+     ],
+     [
+      121.147243,
+      25.473631
+     ],
+     [
+      121.170009,
+      25.478788
+     ],
+     [
+      121.193225,
+      25.481903
+     ],
+     [
+      121.216667,
+      25.482944
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCTP",
+  "icao_text": "A3708/26 NOTAMC A3674/26\r\nQ) RCAA/QWEXX/IV/BO/AW/000/050/2516N12113E013\r\nA) RCTP\r\nB) 2610061005\r\nE) AIR EXER: NEW NOTAM TO FLW.",
+  "id": "1791281198194000",
+  "issued": "2026-10-06T10:05:00.000Z",
+  "last_updated": "2026-10-06T10:06:00.000Z",
+  "local_text": null,
+  "location": "RCTP",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3708/26",
+  "purpose": "BO",
+  "q_code": "QWEXX",
+  "qline_offset_nm": null,
+  "radius_nm": 13.0,
+  "ref_number": "A3674/26",
+  "schedule": null,
+  "scope": "AW",
+  "series": "A",
+  "text": "AIR EXER: NEW NOTAM TO FLW.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791281206917000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2520N12118E",
+  "effective_end": "2026-10-09T10:06:00.000Z",
+  "effective_start": "2026-10-06T10:06:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.3,
+      25.532974
+     ],
+     [
+      121.32165,
+      25.532013
+     ],
+     [
+      121.343092,
+      25.529138
+     ],
+     [
+      121.364119,
+      25.524378
+     ],
+     [
+      121.384528,
+      25.517777
+     ],
+     [
+      121.404123,
+      25.509401
+     ],
+     [
+      121.422716,
+      25.499328
+     ],
+     [
+      121.440126,
+      25.487658
+     ],
+     [
+      121.456187,
+      25.474501
+     ],
+     [
+      121.470744,
+      25.459984
+     ],
+     [
+      121.483657,
+      25.444248
+     ],
+     [
+      121.494801,
+      25.427443
+     ],
+     [
+      121.504068,
+      25.409733
+     ],
+     [
+      121.511371,
+      25.391286
+     ],
+     [
+      121.516638,
+      25.372281
+     ],
+     [
+      121.519818,
+      25.352902
+     ],
+     [
+      121.520882,
+      25.333333
+     ],
+     [
+      121.519818,
+      25.313765
+     ],
+     [
+      121.516638,
+      25.294385
+     ],
+     [
+      121.511371,
+      25.275381
+     ],
+     [
+      121.504068,
+      25.256934
+     ],
+     [
+      121.494801,
+      25.239223
+     ],
+     [
+      121.483657,
+      25.222419
+     ],
+     [
+      121.470744,
+      25.206683
+     ],
+     [
+      121.456187,
+      25.192166
+     ],
+     [
+      121.440126,
+      25.179009
+     ],
+     [
+      121.422716,
+      25.167338
+     ],
+     [
+      121.404123,
+      25.157266
+     ],
+     [
+      121.384528,
+      25.148889
+     ],
+     [
+      121.364119,
+      25.142289
+     ],
+     [
+      121.343092,
+      25.137529
+     ],
+     [
+      121.32165,
+      25.134654
+     ],
+     [
+      121.3,
+      25.133693
+     ],
+     [
+      121.27835,
+      25.134654
+     ],
+     [
+      121.256908,
+      25.137529
+     ],
+     [
+      121.235881,
+      25.142289
+     ],
+     [
+      121.215472,
+      25.148889
+     ],
+     [
+      121.195877,
+      25.157266
+     ],
+     [
+      121.177284,
+      25.167338
+     ],
+     [
+      121.159874,
+      25.179009
+     ],
+     [
+      121.143813,
+      25.192166
+     ],
+     [
+      121.129256,
+      25.206683
+     ],
+     [
+      121.116343,
+      25.222419
+     ],
+     [
+      121.105199,
+      25.239223
+     ],
+     [
+      121.095932,
+      25.256934
+     ],
+     [
+      121.088629,
+      25.275381
+     ],
+     [
+      121.083362,
+      25.294385
+     ],
+     [
+      121.080182,
+      25.313765
+     ],
+     [
+      121.079118,
+      25.333333
+     ],
+     [
+      121.080182,
+      25.352902
+     ],
+     [
+      121.083362,
+      25.372281
+     ],
+     [
+      121.088629,
+      25.391286
+     ],
+     [
+      121.095932,
+      25.409733
+     ],
+     [
+      121.105199,
+      25.427443
+     ],
+     [
+      121.116343,
+      25.444248
+     ],
+     [
+      121.129256,
+      25.459984
+     ],
+     [
+      121.143813,
+      25.474501
+     ],
+     [
+      121.159874,
+      25.487658
+     ],
+     [
+      121.177284,
+      25.499328
+     ],
+     [
+      121.195877,
+      25.509401
+     ],
+     [
+      121.215472,
+      25.517777
+     ],
+     [
+      121.235881,
+      25.524378
+     ],
+     [
+      121.256908,
+      25.529138
+     ],
+     [
+      121.27835,
+      25.532013
+     ],
+     [
+      121.3,
+      25.532974
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCTP",
+  "icao_text": "A3709/26 NOTAMC A3675/26\r\nQ) RCAA/QWEXX/IV/BO/AW/000/050/2520N12118E012\r\nA) RCTP\r\nB) 2610061006\r\nE) AIR EXER: NEW NOTAM TO FLW.",
+  "id": "1791281206917000",
+  "issued": "2026-10-06T10:06:00.000Z",
+  "last_updated": "2026-10-06T10:06:00.000Z",
+  "local_text": null,
+  "location": "RCTP",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3709/26",
+  "purpose": "BO",
+  "q_code": "QWEXX",
+  "qline_offset_nm": null,
+  "radius_nm": 12.0,
+  "ref_number": "A3675/26",
+  "schedule": null,
+  "scope": "AW",
+  "series": "A",
+  "text": "AIR EXER: NEW NOTAM TO FLW.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791281216097000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2511N12105E",
+  "effective_end": "2026-10-09T10:06:00Z",
+  "effective_start": "2026-10-06T10:06:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.083333,
+      25.499431
+     ],
+     [
+      121.117571,
+      25.497909
+     ],
+     [
+      121.151478,
+      25.493357
+     ],
+     [
+      121.184729,
+      25.48582
+     ],
+     [
+      121.217004,
+      25.47537
+     ],
+     [
+      121.247991,
+      25.462107
+     ],
+     [
+      121.277393,
+      25.446159
+     ],
+     [
+      121.304926,
+      25.42768
+     ],
+     [
+      121.330324,
+      25.406848
+     ],
+     [
+      121.353345,
+      25.383864
+     ],
+     [
+      121.373764,
+      25.358948
+     ],
+     [
+      121.391387,
+      25.332341
+     ],
+     [
+      121.406043,
+      25.304299
+     ],
+     [
+      121.417591,
+      25.275092
+     ],
+     [
+      121.42592,
+      25.245001
+     ],
+     [
+      121.43095,
+      25.214316
+     ],
+     [
+      121.432632,
+      25.183333
+     ],
+     [
+      121.43095,
+      25.15235
+     ],
+     [
+      121.42592,
+      25.121666
+     ],
+     [
+      121.417591,
+      25.091575
+     ],
+     [
+      121.406043,
+      25.062368
+     ],
+     [
+      121.391387,
+      25.034326
+     ],
+     [
+      121.373764,
+      25.007719
+     ],
+     [
+      121.353345,
+      24.982803
+     ],
+     [
+      121.330324,
+      24.959818
+     ],
+     [
+      121.304926,
+      24.938986
+     ],
+     [
+      121.277393,
+      24.920508
+     ],
+     [
+      121.247991,
+      24.90456
+     ],
+     [
+      121.217004,
+      24.891297
+     ],
+     [
+      121.184729,
+      24.880847
+     ],
+     [
+      121.151478,
+      24.873309
+     ],
+     [
+      121.117571,
+      24.868758
+     ],
+     [
+      121.083333,
+      24.867236
+     ],
+     [
+      121.049096,
+      24.868758
+     ],
+     [
+      121.015189,
+      24.873309
+     ],
+     [
+      120.981937,
+      24.880847
+     ],
+     [
+      120.949663,
+      24.891297
+     ],
+     [
+      120.918675,
+      24.90456
+     ],
+     [
+      120.889274,
+      24.920508
+     ],
+     [
+      120.861741,
+      24.938986
+     ],
+     [
+      120.836342,
+      24.959818
+     ],
+     [
+      120.813322,
+      24.982803
+     ],
+     [
+      120.792902,
+      25.007719
+     ],
+     [
+      120.77528,
+      25.034326
+     ],
+     [
+      120.760624,
+      25.062368
+     ],
+     [
+      120.749076,
+      25.091575
+     ],
+     [
+      120.740747,
+      25.121666
+     ],
+     [
+      120.735717,
+      25.15235
+     ],
+     [
+      120.734035,
+      25.183333
+     ],
+     [
+      120.735717,
+      25.214316
+     ],
+     [
+      120.740747,
+      25.245001
+     ],
+     [
+      120.749076,
+      25.275092
+     ],
+     [
+      120.760624,
+      25.304299
+     ],
+     [
+      120.77528,
+      25.332341
+     ],
+     [
+      120.792902,
+      25.358948
+     ],
+     [
+      120.813322,
+      25.383864
+     ],
+     [
+      120.836342,
+      25.406848
+     ],
+     [
+      120.861741,
+      25.42768
+     ],
+     [
+      120.889274,
+      25.446159
+     ],
+     [
+      120.918675,
+      25.462107
+     ],
+     [
+      120.949663,
+      25.47537
+     ],
+     [
+      120.981937,
+      25.48582
+     ],
+     [
+      121.015189,
+      25.493357
+     ],
+     [
+      121.049096,
+      25.497909
+     ],
+     [
+      121.083333,
+      25.499431
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCTP",
+  "icao_text": "A3710/26 NOTAMC A3676/26\r\nQ) RCAA/QWEXX/IV/BO/AW/000/050/2511N12105E019\r\nA) RCTP\r\nB) 2610061006\r\nE) AIR EXER: NEW NOTAM TO FLW.",
+  "id": "1791281216097000",
+  "issued": "2026-10-06T10:06:00Z",
+  "last_updated": "2026-10-06T10:07:00Z",
+  "local_text": null,
+  "location": "RCTP",
+  "lower": null,
+  "max_fl": "050",
+  "min_fl": "000",
+  "number": "A3710/26",
+  "purpose": "BO",
+  "q_code": "QWEXX",
+  "qline_offset_nm": null,
+  "radius_nm": 19.0,
+  "ref_number": "A3676/26",
+  "schedule": null,
+  "scope": "AW",
+  "series": "A",
+  "text": "A3710/26 NOTAMC A3676/26\r\nQ) RCAA/QWEXX/IV/BO/AW/000/050/2511N12105E019\r\nA) RCTP\r\nB) 2610061006\r\nE) AIR EXER: NEW NOTAM TO FLW.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791281254907000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2504N12133E",
+  "effective_end": "2026-10-09T10:07:00Z",
+  "effective_start": "2026-10-06T10:07:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.55,
+      25.14985
+     ],
+     [
+      121.559001,
+      25.14945
+     ],
+     [
+      121.567916,
+      25.148252
+     ],
+     [
+      121.576658,
+      25.146268
+     ],
+     [
+      121.585143,
+      25.143518
+     ],
+     [
+      121.59329,
+      25.140028
+     ],
+     [
+      121.60102,
+      25.135831
+     ],
+     [
+      121.608258,
+      25.130968
+     ],
+     [
+      121.614936,
+      25.125486
+     ],
+     [
+      121.620988,
+      25.119438
+     ],
+     [
+      121.626356,
+      25.112881
+     ],
+     [
+      121.630989,
+      25.105879
+     ],
+     [
+      121.634842,
+      25.0985
+     ],
+     [
+      121.637879,
+      25.090814
+     ],
+     [
+      121.640068,
+      25.082895
+     ],
+     [
+      121.641391,
+      25.07482
+     ],
+     [
+      121.641833,
+      25.066667
+     ],
+     [
+      121.641391,
+      25.058513
+     ],
+     [
+      121.640068,
+      25.050438
+     ],
+     [
+      121.637879,
+      25.04252
+     ],
+     [
+      121.634842,
+      25.034834
+     ],
+     [
+      121.630989,
+      25.027454
+     ],
+     [
+      121.626356,
+      25.020452
+     ],
+     [
+      121.620988,
+      25.013896
+     ],
+     [
+      121.614936,
+      25.007847
+     ],
+     [
+      121.608258,
+      25.002365
+     ],
+     [
+      121.60102,
+      24.997502
+     ],
+     [
+      121.59329,
+      24.993305
+     ],
+     [
+      121.585143,
+      24.989815
+     ],
+     [
+      121.576658,
+      24.987065
+     ],
+     [
+      121.567916,
+      24.985081
+     ],
+     [
+      121.559001,
+      24.983884
+     ],
+     [
+      121.55,
+      24.983483
+     ],
+     [
+      121.540999,
+      24.983884
+     ],
+     [
+      121.532084,
+      24.985081
+     ],
+     [
+      121.523342,
+      24.987065
+     ],
+     [
+      121.514857,
+      24.989815
+     ],
+     [
+      121.50671,
+      24.993305
+     ],
+     [
+      121.49898,
+      24.997502
+     ],
+     [
+      121.491742,
+      25.002365
+     ],
+     [
+      121.485064,
+      25.007847
+     ],
+     [
+      121.479012,
+      25.013896
+     ],
+     [
+      121.473644,
+      25.020452
+     ],
+     [
+      121.469011,
+      25.027454
+     ],
+     [
+      121.465158,
+      25.034834
+     ],
+     [
+      121.462121,
+      25.04252
+     ],
+     [
+      121.459932,
+      25.050438
+     ],
+     [
+      121.458609,
+      25.058513
+     ],
+     [
+      121.458167,
+      25.066667
+     ],
+     [
+      121.458609,
+      25.07482
+     ],
+     [
+      121.459932,
+      25.082895
+     ],
+     [
+      121.462121,
+      25.090814
+     ],
+     [
+      121.465158,
+      25.0985
+     ],
+     [
+      121.469011,
+      25.105879
+     ],
+     [
+      121.473644,
+      25.112881
+     ],
+     [
+      121.479012,
+      25.119438
+     ],
+     [
+      121.485064,
+      25.125486
+     ],
+     [
+      121.491742,
+      25.130968
+     ],
+     [
+      121.49898,
+      25.135831
+     ],
+     [
+      121.50671,
+      25.140028
+     ],
+     [
+      121.514857,
+      25.143518
+     ],
+     [
+      121.523342,
+      25.146268
+     ],
+     [
+      121.532084,
+      25.148252
+     ],
+     [
+      121.540999,
+      25.14945
+     ],
+     [
+      121.55,
+      25.14985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCSS",
+  "icao_text": "A3711/26 NOTAMC A3677/26\r\nQ) RCAA/QFAXX/IV/NBO/A/000/999/2504N12133E005\r\nA) RCSS\r\nB) 2610061007\r\nE) AD: NEW NOTAM TO FLW.",
+  "id": "1791281254907000",
+  "issued": "2026-10-06T10:07:00Z",
+  "last_updated": "2026-10-06T10:08:00Z",
+  "local_text": null,
+  "location": "RCSS",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3711/26",
+  "purpose": "NBO",
+  "q_code": "QFAXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "A3677/26",
+  "schedule": null,
+  "scope": "A",
+  "series": "A",
+  "text": "A3711/26 NOTAMC A3677/26\r\nQ) RCAA/QFAXX/IV/NBO/A/000/999/2504N12133E005\r\nA) RCSS\r\nB) 2610061007\r\nE) AD: NEW NOTAM TO FLW.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791281290630000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2505N12058E",
+  "effective_end": "2026-10-09T10:07:00.000Z",
+  "effective_start": "2026-10-06T10:07:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.966667,
+      25.515888
+     ],
+     [
+      121.013479,
+      25.513805
+     ],
+     [
+      121.059841,
+      25.507577
+     ],
+     [
+      121.105305,
+      25.497262
+     ],
+     [
+      121.149435,
+      25.482962
+     ],
+     [
+      121.191804,
+      25.464813
+     ],
+     [
+      121.232005,
+      25.44299
+     ],
+     [
+      121.26965,
+      25.417703
+     ],
+     [
+      121.304378,
+      25.389196
+     ],
+     [
+      121.335853,
+      25.357743
+     ],
+     [
+      121.363773,
+      25.323648
+     ],
+     [
+      121.387869,
+      25.287238
+     ],
+     [
+      121.407908,
+      25.248865
+     ],
+     [
+      121.423697,
+      25.208897
+     ],
+     [
+      121.435086,
+      25.167721
+     ],
+     [
+      121.441963,
+      25.125731
+     ],
+     [
+      121.444262,
+      25.083333
+     ],
+     [
+      121.441963,
+      25.040936
+     ],
+     [
+      121.435086,
+      24.998946
+     ],
+     [
+      121.423697,
+      24.957769
+     ],
+     [
+      121.407908,
+      24.917802
+     ],
+     [
+      121.387869,
+      24.879428
+     ],
+     [
+      121.363773,
+      24.843019
+     ],
+     [
+      121.335853,
+      24.808923
+     ],
+     [
+      121.304378,
+      24.777471
+     ],
+     [
+      121.26965,
+      24.748964
+     ],
+     [
+      121.232005,
+      24.723677
+     ],
+     [
+      121.191804,
+      24.701854
+     ],
+     [
+      121.149435,
+      24.683705
+     ],
+     [
+      121.105305,
+      24.669404
+     ],
+     [
+      121.059841,
+      24.65909
+     ],
+     [
+      121.013479,
+      24.652861
+     ],
+     [
+      120.966667,
+      24.650779
+     ],
+     [
+      120.919854,
+      24.652861
+     ],
+     [
+      120.873492,
+      24.65909
+     ],
+     [
+      120.828028,
+      24.669404
+     ],
+     [
+      120.783899,
+      24.683705
+     ],
+     [
+      120.74153,
+      24.701854
+     ],
+     [
+      120.701329,
+      24.723677
+     ],
+     [
+      120.663683,
+      24.748964
+     ],
+     [
+      120.628955,
+      24.777471
+     ],
+     [
+      120.59748,
+      24.808923
+     ],
+     [
+      120.56956,
+      24.843019
+     ],
+     [
+      120.545465,
+      24.879428
+     ],
+     [
+      120.525426,
+      24.917802
+     ],
+     [
+      120.509636,
+      24.957769
+     ],
+     [
+      120.498248,
+      24.998946
+     ],
+     [
+      120.491371,
+      25.040936
+     ],
+     [
+      120.489071,
+      25.083333
+     ],
+     [
+      120.491371,
+      25.125731
+     ],
+     [
+      120.498248,
+      25.167721
+     ],
+     [
+      120.509636,
+      25.208897
+     ],
+     [
+      120.525426,
+      25.248865
+     ],
+     [
+      120.545465,
+      25.287238
+     ],
+     [
+      120.56956,
+      25.323648
+     ],
+     [
+      120.59748,
+      25.357743
+     ],
+     [
+      120.628955,
+      25.389196
+     ],
+     [
+      120.663683,
+      25.417703
+     ],
+     [
+      120.701329,
+      25.44299
+     ],
+     [
+      120.74153,
+      25.464813
+     ],
+     [
+      120.783899,
+      25.482962
+     ],
+     [
+      120.828028,
+      25.497262
+     ],
+     [
+      120.873492,
+      25.507577
+     ],
+     [
+      120.919854,
+      25.513805
+     ],
+     [
+      120.966667,
+      25.515888
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCTP",
+  "icao_text": "A3712/26 NOTAMC A3678/26\r\nQ) RCAA/QWEXX/IV/BO/AW/000/050/2505N12058E026\r\nA) RCTP\r\nB) 2610061007\r\nE) AIR EXER: NEW NOTAM TO FLW.",
+  "id": "1791281290630000",
+  "issued": "2026-10-06T10:08:00.000Z",
+  "last_updated": "2026-10-06T10:08:00.000Z",
+  "local_text": null,
+  "location": "RCTP",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3712/26",
+  "purpose": "BO",
+  "q_code": "QWEXX",
+  "qline_offset_nm": null,
+  "radius_nm": 26.0,
+  "ref_number": "A3678/26",
+  "schedule": null,
+  "scope": "AW",
+  "series": "A",
+  "text": "AIR EXER: NEW NOTAM TO FLW.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791281312149000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2504N12133E",
+  "effective_end": "2026-10-09T10:08:00.000Z",
+  "effective_start": "2026-10-06T10:08:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.55,
+      25.14985
+     ],
+     [
+      121.559001,
+      25.14945
+     ],
+     [
+      121.567916,
+      25.148252
+     ],
+     [
+      121.576658,
+      25.146268
+     ],
+     [
+      121.585143,
+      25.143518
+     ],
+     [
+      121.59329,
+      25.140028
+     ],
+     [
+      121.60102,
+      25.135831
+     ],
+     [
+      121.608258,
+      25.130968
+     ],
+     [
+      121.614936,
+      25.125486
+     ],
+     [
+      121.620988,
+      25.119438
+     ],
+     [
+      121.626356,
+      25.112881
+     ],
+     [
+      121.630989,
+      25.105879
+     ],
+     [
+      121.634842,
+      25.0985
+     ],
+     [
+      121.637879,
+      25.090814
+     ],
+     [
+      121.640068,
+      25.082895
+     ],
+     [
+      121.641391,
+      25.07482
+     ],
+     [
+      121.641833,
+      25.066667
+     ],
+     [
+      121.641391,
+      25.058513
+     ],
+     [
+      121.640068,
+      25.050438
+     ],
+     [
+      121.637879,
+      25.04252
+     ],
+     [
+      121.634842,
+      25.034834
+     ],
+     [
+      121.630989,
+      25.027454
+     ],
+     [
+      121.626356,
+      25.020452
+     ],
+     [
+      121.620988,
+      25.013896
+     ],
+     [
+      121.614936,
+      25.007847
+     ],
+     [
+      121.608258,
+      25.002365
+     ],
+     [
+      121.60102,
+      24.997502
+     ],
+     [
+      121.59329,
+      24.993305
+     ],
+     [
+      121.585143,
+      24.989815
+     ],
+     [
+      121.576658,
+      24.987065
+     ],
+     [
+      121.567916,
+      24.985081
+     ],
+     [
+      121.559001,
+      24.983884
+     ],
+     [
+      121.55,
+      24.983483
+     ],
+     [
+      121.540999,
+      24.983884
+     ],
+     [
+      121.532084,
+      24.985081
+     ],
+     [
+      121.523342,
+      24.987065
+     ],
+     [
+      121.514857,
+      24.989815
+     ],
+     [
+      121.50671,
+      24.993305
+     ],
+     [
+      121.49898,
+      24.997502
+     ],
+     [
+      121.491742,
+      25.002365
+     ],
+     [
+      121.485064,
+      25.007847
+     ],
+     [
+      121.479012,
+      25.013896
+     ],
+     [
+      121.473644,
+      25.020452
+     ],
+     [
+      121.469011,
+      25.027454
+     ],
+     [
+      121.465158,
+      25.034834
+     ],
+     [
+      121.462121,
+      25.04252
+     ],
+     [
+      121.459932,
+      25.050438
+     ],
+     [
+      121.458609,
+      25.058513
+     ],
+     [
+      121.458167,
+      25.066667
+     ],
+     [
+      121.458609,
+      25.07482
+     ],
+     [
+      121.459932,
+      25.082895
+     ],
+     [
+      121.462121,
+      25.090814
+     ],
+     [
+      121.465158,
+      25.0985
+     ],
+     [
+      121.469011,
+      25.105879
+     ],
+     [
+      121.473644,
+      25.112881
+     ],
+     [
+      121.479012,
+      25.119438
+     ],
+     [
+      121.485064,
+      25.125486
+     ],
+     [
+      121.491742,
+      25.130968
+     ],
+     [
+      121.49898,
+      25.135831
+     ],
+     [
+      121.50671,
+      25.140028
+     ],
+     [
+      121.514857,
+      25.143518
+     ],
+     [
+      121.523342,
+      25.146268
+     ],
+     [
+      121.532084,
+      25.148252
+     ],
+     [
+      121.540999,
+      25.14945
+     ],
+     [
+      121.55,
+      25.14985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RCSS",
+  "icao_text": "A3713/26 NOTAMC A3679/26\r\nQ) RCAA/QFAXX/IV/NBO/A/000/999/2504N12133E005\r\nA) RCSS\r\nB) 2610061008\r\nE) AD: NEW NOTAM TO FLW.",
+  "id": "1791281312149000",
+  "issued": "2026-10-06T10:08:00.000Z",
+  "last_updated": "2026-10-06T10:08:00.000Z",
+  "local_text": null,
+  "location": "RCSS",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3713/26",
+  "purpose": "NBO",
+  "q_code": "QFAXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "A3679/26",
+  "schedule": null,
+  "scope": "A",
+  "series": "A",
+  "text": "AD: NEW NOTAM TO FLW.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791281396560000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2442N12050E",
+  "effective_end": "2026-10-07T23:33:00.000Z",
+  "effective_start": "2026-10-07T22:09:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.754167,
+      24.569167
+     ],
+     [
+      120.684722,
+      24.646667
+     ],
+     [
+      120.913056,
+      24.814722
+     ],
+     [
+      120.982222,
+      24.736944
+     ],
+     [
+      120.754167,
+      24.569167
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCMQ",
+  "icao_text": "A3714/26 NOTAMN\r\nQ) RCAA/QWELW/IV/BO/AW/000/070/2442N12050E009\r\nA) RCMQ\r\nB) 2610072209 C) 2610072333\r\nD) 2209-2214 2321-2333\r\nE) AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.TFC OF RCMQ MAYBE DELAYED.\r\n3.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n243409N 1204515E\r\n243848N 1204105E\r\n244853N 1205447E\r\n244413N 1205856E\r\n243409N 1204515E\r\nF) SFC G) 7000FT AMSL",
+  "id": "1791281396560000",
+  "issued": "2026-10-06T10:09:00.000Z",
+  "last_updated": "2026-10-06T10:09:00.000Z",
+  "local_text": null,
+  "location": "RCMQ",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3714/26",
+  "purpose": "BO",
+  "q_code": "QWELW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 9.0,
+  "ref_number": null,
+  "schedule": "2209-2214 2321-2333",
+  "scope": "AW",
+  "series": "A",
+  "text": "AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.TFC OF RCMQ MAYBE DELAYED.\r\n3.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n243409N 1204515E\r\n243848N 1204105E\r\n244853N 1205447E\r\n244413N 1205856E\r\n243409N 1204515E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "7000FT AMSL",
+  "year": "2026"
+ },
+ "1791281420770000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2449N12105E",
+  "effective_end": "2026-10-07T23:37:00.000Z",
+  "effective_start": "2026-10-07T22:12:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.945278,
+      24.698889
+     ],
+     [
+      120.921944,
+      24.724722
+     ],
+     [
+      121.224167,
+      24.946944
+     ],
+     [
+      121.246944,
+      24.920833
+     ],
+     [
+      120.945278,
+      24.698889
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCSS",
+  "icao_text": "A3715/26 NOTAMN\r\nQ) RCAA/QWELW/IV/BO/AW/000/050/2449N12105E011\r\nA) RCSS\r\nB) 2610072212 C) 2610072337\r\nD) 2212-2218 2331-2337\r\nE) AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.TFC OF RCSS MAYBE DELAYED.\r\n3.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n244156N 1205643E\r\n244329N 1205519E\r\n245649N 1211327E\r\n245515N 1211449E\r\n244156N 1205643E\r\nF) SFC G) 5000FT AMSL",
+  "id": "1791281420770000",
+  "issued": "2026-10-06T10:10:00.000Z",
+  "last_updated": "2026-10-06T10:10:00.000Z",
+  "local_text": null,
+  "location": "RCSS",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3715/26",
+  "purpose": "BO",
+  "q_code": "QWELW",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 11.0,
+  "ref_number": null,
+  "schedule": "2212-2218 2331-2337",
+  "scope": "AW",
+  "series": "A",
+  "text": "AIR EXER WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.TFC OF RCSS MAYBE DELAYED.\r\n3.LIAISON OFFICER AT TAIPEI APP, TFC CONCERNED CTC ATC.\r\n4.COOR TEL: 0911-602117\r\n5.AREA AS FLW:\r\n244156N 1205643E\r\n244329N 1205519E\r\n245649N 1211327E\r\n245515N 1211449E\r\n244156N 1205643E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "5000FT AMSL",
+  "year": "2026"
+ },
+ "1791281424299000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1431N12101E",
+  "effective_end": "2026-10-19T20:00:00.000Z",
+  "effective_start": "2026-10-15T14:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-06T10:10:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.016667,
+      14.59985
+     ],
+     [
+      121.025089,
+      14.59945
+     ],
+     [
+      121.03343,
+      14.598252
+     ],
+     [
+      121.04161,
+      14.596268
+     ],
+     [
+      121.049549,
+      14.593518
+     ],
+     [
+      121.057172,
+      14.590028
+     ],
+     [
+      121.064405,
+      14.585831
+     ],
+     [
+      121.071178,
+      14.580968
+     ],
+     [
+      121.077426,
+      14.575486
+     ],
+     [
+      121.083089,
+      14.569438
+     ],
+     [
+      121.088112,
+      14.562881
+     ],
+     [
+      121.092447,
+      14.555879
+     ],
+     [
+      121.096053,
+      14.5485
+     ],
+     [
+      121.098894,
+      14.540814
+     ],
+     [
+      121.100942,
+      14.532895
+     ],
+     [
+      121.10218,
+      14.52482
+     ],
+     [
+      121.102594,
+      14.516667
+     ],
+     [
+      121.10218,
+      14.508513
+     ],
+     [
+      121.100942,
+      14.500438
+     ],
+     [
+      121.098894,
+      14.49252
+     ],
+     [
+      121.096053,
+      14.484834
+     ],
+     [
+      121.092447,
+      14.477454
+     ],
+     [
+      121.088112,
+      14.470452
+     ],
+     [
+      121.083089,
+      14.463896
+     ],
+     [
+      121.077426,
+      14.457847
+     ],
+     [
+      121.071178,
+      14.452365
+     ],
+     [
+      121.064405,
+      14.447502
+     ],
+     [
+      121.057172,
+      14.443305
+     ],
+     [
+      121.049549,
+      14.439815
+     ],
+     [
+      121.04161,
+      14.437065
+     ],
+     [
+      121.03343,
+      14.435081
+     ],
+     [
+      121.025089,
+      14.433884
+     ],
+     [
+      121.016667,
+      14.433483
+     ],
+     [
+      121.008244,
+      14.433884
+     ],
+     [
+      120.999903,
+      14.435081
+     ],
+     [
+      120.991723,
+      14.437065
+     ],
+     [
+      120.983784,
+      14.439815
+     ],
+     [
+      120.976161,
+      14.443305
+     ],
+     [
+      120.968928,
+      14.447502
+     ],
+     [
+      120.962155,
+      14.452365
+     ],
+     [
+      120.955907,
+      14.457847
+     ],
+     [
+      120.950244,
+      14.463896
+     ],
+     [
+      120.945221,
+      14.470452
+     ],
+     [
+      120.940886,
+      14.477454
+     ],
+     [
+      120.937281,
+      14.484834
+     ],
+     [
+      120.93444,
+      14.49252
+     ],
+     [
+      120.932391,
+      14.500438
+     ],
+     [
+      120.931154,
+      14.508513
+     ],
+     [
+      120.93074,
+      14.516667
+     ],
+     [
+      120.931154,
+      14.52482
+     ],
+     [
+      120.932391,
+      14.532895
+     ],
+     [
+      120.93444,
+      14.540814
+     ],
+     [
+      120.937281,
+      14.5485
+     ],
+     [
+      120.940886,
+      14.555879
+     ],
+     [
+      120.945221,
+      14.562881
+     ],
+     [
+      120.950244,
+      14.569438
+     ],
+     [
+      120.955907,
+      14.575486
+     ],
+     [
+      120.962155,
+      14.580968
+     ],
+     [
+      120.968928,
+      14.585831
+     ],
+     [
+      120.976161,
+      14.590028
+     ],
+     [
+      120.983784,
+      14.593518
+     ],
+     [
+      120.991723,
+      14.596268
+     ],
+     [
+      120.999903,
+      14.598252
+     ],
+     [
+      121.008244,
+      14.59945
+     ],
+     [
+      121.016667,
+      14.59985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPLL",
+  "icao_text": "B5341/26 NOTAMN\r\nQ) RPHI/QMXLC/IV/BO /A /000/999/1431N12101E005\r\nA) RPLL B) 2610151400 C) 2610192000\r\nE) PORTION OF TWY D (BTN TWY F1 AND F3), F2 AND G12 CLSD DUE WIP \r\n(INSTL OF STOP BAR LGT).",
+  "id": "1791281424299000",
+  "issued": "2026-10-06T10:10:00.000Z",
+  "last_updated": "2026-10-06T10:10:00.000Z",
+  "local_text": null,
+  "location": "RPLL",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5341/26",
+  "purpose": "BO ",
+  "q_code": "QMXLC",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A ",
+  "series": "B",
+  "text": "PORTION OF TWY D (BTN TWY F1 AND F3), F2 AND G12 CLSD DUE WIP \r\n(INSTL OF STOP BAR LGT).",
+  "traffic": "IV",
+  "type": "N",
   "upper": null,
   "year": "2026"
  }
