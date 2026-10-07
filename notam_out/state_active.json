@@ -161258,5 +161258,153 @@
   "type": "N",
   "upper": "UNL",
   "year": "2026"
+ },
+ "1791394713110895": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-10T12:42:00Z",
+  "effective_start": "2026-10-10T06:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T17:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      167.35,
+      9.266667
+     ],
+     [
+      167.55,
+      9.383333
+     ],
+     [
+      167.483333,
+      9.5
+     ],
+     [
+      167.916667,
+      9.766667
+     ],
+     [
+      168.2,
+      9.333333
+     ],
+     [
+      167.55,
+      8.916667
+     ],
+     [
+      167.35,
+      9.266667
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1791394713110895",
+  "issued": "2026-10-07T17:37:00Z",
+  "last_updated": "2026-10-07T17:37:00Z",
+  "local_text": "!CARF 10/081 ZAK AIRSPACE DCC RTR AIROPS 448 STNR ALT RESERVATION WI AN AREA DEFINED AS 091600N1672100E TO 092300N1673300E TO 093000N1672900E TO 094600N1675500E TO 092000N1681200E TO 085500N1673300E TO POINT OF ORIGIN SFC-UNL 2610100600-2610101242",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "10/081",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 10/081 ZAK AIRSPACE DCC RTR AIROPS 448 STNR ALT RESERVATION WI AN AREA DEFINED AS 091600N1672100E TO 092300N1673300E TO 093000N1672900E TO 094600N1675500E TO 092000N1681200E TO 085500N1673300E TO POINT OF ORIGIN SFC-UNL",
+  "traffic": null,
+  "type": null,
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1791394715935990": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-10T12:42:00Z",
+  "effective_start": "2026-10-10T06:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T17:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      167.35,
+      9.266667
+     ],
+     [
+      167.55,
+      9.383333
+     ],
+     [
+      167.483333,
+      9.5
+     ],
+     [
+      167.916667,
+      9.766667
+     ],
+     [
+      168.2,
+      9.333333
+     ],
+     [
+      167.55,
+      8.916667
+     ],
+     [
+      167.35,
+      9.266667
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4902/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/999/\nA) KZAK\nB) 2610100600\nC) 2610101242\nE) ZAK AIRSPACE DCC RTR AIROPS 448 STNR ALT RESERVATION WI AN AREA DEFINED AS 091600N1672100E TO 092300N1673300E TO 093000N1672900E TO 094600N1675500E TO 092000N1681200E TO 085500N1673300E TO POINT OF ORIGIN SFC-UNL\nF) SFC\nG) UNL",
+  "id": "1791394715935990",
+  "issued": "2026-10-07T17:37:00Z",
+  "last_updated": "2026-10-07T17:37:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4902/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE DCC RTR AIROPS 448 STNR ALT RESERVATION WI AN AREA DEFINED AS 091600N1672100E TO 092300N1673300E TO 093000N1672900E TO 094600N1675500E TO 092000N1681200E TO 085500N1673300E TO POINT OF ORIGIN SFC-UNL",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
+  "year": "2026"
  }
 }
