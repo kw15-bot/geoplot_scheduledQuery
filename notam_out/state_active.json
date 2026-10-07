@@ -159946,5 +159946,321 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1791406894937187": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-08T23:00:00Z",
+  "effective_start": "2026-10-08T12:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T21:10:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -124.416667,
+      36.35
+     ],
+     [
+      -130.283333,
+      35.083333
+     ],
+     [
+      -126.85,
+      29.716667
+     ],
+     [
+      -121.633333,
+      32.0
+     ],
+     [
+      -124.416667,
+      36.35
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4908/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/500/600/\nA) KZAK\nB) 2610081230\nC) 2610082300\nE) ZAK AIRSPACE MINI MEGLADON STNR ALT RESERVATION WI AN AREA\nDEFINED AS 362100N1242500W TO 350500N1301700W TO 294300N1265100W TO\n320000N1213800W TO POINT OF ORIGIN.\nF) FL500\nG) FL600",
+  "id": "1791406894937187",
+  "issued": "2026-10-07T21:00:00Z",
+  "last_updated": "2026-10-07T21:01:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "FL500",
+  "max_fl": "600",
+  "min_fl": "500",
+  "number": "A4908/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE MINI MEGLADON STNR ALT RESERVATION WI AN AREA\nDEFINED AS 362100N1242500W TO 350500N1301700W TO 294300N1265100W TO\n320000N1213800W TO POINT OF ORIGIN.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL600",
+  "year": "2026"
+ },
+ "1791406903010216": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-08T23:00:00Z",
+  "effective_start": "2026-10-08T12:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T21:10:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -124.416667,
+      36.35
+     ],
+     [
+      -130.283333,
+      35.083333
+     ],
+     [
+      -126.85,
+      29.716667
+     ],
+     [
+      -121.633333,
+      32.0
+     ],
+     [
+      -124.416667,
+      36.35
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1791406903010216",
+  "issued": "2026-10-07T21:00:00Z",
+  "last_updated": "2026-10-07T21:01:00Z",
+  "local_text": "!CARF 10/092 ZAK AIRSPACE MINI MEGLADON STNR ALT RESERVATION WI AN AREA DEFINED AS 362100N1242500W TO 350500N1301700W TO 294300N1265100W TO 320000N1213800W TO POINT OF ORIGIN. FL500 - FL600 2610081230-2610082300",
+  "location": "ZAK",
+  "lower": "FL500",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "10/092",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 10/092 ZAK AIRSPACE MINI MEGLADON STNR ALT RESERVATION WI AN AREA DEFINED AS 362100N1242500W TO 350500N1301700W TO 294300N1265100W TO 320000N1213800W TO POINT OF ORIGIN. FL500 - FL600",
+  "traffic": null,
+  "type": null,
+  "upper": "FL600",
+  "year": "2026"
+ },
+ "1791407289074010": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-09T07:30:00Z",
+  "effective_start": "2026-10-08T13:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T21:10:29+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4909/26 NOTAMN\nQ) KZAK/QROLT/IV/NBO/W/000/500/\nA) KZAK\nB) 2610081300\nC) 2610090730\nE) AIRSPACE W291E ACT\nF) SFC\nG) FL500",
+  "id": "1791407289074010",
+  "issued": "2026-10-07T21:07:00Z",
+  "last_updated": "2026-10-07T21:08:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "500",
+  "min_fl": "000",
+  "number": "A4909/26",
+  "purpose": "NBO",
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "AIRSPACE W291E ACT",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL500",
+  "year": "2026"
+ },
+ "1791407290839119": {
+  "account_id": "SUAW",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-09T07:30:00Z",
+  "effective_start": "2026-10-08T13:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T21:10:29+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1791407290839119",
+  "issued": "2026-10-07T21:07:00Z",
+  "last_updated": "2026-10-07T21:08:00Z",
+  "local_text": "!SUAW 10/956 ZAK AIRSPACE W291E ACT SFC-FL500 2610081300-2610090730",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "10/956",
+  "purpose": null,
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!SUAW 10/956 ZAK AIRSPACE W291E ACT SFC-FL500",
+  "traffic": null,
+  "type": null,
+  "upper": "FL500",
+  "year": "2026"
+ },
+ "1791407339191907": {
+  "account_id": "SUAW",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-09T07:30:00Z",
+  "effective_start": "2026-10-08T14:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T21:10:29+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1791407339191907",
+  "issued": "2026-10-07T21:08:00Z",
+  "last_updated": "2026-10-07T21:08:00Z",
+  "local_text": "!SUAW 10/964 ZAK AIRSPACE W291E ACT SFC-FL500 2610081400-2610090730",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "10/964",
+  "purpose": null,
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!SUAW 10/964 ZAK AIRSPACE W291E ACT SFC-FL500",
+  "traffic": null,
+  "type": null,
+  "upper": "FL500",
+  "year": "2026"
+ },
+ "1791407339192067": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-09T07:30:00Z",
+  "effective_start": "2026-10-08T14:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T21:10:29+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4910/26 NOTAMN\nQ) KZAK/QROLT/IV/NBO/W/000/500/\nA) KZAK\nB) 2610081400\nC) 2610090730\nE) AIRSPACE W291E ACT\nF) SFC\nG) FL500",
+  "id": "1791407339192067",
+  "issued": "2026-10-07T21:08:00Z",
+  "last_updated": "2026-10-07T21:08:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "500",
+  "min_fl": "000",
+  "number": "A4910/26",
+  "purpose": "NBO",
+  "q_code": "QROLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "AIRSPACE W291E ACT",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL500",
+  "year": "2026"
  }
 }
