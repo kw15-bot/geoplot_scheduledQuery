@@ -159580,5 +159580,79 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1791372987456000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-08T12:00:00.000Z",
+  "effective_start": "2026-10-08T01:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZWUQ",
+  "first_seen": "2026-10-07T11:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      92.18,
+      39.751667
+     ],
+     [
+      91.962093,
+      40.99983
+     ]
+    ],
+    [
+     [
+      91.426667,
+      39.214444
+     ],
+     [
+      87.925833,
+      39.802222
+     ]
+    ],
+    [
+     [
+      90.341944,
+      38.798611
+     ],
+     [
+      88.274273,
+      39.407232
+     ]
+    ]
+   ],
+   "type": "MultiLineString"
+  },
+  "geometry_source": "route-segment",
+  "icao_location": "ZWUQ",
+  "icao_text": "A5036/26 NOTAMN\r\nQ)ZWUQ/QARLT/IV/NBO/E/371/999/\r\nA)ZWUQ B)2610080130 C)2610081200 \r\nE) FLW SEGMENT OF ATS RTE CLSD AT 11,300M AND ABOVE:\r\n1.W192:RUSDI-140KM NORTH OF RUSDI\r\n2.W187:OBDEG-SAKLU\r\n3.Y1  :SUNPU-190KM WEST OF SUNPU.\r\nF)FL371 G)FL999",
+  "id": "1791372987456000",
+  "issued": "2026-10-07T11:35:00.000Z",
+  "last_updated": "2026-10-07T11:36:00.000Z",
+  "local_text": null,
+  "location": "ZWUQ",
+  "lower": "FL371",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A5036/26",
+  "purpose": "NBO",
+  "q_code": "QARLT",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "FLW SEGMENT OF ATS RTE CLSD AT 11,300M AND ABOVE:\r\n1.W192:RUSDI-140KM NORTH OF RUSDI\r\n2.W187:OBDEG-SAKLU\r\n3.Y1  :SUNPU-190KM WEST OF SUNPU.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL999",
+  "year": "2026"
  }
 }
