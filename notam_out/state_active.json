@@ -90251,312 +90251,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790977102443760": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-07T07:00:00Z",
-  "effective_start": "2026-10-03T12:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-10-02T21:40:28+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      -120.0,
-      34.991017
-     ],
-     [
-      -119.435114,
-      34.966984
-     ],
-     [
-      -118.875669,
-      34.895116
-     ],
-     [
-      -118.327052,
-      34.776105
-     ],
-     [
-      -117.794546,
-      34.611098
-     ],
-     [
-      -117.283279,
-      34.401684
-     ],
-     [
-      -116.798177,
-      34.149879
-     ],
-     [
-      -116.343909,
-      33.858108
-     ],
-     [
-      -115.924852,
-      33.529182
-     ],
-     [
-      -115.54504,
-      33.166268
-     ],
-     [
-      -115.208133,
-      32.77286
-     ],
-     [
-      -114.917373,
-      32.352749
-     ],
-     [
-      -114.675562,
-      31.909979
-     ],
-     [
-      -114.485029,
-      31.448816
-     ],
-     [
-      -114.347607,
-      30.973699
-     ],
-     [
-      -114.264621,
-      30.489205
-     ],
-     [
-      -114.23687,
-      30.0
-     ],
-     [
-      -114.264621,
-      29.510795
-     ],
-     [
-      -114.347607,
-      29.026301
-     ],
-     [
-      -114.485029,
-      28.551184
-     ],
-     [
-      -114.675562,
-      28.090021
-     ],
-     [
-      -114.917373,
-      27.647251
-     ],
-     [
-      -115.208133,
-      27.22714
-     ],
-     [
-      -115.54504,
-      26.833732
-     ],
-     [
-      -115.924852,
-      26.470818
-     ],
-     [
-      -116.343909,
-      26.141892
-     ],
-     [
-      -116.798177,
-      25.850121
-     ],
-     [
-      -117.283279,
-      25.598316
-     ],
-     [
-      -117.794546,
-      25.388902
-     ],
-     [
-      -118.327052,
-      25.223895
-     ],
-     [
-      -118.875669,
-      25.104884
-     ],
-     [
-      -119.435114,
-      25.033016
-     ],
-     [
-      -120.0,
-      25.008983
-     ],
-     [
-      -120.564886,
-      25.033016
-     ],
-     [
-      -121.124331,
-      25.104884
-     ],
-     [
-      -121.672948,
-      25.223895
-     ],
-     [
-      -122.205454,
-      25.388902
-     ],
-     [
-      -122.716721,
-      25.598316
-     ],
-     [
-      -123.201823,
-      25.850121
-     ],
-     [
-      -123.656091,
-      26.141892
-     ],
-     [
-      -124.075148,
-      26.470818
-     ],
-     [
-      -124.45496,
-      26.833732
-     ],
-     [
-      -124.791867,
-      27.22714
-     ],
-     [
-      -125.082627,
-      27.647251
-     ],
-     [
-      -125.324438,
-      28.090021
-     ],
-     [
-      -125.514971,
-      28.551184
-     ],
-     [
-      -125.652393,
-      29.026301
-     ],
-     [
-      -125.735379,
-      29.510795
-     ],
-     [
-      -125.76313,
-      30.0
-     ],
-     [
-      -125.735379,
-      30.489205
-     ],
-     [
-      -125.652393,
-      30.973699
-     ],
-     [
-      -125.514971,
-      31.448816
-     ],
-     [
-      -125.324438,
-      31.909979
-     ],
-     [
-      -125.082627,
-      32.352749
-     ],
-     [
-      -124.791867,
-      32.77286
-     ],
-     [
-      -124.45496,
-      33.166268
-     ],
-     [
-      -124.075148,
-      33.529182
-     ],
-     [
-      -123.656091,
-      33.858108
-     ],
-     [
-      -123.201823,
-      34.149879
-     ],
-     [
-      -122.716721,
-      34.401684
-     ],
-     [
-      -122.205454,
-      34.611098
-     ],
-     [
-      -121.672948,
-      34.776105
-     ],
-     [
-      -121.124331,
-      34.895116
-     ],
-     [
-      -120.564886,
-      34.966984
-     ],
-     [
-      -120.0,
-      34.991017
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "KZAK",
-  "icao_text": "A4822/26 NOTAMN\nQ) KZAK/QXXXX////000/700/\nA) KZAK\nB) 2610031200\nC) 2610070700\nE) ATTENTION ACFT OPR AND DISPATCHERS OPERATING WI OAKLAND OCEANIC (KZAK) IN THE VCY OF W291 EAST AND WEST. THE FOLLOWING AIRSPACE NOTAM IS INFORMATIONAL ONLY. ACFT MAY TRANSIT THE AIRSPACE. THE U.S. NAVY PLANS MULTIPLE SPHERE LAUNCHES WI 300NM RADIUS OF 300000N1200000W. A 20 IN DIAMETER ALUMINUM SPHERE WILL BE CONNECTED TO THE 55 FT DIAMETER BALLOON BY A 10000 FT WIRE. SPHERES ARE EXPECTED TO CLIMB UP TO 70000FT. KZAK DOES NOT TRACK THESE BALLOONS OR SPHERES. QUESTIONS CAN BE DIRECTED TO AEROSTAR TEL 833-676-2376.\nF) SFC\nG) FL700",
-  "id": "1790977102443760",
-  "issued": "2026-10-02T21:37:00Z",
-  "last_updated": "2026-10-02T21:37:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": "700",
-  "min_fl": "000",
-  "number": "A4822/26",
-  "purpose": null,
-  "q_code": "QXXXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": "A",
-  "text": "ATTENTION ACFT OPR AND DISPATCHERS OPERATING WI OAKLAND OCEANIC (KZAK) IN THE VCY OF W291 EAST AND WEST. THE FOLLOWING AIRSPACE NOTAM IS INFORMATIONAL ONLY. ACFT MAY TRANSIT THE AIRSPACE. THE U.S. NAVY PLANS MULTIPLE SPHERE LAUNCHES WI 300NM RADIUS OF 300000N1200000W. A 20 IN DIAMETER ALUMINUM SPHERE WILL BE CONNECTED TO THE 55 FT DIAMETER BALLOON BY A 10000 FT WIRE. SPHERES ARE EXPECTED TO CLIMB UP TO 70000FT. KZAK DOES NOT TRACK THESE BALLOONS OR SPHERES. QUESTIONS CAN BE DIRECTED TO AEROSTAR TEL 833-676-2376.",
-  "traffic": null,
-  "type": "N",
-  "upper": "FL700",
-  "year": "2026"
- },
  "1790992347796000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -111099,98 +110793,6 @@
   "traffic": "IV",
   "type": "N",
   "upper": null,
-  "year": "2026"
- },
- "1791232948100964": {
-  "account_id": "SUAW",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "DOM",
-  "coordinates": null,
-  "effective_end": "2026-10-07T06:59:00Z",
-  "effective_start": "2026-10-06T13:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-10-05T20:46:08+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": null,
-  "id": "1791232948100964",
-  "issued": "2026-10-05T20:41:00Z",
-  "last_updated": "2026-10-05T20:41:00Z",
-  "local_text": "!SUAW 10/523 ZAK AIRSPACE W291E ACT SFC-FL800 2610061300-2610070659",
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": null,
-  "min_fl": null,
-  "number": "10/523",
-  "purpose": null,
-  "q_code": "QROLT",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": null,
-  "series": null,
-  "text": "!SUAW 10/523 ZAK AIRSPACE W291E ACT SFC-FL800",
-  "traffic": null,
-  "type": null,
-  "upper": "FL800",
-  "year": "2026"
- },
- "1791232949577205": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-07T06:59:00Z",
-  "effective_start": "2026-10-06T13:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-10-05T20:46:08+00:00",
-  "geometry": {
-   "coordinates": [
-    -122.01579444,
-    37.54243611
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "KZAK",
-  "icao_text": "A4853/26 NOTAMN\nQ) KZAK/QROLT/IV/NBO/W/000/800/\nA) KZAK\nB) 2610061300\nC) 2610070659\nE) AIRSPACE W291E ACT\nF) SFC\nG) FL800",
-  "id": "1791232949577205",
-  "issued": "2026-10-05T20:41:00Z",
-  "last_updated": "2026-10-05T20:41:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": "800",
-  "min_fl": "000",
-  "number": "A4853/26",
-  "purpose": "NBO",
-  "q_code": "QROLT",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "W",
-  "series": "A",
-  "text": "AIRSPACE W291E ACT",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "FL800",
   "year": "2026"
  },
  "1791234819593000": {
@@ -151309,8 +150911,8 @@
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "2228N12020E",
-  "effective_end": "2027-01-22T16:00:00.000Z",
-  "effective_start": "2026-10-27T16:00:00.000Z",
+  "effective_end": "2027-01-22T16:00:00Z",
+  "effective_start": "2026-10-27T16:00:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
@@ -151355,12 +150957,12 @@
   "icao_location": "RCAA",
   "icao_text": "U2586/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/000/040/2228N12020E007\r\nA) RCAA\r\nB) 2610271600 C) 2701221600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260922000201\r\n2.LCA:PINGTUNG CITY, PINGTUNG COUNTY\r\n3.THE AREA OVERLAPS PART OF VFR CORRIDOR C9 AND C15, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n5.AREA AS FLW:\r\n222918N 1202430E\r\n223056N 1202425E\r\n223056N 1202626E\r\n222721N 1202631E\r\n222634N 1201341E\r\n222835N 1201340E\r\n222918N 1202430E\r\nF) SFC G) 4000FT AMSL",
   "id": "1791355826650000",
-  "issued": "2026-10-07T06:50:00.000Z",
-  "last_updated": "2026-10-07T06:50:00.000Z",
+  "issued": "2026-10-07T06:50:00Z",
+  "last_updated": "2026-10-07T06:51:00Z",
   "local_text": null,
   "location": "RCAA",
   "lower": "SFC",
-  "max_fl": "999",
+  "max_fl": "040",
   "min_fl": "000",
   "number": "U2586/26",
   "purpose": "BO",
@@ -151375,6 +150977,694 @@
   "traffic": "IV",
   "type": "N",
   "upper": "4000FT AMSL",
+  "year": "2026"
+ },
+ "1791355883217000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2227N11957E",
+  "effective_end": "2027-01-22T16:00:00.000Z",
+  "effective_start": "2026-10-27T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-07T07:00:50+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.034167,
+      22.464444
+     ],
+     [
+      120.2275,
+      22.478056
+     ],
+     [
+      120.226389,
+      22.445278
+     ],
+     [
+      120.035,
+      22.431389
+     ],
+     [
+      119.662778,
+      22.406389
+     ],
+     [
+      119.663333,
+      22.440556
+     ],
+     [
+      120.034167,
+      22.464444
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2587/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/000/040/2227N11957E017\r\nA) RCAA\r\nB) 2610271600 C) 2701221600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260922000202\r\n2.LCA:ZUOYING DISTRICT, KAOHSIUNG CITY\r\n3.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n4.AREA AS FLW:\r\n222752N 1200203E\r\n222841N 1201339E\r\n222643N 1201335E\r\n222553N 1200206E\r\n222423N 1193946E\r\n222626N 1193948E\r\n222752N 1200203E\r\nF) SFC G) 4000FT AMSL",
+  "id": "1791355883217000",
+  "issued": "2026-10-07T06:51:00.000Z",
+  "last_updated": "2026-10-07T06:51:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2587/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 1.4,
+  "radius_nm": 17.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260922000202\r\n2.LCA:ZUOYING DISTRICT, KAOHSIUNG CITY\r\n3.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n4.AREA AS FLW:\r\n222752N 1200203E\r\n222841N 1201339E\r\n222643N 1201335E\r\n222553N 1200206E\r\n222423N 1193946E\r\n222626N 1193948E\r\n222752N 1200203E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "4000FT AMSL",
+  "year": "2026"
+ },
+ "1791355942001000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2241N12028E",
+  "effective_end": "2027-01-22T16:00:00.000Z",
+  "effective_start": "2026-10-27T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-07T07:00:50+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.434167,
+      22.677222
+     ],
+     [
+      120.466389,
+      22.716667
+     ],
+     [
+      120.466667,
+      22.683889
+     ],
+     [
+      120.467778,
+      22.677778
+     ],
+     [
+      120.451389,
+      22.653333
+     ],
+     [
+      120.418056,
+      22.653611
+     ],
+     [
+      120.434167,
+      22.677222
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2588/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/000/030/2241N12028E003\r\nA) RCAA\r\nB) 2610271600 C) 2701221600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260922000101\r\n2.LCA:PINGTUNG CITY, PINGTUNG COUNTY\r\n3.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n4.AREA AS FLW:\r\n224038N 1202603E\r\n224300N 1202759E\r\n224102N 1202800E\r\n224040N 1202804E\r\n223912N 1202705E\r\n223913N 1202505E\r\n224038N 1202603E\r\nF) SFC G) 3000FT AMSL",
+  "id": "1791355942001000",
+  "issued": "2026-10-07T06:52:00.000Z",
+  "last_updated": "2026-10-07T06:52:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2588/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 1.0,
+  "radius_nm": 3.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260922000101\r\n2.LCA:PINGTUNG CITY, PINGTUNG COUNTY\r\n3.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n4.AREA AS FLW:\r\n224038N 1202603E\r\n224300N 1202759E\r\n224102N 1202800E\r\n224040N 1202804E\r\n223912N 1202705E\r\n223913N 1202505E\r\n224038N 1202603E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "3000FT AMSL",
+  "year": "2026"
+ },
+ "1791356000000000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2235N12026E",
+  "effective_end": "2027-01-22T16:00:00.000Z",
+  "effective_start": "2026-10-27T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-07T07:00:50+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.43,
+      22.575278
+     ],
+     [
+      120.417778,
+      22.653889
+     ],
+     [
+      120.451389,
+      22.653333
+     ],
+     [
+      120.463056,
+      22.575833
+     ],
+     [
+      120.440833,
+      22.515556
+     ],
+     [
+      120.407222,
+      22.515833
+     ],
+     [
+      120.43,
+      22.575278
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCKH",
+  "icao_text": "U2589/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/040/2235N12026E005\r\nA) RCKH\r\nB) 2610271600 C) 2701221600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260922000102\r\n2.LCA:PINGTUNG CITY, PINGTUNG COUNTY\r\n3.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n4.AREA AS FLW:\r\n223431N 1202548E\r\n223914N 1202504E\r\n223912N 1202705E\r\n223433N 1202747E\r\n223056N 1202627E\r\n223057N 1202426E\r\n223431N 1202548E\r\nF) SFC G) 4000FT AMSL",
+  "id": "1791356000000000",
+  "issued": "2026-10-07T06:53:00.000Z",
+  "last_updated": "2026-10-07T06:53:00.000Z",
+  "local_text": null,
+  "location": "RCKH",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2589/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.1,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260922000102\r\n2.LCA:PINGTUNG CITY, PINGTUNG COUNTY\r\n3.COOR TEL:0972-808655, 0980-757215, 0965-036786\r\n4.AREA AS FLW:\r\n223431N 1202548E\r\n223914N 1202504E\r\n223912N 1202705E\r\n223433N 1202747E\r\n223056N 1202627E\r\n223057N 1202426E\r\n223431N 1202548E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "4000FT AMSL",
+  "year": "2026"
+ },
+ "1791356073045000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2415N12039E",
+  "effective_end": "2026-12-31T16:00:00Z",
+  "effective_start": "2026-10-10T16:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-07T07:00:50+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.643889,
+      24.260556
+     ],
+     [
+      120.646667,
+      24.258611
+     ],
+     [
+      120.644444,
+      24.255
+     ],
+     [
+      120.641667,
+      24.256667
+     ],
+     [
+      120.643889,
+      24.260556
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCMQ",
+  "icao_text": "U2590/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/011/2415N12039E001\r\nA) RCMQ\r\nB) 2610101600 C) 2612311600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260704000101\r\n2.LCA:SHENGANG DISTRICT, TAICHUNG CITY\r\n3.COOR TEL:0916-800720, 0989-129753, 0958-540820\r\n4.AREA AS FLW:\r\n241538N 1203838E\r\n241531N 1203848E\r\n241518N 1203840E\r\n241524N 1203830E\r\n241538N 1203838E\r\n5.MAX HGT: 400FT AGL\r\nF) SFC G) 1100FT AMSL",
+  "id": "1791356073045000",
+  "issued": "2026-10-07T06:54:00Z",
+  "last_updated": "2026-10-07T06:55:00Z",
+  "local_text": null,
+  "location": "RCMQ",
+  "lower": "SFC",
+  "max_fl": "011",
+  "min_fl": "000",
+  "number": "U2590/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.6,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260704000101\r\n2.LCA:SHENGANG DISTRICT, TAICHUNG CITY\r\n3.COOR TEL:0916-800720, 0989-129753, 0958-540820\r\n4.AREA AS FLW:\r\n241538N 1203838E\r\n241531N 1203848E\r\n241518N 1203840E\r\n241524N 1203830E\r\n241538N 1203838E\r\n5.MAX HGT: 400FT AGL",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "1100FT AMSL",
+  "year": "2026"
+ },
+ "1791356141596000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2451N12054E",
+  "effective_end": "2026-11-20T16:00:00.000Z",
+  "effective_start": "2026-10-19T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-07T07:00:50+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.9025,
+      24.891389
+     ],
+     [
+      120.943611,
+      24.85
+     ],
+     [
+      120.900833,
+      24.811111
+     ],
+     [
+      120.854722,
+      24.850278
+     ],
+     [
+      120.9025,
+      24.891389
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2591/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/010/060/2451N12054E003\r\nA) RCAA\r\nB) 2610191600 C) 2611201600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260911000601\r\n2.LCA:ZHUBEI CITY, HSINCHU COUNTY\r\n3.THE AREA OVERLAPS RCR22 AND PART OF VFR CORRIDOR C11, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0908-156005, 0925-230382, 0915-571113\r\n5.AREA AS FLW:\r\n245329N 1205409E\r\n245100N 1205637E\r\n244840N 1205403E\r\n245101N 1205117E\r\n245329N 1205409E\r\nF) 1000FT AMSL G) 6000FT AMSL",
+  "id": "1791356141596000",
+  "issued": "2026-10-07T06:55:00.000Z",
+  "last_updated": "2026-10-07T06:55:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "1000FT AMSL",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2591/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.0,
+  "radius_nm": 3.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260911000601\r\n2.LCA:ZHUBEI CITY, HSINCHU COUNTY\r\n3.THE AREA OVERLAPS RCR22 AND PART OF VFR CORRIDOR C11, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0908-156005, 0925-230382, 0915-571113\r\n5.AREA AS FLW:\r\n245329N 1205409E\r\n245100N 1205637E\r\n244840N 1205403E\r\n245101N 1205117E\r\n245329N 1205409E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "6000FT AMSL",
+  "year": "2026"
+ },
+ "1791356190948000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2453N12051E",
+  "effective_end": "2026-11-20T16:00:00Z",
+  "effective_start": "2026-10-19T16:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-07T07:00:50+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.9025,
+      24.891389
+     ],
+     [
+      120.854722,
+      24.850278
+     ],
+     [
+      120.811667,
+      24.889444
+     ],
+     [
+      120.859722,
+      24.931389
+     ],
+     [
+      120.9025,
+      24.891389
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2592/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/010/060/2453N12051E004\r\nA) RCAA\r\nB) 2610191600 C) 2611201600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260911000602\r\n2.LCA:ZHUBEI CITY, HSINCHU COUNTY\r\n3.THE AREA OVERLAPS RCR22, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0908-156005, 0925-230382, 0915-571113\r\n5.AREA AS FLW:\r\n245329N 1205409E\r\n245101N 1205117E\r\n245322N 1204842E\r\n245553N 1205135E\r\n245329N 1205409E\r\nF) 1000FT AMSL G) 6000FT AMSL",
+  "id": "1791356190948000",
+  "issued": "2026-10-07T06:56:00Z",
+  "last_updated": "2026-10-07T06:57:00Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "1000FT AMSL",
+  "max_fl": "060",
+  "min_fl": "010",
+  "number": "U2592/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.6,
+  "radius_nm": 4.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260911000602\r\n2.LCA:ZHUBEI CITY, HSINCHU COUNTY\r\n3.THE AREA OVERLAPS RCR22, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0908-156005, 0925-230382, 0915-571113\r\n5.AREA AS FLW:\r\n245329N 1205409E\r\n245101N 1205117E\r\n245322N 1204842E\r\n245553N 1205135E\r\n245329N 1205409E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "6000FT AMSL",
+  "year": "2026"
+ },
+ "1791356246330000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2529N12045E",
+  "effective_end": "2026-11-20T16:00:00.000Z",
+  "effective_start": "2026-10-19T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-07T07:00:50+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.645556,
+      25.283333
+     ],
+     [
+      120.494444,
+      25.4925
+     ],
+     [
+      120.675556,
+      25.674444
+     ],
+     [
+      121.010556,
+      25.465278
+     ],
+     [
+      120.645556,
+      25.283333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2593/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/010/080/2529N12045E015\r\nA) RCAA\r\nB) 2610191600 C) 2611201600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260911000501\r\n2.LCA:ZHUBEI CITY, HSINCHU COUNTY\r\n3.THE AREA OVERLAPS RCR9, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0908-156005, 0925-230382, 0915-571113\r\n5.AREA AS FLW:\r\n251700N 1203844E\r\n252933N 1202940E\r\n254028N 1204032E\r\n252755N 1210038E\r\n251700N 1203844E\r\nF) 1000FT AMSL G) 8000FT AMSL",
+  "id": "1791356246330000",
+  "issued": "2026-10-07T06:57:00.000Z",
+  "last_updated": "2026-10-07T06:57:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "1000FT AMSL",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2593/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 2.4,
+  "radius_nm": 15.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260911000501\r\n2.LCA:ZHUBEI CITY, HSINCHU COUNTY\r\n3.THE AREA OVERLAPS RCR9, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0908-156005, 0925-230382, 0915-571113\r\n5.AREA AS FLW:\r\n251700N 1203844E\r\n252933N 1202940E\r\n254028N 1204032E\r\n252755N 1210038E\r\n251700N 1203844E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "8000FT AMSL",
+  "year": "2026"
+ },
+ "1791356302207000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2535N12052E",
+  "effective_end": "2026-11-20T16:00:00.000Z",
+  "effective_start": "2026-10-19T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-07T07:00:50+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.010556,
+      25.465278
+     ],
+     [
+      120.675556,
+      25.674444
+     ],
+     [
+      120.716944,
+      25.715278
+     ],
+     [
+      121.066389,
+      25.493056
+     ],
+     [
+      121.010556,
+      25.465278
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2594/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/010/080/2535N12052E013\r\nA) RCAA\r\nB) 2610191600 C) 2611201600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260911000502\r\n2.LCA:ZHUBEI CITY, HSINCHU COUNTY\r\n3.THE AREA OVERLAPS RCR9 AND PART OF RESTRICTED \r\n  VFR RTE MT2, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0908-156005, 0925-230382, 0915-571113\r\n5.AREA AS FLW:\r\n252755N 1210038E\r\n254028N 1204032E\r\n254255N 1204301E\r\n252935N 1210359E\r\n252755N 1210038E\r\nF) 1000FT AMSL G) 8000FT AMSL",
+  "id": "1791356302207000",
+  "issued": "2026-10-07T06:58:00.000Z",
+  "last_updated": "2026-10-07T06:58:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "1000FT AMSL",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2594/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.2,
+  "radius_nm": 13.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260911000502\r\n2.LCA:ZHUBEI CITY, HSINCHU COUNTY\r\n3.THE AREA OVERLAPS RCR9 AND PART OF RESTRICTED \r\n  VFR RTE MT2, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0908-156005, 0925-230382, 0915-571113\r\n5.AREA AS FLW:\r\n252755N 1210038E\r\n254028N 1204032E\r\n254255N 1204301E\r\n252935N 1210359E\r\n252755N 1210038E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "8000FT AMSL",
+  "year": "2026"
+ },
+ "1791356353071000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2545N12106E",
+  "effective_end": "2026-11-20T16:00:00.000Z",
+  "effective_start": "2026-10-19T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-07T07:00:50+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.066389,
+      25.493056
+     ],
+     [
+      120.716944,
+      25.715278
+     ],
+     [
+      121.005833,
+      26.0075
+     ],
+     [
+      121.258889,
+      26.064444
+     ],
+     [
+      121.478056,
+      25.698333
+     ],
+     [
+      121.066389,
+      25.493056
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2595/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/010/080/2545N12106E021\r\nA) RCAA\r\nB) 2610191600 C) 2611201600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260911000503\r\n2.LCA:ZHUBEI CITY, HSINCHU COUNTY\r\n3.THE AREA OVERLAPS PART OF A1 MIL TRAINING AREA \r\n  AND RCR9, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0908-156005, 0925-230382, 0915-571113\r\n5.AREA AS FLW:\r\n252935N 1210359E\r\n254255N 1204301E\r\n260027N 1210021E\r\n260352N 1211532E\r\n254154N 1212841E\r\n252935N 1210359E\r\nF) 1000FT AMSL G) 8000FT AMSL",
+  "id": "1791356353071000",
+  "issued": "2026-10-07T06:59:00.000Z",
+  "last_updated": "2026-10-07T06:59:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "1000FT AMSL",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2595/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 2.8,
+  "radius_nm": 21.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260911000503\r\n2.LCA:ZHUBEI CITY, HSINCHU COUNTY\r\n3.THE AREA OVERLAPS PART OF A1 MIL TRAINING AREA \r\n  AND RCR9, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0908-156005, 0925-230382, 0915-571113\r\n5.AREA AS FLW:\r\n252935N 1210359E\r\n254255N 1204301E\r\n260027N 1210021E\r\n260352N 1211532E\r\n254154N 1212841E\r\n252935N 1210359E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "8000FT AMSL",
+  "year": "2026"
+ },
+ "1791356431160000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2539N12215E",
+  "effective_end": "2026-11-20T16:00:00.000Z",
+  "effective_start": "2026-10-19T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-07T07:00:50+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.718056,
+      25.713333
+     ],
+     [
+      122.033611,
+      26.039444
+     ],
+     [
+      122.770556,
+      25.579444
+     ],
+     [
+      122.440556,
+      25.222222
+     ],
+     [
+      121.718056,
+      25.713333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2596/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/010/080/2539N12215E030\r\nA) RCAA\r\nB) 2610191600 C) 2611201600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260911000504\r\n2.LCA:ZHUBEI CITY, HSINCHU COUNTY\r\n3.THE AREA OVERLAPS PART OF A1 MIL TRAINING AREA \r\n  AND RCR25, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0908-156005, 0925-230382, 0915-571113\r\n5.AREA AS FLW:\r\n254248N 1214305E\r\n260222N 1220201E\r\n253446N 1224614E\r\n251320N 1222626E\r\n254248N 1214305E\r\nF) 1000FT AMSL G) 8000FT AMSL",
+  "id": "1791356431160000",
+  "issued": "2026-10-07T07:00:00.000Z",
+  "last_updated": "2026-10-07T07:00:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "1000FT AMSL",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2596/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.8,
+  "radius_nm": 30.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260911000504\r\n2.LCA:ZHUBEI CITY, HSINCHU COUNTY\r\n3.THE AREA OVERLAPS PART OF A1 MIL TRAINING AREA \r\n  AND RCR25, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0908-156005, 0925-230382, 0915-571113\r\n5.AREA AS FLW:\r\n254248N 1214305E\r\n260222N 1220201E\r\n253446N 1224614E\r\n251320N 1222626E\r\n254248N 1214305E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "8000FT AMSL",
   "year": "2026"
  }
 }
