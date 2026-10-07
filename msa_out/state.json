@@ -15464,6 +15464,18 @@
     "title": "黄海南部“五洲2404”轮试航—云航警150/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/3fe5addc469a493692fbd75969bdb7f5.html?hav=1jWj6r2hy5di2hwep8SpnFKltu"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/402b82fc68394f9f8bb5a9571d62eea2.html": {
+    "bureau": "河北海事局",
+    "date": "2026-10-07",
+    "detail_fetched": false,
+    "first_seen": "2026-10-07T05:50:37+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警691/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/402b82fc68394f9f8bb5a9571d62eea2.html"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/4048e1ae24df4f22b5565ca5b1860f87.html": {
     "bureau": "山东海事局",
     "cancels": [],
@@ -37223,6 +37235,18 @@
     "title": "有效航警简报—南部航警34/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/85fe41e1040a4d878e86d08560c915b2.html?hav=1jWj6r2hy3yfmJVdh4xKi3fDTI"
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/863dd4bfacef430fbf9ef5d239eb79be.html": {
+    "bureau": "河北海事局",
+    "date": "2026-10-07",
+    "detail_fetched": false,
+    "first_seen": "2026-10-07T05:50:37+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警692/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/863dd4bfacef430fbf9ef5d239eb79be.html"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/8648db149f194fcca09473f8382f280a.html": {
     "bureau": "辽宁海事局",
     "cancels": [],
@@ -55482,11 +55506,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ea6a16b4b3db40fbb2ec1c2f09841482.html": {
     "bureau": "河北海事局",
+    "cancels": [],
     "date": "2026-10-07",
     "detail_fetched": false,
     "first_seen": "2026-10-07T05:40:38+00:00",
     "groups": [],
     "military": false,
+    "own_id": "冀航警689/26",
     "points": [],
     "revoked": false,
     "title": "水下检验—冀航警689/26",
@@ -55954,6 +55980,18 @@
     "revoked": false,
     "title": "MINERAL ZAMBIA、HUI YUE HAI和FRONT VEFSNA轮航经虾峙门外深水航槽—浙航警792/26",
     "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ec8b23cee9844953901b0117a9245b34.html?hav=1jWj6r2hy5di2WEeMN9EeXly2i"
+  },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ec9fce673735493e9585126e8a491395.html": {
+    "bureau": "河北海事局",
+    "date": "2026-10-07",
+    "detail_fetched": false,
+    "first_seen": "2026-10-07T05:50:37+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "水下检验—冀航警690/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ec9fce673735493e9585126e8a491395.html"
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/ecbe3be3ab0d47dab5ed769a0a74a700.html": {
     "bureau": "深圳海事局",
