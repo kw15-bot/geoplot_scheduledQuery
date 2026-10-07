@@ -150366,5 +150366,71 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1791345224062000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1505N12031E",
+  "effective_end": "2026-11-13T00:30:00.000Z",
+  "effective_start": "2026-10-07T03:53:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-07T04:00:49+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.533611,
+      15.208333
+     ],
+     [
+      120.581389,
+      15.19
+     ],
+     [
+      120.493056,
+      14.960278
+     ],
+     [
+      120.445278,
+      14.978611
+     ],
+     [
+      120.533611,
+      15.208333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPLC",
+  "icao_text": "B5356/26 NOTAMR B4506/26\r\nQ) RPHI/QWYLW/IV/M  /AW/000/040/1505N12031E008\r\nA) RPLC B) 2610070353 C) 2611130030\r\nD) MON-FRI 2350-0030\r\nE) AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n151230N 1203201E -\r\n151124N 1203453E -\r\n145737N 1202935E -\r\n145843N 1202643E -\r\n151230N 1203201E\r\n(BASA AIRBASE TO CLARK, PAMPANGA).\r\nF) SFC G) 4000FT AMSL",
+  "id": "1791345224062000",
+  "issued": "2026-10-07T03:53:00.000Z",
+  "last_updated": "2026-10-07T03:53:00.000Z",
+  "local_text": null,
+  "location": "RPLC",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5356/26",
+  "purpose": "M  ",
+  "q_code": "QWYLW",
+  "qline_offset_nm": 0.2,
+  "radius_nm": 8.0,
+  "ref_number": "B4506/26",
+  "schedule": "MON-FRI 2350-0030",
+  "scope": "AW",
+  "series": "B",
+  "text": "AERIAL SURVEY ACT WILL TAKE PLACE WI:\r\n151230N 1203201E -\r\n151124N 1203453E -\r\n145737N 1202935E -\r\n145843N 1202643E -\r\n151230N 1203201E\r\n(BASA AIRBASE TO CLARK, PAMPANGA).",
+  "traffic": "IV",
+  "type": "R",
+  "upper": "4000FT AMSL",
+  "year": "2026"
  }
 }
