@@ -149428,5 +149428,71 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1791354537119000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2239N12027E",
+  "effective_end": "2026-11-29T11:00:00Z",
+  "effective_start": "2026-10-13T21:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-07T06:30:39+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.479722,
+      22.6775
+     ],
+     [
+      120.495,
+      22.635278
+     ],
+     [
+      120.420278,
+      22.617222
+     ],
+     [
+      120.406944,
+      22.663333
+     ],
+     [
+      120.479722,
+      22.6775
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCKH",
+  "icao_text": "U2564/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/006/2239N12027E003\r\nA) RCKH\r\nB) 2610132100 C) 2611291100\r\nD) 2100-1100\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260917000301\r\n2.LCA:PINGTUNG CITY, PINGTUNG COUNTY\r\n3.COOR TEL:0976-026133\r\n4.AREA AS FLW:\r\n224039N 1202847E\r\n223807N 1202942E\r\n223702N 1202513E\r\n223948N 1202425E\r\n224039N 1202847E\r\nF) SFC G) 600FT AMSL",
+  "id": "1791354537119000",
+  "issued": "2026-10-07T06:28:00Z",
+  "last_updated": "2026-10-07T06:29:00Z",
+  "local_text": null,
+  "location": "RCKH",
+  "lower": "SFC",
+  "max_fl": "006",
+  "min_fl": "000",
+  "number": "U2564/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.1,
+  "radius_nm": 3.0,
+  "ref_number": null,
+  "schedule": "2100-1100",
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260917000301\r\n2.LCA:PINGTUNG CITY, PINGTUNG COUNTY\r\n3.COOR TEL:0976-026133\r\n4.AREA AS FLW:\r\n224039N 1202847E\r\n223807N 1202942E\r\n223702N 1202513E\r\n223948N 1202425E\r\n224039N 1202847E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "600FT AMSL",
+  "year": "2026"
  }
 }
