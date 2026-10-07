@@ -130401,52 +130401,6 @@
   "upper": null,
   "year": "2026"
  },
- "1791283837500000": {
-  "account_id": "RCTPYNYX",
-  "area_group": "TW",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2502N12039E",
-  "effective_end": "2026-10-07T05:00:00Z",
-  "effective_start": "2026-10-06T12:00:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RCAA",
-  "first_seen": "2026-10-06T10:51:06+00:00",
-  "geometry": {
-   "coordinates": [
-    120.65,
-    25.033333
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "RCAA",
-  "icao_text": "A3727/26 NOTAMN\r\nQ) RCAA/QPFCA/IV/NBO/E/000/999/2502N12039E299\r\nA) RCAA\r\nB) 2610061200 C) 2610070500\r\nE) CONSEQUENT TO FLOW CTL IMPOSED BY MANILA ACC,\r\nFLOW CTL AT FIR BDRY AS FLW:\r\nACFT DEP FM KOREA/JAPAN OVERFLYING TAIPEI FIR ENTERING\r\nMANILA FIR VIA KABAM IS SUBJECT TO THE FLW RESTRICTIONS:\r\n(1) 10 MIN INTERVAL REGARDLESS OF ALT AT SALMI\r\n(2) 15 MIN INTERVAL REGARDLESS OF ALT AT BULAN\r\n(3) 12 MIN INTERVAL REGARDLESS OF ALT AT IGURU\r\n(DEP FM KOREA VIA SALMI ONLY)\r\n(DEP FM JAPAN VIA BULAN/IGURU ONLY)\r\n(VVDN BE EXCLUDED)",
-  "id": "1791283837500000",
-  "issued": "2026-10-06T10:50:00Z",
-  "last_updated": "2026-10-06T10:51:00Z",
-  "local_text": null,
-  "location": "RCAA",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A3727/26",
-  "purpose": "NBO",
-  "q_code": "QPFCA",
-  "qline_offset_nm": null,
-  "radius_nm": 299.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "E",
-  "series": "A",
-  "text": "CONSEQUENT TO FLOW CTL IMPOSED BY MANILA ACC,\r\nFLOW CTL AT FIR BDRY AS FLW:\r\nACFT DEP FM KOREA/JAPAN OVERFLYING TAIPEI FIR ENTERING\r\nMANILA FIR VIA KABAM IS SUBJECT TO THE FLW RESTRICTIONS:\r\n(1) 10 MIN INTERVAL REGARDLESS OF ALT AT SALMI\r\n(2) 15 MIN INTERVAL REGARDLESS OF ALT AT BULAN\r\n(3) 12 MIN INTERVAL REGARDLESS OF ALT AT IGURU\r\n(DEP FM KOREA VIA SALMI ONLY)\r\n(DEP FM JAPAN VIA BULAN/IGURU ONLY)\r\n(VVDN BE EXCLUDED)",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1791284595404000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
@@ -131360,312 +131314,6 @@
   "scope": "AE",
   "series": "Y",
   "text": "QIQIHAR VOR/DME&apos;NDG&apos;112.9MHZ/CH76X U/S DUE TO MAINT.",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1791285330444000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "4051N11149E",
-  "effective_end": "2026-10-07T21:30:00Z",
-  "effective_start": "2026-10-07T17:20:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZBPE",
-  "first_seen": "2026-10-06T11:20:32+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      111.816667,
-      40.933184
-     ],
-     [
-      111.827446,
-      40.932783
-     ],
-     [
-      111.838121,
-      40.931585
-     ],
-     [
-      111.848589,
-      40.929602
-     ],
-     [
-      111.85875,
-      40.926852
-     ],
-     [
-      111.868506,
-      40.923361
-     ],
-     [
-      111.877762,
-      40.919165
-     ],
-     [
-      111.886431,
-      40.914302
-     ],
-     [
-      111.894427,
-      40.90882
-     ],
-     [
-      111.901674,
-      40.902771
-     ],
-     [
-      111.908103,
-      40.896214
-     ],
-     [
-      111.913651,
-      40.889212
-     ],
-     [
-      111.918265,
-      40.881833
-     ],
-     [
-      111.921901,
-      40.874147
-     ],
-     [
-      111.924523,
-      40.866228
-     ],
-     [
-      111.926107,
-      40.858153
-     ],
-     [
-      111.926636,
-      40.85
-     ],
-     [
-      111.926107,
-      40.841847
-     ],
-     [
-      111.924523,
-      40.833772
-     ],
-     [
-      111.921901,
-      40.825853
-     ],
-     [
-      111.918265,
-      40.818167
-     ],
-     [
-      111.913651,
-      40.810788
-     ],
-     [
-      111.908103,
-      40.803786
-     ],
-     [
-      111.901674,
-      40.797229
-     ],
-     [
-      111.894427,
-      40.79118
-     ],
-     [
-      111.886431,
-      40.785698
-     ],
-     [
-      111.877762,
-      40.780835
-     ],
-     [
-      111.868506,
-      40.776639
-     ],
-     [
-      111.85875,
-      40.773148
-     ],
-     [
-      111.848589,
-      40.770398
-     ],
-     [
-      111.838121,
-      40.768415
-     ],
-     [
-      111.827446,
-      40.767217
-     ],
-     [
-      111.816667,
-      40.766816
-     ],
-     [
-      111.805888,
-      40.767217
-     ],
-     [
-      111.795213,
-      40.768415
-     ],
-     [
-      111.784744,
-      40.770398
-     ],
-     [
-      111.774583,
-      40.773148
-     ],
-     [
-      111.764827,
-      40.776639
-     ],
-     [
-      111.755571,
-      40.780835
-     ],
-     [
-      111.746903,
-      40.785698
-     ],
-     [
-      111.738907,
-      40.79118
-     ],
-     [
-      111.731659,
-      40.797229
-     ],
-     [
-      111.72523,
-      40.803786
-     ],
-     [
-      111.719682,
-      40.810788
-     ],
-     [
-      111.715068,
-      40.818167
-     ],
-     [
-      111.711432,
-      40.825853
-     ],
-     [
-      111.70881,
-      40.833772
-     ],
-     [
-      111.707227,
-      40.841847
-     ],
-     [
-      111.706697,
-      40.85
-     ],
-     [
-      111.707227,
-      40.858153
-     ],
-     [
-      111.70881,
-      40.866228
-     ],
-     [
-      111.711432,
-      40.874147
-     ],
-     [
-      111.715068,
-      40.881833
-     ],
-     [
-      111.719682,
-      40.889212
-     ],
-     [
-      111.72523,
-      40.896214
-     ],
-     [
-      111.731659,
-      40.902771
-     ],
-     [
-      111.738907,
-      40.90882
-     ],
-     [
-      111.746903,
-      40.914302
-     ],
-     [
-      111.755571,
-      40.919165
-     ],
-     [
-      111.764827,
-      40.923361
-     ],
-     [
-      111.774583,
-      40.926852
-     ],
-     [
-      111.784744,
-      40.929602
-     ],
-     [
-      111.795213,
-      40.931585
-     ],
-     [
-      111.805888,
-      40.932783
-     ],
-     [
-      111.816667,
-      40.933184
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "ZBHH",
-  "icao_text": "E3987/26 NOTAMN\r\nQ)ZBPE/QMRLC/IV/NBO/A/000/999/4051N11149E005\r\nA)ZBHH B)2610071720 C)2610072130 \r\nE) RWY08/26 CLSD DUE TO WIP.",
-  "id": "1791285330444000",
-  "issued": "2026-10-06T11:14:00Z",
-  "last_updated": "2026-10-06T11:16:00Z",
-  "local_text": null,
-  "location": "ZBHH",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "E3987/26",
-  "purpose": "NBO",
-  "q_code": "QMRLC",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "A",
-  "series": "E",
-  "text": "RWY08/26 CLSD DUE TO WIP.",
   "traffic": "IV",
   "type": "N",
   "upper": null,
@@ -149231,8 +148879,8 @@
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "3817N11442E",
-  "effective_end": "2026-10-09T09:30:00.000Z",
-  "effective_start": "2026-10-09T07:30:00.000Z",
+  "effective_end": "2026-10-09T09:30:00Z",
+  "effective_start": "2026-10-09T07:30:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
@@ -149507,10 +149155,10 @@
   },
   "geometry_source": "qline-circle",
   "icao_location": "ZBSJ",
-  "icao_text": "E3993/26 NOTAMN\r\nQ)ZBPE/QFWAS/V/M/A/000/999/3817N11442E005\r\nA)ZBSJ B)2610090730 C)2610090930 \r\nE) RWY33 WIND SENSORS U/S DUE TO MAINT.\r\n ",
+  "icao_text": "E3993/26 NOTAMN\r\nQ)ZBPE/QFWAS/V/M/A/000/999/3817N11442E005\r\nA)ZBSJ B)2610090730 C)2610090930 \r\nE) RWY33 WIND SENSORS U/S DUE TO MAINT.",
   "id": "1791342574241000",
-  "issued": "2026-10-07T03:07:00.000Z",
-  "last_updated": "2026-10-07T03:09:00.000Z",
+  "issued": "2026-10-07T03:07:00Z",
+  "last_updated": "2026-10-07T03:10:00Z",
   "local_text": null,
   "location": "ZBSJ",
   "lower": null,
@@ -149528,6 +149176,98 @@
   "text": "RWY33 WIND SENSORS U/S DUE TO MAINT.",
   "traffic": "V",
   "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791342824223000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2502N12039E",
+  "effective_end": "2026-10-08T03:00:00Z",
+  "effective_start": "2026-10-07T03:13:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-07T03:20:28+00:00",
+  "geometry": {
+   "coordinates": [
+    120.65,
+    25.033333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RCAA",
+  "icao_text": "A3749/26 NOTAMR A3727/26\r\nQ) RCAA/QPFCA/IV/NBO/E/000/999/2502N12039E299\r\nA) RCAA\r\nB) 2610070313 C) 2610080300\r\nE) CONSEQUENT TO FLOW CTL IMPOSED BY MANILA ACC,\r\nFLOW CTL AT FIR BDRY AS FLW:\r\nACFT DEP FM KOREA/JAPAN OVERFLYING TAIPEI FIR ENTERING\r\nMANILA FIR VIA KABAM IS SUBJECT TO THE FLW RESTRICTIONS:\r\n(1) 10 MIN INTERVAL REGARDLESS OF ALT AT SALMI\r\n(2) 15 MIN INTERVAL REGARDLESS OF ALT AT BULAN\r\n(3) 12 MIN INTERVAL REGARDLESS OF ALT AT IGURU\r\n(DEP FM KOREA VIA SALMI ONLY)\r\n(DEP FM JAPAN VIA BULAN/IGURU ONLY)\r\n(VVDN BE EXCLUDED)",
+  "id": "1791342824223000",
+  "issued": "2026-10-07T03:13:00Z",
+  "last_updated": "2026-10-07T03:14:00Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3749/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 299.0,
+  "ref_number": "A3727/26",
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "CONSEQUENT TO FLOW CTL IMPOSED BY MANILA ACC,\r\nFLOW CTL AT FIR BDRY AS FLW:\r\nACFT DEP FM KOREA/JAPAN OVERFLYING TAIPEI FIR ENTERING\r\nMANILA FIR VIA KABAM IS SUBJECT TO THE FLW RESTRICTIONS:\r\n(1) 10 MIN INTERVAL REGARDLESS OF ALT AT SALMI\r\n(2) 15 MIN INTERVAL REGARDLESS OF ALT AT BULAN\r\n(3) 12 MIN INTERVAL REGARDLESS OF ALT AT IGURU\r\n(DEP FM KOREA VIA SALMI ONLY)\r\n(DEP FM JAPAN VIA BULAN/IGURU ONLY)\r\n(VVDN BE EXCLUDED)",
+  "traffic": "IV",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791342888055000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-10T03:11:00Z",
+  "effective_start": "2026-10-07T03:11:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZBPE",
+  "first_seen": "2026-10-07T03:20:28+00:00",
+  "geometry": {
+   "coordinates": [
+    111.823333,
+    40.848333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "ZBHH",
+  "icao_text": "E3994/26 NOTAMC E3987/26\r\nQ)ZBPE/QMRXX//M//000/999/\r\nA)ZBHH B)2610070311 \r\nE) SEE NEXT NTM.",
+  "id": "1791342888055000",
+  "issued": "2026-10-07T03:14:00Z",
+  "last_updated": "2026-10-07T03:15:00Z",
+  "local_text": null,
+  "location": "ZBHH",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "E3994/26",
+  "purpose": "M",
+  "q_code": "QMRXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "E3987/26",
+  "schedule": null,
+  "scope": null,
+  "series": "E",
+  "text": "E3994/26 NOTAMC E3987/26\r\nQ)ZBPE/QMRXX//M//000/999/\r\nA)ZBHH B)2610070311 \r\nE) SEE NEXT NTM.",
+  "traffic": null,
+  "type": "C",
   "upper": null,
   "year": "2026"
  }
