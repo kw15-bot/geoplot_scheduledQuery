@@ -143968,5 +143968,357 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1791335539886000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2502N12039E",
+  "effective_end": "2026-10-07T03:00:00.000Z",
+  "effective_start": "2026-10-07T01:20:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-07T01:20:28+00:00",
+  "geometry": {
+   "coordinates": [
+    120.65,
+    25.033333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RCAA",
+  "icao_text": "A3734/26 NOTAMN\r\nQ) RCAA/QARXX/IV/NBO/E/000/999/2502N12039E299\r\nA) RCAA\r\nB) 2610070120 C) 2610070300\r\nE) REF AIP SUP 23/26, AIRSPACE BLOCKED DUE TO FLIGHT TESTING AND\r\nRELATED ALTERNATE ROUTES AND MEASURES.\r\nOCT 07 0200-0300 SUSPENDED,\r\nRELATED ALTERNATE ROUTES AND MEASURES DRG\r\nOCT 07 0120-0300 SUSPENDED.",
+  "id": "1791335539886000",
+  "issued": "2026-10-07T01:12:00.000Z",
+  "last_updated": "2026-10-07T01:12:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3734/26",
+  "purpose": "NBO",
+  "q_code": "QARXX",
+  "qline_offset_nm": null,
+  "radius_nm": 299.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "REF AIP SUP 23/26, AIRSPACE BLOCKED DUE TO FLIGHT TESTING AND\r\nRELATED ALTERNATE ROUTES AND MEASURES.\r\nOCT 07 0200-0300 SUSPENDED,\r\nRELATED ALTERNATE ROUTES AND MEASURES DRG\r\nOCT 07 0120-0300 SUSPENDED.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791336025436000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "4004N11636E",
+  "effective_end": "2026-10-08T19:00:00.000Z",
+  "effective_start": "2026-10-08T17:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZBPE",
+  "first_seen": "2026-10-07T01:20:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      116.6,
+      40.14985
+     ],
+     [
+      116.610654,
+      40.14945
+     ],
+     [
+      116.621205,
+      40.148252
+     ],
+     [
+      116.631552,
+      40.146268
+     ],
+     [
+      116.641596,
+      40.143518
+     ],
+     [
+      116.651238,
+      40.140028
+     ],
+     [
+      116.660388,
+      40.135831
+     ],
+     [
+      116.668955,
+      40.130968
+     ],
+     [
+      116.676859,
+      40.125486
+     ],
+     [
+      116.684022,
+      40.119438
+     ],
+     [
+      116.690376,
+      40.112881
+     ],
+     [
+      116.69586,
+      40.105879
+     ],
+     [
+      116.700421,
+      40.0985
+     ],
+     [
+      116.704014,
+      40.090814
+     ],
+     [
+      116.706606,
+      40.082895
+     ],
+     [
+      116.708171,
+      40.07482
+     ],
+     [
+      116.708695,
+      40.066667
+     ],
+     [
+      116.708171,
+      40.058513
+     ],
+     [
+      116.706606,
+      40.050438
+     ],
+     [
+      116.704014,
+      40.04252
+     ],
+     [
+      116.700421,
+      40.034834
+     ],
+     [
+      116.69586,
+      40.027454
+     ],
+     [
+      116.690376,
+      40.020452
+     ],
+     [
+      116.684022,
+      40.013896
+     ],
+     [
+      116.676859,
+      40.007847
+     ],
+     [
+      116.668955,
+      40.002365
+     ],
+     [
+      116.660388,
+      39.997502
+     ],
+     [
+      116.651238,
+      39.993305
+     ],
+     [
+      116.641596,
+      39.989815
+     ],
+     [
+      116.631552,
+      39.987065
+     ],
+     [
+      116.621205,
+      39.985081
+     ],
+     [
+      116.610654,
+      39.983884
+     ],
+     [
+      116.6,
+      39.983483
+     ],
+     [
+      116.589346,
+      39.983884
+     ],
+     [
+      116.578795,
+      39.985081
+     ],
+     [
+      116.568448,
+      39.987065
+     ],
+     [
+      116.558404,
+      39.989815
+     ],
+     [
+      116.548762,
+      39.993305
+     ],
+     [
+      116.539612,
+      39.997502
+     ],
+     [
+      116.531045,
+      40.002365
+     ],
+     [
+      116.523141,
+      40.007847
+     ],
+     [
+      116.515978,
+      40.013896
+     ],
+     [
+      116.509624,
+      40.020452
+     ],
+     [
+      116.50414,
+      40.027454
+     ],
+     [
+      116.499579,
+      40.034834
+     ],
+     [
+      116.495986,
+      40.04252
+     ],
+     [
+      116.493394,
+      40.050438
+     ],
+     [
+      116.491829,
+      40.058513
+     ],
+     [
+      116.491305,
+      40.066667
+     ],
+     [
+      116.491829,
+      40.07482
+     ],
+     [
+      116.493394,
+      40.082895
+     ],
+     [
+      116.495986,
+      40.090814
+     ],
+     [
+      116.499579,
+      40.0985
+     ],
+     [
+      116.50414,
+      40.105879
+     ],
+     [
+      116.509624,
+      40.112881
+     ],
+     [
+      116.515978,
+      40.119438
+     ],
+     [
+      116.523141,
+      40.125486
+     ],
+     [
+      116.531045,
+      40.130968
+     ],
+     [
+      116.539612,
+      40.135831
+     ],
+     [
+      116.548762,
+      40.140028
+     ],
+     [
+      116.558404,
+      40.143518
+     ],
+     [
+      116.568448,
+      40.146268
+     ],
+     [
+      116.578795,
+      40.148252
+     ],
+     [
+      116.589346,
+      40.14945
+     ],
+     [
+      116.6,
+      40.14985
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZBAA",
+  "icao_text": "E3989/26 NOTAMN\r\nQ)ZBPE/QICAS/I/NBO/A/000/999/4004N11636E005\r\nA)ZBAA B)2610081700 C)2610081900 \r\nE) RWY36L ILS U/S DUE TO MAINT.\r\n ",
+  "id": "1791336025436000",
+  "issued": "2026-10-07T01:19:00.000Z",
+  "last_updated": "2026-10-07T01:20:00.000Z",
+  "local_text": null,
+  "location": "ZBAA",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "E3989/26",
+  "purpose": "NBO",
+  "q_code": "QICAS",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "E",
+  "text": "RWY36L ILS U/S DUE TO MAINT.",
+  "traffic": "I",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
  }
 }
