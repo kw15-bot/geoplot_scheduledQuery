@@ -160488,5 +160488,605 @@
   "type": "N",
   "upper": "UNL",
   "year": "2026"
+ },
+ "1791397739892705": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-10T12:23:00Z",
+  "effective_start": "2026-10-10T06:01:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T18:40:33+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -124.3,
+      34.983333
+     ],
+     [
+      -122.333333,
+      35.033333
+     ],
+     [
+      -122.25,
+      34.266667
+     ],
+     [
+      -124.216667,
+      33.9
+     ],
+     [
+      -124.3,
+      34.983333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4903/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/999/\nA) KZAK\nB) 2610100601\nC) 2610101223\nE) ZAK AIRSPACE DCC ASTERION 26-1 STNR ALT RESERVATION \nAREA B WI AN AREA DEFINED AS 345900N1241800W TO 350200N1222000W TO 341600N1221500W TO 335400N1241300W TO POINT OF ORIGIN\nF) SFC\nG) UNL",
+  "id": "1791397739892705",
+  "issued": "2026-10-07T18:27:00Z",
+  "last_updated": "2026-10-07T18:28:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4903/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE DCC ASTERION 26-1 STNR ALT RESERVATION \nAREA B WI AN AREA DEFINED AS 345900N1241800W TO 350200N1222000W TO 341600N1221500W TO 335400N1241300W TO POINT OF ORIGIN",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1791397744855573": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-10T12:23:00Z",
+  "effective_start": "2026-10-10T06:01:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T18:40:33+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -124.3,
+      34.983333
+     ],
+     [
+      -122.333333,
+      35.033333
+     ],
+     [
+      -122.25,
+      34.266667
+     ],
+     [
+      -124.216667,
+      33.9
+     ],
+     [
+      -124.3,
+      34.983333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1791397744855573",
+  "issued": "2026-10-07T18:27:00Z",
+  "last_updated": "2026-10-07T18:28:00Z",
+  "local_text": "!CARF 10/085 ZAK AIRSPACE DCC ASTERION 26-1 STNR ALT RESERVATION AREA B WI AN AREA DEFINED AS 345900N1241800W TO 350200N1222000W TO 341600N1221500W TO 335400N1241300W TO POINT OF ORIGIN SFC-UNL 2610100601-2610101223",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "10/085",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 10/085 ZAK AIRSPACE DCC ASTERION 26-1 STNR ALT RESERVATION AREA B WI AN AREA DEFINED AS 345900N1241800W TO 350200N1222000W TO 341600N1221500W TO 335400N1241300W TO POINT OF ORIGIN SFC-UNL",
+  "traffic": null,
+  "type": null,
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1791397993615449": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-10T15:10:00Z",
+  "effective_start": "2026-10-10T14:20:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T18:40:33+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -133.65,
+      20.6
+     ],
+     [
+      -129.85,
+      24.866667
+     ],
+     [
+      -127.05,
+      27.75
+     ],
+     [
+      -125.35,
+      28.65
+     ],
+     [
+      -124.916667,
+      28.266667
+     ],
+     [
+      -123.85,
+      27.933333
+     ],
+     [
+      -123.416667,
+      27.55
+     ],
+     [
+      -123.316667,
+      27.116667
+     ],
+     [
+      -124.166667,
+      25.5
+     ],
+     [
+      -126.9,
+      22.616667
+     ],
+     [
+      -130.65,
+      18.35
+     ],
+     [
+      -131.9,
+      19.383333
+     ],
+     [
+      -132.4,
+      19.55
+     ],
+     [
+      -133.65,
+      20.6
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1791397993615449",
+  "issued": "2026-10-07T18:31:00Z",
+  "last_updated": "2026-10-07T18:32:00Z",
+  "local_text": "!CARF 10/088 ZAK AIRSPACE DCC NASA CREW12 REENTRY 10OCT ASCENDING ISS STNR ALT RESERVATION WI AN AREA DEFINED AS 203600N1333900W TO 245200N1295100W TO 274500N1270300W TO 283900N1252100W TO 281600N1245500W TO 275600N1235100W TO 273300N1232500W TO 270700N1231900W TO 253000N1241000W TO 223700N1265400W TO 182100N1303900W TO 192300N1315400W TO 193300N1322400W TO POINT OF ORIGIN SFC-UNL 2610101420-2610101510",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "10/088",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 10/088 ZAK AIRSPACE DCC NASA CREW12 REENTRY 10OCT ASCENDING ISS STNR ALT RESERVATION WI AN AREA DEFINED AS 203600N1333900W TO 245200N1295100W TO 274500N1270300W TO 283900N1252100W TO 281600N1245500W TO 275600N1235100W TO 273300N1232500W TO 270700N1231900W TO 253000N1241000W TO 223700N1265400W TO 182100N1303900W TO 192300N1315400W TO 193300N1322400W TO POINT OF ORIGIN SFC-UNL",
+  "traffic": null,
+  "type": null,
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1791397993828698": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-10T15:10:00Z",
+  "effective_start": "2026-10-10T14:20:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T18:40:33+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -133.65,
+      20.6
+     ],
+     [
+      -129.85,
+      24.866667
+     ],
+     [
+      -127.05,
+      27.75
+     ],
+     [
+      -125.35,
+      28.65
+     ],
+     [
+      -124.916667,
+      28.266667
+     ],
+     [
+      -123.85,
+      27.933333
+     ],
+     [
+      -123.416667,
+      27.55
+     ],
+     [
+      -123.316667,
+      27.116667
+     ],
+     [
+      -124.166667,
+      25.5
+     ],
+     [
+      -126.9,
+      22.616667
+     ],
+     [
+      -130.65,
+      18.35
+     ],
+     [
+      -131.9,
+      19.383333
+     ],
+     [
+      -132.4,
+      19.55
+     ],
+     [
+      -133.65,
+      20.6
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4904/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/999/\nA) KZAK\nB) 2610101420\nC) 2610101510\nE) ZAK AIRSPACE DCC NASA CREW12 REENTRY 10OCT ASCENDING ISS STNR ALT RESERVATION WI AN AREA DEFINED AS 203600N1333900W TO 245200N1295100W TO 274500N1270300W TO 283900N1252100W TO 281600N1245500W TO 275600N1235100W TO 273300N1232500W TO 270700N1231900W TO 253000N1241000W TO 223700N1265400W TO 182100N1303900W TO 192300N1315400W TO 193300N1322400W TO POINT OF ORIGIN\nF) SFC\nG) UNL",
+  "id": "1791397993828698",
+  "issued": "2026-10-07T18:31:00Z",
+  "last_updated": "2026-10-07T18:32:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4904/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE DCC NASA CREW12 REENTRY 10OCT ASCENDING ISS STNR ALT RESERVATION WI AN AREA DEFINED AS 203600N1333900W TO 245200N1295100W TO 274500N1270300W TO 283900N1252100W TO 281600N1245500W TO 275600N1235100W TO 273300N1232500W TO 270700N1231900W TO 253000N1241000W TO 223700N1265400W TO 182100N1303900W TO 192300N1315400W TO 193300N1322400W TO POINT OF ORIGIN",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1791398173248384": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-10T12:28:00Z",
+  "effective_start": "2026-10-10T06:01:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T18:40:33+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -132.45,
+      34.533333
+     ],
+     [
+      -130.683333,
+      34.75
+     ],
+     [
+      -130.366667,
+      32.4
+     ],
+     [
+      -132.1,
+      32.216667
+     ],
+     [
+      -132.45,
+      34.533333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1791398173248384",
+  "issued": "2026-10-07T18:35:00Z",
+  "last_updated": "2026-10-07T18:36:00Z",
+  "local_text": "!CARF 10/091 ZAK AIRSPACE DCC ASTERION 26-1 STNR ALT RESERVATION AREA C WI AN AREA DEFINED AS 343200N1322700W TO 344500N1304100W TO 322400N1302200W TO 321300N1320600W TO POINT OF ORIGIN SFC-UNL 2610100601-2610101228",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "10/091",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 10/091 ZAK AIRSPACE DCC ASTERION 26-1 STNR ALT RESERVATION AREA C WI AN AREA DEFINED AS 343200N1322700W TO 344500N1304100W TO 322400N1302200W TO 321300N1320600W TO POINT OF ORIGIN SFC-UNL",
+  "traffic": null,
+  "type": null,
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1791398185383666": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-10T12:28:00Z",
+  "effective_start": "2026-10-10T06:01:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T18:40:33+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -132.45,
+      34.533333
+     ],
+     [
+      -130.683333,
+      34.75
+     ],
+     [
+      -130.366667,
+      32.4
+     ],
+     [
+      -132.1,
+      32.216667
+     ],
+     [
+      -132.45,
+      34.533333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4906/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/999/\nA) KZAK\nB) 2610100601\nC) 2610101228\nE) ZAK AIRSPACE DCC ASTERION 26-1 STNR ALT RESERVATION \nAREA C WI AN AREA DEFINED AS 343200N1322700W TO 344500N1304100W TO 322400N1302200W TO 321300N1320600W TO POINT OF ORIGIN\nF) SFC\nG) UNL",
+  "id": "1791398185383666",
+  "issued": "2026-10-07T18:35:00Z",
+  "last_updated": "2026-10-07T18:36:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4906/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE DCC ASTERION 26-1 STNR ALT RESERVATION \nAREA C WI AN AREA DEFINED AS 343200N1322700W TO 344500N1304100W TO 322400N1302200W TO 321300N1320600W TO POINT OF ORIGIN",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1791398186069173": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-10T12:34:00Z",
+  "effective_start": "2026-10-10T06:01:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T18:40:33+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -164.183333,
+      24.533333
+     ],
+     [
+      -161.9,
+      25.416667
+     ],
+     [
+      -161.566667,
+      24.583333
+     ],
+     [
+      -163.866667,
+      23.7
+     ],
+     [
+      -164.183333,
+      24.533333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": "A4905/26 NOTAMN\nQ) KZAK/QRACA/IV/NBO/W/000/999/\nA) KZAK\nB) 2610100601\nC) 2610101234\nE) ZAK AIRSPACE DCC ASTERION 26-1 STNR ALT RESERVATION \nAREA D WI AN AREA DEFINED AS 243200N1641100W TO 252500N1615400W TO 243500N1613400W TO 234200N1635200W TO POINT OF ORIGIN\nF) SFC\nG) UNL",
+  "id": "1791398186069173",
+  "issued": "2026-10-07T18:34:00Z",
+  "last_updated": "2026-10-07T18:35:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4905/26",
+  "purpose": "NBO",
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "ZAK AIRSPACE DCC ASTERION 26-1 STNR ALT RESERVATION \nAREA D WI AN AREA DEFINED AS 243200N1641100W TO 252500N1615400W TO 243500N1613400W TO 234200N1635200W TO POINT OF ORIGIN",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "UNL",
+  "year": "2026"
+ },
+ "1791398186134973": {
+  "account_id": "CARF",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "DOM",
+  "coordinates": null,
+  "effective_end": "2026-10-10T12:34:00Z",
+  "effective_start": "2026-10-10T06:01:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-07T18:40:33+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      -164.183333,
+      24.533333
+     ],
+     [
+      -161.9,
+      25.416667
+     ],
+     [
+      -161.566667,
+      24.583333
+     ],
+     [
+      -163.866667,
+      23.7
+     ],
+     [
+      -164.183333,
+      24.533333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "KZAK",
+  "icao_text": null,
+  "id": "1791398186134973",
+  "issued": "2026-10-07T18:34:00Z",
+  "last_updated": "2026-10-07T18:35:00Z",
+  "local_text": "!CARF 10/090 ZAK AIRSPACE DCC ASTERION 26-1 STNR ALT RESERVATION AREA D WI AN AREA DEFINED AS 243200N1641100W TO 252500N1615400W TO 243500N1613400W TO 234200N1635200W TO POINT OF ORIGIN SFC-UNL 2610100601-2610101234",
+  "location": "ZAK",
+  "lower": "SFC",
+  "max_fl": null,
+  "min_fl": null,
+  "number": "10/090",
+  "purpose": null,
+  "q_code": "QRACA",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": null,
+  "schedule": null,
+  "scope": null,
+  "series": null,
+  "text": "!CARF 10/090 ZAK AIRSPACE DCC ASTERION 26-1 STNR ALT RESERVATION AREA D WI AN AREA DEFINED AS 243200N1641100W TO 252500N1615400W TO 243500N1613400W TO 234200N1635200W TO POINT OF ORIGIN SFC-UNL",
+  "traffic": null,
+  "type": null,
+  "upper": "UNL",
+  "year": "2026"
  }
 }
