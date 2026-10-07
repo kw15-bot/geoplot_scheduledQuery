@@ -4895,312 +4895,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790581681611000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2323N11319E",
-  "effective_end": "2026-10-08T15:59:00Z",
-  "effective_start": "2026-09-28T07:33:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZGZU",
-  "first_seen": "2026-09-28T07:50:29+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      113.316667,
-      23.466517
-     ],
-     [
-      113.32555,
-      23.466116
-     ],
-     [
-      113.334347,
-      23.464919
-     ],
-     [
-      113.342974,
-      23.462935
-     ],
-     [
-      113.351348,
-      23.460185
-     ],
-     [
-      113.359388,
-      23.456695
-     ],
-     [
-      113.367016,
-      23.452498
-     ],
-     [
-      113.37416,
-      23.447635
-     ],
-     [
-      113.380749,
-      23.442153
-     ],
-     [
-      113.386722,
-      23.436104
-     ],
-     [
-      113.39202,
-      23.429548
-     ],
-     [
-      113.396592,
-      23.422546
-     ],
-     [
-      113.400395,
-      23.415166
-     ],
-     [
-      113.403391,
-      23.40748
-     ],
-     [
-      113.405552,
-      23.399562
-     ],
-     [
-      113.406857,
-      23.391487
-     ],
-     [
-      113.407293,
-      23.383333
-     ],
-     [
-      113.406857,
-      23.37518
-     ],
-     [
-      113.405552,
-      23.367105
-     ],
-     [
-      113.403391,
-      23.359186
-     ],
-     [
-      113.400395,
-      23.3515
-     ],
-     [
-      113.396592,
-      23.344121
-     ],
-     [
-      113.39202,
-      23.337119
-     ],
-     [
-      113.386722,
-      23.330562
-     ],
-     [
-      113.380749,
-      23.324514
-     ],
-     [
-      113.37416,
-      23.319032
-     ],
-     [
-      113.367016,
-      23.314169
-     ],
-     [
-      113.359388,
-      23.309972
-     ],
-     [
-      113.351348,
-      23.306482
-     ],
-     [
-      113.342974,
-      23.303732
-     ],
-     [
-      113.334347,
-      23.301748
-     ],
-     [
-      113.32555,
-      23.30055
-     ],
-     [
-      113.316667,
-      23.30015
-     ],
-     [
-      113.307784,
-      23.30055
-     ],
-     [
-      113.298986,
-      23.301748
-     ],
-     [
-      113.290359,
-      23.303732
-     ],
-     [
-      113.281985,
-      23.306482
-     ],
-     [
-      113.273945,
-      23.309972
-     ],
-     [
-      113.266317,
-      23.314169
-     ],
-     [
-      113.259174,
-      23.319032
-     ],
-     [
-      113.252584,
-      23.324514
-     ],
-     [
-      113.246611,
-      23.330562
-     ],
-     [
-      113.241313,
-      23.337119
-     ],
-     [
-      113.236741,
-      23.344121
-     ],
-     [
-      113.232938,
-      23.3515
-     ],
-     [
-      113.229942,
-      23.359186
-     ],
-     [
-      113.227781,
-      23.367105
-     ],
-     [
-      113.226476,
-      23.37518
-     ],
-     [
-      113.22604,
-      23.383333
-     ],
-     [
-      113.226476,
-      23.391487
-     ],
-     [
-      113.227781,
-      23.399562
-     ],
-     [
-      113.229942,
-      23.40748
-     ],
-     [
-      113.232938,
-      23.415166
-     ],
-     [
-      113.236741,
-      23.422546
-     ],
-     [
-      113.241313,
-      23.429548
-     ],
-     [
-      113.246611,
-      23.436104
-     ],
-     [
-      113.252584,
-      23.442153
-     ],
-     [
-      113.259174,
-      23.447635
-     ],
-     [
-      113.266317,
-      23.452498
-     ],
-     [
-      113.273945,
-      23.456695
-     ],
-     [
-      113.281985,
-      23.460185
-     ],
-     [
-      113.290359,
-      23.462935
-     ],
-     [
-      113.298986,
-      23.464919
-     ],
-     [
-      113.307784,
-      23.466116
-     ],
-     [
-      113.316667,
-      23.466517
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "ZGGG",
-  "icao_text": "G4351/26 NOTAMR G4283/26\r\nQ)ZGZU/QFAHX/IV/NBO/A/000/999/2323N11319E005\r\nA)ZGGG B)2609280733 C)2610081559 \r\nE) ACTIVITIES OF BIRD FLOCKS AND MIGRATION WILL TAKE PLACE AROUND \r\nAD:\r\n1. SEASONAL MIGRATORY BIRD THROUGH AD AND ADJACENT AIRSPACE.\r\nMIGRATION ROUTE:FROM NORTH TO SOUTH \r\nMIGRATION TIME:ALL DAY\r\nBIRD MIGRATION IS RELATIVELY HIGH DURING 1000-2300 AT ALT OF \r\n300M-4,500M\r\nBIRD STRIKE ARE MORE LIKELY TO OCCUR DURING THE FLIGHT PHASE AT \r\nDISTANCE OF 10KM-35KM RWY THR AND ALT OF 600M-1,800M.\r\nACFT ADVISE TO USE CONTINUOUS DESCENT OPERATION AND CONTINUOUS \r\nCLIMB OPERATION.\r\n2. HIGH RISK OF BIRD STRIKE ON OCT 01-02,OCT 04-05.\r\n3. SPORADIC BIRD ACTIVITY: \r\n3.1 TIME:2200-1030(NEXT DAY)\r\n    ALT: 0M-100M.\r\nSOME BIRDS ARE ACTIVE ALT OF 60M-200M PRIOR TO LANDING ON \r\nRWY02R/20L/03/21/01L/19R.\r\n3.2 TIME:1030-2200\r\n    ALT:0-200M\r\nAERODROME AUTHORITY RESORTS TO DISPERSAL METHODS TO REDUCE BIRD \r\nACTIVITIES.\r\nEXERCISE CAUTION WHILE LANDING AND TAKE-OFF.",
-  "id": "1790581681611000",
-  "issued": "2026-09-28T07:45:00Z",
-  "last_updated": "2026-09-28T07:49:00Z",
-  "local_text": null,
-  "location": "ZGGG",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "G4351/26",
-  "purpose": "NBO",
-  "q_code": "QFAHX",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": "G4283/26",
-  "schedule": null,
-  "scope": "A",
-  "series": "G",
-  "text": "ACTIVITIES OF BIRD FLOCKS AND MIGRATION WILL TAKE PLACE AROUND \r\nAD:\r\n1. SEASONAL MIGRATORY BIRD THROUGH AD AND ADJACENT AIRSPACE.\r\nMIGRATION ROUTE:FROM NORTH TO SOUTH \r\nMIGRATION TIME:ALL DAY\r\nBIRD MIGRATION IS RELATIVELY HIGH DURING 1000-2300 AT ALT OF \r\n300M-4,500M\r\nBIRD STRIKE ARE MORE LIKELY TO OCCUR DURING THE FLIGHT PHASE AT \r\nDISTANCE OF 10KM-35KM RWY THR AND ALT OF 600M-1,800M.\r\nACFT ADVISE TO USE CONTINUOUS DESCENT OPERATION AND CONTINUOUS \r\nCLIMB OPERATION.\r\n2. HIGH RISK OF BIRD STRIKE ON OCT 01-02,OCT 04-05.\r\n3. SPORADIC BIRD ACTIVITY: \r\n3.1 TIME:2200-1030(NEXT DAY)\r\n    ALT: 0M-100M.\r\nSOME BIRDS ARE ACTIVE ALT OF 60M-200M PRIOR TO LANDING ON \r\nRWY02R/20L/03/21/01L/19R.\r\n3.2 TIME:1030-2200\r\n    ALT:0-200M\r\nAERODROME AUTHORITY RESORTS TO DISPERSAL METHODS TO REDUCE BIRD \r\nACTIVITIES.\r\nEXERCISE CAUTION WHILE LANDING AND TAKE-OFF.",
-  "traffic": "IV",
-  "type": "R",
-  "upper": null,
-  "year": "2026"
- },
  "1790581695968000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
@@ -150431,6 +150125,312 @@
   "traffic": "IV",
   "type": "R",
   "upper": "4000FT AMSL",
+  "year": "2026"
+ },
+ "1791345979909000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2323N11319E",
+  "effective_end": "2026-10-14T15:59:00.000Z",
+  "effective_start": "2026-10-07T04:01:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZGZU",
+  "first_seen": "2026-10-07T04:10:30+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      113.316667,
+      23.466517
+     ],
+     [
+      113.32555,
+      23.466116
+     ],
+     [
+      113.334347,
+      23.464919
+     ],
+     [
+      113.342974,
+      23.462935
+     ],
+     [
+      113.351348,
+      23.460185
+     ],
+     [
+      113.359388,
+      23.456695
+     ],
+     [
+      113.367016,
+      23.452498
+     ],
+     [
+      113.37416,
+      23.447635
+     ],
+     [
+      113.380749,
+      23.442153
+     ],
+     [
+      113.386722,
+      23.436104
+     ],
+     [
+      113.39202,
+      23.429548
+     ],
+     [
+      113.396592,
+      23.422546
+     ],
+     [
+      113.400395,
+      23.415166
+     ],
+     [
+      113.403391,
+      23.40748
+     ],
+     [
+      113.405552,
+      23.399562
+     ],
+     [
+      113.406857,
+      23.391487
+     ],
+     [
+      113.407293,
+      23.383333
+     ],
+     [
+      113.406857,
+      23.37518
+     ],
+     [
+      113.405552,
+      23.367105
+     ],
+     [
+      113.403391,
+      23.359186
+     ],
+     [
+      113.400395,
+      23.3515
+     ],
+     [
+      113.396592,
+      23.344121
+     ],
+     [
+      113.39202,
+      23.337119
+     ],
+     [
+      113.386722,
+      23.330562
+     ],
+     [
+      113.380749,
+      23.324514
+     ],
+     [
+      113.37416,
+      23.319032
+     ],
+     [
+      113.367016,
+      23.314169
+     ],
+     [
+      113.359388,
+      23.309972
+     ],
+     [
+      113.351348,
+      23.306482
+     ],
+     [
+      113.342974,
+      23.303732
+     ],
+     [
+      113.334347,
+      23.301748
+     ],
+     [
+      113.32555,
+      23.30055
+     ],
+     [
+      113.316667,
+      23.30015
+     ],
+     [
+      113.307784,
+      23.30055
+     ],
+     [
+      113.298986,
+      23.301748
+     ],
+     [
+      113.290359,
+      23.303732
+     ],
+     [
+      113.281985,
+      23.306482
+     ],
+     [
+      113.273945,
+      23.309972
+     ],
+     [
+      113.266317,
+      23.314169
+     ],
+     [
+      113.259174,
+      23.319032
+     ],
+     [
+      113.252584,
+      23.324514
+     ],
+     [
+      113.246611,
+      23.330562
+     ],
+     [
+      113.241313,
+      23.337119
+     ],
+     [
+      113.236741,
+      23.344121
+     ],
+     [
+      113.232938,
+      23.3515
+     ],
+     [
+      113.229942,
+      23.359186
+     ],
+     [
+      113.227781,
+      23.367105
+     ],
+     [
+      113.226476,
+      23.37518
+     ],
+     [
+      113.22604,
+      23.383333
+     ],
+     [
+      113.226476,
+      23.391487
+     ],
+     [
+      113.227781,
+      23.399562
+     ],
+     [
+      113.229942,
+      23.40748
+     ],
+     [
+      113.232938,
+      23.415166
+     ],
+     [
+      113.236741,
+      23.422546
+     ],
+     [
+      113.241313,
+      23.429548
+     ],
+     [
+      113.246611,
+      23.436104
+     ],
+     [
+      113.252584,
+      23.442153
+     ],
+     [
+      113.259174,
+      23.447635
+     ],
+     [
+      113.266317,
+      23.452498
+     ],
+     [
+      113.273945,
+      23.456695
+     ],
+     [
+      113.281985,
+      23.460185
+     ],
+     [
+      113.290359,
+      23.462935
+     ],
+     [
+      113.298986,
+      23.464919
+     ],
+     [
+      113.307784,
+      23.466116
+     ],
+     [
+      113.316667,
+      23.466517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZGGG",
+  "icao_text": "G4445/26 NOTAMR G4351/26\r\nQ)ZGZU/QFAHX/IV/NBO/A/000/999/2323N11319E005\r\nA)ZGGG B)2610070401 C)2610141559 \r\nE) ACTIVITIES OF BIRD FLOCKS AND MIGRATION WILL TAKE PLACE AROUND \r\nAD:\r\n1. SEASONAL MIGRATORY BIRD THROUGH AD AND ADJACENT AIRSPACE.\r\nMIGRATION ROUTE:FROM NORTH TO SOUTH \r\nMIGRATION TIME:ALL DAY\r\nBIRD MIGRATION IS RELATIVELY HIGH DURING 1000-2300 AT ALT OF \r\n300M-4,500M\r\nBIRD STRIKE ARE MORE LIKELY TO OCCUR DURING THE FLIGHT PHASE AT \r\nDISTANCE OF 10KM-35KM RWY THR AND ALT OF 600M-1,800M.\r\nACFT ADVISE TO USE CONTINUOUS DESCENT OPERATION AND CONTINUOUS \r\nCLIMB OPERATION.\r\n2. SPORADIC BIRD ACTIVITY: \r\n2.1 TIME:2200-1030(NEXT DAY)\r\n    ALT: 0M-100M.\r\nSOME BIRDS ARE ACTIVE ALT OF 60M-200M PRIOR TO LANDING ON \r\nRWY02R/20L/03/21/01L/19R.\r\n2.2 TIME:1030-2200\r\n    ALT:0-200M\r\nAERODROME AUTHORITY RESORTS TO DISPERSAL METHODS TO REDUCE BIRD \r\nACTIVITIES.\r\nEXERCISE CAUTION WHILE LANDING AND TAKE-OFF.\r\n ",
+  "id": "1791345979909000",
+  "issued": "2026-10-07T04:05:00.000Z",
+  "last_updated": "2026-10-07T04:06:00.000Z",
+  "local_text": null,
+  "location": "ZGGG",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "G4445/26",
+  "purpose": "NBO",
+  "q_code": "QFAHX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "G4351/26",
+  "schedule": null,
+  "scope": "A",
+  "series": "G",
+  "text": "ACTIVITIES OF BIRD FLOCKS AND MIGRATION WILL TAKE PLACE AROUND \r\nAD:\r\n1. SEASONAL MIGRATORY BIRD THROUGH AD AND ADJACENT AIRSPACE.\r\nMIGRATION ROUTE:FROM NORTH TO SOUTH \r\nMIGRATION TIME:ALL DAY\r\nBIRD MIGRATION IS RELATIVELY HIGH DURING 1000-2300 AT ALT OF \r\n300M-4,500M\r\nBIRD STRIKE ARE MORE LIKELY TO OCCUR DURING THE FLIGHT PHASE AT \r\nDISTANCE OF 10KM-35KM RWY THR AND ALT OF 600M-1,800M.\r\nACFT ADVISE TO USE CONTINUOUS DESCENT OPERATION AND CONTINUOUS \r\nCLIMB OPERATION.\r\n2. SPORADIC BIRD ACTIVITY: \r\n2.1 TIME:2200-1030(NEXT DAY)\r\n    ALT: 0M-100M.\r\nSOME BIRDS ARE ACTIVE ALT OF 60M-200M PRIOR TO LANDING ON \r\nRWY02R/20L/03/21/01L/19R.\r\n2.2 TIME:1030-2200\r\n    ALT:0-200M\r\nAERODROME AUTHORITY RESORTS TO DISPERSAL METHODS TO REDUCE BIRD \r\nACTIVITIES.\r\nEXERCISE CAUTION WHILE LANDING AND TAKE-OFF.",
+  "traffic": "IV",
+  "type": "R",
+  "upper": null,
   "year": "2026"
  }
 }
