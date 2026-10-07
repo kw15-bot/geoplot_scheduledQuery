@@ -155636,5 +155636,377 @@
   "type": "R",
   "upper": null,
   "year": "2026"
+ },
+ "1791362648797000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2300N12020E",
+  "effective_end": "2026-12-16T05:00:00.000Z",
+  "effective_start": "2026-12-04T00:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-07T08:50:34+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.325833,
+      23.025556
+     ],
+     [
+      120.377778,
+      23.004444
+     ],
+     [
+      120.341667,
+      22.958611
+     ],
+     [
+      120.295,
+      22.986389
+     ],
+     [
+      120.325833,
+      23.025556
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "A3757/26 NOTAMN\r\nQ) RCAA/QWMLW/IV/BO/W/000/030/2300N12020E003\r\nA) RCAA\r\nB) 2612040000 C) 2612160500\r\nD) DEC 04 08 09 15 16 0000-0500\r\nE) GUN FRNG WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.OPR TEL: 06-2339947, 0926-190601, 0985-800373 \r\n3.AREA AS FLW:\r\n230132N 1201933E\r\n230016N 1202240E\r\n225731N 1202030E\r\n225911N 1201742E\r\n230132N 1201933E\r\nF) SFC G) 3000FT AMSL",
+  "id": "1791362648797000",
+  "issued": "2026-10-07T08:43:00.000Z",
+  "last_updated": "2026-10-07T08:44:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3757/26",
+  "purpose": "BO",
+  "q_code": "QWMLW",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 3.0,
+  "ref_number": null,
+  "schedule": "DEC 04 08 09 15 16 0000-0500",
+  "scope": "W",
+  "series": "A",
+  "text": "GUN FRNG WILL TAKE PLACE:\r\n1.AIRSPACE BLOCKED.\r\n2.OPR TEL: 06-2339947, 0926-190601, 0985-800373 \r\n3.AREA AS FLW:\r\n230132N 1201933E\r\n230016N 1202240E\r\n225731N 1202030E\r\n225911N 1201742E\r\n230132N 1201933E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "3000FT AMSL",
+  "year": "2026"
+ },
+ "1791363008350000": {
+  "account_id": "VHHHYNYX",
+  "area_group": "HK",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2003N11500E",
+  "effective_end": "2026-10-07T18:00:00.000Z",
+  "effective_start": "2026-10-07T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "VHHK",
+  "first_seen": "2026-10-07T08:50:34+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      115.0,
+      23.626895
+     ],
+     [
+      115.373216,
+      23.609672
+     ],
+     [
+      115.742838,
+      23.558166
+     ],
+     [
+      116.105306,
+      23.472876
+     ],
+     [
+      116.45713,
+      23.35462
+     ],
+     [
+      116.79492,
+      23.20454
+     ],
+     [
+      117.115424,
+      23.02408
+     ],
+     [
+      117.415556,
+      22.814978
+     ],
+     [
+      117.692425,
+      22.579247
+     ],
+     [
+      117.943364,
+      22.319158
+     ],
+     [
+      118.165956,
+      22.037217
+     ],
+     [
+      118.358059,
+      21.736137
+     ],
+     [
+      118.517822,
+      21.418819
+     ],
+     [
+      118.643707,
+      21.088318
+     ],
+     [
+      118.7345,
+      20.747818
+     ],
+     [
+      118.789329,
+      20.400597
+     ],
+     [
+      118.807663,
+      20.05
+     ],
+     [
+      118.789329,
+      19.699403
+     ],
+     [
+      118.7345,
+      19.352182
+     ],
+     [
+      118.643707,
+      19.011682
+     ],
+     [
+      118.517822,
+      18.681181
+     ],
+     [
+      118.358059,
+      18.363863
+     ],
+     [
+      118.165956,
+      18.062783
+     ],
+     [
+      117.943364,
+      17.780842
+     ],
+     [
+      117.692425,
+      17.520753
+     ],
+     [
+      117.415556,
+      17.285022
+     ],
+     [
+      117.115424,
+      17.07592
+     ],
+     [
+      116.79492,
+      16.89546
+     ],
+     [
+      116.45713,
+      16.74538
+     ],
+     [
+      116.105306,
+      16.627124
+     ],
+     [
+      115.742838,
+      16.541834
+     ],
+     [
+      115.373216,
+      16.490328
+     ],
+     [
+      115.0,
+      16.473105
+     ],
+     [
+      114.626784,
+      16.490328
+     ],
+     [
+      114.257162,
+      16.541834
+     ],
+     [
+      113.894694,
+      16.627124
+     ],
+     [
+      113.54287,
+      16.74538
+     ],
+     [
+      113.20508,
+      16.89546
+     ],
+     [
+      112.884576,
+      17.07592
+     ],
+     [
+      112.584444,
+      17.285022
+     ],
+     [
+      112.307575,
+      17.520753
+     ],
+     [
+      112.056636,
+      17.780842
+     ],
+     [
+      111.834044,
+      18.062783
+     ],
+     [
+      111.641941,
+      18.363863
+     ],
+     [
+      111.482178,
+      18.681181
+     ],
+     [
+      111.356293,
+      19.011682
+     ],
+     [
+      111.2655,
+      19.352182
+     ],
+     [
+      111.210671,
+      19.699403
+     ],
+     [
+      111.192337,
+      20.05
+     ],
+     [
+      111.210671,
+      20.400597
+     ],
+     [
+      111.2655,
+      20.747818
+     ],
+     [
+      111.356293,
+      21.088318
+     ],
+     [
+      111.482178,
+      21.418819
+     ],
+     [
+      111.641941,
+      21.736137
+     ],
+     [
+      111.834044,
+      22.037217
+     ],
+     [
+      112.056636,
+      22.319158
+     ],
+     [
+      112.307575,
+      22.579247
+     ],
+     [
+      112.584444,
+      22.814978
+     ],
+     [
+      112.884576,
+      23.02408
+     ],
+     [
+      113.20508,
+      23.20454
+     ],
+     [
+      113.54287,
+      23.35462
+     ],
+     [
+      113.894694,
+      23.472876
+     ],
+     [
+      114.257162,
+      23.558166
+     ],
+     [
+      114.626784,
+      23.609672
+     ],
+     [
+      115.0,
+      23.626895
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "VHHK",
+  "icao_text": "A2328/26 NOTAMN\r\nQ) VHHK/QPFCA/IV/NBO/E /000/999/2003N11500E215\r\nA) VHHK B) 2610071600 C) 2610071800\r\nE) DUE TO SECTOR CAPACITY, TRAFFIC OVERFLYING HONG KONG VIA TAMOT \r\nDESTINATION ZGGG IS SUBJECT TO FLOW CONTROL RESTRICTION FOR THE \r\nFOLLOWING ROUTE SEGMENT:\r\n\r\nA583 SABNO - TAMOT, 10 MINUTES\r\n\r\nRMK: FLOW CONTROL MAY BE ADJUSTED SUBJECT TO SITUATION AND \r\nDISCRETION OF HONG KONG ATS WATCH SUPERVISOR.",
+  "id": "1791363008350000",
+  "issued": "2026-10-07T08:49:00.000Z",
+  "last_updated": "2026-10-07T08:50:00.000Z",
+  "local_text": null,
+  "location": "VHHK",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A2328/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 215.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E ",
+  "series": "A",
+  "text": "DUE TO SECTOR CAPACITY, TRAFFIC OVERFLYING HONG KONG VIA TAMOT \r\nDESTINATION ZGGG IS SUBJECT TO FLOW CONTROL RESTRICTION FOR THE \r\nFOLLOWING ROUTE SEGMENT:\r\n\r\nA583 SABNO - TAMOT, 10 MINUTES\r\n\r\nRMK: FLOW CONTROL MAY BE ADJUSTED SUBJECT TO SITUATION AND \r\nDISCRETION OF HONG KONG ATS WATCH SUPERVISOR.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
  }
 }
