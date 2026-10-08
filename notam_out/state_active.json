@@ -56385,312 +56385,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790817140908000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "1114N12502E",
-  "effective_end": "2026-10-08T12:30:00.000Z",
-  "effective_start": "2026-10-06T02:00:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "RPHI",
-  "first_seen": "2026-10-01T01:20:26+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      125.029167,
-      11.351735
-     ],
-     [
-      125.040805,
-      11.351174
-     ],
-     [
-      125.052331,
-      11.349497
-     ],
-     [
-      125.063633,
-      11.34672
-     ],
-     [
-      125.074604,
-      11.34287
-     ],
-     [
-      125.085137,
-      11.337984
-     ],
-     [
-      125.095131,
-      11.332109
-     ],
-     [
-      125.10449,
-      11.325301
-     ],
-     [
-      125.113124,
-      11.317626
-     ],
-     [
-      125.120948,
-      11.309158
-     ],
-     [
-      125.127889,
-      11.299978
-     ],
-     [
-      125.13388,
-      11.290175
-     ],
-     [
-      125.138862,
-      11.279844
-     ],
-     [
-      125.142787,
-      11.269084
-     ],
-     [
-      125.145618,
-      11.257998
-     ],
-     [
-      125.147328,
-      11.246693
-     ],
-     [
-      125.1479,
-      11.235278
-     ],
-     [
-      125.147328,
-      11.223863
-     ],
-     [
-      125.145618,
-      11.212558
-     ],
-     [
-      125.142787,
-      11.201472
-     ],
-     [
-      125.138862,
-      11.190712
-     ],
-     [
-      125.13388,
-      11.180381
-     ],
-     [
-      125.127889,
-      11.170578
-     ],
-     [
-      125.120948,
-      11.161398
-     ],
-     [
-      125.113124,
-      11.15293
-     ],
-     [
-      125.10449,
-      11.145255
-     ],
-     [
-      125.095131,
-      11.138447
-     ],
-     [
-      125.085137,
-      11.132572
-     ],
-     [
-      125.074604,
-      11.127686
-     ],
-     [
-      125.063633,
-      11.123836
-     ],
-     [
-      125.052331,
-      11.121059
-     ],
-     [
-      125.040805,
-      11.119382
-     ],
-     [
-      125.029167,
-      11.118821
-     ],
-     [
-      125.017529,
-      11.119382
-     ],
-     [
-      125.006003,
-      11.121059
-     ],
-     [
-      124.994701,
-      11.123836
-     ],
-     [
-      124.98373,
-      11.127686
-     ],
-     [
-      124.973197,
-      11.132572
-     ],
-     [
-      124.963203,
-      11.138447
-     ],
-     [
-      124.953844,
-      11.145255
-     ],
-     [
-      124.94521,
-      11.15293
-     ],
-     [
-      124.937386,
-      11.161398
-     ],
-     [
-      124.930445,
-      11.170578
-     ],
-     [
-      124.924454,
-      11.180381
-     ],
-     [
-      124.919472,
-      11.190712
-     ],
-     [
-      124.915547,
-      11.201472
-     ],
-     [
-      124.912716,
-      11.212558
-     ],
-     [
-      124.911006,
-      11.223863
-     ],
-     [
-      124.910434,
-      11.235278
-     ],
-     [
-      124.911006,
-      11.246693
-     ],
-     [
-      124.912716,
-      11.257998
-     ],
-     [
-      124.915547,
-      11.269084
-     ],
-     [
-      124.919472,
-      11.279844
-     ],
-     [
-      124.924454,
-      11.290175
-     ],
-     [
-      124.930445,
-      11.299978
-     ],
-     [
-      124.937386,
-      11.309158
-     ],
-     [
-      124.94521,
-      11.317626
-     ],
-     [
-      124.953844,
-      11.325301
-     ],
-     [
-      124.963203,
-      11.332109
-     ],
-     [
-      124.973197,
-      11.337984
-     ],
-     [
-      124.98373,
-      11.34287
-     ],
-     [
-      124.994701,
-      11.34672
-     ],
-     [
-      125.006003,
-      11.349497
-     ],
-     [
-      125.017529,
-      11.351174
-     ],
-     [
-      125.029167,
-      11.351735
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "RPVA",
-  "icao_text": "B5214/26 NOTAMN\r\nQ) RPHI/QWPLW/IV/M  /AW/000/135/1114N12502E007\r\nA) RPVA B) 2610060200 C) 2610081230\r\nD) 0200-1230\r\nE) PJE WILL TAKE PLACE WI:\r\n7NM RADIUS CENTERED ON 111407N 1250145E\r\n(DANIEL Z. ROMUALDEZ PRINCIPAL AP (CLASS 1)).\r\nF) SFC G) 13500FT AMSL",
-  "id": "1790817140908000",
-  "issued": "2026-10-01T01:09:00.000Z",
-  "last_updated": "2026-10-01T01:12:00.000Z",
-  "local_text": null,
-  "location": "RPVA",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5214/26",
-  "purpose": "M  ",
-  "q_code": "QWPLW",
-  "qline_offset_nm": 0.3,
-  "radius_nm": 7.0,
-  "ref_number": null,
-  "schedule": "0200-1230",
-  "scope": "AW",
-  "series": "B",
-  "text": "PJE WILL TAKE PLACE WI:\r\n7NM RADIUS CENTERED ON 111407N 1250145E\r\n(DANIEL Z. ROMUALDEZ PRINCIPAL AP (CLASS 1)).",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "13500FT AMSL",
-  "year": "2026"
- },
  "1790819288666000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
@@ -61567,98 +61261,6 @@
   "traffic": "IV",
   "type": "N",
   "upper": null,
-  "year": "2026"
- },
- "1790885557484133": {
-  "account_id": "KZAK",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-14T04:53:00Z",
-  "effective_start": "2026-10-07T03:33:00Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "KZAK",
-  "first_seen": "2026-10-01T20:20:28+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      [
-       128.689722,
-       21.493889
-      ],
-      [
-       129.897222,
-       21.633056
-      ],
-      [
-       130.293333,
-       18.495278
-      ],
-      [
-       129.109444,
-       18.356111
-      ],
-      [
-       128.689722,
-       21.493889
-      ]
-     ]
-    ],
-    [
-     [
-      [
-       129.433889,
-       12.750556
-      ],
-      [
-       131.083056,
-       12.921389
-      ],
-      [
-       131.570278,
-       8.246944
-      ],
-      [
-       129.946111,
-       8.075833
-      ],
-      [
-       129.433889,
-       12.750556
-      ]
-     ]
-    ]
-   ],
-   "type": "MultiPolygon"
-  },
-  "geometry_source": "text-polygon",
-  "icao_location": "KZAK",
-  "icao_text": "A4799/26 NOTAMN\nQ) KZAK/QRALW/IV/NBO/W/000/999/\nA) KZAK\nB) 2610070333\nC) 2610140453\nD) DLY 0333-0453\nE) THE KOREA AEROSPACE RESEARCH INSTITUTE HAS PLANNED A SPACE VEHICLE LAUNCH. DEBRIS FROM THIS LAUNCH WILL FALL WI TWO SEPARATE AREAS. THE FAIRING AREA IS DEFINED AS 212938N 1284123E 213759N 1295350E 182943N 1301736E 182122N 1290634E TO POINT OF ORIGIN. THE SECOND STAGE AREA IS DEFINED AS 124502N 1292602E 125517N 1310459E 081449N 1313413E 080433N 1295646E TO POINT OF ORIGIN. IN THE INTEREST OF SAFETY, ALL NON-PARTICIPATING AIR TRAFFIC ARE ADVISED TO AVOID THE NOTAMED AREA. IFR AIRCRAFT UNDER ATC JURISDICTION SHOULD ANTICIPATE CLEARANCE AROUND THE NOTAMED AREA.\nF) SFC\nG) UNL",
-  "id": "1790885557484133",
-  "issued": "2026-10-01T20:11:00Z",
-  "last_updated": "2026-10-01T20:11:00Z",
-  "local_text": null,
-  "location": "ZAK",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "A4799/26",
-  "purpose": "NBO",
-  "q_code": "QRALW",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": null,
-  "schedule": "DLY 0333-0453",
-  "scope": "W",
-  "series": "A",
-  "text": "THE KOREA AEROSPACE RESEARCH INSTITUTE HAS PLANNED A SPACE VEHICLE LAUNCH. DEBRIS FROM THIS LAUNCH WILL FALL WI TWO SEPARATE AREAS. THE FAIRING AREA IS DEFINED AS 212938N 1284123E 213759N 1295350E 182943N 1301736E 182122N 1290634E TO POINT OF ORIGIN. THE SECOND STAGE AREA IS DEFINED AS 124502N 1292602E 125517N 1310459E 081449N 1313413E 080433N 1295646E TO POINT OF ORIGIN. IN THE INTEREST OF SAFETY, ALL NON-PARTICIPATING AIR TRAFFIC ARE ADVISED TO AVOID THE NOTAMED AREA. IFR AIRCRAFT UNDER ATC JURISDICTION SHOULD ANTICIPATE CLEARANCE AROUND THE NOTAMED AREA.",
-  "traffic": "IV",
-  "type": "N",
-  "upper": "UNL",
   "year": "2026"
  },
  "1790898385267000": {
@@ -169468,6 +169070,52 @@
   "text": "FLW TWY CLSD DUE TO MOWING:\r\n1.TWY F.\r\n2.TWY F3,F5-F7,F10-F12,F16.\r\n3.TWY Y1,Y4,Y7,Y10.",
   "traffic": "IV",
   "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791462220308252": {
+  "account_id": "KZAK",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": null,
+  "effective_end": "2026-10-11T12:21:00Z",
+  "effective_start": "2026-10-08T12:21:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "KZAK",
+  "first_seen": "2026-10-08T12:30:41+00:00",
+  "geometry": {
+   "coordinates": [
+    -122.01579444,
+    37.54243611
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "api-point",
+  "icao_location": "KZAK",
+  "icao_text": "A4925/26 NOTAMC A4799/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2610081221\nE) THE KOREA AEROSPACE RESEARCH INSTITUTE HAS PLANNED A SPACE VEHICLE LA\nCANCELED",
+  "id": "1791462220308252",
+  "issued": "2026-10-08T12:22:00Z",
+  "last_updated": "2026-10-08T12:22:00Z",
+  "local_text": null,
+  "location": "ZAK",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A4925/26",
+  "purpose": "NBO",
+  "q_code": "QRAXX",
+  "qline_offset_nm": null,
+  "radius_nm": null,
+  "ref_number": "A4799/26",
+  "schedule": null,
+  "scope": "W",
+  "series": "A",
+  "text": "A4925/26 NOTAMC A4799/26\nQ) KZAK/QRAXX/IV/NBO/W/000/999/\nA) KZAK\nB) 2610081221\nE) THE KOREA AEROSPACE RESEARCH INSTITUTE HAS PLANNED A SPACE VEHICLE LA\nCANCELED",
+  "traffic": "IV",
+  "type": "C",
   "upper": null,
   "year": "2026"
  }
