@@ -156522,5 +156522,71 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1791432182164000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3107N12149E",
+  "effective_end": "2026-10-09T11:00:00.000Z",
+  "effective_start": "2026-10-08T20:30:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZSHA",
+  "first_seen": "2026-10-08T04:10:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.806456,
+      31.127381
+     ],
+     [
+      121.813339,
+      31.109511
+     ],
+     [
+      121.8219,
+      31.112169
+     ],
+     [
+      121.815017,
+      31.129636
+     ],
+     [
+      121.806456,
+      31.127381
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "ZSHA",
+  "icao_text": "A5039/26 NOTAMN\r\nQ)ZSHA/QWULW/IV/BO/W/000/020/3107N12149E005\r\nA)ZSHA B)2610082030 C)2610091100 \r\nD)2030-2330 ON 08 AND 0800-1100 ON 09\r\nE) UNMANNED AIRCRAFT WILL TAKE PLACE:\r\nN310738.57E1214823.24-N310634.24E1214848.02-N310643.81E1214918.84-\r\nN310746.69E1214854.06-N310738.57E1214823.24.\r\nHEIGHT:120M AND BELOW.\r\nEXERCISE CAUTION WHILE LANDING AND TAKE-OFF.\r\nF)GND G)120M AGL",
+  "id": "1791432182164000",
+  "issued": "2026-10-08T04:02:00.000Z",
+  "last_updated": "2026-10-08T04:03:00.000Z",
+  "local_text": null,
+  "location": "ZSHA",
+  "lower": "GND",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A5039/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.2,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": "2030-2330 ON 08 AND 0800-1100 ON 09",
+  "scope": "W",
+  "series": "A",
+  "text": "UNMANNED AIRCRAFT WILL TAKE PLACE:\r\nN310738.57E1214823.24-N310634.24E1214848.02-N310643.81E1214918.84-\r\nN310746.69E1214854.06-N310738.57E1214823.24.\r\nHEIGHT:120M AND BELOW.\r\nEXERCISE CAUTION WHILE LANDING AND TAKE-OFF.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "120M AGL",
+  "year": "2026"
  }
 }
