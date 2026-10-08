@@ -12192,6 +12192,18 @@
       "start": "2026-08-18T00:00:00+00:00"
     }
   },
+  "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/335c35d52ed44688bd24fc2e4cbac636.html": {
+    "bureau": "山东海事局",
+    "date": "2026-10-08",
+    "detail_fetched": false,
+    "first_seen": "2026-10-08T10:20:39+00:00",
+    "groups": [],
+    "military": false,
+    "points": [],
+    "revoked": false,
+    "title": "船舶试航——芜船37002—鲁航警868/26",
+    "url": "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/335c35d52ed44688bd24fc2e4cbac636.html"
+  },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/33ec018b6fdb43e58dca73379e0b2cce.html": {
     "bureau": "广东海事局",
     "cancels": [
