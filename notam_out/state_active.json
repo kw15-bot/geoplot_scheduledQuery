@@ -170814,5 +170814,71 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1791457529283000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1024N11432E",
+  "effective_end": "2026-10-16T08:00:00.000Z",
+  "effective_start": "2026-10-16T00:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-08T11:10:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      114.481389,
+      10.375556
+     ],
+     [
+      114.543056,
+      10.443056
+     ],
+     [
+      114.579167,
+      10.3875
+     ],
+     [
+      114.496944,
+      10.378056
+     ],
+     [
+      114.481389,
+      10.375556
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPHI",
+  "icao_text": "B5389/26 NOTAMN\r\nQ) RPHI/QRTCA/IV/BO /W /000/220/1024N11432E004\r\nA) RPHI B) 2610160000 C) 2610160800\r\nD) 0000-0045, 0700-0800\r\nE) TEMPO RESTRICTED AREA ACT WI:\r\n102232N 1142853E -\r\n102635N 1143235E -\r\n102315N 1143445E - \r\n102241N 1142949E - \r\n102232N 1142853E\r\n(SAND CAY)\r\n\r\nRMK: LIVE FIRE EXER CONDUCTED BY VIETNAM. ALL FLT NOT ALLOWED.\r\nF) SFC G) FL220",
+  "id": "1791457529283000",
+  "issued": "2026-10-08T11:05:00.000Z",
+  "last_updated": "2026-10-08T11:05:00.000Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5389/26",
+  "purpose": "BO ",
+  "q_code": "QRTCA",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 4.0,
+  "ref_number": null,
+  "schedule": "0000-0045, 0700-0800",
+  "scope": "W ",
+  "series": "B",
+  "text": "TEMPO RESTRICTED AREA ACT WI:\r\n102232N 1142853E -\r\n102635N 1143235E -\r\n102315N 1143445E - \r\n102241N 1142949E - \r\n102232N 1142853E\r\n(SAND CAY)\r\n\r\nRMK: LIVE FIRE EXER CONDUCTED BY VIETNAM. ALL FLT NOT ALLOWED.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "FL220",
+  "year": "2026"
  }
 }
