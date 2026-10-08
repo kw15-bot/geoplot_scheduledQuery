@@ -155547,8 +155547,8 @@
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "2323N11319E",
-  "effective_end": "2026-10-08T09:00:00.000Z",
-  "effective_start": "2026-10-08T02:55:00.000Z",
+  "effective_end": "2026-10-08T09:00:00Z",
+  "effective_start": "2026-10-08T02:55:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
@@ -155823,10 +155823,10 @@
   },
   "geometry_source": "qline-circle",
   "icao_location": "ZGGG",
-  "icao_text": "G4450/26 NOTAMN\r\nQ)ZGZU/QFTAS/I/B/A/000/999/2323N11319E005\r\nA)ZGGG B)2610080255 C)2610080900 \r\nE) RWY03/21 MID RVR EQPT P U/S DUE TO TROUBLE.\r\n ",
+  "icao_text": "G4450/26 NOTAMN\r\nQ)ZGZU/QFTAS/I/B/A/000/999/2323N11319E005\r\nA)ZGGG B)2610080255 C)2610080900 \r\nE) RWY03/21 MID RVR EQPT P U/S DUE TO TROUBLE.",
   "id": "1791428442118000",
-  "issued": "2026-10-08T02:58:00.000Z",
-  "last_updated": "2026-10-08T03:00:00.000Z",
+  "issued": "2026-10-08T02:58:00Z",
+  "last_updated": "2026-10-08T03:01:00Z",
   "local_text": null,
   "location": "ZGGG",
   "lower": null,
@@ -155845,6 +155845,138 @@
   "traffic": "I",
   "type": "N",
   "upper": null,
+  "year": "2026"
+ },
+ "1791428548100000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2441N12212E",
+  "effective_end": "2026-12-31T07:00:00Z",
+  "effective_start": "2026-10-31T23:00:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-08T03:10:30+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      122.216667,
+      25.0
+     ],
+     [
+      122.366667,
+      25.0
+     ],
+     [
+      122.166667,
+      24.416667
+     ],
+     [
+      122.05,
+      24.366667
+     ],
+     [
+      122.216667,
+      25.0
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2638/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/000/015/2441N12212E022\r\nA) RCAA\r\nB) 2610312300 C) 2612310700\r\nD) 2300-0700\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260930001003\r\n2.LCA:SUAO TOWNSHIP, YILAN COUNTY\r\n3.THE AREA OVERLAPS PART OF CK MIL TRAINING AREA, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0975-403636, 0918-190936\r\n5.AREA AS FLW:\r\n250000N 1221300E\r\n250000N 1222200E\r\n242500N 1221000E\r\n242200N 1220300E\r\n250000N 1221300E\r\nF) SFC G) 1500FT AMSL",
+  "id": "1791428548100000",
+  "issued": "2026-10-08T03:02:00Z",
+  "last_updated": "2026-10-08T03:03:00Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "SFC",
+  "max_fl": "015",
+  "min_fl": "000",
+  "number": "U2638/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.8,
+  "radius_nm": 22.0,
+  "ref_number": null,
+  "schedule": "2300-0700",
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260930001003\r\n2.LCA:SUAO TOWNSHIP, YILAN COUNTY\r\n3.THE AREA OVERLAPS PART OF CK MIL TRAINING AREA, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0975-403636, 0918-190936\r\n5.AREA AS FLW:\r\n250000N 1221300E\r\n250000N 1222200E\r\n242500N 1221000E\r\n242200N 1220300E\r\n250000N 1221300E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "1500FT AMSL",
+  "year": "2026"
+ },
+ "1791428665431000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2418N12206E",
+  "effective_end": "2026-12-31T07:00:00.000Z",
+  "effective_start": "2026-10-31T23:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-08T03:10:30+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      122.166667,
+      24.416667
+     ],
+     [
+      122.1,
+      24.166667
+     ],
+     [
+      121.995833,
+      24.2
+     ],
+     [
+      122.05,
+      24.366667
+     ],
+     [
+      122.166667,
+      24.416667
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2639/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/000/015/2418N12206E009\r\nA) RCAA\r\nB) 2610312300 C) 2612310700\r\nD) 2300-0700\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260930001004\r\n2.LCA:SUAO TOWNSHIP, YILAN COUNTY\r\n3.COOR TEL:0975-403636, 0918-190936\r\n4.AREA AS FLW:\r\n242500N 1221000E\r\n241000N 1220600E\r\n241200N 1215945E\r\n242200N 1220300E\r\n242500N 1221000E\r\nF) SFC G) 1500FT AMSL",
+  "id": "1791428665431000",
+  "issued": "2026-10-08T03:04:00.000Z",
+  "last_updated": "2026-10-08T03:04:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2639/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 1.4,
+  "radius_nm": 9.0,
+  "ref_number": null,
+  "schedule": "2300-0700",
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:M260930001004\r\n2.LCA:SUAO TOWNSHIP, YILAN COUNTY\r\n3.COOR TEL:0975-403636, 0918-190936\r\n4.AREA AS FLW:\r\n242500N 1221000E\r\n241000N 1220600E\r\n241200N 1215945E\r\n242200N 1220300E\r\n242500N 1221000E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "1500FT AMSL",
   "year": "2026"
  }
 }
