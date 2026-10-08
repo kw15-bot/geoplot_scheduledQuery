@@ -651,9 +651,10 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
         <button class="btn small ghost" id="notamBtnBulkHide">このタブを全て非表示</button>
       </div>
       <div class="notam-filters">
-        <!-- Archive/Allタブでのみ表示(航行警報側の海事局ドロップダウンと同じ)。 -->
+        <!-- 全タブで表示(v2.8.0〜)。既定は「RCAA以外」。 -->
         <div id="notamFirFilterRow" style="display:none;margin-top:0;margin-bottom:4px;">
           <select id="notamFirFilter" style="width:100%;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--mono);font-size:11.5px;padding:6px 8px;">
+            <option value="EX:RCAA">FIR: RCAA以外（既定）</option>
             <option value="">FIR: すべて</option>
           </select>
         </div>
@@ -804,7 +805,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v2.7.1';
+const APP_VERSION = 'v2.8.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -843,6 +844,7 @@ const APP_VERSION = 'v2.7.1';
 // v2.6.1: FIRの境界を実線にし、線・ラベルとも灰色に(ユーザー指示)。
 // v2.7.0: AIPの図を参照する区域の境界線(geometry_source: aip-chart-line、例: ZWUQ W1338 の G-H-J-K)を表示する。
 // v2.7.1: 開始前に取消・置換されたNOTAMは「撤回済み・A3636/26により、開始前に撤回」と表示する。
+// v2.8.0: NOTAMのFIR絞り込みを Active/Upcoming にも出す。既定は「RCAA以外」(台湾のNOTAMは既定では描かない)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3600,10 +3602,19 @@ let notamArchiveFeatures = new Map();     // 'YYYY-MM' -> features[]。接続時
 // 手動取り込み分(notam_paste_import.py)で最も古いのが2026-01。
 const NOTAM_ARCHIVE_START_MONTH = '2026-01';
 // 表示条件は「E項の実座標から作ったポリゴン(notamHasRealPolygon)」かつ「FIRドロップダウンの
-// 選択(notamFirFilter、''=すべて)」のみ。area_group/focus_tag/keyword_hitでの絞り込みは行わない
+// 選択(notamFirFilter、既定はRCAA以外)」のみ。area_group/focus_tag/keyword_hitでの絞り込みは行わない
 // (収集条件(CN/HK/MO/TW/REF)に合致するものは全部ビューワに出す方針)。
-let notamFirFilter = ''; // '' = すべて。Archive/Allタブでのみ効く(他のタブでは無視される)
-function notamFirFilterActive(){ return notamTab === 'archive' || notamTab === 'all'; }
+// FIRの絞り込み。'' = すべて、'EX:<FIR>' = そのFIR以外、それ以外の値 = そのFIRだけ。全タブで効く(v2.8.0〜)。
+// 既定は RCAA(台北FIR)以外: 台湾のNOTAMは数が多く、引きで見ると中国沿岸部のものが隠れて気づけないため(ユーザー判断)。
+const NOTAM_FIR_FILTER_DEFAULT = 'EX:RCAA';
+let notamFirFilter = NOTAM_FIR_FILTER_DEFAULT;
+function notamFirFilterActive(){ return true; }
+function notamFirMatches(f, val){
+  if (!val) return true;
+  const firs = notamFirTokens(f);
+  if (val.startsWith('EX:')){ const ex = val.slice(3); return !(firs.length && firs.every(v => v === ex)); }
+  return firs.includes(val);
+}
 let notamTab = 'active';
 let notamLayerVisibleOnMap = true;        // 手動トグルは無し(常時true)。enterMode()の3モード排他表示で制御する
 let connectedNotamUrl = null;
@@ -3683,15 +3694,19 @@ function notamPassesFilter(f){
   // (INTL、例: A4705/26)でも発行されていて重複になるので表示しない。
   if ((f.properties || {}).classification === 'DOM') return false;
   if (!notamHasRealPolygon(f)) return false;
-  if (notamFirFilterActive() && notamFirFilter && !notamFirTokens(f).includes(notamFirFilter)) return false;
+  if (notamFirFilterActive() && !notamFirMatches(f, notamFirFilter)) return false;
   return true;
 }
 // 航行警報側のupdateBureauFilterOptions()と同じ考え方: 今スコープにある値だけを選択肢にする。
 function updateNotamFirFilterOptions(selectEl, itemsInScope, currentValue){
   const firsPresent = Array.from(new Set(itemsInScope.flatMap(notamFirTokens))).sort();
-  selectEl.innerHTML = '<option value="">FIR: すべて</option>'
+  const ex = NOTAM_FIR_FILTER_DEFAULT.slice(3);
+  selectEl.innerHTML = `<option value="${NOTAM_FIR_FILTER_DEFAULT}">FIR: ${ex}以外（既定）</option>`
+    + '<option value="">FIR: すべて</option>'
     + firsPresent.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join('');
-  selectEl.value = firsPresent.includes(currentValue) ? currentValue : '';
+  // 今のタブに無いFIRを選んでいたら既定(RCAA以外)に戻す
+  const keep = currentValue === '' || currentValue === NOTAM_FIR_FILTER_DEFAULT || firsPresent.includes(currentValue);
+  selectEl.value = keep ? currentValue : NOTAM_FIR_FILTER_DEFAULT;
   return selectEl.value;
 }
 function notamStyle(f){
@@ -4067,7 +4082,7 @@ async function loadAllNotamArchives(){
 
 // 地図上のNOTAMの図形をクリックしたとき、左パネルの該当カードまでスクロールして一時的に強調する
 // (航行警報側のselectItemInPanel()と同じ動き)。今のタブに無ければ、そのNOTAMの状態のタブに切り替える
-// (Archiveに切り替えるときはFIRの絞り込みを解除する)。
+// (そのNOTAMがFIRの絞り込みで外れているときは絞り込みを解除する)。
 function selectNotamInPanel(f){
   const key = notamFeatureKey(f);
   if (!currentNotamTabItems.some(g => notamFeatureKey(g) === key)){
@@ -4075,7 +4090,7 @@ function selectNotamInPanel(f){
     const targetTab = f._notamArchive ? 'archive' : (st === 'upcoming') ? 'upcoming' : 'active';
     notamTab = targetTab;
     $$('#notamValidityTabs .tab-btn').forEach(b=> b.classList.toggle('active', b.dataset.tab === targetTab));
-    if (targetTab === 'archive'){ notamFirFilter = ''; $('#notamFirFilter').value = ''; }
+    if (!notamFirMatches(f, notamFirFilter)){ notamFirFilter = ''; $('#notamFirFilter').value = ''; }
     renderNotamList();
   }
   const card = document.querySelector(`#notamList .warn-item[data-notam-key="${CSS.escape(key)}"]`);
