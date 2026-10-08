@@ -804,7 +804,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v2.8.1';
+const APP_VERSION = 'v2.9.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -845,6 +845,7 @@ const APP_VERSION = 'v2.8.1';
 // v2.7.1: 開始前に取消・置換されたNOTAMは「撤回済み・A3636/26により、開始前に撤回」と表示する。
 // v2.8.0: NOTAMのFIR絞り込みを Active/Upcoming にも出す。既定は「RCAA以外」(台湾のNOTAMは既定では描かない)。
 // v2.8.1: RCAAは一覧から外さず「地図に表示」を既定OFFにする形に変更(絞り込みの「RCAA以外」は削除、既定は「すべて」)。
+// v2.9.0: NOTAMのカード・ポップアップに「発行元: 北京(ZBBBYNYX)」を表示。本文に BY <国名> があればそちらを優先。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3788,6 +3789,30 @@ function notamRevokedText(p){
   }
   return p.ended_by ? `${how}済み ・ ${p.ended_by}により${how}` : '撤回済み';
 }
+// 発行元の表示(v2.9.0)。原則は収集データの issuer(NOTAMを出した事務所、NMSの accountId)。
+// 本文に「BY <国名>」(例: SPECIAL OPS ... WILL BE CONDUCTED BY KOREA)があればそちらを優先する(ユーザー指定)。
+const NOTAM_ISSUER_NAMES = {
+  ZBBBYNYX: '北京', VHHHYNYX: '香港', VMMCYNYX: 'マカオ', RCTPYNYX: '台北', RPLLYNYX: 'マニラ',
+  KZAK: 'オークランド', CARF: '米国 空域予約', SUAW: '米国 特別空域', PMDY: 'ミッドウェー', PTSA: 'コスラエ', PKMJ: 'マジュロ',
+};
+const NOTAM_BY_COUNTRY = {
+  'CHINA': '中国', 'KOREA': '韓国', 'REPUBLIC OF KOREA': '韓国', 'NORTH KOREA': '北朝鮮', 'DPRK': '北朝鮮',
+  'JAPAN': '日本', 'VIETNAM': 'ベトナム', 'VIET NAM': 'ベトナム', 'PHILIPPINES': 'フィリピン', 'TAIWAN': '台湾',
+  'USA': '米国', 'UNITED STATES': '米国', 'U.S.': '米国', 'RUSSIA': 'ロシア', 'INDIA': 'インド',
+  'MALAYSIA': 'マレーシア', 'INDONESIA': 'インドネシア', 'AUSTRALIA': 'オーストラリア', 'FRANCE': 'フランス',
+};
+const NOTAM_BY_RE = new RegExp('\\bBY\\s+(?:THE\\s+)?(' + Object.keys(NOTAM_BY_COUNTRY)
+  .sort((a, b) => b.length - a.length).map(k => k.replace(/[.]/g, '\\.').replace(/ /g, '\\s+')).join('|') + ')(?![A-Z])');
+function notamIssuerText(p){
+  const m = String(p.raw_text || '').toUpperCase().match(NOTAM_BY_RE);
+  if (m){
+    const key = m[1].replace(/\s+/g, ' ');
+    return `${NOTAM_BY_COUNTRY[key] || key}(BY ${key})`;
+  }
+  if (!p.issuer) return '';
+  const name = NOTAM_ISSUER_NAMES[p.issuer];
+  return name ? `${name}(${p.issuer})` : p.issuer;
+}
 function notamPopupHtml(f){
   const p = f.properties || {};
   const revoked = notamRevokedText(p);
@@ -3799,6 +3824,7 @@ function notamPopupHtml(f){
   const rawText = p.raw_text ? `<div class="pop-mono" style="white-space:pre-wrap;max-height:160px;overflow-y:auto;margin-top:6px;">${esc(p.raw_text)}</div>` : '';
   return `<div class="pop-title">${esc(p.number || notamHeading(f))}</div>`
     + `<div class="pop-mono">FIR: ${esc(notamFirTokens(f).join(' '))}</div>`
+    + (notamIssuerText(p) ? `<div class="pop-mono">発行元: ${esc(notamIssuerText(p))}</div>` : '')
     + `${period}${revokedNote}${srcNote}${rawText}${notamActionButtonsHtml(f, true)}`;
 }
 
@@ -3947,7 +3973,7 @@ function renderNotamList(){
       : '';
     div.innerHTML = `
       <span class="wtitle">${esc(p.number || notamHeading(f))}</span>
-      <div class="wmeta"><span>FIR: ${esc(notamFirTokens(f).join(' '))}</span></div>
+      <div class="wmeta"><span>FIR: ${esc(notamFirTokens(f).join(' '))}</span>${notamIssuerText(p) ? `<span>発行元: ${esc(notamIssuerText(p))}</span>` : ''}</div>
       <div class="validity-badge ${badgeClass}">有効期間 (UTC) ・ ${esc(period)}</div>
       ${notamRevokedText(p) ? `<div class="validity-badge archive">${esc(notamRevokedText(p))}</div>` : ''}
       ${(p.geometry_source||'').startsWith('qline') ? `<span class="notam-tag qline">Q項推定図形</span>` : ''}
