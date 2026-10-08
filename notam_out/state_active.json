@@ -100479,52 +100479,6 @@
   "upper": null,
   "year": "2026"
  },
- "1791254667622000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-09T02:41:00.000Z",
-  "effective_start": "2026-10-06T02:41:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-10-06T02:50:28+00:00",
-  "geometry": {
-   "coordinates": [
-    120.433333,
-    30.228333
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSHC",
-  "icao_text": "M2848/26 NOTAMC M2557/26\r\nQ)ZSHA/QMRXX//M//000/999/\r\nA)ZSHC B)2610060241 \r\nE) SEE NEXT NTM.\r\n",
-  "id": "1791254667622000",
-  "issued": "2026-10-06T02:43:00.000Z",
-  "last_updated": "2026-10-06T02:44:00.000Z",
-  "local_text": null,
-  "location": "ZSHC",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "M2848/26",
-  "purpose": "M",
-  "q_code": "QMRXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "M2557/26",
-  "schedule": null,
-  "scope": null,
-  "series": "M",
-  "text": "SEE NEXT NTM.",
-  "traffic": null,
-  "type": "C",
-  "upper": null,
-  "year": "2026"
- },
  "1791254729566000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -100828,52 +100782,6 @@
   "text": "RWY07/25 CLSD DUE TO MAINT.",
   "traffic": "IV",
   "type": "N",
-  "upper": null,
-  "year": "2026"
- },
- "1791254846906000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": null,
-  "effective_end": "2026-10-09T02:42:00.000Z",
-  "effective_start": "2026-10-06T02:42:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-10-06T02:50:28+00:00",
-  "geometry": {
-   "coordinates": [
-    120.433333,
-    30.228333
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "api-point",
-  "icao_location": "ZSHC",
-  "icao_text": "M2850/26 NOTAMC M2558/26\r\nQ)ZSHA/QMXXX//M//000/999/\r\nA)ZSHC B)2610060242 \r\nE) SEE NEXT NTM.\r\n",
-  "id": "1791254846906000",
-  "issued": "2026-10-06T02:45:00.000Z",
-  "last_updated": "2026-10-06T02:47:00.000Z",
-  "local_text": null,
-  "location": "ZSHC",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "M2850/26",
-  "purpose": "M",
-  "q_code": "QMXXX",
-  "qline_offset_nm": null,
-  "radius_nm": null,
-  "ref_number": "M2558/26",
-  "schedule": null,
-  "scope": null,
-  "series": "M",
-  "text": "SEE NEXT NTM.",
-  "traffic": null,
-  "type": "C",
   "upper": null,
   "year": "2026"
  },
@@ -154789,8 +154697,8 @@
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "2003N11500E",
-  "effective_end": "2026-10-08T12:00:00.000Z",
-  "effective_start": "2026-10-08T09:00:00.000Z",
+  "effective_end": "2026-10-08T12:00:00Z",
+  "effective_start": "2026-10-08T09:00:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
@@ -155067,8 +154975,8 @@
   "icao_location": "VHHK",
   "icao_text": "A2331/26 NOTAMN\r\nQ) VHHK/QPFCA/IV/NBO/E /000/999/2003N11500E214\r\nA) VHHK B) 2610080900 C) 2610081200\r\nE) DUE TO TRAFFIC, FLIGHTS TRANSITING HONG KONG FIR,\r\n\r\n1. DESTINATIONS ZSAM, ZSQZ, ZSFZ: TREATED AS ONE STREAM\r\n2. DESTINATIONS OTHER THAN MENTIONED IN (1): TREATED AS ONE STREAM\r\n\r\nVIA THE FOLLOWING ROUTE IS SUBJECT TO FLOW CONTROL:\r\n\r\nA461 NOMAN - DOTMI A470, 10 MINUTES\r\n\r\nRMK: FLOW CONTROL MAY BE ADJUSTED SUBJECT TO SITUATION AND \r\nDISCRETION OF HONG KONG ATS WATCH SUPERVISOR.",
   "id": "1791427186020000",
-  "issued": "2026-10-08T02:39:00.000Z",
-  "last_updated": "2026-10-08T02:39:00.000Z",
+  "issued": "2026-10-08T02:39:00Z",
+  "last_updated": "2026-10-08T02:40:00Z",
   "local_text": null,
   "location": "VHHK",
   "lower": null,
@@ -155081,12 +154989,156 @@
   "radius_nm": 214.0,
   "ref_number": null,
   "schedule": null,
-  "scope": "E ",
+  "scope": "E",
   "series": "A",
   "text": "DUE TO TRAFFIC, FLIGHTS TRANSITING HONG KONG FIR,\r\n\r\n1. DESTINATIONS ZSAM, ZSQZ, ZSFZ: TREATED AS ONE STREAM\r\n2. DESTINATIONS OTHER THAN MENTIONED IN (1): TREATED AS ONE STREAM\r\n\r\nVIA THE FOLLOWING ROUTE IS SUBJECT TO FLOW CONTROL:\r\n\r\nA461 NOMAN - DOTMI A470, 10 MINUTES\r\n\r\nRMK: FLOW CONTROL MAY BE ADJUSTED SUBJECT TO SITUATION AND \r\nDISCRETION OF HONG KONG ATS WATCH SUPERVISOR.",
   "traffic": "IV",
   "type": "N",
   "upper": null,
+  "year": "2026"
+ },
+ "1791427516116000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2410N12041E",
+  "effective_end": "2026-11-20T16:00:00.000Z",
+  "effective_start": "2026-10-14T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-08T02:50:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.603056,
+      24.205833
+     ],
+     [
+      120.621111,
+      24.201944
+     ],
+     [
+      120.752222,
+      24.208333
+     ],
+     [
+      120.698611,
+      24.099722
+     ],
+     [
+      120.595,
+      24.112222
+     ],
+     [
+      120.577222,
+      24.154722
+     ],
+     [
+      120.603056,
+      24.205833
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCMQ",
+  "icao_text": "U2630/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/024/2410N12041E006\r\nA) RCMQ\r\nB) 2610141600 C) 2611201600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260903002203\r\n2.LCA:XITUN DISTRICT, TAICHUNG CITY\r\n3.THE AREA OVERLAPS PART OF CHINA MEDICAL UNIVERSITY\r\n  HOSPITAL HELIPORT, PART OF SINSHE MIL TRAINING AREA,\r\n  PART OF VFR CORRIDOR C3 AND C35, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0933-147693, 0912-218136\r\n5.AREA AS FLW:\r\n241221N 1203611E\r\n241207N 1203716E\r\n241230N 1204508E\r\n240559N 1204155E\r\n240644N 1203542E\r\n240917N 1203438E\r\n241221N 1203611E\r\nF) SFC G) 2400FT AMSL",
+  "id": "1791427516116000",
+  "issued": "2026-10-08T02:45:00.000Z",
+  "last_updated": "2026-10-08T02:45:00.000Z",
+  "local_text": null,
+  "location": "RCMQ",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2630/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 2.3,
+  "radius_nm": 6.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260903002203\r\n2.LCA:XITUN DISTRICT, TAICHUNG CITY\r\n3.THE AREA OVERLAPS PART OF CHINA MEDICAL UNIVERSITY\r\n  HOSPITAL HELIPORT, PART OF SINSHE MIL TRAINING AREA,\r\n  PART OF VFR CORRIDOR C3 AND C35, ACFT ARE CTN ADZ.\r\n4.COOR TEL:0933-147693, 0912-218136\r\n5.AREA AS FLW:\r\n241221N 1203611E\r\n241207N 1203716E\r\n241230N 1204508E\r\n240559N 1204155E\r\n240644N 1203542E\r\n240917N 1203438E\r\n241221N 1203611E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "2400FT AMSL",
+  "year": "2026"
+ },
+ "1791427690647000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2459N12121E",
+  "effective_end": "2026-11-20T16:00:00.000Z",
+  "effective_start": "2026-10-14T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-08T02:50:32+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.262778,
+      25.019444
+     ],
+     [
+      121.3275,
+      25.023889
+     ],
+     [
+      121.427778,
+      24.999444
+     ],
+     [
+      121.448611,
+      24.961667
+     ],
+     [
+      121.333889,
+      24.913611
+     ],
+     [
+      121.262778,
+      25.019444
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2631/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/000/024/2459N12121E006\r\nA) RCAA\r\nB) 2610141600 C) 2611201600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260903002201\r\n2.LCA:SANXIA DISTRICT, NEW TAIPEI CITY\r\n3.THE AREA OVERLAPS PART OF LONGTAN MIL TRAINING AREA,\r\n  PART OF VFR CORRIDOR C1, C10, C33 AND PART OF VFR HEL RTE H2,\r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0933-147693, 0912-218136\r\n5.AREA AS FLW:\r\n250110N 1211546E\r\n250126N 1211939E\r\n245958N 1212540E\r\n245742N 1212655E\r\n245449N 1212002E\r\n250110N 1211546E\r\nF) SFC G) 2400FT AMSL",
+  "id": "1791427690647000",
+  "issued": "2026-10-08T02:48:00.000Z",
+  "last_updated": "2026-10-08T02:48:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2631/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.6,
+  "radius_nm": 6.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260903002201\r\n2.LCA:SANXIA DISTRICT, NEW TAIPEI CITY\r\n3.THE AREA OVERLAPS PART OF LONGTAN MIL TRAINING AREA,\r\n  PART OF VFR CORRIDOR C1, C10, C33 AND PART OF VFR HEL RTE H2,\r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0933-147693, 0912-218136\r\n5.AREA AS FLW:\r\n250110N 1211546E\r\n250126N 1211939E\r\n245958N 1212540E\r\n245742N 1212655E\r\n245449N 1212002E\r\n250110N 1211546E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "2400FT AMSL",
   "year": "2026"
  }
 }
