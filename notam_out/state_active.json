@@ -170718,5 +170718,617 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1791465698663000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3319N10819E",
+  "effective_end": "PERM",
+  "effective_start": "2026-10-08T13:19:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZLHW",
+  "first_seen": "2026-10-08T13:30:48+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      108.316667,
+      33.732585
+     ],
+     [
+      108.365452,
+      33.730582
+     ],
+     [
+      108.413767,
+      33.724593
+     ],
+     [
+      108.461147,
+      33.714675
+     ],
+     [
+      108.507136,
+      33.700925
+     ],
+     [
+      108.55129,
+      33.683474
+     ],
+     [
+      108.593185,
+      33.66249
+     ],
+     [
+      108.632417,
+      33.638176
+     ],
+     [
+      108.668607,
+      33.610765
+     ],
+     [
+      108.701409,
+      33.580522
+     ],
+     [
+      108.730505,
+      33.547738
+     ],
+     [
+      108.755616,
+      33.512729
+     ],
+     [
+      108.776499,
+      33.475832
+     ],
+     [
+      108.792954,
+      33.437401
+     ],
+     [
+      108.804823,
+      33.397808
+     ],
+     [
+      108.811989,
+      33.357434
+     ],
+     [
+      108.814386,
+      33.316667
+     ],
+     [
+      108.811989,
+      33.2759
+     ],
+     [
+      108.804823,
+      33.235525
+     ],
+     [
+      108.792954,
+      33.195932
+     ],
+     [
+      108.776499,
+      33.157502
+     ],
+     [
+      108.755616,
+      33.120604
+     ],
+     [
+      108.730505,
+      33.085595
+     ],
+     [
+      108.701409,
+      33.052811
+     ],
+     [
+      108.668607,
+      33.022568
+     ],
+     [
+      108.632417,
+      32.995158
+     ],
+     [
+      108.593185,
+      32.970843
+     ],
+     [
+      108.55129,
+      32.94986
+     ],
+     [
+      108.507136,
+      32.932408
+     ],
+     [
+      108.461147,
+      32.918658
+     ],
+     [
+      108.413767,
+      32.90874
+     ],
+     [
+      108.365452,
+      32.902751
+     ],
+     [
+      108.316667,
+      32.900749
+     ],
+     [
+      108.267882,
+      32.902751
+     ],
+     [
+      108.219566,
+      32.90874
+     ],
+     [
+      108.172186,
+      32.918658
+     ],
+     [
+      108.126198,
+      32.932408
+     ],
+     [
+      108.082043,
+      32.94986
+     ],
+     [
+      108.040149,
+      32.970843
+     ],
+     [
+      108.000917,
+      32.995158
+     ],
+     [
+      107.964726,
+      33.022568
+     ],
+     [
+      107.931924,
+      33.052811
+     ],
+     [
+      107.902828,
+      33.085595
+     ],
+     [
+      107.877717,
+      33.120604
+     ],
+     [
+      107.856834,
+      33.157502
+     ],
+     [
+      107.840379,
+      33.195932
+     ],
+     [
+      107.828511,
+      33.235525
+     ],
+     [
+      107.821344,
+      33.2759
+     ],
+     [
+      107.818947,
+      33.316667
+     ],
+     [
+      107.821344,
+      33.357434
+     ],
+     [
+      107.828511,
+      33.397808
+     ],
+     [
+      107.840379,
+      33.437401
+     ],
+     [
+      107.856834,
+      33.475832
+     ],
+     [
+      107.877717,
+      33.512729
+     ],
+     [
+      107.902828,
+      33.547738
+     ],
+     [
+      107.931924,
+      33.580522
+     ],
+     [
+      107.964726,
+      33.610765
+     ],
+     [
+      108.000917,
+      33.638176
+     ],
+     [
+      108.040149,
+      33.66249
+     ],
+     [
+      108.082043,
+      33.683474
+     ],
+     [
+      108.126198,
+      33.700925
+     ],
+     [
+      108.172186,
+      33.714675
+     ],
+     [
+      108.219566,
+      33.724593
+     ],
+     [
+      108.267882,
+      33.730582
+     ],
+     [
+      108.316667,
+      33.732585
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZLXY",
+  "icao_text": "(L1605/26 NOTAMN \nQ)ZLHW/QNMXX/IV/NBO/AE/000/999/3319N10819E025 \nA)ZLXY B)2610081319 C) PERM \nE) NINGSHAN VOR/DME 'NSH' 116.3MHZ/CH110X LIMITATION CHANGED AS \nFLW: \n1. FOR VOR: R040DEG-R210DEG CLOCKWISE, R250DEG-R360DEG CLOCKWISE \nU/S. (EXCEPT R089DEG,R201DEG,R263DEG FOR EN-ROUTE PROCEDURE). \n2. FOR DME:250DEG-210DEG CLOCKWISE U/S. (EXCEPT \nR023DEG,R030DEG,R089DEG,R201DEG,R263DEG FOR EN-ROUTE \nPROCEDURE,R030 DEG FOR ARRIVAL PROCEDURE.) \n3. FOR VOR/DME: BEYOND 18NM ON R030DEG FOR EN-ROUTE PROCEDURE AND \nARRIVAL/DEPARTURE PROCEDURE U/S. \n FOR DME : WITHIN 7NM ON R030DEG FOR EN-ROUTE PROCEDURE AND \nARRIVAL/DEPARTURE PROCEDURE U/S. \n4. FOR VOR/DME: BEYOND 7NM ON R089 DEG FOR EN-ROUTE PROCEDURE U/S. \n5. FOR VOR: BEYOND 29NM ON R201DEG FOR EN-ROUTE PROCEDURE U/S. \n FOR DME : BEYOND 17NM ON R201DEG FOR EN-ROUTE PROCEDURE U/S. \n6. FOR VOR: BEYOND 22NM ON R023DEG FOR EN-ROUTE PROCEDURE U/S. \n FOR DME : BEYOND 18NM ON R023DEG FOR EN-ROUTE PROCEDURE U/S. \n FOR DME : WITHIN 8NM ON R023DEG FOR EN-ROUTE PROCEDURE U/S. \n7. FOR VOR/DME: R142DEG FOR EN-ROUTE PROCEDURE U/S. \n8. FOR \n ) \n// // VOR/DME: R314DEG FOR EN-ROUTE PROCEDURE U/S. \n9. FOR VOR/DME: R030DEG FOR HOLDING PROCEDURE U/S. \n10. FOR VOR/DME: BEYOND 13NM ON R263DEG FOR EN-ROUTE PROCEDURE \nU/S. \n ) \n// //",
+  "id": "1791465698663000",
+  "issued": "2026-10-08T13:19:00.000Z",
+  "last_updated": "2026-10-08T13:21:00.000Z",
+  "local_text": null,
+  "location": "ZLXY",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "L1605/26",
+  "purpose": "NBO",
+  "q_code": "QNMXX",
+  "qline_offset_nm": null,
+  "radius_nm": 25.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AE",
+  "series": "L",
+  "text": "NINGSHAN VOR/DME 'NSH' 116.3MHZ/CH110X LIMITATION CHANGED AS \nFLW: \n1. FOR VOR: R040DEG-R210DEG CLOCKWISE, R250DEG-R360DEG CLOCKWISE \nU/S. (EXCEPT R089DEG,R201DEG,R263DEG FOR EN-ROUTE PROCEDURE). \n2. FOR DME:250DEG-210DEG CLOCKWISE U/S. (EXCEPT \nR023DEG,R030DEG,R089DEG,R201DEG,R263DEG FOR EN-ROUTE \nPROCEDURE,R030 DEG FOR ARRIVAL PROCEDURE.) \n3. FOR VOR/DME: BEYOND 18NM ON R030DEG FOR EN-ROUTE PROCEDURE AND \nARRIVAL/DEPARTURE PROCEDURE U/S. \n FOR DME : WITHIN 7NM ON R030DEG FOR EN-ROUTE PROCEDURE AND \nARRIVAL/DEPARTURE PROCEDURE U/S. \n4. FOR VOR/DME: BEYOND 7NM ON R089 DEG FOR EN-ROUTE PROCEDURE U/S. \n5. FOR VOR: BEYOND 29NM ON R201DEG FOR EN-ROUTE PROCEDURE U/S. \n FOR DME : BEYOND 17NM ON R201DEG FOR EN-ROUTE PROCEDURE U/S. \n6. FOR VOR: BEYOND 22NM ON R023DEG FOR EN-ROUTE PROCEDURE U/S. \n FOR DME : BEYOND 18NM ON R023DEG FOR EN-ROUTE PROCEDURE U/S. \n FOR DME : WITHIN 8NM ON R023DEG FOR EN-ROUTE PROCEDURE U/S. \n7. FOR VOR/DME: R142DEG FOR EN-ROUTE PROCEDURE U/S. \n8. FOR \n ) \n// // VOR/DME: R314DEG FOR EN-ROUTE PROCEDURE U/S. \n9. FOR VOR/DME: R030DEG FOR HOLDING PROCEDURE U/S. \n10. FOR VOR/DME: BEYOND 13NM ON R263DEG FOR EN-ROUTE PROCEDURE \nU/S. \n ) \n// //",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791465763808753": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3319N10819E",
+  "effective_end": "PERM",
+  "effective_start": "2026-10-08T13:19:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZLHW",
+  "first_seen": "2026-10-08T13:30:48+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      108.316667,
+      33.732585
+     ],
+     [
+      108.365452,
+      33.730582
+     ],
+     [
+      108.413767,
+      33.724593
+     ],
+     [
+      108.461147,
+      33.714675
+     ],
+     [
+      108.507136,
+      33.700925
+     ],
+     [
+      108.55129,
+      33.683474
+     ],
+     [
+      108.593185,
+      33.66249
+     ],
+     [
+      108.632417,
+      33.638176
+     ],
+     [
+      108.668607,
+      33.610765
+     ],
+     [
+      108.701409,
+      33.580522
+     ],
+     [
+      108.730505,
+      33.547738
+     ],
+     [
+      108.755616,
+      33.512729
+     ],
+     [
+      108.776499,
+      33.475832
+     ],
+     [
+      108.792954,
+      33.437401
+     ],
+     [
+      108.804823,
+      33.397808
+     ],
+     [
+      108.811989,
+      33.357434
+     ],
+     [
+      108.814386,
+      33.316667
+     ],
+     [
+      108.811989,
+      33.2759
+     ],
+     [
+      108.804823,
+      33.235525
+     ],
+     [
+      108.792954,
+      33.195932
+     ],
+     [
+      108.776499,
+      33.157502
+     ],
+     [
+      108.755616,
+      33.120604
+     ],
+     [
+      108.730505,
+      33.085595
+     ],
+     [
+      108.701409,
+      33.052811
+     ],
+     [
+      108.668607,
+      33.022568
+     ],
+     [
+      108.632417,
+      32.995158
+     ],
+     [
+      108.593185,
+      32.970843
+     ],
+     [
+      108.55129,
+      32.94986
+     ],
+     [
+      108.507136,
+      32.932408
+     ],
+     [
+      108.461147,
+      32.918658
+     ],
+     [
+      108.413767,
+      32.90874
+     ],
+     [
+      108.365452,
+      32.902751
+     ],
+     [
+      108.316667,
+      32.900749
+     ],
+     [
+      108.267882,
+      32.902751
+     ],
+     [
+      108.219566,
+      32.90874
+     ],
+     [
+      108.172186,
+      32.918658
+     ],
+     [
+      108.126198,
+      32.932408
+     ],
+     [
+      108.082043,
+      32.94986
+     ],
+     [
+      108.040149,
+      32.970843
+     ],
+     [
+      108.000917,
+      32.995158
+     ],
+     [
+      107.964726,
+      33.022568
+     ],
+     [
+      107.931924,
+      33.052811
+     ],
+     [
+      107.902828,
+      33.085595
+     ],
+     [
+      107.877717,
+      33.120604
+     ],
+     [
+      107.856834,
+      33.157502
+     ],
+     [
+      107.840379,
+      33.195932
+     ],
+     [
+      107.828511,
+      33.235525
+     ],
+     [
+      107.821344,
+      33.2759
+     ],
+     [
+      107.818947,
+      33.316667
+     ],
+     [
+      107.821344,
+      33.357434
+     ],
+     [
+      107.828511,
+      33.397808
+     ],
+     [
+      107.840379,
+      33.437401
+     ],
+     [
+      107.856834,
+      33.475832
+     ],
+     [
+      107.877717,
+      33.512729
+     ],
+     [
+      107.902828,
+      33.547738
+     ],
+     [
+      107.931924,
+      33.580522
+     ],
+     [
+      107.964726,
+      33.610765
+     ],
+     [
+      108.000917,
+      33.638176
+     ],
+     [
+      108.040149,
+      33.66249
+     ],
+     [
+      108.082043,
+      33.683474
+     ],
+     [
+      108.126198,
+      33.700925
+     ],
+     [
+      108.172186,
+      33.714675
+     ],
+     [
+      108.219566,
+      33.724593
+     ],
+     [
+      108.267882,
+      33.730582
+     ],
+     [
+      108.316667,
+      33.732585
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZLXY",
+  "icao_text": "(L1605/26 NOTAMN \nQ)ZLHW/QNMXX/IV/NBO/AE/000/999/3319N10819E025 \nA)ZLXY B)2610081319 C) PERM \nE) NINGSHAN VOR/DME 'NSH' 116.3MHZ/CH110X LIMITATION CHANGED AS \nFLW: \n1. FOR VOR: R040DEG-R210DEG CLOCKWISE, R250DEG-R360DEG CLOCKWISE \nU/S. (EXCEPT R089DEG,R201DEG,R263DEG FOR EN-ROUTE PROCEDURE). \n2. FOR DME:250DEG-210DEG CLOCKWISE U/S. (EXCEPT \nR023DEG,R030DEG,R089DEG,R201DEG,R263DEG FOR EN-ROUTE \nPROCEDURE,R030 DEG FOR ARRIVAL PROCEDURE.) \n3. FOR VOR/DME: BEYOND 18NM ON R030DEG FOR EN-ROUTE PROCEDURE AND \nARRIVAL/DEPARTURE PROCEDURE U/S. \n FOR DME : WITHIN 7NM ON R030DEG FOR EN-ROUTE PROCEDURE AND \nARRIVAL/DEPARTURE PROCEDURE U/S. \n4. FOR VOR/DME: BEYOND 7NM ON R089 DEG FOR EN-ROUTE PROCEDURE U/S. \n5. FOR VOR: BEYOND 29NM ON R201DEG FOR EN-ROUTE PROCEDURE U/S. \n FOR DME : BEYOND 17NM ON R201DEG FOR EN-ROUTE PROCEDURE U/S. \n6. FOR VOR: BEYOND 22NM ON R023DEG FOR EN-ROUTE PROCEDURE U/S. \n FOR DME : BEYOND 18NM ON R023DEG FOR EN-ROUTE PROCEDURE U/S. \n FOR DME : WITHIN 8NM ON R023DEG FOR EN-ROUTE PROCEDURE U/S. \n7. FOR VOR/DME: R142DEG FOR EN-ROUTE PROCEDURE U/S. \n8. FOR \n ) \n// // VOR/DME: R314DEG FOR EN-ROUTE PROCEDURE U/S. \n9. FOR VOR/DME: R030DEG FOR HOLDING PROCEDURE U/S. \n10. FOR VOR/DME: BEYOND 13NM ON R263DEG FOR EN-ROUTE PROCEDURE \nU/S. \n ) \n// //",
+  "id": "1791465763808753",
+  "issued": "2026-10-08T13:19:00Z",
+  "last_updated": "2026-10-08T13:21:00Z",
+  "local_text": null,
+  "location": "ZLXY",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "L1605/26",
+  "purpose": "NBO",
+  "q_code": "QNMXX",
+  "qline_offset_nm": null,
+  "radius_nm": 25.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AE",
+  "series": "L",
+  "text": "NINGSHAN VOR/DME &apos;NSH&apos; 116.3MHZ/CH110X LIMITATION CHANGED AS \nFLW: \n1. FOR VOR: R040DEG-R210DEG CLOCKWISE, R250DEG-R360DEG CLOCKWISE \nU/S. (EXCEPT R089DEG,R201DEG,R263DEG FOR EN-ROUTE PROCEDURE). \n2. FOR DME:250DEG-210DEG CLOCKWISE U/S. (EXCEPT \nR023DEG,R030DEG,R089DEG,R201DEG,R263DEG FOR EN-ROUTE \nPROCEDURE,R030 DEG FOR ARRIVAL PROCEDURE.) \n3. FOR VOR/DME: BEYOND 18NM ON R030DEG FOR EN-ROUTE PROCEDURE AND \nARRIVAL/DEPARTURE PROCEDURE U/S. \n FOR DME : WITHIN 7NM ON R030DEG FOR EN-ROUTE PROCEDURE AND \nARRIVAL/DEPARTURE PROCEDURE U/S. \n4. FOR VOR/DME: BEYOND 7NM ON R089 DEG FOR EN-ROUTE PROCEDURE U/S. \n5. FOR VOR: BEYOND 29NM ON R201DEG FOR EN-ROUTE PROCEDURE U/S. \n FOR DME : BEYOND 17NM ON R201DEG FOR EN-ROUTE PROCEDURE U/S. \n6. FOR VOR: BEYOND 22NM ON R023DEG FOR EN-ROUTE PROCEDURE U/S. \n FOR DME : BEYOND 18NM ON R023DEG FOR EN-ROUTE PROCEDURE U/S. \n FOR DME : WITHIN 8NM ON R023DEG FOR EN-ROUTE PROCEDURE U/S. \n7. FOR VOR/DME: R142DEG FOR EN-ROUTE PROCEDURE U/S. \n8. FOR \n ) \n// // VOR/DME: R314DEG FOR EN-ROUTE PROCEDURE U/S. \n9. FOR VOR/DME: R030DEG FOR HOLDING PROCEDURE U/S. \n10. FOR VOR/DME: BEYOND 13NM ON R263DEG FOR EN-ROUTE PROCEDURE \nU/S. \n ) \n// //",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
  }
 }
