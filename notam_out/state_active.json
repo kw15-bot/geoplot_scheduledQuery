@@ -135813,52 +135813,6 @@
   "upper": "3800FT AMSL",
   "year": "2026"
  },
- "1791423924831000": {
-  "account_id": "RPLLYNYX",
-  "area_group": "REF",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "1401N12059E",
-  "effective_end": "2026-10-09T03:00:00.000Z",
-  "effective_start": "2026-10-08T01:45:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": true,
-  "fir": "RPHI",
-  "first_seen": "2026-10-08T01:50:30+00:00",
-  "geometry": {
-   "coordinates": [
-    120.983333,
-    14.016667
-   ],
-   "type": "Point"
-  },
-  "geometry_source": "qline-point",
-  "icao_location": "RPHI",
-  "icao_text": "B5366/26 NOTAMR B5346/26\r\nQ) RPHI/QWWLW/IV/NBO/W /000/110/1401N12059E999\r\nA) RPHI B) 2610080145 C) 2610090300EST\r\nE) TAAL VOLCANO (1401N 12059E) ON ALERT LVL 1 (LOW-LVL UNREST). \r\nFLT OPS ARE ADZ TO AVOID FLY CLOSE TO THE VOLCANO DUE TO \r\nSTEAM-DRIVEN OR PHREATIC ERUPTIONS.\r\nF) SFC G) FL110",
-  "id": "1791423924831000",
-  "issued": "2026-10-08T01:45:00.000Z",
-  "last_updated": "2026-10-08T01:45:00.000Z",
-  "local_text": null,
-  "location": "RPHI",
-  "lower": "SFC",
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "B5366/26",
-  "purpose": "NBO",
-  "q_code": "QWWLW",
-  "qline_offset_nm": null,
-  "radius_nm": 999.0,
-  "ref_number": "B5346/26",
-  "schedule": null,
-  "scope": "W ",
-  "series": "B",
-  "text": "TAAL VOLCANO (1401N 12059E) ON ALERT LVL 1 (LOW-LVL UNREST). \r\nFLT OPS ARE ADZ TO AVOID FLY CLOSE TO THE VOLCANO DUE TO \r\nSTEAM-DRIVEN OR PHREATIC ERUPTIONS.",
-  "traffic": "IV",
-  "type": "R",
-  "upper": "FL110",
-  "year": "2026"
- },
  "1791423970326000": {
   "account_id": "RCTPYNYX",
   "area_group": "TW",
@@ -169729,6 +169683,122 @@
   "traffic": "IV",
   "type": "N",
   "upper": null,
+  "year": "2026"
+ },
+ "1791464796820000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1401N12059E",
+  "effective_end": "2026-10-09T10:06:00.000Z",
+  "effective_start": "2026-10-08T13:05:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": true,
+  "fir": "RPHI",
+  "first_seen": "2026-10-08T13:10:29+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      [
+       120.783333,
+       13.983333
+      ],
+      [
+       120.783333,
+       13.933333
+      ],
+      [
+       120.9,
+       13.9
+      ],
+      [
+       120.916667,
+       14.0
+      ],
+      [
+       120.783333,
+       13.983333
+      ]
+     ]
+    ],
+    [
+     [
+      [
+       119.75,
+       13.566667
+      ],
+      [
+       119.9,
+       12.983333
+      ],
+      [
+       118.983333,
+       13.216667
+      ],
+      [
+       118.816667,
+       13.483333
+      ],
+      [
+       119.75,
+       13.566667
+      ]
+     ]
+    ],
+    [
+     [
+      [
+       118.666667,
+       13.283333
+      ],
+      [
+       118.983333,
+       12.233333
+      ],
+      [
+       117.833333,
+       12.566667
+      ],
+      [
+       117.183333,
+       13.45
+      ],
+      [
+       118.666667,
+       13.283333
+      ]
+     ]
+    ]
+   ],
+   "type": "MultiPolygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RPHI",
+  "icao_text": "B5391/26 NOTAMR B5366/26\r\nQ) RPHI/QWWLW/IV/NBO/W /000/150/1401N12059E999\r\nA) RPHI B) 2610081305 C) 2610091006EST\r\nE) ERUPTION OF VOLCANO TAAL (CAVW 0703-07) 1401N 12059E PHILIPPINES\r\nDATE AND TIME OF ERUPTION: 2610081006\r\nEXISTENCE AND HORIZONTAL/VER EXTEND OF VA CLD: 13123FT\r\n                                               ABV CRATER\r\nDIRECTION OF MOV OF ASH CLD: DARK GRAYISH, SOUTHWEST DRIFT\r\nOBS VA DTG: 08/1050\r\nOBS VA CLD: SFC/FL150 1359N 12047E - 1356N 12047E - 1354N 12054E -\r\n            1400N 12055E MOV WEST 20KT\r\nFCST VA CLD +6 HR: 08/1650Z SFC/FL150 1334N 11945E - 1259N 11954E -\r\n                   1313N 11859E - 1329N 11849E\r\nFCST VA CLD +12 HR: 08/2250Z SFC/FL170 1317N 11840E - 1214N 11859E - \r\n                    1234N 11750E - 1327N 11711E\r\nFCST VA CLD +18 HR: NO VA EXP\r\nAIR RTE OR PORTIONS OF AIR RTE AND FL AFFECTED: MIA A461 TAALA\r\n                                                FL150\r\nALTN AIR RTE AVBL: NONE (EXP VECTORS DCT VERDE)\r\nSOURCE OF INFO: PHIVOLCS VONA, TOKYO VAAC\r\nRMK: WITH ACCOMPANYING SEISMIC AND INFRASONIC SGL. WITH VISUAL OBS \r\n     VIA IP AND THERMAL CAMERAS.\r\nF) SFC G) FL150",
+  "id": "1791464796820000",
+  "issued": "2026-10-08T13:05:00.000Z",
+  "last_updated": "2026-10-08T13:06:00.000Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5391/26",
+  "purpose": "NBO",
+  "q_code": "QWWLW",
+  "qline_offset_nm": 8.8,
+  "radius_nm": 999.0,
+  "ref_number": "B5366/26",
+  "schedule": null,
+  "scope": "W ",
+  "series": "B",
+  "text": "ERUPTION OF VOLCANO TAAL (CAVW 0703-07) 1401N 12059E PHILIPPINES\r\nDATE AND TIME OF ERUPTION: 2610081006\r\nEXISTENCE AND HORIZONTAL/VER EXTEND OF VA CLD: 13123FT\r\n                                               ABV CRATER\r\nDIRECTION OF MOV OF ASH CLD: DARK GRAYISH, SOUTHWEST DRIFT\r\nOBS VA DTG: 08/1050\r\nOBS VA CLD: SFC/FL150 1359N 12047E - 1356N 12047E - 1354N 12054E -\r\n            1400N 12055E MOV WEST 20KT\r\nFCST VA CLD +6 HR: 08/1650Z SFC/FL150 1334N 11945E - 1259N 11954E -\r\n                   1313N 11859E - 1329N 11849E\r\nFCST VA CLD +12 HR: 08/2250Z SFC/FL170 1317N 11840E - 1214N 11859E - \r\n                    1234N 11750E - 1327N 11711E\r\nFCST VA CLD +18 HR: NO VA EXP\r\nAIR RTE OR PORTIONS OF AIR RTE AND FL AFFECTED: MIA A461 TAALA\r\n                                                FL150\r\nALTN AIR RTE AVBL: NONE (EXP VECTORS DCT VERDE)\r\nSOURCE OF INFO: PHIVOLCS VONA, TOKYO VAAC\r\nRMK: WITH ACCOMPANYING SEISMIC AND INFRASONIC SGL. WITH VISUAL OBS \r\n     VIA IP AND THERMAL CAMERAS.",
+  "traffic": "IV",
+  "type": "R",
+  "upper": "FL150",
   "year": "2026"
  }
 }
