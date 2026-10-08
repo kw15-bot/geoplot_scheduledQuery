@@ -153827,8 +153827,8 @@
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "2503N12127E",
-  "effective_end": "2026-12-04T13:00:00.000Z",
-  "effective_start": "2026-10-14T23:00:00.000Z",
+  "effective_end": "2026-12-04T13:00:00Z",
+  "effective_start": "2026-10-14T23:00:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
@@ -153873,12 +153873,12 @@
   "icao_location": "RCSS",
   "icao_text": "U2625/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/020/2503N12127E002\r\nA) RCSS\r\nB) 2610142300 C) 2612041300\r\nD) 2300-1300\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260923000904\r\n2.LCA:XINZHUANG DISTRICT, NEW TAIPEI CITY\r\n3.THE AREA OVERLAPS PART OF VFR HEL RTE H2, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0939-600675, 0912-218136\r\n5.AREA AS FLW:\r\n250319N 1212635E\r\n250319N 1212655E\r\n250335N 1212658E\r\n250339N 1212728E\r\n250157N 1212726E\r\n250136N 1212636E\r\n250319N 1212635E\r\nF) SFC G) 2000FT AMSL",
   "id": "1791426579493000",
-  "issued": "2026-10-08T02:29:00.000Z",
-  "last_updated": "2026-10-08T02:29:00.000Z",
+  "issued": "2026-10-08T02:29:00Z",
+  "last_updated": "2026-10-08T02:30:00Z",
   "local_text": null,
   "location": "RCSS",
   "lower": "SFC",
-  "max_fl": "999",
+  "max_fl": "020",
   "min_fl": "000",
   "number": "U2625/26",
   "purpose": "BO",
@@ -153893,6 +153893,1200 @@
   "traffic": "IV",
   "type": "N",
   "upper": "2000FT AMSL",
+  "year": "2026"
+ },
+ "1791426760809000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2500N12131E",
+  "effective_end": "2026-12-04T13:00:00.000Z",
+  "effective_start": "2026-10-14T23:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-08T02:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.506389,
+      24.995278
+     ],
+     [
+      121.505278,
+      25.005
+     ],
+     [
+      121.5125,
+      25.016389
+     ],
+     [
+      121.519722,
+      25.016111
+     ],
+     [
+      121.517222,
+      24.993611
+     ],
+     [
+      121.506389,
+      24.995278
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2626/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/000/025/2500N12131E002\r\nA) RCAA\r\nB) 2610142300 C) 2612041300\r\nD) 2300-1300\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260923000801\r\n2.LCA:YONGHE DISTRICT, NEW TAIPEI CITY\r\n3.THE AREA OVERLAPS PART OF VFR CORRIDOR C10, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0939-600675, 0912-218136\r\n5.AREA AS FLW:\r\n245943N 1213023E\r\n250018N 1213019E\r\n250059N 1213045E\r\n250058N 1213111E\r\n245937N 1213102E\r\n245943N 1213023E\r\nF) SFC G) 2500FT AMSL",
+  "id": "1791426760809000",
+  "issued": "2026-10-08T02:32:00.000Z",
+  "last_updated": "2026-10-08T02:32:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2626/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 2.0,
+  "ref_number": null,
+  "schedule": "2300-1300",
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260923000801\r\n2.LCA:YONGHE DISTRICT, NEW TAIPEI CITY\r\n3.THE AREA OVERLAPS PART OF VFR CORRIDOR C10, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0939-600675, 0912-218136\r\n5.AREA AS FLW:\r\n245943N 1213023E\r\n250018N 1213019E\r\n250059N 1213045E\r\n250058N 1213111E\r\n245937N 1213102E\r\n245943N 1213023E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "2500FT AMSL",
+  "year": "2026"
+ },
+ "1791426850049000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1811N12032E",
+  "effective_end": "2026-12-31T14:00:00.000Z",
+  "effective_start": "2026-10-08T02:33:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-08T02:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.533333,
+      18.266517
+     ],
+     [
+      120.541915,
+      18.266116
+     ],
+     [
+      120.550415,
+      18.264919
+     ],
+     [
+      120.558749,
+      18.262935
+     ],
+     [
+      120.56684,
+      18.260185
+     ],
+     [
+      120.574607,
+      18.256695
+     ],
+     [
+      120.581977,
+      18.252498
+     ],
+     [
+      120.588878,
+      18.247635
+     ],
+     [
+      120.595245,
+      18.242153
+     ],
+     [
+      120.601015,
+      18.236104
+     ],
+     [
+      120.606133,
+      18.229548
+     ],
+     [
+      120.610551,
+      18.222546
+     ],
+     [
+      120.614224,
+      18.215166
+     ],
+     [
+      120.617119,
+      18.20748
+     ],
+     [
+      120.619207,
+      18.199562
+     ],
+     [
+      120.620468,
+      18.191487
+     ],
+     [
+      120.620889,
+      18.183333
+     ],
+     [
+      120.620468,
+      18.17518
+     ],
+     [
+      120.619207,
+      18.167105
+     ],
+     [
+      120.617119,
+      18.159186
+     ],
+     [
+      120.614224,
+      18.1515
+     ],
+     [
+      120.610551,
+      18.144121
+     ],
+     [
+      120.606133,
+      18.137119
+     ],
+     [
+      120.601015,
+      18.130562
+     ],
+     [
+      120.595245,
+      18.124514
+     ],
+     [
+      120.588878,
+      18.119032
+     ],
+     [
+      120.581977,
+      18.114169
+     ],
+     [
+      120.574607,
+      18.109972
+     ],
+     [
+      120.56684,
+      18.106482
+     ],
+     [
+      120.558749,
+      18.103732
+     ],
+     [
+      120.550415,
+      18.101748
+     ],
+     [
+      120.541915,
+      18.10055
+     ],
+     [
+      120.533333,
+      18.10015
+     ],
+     [
+      120.524751,
+      18.10055
+     ],
+     [
+      120.516252,
+      18.101748
+     ],
+     [
+      120.507917,
+      18.103732
+     ],
+     [
+      120.499827,
+      18.106482
+     ],
+     [
+      120.49206,
+      18.109972
+     ],
+     [
+      120.48469,
+      18.114169
+     ],
+     [
+      120.477788,
+      18.119032
+     ],
+     [
+      120.471422,
+      18.124514
+     ],
+     [
+      120.465652,
+      18.130562
+     ],
+     [
+      120.460533,
+      18.137119
+     ],
+     [
+      120.456116,
+      18.144121
+     ],
+     [
+      120.452442,
+      18.1515
+     ],
+     [
+      120.449548,
+      18.159186
+     ],
+     [
+      120.44746,
+      18.167105
+     ],
+     [
+      120.446199,
+      18.17518
+     ],
+     [
+      120.445777,
+      18.183333
+     ],
+     [
+      120.446199,
+      18.191487
+     ],
+     [
+      120.44746,
+      18.199562
+     ],
+     [
+      120.449548,
+      18.20748
+     ],
+     [
+      120.452442,
+      18.215166
+     ],
+     [
+      120.456116,
+      18.222546
+     ],
+     [
+      120.460533,
+      18.229548
+     ],
+     [
+      120.465652,
+      18.236104
+     ],
+     [
+      120.471422,
+      18.242153
+     ],
+     [
+      120.477788,
+      18.247635
+     ],
+     [
+      120.48469,
+      18.252498
+     ],
+     [
+      120.49206,
+      18.256695
+     ],
+     [
+      120.499827,
+      18.260185
+     ],
+     [
+      120.507917,
+      18.262935
+     ],
+     [
+      120.516252,
+      18.264919
+     ],
+     [
+      120.524751,
+      18.266116
+     ],
+     [
+      120.533333,
+      18.266517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPLI",
+  "icao_text": "B5374/26 NOTAMR B4977/26\r\nQ) RPHI/QMRHW/IV/BO /A /000/999/1811N12032E005\r\nA) RPLI B) 2610080233 C) 2612311400\r\nE) RWY 01/19 WIP (ASPH OVERLAY, RWY STRIP WID AND GRADE COR,\r\nREHABILITATION OF RWY LGT, REPAIR/REPAINTING OF RWY MARKERS AND\r\nMARKINGS, VEGETATION CTL).\r\n\r\nRMK: EXER CTN DRG LDG/TKOF RWY 01/19.\r\n     GIVE AMPLE TIME FOR MEN AND EQPT TO CLR THE RWY.",
+  "id": "1791426850049000",
+  "issued": "2026-10-08T02:33:00.000Z",
+  "last_updated": "2026-10-08T02:34:00.000Z",
+  "local_text": null,
+  "location": "RPLI",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5374/26",
+  "purpose": "BO ",
+  "q_code": "QMRHW",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "B4977/26",
+  "schedule": null,
+  "scope": "A ",
+  "series": "B",
+  "text": "RWY 01/19 WIP (ASPH OVERLAY, RWY STRIP WID AND GRADE COR,\r\nREHABILITATION OF RWY LGT, REPAIR/REPAINTING OF RWY MARKERS AND\r\nMARKINGS, VEGETATION CTL).\r\n\r\nRMK: EXER CTN DRG LDG/TKOF RWY 01/19.\r\n     GIVE AMPLE TIME FOR MEN AND EQPT TO CLR THE RWY.",
+  "traffic": "IV",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791426922493000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2501N12131E",
+  "effective_end": "2026-12-04T13:00:00.000Z",
+  "effective_start": "2026-10-14T23:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-08T02:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.513333,
+      25.027222
+     ],
+     [
+      121.525556,
+      25.027222
+     ],
+     [
+      121.516944,
+      25.001667
+     ],
+     [
+      121.508889,
+      25.003889
+     ],
+     [
+      121.513333,
+      25.027222
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCSS",
+  "icao_text": "U2627/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/025/2501N12131E001\r\nA) RCSS\r\nB) 2610142300 C) 2612041300\r\nD) 2300-1300\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260923000802\r\n2.LCA:YONGHE DISTRICT, NEW TAIPEI CITY\r\n3.COOR TEL:0939-600675, 0912-218136\r\n4.AREA AS FLW:\r\n250138N 1213048E\r\n250138N 1213132E\r\n250006N 1213101E\r\n250014N 1213032E\r\n250138N 1213048E\r\nF) SFC G) 2500FT AMSL",
+  "id": "1791426922493000",
+  "issued": "2026-10-08T02:35:00.000Z",
+  "last_updated": "2026-10-08T02:35:00.000Z",
+  "local_text": null,
+  "location": "RCSS",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2627/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.1,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": "2300-1300",
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260923000802\r\n2.LCA:YONGHE DISTRICT, NEW TAIPEI CITY\r\n3.COOR TEL:0939-600675, 0912-218136\r\n4.AREA AS FLW:\r\n250138N 1213048E\r\n250138N 1213132E\r\n250006N 1213101E\r\n250014N 1213032E\r\n250138N 1213048E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "2500FT AMSL",
+  "year": "2026"
+ },
+ "1791427034920000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2500N12132E",
+  "effective_end": "2026-12-04T13:00:00.000Z",
+  "effective_start": "2026-10-14T23:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-08T02:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.531389,
+      25.015556
+     ],
+     [
+      121.533611,
+      25.015556
+     ],
+     [
+      121.535833,
+      25.011389
+     ],
+     [
+      121.540833,
+      25.003056
+     ],
+     [
+      121.535,
+      24.999722
+     ],
+     [
+      121.533056,
+      25.012222
+     ],
+     [
+      121.531389,
+      25.015556
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCAA",
+  "icao_text": "U2628/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/W/000/025/2500N12132E001\r\nA) RCAA\r\nB) 2610142300 C) 2612041300\r\nD) 2300-1300\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260923000803\r\n2.LCA:ZHONGZHENG DISTRICT, TAIPEI CITY\r\n3.COOR TEL:0939-600675, 0912-218136\r\n4.AREA AS FLW:\r\n250056N 1213153E\r\n250056N 1213201E\r\n250041N 1213209E\r\n250011N 1213227E\r\n245959N 1213206E\r\n250044N 1213159E\r\n250056N 1213153E\r\nF) SFC G) 2500FT AMSL",
+  "id": "1791427034920000",
+  "issued": "2026-10-08T02:37:00.000Z",
+  "last_updated": "2026-10-08T02:37:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2628/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.6,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": "2300-1300",
+  "scope": "W",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260923000803\r\n2.LCA:ZHONGZHENG DISTRICT, TAIPEI CITY\r\n3.COOR TEL:0939-600675, 0912-218136\r\n4.AREA AS FLW:\r\n250056N 1213153E\r\n250056N 1213201E\r\n250041N 1213209E\r\n250011N 1213227E\r\n245959N 1213206E\r\n250044N 1213159E\r\n250056N 1213153E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "2500FT AMSL",
+  "year": "2026"
+ },
+ "1791427061989000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1811N12032E",
+  "effective_end": "2026-12-31T14:00:00Z",
+  "effective_start": "2026-10-08T02:37:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-08T02:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.533333,
+      18.266517
+     ],
+     [
+      120.541915,
+      18.266116
+     ],
+     [
+      120.550415,
+      18.264919
+     ],
+     [
+      120.558749,
+      18.262935
+     ],
+     [
+      120.56684,
+      18.260185
+     ],
+     [
+      120.574607,
+      18.256695
+     ],
+     [
+      120.581977,
+      18.252498
+     ],
+     [
+      120.588878,
+      18.247635
+     ],
+     [
+      120.595245,
+      18.242153
+     ],
+     [
+      120.601015,
+      18.236104
+     ],
+     [
+      120.606133,
+      18.229548
+     ],
+     [
+      120.610551,
+      18.222546
+     ],
+     [
+      120.614224,
+      18.215166
+     ],
+     [
+      120.617119,
+      18.20748
+     ],
+     [
+      120.619207,
+      18.199562
+     ],
+     [
+      120.620468,
+      18.191487
+     ],
+     [
+      120.620889,
+      18.183333
+     ],
+     [
+      120.620468,
+      18.17518
+     ],
+     [
+      120.619207,
+      18.167105
+     ],
+     [
+      120.617119,
+      18.159186
+     ],
+     [
+      120.614224,
+      18.1515
+     ],
+     [
+      120.610551,
+      18.144121
+     ],
+     [
+      120.606133,
+      18.137119
+     ],
+     [
+      120.601015,
+      18.130562
+     ],
+     [
+      120.595245,
+      18.124514
+     ],
+     [
+      120.588878,
+      18.119032
+     ],
+     [
+      120.581977,
+      18.114169
+     ],
+     [
+      120.574607,
+      18.109972
+     ],
+     [
+      120.56684,
+      18.106482
+     ],
+     [
+      120.558749,
+      18.103732
+     ],
+     [
+      120.550415,
+      18.101748
+     ],
+     [
+      120.541915,
+      18.10055
+     ],
+     [
+      120.533333,
+      18.10015
+     ],
+     [
+      120.524751,
+      18.10055
+     ],
+     [
+      120.516252,
+      18.101748
+     ],
+     [
+      120.507917,
+      18.103732
+     ],
+     [
+      120.499827,
+      18.106482
+     ],
+     [
+      120.49206,
+      18.109972
+     ],
+     [
+      120.48469,
+      18.114169
+     ],
+     [
+      120.477788,
+      18.119032
+     ],
+     [
+      120.471422,
+      18.124514
+     ],
+     [
+      120.465652,
+      18.130562
+     ],
+     [
+      120.460533,
+      18.137119
+     ],
+     [
+      120.456116,
+      18.144121
+     ],
+     [
+      120.452442,
+      18.1515
+     ],
+     [
+      120.449548,
+      18.159186
+     ],
+     [
+      120.44746,
+      18.167105
+     ],
+     [
+      120.446199,
+      18.17518
+     ],
+     [
+      120.445777,
+      18.183333
+     ],
+     [
+      120.446199,
+      18.191487
+     ],
+     [
+      120.44746,
+      18.199562
+     ],
+     [
+      120.449548,
+      18.20748
+     ],
+     [
+      120.452442,
+      18.215166
+     ],
+     [
+      120.456116,
+      18.222546
+     ],
+     [
+      120.460533,
+      18.229548
+     ],
+     [
+      120.465652,
+      18.236104
+     ],
+     [
+      120.471422,
+      18.242153
+     ],
+     [
+      120.477788,
+      18.247635
+     ],
+     [
+      120.48469,
+      18.252498
+     ],
+     [
+      120.49206,
+      18.256695
+     ],
+     [
+      120.499827,
+      18.260185
+     ],
+     [
+      120.507917,
+      18.262935
+     ],
+     [
+      120.516252,
+      18.264919
+     ],
+     [
+      120.524751,
+      18.266116
+     ],
+     [
+      120.533333,
+      18.266517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPLI",
+  "icao_text": "B5375/26 NOTAMR B3288/26\r\nQ) RPHI/QMRXX/IV/NBO/A /000/999/1811N12032E005\r\nA) RPLI B) 2610080237 C) 2612311400\r\nE) EXER CTN DRG LDG/TKOF RWY 01/19 DUE WIP (CONST OF NEW TWY)\r\nAT COORD: 181106N 1203200E - 181118N 1203201E AND\r\n181118N 1203201E - 181118N 1203158E.",
+  "id": "1791427061989000",
+  "issued": "2026-10-08T02:37:00Z",
+  "last_updated": "2026-10-08T02:38:00Z",
+  "local_text": null,
+  "location": "RPLI",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5375/26",
+  "purpose": "NBO",
+  "q_code": "QMRXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "B3288/26",
+  "schedule": null,
+  "scope": "A",
+  "series": "B",
+  "text": "EXER CTN DRG LDG/TKOF RWY 01/19 DUE WIP (CONST OF NEW TWY)\r\nAT COORD: 181106N 1203200E - 181118N 1203201E AND\r\n181118N 1203201E - 181118N 1203158E.",
+  "traffic": "IV",
+  "type": "R",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791427161303000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2250N12015E",
+  "effective_end": "2026-12-06T16:00:00.000Z",
+  "effective_start": "2026-10-14T16:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-08T02:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.248333,
+      22.838611
+     ],
+     [
+      120.261667,
+      22.841667
+     ],
+     [
+      120.262778,
+      22.833333
+     ],
+     [
+      120.25,
+      22.831111
+     ],
+     [
+      120.248333,
+      22.838611
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCNN",
+  "icao_text": "U2629/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/012/2250N12015E001\r\nA) RCNN\r\nB) 2610141600 C) 2612061600\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260916000701\r\n2.LCA:LUZHU DISTRICT, KAOHSIUNG CITY\r\n3.COOR TEL:0933-147693, 0909-154911\r\n4.AREA AS FLW:\r\n225019N 1201454E\r\n225030N 1201542E\r\n225000N 1201546E\r\n224952N 1201500E\r\n225019N 1201454E\r\nF) SFC G) 1200FT AMSL",
+  "id": "1791427161303000",
+  "issued": "2026-10-08T02:39:00.000Z",
+  "last_updated": "2026-10-08T02:39:00.000Z",
+  "local_text": null,
+  "location": "RCNN",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2629/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260916000701\r\n2.LCA:LUZHU DISTRICT, KAOHSIUNG CITY\r\n3.COOR TEL:0933-147693, 0909-154911\r\n4.AREA AS FLW:\r\n225019N 1201454E\r\n225030N 1201542E\r\n225000N 1201546E\r\n224952N 1201500E\r\n225019N 1201454E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "1200FT AMSL",
+  "year": "2026"
+ },
+ "1791427186020000": {
+  "account_id": "VHHHYNYX",
+  "area_group": "HK",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2003N11500E",
+  "effective_end": "2026-10-08T12:00:00.000Z",
+  "effective_start": "2026-10-08T09:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "VHHK",
+  "first_seen": "2026-10-08T02:40:28+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      115.0,
+      23.610259
+     ],
+     [
+      115.37148,
+      23.593115
+     ],
+     [
+      115.739383,
+      23.541849
+     ],
+     [
+      116.100165,
+      23.456955
+     ],
+     [
+      116.450352,
+      23.33925
+     ],
+     [
+      116.786572,
+      23.189868
+     ],
+     [
+      117.105585,
+      23.010247
+     ],
+     [
+      117.404321,
+      22.802117
+     ],
+     [
+      117.679902,
+      22.567483
+     ],
+     [
+      117.929674,
+      22.308604
+     ],
+     [
+      118.151231,
+      22.027974
+     ],
+     [
+      118.342441,
+      21.728294
+     ],
+     [
+      118.50146,
+      21.412452
+     ],
+     [
+      118.626759,
+      21.083489
+     ],
+     [
+      118.717131,
+      20.744572
+     ],
+     [
+      118.771704,
+      20.398966
+     ],
+     [
+      118.789953,
+      20.05
+     ],
+     [
+      118.771704,
+      19.701034
+     ],
+     [
+      118.717131,
+      19.355428
+     ],
+     [
+      118.626759,
+      19.016511
+     ],
+     [
+      118.50146,
+      18.687548
+     ],
+     [
+      118.342441,
+      18.371706
+     ],
+     [
+      118.151231,
+      18.072026
+     ],
+     [
+      117.929674,
+      17.791396
+     ],
+     [
+      117.679902,
+      17.532517
+     ],
+     [
+      117.404321,
+      17.297883
+     ],
+     [
+      117.105585,
+      17.089753
+     ],
+     [
+      116.786572,
+      16.910132
+     ],
+     [
+      116.450352,
+      16.76075
+     ],
+     [
+      116.100165,
+      16.643045
+     ],
+     [
+      115.739383,
+      16.558151
+     ],
+     [
+      115.37148,
+      16.506885
+     ],
+     [
+      115.0,
+      16.489741
+     ],
+     [
+      114.62852,
+      16.506885
+     ],
+     [
+      114.260617,
+      16.558151
+     ],
+     [
+      113.899835,
+      16.643045
+     ],
+     [
+      113.549648,
+      16.76075
+     ],
+     [
+      113.213428,
+      16.910132
+     ],
+     [
+      112.894415,
+      17.089753
+     ],
+     [
+      112.595679,
+      17.297883
+     ],
+     [
+      112.320098,
+      17.532517
+     ],
+     [
+      112.070326,
+      17.791396
+     ],
+     [
+      111.848769,
+      18.072026
+     ],
+     [
+      111.657559,
+      18.371706
+     ],
+     [
+      111.49854,
+      18.687548
+     ],
+     [
+      111.373241,
+      19.016511
+     ],
+     [
+      111.282869,
+      19.355428
+     ],
+     [
+      111.228296,
+      19.701034
+     ],
+     [
+      111.210047,
+      20.05
+     ],
+     [
+      111.228296,
+      20.398966
+     ],
+     [
+      111.282869,
+      20.744572
+     ],
+     [
+      111.373241,
+      21.083489
+     ],
+     [
+      111.49854,
+      21.412452
+     ],
+     [
+      111.657559,
+      21.728294
+     ],
+     [
+      111.848769,
+      22.027974
+     ],
+     [
+      112.070326,
+      22.308604
+     ],
+     [
+      112.320098,
+      22.567483
+     ],
+     [
+      112.595679,
+      22.802117
+     ],
+     [
+      112.894415,
+      23.010247
+     ],
+     [
+      113.213428,
+      23.189868
+     ],
+     [
+      113.549648,
+      23.33925
+     ],
+     [
+      113.899835,
+      23.456955
+     ],
+     [
+      114.260617,
+      23.541849
+     ],
+     [
+      114.62852,
+      23.593115
+     ],
+     [
+      115.0,
+      23.610259
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "VHHK",
+  "icao_text": "A2331/26 NOTAMN\r\nQ) VHHK/QPFCA/IV/NBO/E /000/999/2003N11500E214\r\nA) VHHK B) 2610080900 C) 2610081200\r\nE) DUE TO TRAFFIC, FLIGHTS TRANSITING HONG KONG FIR,\r\n\r\n1. DESTINATIONS ZSAM, ZSQZ, ZSFZ: TREATED AS ONE STREAM\r\n2. DESTINATIONS OTHER THAN MENTIONED IN (1): TREATED AS ONE STREAM\r\n\r\nVIA THE FOLLOWING ROUTE IS SUBJECT TO FLOW CONTROL:\r\n\r\nA461 NOMAN - DOTMI A470, 10 MINUTES\r\n\r\nRMK: FLOW CONTROL MAY BE ADJUSTED SUBJECT TO SITUATION AND \r\nDISCRETION OF HONG KONG ATS WATCH SUPERVISOR.",
+  "id": "1791427186020000",
+  "issued": "2026-10-08T02:39:00.000Z",
+  "last_updated": "2026-10-08T02:39:00.000Z",
+  "local_text": null,
+  "location": "VHHK",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A2331/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 214.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E ",
+  "series": "A",
+  "text": "DUE TO TRAFFIC, FLIGHTS TRANSITING HONG KONG FIR,\r\n\r\n1. DESTINATIONS ZSAM, ZSQZ, ZSFZ: TREATED AS ONE STREAM\r\n2. DESTINATIONS OTHER THAN MENTIONED IN (1): TREATED AS ONE STREAM\r\n\r\nVIA THE FOLLOWING ROUTE IS SUBJECT TO FLOW CONTROL:\r\n\r\nA461 NOMAN - DOTMI A470, 10 MINUTES\r\n\r\nRMK: FLOW CONTROL MAY BE ADJUSTED SUBJECT TO SITUATION AND \r\nDISCRETION OF HONG KONG ATS WATCH SUPERVISOR.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
   "year": "2026"
  }
 }
