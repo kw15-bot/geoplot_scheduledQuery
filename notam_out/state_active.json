@@ -82907,312 +82907,6 @@
   "upper": null,
   "year": "2026"
  },
- "1790992347796000": {
-  "account_id": "ZBBBYNYX",
-  "area_group": "CN",
-  "cancelation_date": null,
-  "classification": "INTL",
-  "coordinates": "2956N12222E",
-  "effective_end": "2026-10-08T02:00:00.000Z",
-  "effective_start": "2026-10-04T02:00:00.000Z",
-  "end_override": null,
-  "ended_by": null,
-  "estimated": false,
-  "fir": "ZSHA",
-  "first_seen": "2026-10-03T02:00:42+00:00",
-  "geometry": {
-   "coordinates": [
-    [
-     [
-      122.366667,
-      30.016517
-     ],
-     [
-      122.376075,
-      30.016116
-     ],
-     [
-      122.385393,
-      30.014919
-     ],
-     [
-      122.39453,
-      30.012935
-     ],
-     [
-      122.4034,
-      30.010185
-     ],
-     [
-      122.411915,
-      30.006695
-     ],
-     [
-      122.419995,
-      30.002498
-     ],
-     [
-      122.427561,
-      29.997635
-     ],
-     [
-      122.43454,
-      29.992153
-     ],
-     [
-      122.440866,
-      29.986104
-     ],
-     [
-      122.446478,
-      29.979548
-     ],
-     [
-      122.45132,
-      29.972546
-     ],
-     [
-      122.455348,
-      29.965166
-     ],
-     [
-      122.458521,
-      29.95748
-     ],
-     [
-      122.46081,
-      29.949562
-     ],
-     [
-      122.462192,
-      29.941487
-     ],
-     [
-      122.462654,
-      29.933333
-     ],
-     [
-      122.462192,
-      29.92518
-     ],
-     [
-      122.46081,
-      29.917105
-     ],
-     [
-      122.458521,
-      29.909186
-     ],
-     [
-      122.455348,
-      29.9015
-     ],
-     [
-      122.45132,
-      29.894121
-     ],
-     [
-      122.446478,
-      29.887119
-     ],
-     [
-      122.440866,
-      29.880562
-     ],
-     [
-      122.43454,
-      29.874514
-     ],
-     [
-      122.427561,
-      29.869032
-     ],
-     [
-      122.419995,
-      29.864169
-     ],
-     [
-      122.411915,
-      29.859972
-     ],
-     [
-      122.4034,
-      29.856482
-     ],
-     [
-      122.39453,
-      29.853732
-     ],
-     [
-      122.385393,
-      29.851748
-     ],
-     [
-      122.376075,
-      29.85055
-     ],
-     [
-      122.366667,
-      29.85015
-     ],
-     [
-      122.357258,
-      29.85055
-     ],
-     [
-      122.34794,
-      29.851748
-     ],
-     [
-      122.338803,
-      29.853732
-     ],
-     [
-      122.329934,
-      29.856482
-     ],
-     [
-      122.321418,
-      29.859972
-     ],
-     [
-      122.313339,
-      29.864169
-     ],
-     [
-      122.305773,
-      29.869032
-     ],
-     [
-      122.298793,
-      29.874514
-     ],
-     [
-      122.292467,
-      29.880562
-     ],
-     [
-      122.286856,
-      29.887119
-     ],
-     [
-      122.282013,
-      29.894121
-     ],
-     [
-      122.277986,
-      29.9015
-     ],
-     [
-      122.274812,
-      29.909186
-     ],
-     [
-      122.272523,
-      29.917105
-     ],
-     [
-      122.271141,
-      29.92518
-     ],
-     [
-      122.270679,
-      29.933333
-     ],
-     [
-      122.271141,
-      29.941487
-     ],
-     [
-      122.272523,
-      29.949562
-     ],
-     [
-      122.274812,
-      29.95748
-     ],
-     [
-      122.277986,
-      29.965166
-     ],
-     [
-      122.282013,
-      29.972546
-     ],
-     [
-      122.286856,
-      29.979548
-     ],
-     [
-      122.292467,
-      29.986104
-     ],
-     [
-      122.298793,
-      29.992153
-     ],
-     [
-      122.305773,
-      29.997635
-     ],
-     [
-      122.313339,
-      30.002498
-     ],
-     [
-      122.321418,
-      30.006695
-     ],
-     [
-      122.329934,
-      30.010185
-     ],
-     [
-      122.338803,
-      30.012935
-     ],
-     [
-      122.34794,
-      30.014919
-     ],
-     [
-      122.357258,
-      30.016116
-     ],
-     [
-      122.366667,
-      30.016517
-     ]
-    ]
-   ],
-   "type": "Polygon"
-  },
-  "geometry_source": "qline-circle",
-  "icao_location": "ZSZS",
-  "icao_text": "M2831/26 NOTAMN\r\nQ)ZSHA/QXXXX/IV/NBO/A/000/999/2956N12222E005\r\nA)ZSZS B)2610040200 C)2610080200 \r\nE) GROUND AIR SUPPLY UNIT U/S DUE TO MAINT.\r\n ",
-  "id": "1790992347796000",
-  "issued": "2026-10-03T01:50:00.000Z",
-  "last_updated": "2026-10-03T01:52:00.000Z",
-  "local_text": null,
-  "location": "ZSZS",
-  "lower": null,
-  "max_fl": "999",
-  "min_fl": "000",
-  "number": "M2831/26",
-  "purpose": "NBO",
-  "q_code": "QXXXX",
-  "qline_offset_nm": null,
-  "radius_nm": 5.0,
-  "ref_number": null,
-  "schedule": null,
-  "scope": "A",
-  "series": "M",
-  "text": "GROUND AIR SUPPLY UNIT U/S DUE TO MAINT.",
-  "traffic": "IV",
-  "type": "N",
-  "upper": null,
-  "year": "2026"
- },
  "1790996204308000": {
   "account_id": "ZBBBYNYX",
   "area_group": "CN",
@@ -151039,6 +150733,1238 @@
   "traffic": "IV",
   "type": "N",
   "upper": "2200FT AMSL",
+  "year": "2026"
+ },
+ "1791424273802000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2504N12112E",
+  "effective_end": "2026-11-27T10:00:00.000Z",
+  "effective_start": "2026-10-14T22:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-08T02:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.198333,
+      25.059231
+     ],
+     [
+      121.19843,
+      25.059227
+     ],
+     [
+      121.198526,
+      25.059214
+     ],
+     [
+      121.198621,
+      25.059193
+     ],
+     [
+      121.198712,
+      25.059163
+     ],
+     [
+      121.1988,
+      25.059125
+     ],
+     [
+      121.198884,
+      25.05908
+     ],
+     [
+      121.198962,
+      25.059027
+     ],
+     [
+      121.199034,
+      25.058968
+     ],
+     [
+      121.1991,
+      25.058903
+     ],
+     [
+      121.199158,
+      25.058832
+     ],
+     [
+      121.199208,
+      25.058756
+     ],
+     [
+      121.199249,
+      25.058677
+     ],
+     [
+      121.199282,
+      25.058594
+     ],
+     [
+      121.199306,
+      25.058508
+     ],
+     [
+      121.19932,
+      25.058421
+     ],
+     [
+      121.199325,
+      25.058333
+     ],
+     [
+      121.19932,
+      25.058245
+     ],
+     [
+      121.199306,
+      25.058158
+     ],
+     [
+      121.199282,
+      25.058072
+     ],
+     [
+      121.199249,
+      25.057989
+     ],
+     [
+      121.199208,
+      25.05791
+     ],
+     [
+      121.199158,
+      25.057834
+     ],
+     [
+      121.1991,
+      25.057763
+     ],
+     [
+      121.199034,
+      25.057698
+     ],
+     [
+      121.198962,
+      25.057639
+     ],
+     [
+      121.198884,
+      25.057586
+     ],
+     [
+      121.1988,
+      25.057541
+     ],
+     [
+      121.198712,
+      25.057503
+     ],
+     [
+      121.198621,
+      25.057473
+     ],
+     [
+      121.198526,
+      25.057452
+     ],
+     [
+      121.19843,
+      25.057439
+     ],
+     [
+      121.198333,
+      25.057435
+     ],
+     [
+      121.198236,
+      25.057439
+     ],
+     [
+      121.19814,
+      25.057452
+     ],
+     [
+      121.198045,
+      25.057473
+     ],
+     [
+      121.197954,
+      25.057503
+     ],
+     [
+      121.197866,
+      25.057541
+     ],
+     [
+      121.197782,
+      25.057586
+     ],
+     [
+      121.197704,
+      25.057639
+     ],
+     [
+      121.197632,
+      25.057698
+     ],
+     [
+      121.197566,
+      25.057763
+     ],
+     [
+      121.197508,
+      25.057834
+     ],
+     [
+      121.197458,
+      25.05791
+     ],
+     [
+      121.197417,
+      25.057989
+     ],
+     [
+      121.197384,
+      25.058072
+     ],
+     [
+      121.19736,
+      25.058158
+     ],
+     [
+      121.197346,
+      25.058245
+     ],
+     [
+      121.197341,
+      25.058333
+     ],
+     [
+      121.197346,
+      25.058421
+     ],
+     [
+      121.19736,
+      25.058508
+     ],
+     [
+      121.197384,
+      25.058594
+     ],
+     [
+      121.197417,
+      25.058677
+     ],
+     [
+      121.197458,
+      25.058756
+     ],
+     [
+      121.197508,
+      25.058832
+     ],
+     [
+      121.197566,
+      25.058903
+     ],
+     [
+      121.197632,
+      25.058968
+     ],
+     [
+      121.197704,
+      25.059027
+     ],
+     [
+      121.197782,
+      25.05908
+     ],
+     [
+      121.197866,
+      25.059125
+     ],
+     [
+      121.197954,
+      25.059163
+     ],
+     [
+      121.198045,
+      25.059193
+     ],
+     [
+      121.19814,
+      25.059214
+     ],
+     [
+      121.198236,
+      25.059227
+     ],
+     [
+      121.198333,
+      25.059231
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCTP",
+  "icao_text": "U2610/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/005/2504N12112E001\r\nA) RCTP\r\nB) 2610142200 C) 2611271000\r\nD) 2200-1000\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260921003302\r\n2.LCA:DAYUAN DISTRICT, TAOYUAN CITY\r\n3.COOR TEL:0933-976707, 0912-218330\r\n4.AREA AS FLW:\r\n  100M RADIUS CENTRED ON 250330N 1211154E\r\nF) SFC G) 500FT AMSL",
+  "id": "1791424273802000",
+  "issued": "2026-10-08T01:51:00.000Z",
+  "last_updated": "2026-10-08T01:51:00.000Z",
+  "local_text": null,
+  "location": "RCTP",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2610/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": "2200-1000",
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260921003302\r\n2.LCA:DAYUAN DISTRICT, TAOYUAN CITY\r\n3.COOR TEL:0933-976707, 0912-218330\r\n4.AREA AS FLW:\r\n  100M RADIUS CENTRED ON 250330N 1211154E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "500FT AMSL",
+  "year": "2026"
+ },
+ "1791424293396000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3817N11442E",
+  "effective_end": "2026-10-10T04:30:00.000Z",
+  "effective_start": "2026-10-10T03:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZBPE",
+  "first_seen": "2026-10-08T02:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      114.7,
+      38.366517
+     ],
+     [
+      114.710387,
+      38.366116
+     ],
+     [
+      114.720674,
+      38.364919
+     ],
+     [
+      114.730762,
+      38.362935
+     ],
+     [
+      114.740554,
+      38.360185
+     ],
+     [
+      114.749955,
+      38.356695
+     ],
+     [
+      114.758875,
+      38.352498
+     ],
+     [
+      114.767228,
+      38.347635
+     ],
+     [
+      114.774934,
+      38.342153
+     ],
+     [
+      114.781918,
+      38.336104
+     ],
+     [
+      114.788113,
+      38.329548
+     ],
+     [
+      114.793459,
+      38.322546
+     ],
+     [
+      114.797906,
+      38.315166
+     ],
+     [
+      114.801409,
+      38.30748
+     ],
+     [
+      114.803936,
+      38.299562
+     ],
+     [
+      114.805462,
+      38.291487
+     ],
+     [
+      114.805972,
+      38.283333
+     ],
+     [
+      114.805462,
+      38.27518
+     ],
+     [
+      114.803936,
+      38.267105
+     ],
+     [
+      114.801409,
+      38.259186
+     ],
+     [
+      114.797906,
+      38.2515
+     ],
+     [
+      114.793459,
+      38.244121
+     ],
+     [
+      114.788113,
+      38.237119
+     ],
+     [
+      114.781918,
+      38.230562
+     ],
+     [
+      114.774934,
+      38.224514
+     ],
+     [
+      114.767228,
+      38.219032
+     ],
+     [
+      114.758875,
+      38.214169
+     ],
+     [
+      114.749955,
+      38.209972
+     ],
+     [
+      114.740554,
+      38.206482
+     ],
+     [
+      114.730762,
+      38.203732
+     ],
+     [
+      114.720674,
+      38.201748
+     ],
+     [
+      114.710387,
+      38.20055
+     ],
+     [
+      114.7,
+      38.20015
+     ],
+     [
+      114.689613,
+      38.20055
+     ],
+     [
+      114.679326,
+      38.201748
+     ],
+     [
+      114.669238,
+      38.203732
+     ],
+     [
+      114.659446,
+      38.206482
+     ],
+     [
+      114.650045,
+      38.209972
+     ],
+     [
+      114.641125,
+      38.214169
+     ],
+     [
+      114.632772,
+      38.219032
+     ],
+     [
+      114.625066,
+      38.224514
+     ],
+     [
+      114.618082,
+      38.230562
+     ],
+     [
+      114.611887,
+      38.237119
+     ],
+     [
+      114.606541,
+      38.244121
+     ],
+     [
+      114.602094,
+      38.2515
+     ],
+     [
+      114.598591,
+      38.259186
+     ],
+     [
+      114.596064,
+      38.267105
+     ],
+     [
+      114.594538,
+      38.27518
+     ],
+     [
+      114.594028,
+      38.283333
+     ],
+     [
+      114.594538,
+      38.291487
+     ],
+     [
+      114.596064,
+      38.299562
+     ],
+     [
+      114.598591,
+      38.30748
+     ],
+     [
+      114.602094,
+      38.315166
+     ],
+     [
+      114.606541,
+      38.322546
+     ],
+     [
+      114.611887,
+      38.329548
+     ],
+     [
+      114.618082,
+      38.336104
+     ],
+     [
+      114.625066,
+      38.342153
+     ],
+     [
+      114.632772,
+      38.347635
+     ],
+     [
+      114.641125,
+      38.352498
+     ],
+     [
+      114.650045,
+      38.356695
+     ],
+     [
+      114.659446,
+      38.360185
+     ],
+     [
+      114.669238,
+      38.362935
+     ],
+     [
+      114.679326,
+      38.364919
+     ],
+     [
+      114.689613,
+      38.366116
+     ],
+     [
+      114.7,
+      38.366517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZBSJ",
+  "icao_text": "E4003/26 NOTAMN\r\nQ)ZBPE/QFCAS/IV/M/A/000/999/3817N11442E005\r\nA)ZBSJ B)2610100300 C)2610100430 \r\nE) RWY15 CEILOMETER U/S DUE TO MAINT.\r\n ",
+  "id": "1791424293396000",
+  "issued": "2026-10-08T01:50:00.000Z",
+  "last_updated": "2026-10-08T01:51:00.000Z",
+  "local_text": null,
+  "location": "ZBSJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "E4003/26",
+  "purpose": "M",
+  "q_code": "QFCAS",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "E",
+  "text": "RWY15 CEILOMETER U/S DUE TO MAINT.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791424419338068": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2241N12030E",
+  "effective_end": "2026-12-31T10:00:00Z",
+  "effective_start": "2026-10-14T21:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-08T02:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.503333,
+      22.684722
+     ],
+     [
+      120.503333,
+      22.6875
+     ],
+     [
+      120.507778,
+      22.6875
+     ],
+     [
+      120.507778,
+      22.684722
+     ],
+     [
+      120.503333,
+      22.684722
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCDC",
+  "icao_text": "U2611/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/005/2241N12030E001\r\nA) RCDC\r\nB) 2610142130 C) 2612311000\r\nD) 2130-1000\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260825001501\r\n2.LCA:PINGTUNG CITY, PINGTUNG COUNTY\r\n3.COOR TEL:06-3351068 EXTENSION 181, 0919-085537, \r\n  0983-662978\r\n4.AREA AS FLW:\r\n224105N 1203012E\r\n224115N 1203012E\r\n224115N 1203028E\r\n224105N 1203028E\r\n224105N 1203012E\r\nF) SFC G) 500FT AMSL",
+  "id": "1791424419338068",
+  "issued": "2026-10-08T01:52:00Z",
+  "last_updated": "2026-10-08T01:52:00Z",
+  "local_text": null,
+  "location": "RCDC",
+  "lower": "SFC",
+  "max_fl": "005",
+  "min_fl": "000",
+  "number": "U2611/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.4,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": "2130-1000",
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260825001501\r\n2.LCA:PINGTUNG CITY, PINGTUNG COUNTY\r\n3.COOR TEL:06-3351068 EXTENSION 181, 0919-085537, \r\n  0983-662978\r\n4.AREA AS FLW:\r\n224105N 1203012E\r\n224115N 1203012E\r\n224115N 1203028E\r\n224105N 1203028E\r\n224105N 1203012E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "500FT AMSL",
+  "year": "2026"
+ },
+ "1791424591890000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "1315N12341E",
+  "effective_end": "2026-10-08T14:18:00.000Z",
+  "effective_start": "2026-10-08T01:56:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": true,
+  "fir": "RPHI",
+  "first_seen": "2026-10-08T02:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    123.683333,
+    13.25
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RPHI",
+  "icao_text": "B5369/26 NOTAMR B5349/26\r\nQ) RPHI/QWWLW/IV/NBO/W /000/110/1315N12341E999\r\nA) RPHI B) 2610080156 C) 2610081418EST\r\nE) ERUPTION OF VOLCANO MAYON (CAVW 0703-03) 1315N 12341E PHILIPPINES\r\nDATE AND TIME OF ERUPTION: 2610071418\r\nEXISTENCE AND HORIZONTAL/VER EXTENT OF VA CLD: 1640FT (500M)\r\n                                               ABV CRATER\r\nDIRECTION OF MOV OF ASH CLD: INDISCERNIBLE, WEST-SOUTHWEST DRIFT\r\nAIR RTE OR PORTIONS OF AIR RTE AND FL AFFECTED: NONE, FL110\r\nSOURCE OF INFO: PHIVOLCS VONA\r\nRMK: WITH VISUAL OBS, WITH SEISMIC AND INFRASOUND SGL.\r\nF) SFC G) FL110",
+  "id": "1791424591890000",
+  "issued": "2026-10-08T01:56:00.000Z",
+  "last_updated": "2026-10-08T01:56:00.000Z",
+  "local_text": null,
+  "location": "RPHI",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5369/26",
+  "purpose": "NBO",
+  "q_code": "QWWLW",
+  "qline_offset_nm": null,
+  "radius_nm": 999.0,
+  "ref_number": "B5349/26",
+  "schedule": null,
+  "scope": "W ",
+  "series": "B",
+  "text": "ERUPTION OF VOLCANO MAYON (CAVW 0703-03) 1315N 12341E PHILIPPINES\r\nDATE AND TIME OF ERUPTION: 2610071418\r\nEXISTENCE AND HORIZONTAL/VER EXTENT OF VA CLD: 1640FT (500M)\r\n                                               ABV CRATER\r\nDIRECTION OF MOV OF ASH CLD: INDISCERNIBLE, WEST-SOUTHWEST DRIFT\r\nAIR RTE OR PORTIONS OF AIR RTE AND FL AFFECTED: NONE, FL110\r\nSOURCE OF INFO: PHIVOLCS VONA\r\nRMK: WITH VISUAL OBS, WITH SEISMIC AND INFRASOUND SGL.",
+  "traffic": "IV",
+  "type": "R",
+  "upper": "FL110",
+  "year": "2026"
+ },
+ "1791424633837000": {
+  "account_id": "ZBBBYNYX",
+  "area_group": "CN",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "3817N11442E",
+  "effective_end": "2026-10-10T02:30:00.000Z",
+  "effective_start": "2026-10-10T01:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "ZBPE",
+  "first_seen": "2026-10-08T02:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      114.7,
+      38.366517
+     ],
+     [
+      114.710387,
+      38.366116
+     ],
+     [
+      114.720674,
+      38.364919
+     ],
+     [
+      114.730762,
+      38.362935
+     ],
+     [
+      114.740554,
+      38.360185
+     ],
+     [
+      114.749955,
+      38.356695
+     ],
+     [
+      114.758875,
+      38.352498
+     ],
+     [
+      114.767228,
+      38.347635
+     ],
+     [
+      114.774934,
+      38.342153
+     ],
+     [
+      114.781918,
+      38.336104
+     ],
+     [
+      114.788113,
+      38.329548
+     ],
+     [
+      114.793459,
+      38.322546
+     ],
+     [
+      114.797906,
+      38.315166
+     ],
+     [
+      114.801409,
+      38.30748
+     ],
+     [
+      114.803936,
+      38.299562
+     ],
+     [
+      114.805462,
+      38.291487
+     ],
+     [
+      114.805972,
+      38.283333
+     ],
+     [
+      114.805462,
+      38.27518
+     ],
+     [
+      114.803936,
+      38.267105
+     ],
+     [
+      114.801409,
+      38.259186
+     ],
+     [
+      114.797906,
+      38.2515
+     ],
+     [
+      114.793459,
+      38.244121
+     ],
+     [
+      114.788113,
+      38.237119
+     ],
+     [
+      114.781918,
+      38.230562
+     ],
+     [
+      114.774934,
+      38.224514
+     ],
+     [
+      114.767228,
+      38.219032
+     ],
+     [
+      114.758875,
+      38.214169
+     ],
+     [
+      114.749955,
+      38.209972
+     ],
+     [
+      114.740554,
+      38.206482
+     ],
+     [
+      114.730762,
+      38.203732
+     ],
+     [
+      114.720674,
+      38.201748
+     ],
+     [
+      114.710387,
+      38.20055
+     ],
+     [
+      114.7,
+      38.20015
+     ],
+     [
+      114.689613,
+      38.20055
+     ],
+     [
+      114.679326,
+      38.201748
+     ],
+     [
+      114.669238,
+      38.203732
+     ],
+     [
+      114.659446,
+      38.206482
+     ],
+     [
+      114.650045,
+      38.209972
+     ],
+     [
+      114.641125,
+      38.214169
+     ],
+     [
+      114.632772,
+      38.219032
+     ],
+     [
+      114.625066,
+      38.224514
+     ],
+     [
+      114.618082,
+      38.230562
+     ],
+     [
+      114.611887,
+      38.237119
+     ],
+     [
+      114.606541,
+      38.244121
+     ],
+     [
+      114.602094,
+      38.2515
+     ],
+     [
+      114.598591,
+      38.259186
+     ],
+     [
+      114.596064,
+      38.267105
+     ],
+     [
+      114.594538,
+      38.27518
+     ],
+     [
+      114.594028,
+      38.283333
+     ],
+     [
+      114.594538,
+      38.291487
+     ],
+     [
+      114.596064,
+      38.299562
+     ],
+     [
+      114.598591,
+      38.30748
+     ],
+     [
+      114.602094,
+      38.315166
+     ],
+     [
+      114.606541,
+      38.322546
+     ],
+     [
+      114.611887,
+      38.329548
+     ],
+     [
+      114.618082,
+      38.336104
+     ],
+     [
+      114.625066,
+      38.342153
+     ],
+     [
+      114.632772,
+      38.347635
+     ],
+     [
+      114.641125,
+      38.352498
+     ],
+     [
+      114.650045,
+      38.356695
+     ],
+     [
+      114.659446,
+      38.360185
+     ],
+     [
+      114.669238,
+      38.362935
+     ],
+     [
+      114.679326,
+      38.364919
+     ],
+     [
+      114.689613,
+      38.366116
+     ],
+     [
+      114.7,
+      38.366517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "ZBSJ",
+  "icao_text": "E4004/26 NOTAMN\r\nQ)ZBPE/QFCAS/IV/M/A/000/999/3817N11442E005\r\nA)ZBSJ B)2610100100 C)2610100230 \r\nE) RWY33 CEILOMETER U/S DUE TO MAINT.\r\n ",
+  "id": "1791424633837000",
+  "issued": "2026-10-08T01:56:00.000Z",
+  "last_updated": "2026-10-08T01:57:00.000Z",
+  "local_text": null,
+  "location": "ZBSJ",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "E4004/26",
+  "purpose": "M",
+  "q_code": "QFCAS",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A",
+  "series": "E",
+  "text": "RWY33 CEILOMETER U/S DUE TO MAINT.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791424665056651": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2240N12030E",
+  "effective_end": "2026-12-31T10:00:00Z",
+  "effective_start": "2026-10-14T21:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-08T02:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.489722,
+      22.6675
+     ],
+     [
+      120.492222,
+      22.671944
+     ],
+     [
+      120.515556,
+      22.667222
+     ],
+     [
+      120.506944,
+      22.655278
+     ],
+     [
+      120.489722,
+      22.6675
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCDC",
+  "icao_text": "U2612/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/005/2240N12030E001\r\nA) RCDC\r\nB) 2610142130 C) 2612311000\r\nD) 2130-1000\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260825001502\r\n2.LCA:PINGTUNG CITY, PINGTUNG COUNTY\r\n3.COOR TEL:06-3351068 EXTENSION 181, 0919-085537, \r\n  0983-662978\r\n4.AREA AS FLW:\r\n224003N 1202923E\r\n224019N 1202932E\r\n224002N 1203056E\r\n223919N 1203025E\r\n224003N 1202923E\r\nF) SFC G) 500FT AMSL",
+  "id": "1791424665056651",
+  "issued": "2026-10-08T01:56:00Z",
+  "last_updated": "2026-10-08T01:56:00Z",
+  "local_text": null,
+  "location": "RCDC",
+  "lower": "SFC",
+  "max_fl": "005",
+  "min_fl": "000",
+  "number": "U2612/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.1,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": "2130-1000",
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260825001502\r\n2.LCA:PINGTUNG CITY, PINGTUNG COUNTY\r\n3.COOR TEL:06-3351068 EXTENSION 181, 0919-085537, \r\n  0983-662978\r\n4.AREA AS FLW:\r\n224003N 1202923E\r\n224019N 1202932E\r\n224002N 1203056E\r\n223919N 1203025E\r\n224003N 1202923E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "500FT AMSL",
+  "year": "2026"
+ },
+ "1791424787886577": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2240N12029E",
+  "effective_end": "2026-12-31T10:00:00Z",
+  "effective_start": "2026-10-14T21:30:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-08T02:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      120.473056,
+      22.653056
+     ],
+     [
+      120.471667,
+      22.665833
+     ],
+     [
+      120.495833,
+      22.664722
+     ],
+     [
+      120.499444,
+      22.6575
+     ],
+     [
+      120.486667,
+      22.650556
+     ],
+     [
+      120.473056,
+      22.653056
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCDC",
+  "icao_text": "U2613/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/005/2240N12029E002\r\nA) RCDC\r\nB) 2610142130 C) 2612311000\r\nD) 2130-1000\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260825001503\r\n2.LCA:PINGTUNG CITY, PINGTUNG COUNTY\r\n3.COOR TEL:06-3351068 EXTENSION 181, 0919-085537, \r\n  0983-662978\r\n4.AREA AS FLW:\r\n223911N 1202823E\r\n223957N 1202818E\r\n223953N 1202945E\r\n223927N 1202958E\r\n223902N 1202912E\r\n223911N 1202823E\r\nF) SFC G) 500FT AMSL",
+  "id": "1791424787886577",
+  "issued": "2026-10-08T01:58:00Z",
+  "last_updated": "2026-10-08T01:58:00Z",
+  "local_text": null,
+  "location": "RCDC",
+  "lower": "SFC",
+  "max_fl": "005",
+  "min_fl": "000",
+  "number": "U2613/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 2.0,
+  "ref_number": null,
+  "schedule": "2130-1000",
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260825001503\r\n2.LCA:PINGTUNG CITY, PINGTUNG COUNTY\r\n3.COOR TEL:06-3351068 EXTENSION 181, 0919-085537, \r\n  0983-662978\r\n4.AREA AS FLW:\r\n223911N 1202823E\r\n223957N 1202818E\r\n223953N 1202945E\r\n223927N 1202958E\r\n223902N 1202912E\r\n223911N 1202823E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "500FT AMSL",
+  "year": "2026"
+ },
+ "1791424819413000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2505N12111E",
+  "effective_end": "2026-10-17T10:45:00.000Z",
+  "effective_start": "2026-10-16T21:00:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-08T02:00:47+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      121.188333,
+      25.078333
+     ],
+     [
+      121.19,
+      25.077222
+     ],
+     [
+      121.188056,
+      25.075
+     ],
+     [
+      121.186389,
+      25.076111
+     ],
+     [
+      121.188333,
+      25.078333
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "text-polygon",
+  "icao_location": "RCTP",
+  "icao_text": "U2614/26 NOTAMN\r\nQ) RCAA/QWULW/IV/BO/AW/000/005/2505N12111E001\r\nA) RCTP\r\nB) 2610162100 C) 2610171045\r\nE) UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260907001701\r\n2.LCA:DAYUAN DISTRICT, TAOYUAN CITY\r\n3.THE AREA OVERLAPS PART OF VFR HEL RTE H1, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0933-912397, 0910-931492\r\n5.AREA AS FLW:\r\n250442N 1211118E\r\n250438N 1211124E\r\n250430N 1211117E\r\n250434N 1211111E\r\n250442N 1211118E\r\n250442N 1211118E\r\nF) SFC G) 500FT AMSL",
+  "id": "1791424819413000",
+  "issued": "2026-10-08T02:00:00.000Z",
+  "last_updated": "2026-10-08T02:00:00.000Z",
+  "local_text": null,
+  "location": "RCTP",
+  "lower": "SFC",
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "U2614/26",
+  "purpose": "BO",
+  "q_code": "QWULW",
+  "qline_offset_nm": 0.5,
+  "radius_nm": 1.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "AW",
+  "series": "U",
+  "text": "UNMANNED ACFT WILL BE RELEASED:\r\n1.CASE NR:AB260907001701\r\n2.LCA:DAYUAN DISTRICT, TAOYUAN CITY\r\n3.THE AREA OVERLAPS PART OF VFR HEL RTE H1, \r\n  ACFT ARE CTN ADZ.\r\n4.COOR TEL:0933-912397, 0910-931492\r\n5.AREA AS FLW:\r\n250442N 1211118E\r\n250438N 1211124E\r\n250430N 1211117E\r\n250434N 1211111E\r\n250442N 1211118E\r\n250442N 1211118E",
+  "traffic": "IV",
+  "type": "N",
+  "upper": "500FT AMSL",
   "year": "2026"
  }
 }
