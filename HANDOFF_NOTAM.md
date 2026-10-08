@@ -858,3 +858,4 @@ NOTAMモードの地図ツールバーに「レイヤー」ボタンを置き、
 - 2026-10-04 修正: `chart_refs_missing()` が手順の図を挙げただけのNOTAM（ZGZU G4414/G4415 の SID/STAR U/S）を「点が未登録の図」と誤って拾っていたので、点の並び（OF A-B-…）がある本文だけに限った。
 - 2026-10-08 変更（v2.8.0）: NOTAMのFIR絞り込みを Active/Upcoming にも出す（全タブ共通）。既定は「RCAA以外」（`NOTAM_FIR_FILTER_DEFAULT = 'EX:RCAA'`、台湾のNOTAMは数が多く中国沿岸部のものが隠れるため。ユーザー判断）。選択肢は「RCAA以外（既定）」「すべて」「各FIR」。地図・件数・一覧すべてに効く。NAVWARモードのレイヤー「NOTAM」と🔔通知は対象外。
 - 2026-10-08 変更（v2.8.1）: RCAAは一覧から外さず、「地図に表示」を既定OFFにする形に変更（`NOTAM_MAP_OFF_BY_DEFAULT_FIRS`、`notamOffByDefault()`。Archiveと同じく、ONにしたものを記録）。FIR絞り込みの「RCAA以外（既定）」は削除し、既定は「すべて」。RCAAを選んで「このタブを全て表示」かカードのチェックで描ける（ユーザー指示）。
+- 2026-10-08 追加（v2.9.0）: NOTAMのカード・ポップアップに「発行元: 北京(ZBBBYNYX)」を表示（`notamIssuerText()`）。原則は issuer（NMSの accountId、事務所名は `NOTAM_ISSUER_NAMES`）。本文に `BY <国名>`（`NOTAM_BY_COUNTRY` の国名、例 `CONDUCTED BY KOREA`）があればそちらを優先し「韓国(BY KOREA)」。貼り付け取り込み分は issuer が無いので本文にBYが無ければ表示しない（ユーザー指定）。
