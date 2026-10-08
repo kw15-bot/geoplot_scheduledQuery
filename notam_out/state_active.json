@@ -176843,19 +176843,19 @@
   "upper": null,
   "year": "2026"
  },
- "1791469928527000": {
+ "1791470667019000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
   "cancelation_date": null,
   "classification": "INTL",
   "coordinates": "0811N12351E",
-  "effective_end": "2027-01-07T23:59:00.000Z",
-  "effective_start": "2026-10-08T14:31:00.000Z",
+  "effective_end": "2027-01-07T23:59:00Z",
+  "effective_start": "2026-10-08T14:44:00Z",
   "end_override": null,
   "ended_by": null,
   "estimated": false,
   "fir": "RPHI",
-  "first_seen": "2026-10-08T14:40:31+00:00",
+  "first_seen": "2026-10-08T14:50:39+00:00",
   "geometry": {
    "coordinates": [
     [
@@ -177125,31 +177125,337 @@
   },
   "geometry_source": "qline-circle",
   "icao_location": "RPMO",
-  "icao_text": "C1302/26 NOTAMR C0824/26\r\nQ) RPHI/QMRXX/IV/NBO/A /000/999/0811N12351E005\r\nA) RPMO B) 2610081431 C) 2701072359\r\nE) RWY PHYSICAL CHARACTERISTICS:\r\n\r\nRWY   RWY DIMENSIONS    THR COORD    THR GUND   THR ELEV\r\nNR         (M)                         (FT)       (FT)\r\n03     1892 X 45        081016.50N     225         63\r\n                       1235011.89E \r\n21     1892 X 45        081108.22N     225         48\r\n                       1235045.50E\r\n\r\nRWY        SLOPE             SWY          CWY          STRIP \r\nNR                        DIMENSIONS   DIMENSIONS   DIMENSIONS\r\n                             (M)          (M)           (M)       \r\n03                         60 X 45     120 X 120    2090 X 120\r\n      \r\n21   0.24 PCT DOWNHILL     25 X 45      85 X 120    2090 X 120\r\n     TOWARDS THR RWY 21.",
-  "id": "1791469928527000",
-  "issued": "2026-10-08T14:31:00.000Z",
-  "last_updated": "2026-10-08T14:32:00.000Z",
+  "icao_text": "C1304/26 NOTAMR C1302/26\r\nQ) RPHI/QMRXX/IV/NBO/A /000/999/0811N12351E005\r\nA) RPMO B) 2610081444 C) 2701072359\r\nE) RWY PHYSICAL CHARACTERISTICS CHANGED TO:\r\n\r\nRWY   RWY DIMENSIONS    THR COORD    THR GUND   THR ELEV\r\nNR         (M)                         (FT)       (FT)\r\n03     1892 X 45        081016.50N     225         63\r\n                       1235011.89E \r\n21     1892 X 45        081108.22N     225         48\r\n                       1235045.50E\r\n\r\nRWY        SLOPE             SWY          CWY          STRIP \r\nNR                        DIMENSIONS   DIMENSIONS   DIMENSIONS\r\n                             (M)          (M)           (M)       \r\n03                         60 X 45     120 X 120    2090 X 120\r\n      \r\n21   0.24 PCT DOWNHILL     25 X 45      85 X 120    2090 X 120\r\n     TOWARDS THR RWY 21.",
+  "id": "1791470667019000",
+  "issued": "2026-10-08T14:44:00Z",
+  "last_updated": "2026-10-08T14:45:00Z",
   "local_text": null,
   "location": "RPMO",
   "lower": null,
   "max_fl": "999",
   "min_fl": "000",
-  "number": "C1302/26",
+  "number": "C1304/26",
   "purpose": "NBO",
   "q_code": "QMRXX",
   "qline_offset_nm": null,
   "radius_nm": 5.0,
-  "ref_number": "C0824/26",
+  "ref_number": "C1302/26",
   "schedule": null,
-  "scope": "A ",
+  "scope": "A",
   "series": "C",
-  "text": "RWY PHYSICAL CHARACTERISTICS:\r\n\r\nRWY   RWY DIMENSIONS    THR COORD    THR GUND   THR ELEV\r\nNR         (M)                         (FT)       (FT)\r\n03     1892 X 45        081016.50N     225         63\r\n                       1235011.89E \r\n21     1892 X 45        081108.22N     225         48\r\n                       1235045.50E\r\n\r\nRWY        SLOPE             SWY          CWY          STRIP \r\nNR                        DIMENSIONS   DIMENSIONS   DIMENSIONS\r\n                             (M)          (M)           (M)       \r\n03                         60 X 45     120 X 120    2090 X 120\r\n      \r\n21   0.24 PCT DOWNHILL     25 X 45      85 X 120    2090 X 120\r\n     TOWARDS THR RWY 21.",
+  "text": "RWY PHYSICAL CHARACTERISTICS CHANGED TO:\r\n\r\nRWY   RWY DIMENSIONS    THR COORD    THR GUND   THR ELEV\r\nNR         (M)                         (FT)       (FT)\r\n03     1892 X 45        081016.50N     225         63\r\n                       1235011.89E \r\n21     1892 X 45        081108.22N     225         48\r\n                       1235045.50E\r\n\r\nRWY        SLOPE             SWY          CWY          STRIP \r\nNR                        DIMENSIONS   DIMENSIONS   DIMENSIONS\r\n                             (M)          (M)           (M)       \r\n03                         60 X 45     120 X 120    2090 X 120\r\n      \r\n21   0.24 PCT DOWNHILL     25 X 45      85 X 120    2090 X 120\r\n     TOWARDS THR RWY 21.",
   "traffic": "IV",
   "type": "R",
   "upper": null,
   "year": "2026"
  },
- "1791470021405000": {
+ "1791470740198000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0811N12351E",
+  "effective_end": "2026-10-11T14:45:00Z",
+  "effective_start": "2026-10-08T14:45:00Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-08T14:50:39+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      123.85,
+      8.266517
+     ],
+     [
+      123.858237,
+      8.266116
+     ],
+     [
+      123.866395,
+      8.264919
+     ],
+     [
+      123.874395,
+      8.262935
+     ],
+     [
+      123.88216,
+      8.260185
+     ],
+     [
+      123.889616,
+      8.256695
+     ],
+     [
+      123.89669,
+      8.252498
+     ],
+     [
+      123.903314,
+      8.247635
+     ],
+     [
+      123.909425,
+      8.242153
+     ],
+     [
+      123.914963,
+      8.236104
+     ],
+     [
+      123.919876,
+      8.229548
+     ],
+     [
+      123.924116,
+      8.222546
+     ],
+     [
+      123.927642,
+      8.215166
+     ],
+     [
+      123.930421,
+      8.20748
+     ],
+     [
+      123.932425,
+      8.199562
+     ],
+     [
+      123.933635,
+      8.191487
+     ],
+     [
+      123.934039,
+      8.183333
+     ],
+     [
+      123.933635,
+      8.17518
+     ],
+     [
+      123.932425,
+      8.167105
+     ],
+     [
+      123.930421,
+      8.159186
+     ],
+     [
+      123.927642,
+      8.1515
+     ],
+     [
+      123.924116,
+      8.144121
+     ],
+     [
+      123.919876,
+      8.137119
+     ],
+     [
+      123.914963,
+      8.130562
+     ],
+     [
+      123.909425,
+      8.124514
+     ],
+     [
+      123.903314,
+      8.119032
+     ],
+     [
+      123.89669,
+      8.114169
+     ],
+     [
+      123.889616,
+      8.109972
+     ],
+     [
+      123.88216,
+      8.106482
+     ],
+     [
+      123.874395,
+      8.103732
+     ],
+     [
+      123.866395,
+      8.101748
+     ],
+     [
+      123.858237,
+      8.10055
+     ],
+     [
+      123.85,
+      8.10015
+     ],
+     [
+      123.841763,
+      8.10055
+     ],
+     [
+      123.833605,
+      8.101748
+     ],
+     [
+      123.825605,
+      8.103732
+     ],
+     [
+      123.81784,
+      8.106482
+     ],
+     [
+      123.810384,
+      8.109972
+     ],
+     [
+      123.80331,
+      8.114169
+     ],
+     [
+      123.796686,
+      8.119032
+     ],
+     [
+      123.790575,
+      8.124514
+     ],
+     [
+      123.785037,
+      8.130562
+     ],
+     [
+      123.780124,
+      8.137119
+     ],
+     [
+      123.775884,
+      8.144121
+     ],
+     [
+      123.772358,
+      8.1515
+     ],
+     [
+      123.769579,
+      8.159186
+     ],
+     [
+      123.767575,
+      8.167105
+     ],
+     [
+      123.766365,
+      8.17518
+     ],
+     [
+      123.765961,
+      8.183333
+     ],
+     [
+      123.766365,
+      8.191487
+     ],
+     [
+      123.767575,
+      8.199562
+     ],
+     [
+      123.769579,
+      8.20748
+     ],
+     [
+      123.772358,
+      8.215166
+     ],
+     [
+      123.775884,
+      8.222546
+     ],
+     [
+      123.780124,
+      8.229548
+     ],
+     [
+      123.785037,
+      8.236104
+     ],
+     [
+      123.790575,
+      8.242153
+     ],
+     [
+      123.796686,
+      8.247635
+     ],
+     [
+      123.80331,
+      8.252498
+     ],
+     [
+      123.810384,
+      8.256695
+     ],
+     [
+      123.81784,
+      8.260185
+     ],
+     [
+      123.825605,
+      8.262935
+     ],
+     [
+      123.833605,
+      8.264919
+     ],
+     [
+      123.841763,
+      8.266116
+     ],
+     [
+      123.85,
+      8.266517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPMO",
+  "icao_text": "C1305/26 NOTAMC C1303/26\r\nQ) RPHI/QMRXX/IV/NBO/A /000/999/0811N12351E005\r\nA) RPMO B) 2610081445\r\nE) RWY PHYSICAL CHARACTERISTICS NEW NOTAM TO FLW.",
+  "id": "1791470740198000",
+  "issued": "2026-10-08T14:45:00Z",
+  "last_updated": "2026-10-08T14:46:00Z",
+  "local_text": null,
+  "location": "RPMO",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "C1305/26",
+  "purpose": "NBO",
+  "q_code": "QMRXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": "C1303/26",
+  "schedule": null,
+  "scope": "A",
+  "series": "C",
+  "text": "C1305/26 NOTAMC C1303/26\r\nQ) RPHI/QMRXX/IV/NBO/A /000/999/0811N12351E005\r\nA) RPMO B) 2610081445\r\nE) RWY PHYSICAL CHARACTERISTICS NEW NOTAM TO FLW.",
+  "traffic": "IV",
+  "type": "C",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791470799982000": {
   "account_id": "RPLLYNYX",
   "area_group": "REF",
   "cancelation_date": null,
@@ -177161,7 +177467,7 @@
   "ended_by": null,
   "estimated": false,
   "fir": "RPHI",
-  "first_seen": "2026-10-08T14:40:31+00:00",
+  "first_seen": "2026-10-08T14:50:39+00:00",
   "geometry": {
    "coordinates": [
     [
@@ -177431,16 +177737,16 @@
   },
   "geometry_source": "qline-circle",
   "icao_location": "RPMO",
-  "icao_text": "C1303/26 NOTAMN\r\nQ) RPHI/QMRXX/IV/NBO/A /000/999/0811N12351E005\r\nA) RPMO B) 2701080000 C) 2704142359\r\nE) RWY PHYSICAL CHARACTERISTICS:\r\n\r\nRWY   RWY DIMENSIONS    THR COORD    THR GUND   THR ELEV\r\nNR         (M)                         (FT)       (FT)\r\n03     1892 X 45        081016.50N     225         63\r\n                       1235011.89E \r\n21     1892 X 45        081108.22N     225         48\r\n                       1235045.50E\r\n\r\nRWY        SLOPE             SWY          CWY          STRIP \r\nNR                        DIMENSIONS   DIMENSIONS   DIMENSIONS\r\n                             (M)          (M)           (M)       \r\n03                         60 X 45     120 X 120    2090 X 120\r\n      \r\n21   0.24 PCT DOWNHILL     25 X 45      85 X 120    2090 X 120\r\n     TOWARDS THR RWY 21.",
-  "id": "1791470021405000",
-  "issued": "2026-10-08T14:33:00Z",
-  "last_updated": "2026-10-08T14:34:00Z",
+  "icao_text": "C1306/26 NOTAMN\r\nQ) RPHI/QMRXX/IV/NBO/A /000/999/0811N12351E005\r\nA) RPMO B) 2701080000 C) 2704142359\r\nE) RWY PHYSICAL CHARACTERISTICS CHANGED TO:\r\n\r\nRWY   RWY DIMENSIONS    THR COORD    THR GUND   THR ELEV\r\nNR         (M)                         (FT)       (FT)\r\n03     1892 X 45        081016.50N     225         63\r\n                       1235011.89E \r\n21     1892 X 45        081108.22N     225         48\r\n                       1235045.50E\r\n\r\nRWY        SLOPE             SWY          CWY          STRIP \r\nNR                        DIMENSIONS   DIMENSIONS   DIMENSIONS\r\n                             (M)          (M)           (M)       \r\n03                         60 X 45     120 X 120    2090 X 120\r\n      \r\n21   0.24 PCT DOWNHILL     25 X 45      85 X 120    2090 X 120\r\n     TOWARDS THR RWY 21.",
+  "id": "1791470799982000",
+  "issued": "2026-10-08T14:46:00Z",
+  "last_updated": "2026-10-08T14:47:00Z",
   "local_text": null,
   "location": "RPMO",
   "lower": null,
   "max_fl": "999",
   "min_fl": "000",
-  "number": "C1303/26",
+  "number": "C1306/26",
   "purpose": "NBO",
   "q_code": "QMRXX",
   "qline_offset_nm": null,
@@ -177449,7 +177755,7 @@
   "schedule": null,
   "scope": "A",
   "series": "C",
-  "text": "RWY PHYSICAL CHARACTERISTICS:\r\n\r\nRWY   RWY DIMENSIONS    THR COORD    THR GUND   THR ELEV\r\nNR         (M)                         (FT)       (FT)\r\n03     1892 X 45        081016.50N     225         63\r\n                       1235011.89E \r\n21     1892 X 45        081108.22N     225         48\r\n                       1235045.50E\r\n\r\nRWY        SLOPE             SWY          CWY          STRIP \r\nNR                        DIMENSIONS   DIMENSIONS   DIMENSIONS\r\n                             (M)          (M)           (M)       \r\n03                         60 X 45     120 X 120    2090 X 120\r\n      \r\n21   0.24 PCT DOWNHILL     25 X 45      85 X 120    2090 X 120\r\n     TOWARDS THR RWY 21.",
+  "text": "RWY PHYSICAL CHARACTERISTICS CHANGED TO:\r\n\r\nRWY   RWY DIMENSIONS    THR COORD    THR GUND   THR ELEV\r\nNR         (M)                         (FT)       (FT)\r\n03     1892 X 45        081016.50N     225         63\r\n                       1235011.89E \r\n21     1892 X 45        081108.22N     225         48\r\n                       1235045.50E\r\n\r\nRWY        SLOPE             SWY          CWY          STRIP \r\nNR                        DIMENSIONS   DIMENSIONS   DIMENSIONS\r\n                             (M)          (M)           (M)       \r\n03                         60 X 45     120 X 120    2090 X 120\r\n      \r\n21   0.24 PCT DOWNHILL     25 X 45      85 X 120    2090 X 120\r\n     TOWARDS THR RWY 21.",
   "traffic": "IV",
   "type": "N",
   "upper": null,
