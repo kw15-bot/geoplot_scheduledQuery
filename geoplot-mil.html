@@ -651,10 +651,9 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
         <button class="btn small ghost" id="notamBtnBulkHide">このタブを全て非表示</button>
       </div>
       <div class="notam-filters">
-        <!-- 全タブで表示(v2.8.0〜)。既定は「RCAA以外」。 -->
+        <!-- 全タブで表示(v2.8.0〜)。 -->
         <div id="notamFirFilterRow" style="display:none;margin-top:0;margin-bottom:4px;">
           <select id="notamFirFilter" style="width:100%;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--mono);font-size:11.5px;padding:6px 8px;">
-            <option value="EX:RCAA">FIR: RCAA以外（既定）</option>
             <option value="">FIR: すべて</option>
           </select>
         </div>
@@ -805,7 +804,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v2.8.0';
+const APP_VERSION = 'v2.8.1';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -845,6 +844,7 @@ const APP_VERSION = 'v2.8.0';
 // v2.7.0: AIPの図を参照する区域の境界線(geometry_source: aip-chart-line、例: ZWUQ W1338 の G-H-J-K)を表示する。
 // v2.7.1: 開始前に取消・置換されたNOTAMは「撤回済み・A3636/26により、開始前に撤回」と表示する。
 // v2.8.0: NOTAMのFIR絞り込みを Active/Upcoming にも出す。既定は「RCAA以外」(台湾のNOTAMは既定では描かない)。
+// v2.8.1: RCAAは一覧から外さず「地図に表示」を既定OFFにする形に変更(絞り込みの「RCAA以外」は削除、既定は「すべて」)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3602,18 +3602,19 @@ let notamArchiveFeatures = new Map();     // 'YYYY-MM' -> features[]。接続時
 // 手動取り込み分(notam_paste_import.py)で最も古いのが2026-01。
 const NOTAM_ARCHIVE_START_MONTH = '2026-01';
 // 表示条件は「E項の実座標から作ったポリゴン(notamHasRealPolygon)」かつ「FIRドロップダウンの
-// 選択(notamFirFilter、既定はRCAA以外)」のみ。area_group/focus_tag/keyword_hitでの絞り込みは行わない
+// 選択(notamFirFilter、''=すべて)」のみ。area_group/focus_tag/keyword_hitでの絞り込みは行わない
 // (収集条件(CN/HK/MO/TW/REF)に合致するものは全部ビューワに出す方針)。
-// FIRの絞り込み。'' = すべて、'EX:<FIR>' = そのFIR以外、それ以外の値 = そのFIRだけ。全タブで効く(v2.8.0〜)。
-// 既定は RCAA(台北FIR)以外: 台湾のNOTAMは数が多く、引きで見ると中国沿岸部のものが隠れて気づけないため(ユーザー判断)。
-const NOTAM_FIR_FILTER_DEFAULT = 'EX:RCAA';
-let notamFirFilter = NOTAM_FIR_FILTER_DEFAULT;
+// FIRの絞り込み。'' = すべて、それ以外の値 = そのFIRだけ。全タブで効く(v2.8.0〜)。
+let notamFirFilter = '';
 function notamFirFilterActive(){ return true; }
-function notamFirMatches(f, val){
-  if (!val) return true;
+function notamFirMatches(f, val){ return !val || notamFirTokens(f).includes(val); }
+// 既定で地図に描かないFIR(一覧には出し、「地図に表示」のチェックや「このタブを全て表示」で描ける)。
+// RCAA(台北FIR)は数が多く、引きで見ると中国沿岸部のものが隠れて気づけないため(ユーザー判断、v2.8.1)。
+const NOTAM_MAP_OFF_BY_DEFAULT_FIRS = ['RCAA'];
+function notamOffByDefault(f){
+  if (f._notamArchive) return true;
   const firs = notamFirTokens(f);
-  if (val.startsWith('EX:')){ const ex = val.slice(3); return !(firs.length && firs.every(v => v === ex)); }
-  return firs.includes(val);
+  return firs.length > 0 && firs.every(v => NOTAM_MAP_OFF_BY_DEFAULT_FIRS.includes(v));
 }
 let notamTab = 'active';
 let notamLayerVisibleOnMap = true;        // 手動トグルは無し(常時true)。enterMode()の3モード排他表示で制御する
@@ -3623,13 +3624,13 @@ let notamRefreshTimer = null;
 // notamActiveFeatures/notamArchiveFeaturesは10分おきの再取得で配列ごと差し替わり、
 // 同じfeatureオブジェクトが残り続ける保証がないため、状態はfeature自体ではなく
 // notamFeatureKey()の安定キーで持つ(OFFにしたものだけをSetに記録。既定は全件ON)。
-// Archiveだけは逆に既定OFF(件数が多く、蓄積されるほど肥大するため)で、ONにしたものを
-// notamShownArchiveIdsに記録する。Archive由来のfeatureには読み込み時に_notamArchiveを付ける。
+// Archiveと既定OFFのFIR(RCAA)は逆に既定OFFで、ONにしたものを notamShownArchiveIds に記録する
+// (notamOffByDefault())。Archive由来のfeatureには読み込み時に_notamArchiveを付ける。
 let notamHiddenMapIds = new Set();
 let notamShownArchiveIds = new Set();
 function notamIsOnMap(f){
   const k = notamFeatureKey(f);
-  return f._notamArchive ? notamShownArchiveIds.has(k) : !notamHiddenMapIds.has(k);
+  return notamOffByDefault(f) ? notamShownArchiveIds.has(k) : !notamHiddenMapIds.has(k);
 }
 function notamSetOnMap(key, isArchive, visible){
   if (isArchive){ if (visible) notamShownArchiveIds.add(key); else notamShownArchiveIds.delete(key); }
@@ -3700,13 +3701,9 @@ function notamPassesFilter(f){
 // 航行警報側のupdateBureauFilterOptions()と同じ考え方: 今スコープにある値だけを選択肢にする。
 function updateNotamFirFilterOptions(selectEl, itemsInScope, currentValue){
   const firsPresent = Array.from(new Set(itemsInScope.flatMap(notamFirTokens))).sort();
-  const ex = NOTAM_FIR_FILTER_DEFAULT.slice(3);
-  selectEl.innerHTML = `<option value="${NOTAM_FIR_FILTER_DEFAULT}">FIR: ${ex}以外（既定）</option>`
-    + '<option value="">FIR: すべて</option>'
+  selectEl.innerHTML = '<option value="">FIR: すべて</option>'
     + firsPresent.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join('');
-  // 今のタブに無いFIRを選んでいたら既定(RCAA以外)に戻す
-  const keep = currentValue === '' || currentValue === NOTAM_FIR_FILTER_DEFAULT || firsPresent.includes(currentValue);
-  selectEl.value = keep ? currentValue : NOTAM_FIR_FILTER_DEFAULT;
+  selectEl.value = firsPresent.includes(currentValue) ? currentValue : '';
   return selectEl.value;
 }
 function notamStyle(f){
@@ -3946,7 +3943,7 @@ function renderNotamList(){
     const badgeClass = STATUS_BADGE_CLASS[notamStatusOf(f)] || 'unknown';
     const hasGeom = !!f.geometry;
     const mapToggleHtml = hasGeom
-      ? `<label class="check-row" style="margin-top:6px;"><input type="checkbox" data-notam-map-toggle="${esc(key)}" data-notam-archive="${f._notamArchive ? '1' : ''}" ${notamIsOnMap(f) ? 'checked' : ''}> 地図に表示</label>`
+      ? `<label class="check-row" style="margin-top:6px;"><input type="checkbox" data-notam-map-toggle="${esc(key)}" data-notam-archive="${notamOffByDefault(f) ? '1' : ''}" ${notamIsOnMap(f) ? 'checked' : ''}> 地図に表示</label>`
       : '';
     div.innerHTML = `
       <span class="wtitle">${esc(p.number || notamHeading(f))}</span>
@@ -3986,7 +3983,7 @@ function renderNotamList(){
 function bulkSetNotamTabVisibility(visible){
   currentNotamTabItems.forEach(f=>{
     if (!f.geometry) return;
-    notamSetOnMap(notamFeatureKey(f), !!f._notamArchive, visible);
+    notamSetOnMap(notamFeatureKey(f), notamOffByDefault(f), visible);
   });
   renderNotamList();
 }
