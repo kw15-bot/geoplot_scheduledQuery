@@ -856,3 +856,4 @@ NOTAMモードの地図ツールバーに「レイヤー」ボタンを置き、
 - 2026-10-01 追加: `notam_backfill_text_polygon.py --apply --rebuild-geojson` で、変更が無くても `notam_cn.geojson` を state_active.json から作り直す（main との衝突で notam_cn.geojson だけ main 側を採ったとき、修正が地図用データから落ちるのを防ぐ）。
 - 2026-10-02 変更（v2.7.1）: 開始前に取消・置換されたNOTAM（終了が開始以前）は「撤回済み・A3636/26により、開始前に撤回」と表示（有効期間は B項 〜 打ち切り時刻のまま。ユーザー指定の表現）。
 - 2026-10-04 修正: `chart_refs_missing()` が手順の図を挙げただけのNOTAM（ZGZU G4414/G4415 の SID/STAR U/S）を「点が未登録の図」と誤って拾っていたので、点の並び（OF A-B-…）がある本文だけに限った。
+- 2026-10-08 変更（v2.8.0）: NOTAMのFIR絞り込みを Active/Upcoming にも出す（全タブ共通）。既定は「RCAA以外」（`NOTAM_FIR_FILTER_DEFAULT = 'EX:RCAA'`、台湾のNOTAMは数が多く中国沿岸部のものが隠れるため。ユーザー判断）。選択肢は「RCAA以外（既定）」「すべて」「各FIR」。地図・件数・一覧すべてに効く。NAVWARモードのレイヤー「NOTAM」と🔔通知は対象外。
