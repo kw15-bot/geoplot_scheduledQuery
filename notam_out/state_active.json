@@ -156544,5 +156544,357 @@
   "type": "N",
   "upper": null,
   "year": "2026"
+ },
+ "1791430409464000": {
+  "account_id": "RCTPYNYX",
+  "area_group": "TW",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "2502N12039E",
+  "effective_end": "2026-10-08T10:00:00.000Z",
+  "effective_start": "2026-10-08T03:50:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RCAA",
+  "first_seen": "2026-10-08T03:40:30+00:00",
+  "geometry": {
+   "coordinates": [
+    120.65,
+    25.033333
+   ],
+   "type": "Point"
+  },
+  "geometry_source": "qline-point",
+  "icao_location": "RCAA",
+  "icao_text": "A3762/26 NOTAMN\r\nQ) RCAA/QPFCA/IV/NBO/E/000/999/2502N12039E299\r\nA) RCAA\r\nB) 2610080350 C) 2610081000\r\nE) FLOW CTL AT FIR BDRY AS FLW:\r\nINBD TFC THROUGH KAPLI VIA SALMI/BULAN/BORDO/SEDKU/IGURU,\r\nFL400 NOT AVBL DUE TO FLOW CTL IMPOSED BY HONG KONG ACC.",
+  "id": "1791430409464000",
+  "issued": "2026-10-08T03:33:00.000Z",
+  "last_updated": "2026-10-08T03:33:00.000Z",
+  "local_text": null,
+  "location": "RCAA",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "A3762/26",
+  "purpose": "NBO",
+  "q_code": "QPFCA",
+  "qline_offset_nm": null,
+  "radius_nm": 299.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "E",
+  "series": "A",
+  "text": "FLOW CTL AT FIR BDRY AS FLW:\r\nINBD TFC THROUGH KAPLI VIA SALMI/BULAN/BORDO/SEDKU/IGURU,\r\nFL400 NOT AVBL DUE TO FLOW CTL IMPOSED BY HONG KONG ACC.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
+ },
+ "1791430680693000": {
+  "account_id": "RPLLYNYX",
+  "area_group": "REF",
+  "cancelation_date": null,
+  "classification": "INTL",
+  "coordinates": "0708N12539E",
+  "effective_end": "2027-01-08T23:59:00.000Z",
+  "effective_start": "2026-10-08T03:37:00.000Z",
+  "end_override": null,
+  "ended_by": null,
+  "estimated": false,
+  "fir": "RPHI",
+  "first_seen": "2026-10-08T03:40:30+00:00",
+  "geometry": {
+   "coordinates": [
+    [
+     [
+      125.65,
+      7.216517
+     ],
+     [
+      125.658217,
+      7.216116
+     ],
+     [
+      125.666355,
+      7.214919
+     ],
+     [
+      125.674335,
+      7.212935
+     ],
+     [
+      125.682081,
+      7.210185
+     ],
+     [
+      125.689518,
+      7.206695
+     ],
+     [
+      125.696575,
+      7.202498
+     ],
+     [
+      125.703183,
+      7.197635
+     ],
+     [
+      125.709279,
+      7.192153
+     ],
+     [
+      125.714803,
+      7.186104
+     ],
+     [
+      125.719704,
+      7.179548
+     ],
+     [
+      125.723934,
+      7.172546
+     ],
+     [
+      125.727451,
+      7.165166
+     ],
+     [
+      125.730223,
+      7.15748
+     ],
+     [
+      125.732222,
+      7.149562
+     ],
+     [
+      125.733429,
+      7.141487
+     ],
+     [
+      125.733832,
+      7.133333
+     ],
+     [
+      125.733429,
+      7.12518
+     ],
+     [
+      125.732222,
+      7.117105
+     ],
+     [
+      125.730223,
+      7.109186
+     ],
+     [
+      125.727451,
+      7.1015
+     ],
+     [
+      125.723934,
+      7.094121
+     ],
+     [
+      125.719704,
+      7.087119
+     ],
+     [
+      125.714803,
+      7.080562
+     ],
+     [
+      125.709279,
+      7.074514
+     ],
+     [
+      125.703183,
+      7.069032
+     ],
+     [
+      125.696575,
+      7.064169
+     ],
+     [
+      125.689518,
+      7.059972
+     ],
+     [
+      125.682081,
+      7.056482
+     ],
+     [
+      125.674335,
+      7.053732
+     ],
+     [
+      125.666355,
+      7.051748
+     ],
+     [
+      125.658217,
+      7.05055
+     ],
+     [
+      125.65,
+      7.05015
+     ],
+     [
+      125.641783,
+      7.05055
+     ],
+     [
+      125.633645,
+      7.051748
+     ],
+     [
+      125.625665,
+      7.053732
+     ],
+     [
+      125.617919,
+      7.056482
+     ],
+     [
+      125.610482,
+      7.059972
+     ],
+     [
+      125.603425,
+      7.064169
+     ],
+     [
+      125.596817,
+      7.069032
+     ],
+     [
+      125.590721,
+      7.074514
+     ],
+     [
+      125.585197,
+      7.080562
+     ],
+     [
+      125.580296,
+      7.087119
+     ],
+     [
+      125.576066,
+      7.094121
+     ],
+     [
+      125.572549,
+      7.1015
+     ],
+     [
+      125.569777,
+      7.109186
+     ],
+     [
+      125.567778,
+      7.117105
+     ],
+     [
+      125.566571,
+      7.12518
+     ],
+     [
+      125.566168,
+      7.133333
+     ],
+     [
+      125.566571,
+      7.141487
+     ],
+     [
+      125.567778,
+      7.149562
+     ],
+     [
+      125.569777,
+      7.15748
+     ],
+     [
+      125.572549,
+      7.165166
+     ],
+     [
+      125.576066,
+      7.172546
+     ],
+     [
+      125.580296,
+      7.179548
+     ],
+     [
+      125.585197,
+      7.186104
+     ],
+     [
+      125.590721,
+      7.192153
+     ],
+     [
+      125.596817,
+      7.197635
+     ],
+     [
+      125.603425,
+      7.202498
+     ],
+     [
+      125.610482,
+      7.206695
+     ],
+     [
+      125.617919,
+      7.210185
+     ],
+     [
+      125.625665,
+      7.212935
+     ],
+     [
+      125.633645,
+      7.214919
+     ],
+     [
+      125.641783,
+      7.216116
+     ],
+     [
+      125.65,
+      7.216517
+     ]
+    ]
+   ],
+   "type": "Polygon"
+  },
+  "geometry_source": "qline-circle",
+  "icao_location": "RPMD",
+  "icao_text": "B5376/26 NOTAMN\r\nQ) RPHI/QMNXX/IV/NBO/A /000/999/0708N12539E005\r\nA) RPMD B) 2610080337 C) 2701082359\r\nE) EXER EXTREME CTN WHEN OPR COMMERCIAL RAMP DUE WIP (REPLACEMENT OF \r\nEXTERIOR WALLS OF PAX TERMINAL BLDG).\r\n\r\nRMK: PRESENCE OF SCAFFOLDING.",
+  "id": "1791430680693000",
+  "issued": "2026-10-08T03:37:00.000Z",
+  "last_updated": "2026-10-08T03:38:00.000Z",
+  "local_text": null,
+  "location": "RPMD",
+  "lower": null,
+  "max_fl": "999",
+  "min_fl": "000",
+  "number": "B5376/26",
+  "purpose": "NBO",
+  "q_code": "QMNXX",
+  "qline_offset_nm": null,
+  "radius_nm": 5.0,
+  "ref_number": null,
+  "schedule": null,
+  "scope": "A ",
+  "series": "B",
+  "text": "EXER EXTREME CTN WHEN OPR COMMERCIAL RAMP DUE WIP (REPLACEMENT OF \r\nEXTERIOR WALLS OF PAX TERMINAL BLDG).\r\n\r\nRMK: PRESENCE OF SCAFFOLDING.",
+  "traffic": "IV",
+  "type": "N",
+  "upper": null,
+  "year": "2026"
  }
 }
