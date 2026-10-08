@@ -53159,11 +53159,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/dc83acfffd4d4c7ba55f8e5b7473e45a.html": {
     "bureau": "山东海事局",
+    "cancels": [],
     "date": "2026-10-08",
     "detail_fetched": false,
     "first_seen": "2026-10-08T00:50:36+00:00",
     "groups": [],
     "military": false,
+    "own_id": "鲁航警866/26",
     "points": [],
     "revoked": false,
     "title": "海水样品采集-创新一—鲁航警866/26",
