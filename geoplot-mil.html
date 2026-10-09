@@ -804,7 +804,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v2.9.2';
+const APP_VERSION = 'v2.9.3';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -848,6 +848,7 @@ const APP_VERSION = 'v2.9.2';
 // v2.9.0: NOTAMのカード・ポップアップに「発行元: 北京(ZBBBYNYX)」を表示。本文に BY <国名> があればそちらを優先。
 // v2.9.1: 既定で地図に描くのは発行元が中国(北京 ZBBBYNYX・BY CHINA)のものだけ。他は「地図に表示」を既定OFF(RCAAと同じ扱い)。
 // v2.9.2: 既定で地図に描く発行元に香港(VHHHYNYX)・マニラ(RPLLYNYX)を追加。
+// v2.9.3: マニラ(RPLLYNYX)は既定OFFに戻した(ユーザー判断)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3611,11 +3612,11 @@ const NOTAM_ARCHIVE_START_MONTH = '2026-01';
 let notamFirFilter = '';
 function notamFirFilterActive(){ return true; }
 function notamFirMatches(f, val){ return !val || notamFirTokens(f).includes(val); }
-// 既定で地図に描くのは、発行元が中国・香港・マニラのもの(issuer が北京 ZBBBYNYX・香港 VHHHYNYX・マニラ RPLLYNYX、
-// または本文に BY CHINA)だけ(v2.9.1〜v2.9.2、ユーザー判断)。本文に BY <他の国> があればそちらを優先して既定OFF。
-// それ以外(台北・マカオ・オークランドや BY KOREA 等)は一覧には出し、「地図に表示」のチェックを
+// 既定で地図に描くのは、発行元が中国・香港のもの(issuer が北京 ZBBBYNYX・香港 VHHHYNYX、
+// または本文に BY CHINA)だけ(v2.9.1〜v2.9.3、ユーザー判断)。本文に BY <他の国> があればそちらを優先して既定OFF。
+// それ以外(台北・マニラ・マカオ・オークランドや BY KOREA 等)は一覧には出し、「地図に表示」のチェックを
 // 既定で外す(チェックや「このタブを全て表示」で描ける)。Archiveは従来どおり全件既定OFF。
-const NOTAM_DEFAULT_ON_ISSUERS = ['ZBBBYNYX', 'VHHHYNYX', 'RPLLYNYX'];
+const NOTAM_DEFAULT_ON_ISSUERS = ['ZBBBYNYX', 'VHHHYNYX'];
 function notamOffByDefault(f){
   if (f._notamArchive) return true;
   return !notamDefaultOnIssuer(f.properties || {});
@@ -3810,7 +3811,7 @@ function notamByCountry(p){
   const m = String(p.raw_text || '').toUpperCase().match(NOTAM_BY_RE);
   return m ? m[1].replace(/\s+/g, ' ') : null;
 }
-// 既定で地図に描く発行元か(本文の BY <国名> を優先して CHINA のときだけ。無ければ issuer が北京・香港・マニラ)
+// 既定で地図に描く発行元か(本文の BY <国名> を優先して CHINA のときだけ。無ければ issuer が北京・香港)
 function notamDefaultOnIssuer(p){
   const by = notamByCountry(p);
   return by ? by === 'CHINA' : NOTAM_DEFAULT_ON_ISSUERS.includes(p.issuer);
