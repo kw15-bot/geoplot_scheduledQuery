@@ -12310,11 +12310,13 @@
   },
   "https://www.msa.gov.cn/html/cnmsa/hxaq/article/2026/342f20819061466f96216ebed9abdb61.html": {
     "bureau": "上海海事局",
+    "cancels": [],
     "date": "2026-10-09",
     "detail_fetched": false,
     "first_seen": "2026-10-08T23:50:36+00:00",
     "groups": [],
     "military": false,
+    "own_id": "沪航警796/26",
     "points": [],
     "revoked": false,
     "title": "装载大件船舶—沪航警796/26",
