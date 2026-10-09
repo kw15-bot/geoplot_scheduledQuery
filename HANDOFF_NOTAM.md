@@ -862,3 +862,4 @@ NOTAMモードの地図ツールバーに「レイヤー」ボタンを置き、
 - 2026-10-09 変更（v2.9.1）: 既定で地図に描くのは発行元が中国のもの（`notamIssuedByChina()`：本文の BY <国名> を優先し CHINA、無ければ issuer が ZBBBYNYX）だけ。台北・マニラ・香港・マカオ・オークランド・BY KOREA 等は一覧に出し「地図に表示」を既定OFF（RCAAと同じ扱い。v2.8.1 の FIR 指定 `NOTAM_MAP_OFF_BY_DEFAULT_FIRS` は廃止）。ユーザー判断。
 - 2026-10-09 変更（v2.9.2）: 既定で地図に描く発行元に香港（VHHHYNYX）・マニラ（RPLLYNYX）を追加（`NOTAM_DEFAULT_ON_ISSUERS`、`notamDefaultOnIssuer()`）。本文に BY <中国以外の国> があればそちらを優先して既定OFF（例：マニラ発行の BY KOREA・BY VIETNAM）。ユーザー判断。
 - 2026-10-09 変更（v2.9.3）: マニラ（RPLLYNYX）は既定OFFに戻した。既定で地図に描くのは北京・香港の発行分と BY CHINA（ユーザー判断）。
+- 2026-10-09 追加（v3.0.0）: NOTAMの全タブに発行元の絞り込みを追加（FIRの絞り込みの下、`#notamIssuerFilter`）。値は `notamIssuerKey()`＝本文の BY <国名> があれば `BY:<国名>`、無ければ issuer。選択肢は今のタブにある発行元だけ（表記は「北京(ZBBBYNYX)」「韓国(BY KOREA)」）。
