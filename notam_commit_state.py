@@ -51,8 +51,9 @@ from pathlib import Path
 
 try:
     import notam_cn_collect as C
+    import data_crypt as DC
 except ImportError:
-    sys.exit("notam_cn_collect.py が同じフォルダに見つかりません。同じフォルダで実行してください。")
+    sys.exit("notam_cn_collect.py / data_crypt.py が同じフォルダに見つかりません。同じフォルダで実行してください。")
 
 
 def run(cmd, check=True, capture=False):
@@ -80,14 +81,9 @@ def try_push(branch: str) -> bool:
 
 def fetch_remote_json(branch: str, rel_path: str):
     """origin/<branch> にある指定パスのJSONを、fetchしてから読み込んで返す。
-    リモート側にまだ無ければ None。"""
-    result = subprocess.run(
-        ["git", "show", f"origin/{branch}:{rel_path}"],
-        text=True, capture_output=True,
-    )
-    if result.returncode != 0:
-        return None
-    return json.loads(result.stdout)
+    リモート側にまだ無ければ None。2026-10-09: リポジトリには暗号化した <rel_path>.enc だけがあるので、
+    それを復号して読む(data_crypt.py、HANDOFF_NOTAM.md §25)。"""
+    return DC.git_show_json(f"origin/{branch}", rel_path)
 
 
 def rebuild_geojson(active: dict, now):
@@ -114,16 +110,17 @@ def merge_archive_fc(local_fc: dict, remote_fc: dict) -> dict:
 
 
 def changed_archive_paths(out_dir: Path):
-    """git的に変更されているarchive配下のファイルパス一覧(相対パス、posix区切り)。"""
-    result = subprocess.run(["git", "status", "--porcelain", str(out_dir / "archive")],
+    """このランで変更した(git add 済みの)archive配下のファイルパス一覧(平文の名前の相対パス、posix区切り)。
+    平文は .gitignore で除外しているので、暗号化した .enc のステージ済みの変更(新規を含む)から拾う。
+    2026-10-09: 以前は commit の後に git status で拾っていたため、常に空になっていた(commit 前に呼ぶ)。"""
+    result = subprocess.run(["git", "diff", "--staged", "--name-only", "--", str(out_dir / "archive")],
                              text=True, capture_output=True)
-    paths = []
-    for line in result.stdout.splitlines():
-        # "XY path" 形式。renameは扱わない想定(このスクリプトが触るのは追記のみのため)。
-        p = line[3:].strip()
-        if p.endswith(".geojson"):
-            paths.append(p)
-    return paths
+    return [p[:-len(DC.ENC)] for p in result.stdout.split() if p.endswith(".geojson" + DC.ENC)]
+
+
+def encrypt_outputs(paths):
+    """平文(このスクリプトが扱うファイル)を暗号化し、git add する .enc のパスを返す。"""
+    return DC.encrypt_paths([p for p in paths if Path(p).exists()])
 
 
 def main():
@@ -152,10 +149,17 @@ def main():
     if archive_dir.exists():
         add_paths.append(str(archive_dir))
 
-    run(["git", "add", *add_paths])
+    run(["git", "add", *encrypt_outputs(add_paths)])
     if not git_diff_staged_has_changes():
         print("no changes to commit", file=sys.stderr)
         return
+
+    # push拒否に備え、このランがarchiveに書いた変更点を先に控えておく
+    # (git reset --hard すると .enc がoriginに戻ってしまうため、ローカルの変更内容は
+    # "今この時点のファイル中身" として先に読んでおく必要がある)。
+    local_archive_changed = changed_archive_paths(out_dir)
+    local_archive_content = {p: C.read_json(Path(p), {"type": "FeatureCollection", "features": []})
+                              for p in local_archive_changed}
 
     run(["git", "commit", "-m", args.commit_message])
 
@@ -164,13 +168,6 @@ def main():
         return
 
     print("push rejected, switching to dict-level merge against origin...", file=sys.stderr)
-
-    # push拒否された時点で、このランがarchiveに書いた変更点を先に控えておく
-    # (git reset --hard するとワーキングツリーがoriginに戻ってしまうため、
-    # ローカルの変更内容は "今この時点のファイル中身" として先に読んでおく必要がある)。
-    local_archive_changed = changed_archive_paths(out_dir)
-    local_archive_content = {p: C.read_json(Path(p), {"type": "FeatureCollection", "features": []})
-                              for p in local_archive_changed}
 
     rel_state = str(state_path).replace("\\", "/")
     rel_geojson = str(geojson_path).replace("\\", "/")
@@ -217,7 +214,7 @@ def main():
                 json.dump(merged_fc, f, ensure_ascii=False, indent=2)
             add_paths2.append(rel_path)
 
-        run(["git", "add", *add_paths2])
+        run(["git", "add", *encrypt_outputs(add_paths2)])
         if not git_diff_staged_has_changes():
             print("merged result is identical to origin -- nothing new to commit", file=sys.stderr)
             return

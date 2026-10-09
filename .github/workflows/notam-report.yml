@@ -28,16 +28,27 @@ jobs:
         with:
           python-version: "3.12"
 
+      # 2026-10-09: リポジトリのデータは暗号化(*.enc)だけ。ランナーの中でだけ平文に戻す(data_crypt.py、HANDOFF_NOTAM.md §25)
+      - name: Decrypt data
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+        run: |
+          pip install -q cryptography
+          python data_crypt.py decrypt notam_out
+
       - name: Build report
         run: python notam_daily_report.py --out-dir notam_out
 
       # reports/ はこのワークフローしか書かないので、収集側(notam-collect / MSA scrape)の
       # pushと競合しても rebase で必ず解消できる。
       - name: Commit report
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
         run: |
+          python data_crypt.py encrypt notam_out/reports
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add notam_out/reports
+          git add notam_out/reports/*.enc
           if git diff --staged --quiet; then
             echo "no changes"; exit 0
           fi

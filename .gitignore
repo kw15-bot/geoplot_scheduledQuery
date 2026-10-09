@@ -4,3 +4,17 @@
 aip/*.json
 aip/*.json.gz
 __pycache__/
+
+# 2026-10-09: データと説明書きは暗号化したもの(*.enc)だけをコミットする。平文はコミットしない
+# (data_crypt.py で復号・暗号化。HANDOFF_NOTAM.md §25)
+/notam_out/**/*.json
+/notam_out/**/*.geojson
+/notam_out/**/*.md
+/msa_out/**/*.json
+/msa_out/**/*.geojson
+/msa_out/**/*.md
+/layers/**/*.json
+/layers/**/*.geojson
+/layers/**/*.md
+/HANDOFF.md
+/HANDOFF_NOTAM.md

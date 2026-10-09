@@ -5,6 +5,9 @@ name: Viewer key sync
 # key そのものはどこにも出力しない(ページに載るのはPBKDF2のハッシュだけ。HANDOFF_NOTAM.md §21)。
 # 2026-09-29: ビューアの「レイヤー」用の暗号化データ(aip/cn_routes_layer.enc・cn_points_layer.enc)も、同じ VIEWER_KEY で作り直す
 # (AIP索引の復号に AIPDS_KEY も使う。HANDOFF_NOTAM.md §22)。AIRACの更新で索引を差し替えたときも、このワークフローを実行する。
+# 2026-10-09: データ(notam_out・msa_out・layers・HANDOFF*.md の *.enc)も VIEWER_KEY で暗号化している(HANDOFF_NOTAM.md §25)。
+# keyを変えるときは、変える前のkeyを Secret VIEWER_KEY_PREV に入れてから実行すると、データも新しいkeyで作り直す
+# (終わったら VIEWER_KEY_PREV は消してよい)。VIEWER_KEY_PREV が無ければデータは触らない。
 on:
   workflow_dispatch: {}
 
@@ -62,6 +65,30 @@ jobs:
           python aip_build_routes_layer.py --index "$RUNNER_TEMP/aip_index.json.gz" \
             --out aip/cn_routes_layer.enc --points-out aip/cn_points_layer.enc
 
+      - name: Re-encrypt data with the new key
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+          VIEWER_KEY_PREV: ${{ secrets.VIEWER_KEY_PREV }}
+        run: |
+          if [ -z "$VIEWER_KEY_PREV" ]; then
+            echo "VIEWER_KEY_PREV not set; data files not re-encrypted"; exit 0
+          fi
+          pip install -q cryptography
+          printf '%s' "$VIEWER_KEY_PREV" > "$RUNNER_TEMP/prev_key.txt"
+          python data_crypt.py rekey --old-key-file "$RUNNER_TEMP/prev_key.txt"
+          rm -f "$RUNNER_TEMP/prev_key.txt"
+
+      # 平文のままコミットされているデータがあれば暗号化して、平文をリポジトリから外す(初回の移行用。
+      # 以後は何もしない)。先に .enc を復号して平文を最新にしてから暗号化する(古い平文で .enc を上書きしない)
+      - name: Encrypt plaintext data still in the repository
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+        run: |
+          pip install -q cryptography
+          python data_crypt.py decrypt
+          python data_crypt.py encrypt
+          python data_crypt.py untrack
+
       - name: Commit
         run: |
           git config user.name "github-actions[bot]"
@@ -70,10 +97,12 @@ jobs:
           for f in aip/cn_routes_layer.enc aip/cn_points_layer.enc; do
             if [ -f "$f" ]; then git add "$f"; fi
           done
+          git add -u -- '*.enc'
+          git add -A -- 'notam_out/*.enc' 'msa_out/*.enc' 'layers/*.enc' 'HANDOFF*.md.enc' .gitignore
           if git diff --staged --quiet; then
             echo "no changes"; exit 0
           fi
-          git commit -m "Viewer: sync key hash and map layers from VIEWER_KEY"
+          git commit -m "Viewer: sync key hash, map layers and encrypted data from VIEWER_KEY"
           for i in 1 2 3 4 5; do
             git pull --rebase origin main && git push origin HEAD:main && exit 0
             sleep $((i * 5))
