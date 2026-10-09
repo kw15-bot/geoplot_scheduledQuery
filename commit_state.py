@@ -60,8 +60,9 @@ from pathlib import Path
 
 try:
     import msa_scraper as scraper
+    import data_crypt as DC
 except ImportError:
-    sys.exit("msa_scraper.py が同じフォルダに見つかりません。同じフォルダで実行してください。")
+    sys.exit("msa_scraper.py / data_crypt.py が同じフォルダに見つかりません。同じフォルダで実行してください。")
 
 
 def run(cmd, check=True, capture=False):
@@ -90,14 +91,10 @@ def try_push(branch: str) -> bool:
 def fetch_remote_state(branch: str, rel_path: str):
     """origin/<branch> にある state.json の中身を、fetchしてから読み込んで返す。
     リモート側にまだファイルが無い（初回など）場合は None。"""
+    # 2026-10-09: リポジトリには暗号化した <rel_path>.enc だけがあるので、それを復号して読む
+    # (data_crypt.py、HANDOFF_NOTAM.md §25)。リモートにまだ無ければ None -> 呼び出し側でローカルのみ採用
     run(["git", "fetch", "origin", branch], check=True)
-    result = subprocess.run(
-        ["git", "show", f"origin/{branch}:{rel_path}"],
-        text=True, capture_output=True,
-    )
-    if result.returncode != 0:
-        return None  # リモートにまだ無い(初回コミット前など) -> 呼び出し側でローカルのみ採用
-    return json.loads(result.stdout)
+    return DC.git_show_json(f"origin/{branch}", rel_path)
 
 
 def main():
@@ -119,7 +116,7 @@ def main():
     # 基準として何度も参照するので、ここで一度だけ読み込んでおく。
     local_state = scraper.load_state(str(state_path))
 
-    run(["git", "add", str(geojson_path), str(state_path)])
+    run(["git", "add", *DC.encrypt_paths([str(geojson_path), str(state_path)])])
     if not git_diff_staged_has_changes():
         print("no changes to commit", file=sys.stderr)
         return
@@ -154,7 +151,7 @@ def main():
         with open(geojson_path, "w", encoding="utf-8") as f:
             json.dump(geojson, f, ensure_ascii=False, indent=2)
 
-        run(["git", "add", str(geojson_path), str(state_path)])
+        run(["git", "add", *DC.encrypt_paths([str(geojson_path), str(state_path)])])
         if not git_diff_staged_has_changes():
             print("merged result is identical to origin -- nothing new to commit", file=sys.stderr)
             return

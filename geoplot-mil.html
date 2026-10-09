@@ -807,7 +807,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v3.0.0';
+const APP_VERSION = 'v3.1.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -853,6 +853,8 @@ const APP_VERSION = 'v3.0.0';
 // v2.9.2: 既定で地図に描く発行元に香港(VHHHYNYX)・マニラ(RPLLYNYX)を追加。
 // v2.9.3: マニラ(RPLLYNYX)は既定OFFに戻した(ユーザー判断)。
 // v3.0.0: NOTAMの全タブに発行元の絞り込み(FIRの絞り込みの下)を追加。値は本文の BY <国名> を優先、無ければ issuer。
+// v3.1.0: リポジトリのデータ(notam_out・msa_out・layers)を暗号化(<名前>.enc、data_crypt.py)。<url>.enc を読み、keyで復号して使う
+//         (.enc が無い(404)ときだけ平文の <url> を読む。手元のサーバー用)。HANDOFF_NOTAM.md §25。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -1762,17 +1764,41 @@ function layerSourceText(box){
   if (!isNaN(t)) eff = `（${new Date(t + 8 * 3600 * 1000).toISOString().slice(0, 10)}発効）`;
   return `資料: 中国AIP AIRAC ${cycle}${eff}`;
 }
-async function decryptLayerFile(url){
-  const box = await fetchLayerBox(url);
-  const enc = new TextEncoder();
-  const base = await crypto.subtle.importKey('raw', enc.encode(viewerKey || ''), 'PBKDF2', false, ['deriveKey']);
-  const aes = await crypto.subtle.deriveKey({ name:'PBKDF2', hash:'SHA-256', salt: b64bytes(box.salt), iterations: box.iter },
-    base, { name:'AES-GCM', length:256 }, false, ['decrypt']);
+// 暗号化の箱({salt, iter, iv, ct})を keyで復号して平文の文字列にする。鍵(PBKDF2)は salt・iter ごとに1回だけ作る
+// (データのファイルは salt が共通なので、何ファイル読んでも1回)。
+const boxKeyCache = new Map();
+function boxAesKey(box){
+  const ck = `${box.salt}|${box.iter}`;
+  if (!boxKeyCache.has(ck)){
+    const enc = new TextEncoder();
+    boxKeyCache.set(ck, crypto.subtle.importKey('raw', enc.encode(viewerKey || ''), 'PBKDF2', false, ['deriveKey'])
+      .then(base => crypto.subtle.deriveKey({ name:'PBKDF2', hash:'SHA-256', salt: b64bytes(box.salt), iterations: box.iter },
+        base, { name:'AES-GCM', length:256 }, false, ['decrypt'])));
+  }
+  return boxKeyCache.get(ck);
+}
+async function decryptBoxText(box, failMsg){
+  const aes = await boxAesKey(box);
   let gz;
   try { gz = await crypto.subtle.decrypt({ name:'AES-GCM', iv: b64bytes(box.iv) }, aes, b64bytes(box.ct)); }
-  catch (e) { throw new Error('復号できません(レイヤーのデータが今のkeyで作られていない可能性。Actions の Viewer key sync を実行してください)'); }
-  const text = await new Response(new Blob([gz]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+  catch (e) { throw new Error(failMsg || '復号できません(データが今のkeyで暗号化されていない可能性)'); }
+  return new Response(new Blob([gz]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
+}
+async function decryptLayerFile(url){
+  const box = await fetchLayerBox(url);
+  const text = await decryptBoxText(box, '復号できません(レイヤーのデータが今のkeyで作られていない可能性。Actions の Viewer key sync を実行してください)');
   return { data: JSON.parse(text), box };
+}
+// データのファイル(notam_out・msa_out・layers)を読む。リポジトリには暗号化した <url>.enc だけがあるので、それを読んで復号する。
+// .enc が無い(404)ときだけ平文の <url> を読む(手元のサーバーで平文を置いている場合)。失敗時の err.status に HTTP の状態。
+async function fetchDataText(url){
+  const encUrl = String(url).replace(/(\?|#|$)/, '.enc$1');
+  const res = await fetch(encUrl, { cache:'no-store' });
+  if (res.ok) return decryptBoxText(await res.json());
+  if (res.status !== 404){ const e = new Error(`HTTP ${res.status}`); e.status = res.status; throw e; }
+  const r2 = await fetch(url, { cache:'no-store' });
+  if (!r2.ok){ const e = new Error(`HTTP ${r2.status}`); e.status = r2.status; throw e; }
+  return r2.text();
 }
 function fillDynamicOverlay(o){
   o.layer.clearLayers();
@@ -1785,8 +1811,7 @@ function loadOverlay(o){
   }
   if (!o.loaded){
     const get = o.plain
-      ? fetch(o.url, { cache:'no-store' }).then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
-          .then(data => ({ data }))
+      ? fetchDataText(o.url).then(text => ({ data: JSON.parse(text) }))
       : decryptLayerFile(o.url);
     o.loaded = get.then(({ data }) => {
       o.build(data).addTo(o.layer);
@@ -3569,9 +3594,7 @@ async function connectUrl(url){
 async function rereadConnectedUrl(){
   if (!connectedUrl) return;
   try{
-    const res = await fetch(connectedUrl, { cache: 'no-store' });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const text = await res.text();
+    const text = await fetchDataText(connectedUrl);
     importGeoJSON(text, connectedUrl);
     updateConnectionUI();
     logLine(`自動再読込: ${connectedUrl}`, 'l-ok');
@@ -4067,9 +4090,7 @@ function updateNotamConnectionUI(){
 
 async function rereadNotamUrl(){
   if (!connectedNotamUrl) return;
-  const res = await fetch(connectedNotamUrl, { cache:'no-store' });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const gj = JSON.parse(await res.text());
+  const gj = JSON.parse(await fetchDataText(connectedNotamUrl));
   notamActiveFeatures = notamDedupe(gj.features || []);
   registerNotamsForNotifications(notamActiveFeatures);
   renderNotamList();
@@ -4112,10 +4133,10 @@ async function loadAllNotamArchives(){
   const months = notamArchiveMonths();
   const results = await Promise.all(months.map(async month => {
     try{
-      const res = await fetch(notamArchiveUrl(month), { cache:'no-store' });
-      if (res.status === 404) return { month, features: null };
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const gj = JSON.parse(await res.text());
+      let text;
+      try { text = await fetchDataText(notamArchiveUrl(month)); }
+      catch (e) { if (e.status === 404) return { month, features: null }; throw e; }
+      const gj = JSON.parse(text);
       const features = notamDedupe(gj.features || []);
       features.forEach(f => { f._notamArchive = true; });
       return { month, features };

@@ -863,3 +863,19 @@ NOTAMモードの地図ツールバーに「レイヤー」ボタンを置き、
 - 2026-10-09 変更（v2.9.2）: 既定で地図に描く発行元に香港（VHHHYNYX）・マニラ（RPLLYNYX）を追加（`NOTAM_DEFAULT_ON_ISSUERS`、`notamDefaultOnIssuer()`）。本文に BY <中国以外の国> があればそちらを優先して既定OFF（例：マニラ発行の BY KOREA・BY VIETNAM）。ユーザー判断。
 - 2026-10-09 変更（v2.9.3）: マニラ（RPLLYNYX）は既定OFFに戻した。既定で地図に描くのは北京・香港の発行分と BY CHINA（ユーザー判断）。
 - 2026-10-09 追加（v3.0.0）: NOTAMの全タブに発行元の絞り込みを追加（FIRの絞り込みの下、`#notamIssuerFilter`）。値は `notamIssuerKey()`＝本文の BY <国名> があれば `BY:<国名>`、無ければ issuer。選択肢は今のタブにある発行元だけ（表記は「北京(ZBBBYNYX)」「韓国(BY KOREA)」）。
+
+## 25. リポジトリのデータと説明書きを暗号化（2026-10-09、v3.1.0）
+
+- 対象: `notam_out/`・`msa_out/`・`layers/` の *.json / *.geojson / *.md と、`HANDOFF.md`・`HANDOFF_NOTAM.md`（ユーザー指定「データ＋説明書き」）。コード（.py・.yml）とビューア（geoplot-mil.html）は平文のまま。
+- リポジトリには暗号化したもの（元の名前 + `.enc`、例 `notam_out/notam_cn.geojson.enc`）だけを置く。平文は `.gitignore` で除外（誤ってコミットできない）。
+- 鍵はビューアの key（Secret `VIEWER_KEY`、ユーザー指定）。形式は `aip/cn_routes_layer.enc` と同じ箱（PBKDF2-SHA256 30万回 → AES-256-GCM(gzip)）。salt は全ファイル共通の固定値、iv は平文から決める（同じ中身なら同じ暗号文になり、変わらないファイルを毎回コミットし直さない）。詳細は `data_crypt.py` の冒頭。
+- 道具: `data_crypt.py`（`decrypt`・`encrypt`・`cat`・`rekey`・`untrack`）。鍵は `--key-file` か環境変数 `VIEWER_KEY` / `GEOPLOT_DATA_KEY` / `GEOPLOT_DATA_KEY_FILE`。要 `pip install cryptography`。
+- ワークフロー: notam-collect・notam-report・MSA scrape は「`data_crypt.py decrypt` → 処理 → 暗号化して .enc をコミット」。`notam_commit_state.py`・`commit_state.py` は push 拒否時に origin の .enc を復号してマージする（`data_crypt.git_show_json()`）。
+  - 同時に直した不具合: `notam_commit_state.py` が push 拒否時に「このランで変えた archive」を commit の後に `git status` で拾っていたため常に空で、archive の追記が落ちることがあった。commit の前に拾うようにした。
+- ビューア: `fetchDataText(url)` が `<url>.enc` を読んで key で復号する（鍵の計算は1回だけ）。`.enc` が無い（404）ときだけ平文の `<url>` を読む（手元のサーバー用）。URL の表示・`?notam=`・`?geojson=` はこれまでどおり平文の名前。
+- 初回の移行: `Viewer key sync` を手動実行すると、平文のままのデータを暗号化して平文をリポジトリから外す（先に .enc を復号して平文を最新にしてから暗号化）。以後は何もしない。
+- key を変えるとき: 変える前の key を Secret `VIEWER_KEY_PREV` に入れ、`VIEWER_KEY` を新しい key にして `Viewer key sync` を実行（データも新しい key で作り直す。終わったら `VIEWER_KEY_PREV` は消してよい）。
+- クラウドのセッション（日次チェックのルーチン・引き継ぎ先の会話）: 環境の設定に環境変数 `GEOPLOT_DATA_KEY`（= ビューアの key）を入れておく。最初に `python data_crypt.py decrypt`、データや HANDOFF を直したら `python data_crypt.py encrypt` してから .enc をコミット。
+  - main と衝突したら .enc は main 側を採り、`python data_crypt.py decrypt` → `notam_backfill_text_polygon.py --out-dir notam_out --apply --rebuild-geojson` → `encrypt` し直す。
+- `fir_build_layer.py` で `layers/fir.geojson` を作り直したときも `python data_crypt.py encrypt layers` してから .enc をコミット。
+- 過去のコミット（2026-10-09 より前）には平文が残っている（公開リポジトリ）。扱いはユーザー判断待ち。

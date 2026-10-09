@@ -38,6 +38,14 @@ jobs:
         with:
           python-version: "3.12"
 
+      # 2026-10-09: リポジトリのデータは暗号化(*.enc)だけ。ランナーの中でだけ平文に戻す(data_crypt.py、HANDOFF_NOTAM.md §25)
+      - name: Decrypt data
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+        run: |
+          pip install -q cryptography
+          python data_crypt.py decrypt notam_out
+
       # 復号した索引はランナーの一時領域にだけ置く(コミット対象の notam_out/ には書かない)
       - name: Decrypt AIP index
         env:
@@ -62,6 +70,8 @@ jobs:
         run: python notam_cn_collect.py --out-dir notam_out
 
       - name: Commit updated notam_out
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
