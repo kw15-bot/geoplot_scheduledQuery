@@ -849,7 +849,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v3.5.0';
+const APP_VERSION = 'v3.5.1';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -905,6 +905,7 @@ const APP_VERSION = 'v3.5.0';
 // v3.4.0: 日付選択を複数日に(クリックで1日ずつ足す/外す、ドラッグで範囲)。選んだどれかの日に有効だったものを出す。
 // v3.5.0: ビューアに出すのは発行元が北京(ZBBBYNYX)・BY CHINA・台北(RCTPYNYX)と、発行元なし(貼り付け取り込み)だけ。
 //         それ以外(マニラ・オークランド・香港・BY KOREA 等)は読み込み時に除く(一覧・地図・NAVWARの参考レイヤー・通知すべて)。
+// v3.5.1: 発行元なし(貼り付け取り込みの31件)は北京(ZBBBYNYX)として扱う(ユーザー指定)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3693,16 +3694,18 @@ function notamNewTabFilter(){ return { fir: '', issuers: new Set(NOTAM_ISSUER_DE
 function notamFirFilterActive(){ return true; }
 function notamFirMatches(f, val){ return !val || notamFirTokens(f).includes(val); }
 // 発行元の絞り込み(v3.0.0、v3.2.0〜チェックボックスで複数選択)。値は notamIssuerKey(): 本文に BY <国名> があれば
-// 'BY:<国名>'、無ければ issuer('' = 発行元なし、貼り付け取り込み分)。チェックの入った発行元だけを一覧・地図に出す。
+// 'BY:<国名>'、無ければ issuer(貼り付け取り込み分は北京とみなす)。チェックの入った発行元だけを一覧・地図に出す。
 // 既定は北京(ZBBBYNYX)と BY CHINA だけ(ユーザー判断。北京発行でも本文が BY KOREA なら 'BY:KOREA' で既定は外れる)。
 const NOTAM_ISSUER_DEFAULT = ['ZBBBYNYX', 'BY:CHINA'];
-// ビューアに出す発行元(v3.5.0、ユーザー指定)。'' = 発行元なし(提供を受けて貼り付け取り込みした分)。
+// ビューアに出す発行元(v3.5.0、ユーザー指定)。発行元なし(貼り付け取り込み分)は北京として扱う(v3.5.1、notamIssuerCode)。
 // 判定は notamIssuerKey() と同じ(本文の BY <国名> を優先)。例: マニラFIRでも北京発行・BY CHINA なら出る。
 // 北京発行でも本文が BY KOREA のものは「韓国」なので出ない。
-const NOTAM_ISSUER_ALLOWED = new Set(['ZBBBYNYX', 'BY:CHINA', 'RCTPYNYX', '']);
+const NOTAM_ISSUER_ALLOWED = new Set(['ZBBBYNYX', 'BY:CHINA', 'RCTPYNYX']);
 function notamIssuerAllowed(f){ return NOTAM_ISSUER_ALLOWED.has(notamIssuerKey(f.properties || {})); }
 const notamFilters = { active: notamNewTabFilter(), upcoming: notamNewTabFilter(), archive: notamNewTabFilter(), all: notamNewTabFilter() };
-function notamIssuerKey(p){ const by = notamByCountry(p); return by ? 'BY:' + by : (p.issuer || ''); }
+// issuer(NMSの accountId)。貼り付け取り込み分は issuer が無いので北京(ZBBBYNYX)とみなす(v3.5.1、ユーザー指定)
+function notamIssuerCode(p){ return p.issuer || 'ZBBBYNYX'; }
+function notamIssuerKey(p){ const by = notamByCountry(p); return by ? 'BY:' + by : notamIssuerCode(p); }
 function notamIssuerMatches(f, tab){ return notamFilters[tab].issuers.has(notamIssuerKey(f.properties || {})); }
 // そのNOTAMが属する状態のタブ
 function notamStateTab(f){ return f._notamArchive ? 'archive' : notamStatusOf(f) === 'upcoming' ? 'upcoming' : 'active'; }
@@ -3804,12 +3807,12 @@ function updateNotamFirFilterOptions(selectEl, itemsInScope, currentValue){
 }
 // 発行元のチェックボックス: 今のタブにある発行元だけを「北京(ZBBBYNYX)」「韓国(BY KOREA)」の表記と件数で出す。
 // 上の行(summary)には、チェックの入っている発行元を並べる。
-function notamIssuerLabel(p, k){ return k ? notamIssuerText(p) : '発行元なし'; }
+function notamIssuerLabel(p){ return notamIssuerText(p); }
 function updateNotamIssuerFilterOptions(itemsInScope, checked){
   const labels = new Map(), counts = new Map();
   itemsInScope.forEach(f => {
     const p = f.properties || {}, k = notamIssuerKey(p);
-    if (!labels.has(k)) labels.set(k, notamIssuerLabel(p, k));
+    if (!labels.has(k)) labels.set(k, notamIssuerLabel(p));
     counts.set(k, (counts.get(k) || 0) + 1);
   });
   const rank = k => { const i = NOTAM_ISSUER_DEFAULT.indexOf(k); return i < 0 ? 99 : i; };
@@ -3927,9 +3930,8 @@ function notamIssuerText(p){
     const key = m[1].replace(/\s+/g, ' ');
     return `${NOTAM_BY_COUNTRY[key] || key}(BY ${key})`;
   }
-  if (!p.issuer) return '';
-  const name = NOTAM_ISSUER_NAMES[p.issuer];
-  return name ? `${name}(${p.issuer})` : p.issuer;
+  const code = notamIssuerCode(p), name = NOTAM_ISSUER_NAMES[code];
+  return name ? `${name}(${code})` : code;
 }
 function notamPopupHtml(f){
   const p = f.properties || {};
