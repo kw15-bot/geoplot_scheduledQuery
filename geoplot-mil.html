@@ -148,6 +148,11 @@ body{
 .notam-filters .flabel{color:var(--text-dim);font-weight:600;margin:8px 0 4px;}
 .notam-filters .flabel:first-child{margin-top:0;}
 .notam-filters label.check-row{display:inline-flex;margin:2px 10px 2px 0;font-size:11px;}
+.notam-issuer-box{margin-top:4px;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:11.5px;}
+.notam-issuer-box summary{cursor:pointer;padding:6px 8px;list-style-position:inside;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.notam-issuer-box .issuer-body{padding:2px 8px 8px;border-top:1px solid var(--border);}
+.notam-issuer-box .issuer-body label.check-row{display:flex;margin:4px 0 0;font-size:11.5px;color:var(--text-dim);}
+.notam-issuer-box .issuer-body .issuer-n{color:var(--text-faint);margin-left:4px;}
 /* NOTAMのカードは航行警報側と同じ.warn-item.milをそのまま使う(状態の違いは.validity-badgeの色で出す)。 */
 .notam-tag{font-family:var(--mono);font-size:9.5px;padding:1px 6px;border-radius:4px;display:inline-block;margin-top:6px;margin-right:4px;}
 .notam-tag.qline{background:transparent;color:var(--text-faint);border:1px dashed var(--border-bright);}
@@ -656,9 +661,18 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
           <select id="notamFirFilter" style="width:100%;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--mono);font-size:11.5px;padding:6px 8px;">
             <option value="">FIR: すべて</option>
           </select>
-          <select id="notamIssuerFilter" style="width:100%;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--mono);font-size:11.5px;padding:6px 8px;margin-top:4px;">
-            <option value="">発行元: すべて</option>
-          </select>
+          <!-- 発行元の絞り込み(v3.2.0〜、チェックボックスで複数選択。既定は北京・BY CHINA だけ) -->
+          <details id="notamIssuerFilter" class="notam-issuer-box">
+            <summary id="notamIssuerSummary">発行元: 北京(ZBBBYNYX)・中国(BY CHINA)</summary>
+            <div class="issuer-body">
+              <div class="btn-row" style="margin-top:6px;">
+                <button class="btn small ghost" id="notamIssuerAll">すべて</button>
+                <button class="btn small ghost" id="notamIssuerNone">すべて外す</button>
+                <button class="btn small ghost" id="notamIssuerDefault">既定に戻す</button>
+              </div>
+              <div id="notamIssuerList"></div>
+            </div>
+          </details>
         </div>
       </div>
       <div id="notamList"></div>
@@ -807,7 +821,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v3.1.0';
+const APP_VERSION = 'v3.2.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -855,6 +869,9 @@ const APP_VERSION = 'v3.1.0';
 // v3.0.0: NOTAMの全タブに発行元の絞り込み(FIRの絞り込みの下)を追加。値は本文の BY <国名> を優先、無ければ issuer。
 // v3.1.0: リポジトリのデータ(notam_out・msa_out・layers)を暗号化(<名前>.enc、data_crypt.py)。<url>.enc を読み、keyで復号して使う
 //         (.enc が無い(404)ときだけ平文の <url> を読む。手元のサーバー用)。HANDOFF_NOTAM.md §25。
+// v3.2.0: 発行元の絞り込みをチェックボックス(複数選択)にし、既定は北京(ZBBBYNYX)と BY CHINA だけにチェック。
+//         一覧・地図とも既定はそれだけ(他の発行元を「地図に表示」既定OFFで一覧に並べるのはやめた。一覧が長すぎるため)。
+//         FIR・発行元の絞り込みは状態のタブ(Active/Upcoming/Archive/All)ごとに別々に持つ(他のタブに効かない)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3633,25 +3650,25 @@ let notamArchiveFeatures = new Map();     // 'YYYY-MM' -> features[]。接続時
 // 手動取り込み分(notam_paste_import.py)で最も古いのが2026-01。
 const NOTAM_ARCHIVE_START_MONTH = '2026-01';
 // 表示条件は「E項の実座標から作ったポリゴン(notamHasRealPolygon)」かつ「FIRドロップダウンの
-// 選択(notamFirFilter、''=すべて)」のみ。area_group/focus_tag/keyword_hitでの絞り込みは行わない
+// 選択(タブごと、notamFilters)」と発行元の絞り込みのみ。area_group/focus_tag/keyword_hitでの絞り込みは行わない
 // (収集条件(CN/HK/MO/TW/REF)に合致するものは全部ビューワに出す方針)。
-// FIRの絞り込み。'' = すべて、それ以外の値 = そのFIRだけ。全タブで効く(v2.8.0〜)。
-let notamFirFilter = '';
+// FIRの絞り込み。'' = すべて、それ以外の値 = そのFIRだけ。全タブに出す(v2.8.0〜)。
+// v3.2.0〜 FIR・発行元の絞り込みはタブごとに別々(notamFilters[tab])。地図では、各NOTAMにその状態のタブ
+// (Active/Upcoming/Archive)の絞り込みを使う。Allタブを開いている間だけ、地図もAllタブの絞り込みに従う。
+function notamNewTabFilter(){ return { fir: '', issuers: new Set(NOTAM_ISSUER_DEFAULT) }; }
 function notamFirFilterActive(){ return true; }
 function notamFirMatches(f, val){ return !val || notamFirTokens(f).includes(val); }
-// 発行元の絞り込み(v3.0.0)。値は notamIssuerKey(): 本文に BY <国名> があれば 'BY:<国名>'、無ければ issuer。'' = すべて
-let notamIssuerFilter = '';
+// 発行元の絞り込み(v3.0.0、v3.2.0〜チェックボックスで複数選択)。値は notamIssuerKey(): 本文に BY <国名> があれば
+// 'BY:<国名>'、無ければ issuer('' = 発行元なし、貼り付け取り込み分)。チェックの入った発行元だけを一覧・地図に出す。
+// 既定は北京(ZBBBYNYX)と BY CHINA だけ(ユーザー判断。北京発行でも本文が BY KOREA なら 'BY:KOREA' で既定は外れる)。
+const NOTAM_ISSUER_DEFAULT = ['ZBBBYNYX', 'BY:CHINA'];
+const notamFilters = { active: notamNewTabFilter(), upcoming: notamNewTabFilter(), archive: notamNewTabFilter(), all: notamNewTabFilter() };
 function notamIssuerKey(p){ const by = notamByCountry(p); return by ? 'BY:' + by : (p.issuer || ''); }
-function notamIssuerMatches(f, val){ return !val || notamIssuerKey(f.properties || {}) === val; }
-// 既定で地図に描くのは、発行元が中国・香港のもの(issuer が北京 ZBBBYNYX・香港 VHHHYNYX、
-// または本文に BY CHINA)だけ(v2.9.1〜v2.9.3、ユーザー判断)。本文に BY <他の国> があればそちらを優先して既定OFF。
-// それ以外(台北・マニラ・マカオ・オークランドや BY KOREA 等)は一覧には出し、「地図に表示」のチェックを
-// 既定で外す(チェックや「このタブを全て表示」で描ける)。Archiveは従来どおり全件既定OFF。
-const NOTAM_DEFAULT_ON_ISSUERS = ['ZBBBYNYX', 'VHHHYNYX'];
-function notamOffByDefault(f){
-  if (f._notamArchive) return true;
-  return !notamDefaultOnIssuer(f.properties || {});
-}
+function notamIssuerMatches(f, tab){ return notamFilters[tab].issuers.has(notamIssuerKey(f.properties || {})); }
+// そのNOTAMが属する状態のタブ
+function notamStateTab(f){ return f._notamArchive ? 'archive' : notamStatusOf(f) === 'upcoming' ? 'upcoming' : 'active'; }
+// 「地図に表示」が既定OFFなのは Archive だけ(v3.2.0〜。発行元による既定OFFは絞り込みに置き換えた)
+function notamOffByDefault(f){ return !!f._notamArchive; }
 let notamTab = 'active';
 let notamLayerVisibleOnMap = true;        // 手動トグルは無し(常時true)。enterMode()の3モード排他表示で制御する
 let connectedNotamUrl = null;
@@ -3726,13 +3743,15 @@ function notamFirTokens(f){
   if (firs.length && !firs.some(v => /^[A-Z]{2}XX$/.test(v))) return firs;
   return (f._notamLocations || (p.icao_location || '').split(/\s+/)).filter(Boolean);
 }
-function notamPassesFilter(f){
+// tab: 使う絞り込みのタブ。省略時はそのNOTAMの状態のタブ
+function notamPassesFilter(f, tab){
+  tab = tab || notamStateTab(f);
   // 米国の国内書式(classification: DOM、例: !CARF 09/332 ZAK ...)は、同じ告示がICAO書式
   // (INTL、例: A4705/26)でも発行されていて重複になるので表示しない。
   if ((f.properties || {}).classification === 'DOM') return false;
   if (!notamHasRealPolygon(f)) return false;
-  if (notamFirFilterActive() && !notamFirMatches(f, notamFirFilter)) return false;
-  if (!notamIssuerMatches(f, notamIssuerFilter)) return false;
+  if (notamFirFilterActive() && !notamFirMatches(f, notamFilters[tab].fir)) return false;
+  if (!notamIssuerMatches(f, tab)) return false;
   return true;
 }
 // 航行警報側のupdateBureauFilterOptions()と同じ考え方: 今スコープにある値だけを選択肢にする。
@@ -3743,18 +3762,24 @@ function updateNotamFirFilterOptions(selectEl, itemsInScope, currentValue){
   selectEl.value = firsPresent.includes(currentValue) ? currentValue : '';
   return selectEl.value;
 }
-// 発行元ドロップダウン: 今のタブにある発行元だけを「北京(ZBBBYNYX)」「韓国(BY KOREA)」の表記で出す
-function updateNotamIssuerFilterOptions(selectEl, itemsInScope, currentValue){
-  const labels = new Map();
+// 発行元のチェックボックス: 今のタブにある発行元だけを「北京(ZBBBYNYX)」「韓国(BY KOREA)」の表記と件数で出す。
+// 上の行(summary)には、チェックの入っている発行元を並べる。
+function notamIssuerLabel(p, k){ return k ? notamIssuerText(p) : '発行元なし'; }
+function updateNotamIssuerFilterOptions(itemsInScope, checked){
+  const labels = new Map(), counts = new Map();
   itemsInScope.forEach(f => {
     const p = f.properties || {}, k = notamIssuerKey(p);
-    if (k && !labels.has(k)) labels.set(k, notamIssuerText(p));
+    if (!labels.has(k)) labels.set(k, notamIssuerLabel(p, k));
+    counts.set(k, (counts.get(k) || 0) + 1);
   });
-  const keys = [...labels.keys()].sort((a, b) => labels.get(a).localeCompare(labels.get(b), 'ja'));
-  selectEl.innerHTML = '<option value="">発行元: すべて</option>'
-    + keys.map(k => `<option value="${esc(k)}">発行元: ${esc(labels.get(k))}</option>`).join('');
-  selectEl.value = labels.has(currentValue) ? currentValue : '';
-  return selectEl.value;
+  const rank = k => { const i = NOTAM_ISSUER_DEFAULT.indexOf(k); return i < 0 ? 99 : i; };
+  const keys = [...labels.keys()].sort((a, b) => rank(a) - rank(b) || labels.get(a).localeCompare(labels.get(b), 'ja'));
+  $('#notamIssuerList').innerHTML = keys.map(k => `<label class="check-row"><input type="checkbox" data-notam-issuer="${esc(k)}" ${checked.has(k) ? 'checked' : ''}> ${esc(labels.get(k))}<span class="issuer-n">${counts.get(k)}</span></label>`).join('')
+    || '<div style="margin-top:6px;color:var(--text-faint);">このタブにNOTAMはありません</div>';
+  const on = keys.filter(k => checked.has(k));
+  const names = on.length === keys.length && keys.length ? 'すべて' : on.length ? on.map(k => labels.get(k)).join('・') : 'なし';
+  $('#notamIssuerSummary').textContent = `発行元: ${names}（${on.length}/${keys.length}）`;
+  $('#notamIssuerSummary').title = $('#notamIssuerSummary').textContent;
 }
 function notamStyle(f){
   const p = f.properties || {};
@@ -3856,11 +3881,6 @@ function notamByCountry(p){
   const m = String(p.raw_text || '').toUpperCase().match(NOTAM_BY_RE);
   return m ? m[1].replace(/\s+/g, ' ') : null;
 }
-// 既定で地図に描く発行元か(本文の BY <国名> を優先して CHINA のときだけ。無ければ issuer が北京・香港)
-function notamDefaultOnIssuer(p){
-  const by = notamByCountry(p);
-  return by ? by === 'CHINA' : NOTAM_DEFAULT_ON_ISSUERS.includes(p.issuer);
-}
 function notamIssuerText(p){
   const m = String(p.raw_text || '').toUpperCase().match(NOTAM_BY_RE);
   if (m){
@@ -3924,7 +3944,8 @@ function rebuildNotamMapLayer(){
   if (!notamLayerVisibleOnMap) return;
   let feats = notamActiveFeatures.slice();
   notamArchiveFeatures.forEach(arr => { feats = feats.concat(arr); });
-  feats = feats.filter(f => f.geometry && notamPassesFilter(f) && notamIsOnMap(f));
+  const tab = notamTab === 'all' ? 'all' : null;
+  feats = feats.filter(f => f.geometry && notamPassesFilter(f, tab) && notamIsOnMap(f));
   if (!feats.length) return;
   notamShapesLayer(feats, { panelSync: true }).addTo(notamLayer);
 }
@@ -3986,22 +4007,21 @@ function renderNotamList(){
 
   // 件数は収集した全件ではなく、実際にビューア(一覧・地図)に表示される件数を出す
   // (notamPassesFilter = E項実座標ポリゴンのみ、かつ現在のFIR絞り込みを通過したもの)。
-  const activeCount = notamActiveFeatures.filter(f => notamStatusOf(f) === 'active').filter(notamPassesFilter).length;
-  const upcomingCount = notamActiveFeatures.filter(f => notamStatusOf(f) === 'upcoming').filter(notamPassesFilter).length;
-  let archiveCount = 0; notamArchiveFeatures.forEach(arr => archiveCount += arr.filter(notamPassesFilter).length);
-  $('#notamCountActive').textContent = activeCount;
-  $('#notamCountUpcoming').textContent = upcomingCount;
-  $('#notamCountArchive').textContent = archiveCount;
-  $('#notamCountAll').textContent = activeCount + upcomingCount + archiveCount;
+  // 各タブの件数は、そのタブの絞り込みで数える
+  ['active', 'upcoming', 'archive', 'all'].forEach(t => {
+    $('#notamCount' + t[0].toUpperCase() + t.slice(1)).textContent = notamFeaturesForTab(t).filter(f => notamPassesFilter(f, t)).length;
+  });
 
   // ポリゴン条件は満たすがFIR絞り込み前、という段階でFIRドロップダウンの選択肢を作る
   // (航行警報側のArchive/All局ドロップダウンと同じ「今のスコープに実在する値だけ出す」方式)。
   const polyItemsInTab = notamFeaturesForTab(notamTab).filter(notamHasRealPolygon);
   $('#notamFirFilterRow').style.display = notamFirFilterActive() ? 'block' : 'none';
-  if (notamFirFilterActive()) notamFirFilter = updateNotamFirFilterOptions($('#notamFirFilter'), polyItemsInTab, notamFirFilter);
-  notamIssuerFilter = updateNotamIssuerFilterOptions($('#notamIssuerFilter'), polyItemsInTab, notamIssuerFilter);
+  const tf = notamFilters[notamTab];
+  if (notamFirFilterActive()) tf.fir = updateNotamFirFilterOptions($('#notamFirFilter'), polyItemsInTab, tf.fir);
+  updateNotamIssuerFilterOptions(polyItemsInTab.filter(f => (f.properties || {}).classification !== 'DOM'
+    && (!notamFirFilterActive() || notamFirMatches(f, tf.fir))), tf.issuers);
 
-  const items = notamFeaturesForTab(notamTab).filter(notamPassesFilter)
+  const items = notamFeaturesForTab(notamTab).filter(f => notamPassesFilter(f, notamTab))
     .sort((a,b) => ((b.properties||{}).valid_start||'').localeCompare((a.properties||{}).valid_start||''));
   currentNotamTabItems = items; // 「このタブを全て表示/非表示」ボタン用
   notamByKey = new Map(notamFeaturesForTab('all').map(f => [notamFeatureKey(f), f]));
@@ -4166,12 +4186,13 @@ async function loadAllNotamArchives(){
 function selectNotamInPanel(f){
   const key = notamFeatureKey(f);
   if (!currentNotamTabItems.some(g => notamFeatureKey(g) === key)){
-    const st = notamStatusOf(f);
-    const targetTab = f._notamArchive ? 'archive' : (st === 'upcoming') ? 'upcoming' : 'active';
+    // 地図に出ているNOTAMは、Allタブを開いていればAllの絞り込みを通っているので、ここに来るのは状態のタブ
+    const targetTab = notamStateTab(f);
     notamTab = targetTab;
     $$('#notamValidityTabs .tab-btn').forEach(b=> b.classList.toggle('active', b.dataset.tab === targetTab));
-    if (!notamFirMatches(f, notamFirFilter)){ notamFirFilter = ''; $('#notamFirFilter').value = ''; }
-    if (!notamIssuerMatches(f, notamIssuerFilter)){ notamIssuerFilter = ''; $('#notamIssuerFilter').value = ''; }
+    const tf = notamFilters[targetTab];
+    if (!notamFirMatches(f, tf.fir)) tf.fir = '';
+    if (!notamIssuerMatches(f, targetTab)) tf.issuers.add(notamIssuerKey(f.properties || {}));
     renderNotamList();
   }
   const card = document.querySelector(`#notamList .warn-item[data-notam-key="${CSS.escape(key)}"]`);
@@ -4190,11 +4211,26 @@ $$('#notamValidityTabs .tab-btn').forEach(btn=>{
   });
 });
 $('#notamFirFilter').addEventListener('change', ()=>{
-  notamFirFilter = $('#notamFirFilter').value;
+  notamFilters[notamTab].fir = $('#notamFirFilter').value;
   renderNotamList();
 });
-$('#notamIssuerFilter').addEventListener('change', ()=>{
-  notamIssuerFilter = $('#notamIssuerFilter').value;
+$('#notamIssuerList').addEventListener('change', (e)=>{
+  const k = e.target && e.target.dataset ? e.target.dataset.notamIssuer : undefined;
+  if (k === undefined) return;
+  const set = notamFilters[notamTab].issuers;
+  if (e.target.checked) set.add(k); else set.delete(k);
+  renderNotamList();
+});
+$('#notamIssuerAll').addEventListener('click', ()=>{
+  $$('#notamIssuerList input[data-notam-issuer]').forEach(c => notamFilters[notamTab].issuers.add(c.dataset.notamIssuer));
+  renderNotamList();
+});
+$('#notamIssuerNone').addEventListener('click', ()=>{
+  $$('#notamIssuerList input[data-notam-issuer]').forEach(c => notamFilters[notamTab].issuers.delete(c.dataset.notamIssuer));
+  renderNotamList();
+});
+$('#notamIssuerDefault').addEventListener('click', ()=>{
+  notamFilters[notamTab].issuers = new Set(NOTAM_ISSUER_DEFAULT);
   renderNotamList();
 });
 $('#btnConnectNotamUrl').addEventListener('click', ()=>{
