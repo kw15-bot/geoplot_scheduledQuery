@@ -81,7 +81,9 @@ def _derive(key, salt=SALT, iters=ITER):
 def encrypt_bytes(data, key):
     from cryptography.hazmat.primitives.ciphers.aead import AESGCM
     k = _derive(key)
-    gz = gzip.compress(data, compresslevel=9, mtime=0)
+    gz = bytearray(gzip.compress(data, compresslevel=9, mtime=0))
+    gz[9] = 3      # ヘッダの OS 欄を Unix(3) に固定(Python 3.13 から 255 になり、同じ中身でも暗号文が変わるため)
+    gz = bytes(gz)
     iv = hmac.new(k[32:], gz, hashlib.sha256).digest()[:12]
     ct = AESGCM(k[:32]).encrypt(iv, gz, None)
     b64 = lambda b: base64.b64encode(b).decode("ascii")
