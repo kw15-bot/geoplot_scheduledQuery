@@ -677,7 +677,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <div class="btn-row" id="notamBulkVisRow" style="margin-top:0;margin-bottom:8px;">
         <button class="btn small ghost" id="notamBtnBulkShow">このタブを全て表示</button>
         <button class="btn small ghost" id="notamBtnBulkHide">このタブを全て非表示</button>
-        <!-- Archiveタブだけ(v3.3.0): 選んだ日(UTC)に有効だったものだけを出す -->
+        <!-- Archive・Allタブ(v3.3.0、v3.6.0〜All): 選んだ日(UTC)に有効だったものだけを出す -->
         <span class="notam-date-wrap" id="notamDateWrap" style="display:none;">
           <button class="btn small ghost" id="notamBtnDate">日付選択</button>
           <button class="btn small ghost" id="notamBtnDateClear" style="display:none;" title="日付の絞り込みを解除">✕</button>
@@ -849,7 +849,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v3.5.1';
+const APP_VERSION = 'v3.6.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -906,6 +906,7 @@ const APP_VERSION = 'v3.5.1';
 // v3.5.0: ビューアに出すのは発行元が北京(ZBBBYNYX)・BY CHINA・台北(RCTPYNYX)と、発行元なし(貼り付け取り込み)だけ。
 //         それ以外(マニラ・オークランド・香港・BY KOREA 等)は読み込み時に除く(一覧・地図・NAVWARの参考レイヤー・通知すべて)。
 // v3.5.1: 発行元なし(貼り付け取り込みの31件)は北京(ZBBBYNYX)として扱う(ユーザー指定)。
+// v3.6.0: NOTAMのAllタブにも日付選択(カレンダー)を付けた。選択はArchiveタブとは別。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3689,7 +3690,7 @@ const NOTAM_ARCHIVE_START_MONTH = '2026-01';
 // FIRの絞り込み。'' = すべて、それ以外の値 = そのFIRだけ。全タブに出す(v2.8.0〜)。
 // v3.2.0〜 FIR・発行元の絞り込みはタブごとに別々(notamFilters[tab])。地図では、各NOTAMにその状態のタブ
 // (Active/Upcoming/Archive)の絞り込みを使う。Allタブを開いている間だけ、地図もAllタブの絞り込みに従う。
-// dates: 日付の絞り込み('YYYY-MM-DD'(UTC)の Set。空なら絞り込まない。Archiveタブだけで使う、v3.3.0〜)
+// dates: 日付の絞り込み('YYYY-MM-DD'(UTC)の Set。空なら絞り込まない。Archive・Allタブで使う、v3.3.0〜・Allはv3.6.0〜)
 function notamNewTabFilter(){ return { fir: '', issuers: new Set(NOTAM_ISSUER_DEFAULT), dates: new Set() }; }
 function notamFirFilterActive(){ return true; }
 function notamFirMatches(f, val){ return !val || notamFirTokens(f).includes(val); }
@@ -4251,6 +4252,7 @@ $$('#notamValidityTabs .tab-btn').forEach(btn=>{
   btn.addEventListener('click', ()=>{
     notamTab = btn.dataset.tab;
     $$('#notamValidityTabs .tab-btn').forEach(b=> b.classList.toggle('active', b===btn));
+    $('#notamCal').hidden = true;   // 日付の選択はタブごとなので、開いていたカレンダーは閉じる
     renderNotamList();
   });
 });
@@ -4273,11 +4275,13 @@ $('#notamIssuerNone').addEventListener('click', ()=>{
   $$('#notamIssuerList input[data-notam-issuer]').forEach(c => notamFilters[notamTab].issuers.delete(c.dataset.notamIssuer));
   renderNotamList();
 });
-// ---- Archiveタブの日付選択(v3.3.0、v3.4.0〜複数日) ----
-// 選んだ日(UTC、'YYYY-MM-DD'。notamFilters.archive.dates)のどれかに一部でも有効だったもの
+// ---- Archive・Allタブの日付選択(v3.3.0、v3.4.0〜複数日、v3.6.0〜Allタブにも) ----
+// 日付の選択はタブごとに別々(notamFilters[tab].dates)。カレンダーは開いているタブ(notamTab)のものを扱う。
+// 選んだ日(UTC、'YYYY-MM-DD'。notamFilters[tab].dates)のどれかに一部でも有効だったもの
 // (開始 < その日の終わり かつ 終了 > その日の始め)だけを出す。終了は取消・置換で打ち切られた時刻(valid_end)。
 // 開始・終了が無ければその側は無制限とみなす。
 // 操作: 日をクリックすると足す/外す。押したままなぞると、押した日からの範囲をまとめて足す(押した日が選択済みなら外す)。
+function notamTabHasDates(tab){ return tab === 'archive' || tab === 'all'; }
 let notamCalMonth = null;   // カレンダーに出している月 'YYYY-MM'
 let notamCalDrag = null;    // { anchor, add, base:Set, last }
 let notamCalIgnoreScrollUntil = 0;
@@ -4300,8 +4304,8 @@ function renderNotamCalendar(){
   const [y, m] = notamCalMonth.split('-').map(Number);
   const first = Date.UTC(y, m - 1, 1), days = new Date(Date.UTC(y, m, 0)).getUTCDate();
   const lead = (new Date(first).getUTCDay() + 6) % 7;      // 月曜始まり
-  // その日に有効だったArchiveのNOTAMが(今の FIR・発行元の絞り込みで)1件も無い日は薄く出す
-  const items = notamFeaturesForTab('archive').filter(f => notamPassesFilter(f, 'archive', true));
+  // その日に有効だったNOTAM(今のタブ、今の FIR・発行元の絞り込み)が1件も無い日は薄く出す
+  const items = notamFeaturesForTab(notamTab).filter(f => notamPassesFilter(f, notamTab, true));
   const monthName = new Date(first).toLocaleString('en-US', { month:'long', timeZone:'UTC' });
   let html = `<div class="notam-cal-head"><button type="button" data-cal-nav="-1" aria-label="前の月">‹</button>`
     + `<span class="m">${monthName} ${y}</span><button type="button" data-cal-nav="1" aria-label="次の月">›</button></div>`
@@ -4322,7 +4326,7 @@ function renderNotamCalendar(){
 }
 // 選択の見た目だけを塗り直す(ドラッグ中は要素を作り直さない。作り直すとポインタの追跡が切れるため)
 function paintNotamCalendar(){
-  const sel = notamFilters.archive.dates;
+  const sel = notamFilters[notamTab].dates;
   $$('#notamCal [data-cal-day]').forEach(el => {
     const day = el.dataset.calDay, on = sel.has(day), dow = Number(el.parentNode.dataset.dow);
     el.classList.toggle('sel', on);
@@ -4341,12 +4345,13 @@ function notamDatesLabel(dates){
   return `日付: ${d.length}日分`;
 }
 function syncNotamDateUi(){
-  const sel = notamFilters.archive.dates;
-  $('#notamDateWrap').style.display = notamTab === 'archive' ? 'inline-flex' : 'none';
+  const sel = notamFilters[notamTab].dates;
+  const on = notamTabHasDates(notamTab);
+  $('#notamDateWrap').style.display = on ? 'inline-flex' : 'none';
   $('#notamBtnDate').textContent = notamDatesLabel(sel);
   $('#notamBtnDate').title = [...sel].sort().join(', ');
   $('#notamBtnDateClear').style.display = sel.size ? '' : 'none';
-  if (notamTab !== 'archive') $('#notamCal').hidden = true;
+  if (!on) $('#notamCal').hidden = true;
 }
 // 選択が変わったら一覧・地図を作り直す(カレンダーは開いたまま。一覧が短くなってパネルがスクロールしても閉じない)
 function applyNotamArchiveDates(){
@@ -4358,7 +4363,7 @@ $('#notamBtnDate').addEventListener('click', (e)=>{
   e.stopPropagation();
   const cal = $('#notamCal');
   if (!cal.hidden){ cal.hidden = true; return; }
-  const sel = [...notamFilters.archive.dates].sort();
+  const sel = [...notamFilters[notamTab].dates].sort();
   notamCalMonth = (sel.length ? sel[sel.length - 1] : notamUtcDay(Date.now())).slice(0, 7);
   renderNotamCalendar();
   // パネルはスクロール領域で、はみ出すと切れるので、ボタンの下に画面基準(fixed)で出す
@@ -4367,7 +4372,7 @@ $('#notamBtnDate').addEventListener('click', (e)=>{
   cal.style.left = `${Math.max(8, Math.min(r.left, window.innerWidth - 288))}px`;
   cal.hidden = false;
 });
-$('#notamBtnDateClear').addEventListener('click', ()=>{ notamFilters.archive.dates = new Set(); applyNotamArchiveDates(); });
+$('#notamBtnDateClear').addEventListener('click', ()=>{ notamFilters[notamTab].dates = new Set(); applyNotamArchiveDates(); });
 $('#notamCal').addEventListener('click', (e)=>{
   e.stopPropagation();
   const t = e.target.closest('[data-cal-nav],[data-cal-clear]');
@@ -4377,7 +4382,7 @@ $('#notamCal').addEventListener('click', (e)=>{
     notamCalMonth = new Date(Date.UTC(y, m - 1 + Number(t.dataset.calNav), 1)).toISOString().slice(0, 7);
     renderNotamCalendar();
   } else {
-    notamFilters.archive.dates = new Set();
+    notamFilters[notamTab].dates = new Set();
     applyNotamArchiveDates();
   }
 });
@@ -4393,14 +4398,14 @@ function notamCalDragTo(day){
   g.last = day;
   const next = new Set(g.base);
   notamDayRange(g.anchor, day).forEach(d => g.add ? next.add(d) : next.delete(d));
-  notamFilters.archive.dates = next;
+  notamFilters[notamTab].dates = next;
   paintNotamCalendar();
 }
 $('#notamCal').addEventListener('pointerdown', (e)=>{
   const t = e.target.closest('[data-cal-day]');
   if (!t || e.button > 0) return;
   e.preventDefault();
-  const day = t.dataset.calDay, base = new Set(notamFilters.archive.dates);
+  const day = t.dataset.calDay, base = new Set(notamFilters[notamTab].dates);
   notamCalDrag = { anchor: day, add: !base.has(day), base, last: null };
   notamCalDragTo(day);
   try { $('#notamCal').setPointerCapture(e.pointerId); } catch (_) {}
