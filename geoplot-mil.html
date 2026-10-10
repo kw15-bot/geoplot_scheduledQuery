@@ -162,7 +162,13 @@ body{
 .notam-cal-head button:hover{background:var(--panel-alt);}
 .notam-cal-grid{display:grid;grid-template-columns:repeat(7,1fr);row-gap:2px;text-align:center;}
 .notam-cal-grid .wd{font-size:10.5px;color:var(--text-faint);padding:4px 0;}
-.notam-cal-grid .d{font-size:12.5px;color:var(--text);height:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:50%;margin:0 2px;}
+.notam-cal-grid{user-select:none;-webkit-user-select:none;touch-action:none;}
+.notam-cal-grid .c{padding:0;}
+/* 続けて選んだ日は、参考UIのように薄い帯でつなぐ(同じ週の行の中だけ) */
+.notam-cal-grid .c.bl{background:linear-gradient(to right, rgba(138,148,163,.22) 50%, transparent 50%);}
+.notam-cal-grid .c.br{background:linear-gradient(to left, rgba(138,148,163,.22) 50%, transparent 50%);}
+.notam-cal-grid .c.bl.br{background:rgba(138,148,163,.22);}
+.notam-cal-grid .d{font-size:12.5px;color:var(--text);height:32px;width:32px;margin:0 auto;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:50%;}
 .notam-cal-grid .d.sat{color:#8fa8d8;}
 .notam-cal-grid .d.sun{color:#e46a6a;}
 .notam-cal-grid .d.none{opacity:.35;}
@@ -843,7 +849,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v3.3.0';
+const APP_VERSION = 'v3.4.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -896,6 +902,7 @@ const APP_VERSION = 'v3.3.0';
 //         FIR・発行元の絞り込みは状態のタブ(Active/Upcoming/Archive/All)ごとに別々に持つ(他のタブに効かない)。
 // v3.3.0: Archiveタブに「日付選択」(カレンダー)を追加。選んだ日(UTC)に有効だったNOTAMだけを一覧・地図に出す。
 //         発行元の絞り込みの「(n/m)」表示と「既定に戻す」ボタンを削除。
+// v3.4.0: 日付選択を複数日に(クリックで1日ずつ足す/外す、ドラッグで範囲)。選んだどれかの日に有効だったものを出す。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3679,8 +3686,8 @@ const NOTAM_ARCHIVE_START_MONTH = '2026-01';
 // FIRの絞り込み。'' = すべて、それ以外の値 = そのFIRだけ。全タブに出す(v2.8.0〜)。
 // v3.2.0〜 FIR・発行元の絞り込みはタブごとに別々(notamFilters[tab])。地図では、各NOTAMにその状態のタブ
 // (Active/Upcoming/Archive)の絞り込みを使う。Allタブを開いている間だけ、地図もAllタブの絞り込みに従う。
-// date: 日付の絞り込み('YYYY-MM-DD'、UTC。Archiveタブだけで使う、v3.3.0)
-function notamNewTabFilter(){ return { fir: '', issuers: new Set(NOTAM_ISSUER_DEFAULT), date: '' }; }
+// dates: 日付の絞り込み('YYYY-MM-DD'(UTC)の Set。空なら絞り込まない。Archiveタブだけで使う、v3.3.0〜)
+function notamNewTabFilter(){ return { fir: '', issuers: new Set(NOTAM_ISSUER_DEFAULT), dates: new Set() }; }
 function notamFirFilterActive(){ return true; }
 function notamFirMatches(f, val){ return !val || notamFirTokens(f).includes(val); }
 // 発行元の絞り込み(v3.0.0、v3.2.0〜チェックボックスで複数選択)。値は notamIssuerKey(): 本文に BY <国名> があれば
@@ -3777,7 +3784,7 @@ function notamPassesFilter(f, tab, ignoreDate){
   if (!notamHasRealPolygon(f)) return false;
   if (notamFirFilterActive() && !notamFirMatches(f, notamFilters[tab].fir)) return false;
   if (!notamIssuerMatches(f, tab)) return false;
-  if (!ignoreDate && notamFilters[tab].date && !notamValidOnDate(f, notamFilters[tab].date)) return false;
+  if (!ignoreDate && notamFilters[tab].dates.size && !notamValidOnDates(f, notamFilters[tab].dates)) return false;
   return true;
 }
 // 航行警報側のupdateBureauFilterOptions()と同じ考え方: 今スコープにある値だけを選択肢にする。
@@ -4046,7 +4053,7 @@ function renderNotamList(){
   syncNotamDateUi();
   if (notamFirFilterActive()) tf.fir = updateNotamFirFilterOptions($('#notamFirFilter'), polyItemsInTab, tf.fir);
   updateNotamIssuerFilterOptions(polyItemsInTab.filter(f => (f.properties || {}).classification !== 'DOM'
-    && (!notamFirFilterActive() || notamFirMatches(f, tf.fir)) && (!tf.date || notamValidOnDate(f, tf.date))), tf.issuers);
+    && (!notamFirFilterActive() || notamFirMatches(f, tf.fir)) && (!tf.dates.size || notamValidOnDates(f, tf.dates))), tf.issuers);
 
   const items = notamFeaturesForTab(notamTab).filter(f => notamPassesFilter(f, notamTab))
     .sort((a,b) => ((b.properties||{}).valid_start||'').localeCompare((a.properties||{}).valid_start||''));
@@ -4219,7 +4226,7 @@ function selectNotamInPanel(f){
     $$('#notamValidityTabs .tab-btn').forEach(b=> b.classList.toggle('active', b.dataset.tab === targetTab));
     const tf = notamFilters[targetTab];
     if (!notamFirMatches(f, tf.fir)) tf.fir = '';
-    if (tf.date && !notamValidOnDate(f, tf.date)) tf.date = '';
+    if (tf.dates.size && !notamValidOnDates(f, tf.dates)) tf.dates = new Set();
     if (!notamIssuerMatches(f, targetTab)) tf.issuers.add(notamIssuerKey(f.properties || {}));
     renderNotamList();
   }
@@ -4257,19 +4264,30 @@ $('#notamIssuerNone').addEventListener('click', ()=>{
   $$('#notamIssuerList input[data-notam-issuer]').forEach(c => notamFilters[notamTab].issuers.delete(c.dataset.notamIssuer));
   renderNotamList();
 });
-// ---- Archiveタブの日付選択(v3.3.0) ----
-// 選んだ日(UTC、'YYYY-MM-DD')に一部でも有効だったもの(開始 < その日の終わり かつ 終了 > その日の始め)だけを出す。
-// 終了は取消・置換で打ち切られた時刻(valid_end)。開始・終了が無ければその側は無制限とみなす。
+// ---- Archiveタブの日付選択(v3.3.0、v3.4.0〜複数日) ----
+// 選んだ日(UTC、'YYYY-MM-DD'。notamFilters.archive.dates)のどれかに一部でも有効だったもの
+// (開始 < その日の終わり かつ 終了 > その日の始め)だけを出す。終了は取消・置換で打ち切られた時刻(valid_end)。
+// 開始・終了が無ければその側は無制限とみなす。
+// 操作: 日をクリックすると足す/外す。押したままなぞると、押した日からの範囲をまとめて足す(押した日が選択済みなら外す)。
 let notamCalMonth = null;   // カレンダーに出している月 'YYYY-MM'
+let notamCalDrag = null;    // { anchor, add, base:Set, last }
+let notamCalIgnoreScrollUntil = 0;
 function notamValidOnDate(f, day){
   const p = f.properties || {};
   const d0 = Date.parse(day + 'T00:00:00Z'), d1 = d0 + 86400000;
   const s = Date.parse(p.valid_start || ''), e = Date.parse(p.valid_end || '');
   return (isNaN(s) || s < d1) && (isNaN(e) || e > d0);
 }
+function notamValidOnDates(f, dates){ for (const d of dates) if (notamValidOnDate(f, d)) return true; return false; }
 function notamUtcDay(t){ return new Date(t).toISOString().slice(0, 10); }
+function notamDayShift(day, n){ return notamUtcDay(Date.parse(day + 'T00:00:00Z') + n * 86400000); }
+function notamDayRange(a, b){
+  if (a > b) [a, b] = [b, a];
+  const out = [];
+  for (let d = a; d <= b; d = notamDayShift(d, 1)) out.push(d);
+  return out;
+}
 function renderNotamCalendar(){
-  const sel = notamFilters.archive.date;
   const [y, m] = notamCalMonth.split('-').map(Number);
   const first = Date.UTC(y, m - 1, 1), days = new Date(Date.UTC(y, m, 0)).getUTCDate();
   const lead = (new Date(first).getUTCDay() + 6) % 7;      // 月曜始まり
@@ -4285,30 +4303,54 @@ function renderNotamCalendar(){
     const day = `${notamCalMonth}-${String(d).padStart(2, '0')}`;
     const dow = (lead + d - 1) % 7;
     const n = items.filter(f => notamValidOnDate(f, day)).length;
-    const cls = ['d', dow === 5 ? 'sat' : dow === 6 ? 'sun' : '', day === sel ? 'sel' : '', day === today ? 'today' : '', n ? '' : 'none'].filter(Boolean).join(' ');
-    html += `<div class="${cls}" data-cal-day="${day}" title="${day}（${n}件）">${d}</div>`;
+    const cls = ['d', dow === 5 ? 'sat' : dow === 6 ? 'sun' : '', day === today ? 'today' : '', n ? '' : 'none'].filter(Boolean).join(' ');
+    html += `<div class="c" data-dow="${dow}"><div class="${cls}" data-cal-day="${day}" title="${day}（${n}件）">${d}</div></div>`;
   }
-  html += '</div><div class="notam-cal-foot"><span>日付はUTC</span>'
-    + (sel ? '<button class="btn small ghost" type="button" data-cal-clear="1">解除</button>' : '') + '</div>';
+  html += '</div><div class="notam-cal-foot"><span>日付はUTC・ドラッグで範囲</span>'
+    + '<button class="btn small ghost" type="button" data-cal-clear="1" id="notamCalClear">解除</button></div>';
   $('#notamCal').innerHTML = html;
+  paintNotamCalendar();
+}
+// 選択の見た目だけを塗り直す(ドラッグ中は要素を作り直さない。作り直すとポインタの追跡が切れるため)
+function paintNotamCalendar(){
+  const sel = notamFilters.archive.dates;
+  $$('#notamCal [data-cal-day]').forEach(el => {
+    const day = el.dataset.calDay, on = sel.has(day), dow = Number(el.parentNode.dataset.dow);
+    el.classList.toggle('sel', on);
+    el.parentNode.classList.toggle('bl', on && dow > 0 && sel.has(notamDayShift(day, -1)));
+    el.parentNode.classList.toggle('br', on && dow < 6 && sel.has(notamDayShift(day, 1)));
+  });
+  const clr = $('#notamCalClear');
+  if (clr) clr.style.visibility = sel.size ? 'visible' : 'hidden';
+}
+// ボタンの表示: 1日なら「日付: 2026-10-05」、続いた範囲なら「日付: 2026-10-05〜10-07」、飛び飛びなら「日付: 3日分」
+function notamDatesLabel(dates){
+  const d = [...dates].sort();
+  if (!d.length) return '日付選択';
+  if (d.length === 1) return `日付: ${d[0]}`;
+  if (notamDayRange(d[0], d[d.length - 1]).length === d.length) return `日付: ${d[0]}〜${d[d.length - 1].slice(5)}`;
+  return `日付: ${d.length}日分`;
 }
 function syncNotamDateUi(){
-  const sel = notamFilters.archive.date;
+  const sel = notamFilters.archive.dates;
   $('#notamDateWrap').style.display = notamTab === 'archive' ? 'inline-flex' : 'none';
-  $('#notamBtnDate').textContent = sel ? `日付: ${sel}` : '日付選択';
-  $('#notamBtnDateClear').style.display = sel ? '' : 'none';
+  $('#notamBtnDate').textContent = notamDatesLabel(sel);
+  $('#notamBtnDate').title = [...sel].sort().join(', ');
+  $('#notamBtnDateClear').style.display = sel.size ? '' : 'none';
   if (notamTab !== 'archive') $('#notamCal').hidden = true;
 }
-function setNotamArchiveDate(day){
-  notamFilters.archive.date = day || '';
-  $('#notamCal').hidden = true;
+// 選択が変わったら一覧・地図を作り直す(カレンダーは開いたまま。一覧が短くなってパネルがスクロールしても閉じない)
+function applyNotamArchiveDates(){
+  notamCalIgnoreScrollUntil = Date.now() + 600;
   renderNotamList();
+  paintNotamCalendar();
 }
 $('#notamBtnDate').addEventListener('click', (e)=>{
   e.stopPropagation();
   const cal = $('#notamCal');
   if (!cal.hidden){ cal.hidden = true; return; }
-  notamCalMonth = (notamFilters.archive.date || notamUtcDay(Date.now())).slice(0, 7);
+  const sel = [...notamFilters.archive.dates].sort();
+  notamCalMonth = (sel.length ? sel[sel.length - 1] : notamUtcDay(Date.now())).slice(0, 7);
   renderNotamCalendar();
   // パネルはスクロール領域で、はみ出すと切れるので、ボタンの下に画面基準(fixed)で出す
   const r = e.currentTarget.getBoundingClientRect();
@@ -4316,25 +4358,58 @@ $('#notamBtnDate').addEventListener('click', (e)=>{
   cal.style.left = `${Math.max(8, Math.min(r.left, window.innerWidth - 288))}px`;
   cal.hidden = false;
 });
-$('#notamBtnDateClear').addEventListener('click', ()=> setNotamArchiveDate(''));
+$('#notamBtnDateClear').addEventListener('click', ()=>{ notamFilters.archive.dates = new Set(); applyNotamArchiveDates(); });
 $('#notamCal').addEventListener('click', (e)=>{
   e.stopPropagation();
-  const t = e.target.closest('[data-cal-nav],[data-cal-day],[data-cal-clear]');
+  const t = e.target.closest('[data-cal-nav],[data-cal-clear]');
   if (!t) return;
   if (t.dataset.calNav){
     const [y, m] = notamCalMonth.split('-').map(Number);
     notamCalMonth = new Date(Date.UTC(y, m - 1 + Number(t.dataset.calNav), 1)).toISOString().slice(0, 7);
     renderNotamCalendar();
-  } else if (t.dataset.calDay){
-    setNotamArchiveDate(t.dataset.calDay);
   } else {
-    setNotamArchiveDate('');
+    notamFilters.archive.dates = new Set();
+    applyNotamArchiveDates();
   }
 });
+// クリック・ドラッグでの選択(マウス・タッチ・ペン共通の Pointer Events)
+function notamCalDayAt(x, y){
+  const el = document.elementFromPoint(x, y);
+  const d = el && el.closest && el.closest('#notamCal [data-cal-day]');
+  return d ? d.dataset.calDay : null;
+}
+function notamCalDragTo(day){
+  const g = notamCalDrag;
+  if (!g || !day || day === g.last) return;
+  g.last = day;
+  const next = new Set(g.base);
+  notamDayRange(g.anchor, day).forEach(d => g.add ? next.add(d) : next.delete(d));
+  notamFilters.archive.dates = next;
+  paintNotamCalendar();
+}
+$('#notamCal').addEventListener('pointerdown', (e)=>{
+  const t = e.target.closest('[data-cal-day]');
+  if (!t || e.button > 0) return;
+  e.preventDefault();
+  const day = t.dataset.calDay, base = new Set(notamFilters.archive.dates);
+  notamCalDrag = { anchor: day, add: !base.has(day), base, last: null };
+  notamCalDragTo(day);
+  try { $('#notamCal').setPointerCapture(e.pointerId); } catch (_) {}
+});
+$('#notamCal').addEventListener('pointermove', (e)=>{
+  if (notamCalDrag) notamCalDragTo(notamCalDayAt(e.clientX, e.clientY));
+});
+function endNotamCalDrag(){
+  if (!notamCalDrag) return;
+  notamCalDrag = null;
+  applyNotamArchiveDates();
+}
+$('#notamCal').addEventListener('pointerup', endNotamCalDrag);
+$('#notamCal').addEventListener('pointercancel', endNotamCalDrag);
 document.addEventListener('click', (e)=>{ if (!e.target.closest('#notamDateWrap')) $('#notamCal').hidden = true; });
 document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') $('#notamCal').hidden = true; });
 // 画面基準で出しているので、パネルのスクロールや画面サイズの変更で位置がずれたら閉じる
-document.addEventListener('scroll', ()=>{ $('#notamCal').hidden = true; }, true);
+document.addEventListener('scroll', ()=>{ if (Date.now() > notamCalIgnoreScrollUntil) $('#notamCal').hidden = true; }, true);
 window.addEventListener('resize', ()=>{ $('#notamCal').hidden = true; });
 $('#btnConnectNotamUrl').addEventListener('click', ()=>{
   const url = $('#notamUrlInput').value.trim();
