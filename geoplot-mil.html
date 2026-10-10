@@ -849,7 +849,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v3.4.0';
+const APP_VERSION = 'v3.5.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -903,6 +903,8 @@ const APP_VERSION = 'v3.4.0';
 // v3.3.0: Archiveタブに「日付選択」(カレンダー)を追加。選んだ日(UTC)に有効だったNOTAMだけを一覧・地図に出す。
 //         発行元の絞り込みの「(n/m)」表示と「既定に戻す」ボタンを削除。
 // v3.4.0: 日付選択を複数日に(クリックで1日ずつ足す/外す、ドラッグで範囲)。選んだどれかの日に有効だったものを出す。
+// v3.5.0: ビューアに出すのは発行元が北京(ZBBBYNYX)・BY CHINA・台北(RCTPYNYX)と、発行元なし(貼り付け取り込み)だけ。
+//         それ以外(マニラ・オークランド・香港・BY KOREA 等)は読み込み時に除く(一覧・地図・NAVWARの参考レイヤー・通知すべて)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3694,6 +3696,11 @@ function notamFirMatches(f, val){ return !val || notamFirTokens(f).includes(val)
 // 'BY:<国名>'、無ければ issuer('' = 発行元なし、貼り付け取り込み分)。チェックの入った発行元だけを一覧・地図に出す。
 // 既定は北京(ZBBBYNYX)と BY CHINA だけ(ユーザー判断。北京発行でも本文が BY KOREA なら 'BY:KOREA' で既定は外れる)。
 const NOTAM_ISSUER_DEFAULT = ['ZBBBYNYX', 'BY:CHINA'];
+// ビューアに出す発行元(v3.5.0、ユーザー指定)。'' = 発行元なし(提供を受けて貼り付け取り込みした分)。
+// 判定は notamIssuerKey() と同じ(本文の BY <国名> を優先)。例: マニラFIRでも北京発行・BY CHINA なら出る。
+// 北京発行でも本文が BY KOREA のものは「韓国」なので出ない。
+const NOTAM_ISSUER_ALLOWED = new Set(['ZBBBYNYX', 'BY:CHINA', 'RCTPYNYX', '']);
+function notamIssuerAllowed(f){ return NOTAM_ISSUER_ALLOWED.has(notamIssuerKey(f.properties || {})); }
 const notamFilters = { active: notamNewTabFilter(), upcoming: notamNewTabFilter(), archive: notamNewTabFilter(), all: notamNewTabFilter() };
 function notamIssuerKey(p){ const by = notamByCountry(p); return by ? 'BY:' + by : (p.issuer || ''); }
 function notamIssuerMatches(f, tab){ return notamFilters[tab].issuers.has(notamIssuerKey(f.properties || {})); }
@@ -4145,7 +4152,7 @@ function updateNotamConnectionUI(){
 async function rereadNotamUrl(){
   if (!connectedNotamUrl) return;
   const gj = JSON.parse(await fetchDataText(connectedNotamUrl));
-  notamActiveFeatures = notamDedupe(gj.features || []);
+  notamActiveFeatures = notamDedupe(gj.features || []).filter(notamIssuerAllowed);
   registerNotamsForNotifications(notamActiveFeatures);
   renderNotamList();
   updateNotamConnectionUI();
@@ -4191,7 +4198,7 @@ async function loadAllNotamArchives(){
       try { text = await fetchDataText(notamArchiveUrl(month)); }
       catch (e) { if (e.status === 404) return { month, features: null }; throw e; }
       const gj = JSON.parse(text);
-      const features = notamDedupe(gj.features || []);
+      const features = notamDedupe(gj.features || []).filter(notamIssuerAllowed);
       features.forEach(f => { f._notamArchive = true; });
       return { month, features };
     }catch(e){
