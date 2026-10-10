@@ -755,7 +755,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
           </div>
         </div>
         <div class="layer-row" data-modes="notam">
-          <label class="check-row"><input type="checkbox" id="layer-routes" data-overlay="routes"> 航空路（中国）</label>
+          <label class="check-row"><input type="checkbox" id="layer-routes" data-overlay="routes" checked> 航空路（中国）</label>
           <div class="layer-note err" id="layerNote-routes" hidden></div>
         </div>
         <div class="layer-row" data-modes="notam">
@@ -849,7 +849,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v3.6.0';
+const APP_VERSION = 'v3.7.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -907,6 +907,7 @@ const APP_VERSION = 'v3.6.0';
 //         それ以外(マニラ・オークランド・香港・BY KOREA 等)は読み込み時に除く(一覧・地図・NAVWARの参考レイヤー・通知すべて)。
 // v3.5.1: 発行元なし(貼り付け取り込みの31件)は北京(ZBBBYNYX)として扱う(ユーザー指定)。
 // v3.6.0: NOTAMのAllタブにも日付選択(カレンダー)を付けた。選択はArchiveタブとは別。
+// v3.7.0: NOTAMモードのレイヤー「航空路（中国）」を既定でオンに。NOTAMのPDF出力は航空路(チェックの入った参考レイヤー)が描かれるのを待ってから地図を撮る。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -1884,12 +1885,13 @@ function currentMapMode(){
   const app = $('#mainApp');
   return app.classList.contains('mode-notam') ? 'notam' : app.classList.contains('mode-manual') ? 'manual' : 'auto';
 }
+// 読み込み・載せ直しが終わると解決する Promise を返す(PDF出力が、航空路が描かれるのを待ってから地図を撮るため)
 function syncOverlayLayers(force){
   const mode = currentMapMode();
   // パネルは今のモードで使える行だけ出す
   $$('#layerPanel .layer-row').forEach(r => { r.hidden = !r.dataset.modes.split(' ').includes(mode); });
   const wanted = OVERLAYS.filter(o => o.modes.includes(mode) && $(`#layer-${o.id}`).checked);
-  Promise.all(wanted.map(o => loadOverlay(o).catch(() => null))).then(() => {
+  return Promise.all(wanted.map(o => loadOverlay(o).catch(() => null))).then(() => {
     const nowMode = currentMapMode();
     const show = OVERLAYS.filter(o => o.modes.includes(nowMode) && $(`#layer-${o.id}`).checked && o.layer.getLayers().length);
     const same = OVERLAYS.every(o => map.hasLayer(o.layer) === show.includes(o));
@@ -2476,6 +2478,9 @@ async function generatePdf(){
       if (!msaLayer.hasLayer(s)){ msaLayer.addLayer(s); added.push([msaLayer, s]); }
     });
   } else if (isNotam){
+    // 参考レイヤー(航空路など、チェックの入っているもの)を読み込み・載せ終えてから撮る(v3.7.0)。
+    // 先に載せておけば、下の対象1件はそのあとに描くので参考レイヤーの上に出る(同じcanvasは後から載せたものが上)。
+    await syncOverlayLayers();
     // NOTAMレイヤーは1つのL.geoJSONで描画しているので、図形単位で抜き差しせず、
     // 対象1件だけを航行警報側と同じActive色で一時的に描き直す(終了後にrebuildNotamMapLayer()で元に戻す)。
     const activeColor = statusColor('active');
