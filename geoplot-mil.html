@@ -857,7 +857,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v3.8.2';
+const APP_VERSION = 'v3.8.3';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -921,6 +921,7 @@ const APP_VERSION = 'v3.8.2';
 //         「このタブを全て表示/非表示」の文言を「全表示/全非表示」に縮めて、日付選択と1列に収めた。
 // v3.8.1: 表示中をPDFの対象を「今の地図の範囲に見えているもの」だけに。体裁を単体PDFと同じに(表題 航行警報海域/NOTAM → 本文を横線で区切って並べる → 地図)。
 // v3.8.2: 表示中をPDFでは、地図に描かれている図形を状態によらず全部赤(Activeの色)で撮る。撮り終えたら元の色に戻す。
+// v3.8.3: 表示中をPDFの地図から、図形の上の番号ラベルを消した(単体PDFと同じ)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -2602,7 +2603,7 @@ $('#btnPdfGenerate').addEventListener('click', generatePdf);
    4c. 表示中をまとめてPDF(v3.8.0、v3.8.1〜今の地図の範囲に見えているものだけ・単体PDFと同じ体裁)。
    対象: 地図に描かれているもの(カードの「地図に表示」・全表示/全非表示・日付選択・絞り込みで決まる)のうち、
    今の地図の範囲に一部でも入っているもの。範囲の外のものは入れない(確認パネルに件数だけ出す)。
-   PDF: 表題(航行警報海域 / NOTAM) → 本文を1件ずつ横線で区切って並べる → その下に今見ている範囲の地図。
+   PDF: 表題(航行警報海域 / NOTAM) → 本文を1件ずつ横線で区切って並べる → その下に今見ている範囲の地図(図形は全部赤、番号ラベルなし)。
    本文は確認パネルで直せる(単体PDFと同じ)。「-----」だけの行が区切り。
 --------------------------------------------------------------- */
 const MULTI_STATUS_LABEL = { active:'Active', notice:'Upcoming', upcoming:'Upcoming', archive:'Archive', unknown:'期間不明' };
@@ -2662,8 +2663,8 @@ async function generateMultiPdf(){
   const originalLabel = btn.textContent;
   btn.disabled = true;
   btn.textContent = '生成中...';
-  // 地図以外の浮いている部品を隠して撮る(単体PDFと同じ)。図形の番号ラベル(.poly-label)は、どれがどれか分かるよう残す
-  const toHide = ['#pdfPanel', '.map-toolbar', '.layer-control', '.readout', '.scale-note', '.measure-control', '.leaflet-control-zoom', '.leaflet-popup-pane'];
+  // 地図以外の浮いている部品と、図形の上の番号ラベル(.poly-label)を隠して撮る(単体PDFと同じ。v3.8.3〜ラベルも消す)
+  const toHide = ['#pdfPanel', '.map-toolbar', '.layer-control', '.readout', '.scale-note', '.measure-control', '.leaflet-control-zoom', '.leaflet-popup-pane', '.poly-label'];
   const hidden = toHide.map(sel => Array.from(document.querySelectorAll(sel))).flat();
   const prevDisplay = hidden.map(e => e.style.display);
   hidden.forEach(e => e.style.display = 'none');
@@ -2688,7 +2689,7 @@ async function generateMultiPdf(){
       const feats = notamDrawnFeatures();
       notamLayer.clearLayers();
       if (feats.length){
-        const g = notamShapesLayer(feats);              // 番号ラベルはそのまま付く
+        const g = notamShapesLayer(feats);              // 番号ラベルも付くが、撮るときは隠す(.poly-label)
         g.setStyle(f => ({ color: activeColor.line, weight: /LineString$/.test(f.geometry.type) ? 2.2 : 1.5,
           fillColor: activeColor.fill, fillOpacity: 0.14, opacity: 0.9 }));
         g.addTo(notamLayer);
