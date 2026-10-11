@@ -461,6 +461,17 @@ body.dark-mode .toolbar-sep{background:rgba(255,255,255,.18);}
 }
 #pdfPrintTitle{font-size:21px;font-weight:700;color:#1a1a1a;text-align:center;margin-bottom:18px;line-height:1.5;}
 #pdfPrintBody{font-size:14px;line-height:2;color:#222;white-space:pre-wrap;word-break:break-word;}
+/* 表示中をまとめてPDF(v3.8.0)の画面外の箱。#pdfPrintTemplate と同じ幅・書体 */
+.pdf-multi-box{position:fixed;top:-9999px;left:-9999px;width:700px;background:#ffffff;padding:14px 34px;font-family:var(--sans);box-sizing:border-box;color:#222;}
+.pdf-multi-box .pm-title{font-size:21px;font-weight:700;color:#1a1a1a;text-align:center;line-height:1.5;}
+.pdf-multi-box .pm-sub{font-size:12px;color:#666;text-align:center;margin-top:2px;}
+.pdf-multi-box .pm-table{width:100%;border-collapse:collapse;font-size:11.5px;line-height:1.5;}
+.pdf-multi-box .pm-table th,.pdf-multi-box .pm-table td{border:1px solid #bbb;padding:3px 6px;text-align:left;vertical-align:top;word-break:break-word;}
+.pdf-multi-box .pm-table th{background:#f0eee8;font-weight:600;}
+.pdf-multi-box .pm-table th:nth-child(1),.pdf-multi-box .pm-table td:nth-child(1),.pdf-multi-box .pm-table th:nth-child(3),.pdf-multi-box .pm-table td:nth-child(3),.pdf-multi-box .pm-table th:nth-child(4),.pdf-multi-box .pm-table td:nth-child(4){white-space:nowrap;}
+.pdf-multi-box .pm-item-title{font-size:16px;font-weight:700;color:#1a1a1a;line-height:1.5;}
+.pdf-multi-box .pm-item-meta{font-size:11.5px;color:#555;margin:2px 0 6px;line-height:1.6;}
+.pdf-multi-box .pm-item-body{font-size:13px;line-height:1.9;white-space:pre-wrap;word-break:break-word;border-top:1px solid #ddd;padding-top:6px;}
 
 .log{
   font-family:var(--mono);font-size:10.5px;color:var(--text-faint);
@@ -642,8 +653,10 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
         <button class="tab-btn" data-tab="all">All <span class="tab-n" id="tabCountAll">0</span></button>
       </div>
       <div class="btn-row" id="bulkVisRow" style="margin-top:0;margin-bottom:10px;">
-        <button class="btn small ghost" id="btnBulkShow">このタブを全て表示</button>
-        <button class="btn small ghost" id="btnBulkHide">このタブを全て非表示</button>
+        <button class="btn small ghost" id="btnBulkShow" title="このタブのものを全て地図に表示">全表示</button>
+        <button class="btn small ghost" id="btnBulkHide" title="このタブのものを全て地図から外す">全非表示</button>
+        <!-- 地図に表示中のものをまとめてPDF(v3.8.0)。中身(アイコン+文言)はJSで入れる(カードのPDF出力と同じ見た目) -->
+        <button class="btn small ghost btn-pdf" id="btnPdfVisible" title="いま地図に表示している航行警報をまとめてPDFにする">表示中をPDF</button>
       </div>
       <!-- Archive/Allタブでのみ表示。海事局ごとに件数が積み上がって見づらくなりやすいための
            絞り込み。選択肢はそれぞれのタブの対象範囲に実在する海事局だけを動的に列挙する
@@ -675,8 +688,9 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
         <button class="tab-btn" data-tab="all">All <span class="tab-n" id="notamCountAll">0</span></button>
       </div>
       <div class="btn-row" id="notamBulkVisRow" style="margin-top:0;margin-bottom:8px;">
-        <button class="btn small ghost" id="notamBtnBulkShow">このタブを全て表示</button>
-        <button class="btn small ghost" id="notamBtnBulkHide">このタブを全て非表示</button>
+        <button class="btn small ghost" id="notamBtnBulkShow" title="このタブのものを全て地図に表示">全表示</button>
+        <button class="btn small ghost" id="notamBtnBulkHide" title="このタブのものを全て地図から外す">全非表示</button>
+        <button class="btn small ghost btn-pdf" id="notamBtnPdfVisible" title="いま地図に表示しているNOTAMをまとめてPDFにする">表示中をPDF</button>
         <!-- Archive・Allタブ(v3.3.0、v3.6.0〜All): 選んだ日(UTC)に有効だったものだけを出す -->
         <span class="notam-date-wrap" id="notamDateWrap" style="display:none;">
           <button class="btn small ghost" id="notamBtnDate">日付選択</button>
@@ -849,7 +863,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v3.7.1';
+const APP_VERSION = 'v3.8.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -909,6 +923,8 @@ const APP_VERSION = 'v3.7.1';
 // v3.6.0: NOTAMのAllタブにも日付選択(カレンダー)を付けた。選択はArchiveタブとは別。
 // v3.7.0: NOTAMモードのレイヤー「航空路（中国）」を既定でオンに。NOTAMのPDF出力は航空路(チェックの入った参考レイヤー)が描かれるのを待ってから地図を撮る。
 // v3.7.1: 参考レイヤー「航空路（中国）」の線を細く(太さ 1 → 0.6)。マウスを乗せたときの反応範囲(canvas の tolerance 5)は同じ。
+// v3.8.0: 航行警報・NOTAMとも「表示中をPDF」(地図に表示中のものをまとめて1つのPDFに。1ページ目に地図+一覧、以降に本文)。
+//         「このタブを全て表示/非表示」の文言を「全表示/全非表示」に縮めて、日付選択と1列に収めた。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -2361,6 +2377,8 @@ const REF_NUM_RE = /[\u4e00-\u9fa5]{1,4}航警\d+\/\d+/;
 
 function openPdfPanel(target){
   pdfTarget = target;
+  $('#pdfPanelText').readOnly = false;          // まとめてPDF(読み取り専用の一覧)の後でも編集できるように戻す
+  $('#btnPdfGenerate').disabled = false;
   if (target.kind === 'notam'){
     // NOTAMの本文(raw_text)は先頭に番号(例: A4958/26 NOTAMN)を含むので、航行警報側のような
     // 番号の付け足しはしない。
@@ -2436,6 +2454,7 @@ async function generatePdf(){
     logLine('PDF出力に必要なライブラリを読み込めませんでした（ネットワーク接続を確認してください）', 'l-err');
     return;
   }
+  if (pdfTarget.kind === 'multi') return generateMultiPdf();
   const isAuto = pdfTarget.kind === 'auto';
   const isNotam = pdfTarget.kind === 'notam';
   const title = isAuto ? pdfTarget.item.title
@@ -2583,6 +2602,181 @@ async function generatePdf(){
   }
 }
 $('#btnPdfGenerate').addEventListener('click', generatePdf);
+/* ---------------------------------------------------------------
+   4c. 表示中をまとめてPDF(v3.8.0)。航行警報・NOTAMとも「いま地図に描かれているもの全部」が対象
+   (カードの「地図に表示」・全表示/全非表示・日付選択・FIR/発行元/海事局の絞り込みで決まる。
+   今のタブ以外の状態のものも、地図に出ていれば入る)。
+   1ページ目: 見出し + 今見ている範囲の地図(図形の番号ラベル付き) + 一覧表。
+   2ページ目以降: 1件ずつ本文(単体PDFと同じく、ブラウザで描いて画像にする。中国語のため)。
+   地図の範囲は単体PDFと同じく「今見ている範囲」。範囲外のものは確認パネルで件数を知らせる。
+--------------------------------------------------------------- */
+const MULTI_STATUS_LABEL = { active:'Active', notice:'Upcoming', upcoming:'Upcoming', archive:'Archive', unknown:'期間不明' };
+// いま地図に描かれている航行警報(地図に表示ON、かつ図形が地図のレイヤーに載っているもの)
+function msaDrawnItems(){
+  return [...warningsByUrl.values()]
+    .filter(it => it._shapes && it._shapes.some(s => msaLayer.hasLayer(s)))
+    .sort((a, b) => (b.date || '').localeCompare(a.date || ''));
+}
+function multiPdfEntries(mode){
+  if (mode === 'notam'){
+    return notamDrawnFeatures().map(f => {
+      const p = f.properties || {};
+      const issuer = notamIssuerText(p);
+      return {
+        heading: notamHeading(f), status: notamStateTab(f),
+        where: notamFirTokens(f).join(' '), period: notamPeriodUtc(p) + ' (UTC)',
+        meta: [issuer ? '発行元: ' + issuer : '', notamRevokedText(p)].filter(Boolean).join('　'),
+        body: p.raw_text || notamHeading(f),
+        bounds: () => L.geoJSON(notamForLeaflet(f)).getBounds(),
+      };
+    }).sort((a, b) => a.period.localeCompare(b.period));
+  }
+  return msaDrawnItems().map(it => {
+    const refMatch = (it.title || '').match(REF_NUM_RE);
+    return {
+      heading: it.title, status: getValidityStatus(it),
+      where: it.bureau || '', period: it.validity ? formatValidity(it.validity) : '期間不明',
+      meta: [it.date ? '発布: ' + it.date : '', it.revoked ? '撤回済み' : '', (!it.revoked && it.list_missing) ? '一覧から消失' : ''].filter(Boolean).join('　'),
+      body: it.raw_text ? (refMatch ? refMatch[0] + ',' : '') + it.raw_text : it.title,
+      bounds: () => L.featureGroup(it._shapes.filter(s => msaLayer.hasLayer(s))).getBounds(),
+    };
+  });
+}
+function openMultiPdfPanel(mode){
+  const entries = multiPdfEntries(mode);
+  const counts = {};
+  entries.forEach(e => { const k = MULTI_STATUS_LABEL[e.status] || e.status; counts[k] = (counts[k] || 0) + 1; });
+  const view = map.getBounds();
+  const outside = entries.filter(e => { try { return !view.intersects(e.bounds()); } catch (_) { return false; } }).length;
+  pdfTarget = { kind:'multi', mode, entries };
+  const label = mode === 'notam' ? 'NOTAM' : '航行警報';
+  $('#pdfPanelTitle').textContent = entries.length
+    ? `${label}: 地図に表示中の${entries.length}件をまとめてPDF（${Object.entries(counts).map(([k, n]) => `${k} ${n}`).join('・')}）`
+      + (outside ? ` ※うち${outside}件は今の地図の範囲外` : '')
+    : `${label}: 地図に表示中のものがありません`;
+  const ta = $('#pdfPanelText');
+  ta.value = entries.map(e => `${e.heading}　${e.period}`).join('\n');
+  ta.readOnly = true;
+  $('#btnPdfGenerate').disabled = !entries.length;
+  $('#pdfPanel').classList.add('show');
+}
+$('#btnPdfVisible').addEventListener('click', ()=> openMultiPdfPanel('auto'));
+$('#notamBtnPdfVisible').addEventListener('click', ()=> openMultiPdfPanel('notam'));
+[$('#btnPdfVisible'), $('#notamBtnPdfVisible')].forEach(b => { b.innerHTML = PDF_ICON_SVG + '表示中をPDF'; });
+
+// 画面外の白い箱に組んで html2canvas で画像にする(単体PDFの #pdfPrintTemplate と同じ考え方・同じ幅)
+function multiPdfBox(build){
+  const box = document.createElement('div');
+  box.className = 'pdf-multi-box';
+  build(box);
+  document.body.appendChild(box);
+  return html2canvas(box, { backgroundColor:'#ffffff', logging:false, scale:2 }).finally(() => box.remove());
+}
+function pmEl(tag, cls, text){ const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+async function generateMultiPdf(){
+  const { mode, entries } = pdfTarget;
+  const btn = $('#btnPdfGenerate');
+  const originalLabel = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = '生成中...';
+  // 地図以外の浮いている部品を隠して撮る(単体PDFと同じ)。ただし図形の番号ラベル(.poly-label)は残す
+  const toHide = ['#pdfPanel', '.map-toolbar', '.layer-control', '.readout', '.scale-note', '.measure-control', '.leaflet-control-zoom', '.leaflet-popup-pane'];
+  const hidden = toHide.map(sel => Array.from(document.querySelectorAll(sel))).flat();
+  const prevDisplay = hidden.map(e => e.style.display);
+  hidden.forEach(e => e.style.display = 'none');
+  try {
+    if (mode === 'notam') await syncOverlayLayers();     // 航空路など、チェックの入った参考レイヤーを描き終えてから撮る
+    await new Promise(resolve=>{
+      if (!map._animatingZoom && !(map._panAnim && map._panAnim._inProgress)) return resolve();
+      map.once('moveend', resolve);
+      setTimeout(resolve, 1000);
+    });
+    await new Promise(r=>setTimeout(r, 200));
+    const mapCanvas = await html2canvas($('#map'), { useCORS:true, backgroundColor:'#ffffff', logging:false, scale:2 });
+
+    const label = mode === 'notam' ? 'NOTAM' : '航行警報';
+    const now = new Date();
+    const pad = n => String(n).padStart(2, '0');
+    const stamp = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
+    const headCanvas = await multiPdfBox(box => {
+      box.appendChild(pmEl('div', 'pm-title', `${label}　地図に表示中の${entries.length}件`));
+      box.appendChild(pmEl('div', 'pm-sub', `出力 ${stamp}`));
+    });
+    const tableCanvas = await multiPdfBox(box => {
+      const t = pmEl('table', 'pm-table');
+      const hr = pmEl('tr');
+      ['No.', mode === 'notam' ? '番号' : '件名', mode === 'notam' ? 'FIR' : '海事局', '状態', mode === 'notam' ? '有効期間 (UTC)' : '有効期間']
+        .forEach(h => hr.appendChild(pmEl('th', '', h)));
+      t.appendChild(hr);
+      entries.forEach((e, i) => {
+        const tr = pmEl('tr');
+        [String(i + 1), e.heading, e.where, MULTI_STATUS_LABEL[e.status] || e.status, e.period.replace(' (UTC)', '')]
+          .forEach(v => tr.appendChild(pmEl('td', '', v)));
+        t.appendChild(tr);
+      });
+      box.appendChild(t);
+    });
+    const bodyCanvases = [];
+    for (let i = 0; i < entries.length; i++){
+      btn.textContent = `生成中... ${i + 1}/${entries.length}`;
+      const e = entries[i];
+      bodyCanvases.push(await multiPdfBox(box => {
+        box.appendChild(pmEl('div', 'pm-item-title', `${i + 1}. ${e.heading}`));
+        box.appendChild(pmEl('div', 'pm-item-meta', [e.where, MULTI_STATUS_LABEL[e.status] || e.status, '有効期間 ' + e.period, e.meta].filter(Boolean).join('　')));
+        box.appendChild(pmEl('div', 'pm-item-body', e.body));
+      }));
+    }
+
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({ orientation:'portrait', unit:'mm', format:'a4' });
+    const pageW = doc.internal.pageSize.getWidth(), pageH = doc.internal.pageSize.getHeight();
+    const margin = 16, cw = pageW - margin * 2, bottom = pageH - margin;
+    let y = margin;
+    // 幅いっぱいに置く。ページに収まらなければ次のページへ。1ページより長いものはページの高さで切って続ける
+    const place = (canvas, gap, fmt) => {
+      const pxPerMm = canvas.width / cw;
+      let srcY = 0;
+      while (srcY < canvas.height){
+        const restMm = (canvas.height - srcY) / pxPerMm;
+        if (y > margin && restMm > bottom - y && restMm <= bottom - margin){ doc.addPage(); y = margin; }
+        const takeMm = Math.min(restMm, bottom - y);
+        const takePx = Math.round(takeMm * pxPerMm);
+        const part = document.createElement('canvas');
+        part.width = canvas.width; part.height = takePx;
+        part.getContext('2d').drawImage(canvas, 0, srcY, canvas.width, takePx, 0, 0, canvas.width, takePx);
+        // PNGは圧縮して入れる(jsPDFの既定は無圧縮で、本文が数十件あると数十MBになる)
+        doc.addImage(fmt === 'JPEG' ? part.toDataURL('image/jpeg', 0.92) : part.toDataURL('image/png'), fmt || 'PNG', margin, y, cw, takeMm, undefined, 'FAST');
+        srcY += takePx; y += takeMm;
+        if (srcY < canvas.height){ doc.addPage(); y = margin; }
+      }
+      y += gap;
+    };
+    place(headCanvas, 2);
+    // 地図は1ページ目の残りの6割までに収める(一覧表を同じページに続けるため)。幅は縦横比を保って中央に
+    const mapMaxH = (bottom - y) * 0.6;
+    const mapH0 = cw * (mapCanvas.height / mapCanvas.width);
+    const mapH = Math.min(mapH0, mapMaxH), mapW = cw * (mapH / mapH0);
+    doc.addImage(mapCanvas.toDataURL('image/jpeg', 0.92), 'JPEG', margin + (cw - mapW) / 2, y, mapW, mapH);
+    y += mapH + 6;
+    place(tableCanvas, 0);
+    doc.addPage(); y = margin;
+    bodyCanvases.forEach(c => place(c, 4));
+
+    const fname = `${mode === 'notam' ? 'NOTAM' : 'NAVWAR'}_${entries.length}items_${stamp.slice(0, 10)}.pdf`;   // 英数字だけ(ブラウザによって日本語のファイル名が落ちるため)
+    doc.save(fname);
+    logLine(`PDFを生成しました: ${fname}`, 'l-ok');
+    closePdfPanel();
+  } catch(err){
+    console.error(err);
+    logLine('PDF生成に失敗しました: ' + err.message, 'l-err');
+  } finally {
+    hidden.forEach((e, i) => e.style.display = prevDisplay[i]);
+    btn.disabled = false;
+    btn.textContent = originalLabel;
+  }
+}
+
 
 /* ---------------------------------------------------------------
    5. Fetch (with CORS-proxy fallback chain) + HTML parsing
@@ -3988,13 +4182,17 @@ function notamForLeaflet(f){
   return { type:'Feature', properties: f.properties, geometry: notamUnwrapGeometry(f.geometry), _notamOrig: f._notamOrig || f };
 }
 
-function rebuildNotamMapLayer(){
-  notamLayer.clearLayers();
-  if (!notamLayerVisibleOnMap) return;
+// いま地図に描くNOTAM(まとめてPDF(v3.8.0)も同じものを使う)
+function notamDrawnFeatures(){
+  if (!notamLayerVisibleOnMap) return [];
   let feats = notamActiveFeatures.slice();
   notamArchiveFeatures.forEach(arr => { feats = feats.concat(arr); });
   const tab = notamTab === 'all' ? 'all' : null;
-  feats = feats.filter(f => f.geometry && notamPassesFilter(f, tab) && notamIsOnMap(f));
+  return feats.filter(f => f.geometry && notamPassesFilter(f, tab) && notamIsOnMap(f));
+}
+function rebuildNotamMapLayer(){
+  notamLayer.clearLayers();
+  const feats = notamDrawnFeatures();
   if (!feats.length) return;
   notamShapesLayer(feats, { panelSync: true }).addTo(notamLayer);
 }
