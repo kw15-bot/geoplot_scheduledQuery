@@ -466,6 +466,8 @@ body.dark-mode .toolbar-sep{background:rgba(255,255,255,.18);}
 .pdf-multi-box .pm-title{font-size:21px;font-weight:700;color:#1a1a1a;text-align:center;margin-bottom:18px;line-height:1.5;}
 .pdf-multi-box .pm-body{font-size:14px;line-height:2;color:#222;white-space:pre-wrap;word-break:break-word;}
 .pdf-multi-box .pm-sep{border-top:1px dashed #888;margin:10px 0;}
+/* 表示中をPDFで地図を撮っている間は図形の番号ラベルを出さない(撮る直前に描き直した図形のラベルも含めて。v3.8.4) */
+body.pdf-capturing .poly-label{display:none !important;}
 
 .log{
   font-family:var(--mono);font-size:10.5px;color:var(--text-faint);
@@ -857,7 +859,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v3.8.3';
+const APP_VERSION = 'v3.8.4';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -922,6 +924,7 @@ const APP_VERSION = 'v3.8.3';
 // v3.8.1: 表示中をPDFの対象を「今の地図の範囲に見えているもの」だけに。体裁を単体PDFと同じに(表題 航行警報海域/NOTAM → 本文を横線で区切って並べる → 地図)。
 // v3.8.2: 表示中をPDFでは、地図に描かれている図形を状態によらず全部赤(Activeの色)で撮る。撮り終えたら元の色に戻す。
 // v3.8.3: 表示中をPDFの地図から、図形の上の番号ラベルを消した(単体PDFと同じ)。
+// v3.8.4: v3.8.3 でNOTAMのラベルが消えていなかった(撮る直前に赤く描き直した図形に新しくラベルが付くため)のを修正。撮る間はページ全体のクラスで隠す。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -2683,6 +2686,8 @@ async function generateMultiPdf(){
   // 航行警報は図形ごとに今の見た目を覚えて塗り替え、終わったら戻す。NOTAMは赤で描き直し、終わったら rebuildNotamMapLayer() で戻す。
   const activeColor = statusColor('active');
   const restyled = [];
+  // NOTAMは下で赤く描き直すので、そのとき新しく付くラベルも隠れるよう、ページ全体のクラスで隠す
+  document.body.classList.add('pdf-capturing');
   try {
     if (mode === 'notam'){
       await syncOverlayLayers();     // 航空路など、チェックの入った参考レイヤーを描き終えてから撮る(赤い図形はその上に描く)
@@ -2756,6 +2761,7 @@ async function generateMultiPdf(){
     logLine('PDF生成に失敗しました: ' + err.message, 'l-err');
   } finally {
     box.remove();
+    document.body.classList.remove('pdf-capturing');
     restyled.forEach(([sh, prev]) => sh.setStyle(prev));
     if (mode === 'notam') rebuildNotamMapLayer();
     hidden.forEach((e, i) => e.style.display = prevDisplay[i]);
