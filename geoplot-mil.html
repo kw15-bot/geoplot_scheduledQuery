@@ -857,7 +857,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v3.8.1';
+const APP_VERSION = 'v3.8.2';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -920,6 +920,7 @@ const APP_VERSION = 'v3.8.1';
 // v3.8.0: 航行警報・NOTAMとも「表示中をPDF」(地図に表示中のものをまとめて1つのPDFに。1ページ目に地図+一覧、以降に本文)。
 //         「このタブを全て表示/非表示」の文言を「全表示/全非表示」に縮めて、日付選択と1列に収めた。
 // v3.8.1: 表示中をPDFの対象を「今の地図の範囲に見えているもの」だけに。体裁を単体PDFと同じに(表題 航行警報海域/NOTAM → 本文を横線で区切って並べる → 地図)。
+// v3.8.2: 表示中をPDFでは、地図に描かれている図形を状態によらず全部赤(Activeの色)で撮る。撮り終えたら元の色に戻す。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -2677,8 +2678,28 @@ async function generateMultiPdf(){
   });
   if (!bodies.length) box.appendChild(pmEl('div', 'pm-body', '(本文なし)'));
   document.body.appendChild(box);
+  // 地図に描かれている図形は、状態(Active/Upcoming/Archive)によらず全部 Active と同じ赤で撮る(v3.8.2、単体PDFと同じ考え方)。
+  // 航行警報は図形ごとに今の見た目を覚えて塗り替え、終わったら戻す。NOTAMは赤で描き直し、終わったら rebuildNotamMapLayer() で戻す。
+  const activeColor = statusColor('active');
+  const restyled = [];
   try {
-    if (mode === 'notam') await syncOverlayLayers();     // 航空路など、チェックの入った参考レイヤーを描き終えてから撮る
+    if (mode === 'notam'){
+      await syncOverlayLayers();     // 航空路など、チェックの入った参考レイヤーを描き終えてから撮る(赤い図形はその上に描く)
+      const feats = notamDrawnFeatures();
+      notamLayer.clearLayers();
+      if (feats.length){
+        const g = notamShapesLayer(feats);              // 番号ラベルはそのまま付く
+        g.setStyle(f => ({ color: activeColor.line, weight: /LineString$/.test(f.geometry.type) ? 2.2 : 1.5,
+          fillColor: activeColor.fill, fillOpacity: 0.14, opacity: 0.9 }));
+        g.addTo(notamLayer);
+      }
+    } else {
+      msaDrawnItems().forEach(it => it._shapes.forEach(sh => {
+        if (!msaLayer.hasLayer(sh) || !sh.setStyle) return;
+        restyled.push([sh, { color: sh.options.color, fillColor: sh.options.fillColor, opacity: sh.options.opacity }]);
+        sh.setStyle({ color: activeColor.line, fillColor: activeColor.fill, opacity: 0.9 });
+      }));
+    }
     await new Promise(resolve=>{
       if (!map._animatingZoom && !(map._panAnim && map._panAnim._inProgress)) return resolve();
       map.once('moveend', resolve);
@@ -2734,6 +2755,8 @@ async function generateMultiPdf(){
     logLine('PDF生成に失敗しました: ' + err.message, 'l-err');
   } finally {
     box.remove();
+    restyled.forEach(([sh, prev]) => sh.setStyle(prev));
+    if (mode === 'notam') rebuildNotamMapLayer();
     hidden.forEach((e, i) => e.style.display = prevDisplay[i]);
     btn.disabled = false;
     btn.textContent = originalLabel;
