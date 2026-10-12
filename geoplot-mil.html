@@ -863,7 +863,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.0.2';
+const APP_VERSION = 'v4.0.3';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -937,6 +937,7 @@ const APP_VERSION = 'v4.0.2';
 // v4.0.0: 🔔通知に関連サイト(中国海警局「海警要闻」・台湾国防部 軍聞社「國防訊息」)の新しい投稿を追加(news_out/news.json、news_collect.py)。クリックで元記事を開く。
 // v4.0.1: 関連サイトの通知を見出しで絞った(中国海警局 海警要闻・维权执法: 台湾岛以东…常态化执法巡查/在我钓鱼岛/金门、軍聞社 國防訊息: 聯合戰備警巡)。
 // v4.0.2: 🔔パネルの説明(新着が無いとき)を「新しい航行警報/NOTAM/newsをお知らせ。」に短くした(ユーザー指示)。
+// v4.0.3: 関連サイトの投稿のうち、遡って集めた分(backfilled)は通知しない。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -2966,7 +2967,8 @@ function registerNewsForNotifications(state){
   items.slice().reverse().forEach(it=>{                     // 古い順に足す
     if (seenNewsIds.has(it.id)) return;
     seenNewsIds.add(it.id);
-    if (firstPages.has(pageOf(it)) || !it.notify) return;   // 初めて読んだ一覧の分・見出しが規則に当たらないものは通知しない
+    // 初めて読んだ一覧の分・見出しが規則に当たらないもの・遡って集めた分(backfilled、v4.0.3)は通知しない
+    if (firstPages.has(pageOf(it)) || !it.notify || it.backfilled) return;
     const k = 'news:' + it.id;
     if (pendingNotifications.has(k)) return;
     const src = sources[it.source] || {};

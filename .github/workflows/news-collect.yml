@@ -8,7 +8,12 @@ name: News collect
 on:
   schedule:
     - cron: "7,22,37,52 * * * *"
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      backfill:
+        description: "遡って集める一覧(例: mna / ccg / mna ccg)。空なら普段の収集"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -20,7 +25,7 @@ concurrency:
 jobs:
   collect:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v5
 
@@ -38,7 +43,14 @@ jobs:
 
       # 片方のサイトに失敗しても、もう片方が取れれば成功(終了コード0)。両方失敗したら2で赤くなる
       - name: Collect
-        run: python news_collect.py --out-dir news_out
+        env:
+          BACKFILL: ${{ github.event.inputs.backfill }}
+        run: |
+          if [ -n "$BACKFILL" ]; then
+            python news_collect.py --out-dir news_out --backfill $BACKFILL
+          else
+            python news_collect.py --out-dir news_out
+          fi
 
       # news_out/ はこのワークフローしか書かないので、他の収集の push と競合しても rebase で必ず解消できる
       - name: Commit
