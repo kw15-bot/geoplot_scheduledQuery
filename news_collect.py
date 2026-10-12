@@ -110,6 +110,8 @@ def http_get(url):
                 except OSError:
                     body = ""
                 print(f"[HTTP {e.code}] {url} headers={dict(e.headers)} body={body!r}", file=sys.stderr)
+                if e.code in (403, 418):    # ファイアウォールの拒否(中国海警局の CloudWAF「访问被拦截！」は418)。取り直しても同じなので諦める
+                    break
             if i < RETRIES - 1:
                 time.sleep(RETRY_WAIT * (i + 1))
     raise last
