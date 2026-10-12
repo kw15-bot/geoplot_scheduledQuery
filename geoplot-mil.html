@@ -236,7 +236,7 @@ textarea::placeholder{color:var(--text-faint);}
 /* 全表示/全非表示の並びの「表示中をPDF」は右端に寄せる(v3.8.5) */
 #btnPdfVisible,#notamBtnPdfVisible{margin-left:auto;}
 /* この並び(全表示/全非表示・日付選択・表示中をPDF)は1列に収めるため、ボタンの間と左右の余白を少し詰める(両モード共通) */
-#bulkVisRow,#notamBulkVisRow{gap:5px;}
+#bulkVisRow,#notamBulkVisRow{gap:4px;}
 #bulkVisRow .btn.small,#notamBulkVisRow .btn.small{padding:5px 7px;}
 
 /* PDF export entry points (results card + popups) share this red accent + icon. */
@@ -654,8 +654,8 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
         <button class="tab-btn" data-tab="all">All <span class="tab-n" id="tabCountAll">0</span></button>
       </div>
       <div class="btn-row" id="bulkVisRow" style="margin-top:0;margin-bottom:10px;">
-        <button class="btn small ghost" id="btnBulkShow" title="このタブのものを全て地図に表示">全表示</button>
-        <button class="btn small ghost" id="btnBulkHide" title="このタブのものを全て地図から外す">全非表示</button>
+        <button class="btn small ghost" id="btnBulkShow" title="このタブのものを全て地図に表示">全て表示</button>
+        <button class="btn small ghost" id="btnBulkHide" title="このタブのものを全て地図から外す">全て非表示</button>
         <!-- 地図に表示中のものをまとめてPDF(v3.8.0)。中身(アイコン+文言)はJSで入れる(カードのPDF出力と同じ見た目) -->
         <button class="btn small ghost btn-pdf" id="btnPdfVisible" title="今の地図の範囲に表示している航行警報をまとめてPDFにする">表示中をPDF</button>
       </div>
@@ -689,8 +689,8 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
         <button class="tab-btn" data-tab="all">All <span class="tab-n" id="notamCountAll">0</span></button>
       </div>
       <div class="btn-row" id="notamBulkVisRow" style="margin-top:0;margin-bottom:8px;">
-        <button class="btn small ghost" id="notamBtnBulkShow" title="このタブのものを全て地図に表示">全表示</button>
-        <button class="btn small ghost" id="notamBtnBulkHide" title="このタブのものを全て地図から外す">全非表示</button>
+        <button class="btn small ghost" id="notamBtnBulkShow" title="このタブのものを全て地図に表示">全て表示</button>
+        <button class="btn small ghost" id="notamBtnBulkHide" title="このタブのものを全て地図から外す">全て非表示</button>
         <!-- Archive・Allタブ(v3.3.0、v3.6.0〜All): 選んだ日(UTC)に有効だったものだけを出す -->
         <span class="notam-date-wrap" id="notamDateWrap" style="display:none;">
           <button class="btn small ghost" id="notamBtnDate">日付選択</button>
@@ -864,7 +864,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v3.8.5';
+const APP_VERSION = 'v3.8.6';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -931,6 +931,7 @@ const APP_VERSION = 'v3.8.5';
 // v3.8.3: 表示中をPDFの地図から、図形の上の番号ラベルを消した(単体PDFと同じ)。
 // v3.8.4: v3.8.3 でNOTAMのラベルが消えていなかった(撮る直前に赤く描き直した図形に新しくラベルが付くため)のを修正。撮る間はページ全体のクラスで隠す。
 // v3.8.5: 「表示中をPDF」ボタンを並びの右端に寄せた(NOTAMは日付選択の右)。
+// v3.8.6: 「全表示/全非表示」を「全て表示/全て非表示」に(ユーザー指示)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -4539,15 +4540,15 @@ function paintNotamCalendar(){
   const clr = $('#notamCalClear');
   if (clr) clr.style.visibility = sel.size ? 'visible' : 'hidden';
 }
-// ボタンの表示(v3.8.5〜「表示中をPDF」と1列に収まるよう短く): 1日なら「10/05」、続いた範囲なら「10/05〜07」
-// (月をまたぐと「10/30〜11/02」)、飛び飛びなら「3日分」。年を含む正確な日付はボタンの title(マウスを乗せる)に出る。
+// ボタンの表示(v3.8.5〜「表示中をPDF」と1列に収まるよう短く。v3.8.6〜先頭の0も省く): 1日なら「10/5」、
+// 続いた範囲なら「10/5〜7」(月をまたぐと「9/29〜10/2」)、飛び飛びなら「3日分」。年を含む正確な日付はボタンの title に出る。
 function notamDatesLabel(dates){
   const d = [...dates].sort();
   if (!d.length) return '日付選択';
-  const md = x => x.slice(5).replace('-', '/');
+  const md = x => `${Number(x.slice(5, 7))}/${Number(x.slice(8))}`;
   if (d.length === 1) return md(d[0]);
   const a = d[0], b = d[d.length - 1];
-  if (notamDayRange(a, b).length === d.length) return `${md(a)}〜${a.slice(0, 7) === b.slice(0, 7) ? b.slice(8) : md(b)}`;
+  if (notamDayRange(a, b).length === d.length) return `${md(a)}〜${a.slice(0, 7) === b.slice(0, 7) ? Number(b.slice(8)) : md(b)}`;
   return `${d.length}日分`;
 }
 function syncNotamDateUi(){
