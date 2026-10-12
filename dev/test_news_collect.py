@@ -99,6 +99,7 @@ class News(unittest.TestCase):
         self.assertEqual([i["published"] for i in items], ["2026-10-04", "2026-09-30"])   # 民國115年 → 2026年
         self.assertEqual(items[1]["title"], "中共假「聯合戰備警巡」之名擾臺 國軍嚴密監控適切應處")   # 全角空白は半角に(RSSと同じ)
         self.assertEqual(items[1]["url"], "https://mna.mnd.gov.tw/news/detail/?UserKey=ab7cc840-211f-4c09-a1fe-a973c7e745ad")
+        self.assertTrue(items[0]["summary"].startswith("（軍聞社記者侯凱議臺北4日電）"))
 
     def test_import_json_is_backfilled_and_keeps_all(self):
         self.run_once()
