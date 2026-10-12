@@ -30,6 +30,8 @@ notify=true を付ける。ビューアは notify のものだけを🔔に出�
 
 import argparse
 import datetime as dt
+import http.cookiejar
+import time
 import email.utils
 import html
 import json
@@ -42,7 +44,19 @@ from urllib.parse import urljoin
 
 KEEP_PER_SOURCE = 100
 TIMEOUT = 40
-UA = "Mozilla/5.0 (compatible; geoplot-news/1.0)"
+RETRIES = 3
+RETRY_WAIT = 8          # 秒。失敗のたびに 8・16 秒待って取り直す
+PAGE_GAP = 3            # 秒。同じサイトの一覧を続けて読むときの間隔
+# 中国海警局は、ボットらしいアクセスに HTTP 418 を返すことがある(2026-10-12、Actions の2回目で発生)。
+# 航行警報側(msa_scraper.py)と同じく、普通のブラウザに近いヘッダーで、トップページを先に開いて Cookie を受け取り、
+# Referer を付けて一覧を読む。
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "zh-CN,zh-TW;q=0.9,zh;q=0.8,en;q=0.5",
+}
+_opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+_warmed = set()
 
 # 中国海警局の2つの一覧に共通の、通知する見出し(正規表現、どれかに当たれば通知)。
 # 「台湾岛以东」はユーザー指定の「…依法开展常态化执法巡查」のほか、「依法」の無い見出し(2026-07-04)もあったので両方
@@ -67,12 +81,32 @@ def now_iso():
     return dt.datetime.now(dt.timezone.utc).replace(microsecond=0).isoformat()
 
 
-def http_get(url):
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept-Language": "zh-CN,zh-TW;q=0.9,en;q=0.5"})
-    with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+def _get_once(url, referer=None):
+    headers = dict(HEADERS, **({"Referer": referer} if referer else {}))
+    with _opener.open(urllib.request.Request(url, headers=headers), timeout=TIMEOUT) as r:
         raw = r.read()
         charset = r.headers.get_content_charset() or "utf-8"
     return raw.decode(charset, errors="replace")
+
+
+def http_get(url):
+    """サイトごとに1回、トップページを開いて Cookie を受け取ってから、Referer 付きで読む。失敗したら待って取り直す。"""
+    top = re.match(r"https?://[^/]+/", url).group(0)
+    if top not in _warmed:
+        _warmed.add(top)
+        try:
+            _get_once(top)
+        except (urllib.error.URLError, OSError):
+            pass                       # トップが読めなくても本番は試す
+    last = None
+    for i in range(RETRIES):
+        try:
+            return _get_once(url, referer=top)
+        except (urllib.error.URLError, OSError) as e:
+            last = e
+            if i < RETRIES - 1:
+                time.sleep(RETRY_WAIT * (i + 1))
+    raise last
 
 
 def strip_tags(s):
@@ -207,6 +241,8 @@ def main(argv=None):
                         raise FileNotFoundError(f"fixture {pg['page']}.html/.xml が無い")
                     text = fx.read_text(encoding="utf-8")
                 else:
+                    if pg is not src["pages"][0]:
+                        time.sleep(PAGE_GAP)
                     text = http_get(pg.get("fetch") or pg["url"])
                 items = PARSERS[pg["kind"]](text, pg)
                 if not items:
