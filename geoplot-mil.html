@@ -598,14 +598,14 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
     <div class="header-spacer"></div>
     <span class="app-version" id="appVersion"></span>
     <div class="notif-wrap">
-      <button id="btnNotifBell" class="notif-bell" title="新規の航行警報・NOTAM">🔔<span id="notifBadge" class="notif-badge" style="display:none;">0</span></button>
+      <button id="btnNotifBell" class="notif-bell" title="新着（航行警報・NOTAM・関連サイト）">🔔<span id="notifBadge" class="notif-badge" style="display:none;">0</span></button>
       <div class="notif-panel" id="notifPanel">
         <div class="notif-panel-head">
-          <span>新規の航行警報・NOTAM</span>
+          <span>新着</span>
           <button class="btn small ghost" id="btnNotifClearAll">全て既読</button>
         </div>
         <div id="notifList"></div>
-        <div class="empty-hint" id="notifEmptyHint">新着はありません。航行警報(military.geojson)・NOTAM(notam_cn.geojson)が自動更新されるたびにここへ追加されます。</div>
+        <div class="empty-hint" id="notifEmptyHint">新着はありません。航行警報・NOTAMの自動更新と、関連サイト（中国海警局「海警要闻」・台湾国防部 軍聞社「國防訊息」）の新しい投稿がここへ追加されます。</div>
       </div>
     </div>
   </div>
@@ -863,7 +863,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v3.9.2';
+const APP_VERSION = 'v4.0.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -934,6 +934,7 @@ const APP_VERSION = 'v3.9.2';
 // v3.9.0: NOTAMの収集を「北京・台北の発行＋中国の関与(本文の語句、他国発行も)」に変更したのに合わせ、他国が出した中国関与のNOTAM(発行元キー CN:REL、表示「中国関与(LONG MARCH)」等)を既定で表示。
 // v3.9.1: 航行警報パネルの見出し「軍事関連の抽出結果」を削除。
 // v3.9.2: 距離計測のパネルと座標表示の間を空けた。「OpenStreetMap / EPSG:4326」を帰属表示のすぐ上・左端揃えに移した(ズームボタンと重ならない)。
+// v4.0.0: 🔔通知に関連サイト(中国海警局「海警要闻」・台湾国防部 軍聞社「國防訊息」)の新しい投稿を追加(news_out/news.json、news_collect.py)。クリックで元記事を開く。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -2843,6 +2844,14 @@ try{
 }catch(e){ /* ignore corrupt storage */ }
 
 try{ seenKeys = new Set(JSON.parse(localStorage.getItem(SEEN_KEY) || '[]')); }catch(e){ /* ignore corrupt storage */ }
+// 関連サイトの新着(v4.0.0、news_out/news.json)。初めて読んだときはその時点の分を既読にし、以後に増えたものだけを通知する
+const SEEN_NEWS_KEY = 'geoplotMil_seenNewsIds';
+let seenNewsIds = new Set();
+let newsNotifBaselined = false;
+try{
+  const raw = localStorage.getItem(SEEN_NEWS_KEY);
+  if (raw !== null){ seenNewsIds = new Set(JSON.parse(raw)); newsNotifBaselined = true; }
+}catch(e){ /* ignore corrupt storage */ }
 try{
   (JSON.parse(localStorage.getItem(PENDING_KEY) || '[]')).forEach(p => pendingNotifications.set(p.key, p));
 }catch(e){ /* ignore corrupt storage */ }
@@ -2854,6 +2863,7 @@ function persistNotificationState(){
     localStorage.setItem(SEEN_KEY, JSON.stringify([...seenKeys].slice(-4000))); // cap growth
     localStorage.setItem(PENDING_KEY, JSON.stringify([...pendingNotifications.values()]));
     if (notamNotifBaselined) localStorage.setItem(SEEN_NOTAM_KEY, JSON.stringify([...seenNotamKeys].slice(-4000)));
+    if (newsNotifBaselined) localStorage.setItem(SEEN_NEWS_KEY, JSON.stringify([...seenNewsIds].slice(-4000)));
   }catch(e){ /* storage full/unavailable — notifications still work for this session */ }
 }
 
@@ -2934,6 +2944,53 @@ function registerNotamsForNotifications(feats){
   updateNotifBadge();
 }
 
+// 関連サイト(中国海警局「海警要闻」・台湾国防部 軍聞社「國防訊息」)の新しい投稿(v4.0.0)。
+// news_collect.py(news-collect.yml、15分おき)が news_out/news.json に書いた items を、まだ見ていない id だけ通知に足す。
+// 通知をクリックすると元の記事を新しいタブで開く(地図は動かさない)。
+function registerNewsForNotifications(state){
+  const items = (state && state.items) || [];
+  const names = (state && state.sources) || {};
+  if (!newsNotifBaselined){
+    items.forEach(it => seenNewsIds.add(it.id));
+    newsNotifBaselined = true;
+    persistNotificationState();
+    return;
+  }
+  let addedAny = false;
+  items.slice().reverse().forEach(it=>{                     // 古い順に足す(一覧は新しいものが上に来るよう描画時に並べる)
+    if (seenNewsIds.has(it.id)) return;
+    seenNewsIds.add(it.id);
+    const k = 'news:' + it.id;
+    if (pendingNotifications.has(k)) return;
+    const pub = String(it.published || '');
+    pendingNotifications.set(k, {
+      key: k, kind: 'news', title: it.title, url: it.url,
+      bureau: (names[it.source] && names[it.source].name) || it.source,
+      date: pub.slice(0, 16).replace('T', ' '),
+    });
+    addedAny = true;
+  });
+  if (addedAny) renderNotifPanel();
+  persistNotificationState();
+  updateNotifBadge();
+}
+const NEWS_REFRESH_MS = 10 * 60 * 1000;
+let newsRefreshTimer = null;
+// news.json の場所: NOTAMの接続先(…/notam_out/notam_cn.geojson)と同じ場所の …/news_out/news.json
+function newsUrlFromNotamUrl(u){ return String(u).replace(/notam_out\/[^?#]*/, 'news_out/news.json'); }
+async function refreshNews(url){
+  try{
+    registerNewsForNotifications(JSON.parse(await fetchDataText(url)));
+  }catch(e){
+    logLine(`関連サイトの新着を読めませんでした: ${e.message}`, 'l-err');   // まだ一度も収集していない等。通知が来ないだけ
+  }
+}
+function startNewsPolling(url){
+  refreshNews(url);
+  if (newsRefreshTimer) clearInterval(newsRefreshTimer);
+  newsRefreshTimer = setInterval(()=> refreshNews(url), NEWS_REFRESH_MS);
+}
+
 function renderNotifPanel(){
   const list = $('#notifList');
   const items = [...pendingNotifications.values()];
@@ -2958,6 +3015,13 @@ function renderNotifPanel(){
       const it = pendingNotifications.get(div.dataset.key);
       if (!it) return;
       $('#notifPanel').style.display = 'none';
+      if (it.kind === 'news'){
+        // 関連サイトの新着: 元の記事を新しいタブで開く
+        if (it.url) window.open(it.url, '_blank', 'noopener');
+        pendingNotifications.delete(it.key);
+        persistNotificationState(); updateNotifBadge(); renderNotifPanel();
+        return;
+      }
       if (it.kind === 'notam'){
         // NOTAMの通知: NOTAMモードに切り替えて、その図形にズームし、左の一覧でカードを示す
         if (!$('#mainApp').classList.contains('mode-notam')) enterMode('notam');
@@ -4747,6 +4811,7 @@ const DEFAULT_NOTAM_URL = 'https://kw15-bot.github.io/geoplot_scheduledQuery/not
   const input = $('#notamUrlInput');
   if (input) input.value = notamUrl;
   connectNotamUrl(notamUrl);
+  startNewsPolling(params.get('news') || newsUrlFromNotamUrl(notamUrl));   // v4.0.0: 関連サイトの新着(?news= で上書き可)
 })();
 }
 
