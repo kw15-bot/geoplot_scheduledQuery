@@ -72,8 +72,9 @@ body{
 .app.mode-auto{display:grid;grid-template-columns:380px 1fr;}
 .app.mode-manual{display:grid;grid-template-columns:380px 1fr;}
 .app.mode-notam{display:grid;grid-template-columns:380px 1fr;}
+.app.mode-news{display:grid;grid-template-columns:380px 1fr;}
 @media (max-width:1100px){
-  .app.mode-auto,.app.mode-manual,.app.mode-notam{grid-template-columns:1fr;}
+  .app.mode-auto,.app.mode-manual,.app.mode-notam,.app.mode-news{grid-template-columns:1fr;}
   .app{grid-template-rows:52px auto 46vh auto; overflow-y:auto; height:auto; min-height:100vh;}
   html,body{overflow:auto;}
   .map-wrap{height:46vh;min-height:320px;}
@@ -516,7 +517,27 @@ select{
 .app.mode-manual .panel[data-mode-section="manual"]{display:flex;} /* .panel uses flex column, not block */
 .app.mode-notam [data-mode-section="notam"]{display:block;}
 .app.mode-notam .panel[data-mode-section="notam"]{display:flex;}
-.app.mode-manual #rightPanel,.app.mode-notam #rightPanel{display:none;}
+.app.mode-news .panel[data-mode-section="news"]{display:flex;}
+.app.mode-news .panel[data-mode-section="news"]{min-width:0;}
+#newsList{overflow-wrap:anywhere;}
+.app.mode-manual #rightPanel,.app.mode-notam #rightPanel,.app.mode-news #rightPanel{display:none;}
+/* 報道モード(v4.1.0)。一覧の作りは元サイトにそろえる: 中国海警局は「見出し＋日時」、軍聞社は「見出し＋要約＋【國防訊息】＋民國の日付」 */
+#newsTabs .tab-btn{font-size:11.5px;padding:7px 4px;}
+.news-item{display:block;text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px dashed var(--border);padding:9px 2px;}
+.news-item:hover .news-title{text-decoration:underline;}
+.news-item.map-selected,.news-item:focus-visible{background:var(--panel-alt);outline:none;}
+.news-site{font-size:10px;color:var(--text-faint);margin-bottom:2px;}
+.news-title{font-size:13px;line-height:1.55;color:var(--text);}
+.news-item.ccg .news-row{display:flex;gap:10px;align-items:baseline;justify-content:space-between;}
+.news-item.ccg .news-title{flex:1;min-width:0;}
+.news-item.ccg .news-date{font-family:var(--mono);font-size:10.5px;color:var(--text-faint);white-space:nowrap;}
+.news-item.mna .news-title{font-weight:700;color:#1d5fa8;}
+body.dark-mode .news-item.mna .news-title{color:#7fb2ec;}
+.news-item.mna .news-summary{font-size:11.5px;line-height:1.7;color:var(--text-dim);margin-top:3px;
+  display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.news-item.mna .news-foot{font-size:10.5px;color:var(--text-faint);margin-top:4px;display:flex;gap:8px;}
+.news-flag{display:inline-block;font-size:9.5px;font-weight:700;color:#fff;background:var(--red);border-radius:3px;padding:0 5px;margin-right:6px;vertical-align:1px;}
+.news-status{font-size:10.5px;color:var(--text-faint);margin:-4px 0 6px;}
 
 /* ---------- Dark mode ----------
    Toggled by clicking the small dot left of the brand text (see the brandDot click
@@ -594,6 +615,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <button class="mode-tab active" data-mode="auto">NAVWAR</button>
       <button class="mode-tab" data-mode="notam">NOTAM(Beta)</button>
       <button class="mode-tab" data-mode="manual">手動</button>
+      <button class="mode-tab" data-mode="news">報道</button>
     </div>
     <div class="header-spacer"></div>
     <span class="app-version" id="appVersion"></span>
@@ -734,6 +756,22 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
     </div>
   </div>
 
+  <!-- 報道(v4.1.0): 関連サイト(中国海警局「海警要闻」「维权执法」・台湾国防部 軍聞社「國防訊息」)の投稿を全部並べる。
+       データは news_out/news.json(news_collect.py)。クリックで元の記事を新しいタブで開く。地図には何も出さない -->
+  <div class="panel left" id="newsModePanel" data-mode-section="news">
+    <div class="section">
+      <div class="tab-row" id="newsTabs">
+        <button class="tab-btn active" data-tab="all">すべて <span class="tab-n" id="newsCountAll">0</span></button>
+        <button class="tab-btn" data-tab="ccg_hjyw">海警要闻 <span class="tab-n" id="newsCountHjyw">0</span></button>
+        <button class="tab-btn" data-tab="ccg_wqzf">维权执法 <span class="tab-n" id="newsCountWqzf">0</span></button>
+        <button class="tab-btn" data-tab="mna">國防訊息 <span class="tab-n" id="newsCountMna">0</span></button>
+      </div>
+      <div class="news-status" id="newsStatus"></div>
+      <div id="newsList"></div>
+      <div class="empty-hint" id="newsEmptyHint">投稿はまだありません。</div>
+    </div>
+  </div>
+
   <!-- CENTER: map -->
   <div class="map-wrap">
     <div id="map"></div>
@@ -863,7 +901,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.0.3';
+const APP_VERSION = 'v4.1.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -938,6 +976,7 @@ const APP_VERSION = 'v4.0.3';
 // v4.0.1: 関連サイトの通知を見出しで絞った(中国海警局 海警要闻・维权执法: 台湾岛以东…常态化执法巡查/在我钓鱼岛/金门、軍聞社 國防訊息: 聯合戰備警巡)。
 // v4.0.2: 🔔パネルの説明(新着が無いとき)を「新しい航行警報/NOTAM/newsをお知らせ。」に短くした(ユーザー指示)。
 // v4.0.3: 関連サイトの投稿のうち、遡って集めた分(backfilled)は通知しない。
+// v4.1.0: モードに「報道」を追加(NAVWAR / NOTAM / 手動 / 報道)。関連サイト3つの投稿を全部、元サイトの一覧に近い見た目で並べる(クリックで元記事)。通知の条件に当たるものに「通知対象」の印。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -1933,7 +1972,8 @@ function loadOverlay(o){
 // 変わるたびに一度すべて外し、下から順に載せ直してから NOTAMの図形を描き直して一番上に出す。
 function currentMapMode(){
   const app = $('#mainApp');
-  return app.classList.contains('mode-notam') ? 'notam' : app.classList.contains('mode-manual') ? 'manual' : 'auto';
+  return app.classList.contains('mode-notam') ? 'notam' : app.classList.contains('mode-manual') ? 'manual'
+    : app.classList.contains('mode-news') ? 'news' : 'auto';
 }
 // 読み込み・載せ直しが終わると解決する Promise を返す(PDF出力が、航空路が描かれるのを待ってから地図を撮るため)
 function syncOverlayLayers(force){
@@ -2991,9 +3031,55 @@ const NEWS_REFRESH_MS = 10 * 60 * 1000;
 let newsRefreshTimer = null;
 // news.json の場所: NOTAMの接続先(…/notam_out/notam_cn.geojson)と同じ場所の …/news_out/news.json
 function newsUrlFromNotamUrl(u){ return String(u).replace(/notam_out\/[^?#]*/, 'news_out/news.json'); }
+// 報道タブ(v4.1.0)。news.json の全投稿を、元サイトの一覧に近い見た目で並べる
+let newsState = null;
+let newsTab = 'all';
+const NEWS_PAGE_NAMES = { ccg_hjyw: '中国海警局 海警要闻', ccg_wqzf: '中国海警局 维权执法', mna: '國防部 軍聞社 國防訊息' };
+function newsPageOf(it){ return it.page || (it.source === 'mna' ? 'mna' : 'ccg_hjyw'); }
+// 軍聞社の日付は元サイトと同じ「民國115年10月04日」(西暦-1911)
+function newsMinguoDate(pub){
+  const m = String(pub || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
+  return m ? `民國${Number(m[1]) - 1911}年${m[2]}月${m[3]}日` : '';
+}
+function renderNewsList(){
+  const items = ((newsState && newsState.items) || []).slice()
+    .sort((a, b) => String(b.published || '').localeCompare(String(a.published || '')) || String(b.id).localeCompare(String(a.id)));
+  const count = pg => items.filter(it => newsPageOf(it) === pg).length;
+  $('#newsCountAll').textContent = items.length;
+  $('#newsCountHjyw').textContent = count('ccg_hjyw');
+  $('#newsCountWqzf').textContent = count('ccg_wqzf');
+  $('#newsCountMna').textContent = count('mna');
+  const shown = newsTab === 'all' ? items : items.filter(it => newsPageOf(it) === newsTab);
+  $('#newsEmptyHint').style.display = shown.length ? 'none' : 'block';
+  // 取得に失敗しているサイトがあれば一行で知らせる(中国海警局はファイアウォールで拒否されることが多い)
+  const srcs = (newsState && newsState.sources) || {};
+  const errs = Object.entries(srcs).filter(([, v]) => v && v.last_error).map(([k, v]) => `${v.name || k}: ${v.last_error_at || ''} 以降、取得できていません`);
+  $('#newsStatus').textContent = errs.join(' ／ ');
+  $('#newsList').innerHTML = shown.map(it => {
+    const pg = newsPageOf(it), site = newsTab === 'all' ? `<div class="news-site">${esc(NEWS_PAGE_NAMES[pg] || pg)}</div>` : '';
+    const flag = it.notify ? `<span class="news-flag" title="通知の条件(${esc(it.matched || '')})に当たる投稿">通知対象</span>` : '';
+    const href = esc(it.url || '#');
+    if (it.source === 'mna'){
+      return `<a class="news-item mna" href="${href}" target="_blank" rel="noopener">${site}
+        <div class="news-title">${flag}${esc(it.title)}</div>
+        ${it.summary ? `<div class="news-summary">${esc(it.summary)}</div>` : ''}
+        <div class="news-foot"><span>【國防訊息】</span><span>${esc(newsMinguoDate(it.published))}</span></div></a>`;
+    }
+    const pub = String(it.published || '').replace('T', ' ').slice(0, 19);
+    return `<a class="news-item ccg" href="${href}" target="_blank" rel="noopener">${site}
+      <div class="news-row"><div class="news-title">${flag}${esc(it.title)}</div><div class="news-date">${esc(pub)}</div></div></a>`;
+  }).join('');
+}
+$$('#newsTabs .tab-btn').forEach(btn => btn.addEventListener('click', ()=>{
+  newsTab = btn.dataset.tab;
+  $$('#newsTabs .tab-btn').forEach(b => b.classList.toggle('active', b === btn));
+  renderNewsList();
+}));
 async function refreshNews(url){
   try{
-    registerNewsForNotifications(JSON.parse(await fetchDataText(url)));
+    newsState = JSON.parse(await fetchDataText(url));
+    renderNewsList();
+    registerNewsForNotifications(newsState);
   }catch(e){
     logLine(`関連サイトの新着を読めませんでした: ${e.message}`, 'l-err');   // まだ一度も収集していない等。通知が来ないだけ
   }
@@ -4759,14 +4845,15 @@ renderWarnList();
 
 function enterMode(mode){
   const app = $('#mainApp');
-  app.classList.remove('mode-auto','mode-manual','mode-notam');
-  app.classList.add(mode === 'manual' ? 'mode-manual' : mode === 'notam' ? 'mode-notam' : 'mode-auto');
+  app.classList.remove('mode-auto','mode-manual','mode-notam','mode-news');
+  app.classList.add(mode === 'manual' ? 'mode-manual' : mode === 'notam' ? 'mode-notam' : mode === 'news' ? 'mode-news' : 'mode-auto');
   $$('#modeTabs .mode-tab').forEach(btn=> btn.classList.toggle('active', btn.dataset.mode === mode));
   syncOverlayLayers(); // 航空路などの参考レイヤーは NOTAMモードのときだけ出す
   // 3モードとも地図上の表示は排他 -- auto(msaLayer) / manual(manualLayerGroup) / notam(notamLayer)。
   // Each mode only shows its own shapes on the map. Without this, switching modes left the
   // previous mode's shapes visibly on the map.
-  const wantLayer = mode === 'manual' ? manualLayerGroup : mode === 'notam' ? notamLayer : msaLayer;
+  // 報道モード(v4.1.0)は地図に何も出さない(wantLayer なし)
+  const wantLayer = mode === 'manual' ? manualLayerGroup : mode === 'notam' ? notamLayer : mode === 'news' ? null : msaLayer;
   [manualLayerGroup, msaLayer, notamLayer].forEach(lg=>{
     const shouldShow = (lg === wantLayer);
     if (shouldShow && !map.hasLayer(lg)) lg.addTo(map);
@@ -4789,6 +4876,8 @@ function enterMode(mode){
     ? '手動貼り付けモードで開始しました。座標を貼り付けてプロットしてください。'
     : mode === 'notam'
     ? 'NOTAMモードで開始しました。notam_out/notam_cn.geojsonへ自動接続します（10分ごとに自動再取込）。'
+    : mode === 'news'
+    ? '報道モードで開始しました。news_out/news.json を10分ごとに読み込みます。'
     : '自動収集モードで開始しました。?geojson=<URL> 付きで開くとmilitary.geojsonへ自動接続し、10分ごとに自動再取込します。'
   );
 }
