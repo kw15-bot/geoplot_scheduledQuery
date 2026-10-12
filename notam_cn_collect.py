@@ -60,11 +60,19 @@ HOSTS = {
     "staging": "https://api-staging.cgifederal-aim.com",
     "prod": "https://api-nms.aim.faa.gov",
 }
-# ICAO地名指標の先頭2文字 -> グループ（中国本土/香港/マカオ/台湾は国・地域全体を緩く拾う）
+# ---- 収集対象(2026-10-12〜、ユーザー判断で「地域」から「発行元＋中国の関与」に変更) ----
+# NMS-API には FIR・国での絞り込みが無いので、全世界の差分を受け取ってここで絞る。対象は次のどれか:
+#   1. 発行元(accountId)が 北京 ZBBBYNYX(中国本土の国際NOTAMは全てここ。収集済み2,683件で確認) か
+#      台北 RCTPYNYX(ビューアで既定OFFのまま見られるよう残す)
+#   2. 本文に中国の関与を示す語句(CHINA_INVOLVEMENT)がある(他国が出した「... BY CHINA」等。発行元・FIRは問わない)
+#   3. accountId が無い(--bootstrap il の一括取得・貼り付け取り込み)ときは、地名指標で 中国本土→北京、台湾→台北 とみなす
+# 香港・マカオ・マニラ・オークランド等の、中国の関与が無いNOTAMは集めない(以前は地域で集めていた)。
+TARGET_ACCOUNTS = {"ZBBBYNYX": "CN", "RCTPYNYX": "TW"}
+# 3. の地名指標(4文字トークンの先頭2文字)。米国ARTCCの3文字コード(ZBW等)と衝突しないよう4文字に限る
 AREA_BY_PREFIX = {
     **{p: "CN" for p in ("ZB", "ZG", "ZH", "ZJ", "ZL", "ZP", "ZS", "ZU", "ZW", "ZY")},
     "ZX": "CN",                       # ZXXX = 複数FIRにまたがるNOTAMのQ項FIR欄（実データで確認）
-    "VH": "HK", "VM": "MO", "RC": "TW",
+    "RC": "TW",
 }
 # 周辺国の特定FIRのみを参考表示対象に含める（2026-09-27、ユーザー合意）。
 # これらはプレフィックスで拾うと国全体（例: K=米国全土, RJ=日本全国のFIR）まで
@@ -72,8 +80,24 @@ AREA_BY_PREFIX = {
 #   RPHI: マニラFIR(フィリピン)  KZAK: オークランド洋上管制(米国)
 # 2026-09-28: RJJJ(福岡)・RKRR(仁川)・ZKKP(平壌)は中国と関係の薄いNOTAMが大半のため対象から外した
 # (ユーザー判断。収集済みの分も state・Archive から削除。drop_untargeted()参照)。
-AREA_BY_EXACT = {"RPHI": "REF", "KZAK": "REF"}
-AREA_LABEL = {"CN": "中国本土", "HK": "香港", "MO": "マカオ", "TW": "台湾", "REF": "周辺国FIR(参考)"}
+# 2026-10-12: 地域での収集をやめたので、周辺国FIRの完全一致(RPHI・KZAK)も使わない(--bootstrap locations 用に名前だけ残す)
+AREA_BY_EXACT = {}
+# REL = 北京・台北以外が出したNOTAMで、本文に中国の関与を示す語句があるもの(例: マニラの「... BY CHINA」)
+AREA_LABEL = {"CN": "中国本土", "TW": "台湾", "REL": "他国発行・中国関与",
+              "HK": "香港", "MO": "マカオ", "REF": "周辺国FIR(参考)"}   # HK/MO/REF は 2026-10-11 以前の分の表示用
+
+# 2. の語句。単に CHINA を探すと「CHINA SOUTHERN AIRLINES」「CHINA MEDICAL UNIVERSITY」(台湾)「SOUTH CHINA SEA」
+# 「REF AIP CHINA」「CATCHING」等を拾うので、関与を示す言い方に限る。(表示名, 正規表現) の順に照合し、当たった表示名を返す。
+CHINA_INVOLVEMENT = [
+    ("BY CHINA", r"\bBY\s+(?:THE\s+)?(?:PEOPLE'?S\s+REPUBLIC\s+OF\s+)?CHINA\b|\bBY\s+(?:THE\s+)?P\.?R\.?C\b"),
+    ("CHINESE", r"\bCHINESE\b(?!\s+(?:TAIPEI|NEW\s+YEAR))"),
+    ("PLA", r"\bPEOPLE'?S\s+LIBERATION\s+ARMY\b"),
+    ("中国の宇宙機関", r"\bCHINA\s+(?:MANNED\s+SPACE|NATIONAL\s+SPACE|AEROSPACE|ACADEMY\s+OF\s+LAUNCH)\b|\bCNSA\b|\bCASC\b|\bCMSA\b"),
+    ("LONG MARCH", r"\bLONG\s+MARCH\b|\bCZ-\d"),
+    ("中国の打ち上げ場", r"\b(?:JIUQUAN|XICHANG|WENCHANG|TAIYUAN\s+SATELLITE|DONGFANG\s+SPACEPORT)\b"),
+    ("中国の宇宙船", r"\b(?:SHENZHOU|TIANZHOU|TIANGONG|MENGZHOU)\b"),
+]
+_CHINA_INVOLVEMENT_RE = [(name, re.compile(rx)) for name, rx in CHINA_INVOLVEMENT]
 
 MAX_DELTA_WINDOW = dt.timedelta(hours=23, minutes=30)   # 仕様上の上限は24時間
 OVERLAP = dt.timedelta(minutes=10)                      # 取りこぼし防止の重ね取り
@@ -132,11 +156,30 @@ def circle_ring(lat, lon, r_nm, n=CIRCLE_POINTS):
 
 
 # ----------------------------------------------------------------------------- 分類
-def target_area(n):
-    """icaoLocation / affectedFir を空白等で分割し、4文字のトークンのどれかが対象なら該当。
-    実データでは A) が複数地点（例 'ZGZU ZSHA'）になりうるため。
-    先に完全一致(AREA_BY_EXACT、周辺国の特定FIRのみ)を確認し、無ければ従来の
-    2文字プレフィックス(AREA_BY_PREFIX、中国本土/香港/マカオ/台湾を国単位で緩く拾う)を見る。"""
+def china_terms(text):
+    """本文に中国の関与を示す語句があれば、その表示名を CHINA_INVOLVEMENT の順で返す(無ければ空リスト)。"""
+    t = (text or "").upper()
+    return [name for name, rx in _CHINA_INVOLVEMENT_RE if rx.search(t)]
+
+
+def target_area(n, text=None):
+    """収集対象なら area_group(CN / TW / REL)、対象外なら None。判定は上の TARGET_ACCOUNTS の説明のとおり。
+    n は NMS の notam(accountId・icaoLocation・affectedFir)、text は本文(ICAO書式の全文)。"""
+    acc = (n.get("accountId") or "").strip().upper()
+    if acc in TARGET_ACCOUNTS:
+        return TARGET_ACCOUNTS[acc]
+    if not acc:
+        area = location_area(n)
+        if area:
+            return area
+    if china_terms(text or n.get("text")):
+        return "REL"
+    return None
+
+
+def location_area(n):
+    """icaoLocation / affectedFir を空白等で分割し、4文字のトークンの先頭2文字が中国本土・台湾なら CN / TW。
+    実データでは A) が複数地点（例 'ZGZU ZSHA'）になりうるため。accountId が無いときだけ使う。"""
     for key in ("icaoLocation", "affectedFir"):
         for tok in re.split(r"[\s,/;]+", (n.get(key) or "").upper()):
             if len(tok) != 4:
@@ -149,16 +192,47 @@ def target_area(n):
 
 
 def record_target_area(rec):
-    """保存済みレコード(またはArchiveのproperties)が、今の収集対象に入るか。target_area()と同じ判定。"""
-    return target_area({"icaoLocation": rec.get("icao_location"), "affectedFir": rec.get("fir")})
+    """保存済みレコード(state)・Archive の properties が、今の収集対象に入るか。target_area() と同じ判定。
+    state は account_id・icao_text、Archive は issuer・raw_text に入っている。"""
+    acc = rec["account_id"] if "account_id" in rec else rec.get("issuer")
+    text = rec.get("icao_text") or rec.get("text") or rec.get("raw_text")
+    return target_area({"icaoLocation": rec.get("icao_location"), "affectedFir": rec.get("fir"), "accountId": acc}, text)
 
 
 def drop_untargeted(active):
-    """収集対象から外したFIRのレコードを state から消す(対象を狭めたときの後始末)。消した件数を返す。"""
-    gone = [k for k, r in active.items() if not record_target_area(r)]
+    """収集対象から外れたレコードを state から消し(対象を狭めたときの後始末)、残すものは area_group を今の判定に揃える。
+    消した件数を返す。"""
+    gone = []
+    for k, r in active.items():
+        area = record_target_area(r)
+        if area:
+            r["area_group"] = area
+        else:
+            gone.append(k)
     for k in gone:
         del active[k]
     return len(gone)
+
+
+def purge_archive(out, dry=False):
+    """Archive(月別)からも、収集対象から外れたものを消し、残すものは area_group を揃える。消した件数を返す。
+    毎回呼ぶ(push 衝突時のマージで origin 側の古い分が戻っても、次の回で消える)。"""
+    removed = 0
+    for path in sorted((out / "archive").glob("notam_*.geojson")):
+        fc = read_json(path, None)
+        if not fc:
+            continue
+        keep = []
+        for f in fc.get("features") or []:
+            p = f.get("properties") or {}
+            area = record_target_area(p)
+            if area:
+                p["area_group"] = area
+                p["china_terms"] = china_terms(p.get("raw_text"))     # 2026-10-12 以前の分にも付ける
+                keep.append(f)
+        removed += len(fc.get("features") or []) - len(keep)
+        write_if_changed(path, {**fc, "features": keep}, dry=dry)
+    return removed
 
 
 def q_category(q):
@@ -489,9 +563,6 @@ def make_record(feature, now):
     core = ((feature.get("properties") or {}).get("coreNOTAMData")) or {}
     n = core.get("notam") or {}
     nid = str(n.get("id") or "").replace("NMS_ID_", "").strip()
-    area = target_area(n)
-    if not nid or not area:
-        return None
     icao_text = local_text = None
     for t in core.get("notamTranslation") or []:
         if not isinstance(t, dict):
@@ -501,6 +572,9 @@ def make_record(feature, now):
             icao_text = t.get("formattedText") or t.get("icao_message")
         elif t.get("type") == "LOCAL_FORMAT":
             local_text = t.get("simpleText") or t.get("domestic_message")
+    area = target_area(n, icao_text or n.get("text"))
+    if not nid or not area:
+        return None
     ntype = (n.get("type") or "").upper()
     ref = None
     m = _REF.search(icao_text or "")
@@ -632,6 +706,8 @@ def to_feature(rec, now):
             "q_code": rec.get("q_code"), "category": q_category(rec.get("q_code")),
             "focus_tag": q_focus_tag(rec.get("q_code")),
             "keyword_hit": bool(hits), "matched_keywords": hits,
+            # 本文の中国の関与を示す語句(CHINA_INVOLVEMENT の表示名)。ビューアは北京・台北以外の発行でこれがあれば「中国関与」として扱う
+            "china_terms": china_terms(raw_text),
             "lower": rec.get("lower"), "upper": rec.get("upper"),
             "radius_nm": rec.get("radius_nm"), "geometry_source": rec.get("geometry_source"),
             "qline_offset_nm": rec.get("qline_offset_nm"),
@@ -810,7 +886,7 @@ def load_fixture(path):
 
 # ----------------------------------------------------------------------------- main
 def main(argv=None):
-    ap = argparse.ArgumentParser(description="中国・香港・マカオ・台湾のNOTAM収集", formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(description="中国(北京発行・中国の関与)と台北発行のNOTAM収集", formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--out-dir", default="./notam_out")
     ap.add_argument("--fixture", help="API を呼ばず、このJSON(Feature配列/NMS応答/FeatureCollection)を取り込む")
     ap.add_argument("--bootstrap", choices=["il", "locations"],
@@ -870,6 +946,10 @@ def main(argv=None):
         print(f"[ERROR] {e}", file=sys.stderr)
         return 2
 
+    # Archive の後始末は取得に成功したときだけ(失敗した回は何も書かない)
+    purged = purge_archive(out, a.dry_run)
+    if purged:
+        stats["purged_archive"] = purged
     stats["fetched"] = len(feats)
     ingest(active, feats, now, stats)
     apply_links(active)

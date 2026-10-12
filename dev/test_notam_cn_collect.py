@@ -23,8 +23,11 @@ import notam_cn_collect as C  # noqa: E402
 
 def feat(num, icao, fir, q="QRDCA", coords="3900N11600E", radius="30", start="2026-09-21T00:00:00.000Z",
          end="2026-09-23T00:00:00.000Z", text="AREA ACT", ntype="N", ref=None, geom="default",
-         updated="2026-09-21T01:00:00.000Z", nid=None):
-    """合成Feature。geom: 'default'=点のみ / 'poly'=面あり / None=図形なし"""
+         updated="2026-09-21T01:00:00.000Z", nid=None, acc="auto"):
+    """合成Feature。geom: 'default'=点のみ / 'poly'=面あり / None=図形なし
+    acc: 発行元(accountId)。'auto' は地名指標から実データと同じ事務所を当てる(中国本土→北京、台湾→台北 等)。None で項目なし"""
+    if acc == "auto":
+        acc = auto_account(icao)
     icao_text = f"{num} NOTAM{ntype}" + (f" {ref}" if ref else "") + f"\nQ) {fir}/{q}/IV/BO/W/000/999/{coords}{radius.zfill(3)}\nE) {text}"
     g = {"type": "GeometryCollection", "geometries": [{"type": "Point", "coordinates": [116.0, 39.0]}]}
     if geom == "poly":
@@ -35,21 +38,30 @@ def feat(num, icao, fir, q="QRDCA", coords="3900N11600E", radius="30", start="20
         "notam": {"id": "NMS_ID_" + (nid or num.replace("/", "").replace("A", "9")), "series": "A", "number": num,
                   "year": "2026", "type": ntype, "issued": start, "affectedFir": fir, "selectionCode": q,
                   "location": icao[-3:], "icaoLocation": icao, "classification": "INTERNATIONAL",
-                  "accountId": "ZBBBYNYX", "effectiveStart": start, "effectiveEnd": end, "estimated": "false",
+                  **({"accountId": acc} if acc else {}), "effectiveStart": start, "effectiveEnd": end, "estimated": "false",
                   "text": text, "coordinates": coords, "radius": radius, "lowerLimit": "SFC", "upperLimit": "FL200",
                   "lastUpdated": updated},
         "notamTranslation": [{"type": "LOCAL_FORMAT", "simpleText": "!" + num}, {"type": "ICAO", "formattedText": icao_text}]}}}
 
 
+def auto_account(icao):
+    """地名指標から、実データで見た発行元(accountId)を当てる(テスト用)"""
+    first = (icao or "").split()[0] if icao else ""
+    if first[:2] in ("ZB", "ZG", "ZH", "ZJ", "ZL", "ZP", "ZS", "ZU", "ZW", "ZY", "ZX"):
+        return "ZBBBYNYX"
+    return {"RC": "RCTPYNYX", "VH": "VHHHYNYX", "VM": "VMMCYNYX", "RP": "RPLLYNYX", "RJ": "RJAAYNYX",
+            "RK": "RKRRYNYX", "ZK": "ZKKPYNYX", "ZM": "ZMUBYNYX"}.get(first[:2], "KZAK")
+
+
 BASE = [
     feat("A0101/26", "ZBPE", "ZBPE"),                                        # CN FIR、円(30NM)
     feat("A0102/26", "ZSPD", "ZSHA", q="QWMLW", geom="poly"),                # CN、面あり、警告
-    feat("A0103/26", "VHHH", "VHHK", q="QXXXX"),                             # HK
-    feat("A0104/26", "VMMC", "VHHK"),                                        # MO
-    feat("A0105/26", "RCTP", "RCAA", coords="2500N12130E", radius="999"),    # TW、半径999→点
+    feat("A0103/26", "VHHH", "VHHK", q="QXXXX"),                             # 香港発行（2026-10-12〜対象外）
+    feat("A0104/26", "VMMC", "VHHK"),                                        # マカオ発行（対象外）
+    feat("A0105/26", "RCTP", "RCAA", coords="2500N12130E", radius="999"),    # 台北発行 → TW、半径999→点
     feat("A0106/26", "KZBW", "ZBW"),                                         # 米ARTCC（除外）
     feat("A0107/26", "ZMUB", "ZMUB"),                                        # モンゴル（除外）
-    feat("A0108/26", "RPMM", "RPHI"),                                        # マニラFIR（周辺国FIRとして参考対象、REF）
+    feat("A0108/26", "RPMM", "RPHI"),                                        # マニラ発行・中国の関与なし（対象外）
     feat("A0109/26", "ZGZU", "ZGZU", geom=None, coords="", radius=""),       # 図形なし（座標も無い）
 ]
 
@@ -102,33 +114,70 @@ class Fixture(unittest.TestCase):
         self.put(BASE)
         self.assertEqual(self.go(), 0)
         p = props(self.out)
-        self.assertEqual(set(p), {"A0101/26", "A0102/26", "A0103/26", "A0104/26", "A0105/26", "A0108/26"})   # 0109は図形なし
-        self.assertEqual({v["area_group"] for v in p.values()}, {"CN", "HK", "MO", "TW", "REF"})
+        self.assertEqual(set(p), {"A0101/26", "A0102/26", "A0105/26"})   # 0109は図形なし
+        self.assertEqual({v["area_group"] for v in p.values()}, {"CN", "TW"})
         state = load(self.out, "state_active.json")
-        self.assertEqual(len(state), 7)                                   # 図形なしもstateには保持
+        self.assertEqual(len(state), 4)                                   # 図形なしもstateには保持
         self.assertFalse(any(r["icao_location"] in ("KZBW", "ZMUB") for r in state.values()))
 
-    def test_ref_fir_exact_match_not_prefix(self):
-        """周辺国の参考FIR(RPHI/KZAK)は4文字完全一致でのみ対象になり、
-        同じ2文字を持つ無関係な地点(例: K始まりの米国内, RJ始まりの日本国内の他空港)は
-        対象外のままであることを確認する（AREA_BY_PREFIXへの巻き込み事故の回帰防止）。"""
-        ref_hits = [
-            feat("A0201/26", "RPMM", "RPHI"),   # フィリピン・マニラFIR -> REF
-            feat("A0202/26", "PAOA", "KZAK"),   # オークランド洋上管制 -> REF
+    def test_issuer_and_china_involvement(self):
+        """2026-10-12〜: 全世界の差分から、北京・台北の発行と、本文に中国の関与を示す語句があるもの(発行元・FIRは問わない)だけを集める。"""
+        hits = [
+            feat("B0201/26", "RPHI", "RPHI", acc="RPLLYNYX",
+                 text="SPECIAL OPS (AEROSPACE FLT ACT) WILL BE CONDUCTED BY CHINA. EST FALL AREA"),   # マニラ発行・BY CHINA → REL
+            feat("A0202/26", "UHHH", "UHHH", acc="UHHHYNYX", text="LONG MARCH 2C ROCKET DEBRIS AREA"),  # ロシアFIR → REL
+            feat("A0203/26", "PAOA", "KZAK", acc="KZAK", text="SHENZHOU-23 RECOVERY OPS"),           # KZAK → REL
+            feat("A0204/26", "KJFK", "KZNY", acc="ZBBBYNYX"),                                        # 北京発行なら地名を問わず CN
+            feat("A0205/26", "ZSPD", "ZSHA", acc=None),                                              # 発行元なし・中国本土 → CN
+            feat("A0206/26", "RCKH", "RCAA", acc=None),                                              # 発行元なし・台湾 → TW
         ]
-        ref_miss = [
-            feat("A0301/26", "KJFK", "KZNY"),   # 米国内だが指定FIR(KZAK)ではない -> 対象外
-            feat("A0302/26", "RJTT", "RJTG"),   # 日本国内 -> 対象外
-            # 2026-09-28に対象から外したFIR
-            feat("A0203/26", "RJFF", "RJJJ"),   # 福岡FIR
-            feat("A0204/26", "RKSI", "RKRR"),   # 仁川FIR
-            feat("A0205/26", "ZKPY", "ZKKP"),   # 平壌FIR
+        miss = [
+            feat("A0301/26", "VHHH", "VHHK", acc="VHHHYNYX", text="RWY 07R CLSD"),                   # 香港発行
+            feat("B0302/26", "RPLL", "RPHI", acc="RPLLYNYX", text="CHINA SOUTHERN AIRLINES FLT"),    # 「CHINA」だけでは拾わない
+            feat("B0303/26", "RPLL", "RPHI", acc="RPLLYNYX", text="SOUTH CHINA SEA EXER"),
+            feat("A0304/26", "RCTP", "RCAA", acc="VHHHYNYX", text="CHINESE TAIPEI DELEGATION"),
+            feat("A0305/26", "RPHI", "RPHI", acc=None),                                              # 発行元なし・中国台湾以外
+            feat("A0306/26", "ZMUB", "ZMUB", acc="ZMUBYNYX"),                                        # モンゴル
         ]
-        self.put(ref_hits + ref_miss)
+        self.put(hits + miss)
         self.assertEqual(self.go(), 0)
         p = props(self.out)
-        self.assertEqual(set(p), {f["properties"]["coreNOTAMData"]["notam"]["number"] for f in ref_hits})
-        self.assertEqual({v["area_group"] for v in p.values()}, {"REF"})
+        self.assertEqual(set(p), {f["properties"]["coreNOTAMData"]["notam"]["number"] for f in hits})
+        self.assertEqual({k: v["area_group"] for k, v in p.items()},
+                         {"B0201/26": "REL", "A0202/26": "REL", "A0203/26": "REL", "A0204/26": "CN",
+                          "A0205/26": "CN", "A0206/26": "TW"})
+        self.assertEqual(p["B0201/26"]["china_terms"], ["BY CHINA"])
+        self.assertEqual(p["A0202/26"]["china_terms"], ["LONG MARCH"])
+        self.assertEqual(p["A0204/26"]["china_terms"], [])
+
+    def test_china_terms(self):
+        self.assertEqual(C.china_terms("AIRSPACE CLSD BY THE PEOPLE'S REPUBLIC OF CHINA"), ["BY CHINA"])
+        self.assertEqual(C.china_terms("LAUNCH OF CHINESE ROCKET FROM WENCHANG"), ["CHINESE", "中国の打ち上げ場"])
+        for t in ("CHINA SOUTHERN AIRLINES", "SOUTH CHINA SEA", "REF AIP CHINA ZJHK", "CATCHING UP TFC",
+                  "CHINESE TAIPEI", "CHINESE NEW YEAR FIREWORKS", "CHINA MEDICAL UNIVERSITY", "FLIGHT PLAN", "CHANGE"):
+            self.assertEqual(C.china_terms(t), [], t)
+
+    def test_archive_purged_and_regrouped(self):
+        """Archive からも対象外(香港発行等)が消え、残るものは area_group が今の判定に揃う。"""
+        self.put(BASE)
+        self.assertEqual(self.go(), 0)
+        arc = self.out / "archive"
+        arc.mkdir(exist_ok=True)
+        old = {"type": "FeatureCollection", "features": [
+            {"type": "Feature", "geometry": None, "properties": {"number": "X1/26", "issuer": "VHHHYNYX",
+             "icao_location": "VHHH", "fir": "VHHK", "area_group": "HK", "raw_text": "RWY CLSD"}},
+            {"type": "Feature", "geometry": None, "properties": {"number": "X2/26", "issuer": "RPLLYNYX",
+             "icao_location": "RPHI", "fir": "RPHI", "area_group": "REF", "raw_text": "OPS WILL BE CONDUCTED BY CHINA."}},
+            {"type": "Feature", "geometry": None, "properties": {"number": "X3/26", "issuer": None,
+             "icao_location": "ZBPE", "fir": "ZBPE", "area_group": "CN", "raw_text": "PASTED"}},
+        ]}
+        (arc / "notam_2026-01.geojson").write_text(json.dumps(old), encoding="utf-8")
+        self.assertEqual(self.go(), 0)
+        got = {f["properties"]["number"]: f["properties"] for f in
+               json.loads((arc / "notam_2026-01.geojson").read_text(encoding="utf-8"))["features"]}
+        self.assertEqual(set(got), {"X2/26", "X3/26"})
+        self.assertEqual(got["X2/26"]["area_group"], "REL")
+        self.assertEqual(got["X2/26"]["china_terms"], ["BY CHINA"])
 
     def test_dropped_fir_records_are_purged_from_state(self):
         """対象から外したFIR(RJJJ等)のレコードが state に残っていたら、次の収集で消える。"""
@@ -136,7 +185,8 @@ class Fixture(unittest.TestCase):
         self.assertEqual(self.go(), 0)
         state = load(self.out, "state_active.json")
         some = next(iter(state.values()))
-        state["old-rjjj"] = dict(some, id="old-rjjj", icao_location="RJFF", fir="RJJJ", area_group="REF")
+        state["old-rjjj"] = dict(some, id="old-rjjj", icao_location="RJFF", fir="RJJJ", area_group="REF",
+                                 account_id="RJAAYNYX", icao_text="RWY CLSD", text="RWY CLSD")
         (self.out / "state_active.json").write_text(json.dumps(state), encoding="utf-8")
         self.assertEqual(self.go(), 0)
         self.assertNotIn("old-rjjj", load(self.out, "state_active.json"))
@@ -144,7 +194,7 @@ class Fixture(unittest.TestCase):
     def test_nms_response_envelope_accepted(self):
         self.put(BASE, kind="envelope")
         self.assertEqual(self.go(), 0)
-        self.assertEqual(len(props(self.out)), 6)
+        self.assertEqual(len(props(self.out)), 3)                      # 北京2件・台北1件(2026-10-12〜)
 
     # --- 図形
     def test_geometry_rules(self):
@@ -315,7 +365,7 @@ class Fixture(unittest.TestCase):
         p = props(self.out)
         self.assertEqual(p["A0101/26"]["category"], "restriction")
         self.assertEqual(p["A0102/26"]["category"], "warning")
-        self.assertEqual(p["A0103/26"]["category"], "other")
+        self.assertEqual(C.q_category("QXXXX"), "other")       # 香港発行の A0103 は 2026-10-12〜収集しないので関数で確認
 
     def test_q_focus_tag(self):
         # 2026-09-24 staging実データの主要Qコードでの確認（§8-9・HANDOFF §「目的別分類」参照）
@@ -845,7 +895,7 @@ class ApiMode(unittest.TestCase):
     def test_bootstrap_il_gz(self):
         MockState.il_payload = gzip.compress(json.dumps({"status": "Success", "data": {"geojson": BASE}}).encode())
         self.assertEqual(run(self.out, "--bootstrap", "il", "--now", "2026-09-21T12:00:00Z", env=self.env), 0)
-        self.assertEqual(len(props(self.out)), 6)
+        self.assertEqual(len(props(self.out)), 3)                      # 北京2件・台北1件(2026-10-12〜)
         call = [q for p, q in MockState.seen if "classification" in q][0]
         self.assertEqual(call["classification"], "INTERNATIONAL")
         self.assertEqual(call["allowRedirect"], "false")
@@ -858,8 +908,8 @@ class ApiMode(unittest.TestCase):
         self.assertEqual(run(self.out, "--bootstrap", "locations", "--extra-locations", "ZSPD",
                              "--now", "2026-09-21T12:00:00Z", env=self.env), 0)
         asked = sorted(q["location"] for p, q in MockState.seen if "location" in q)
-        self.assertEqual(asked, ["VHHH", "ZBPE", "ZSPD"])          # KJFKは対象外なので聞かない
-        self.assertEqual(set(props(self.out)), {"A0101/26", "A0102/26", "A0103/26"})
+        self.assertEqual(asked, ["ZBPE", "ZSPD"])          # KJFK・VHHH(香港、2026-10-12〜)は対象外なので聞かない
+        self.assertEqual(set(props(self.out)), {"A0101/26", "A0102/26"})
 
     def test_dry_run_writes_nothing(self):
         self.assertEqual(run(self.out, "--dry-run", "--now", "2026-09-21T12:00:00Z", env=self.env), 0)

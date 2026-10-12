@@ -182,7 +182,9 @@ def main():
     print(f"{len(features)}件を変換 / {len(problems)}件をスキップ -> {a.out}")
     for f in features:
         n = f["properties"]["coreNOTAMData"]["notam"]
-        area = C.target_area(n) or "対象外(CN/HK/MO/TW/REF以外)"
+        text = next((t.get("formattedText") for t in f["properties"]["coreNOTAMData"].get("notamTranslation") or []
+                     if t.get("type") == "ICAO"), None)
+        area = C.target_area(n, text) or "対象外(北京・台北の発行でも中国の関与でもない)"
         print(f"  {n['number']:>10}  {n['icaoLocation']:<16} Q){n['selectionCode']}  -> {area}")
 
     if a.collect_out_dir:

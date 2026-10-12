@@ -74,7 +74,8 @@ Q_SUBJECT = {
     "WW": "顕著な火山活動", "WY": "航空写真・測量", "WZ": "模型飛行",
     "XX": "平文(該当コードなし)",
 }
-AREA_LABEL = {"CN": "中国本土", "HK": "香港", "MO": "マカオ", "TW": "台湾", "REF": "周辺国FIR(参考)"}
+AREA_LABEL = {"CN": "中国本土", "TW": "台湾", "REL": "他国発行・中国関与",
+              "HK": "香港", "MO": "マカオ", "REF": "周辺国FIR(参考)"}   # HK/MO/REF は 2026-10-11 以前の分
 STATUS_LABEL = {"active": "有効", "upcoming": "有効前", "expired": "失効", "cancelled": "取消", "cancel-notice": "取消通知"}
 
 
