@@ -94,6 +94,30 @@ class News(unittest.TestCase):
         empty.mkdir()
         self.assertEqual(self.run_once(empty), 2)                              # 全部失敗なら 2
 
+    def test_mna_list_parse(self):
+        items = N.parse_mna_list((FX / "mna_list.html").read_text(encoding="utf-8"))
+        self.assertEqual([i["published"] for i in items], ["2026-10-04", "2026-09-30"])   # 民國115年 → 2026年
+        self.assertEqual(items[1]["title"], "中共假「聯合戰備警巡」之名擾臺 國軍嚴密監控適切應處")   # 全角空白は半角に(RSSと同じ)
+        self.assertEqual(items[1]["url"], "https://mna.mnd.gov.tw/news/detail/?UserKey=ab7cc840-211f-4c09-a1fe-a973c7e745ad")
+
+    def test_import_json_is_backfilled_and_keeps_all(self):
+        self.run_once()
+        rows = [{"title": "中国海警舰艇编队1月7日在我钓鱼岛领海巡航", "date": "2024-01-07 10:00:00",
+                 "url": "https://www.ccg.gov.cn/wqzf/202401/t20240107_1000.html"},
+                {"title": "福建海警位金门附近海域开展执法巡查", "url": "https://www.ccg.gov.cn/hjyw/202312/t20231201_900.html"},
+                {"title": "リンクが記事でない", "url": "https://www.ccg.gov.cn/gjhz/"}]
+        f = self.tmp / "rows.json"
+        f.write_text(json.dumps(rows, ensure_ascii=False), encoding="utf-8")
+        self.assertEqual(N.main(["--out-dir", str(self.out), "--import-json", str(f)]), 0)
+        it = self.items()
+        a, b = it["ccg:20240107_1000"], it["ccg:20231201_900"]
+        self.assertTrue(a["backfilled"] and a["notify"] and a["matched"] == "在我钓鱼岛")
+        self.assertEqual((a["page"], a["published"]), ("ccg_wqzf", "2024-01-07T10:00:00"))
+        self.assertEqual((b["page"], b["published"], b["matched"]), ("ccg_hjyw", "2023-12-01", "金门"))
+        self.assertFalse(it["ccg:20261008_3248"].get("backfilled"))      # 普段の収集で入った分はそのまま
+        self.run_once()                                                     # 普段の収集の後も消えない(全件を蓄積)
+        self.assertIn("ccg:20231201_900", self.items())
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=1)
