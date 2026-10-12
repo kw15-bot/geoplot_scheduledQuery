@@ -5,7 +5,7 @@ data_crypt.py
 =============
 
 リポジトリ(公開)に置くデータと説明書きを暗号化する(HANDOFF_NOTAM.md §25)。
-対象: notam_out/ ・ msa_out/ ・ layers/ の *.json / *.geojson / *.md と、HANDOFF.md ・ HANDOFF_NOTAM.md。
+対象: notam_out/ ・ msa_out/ ・ layers/ ・ news_out/ の *.json / *.geojson / *.md と、HANDOFF.md ・ HANDOFF_NOTAM.md。
 コード(.py)とビューア(geoplot-mil.html)は平文のまま。
 
 リポジトリには暗号化したもの(元の名前 + ".enc"、例 notam_out/notam_cn.geojson.enc)だけを置き、
@@ -51,7 +51,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 ITER = 300000
 SALT = b"geoplot_scheduledQuery/data-v1"
-DATA_DIRS = ("notam_out", "msa_out", "layers")
+DATA_DIRS = ("notam_out", "msa_out", "layers", "news_out")
 DATA_SUFFIXES = (".json", ".geojson", ".md")
 DATA_FILES = ("HANDOFF.md", "HANDOFF_NOTAM.md")
 ENC = ".enc"

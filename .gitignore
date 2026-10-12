@@ -16,5 +16,7 @@ __pycache__/
 /layers/**/*.json
 /layers/**/*.geojson
 /layers/**/*.md
+/news_out/**/*.json
+/news_out/**/*.md
 /HANDOFF.md
 /HANDOFF_NOTAM.md

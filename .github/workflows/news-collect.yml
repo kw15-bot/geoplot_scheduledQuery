@@ -1,0 +1,60 @@
+name: News collect
+
+# 関連サイトの新しい投稿を集めて news_out/news.json(.enc) を更新する(news_collect.py、HANDOFF_NOTAM.md §27)。
+# ビューアはこれを10分おきに読み、まだ見ていない投稿を🔔通知に出す。
+#   中国海警局「海警要闻」 https://www.ccg.gov.cn/hjyw/
+#   台湾国防部 軍聞社「國防訊息」 https://mna.mnd.gov.tw/news/information/ (RSS から國防訊息だけ)
+# GitHub Actions の schedule は best-effort(数分〜数十分遅れることがある)。手動実行(workflow_dispatch)も可。
+on:
+  schedule:
+    - cron: "7,22,37,52 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-collect
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      # リポジトリのデータは暗号化(*.enc)だけ。ランナーの中でだけ平文に戻す(data_crypt.py、HANDOFF_NOTAM.md §25)
+      - name: Decrypt data
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+        run: |
+          pip install -q cryptography
+          python data_crypt.py decrypt news_out
+
+      # 片方のサイトに失敗しても、もう片方が取れれば成功(終了コード0)。両方失敗したら2で赤くなる
+      - name: Collect
+        run: python news_collect.py --out-dir news_out
+
+      # news_out/ はこのワークフローしか書かないので、他の収集の push と競合しても rebase で必ず解消できる
+      - name: Commit
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+        run: |
+          python data_crypt.py encrypt news_out
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add news_out/*.enc
+          if git diff --staged --quiet; then
+            echo "no changes"; exit 0
+          fi
+          git commit -m "Auto-update news.json [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
