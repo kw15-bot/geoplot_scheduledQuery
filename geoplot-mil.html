@@ -644,9 +644,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
        the right, which was the one mode with a different panel side. -->
   <div class="panel left" id="rightPanel">
     <div class="section" id="resultsSection">
-      <div class="section-title">
-        軍事関連の抽出結果
-      </div>
+      <!-- v3.9.1: 見出し「軍事関連の抽出結果」は削除(ユーザー指示。NOTAMパネルと同じく、タブから始める) -->
       <div class="tab-row" id="validityTabs">
         <button class="tab-btn active" data-tab="active">Active <span class="tab-n" id="tabCountActive">0</span></button>
         <button class="tab-btn" data-tab="notice">Upcoming <span class="tab-n" id="tabCountNotice">0</span></button>
@@ -864,7 +862,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v3.9.0';
+const APP_VERSION = 'v3.9.1';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -933,6 +931,7 @@ const APP_VERSION = 'v3.9.0';
 // v3.8.5: 「表示中をPDF」ボタンを並びの右端に寄せた(NOTAMは日付選択の右)。
 // v3.8.6: 「全表示/全非表示」を「全て表示/全て非表示」に(ユーザー指示)。
 // v3.9.0: NOTAMの収集を「北京・台北の発行＋中国の関与(本文の語句、他国発行も)」に変更したのに合わせ、他国が出した中国関与のNOTAM(発行元キー CN:REL、表示「中国関与(LONG MARCH)」等)を既定で表示。
+// v3.9.1: 航行警報パネルの見出し「軍事関連の抽出結果」を削除。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
