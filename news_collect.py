@@ -185,7 +185,9 @@ def parse_mna_rss(text, category):
                 published = email.utils.parsedate_to_datetime(pd).isoformat()
             except (TypeError, ValueError):
                 published = pd
-        out.append({"id": f"mna:{key}", "source": "mna", "title": title, "url": link, "published": published})
+        summary = strip_tags(_tag(item, "summary"))           # 一覧に出る要約(報道タブで使う。v4.1.0〜)
+        out.append({"id": f"mna:{key}", "source": "mna", "title": title, "url": link, "published": published,
+                    "summary": summary})
     return out
 
 
@@ -207,7 +209,9 @@ def parse_mna_list(text, base="https://mna.mnd.gov.tw/"):
         d = re.search(r"民國(\d{2,3})年(\d{1,2})月(\d{1,2})日", inner)
         published = f"{int(d.group(1)) + 1911:04d}-{int(d.group(2)):02d}-{int(d.group(3)):02d}" if d else ""
         seen.add(key)
-        out.append({"id": f"mna:{key}", "source": "mna", "title": title, "url": urljoin(base, href), "published": published})
+        sm = re.search(r'class=["\']summary["\'][^>]*>(.*?)</div>', inner, re.S)
+        out.append({"id": f"mna:{key}", "source": "mna", "title": title, "url": urljoin(base, href), "published": published,
+                    "summary": strip_tags(sm.group(1)) if sm else ""})
     return out
 
 
