@@ -605,7 +605,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
           <button class="btn small ghost" id="btnNotifClearAll">全て既読</button>
         </div>
         <div id="notifList"></div>
-        <div class="empty-hint" id="notifEmptyHint">新着はありません。航行警報・NOTAMの自動更新と、関連サイト（中国海警局「海警要闻」・台湾国防部 軍聞社「國防訊息」）の新しい投稿がここへ追加されます。</div>
+        <div class="empty-hint" id="notifEmptyHint">新着はありません。航行警報・NOTAMの自動更新と、関連サイトの決まった見出しの投稿（中国海警局: 台湾岛以东の常态化执法巡查・在我钓鱼岛・金门／台湾国防部 軍聞社 國防訊息: 聯合戰備警巡）がここへ追加されます。</div>
       </div>
     </div>
   </div>
@@ -863,7 +863,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.0.0';
+const APP_VERSION = 'v4.0.1';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -935,6 +935,7 @@ const APP_VERSION = 'v4.0.0';
 // v3.9.1: 航行警報パネルの見出し「軍事関連の抽出結果」を削除。
 // v3.9.2: 距離計測のパネルと座標表示の間を空けた。「OpenStreetMap / EPSG:4326」を帰属表示のすぐ上・左端揃えに移した(ズームボタンと重ならない)。
 // v4.0.0: 🔔通知に関連サイト(中国海警局「海警要闻」・台湾国防部 軍聞社「國防訊息」)の新しい投稿を追加(news_out/news.json、news_collect.py)。クリックで元記事を開く。
+// v4.0.1: 関連サイトの通知を見出しで絞った(中国海警局 海警要闻・维权执法: 台湾岛以东…常态化执法巡查/在我钓鱼岛/金门、軍聞社 國防訊息: 聯合戰備警巡)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -2845,12 +2846,16 @@ try{
 
 try{ seenKeys = new Set(JSON.parse(localStorage.getItem(SEEN_KEY) || '[]')); }catch(e){ /* ignore corrupt storage */ }
 // 関連サイトの新着(v4.0.0、news_out/news.json)。初めて読んだときはその時点の分を既読にし、以後に増えたものだけを通知する
+// v4.0.1〜 一覧(page: ccg_hjyw / ccg_wqzf / mna)ごとに「初めて読んだ」を持つ(一覧を後から足しても、その時点の分で通知が溢れない)
 const SEEN_NEWS_KEY = 'geoplotMil_seenNewsIds';
+const SEEN_NEWS_PAGES_KEY = 'geoplotMil_seenNewsPages';
 let seenNewsIds = new Set();
+let seenNewsPages = new Set();
 let newsNotifBaselined = false;
 try{
   const raw = localStorage.getItem(SEEN_NEWS_KEY);
   if (raw !== null){ seenNewsIds = new Set(JSON.parse(raw)); newsNotifBaselined = true; }
+  seenNewsPages = new Set(JSON.parse(localStorage.getItem(SEEN_NEWS_PAGES_KEY) || '[]'));
 }catch(e){ /* ignore corrupt storage */ }
 try{
   (JSON.parse(localStorage.getItem(PENDING_KEY) || '[]')).forEach(p => pendingNotifications.set(p.key, p));
@@ -2863,7 +2868,10 @@ function persistNotificationState(){
     localStorage.setItem(SEEN_KEY, JSON.stringify([...seenKeys].slice(-4000))); // cap growth
     localStorage.setItem(PENDING_KEY, JSON.stringify([...pendingNotifications.values()]));
     if (notamNotifBaselined) localStorage.setItem(SEEN_NOTAM_KEY, JSON.stringify([...seenNotamKeys].slice(-4000)));
-    if (newsNotifBaselined) localStorage.setItem(SEEN_NEWS_KEY, JSON.stringify([...seenNewsIds].slice(-4000)));
+    if (newsNotifBaselined){
+      localStorage.setItem(SEEN_NEWS_KEY, JSON.stringify([...seenNewsIds].slice(-4000)));
+      localStorage.setItem(SEEN_NEWS_PAGES_KEY, JSON.stringify([...seenNewsPages]));
+    }
   }catch(e){ /* storage full/unavailable — notifications still work for this session */ }
 }
 
@@ -2944,32 +2952,34 @@ function registerNotamsForNotifications(feats){
   updateNotifBadge();
 }
 
-// 関連サイト(中国海警局「海警要闻」・台湾国防部 軍聞社「國防訊息」)の新しい投稿(v4.0.0)。
-// news_collect.py(news-collect.yml、15分おき)が news_out/news.json に書いた items を、まだ見ていない id だけ通知に足す。
-// 通知をクリックすると元の記事を新しいタブで開く(地図は動かさない)。
+// 関連サイトの新しい投稿(v4.0.0、v4.0.1〜見出しで絞る)。news_collect.py(news-collect.yml、15分おき)が news_out/news.json に
+// 書いた items のうち、見出しが通知の規則に当たったもの(notify。中国海警局: 台湾岛以东…常态化执法巡查・在我钓鱼岛・金门、
+// 軍聞社 國防訊息: 聯合戰備警巡)で、まだ見ていない id だけを通知に足す。クリックで元の記事を新しいタブで開く(地図は動かさない)。
+// 一覧(page)を初めて読んだときは、その時点の分を既読にする(通知しない)。
 function registerNewsForNotifications(state){
   const items = (state && state.items) || [];
-  const names = (state && state.sources) || {};
-  if (!newsNotifBaselined){
-    items.forEach(it => seenNewsIds.add(it.id));
-    newsNotifBaselined = true;
-    persistNotificationState();
-    return;
-  }
+  const sources = (state && state.sources) || {};
+  const pageOf = it => it.page || it.source;
+  const firstPages = new Set(items.map(pageOf).filter(pg => !newsNotifBaselined || !seenNewsPages.has(pg)));
   let addedAny = false;
-  items.slice().reverse().forEach(it=>{                     // 古い順に足す(一覧は新しいものが上に来るよう描画時に並べる)
+  items.slice().reverse().forEach(it=>{                     // 古い順に足す
     if (seenNewsIds.has(it.id)) return;
     seenNewsIds.add(it.id);
+    if (firstPages.has(pageOf(it)) || !it.notify) return;   // 初めて読んだ一覧の分・見出しが規則に当たらないものは通知しない
     const k = 'news:' + it.id;
     if (pendingNotifications.has(k)) return;
+    const src = sources[it.source] || {};
+    const pg = (src.pages || {})[it.page] || {};
     const pub = String(it.published || '');
     pendingNotifications.set(k, {
       key: k, kind: 'news', title: it.title, url: it.url,
-      bureau: (names[it.source] && names[it.source].name) || it.source,
+      bureau: pg.name || src.name || it.source,
       date: pub.slice(0, 16).replace('T', ' '),
     });
     addedAny = true;
   });
+  firstPages.forEach(pg => seenNewsPages.add(pg));
+  newsNotifBaselined = true;
   if (addedAny) renderNotifPanel();
   persistNotificationState();
   updateNotifBadge();
