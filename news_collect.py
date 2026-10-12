@@ -6,17 +6,23 @@ news_collect.py
 
 ビューア(geoplot-mil.html)の🔔通知に出す「新しい投稿」を集める(2026-10-12〜、HANDOFF_NOTAM.md §27)。
 
-対象(SOURCES):
-  ccg  中国海警局「海警要闻」  https://www.ccg.gov.cn/hjyw/
-       一覧ページのHTMLから、記事へのリンク(<月>/t<日付>_<番号>.html)と見出しを拾う。
-  mna  国防部 軍聞社「國防訊息」 https://mna.mnd.gov.tw/news/information/
-       一覧と同じ記事を RSS(https://mna.mnd.gov.tw/K2S/RSS、最近3か月の全カテゴリ)から取り、
-       カテゴリ(dc:subject)が「國防訊息」のものだけを使う(一覧ページのHTMLより構造が安定しているため)。
+対象(SOURCES)。投稿は全部保存し、見出しが「通知する見出し」(NOTIFY_RULES、ユーザー指定 2026-10-12)に当たるものに
+notify=true を付ける。ビューアは notify のものだけを🔔に出す。
+  ccg_hjyw  中国海警局「海警要闻」 https://www.ccg.gov.cn/hjyw/
+  ccg_wqzf  中国海警局「维权执法」 https://www.ccg.gov.cn/wqzf/
+            ユーザー指定は 海警要闻→「中国海警位中国台湾岛以东海域依法开展常态化执法巡查」、维权执法→「在我钓鱼岛」「金门」。
+            同じ種類の記事がどちらの一覧に載ることもある(例: 台湾岛以东 の 2026-09-02 は维权执法だけ)ので、3つとも両方の一覧に使う。
+            どちらも一覧ページのHTMLから、記事へのリンク(<月>/t<日付>_<番号>.html)と見出し(リンクの文字)を拾う。
+            同じ記事が両方の一覧に載ることがある(id は同じ。どちらかの規則に当たれば notify)。
+  mna       国防部 軍聞社「國防訊息」 https://mna.mnd.gov.tw/news/information/ → 「聯合戰備警巡」
+            一覧と同じ記事を RSS(https://mna.mnd.gov.tw/K2S/RSS、最近3か月の全カテゴリ)から取り、
+            カテゴリ(dc:subject)が「國防訊息」のものだけを使う(一覧ページのHTMLより構造が安定しているため)。
 
 出力: news_out/news.json(リポジトリには暗号化した news_out/news.json.enc だけを置く。data_crypt.py)
   {"sources": {id: {"name", "url", "last_ok_date", "last_error", "last_error_at"}},
-   "items": [{"id", "source", "title", "url", "published", "first_seen"}, ...]}   新しい順、ソースごとに最大 KEEP_PER_SOURCE 件
-  ビューアは items を読み、まだ見ていない id を通知に出す(初めて読んだときはその時点の分を既読にする)。
+   "items": [{"id", "source", "page", "title", "url", "published", "first_seen", "notify", "matched"}, ...]}
+  新しい順、ソースごとに最大 KEEP_PER_SOURCE 件。page は見つかった一覧(ccg_hjyw / ccg_wqzf / mna)。
+  ビューアは notify の付いた、まだ見ていない id を通知に出す(一覧ごとに、初めて読んだときはその時点の分を既読にする)。
 
 取得に失敗したソースは前回の items をそのまま残し、last_error に理由を書く。全ソースが失敗したら終了コード 2。
 使い方: python news_collect.py [--out-dir news_out] [--fixture-dir DIR]   (fixture: <id>.html / <id>.xml を読む。テスト用)
@@ -38,10 +44,22 @@ KEEP_PER_SOURCE = 100
 TIMEOUT = 40
 UA = "Mozilla/5.0 (compatible; geoplot-news/1.0)"
 
+# 中国海警局の2つの一覧に共通の、通知する見出し(正規表現、どれかに当たれば通知)。
+# 「台湾岛以东」はユーザー指定の「…依法开展常态化执法巡查」のほか、「依法」の無い見出し(2026-07-04)もあったので両方
+CCG_NOTIFY = [r"中国台湾岛以东海域(?:依法)?开展常态化执法巡查", r"在我钓鱼岛", r"金门"]
+# source(保存の単位) -> 読む一覧(page)。page ごとに、通知する見出しの規則(None は CCG_NOTIFY)
 SOURCES = {
-    "ccg": {"name": "中国海警局 海警要闻", "url": "https://www.ccg.gov.cn/hjyw/", "fetch": "https://www.ccg.gov.cn/hjyw/"},
-    "mna": {"name": "國防部 軍聞社 國防訊息", "url": "https://mna.mnd.gov.tw/news/information/",
-            "fetch": "https://mna.mnd.gov.tw/K2S/RSS", "category": "國防訊息"},
+    "ccg": {"name": "中国海警局", "pages": [
+        {"page": "ccg_hjyw", "name": "中国海警局 海警要闻", "url": "https://www.ccg.gov.cn/hjyw/", "kind": "ccg",
+         "notify": None},
+        {"page": "ccg_wqzf", "name": "中国海警局 维权执法", "url": "https://www.ccg.gov.cn/wqzf/", "kind": "ccg",
+         "notify": None},
+    ]},
+    "mna": {"name": "國防部 軍聞社", "pages": [
+        {"page": "mna", "name": "國防部 軍聞社 國防訊息", "url": "https://mna.mnd.gov.tw/news/information/",
+         "fetch": "https://mna.mnd.gov.tw/K2S/RSS", "kind": "mna_rss", "category": "國防訊息",
+         "notify": [r"聯合戰備警巡"]},
+    ]},
 }
 
 
@@ -82,7 +100,7 @@ def parse_ccg(text, base):
         else:
             published = f"{ymd[:4]}-{ymd[4:6]}-{ymd[6:]}"
         url = urljoin(base, href)
-        if "/hjyw/" not in url:          # 横の欄(维权执法・国际合作など)の記事は除く
+        if "/hjyw/" not in url and "/wqzf/" not in url:      # 横の欄(国际合作など)の記事は除く
             continue
         iid = f"ccg:{ymd}_{num}"
         if iid not in found or len(title) > len(found[iid]["title"]):
@@ -126,9 +144,18 @@ def parse_mna_rss(text, category):
 
 
 PARSERS = {
-    "ccg": lambda text, src: parse_ccg(text, src["fetch"]),
-    "mna": lambda text, src: parse_mna_rss(text, src.get("category")),
+    "ccg": lambda text, pg: parse_ccg(text, pg["url"]),
+    "mna_rss": lambda text, pg: parse_mna_rss(text, pg.get("category")),
 }
+
+
+def notify_match(title, rules):
+    """見出しが通知の規則のどれかに当たれば、当たった部分を返す(無ければ None)。"""
+    for rx in rules:
+        m = re.search(rx, title or "")
+        if m:
+            return m.group(0)
+    return None
 
 
 # ----------------------------------------------------------------------------- 本体
@@ -140,6 +167,8 @@ def merge(state, sid, fetched, now):
         if it["id"] in old:
             prev = old[it["id"]]
             it["first_seen"] = prev.get("first_seen") or now
+            if prev.get("notify") and not it.get("notify"):      # 前に通知の規則に当たった記事は、そのまま通知対象に
+                it.update({"notify": True, "matched": prev.get("matched"), "page": prev.get("page", it.get("page"))})
         else:
             it["first_seen"] = now
             added += 1
@@ -165,27 +194,45 @@ def main(argv=None):
     summary = {}
     for sid, src in SOURCES.items():
         meta = state["sources"].setdefault(sid, {})
-        meta.update({"name": src["name"], "url": src["url"]})
-        try:
-            if a.fixture_dir:
-                fx = next((p for p in (Path(a.fixture_dir) / f"{sid}.html", Path(a.fixture_dir) / f"{sid}.xml") if p.exists()), None)
-                if not fx:
-                    raise FileNotFoundError(f"fixture {sid}.html/.xml が無い")
-                text = fx.read_text(encoding="utf-8")
-            else:
-                text = http_get(src["fetch"])
-            items = PARSERS[sid](text, src)
-            if not items:
-                raise ValueError("記事を1件も読み取れなかった(ページの作りが変わった可能性)")
-            added = merge(state, sid, items, now)
+        meta["name"] = src["name"]
+        meta.pop("url", None)
+        meta["pages"] = {pg["page"]: {"name": pg["name"], "url": pg["url"]} for pg in src["pages"]}
+        found, errors = {}, []
+        for pg in src["pages"]:
+            try:
+                if a.fixture_dir:
+                    fx = next((p for p in (Path(a.fixture_dir) / f"{pg['page']}.html", Path(a.fixture_dir) / f"{pg['page']}.xml")
+                               if p.exists()), None)
+                    if not fx:
+                        raise FileNotFoundError(f"fixture {pg['page']}.html/.xml が無い")
+                    text = fx.read_text(encoding="utf-8")
+                else:
+                    text = http_get(pg.get("fetch") or pg["url"])
+                items = PARSERS[pg["kind"]](text, pg)
+                if not items:
+                    raise ValueError("記事を1件も読み取れなかった(ページの作りが変わった可能性)")
+                for it in items:
+                    hit = notify_match(it["title"], pg["notify"] or CCG_NOTIFY)
+                    it.update({"source": sid, "page": pg["page"], "notify": bool(hit), "matched": hit})
+                    prev = found.get(it["id"])
+                    if prev:                                  # 両方の一覧に載っている記事: どちらかで当たれば通知
+                        if hit and not prev["notify"]:
+                            prev.update({"notify": True, "matched": hit, "page": pg["page"]})
+                    else:
+                        found[it["id"]] = it
+            except (urllib.error.URLError, OSError, ValueError) as e:
+                errors.append(f"{pg['page']}: {type(e).__name__}: {e}")
+        if found:
+            added = merge(state, sid, list(found.values()), now)
+            ok += 1
+            summary[sid] = {"fetched": len(found), "new": added, "notify": sum(i["notify"] for i in found.values())}
+        if errors:
+            meta.update({"last_error": "; ".join(errors), "last_error_at": now})
+            summary.setdefault(sid, {})["error"] = meta["last_error"]
+            print(f"[WARN] {sid}: {meta['last_error']}", file=sys.stderr)
+        else:
             # 成功時刻を毎回書くと15分ごとにコミットが出るので、日付だけ持つ(新着・エラー・日付が変わったときだけファイルが変わる)
             meta.update({"last_ok_date": now[:10], "last_error": None, "last_error_at": None})
-            summary[sid] = {"fetched": len(items), "new": added}
-            ok += 1
-        except (urllib.error.URLError, OSError, ValueError) as e:
-            meta.update({"last_error": f"{type(e).__name__}: {e}", "last_error_at": now})
-            summary[sid] = {"error": meta["last_error"]}
-            print(f"[WARN] {sid}: {meta['last_error']}", file=sys.stderr)
     out.mkdir(parents=True, exist_ok=True)
     text = json.dumps(state, ensure_ascii=False, indent=1, sort_keys=True) + "\n"
     if not path.exists() or path.read_text(encoding="utf-8") != text:
