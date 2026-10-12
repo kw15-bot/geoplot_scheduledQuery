@@ -104,6 +104,12 @@ def http_get(url):
             return _get_once(url, referer=top)
         except (urllib.error.URLError, OSError) as e:
             last = e
+            if isinstance(e, urllib.error.HTTPError):       # どんな拒否か(JavaScriptの検査ページ等)をログで見られるよう、本文の先頭を出す
+                try:
+                    body = e.read(600).decode("utf-8", "replace")
+                except OSError:
+                    body = ""
+                print(f"[HTTP {e.code}] {url} headers={dict(e.headers)} body={body!r}", file=sys.stderr)
             if i < RETRIES - 1:
                 time.sleep(RETRY_WAIT * (i + 1))
     raise last
@@ -263,7 +269,8 @@ def main(argv=None):
             ok += 1
             summary[sid] = {"fetched": len(found), "new": added, "notify": sum(i["notify"] for i in found.values())}
         if errors:
-            meta.update({"last_error": "; ".join(errors), "last_error_at": now})
+            # 時刻まで書くと、失敗が続く間は毎回ファイルが変わってコミットされるので、日付だけ
+            meta.update({"last_error": "; ".join(errors), "last_error_at": now[:10]})
             summary.setdefault(sid, {})["error"] = meta["last_error"]
             print(f"[WARN] {sid}: {meta['last_error']}", file=sys.stderr)
         else:
