@@ -349,7 +349,8 @@ body.dark-mode .toolbar-sep{background:rgba(255,255,255,.18);}
 .measure-control a:hover{color:var(--cyan)!important;}
 .measure-control a.active{color:#fff!important;background:var(--cyan)!important;}
 .measure-panel{
-  display:none;position:absolute;left:12px;bottom:44px;z-index:500;
+  /* v3.9.2: 下の座標表示(.readout、高さ約34px・下から12px)と詰まって見えたので、間を約10px空ける(bottom 44→56px) */
+  display:none;position:absolute;left:12px;bottom:56px;z-index:500;
   background:rgba(255,255,255,.92);border:1px solid var(--border-bright);border-radius:8px;
   padding:10px 12px;max-width:280px;backdrop-filter:blur(3px);
 }
@@ -862,7 +863,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v3.9.1';
+const APP_VERSION = 'v3.9.2';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -932,6 +933,7 @@ const APP_VERSION = 'v3.9.1';
 // v3.8.6: 「全表示/全非表示」を「全て表示/全て非表示」に(ユーザー指示)。
 // v3.9.0: NOTAMの収集を「北京・台北の発行＋中国の関与(本文の語句、他国発行も)」に変更したのに合わせ、他国が出した中国関与のNOTAM(発行元キー CN:REL、表示「中国関与(LONG MARCH)」等)を既定で表示。
 // v3.9.1: 航行警報パネルの見出し「軍事関連の抽出結果」を削除。
+// v3.9.2: 距離計測のパネルと座標表示の間を空けた。「OpenStreetMap / EPSG:4326」を帰属表示のすぐ上・左端揃えに移した(ズームボタンと重ならない)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -1652,6 +1654,26 @@ const map = L.map('map', { zoomControl:false, worldCopyJump:false, renderer: L.c
 map.fitBounds(FULL_VIEW_BOUNDS);
 let _initialViewFitted = false; // enterMode() does the real fit exactly once, after layout settles
 L.control.zoom({ position:'bottomright' }).addTo(map);
+// 「OpenStreetMap / EPSG:4326」(#scaleNote)は、右下の帰属表示(Leaflet | © OpenStreetMap…)のすぐ上に、左端を揃えて置く
+// (v3.9.2。以前は右下の角に固定で、ズームボタンと重なっていた)。帰属表示の幅はベースマップで変わるので、
+// 地図や帰属表示の大きさが変わるたびに置き直す。
+function positionScaleNote(){
+  const note = $('#scaleNote'), attr = map.getContainer().querySelector('.leaflet-control-attribution');
+  if (!note || !attr) return;
+  const mapRect = map.getContainer().getBoundingClientRect(), a = attr.getBoundingClientRect();
+  if (!a.width) return;
+  note.style.right = 'auto';
+  note.style.left = `${Math.round(a.left - mapRect.left)}px`;
+  note.style.bottom = `${Math.round(mapRect.bottom - a.top + 4)}px`;
+}
+map.on('resize', positionScaleNote);
+map.whenReady(positionScaleNote);
+if (window.ResizeObserver){
+  const ro = new ResizeObserver(positionScaleNote);
+  ro.observe(map.getContainer());
+  const attrEl = map.getContainer().querySelector('.leaflet-control-attribution');
+  if (attrEl) ro.observe(attrEl);
+}
 
 // ベースマップ切り替え(OSM / Esri World Imagery衛星写真)。どちらもAPIキー不要の
 // 無料タイル。切り替えは addLayer/removeLayer で行う(display非表示にするだけだと
