@@ -1,0 +1,59 @@
+name: NAVWAR drawing check
+
+# 航行警報(msa_out/military.geojson)が本文どおりに描けているかを1日1回点検し(msa_check.py)、
+# msa_out/reports/msa_check_YYYY-MM-DD.md と latest.md に書き出す。
+# 円・円弧・扇形を描けていない、座標の数が合わない、辺が交差している、範囲外・巨大な図形、期間不明 など。
+#
+# 毎日 23:47 UTC(= 08:47 JST)。schedule は best-effort で遅れることがあるが、日次なので許容する。手動実行も可。
+on:
+  schedule:
+    - cron: "47 23 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: msa-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Decrypt data
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+        run: |
+          pip install -q cryptography requests beautifulsoup4
+          python data_crypt.py decrypt msa_out
+
+      - name: Check drawings
+        run: python msa_check.py --out-dir msa_out
+
+      # reports/ はこのワークフローしか書かない(収集側の commit_state.py は geojson と state.json だけ)ので、
+      # 収集の push と競合しても rebase で必ず解消できる。
+      - name: Commit report
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+        run: |
+          python data_crypt.py encrypt msa_out/reports
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add msa_out/reports/*.enc
+          if git diff --staged --quiet; then
+            echo "no changes"; exit 0
+          fi
+          git commit -m "NAVWAR drawing check $(date -u +%Y-%m-%d) [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

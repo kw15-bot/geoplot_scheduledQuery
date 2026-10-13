@@ -216,7 +216,7 @@ MANUALLY_EXCLUDED_OWN_IDS = {
 DETAIL_EXTRACTION_VERSION = 20
 # ログに出力して、Actions上で「どの版のスクリプトが実際に走ったか」を後から確認できるようにする。
 # 挙動を変える修正を入れたら更新すること。
-SCRIPT_REVISION = "2026-09-22 bare-date-chain validity + multi-period-per-area / shared-period carry-forward (windows) validity"
+SCRIPT_REVISION = "2026-10-13 circle 「…为半径的范围」 + sector arc between two 端点 (offline shape backfill)"
 
 # If an article's detail fetch keeps failing with a stale-access-token redirect (see
 # fetch()'s "想定外のURLへリダイレクトされました" check below), it usually means the
@@ -994,7 +994,27 @@ _CIRCLE_RE = re.compile(
     r"为(?:圆心|中心)\s*[，,]?\s*"
     r"(?:半径\s*(?P<r1>[\d.]+)\s*(?P<u1>千米|公里|海里|米)"
     r"|(?P<r2>[\d.]+)\s*(?P<u2>千米|公里|海里|米)\s*为半径)"
-    r"\s*的?\s*圆形"
+    r"\s*的?\s*(?:圆形|范围|区域|海域|水域)"   # 2026-10-13: 辽航警423/26「…为圆心，2海里为半径的范围内」も円にする
+    r"(?![^。；;]{0,15}扇形)"
+)
+
+# 2026-10-13: 頂点・2つの端点と「以顶点为中心半径X公里的部分圆弧将两个端点连接」で書かれた区域
+# (冀航警466/481/535/560/573/26 など、N39°24′35″ E119°13′44″ を頂点とする実弾射撃区域)。
+# これまでは4点の多角形になり、2つの端点の間が円弧ではなく直線で結ばれて実際より狭く描かれていた。
+# 2つの端点の間に、頂点を中心とする半径Xの円弧上の点(短い側の弧、約3°おき)を足す。
+# 同じ区域の別の書き方(冀航警595/600/617/641/26):「以V为顶点，正东方向至正南偏西6°、圆心角为96°的扇形区域。
+# 该扇形区域所对应圆弧的2个端点坐标分别为P1和P2」。半径は書かれていないので、頂点から端点までの距離を使う。
+_SECTOR_ARC_RE = re.compile(
+    r"以\s*顶点\s*为\s*(?:圆心|中心)\s*[，,]?\s*半径\s*(?P<r>[\d.]+)\s*(?P<u>千米|公里|海里|米)\s*的\s*(?:部分)?圆弧"
+    r"|圆弧的?\s*(?:2|两|二)\s*个\s*端点坐标"
+)
+_CENTRAL_ANGLE_RE = re.compile(r"圆心角\s*为?\s*(?P<a>[\d.]+)\s*°")
+
+# 中心・方位・半径で書かれた扇形(沪航警561/722/26):「以C为圆心，方位158°-194°，半径5千米的扇形的海域」。
+# 中心と、方位 a°→b°(北から時計回り)の円弧上の点で多角形にする。
+_BEARING_SECTOR_RE = re.compile(
+    r"为(?:圆心|中心)\s*[，,]?\s*方位\s*(?P<a>[\d.]+)\s*°?\s*[-—~至到]\s*(?P<b>[\d.]+)\s*°\s*[，,]?\s*"
+    r"半径\s*(?P<r>[\d.]+)\s*(?P<u>千米|公里|海里|米)\s*的?\s*扇形"
 )
 
 
@@ -1043,7 +1063,7 @@ def _expand_circles(text, points):
             continue
         best_idx, best_end = None, -1
         for i, p in enumerate(points):
-            if i in replacements:
+            if i in replacements or p.get("fmt") in ("SECTOR", "ARC"):
                 continue
             if p["end"] <= m.start() and (m.start() - p["end"]) <= 30 and p["end"] > best_end:
                 best_idx, best_end = i, p["end"]
@@ -1072,10 +1092,105 @@ def _expand_circles(text, points):
         # 同じ中心点が再度書かれるケース。除外しないと円のリングに余計な1点が
         # 混入して形が歪む。扇形自体の範囲は表現できないままなので不完全だが、
         # 円だけは正しい形で残す方を優先している。
-        if (round(p["lat"], 6), round(p["lon"], 6)) in circle_centers:
+        if p.get("fmt") not in ("SECTOR", "ARC") and (round(p["lat"], 6), round(p["lon"], 6)) in circle_centers:
             continue
         result.append(p)
     return result, extra_boundaries
+
+
+def _arc_points(c_lat, c_lon, radius_km, b_from, span, label, start, end, step_deg=3.0, include_ends=False):
+    """中心 (c_lat, c_lon) から半径 radius_km の円弧上の点。方位 b_from(ラジアン、北=0・東=+)から span だけ回る。"""
+    lon_scale = 111.32 * math.cos(math.radians(c_lat)) or 111.32
+    n = max(2, int(math.ceil(abs(math.degrees(span)) / step_deg)))
+    ks = range(0, n + 1) if include_ends else range(1, n)
+    return [{"lat": c_lat + radius_km * math.cos(b_from + span * k / n) / 111.32,
+             "lon": c_lon + radius_km * math.sin(b_from + span * k / n) / lon_scale,
+             "raw": label, "fmt": "ARC", "start": start, "end": end} for k in ks]
+
+
+def _expand_sector_arcs(text, points):
+    """頂点と2つの端点で書かれた区域(_SECTOR_ARC_RE)なら、2つの端点の間に、頂点を中心とする円弧上の点を足す。
+    頂点 = 直後(8文字以内)に「为顶点」が続く点。端点 = 直後(5文字以内)に「端点」が続く点、
+    または「…2个端点坐标(分别)为」の後ろの2点。円弧は短い側(「圆心角为X°」があればそれに近い側)。
+    どれかが見つからないときは何もしない。"""
+    m = _SECTOR_ARC_RE.search(text)
+    if not m or not points:
+        return points
+    vertex = next((p for p in points
+                   if re.match(r"\s*[，,]?\s*为\s*顶点", text[p["end"]:p["end"] + 8])), None)
+    if m.group("r") is None:                       # 「…2个端点坐标分别为P1和P2」
+        ends = [i for i, p in enumerate(points) if p["start"] >= m.end()][:2]
+    else:
+        ends = [i for i, p in enumerate(points) if p["end"] <= m.start()
+                and re.match(r"\s*[，,]?\s*端点", text[p["end"]:p["end"] + 5])]
+    if vertex is None or len(ends) != 2:
+        return points
+    lon_scale = 111.32 * math.cos(math.radians(vertex["lat"]))
+
+    def polar(p):          # 頂点から見た (方位ラジアン 北=0 東=+, 距離km)
+        dx, dy = (p["lon"] - vertex["lon"]) * lon_scale, (p["lat"] - vertex["lat"]) * 111.32
+        return math.atan2(dx, dy), math.hypot(dx, dy)
+    (b1, d1), (b2, d2) = polar(points[ends[0]]), polar(points[ends[1]])
+    if m.group("r") is not None:
+        radius_km = float(m.group("r")) * _CIRCLE_UNIT_KM[m.group("u")]
+        label_r = f"{m.group('r')}{m.group('u')}"
+    else:
+        radius_km = (d1 + d2) / 2
+        label_r = f"{radius_km:.1f}km(頂点から端点まで)"
+    span = (b2 - b1 + math.pi) % (2 * math.pi) - math.pi     # 短い側の弧(符号つき)
+    ca = _CENTRAL_ANGLE_RE.search(text)
+    if ca and abs(abs(math.degrees(span)) - float(ca.group("a"))) > 30:
+        span = span - math.copysign(2 * math.pi, span)       # 書かれた中心角に合うのは長い側
+    first = points[ends[0]]
+    arc = _arc_points(vertex["lat"], vertex["lon"], radius_km, b1, span,
+                      f"頂点{vertex['raw']}を中心とする半径{label_r}の円弧", first["start"], first["end"])
+    return points[:ends[0] + 1] + arc + points[ends[0] + 1:]
+
+
+def _expand_bearing_sectors(text, points):
+    """_BEARING_SECTOR_RE(中心・方位・半径の扇形)の中心点を、中心(fmt SECTOR)+円弧上の点に置き換える。
+    扇形は別の区域なので、前後をグループの切れ目にする。戻り値は (点リスト, 追加の境界オフセット)。"""
+    replacements, extra = {}, []
+    for m in _BEARING_SECTOR_RE.finditer(text):
+        best = None
+        for i, p in enumerate(points):
+            if i not in replacements and p["end"] <= m.start() and (m.start() - p["end"]) <= 30:
+                if best is None or p["end"] > points[best]["end"]:
+                    best = i
+        if best is None:
+            continue
+        try:
+            radius_km = float(m.group("r")) * _CIRCLE_UNIT_KM[m.group("u")]
+            a, b = float(m.group("a")), float(m.group("b"))
+        except (TypeError, ValueError, KeyError):
+            continue
+        c = points[best]
+        span_deg = (b - a) % 360 or 360
+        label = f"{c['raw']}を中心とする方位{m.group('a')}°-{m.group('b')}°・半径{m.group('r')}{m.group('u')}の扇形"
+        center = {**c, "fmt": "SECTOR", "raw": label}
+        replacements[best] = [center] + _arc_points(c["lat"], c["lon"], radius_km, math.radians(a),
+                                                    math.radians(span_deg), label, c["start"], c["end"],
+                                                    include_ends=True)
+        extra += [c["start"], c["end"] + 1]
+    if not replacements:
+        return points, []
+    out = []
+    for i, p in enumerate(points):
+        out.extend(replacements.get(i, [p]))
+    return out, extra
+
+
+def needs_shape_regroup(raw_text):
+    """円・円弧の記述があるのに、保存済みの groups が円/円弧の点を持たない記事を作り直すための判定に使う。"""
+    t = normalize_symbols(raw_text or "")
+    return bool(_CIRCLE_RE.search(t) or _SECTOR_ARC_RE.search(t) or _BEARING_SECTOR_RE.search(t))
+
+
+SHAPE_FMTS = ("CIRCLE", "ARC", "SECTOR")
+
+
+def shape_point_count(groups):
+    return sum(1 for g in groups or [] for p in g if p.get("fmt") in SHAPE_FMTS)
 
 
 def _prepare_points(raw_text: str):
@@ -1109,7 +1224,10 @@ def _prepare_points(raw_text: str):
                 })
             pending_lat = None
             pending_lon = None
+    points, sector_boundaries = _expand_bearing_sectors(text, points)
     points, circle_boundaries = _expand_circles(text, points)
+    circle_boundaries = list(circle_boundaries) + sector_boundaries
+    points = _expand_sector_arcs(text, points)
     boundaries = sorted(set(boundaries) | set(circle_boundaries))
     return text, points, markers, boundaries
 
@@ -2064,6 +2182,17 @@ def run_once(args, keywords):
                 if len(regrouped) != len(it["groups"]):
                     it["groups"] = regrouped
                     it["points"] = [p for g in regrouped for p in g]
+
+    # Shape backfill (2026-10-13): 円(「…为半径的范围」の言い回し、辽航警423/26)・頂点を中心とする
+    # 円弧(冀航警573/617/26 など)・中心と方位の扇形(沪航警561/26)に対応する前に保存された記事は、
+    # 円/円弧/扇形の点(fmt CIRCLE/ARC/SECTOR)の数が今の読み取りと違う。
+    # 保存済みの raw_text から作り直す(オフライン、再取得なし)。対象はその記述がある記事だけ。
+    for it in state.values():
+        if it.get("military") and it.get("raw_text") and it.get("groups") and needs_shape_regroup(it["raw_text"]):
+            regrouped = parse_coordinate_groups(it["raw_text"])
+            if shape_point_count(regrouped) != shape_point_count(it["groups"]):
+                it["groups"] = regrouped
+                it["points"] = [p for g in regrouped for p in g]
 
     # Validity backfill: an already-cached military article whose validity came out None
     # (e.g. 辽航警399/26, whose "9月22日、9月24日、9月29日，自0800时至1900时" wasn't
