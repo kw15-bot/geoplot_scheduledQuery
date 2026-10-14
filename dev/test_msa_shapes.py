@@ -17,6 +17,7 @@ JI_617 = ("渤海，9月15日0000时至9月19日2400时， 以N 39°24′35″�
           "该扇形区域所对应圆弧的2个端点坐标分别为N 39°24′14″、E 119°28′24″和N 39°13′13″、E 119°11′51″。该扇形区域内进行实弹射击活动。禁止驶入。")
 HU_561 = ("东海，2026年7月20日0600时至22日1200时，在以31-12.18N 123-42.69E为圆心，半径3千米的圆形海域内和以31-12.18N 123-42.69E为圆心，"
           "方位158°-194°，半径5千米的扇形的海域进行火箭发射。禁止驶入。")
+HU_811 = "长江口，10月15日0600时至1300时，在以31-24.54N/121-48.16E为圆心1海里范围内开展搜救演习，请各航船听从现场巡逻艇指挥，注意航行安全。"
 PLAIN = "南海，8月4日至5日，每天0600时至2000时，以下四点连线海域内进行实弹射击：22-42.17N 115-21.83E; 22-40.10N 115-33.43E; 22-35.50N 115-29.17E；22-38.53N 115-22.32E。禁止驶入。"
 
 
@@ -30,6 +31,13 @@ def test_circle_fanwei():
     assert len(g) == 1 and len(g[0]) == 64 and {p["fmt"] for p in g[0]} == {"CIRCLE"}
     c = {"lat": 38 + 52.14 / 60, "lon": 121 + 1.75 / 60}
     assert abs(km(g[0][0], c) - 2 * 1.852) < 0.05
+
+
+def test_circle_without_banjing():
+    g = M.parse_coordinate_groups(HU_811)
+    assert len(g) == 1 and len(g[0]) == 64 and {p["fmt"] for p in g[0]} == {"CIRCLE"}
+    c = {"lat": 31 + 24.54 / 60, "lon": 121 + 48.16 / 60}
+    assert abs(km(g[0][0], c) - 1.852) < 0.05
 
 
 def test_sector_arc_between_endpoints():
@@ -68,7 +76,7 @@ def _check(text):
 
 
 def test_check_clean_after_fix():
-    for t in (LIAO_423, JI_573, JI_617, HU_561, PLAIN):
+    for t in (LIAO_423, JI_573, JI_617, HU_561, HU_811, PLAIN):
         assert _check(t) == [], (t[:20], _check(t))
 
 
@@ -77,6 +85,8 @@ def test_check_flags_old_point():
             "groups": [[{"lat": 38.869, "lon": 121.029, "fmt": "NOTAM", "raw": "x"}]]}
     feats = [{"properties": {"group_index": 1}, "geometry": {"type": "Point", "coordinates": [121.029, 38.869]}}]
     assert any("描けていない" in s for s in C.check_item(item, feats))
+    item = {**item, "raw_text": HU_811}
+    assert any("描けていない" in s or "なっていない" in s for s in C.check_item(item, feats))
 
 
 if __name__ == "__main__":

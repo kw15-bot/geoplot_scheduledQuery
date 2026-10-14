@@ -993,7 +993,8 @@ _CIRCLE_UNIT_KM = {"千米": 1.0, "公里": 1.0, "海里": 1.852, "米": 0.001}
 _CIRCLE_RE = re.compile(
     r"为(?:圆心|中心)\s*[，,]?\s*"
     r"(?:半径\s*(?P<r1>[\d.]+)\s*(?P<u1>千米|公里|海里|米)"
-    r"|(?P<r2>[\d.]+)\s*(?P<u2>千米|公里|海里|米)\s*为半径)"
+    r"|(?P<r2>[\d.]+)\s*(?P<u2>千米|公里|海里|米)\s*为半径"
+    r"|(?P<r3>[\d.]+)\s*(?P<u3>千米|公里|海里|米))"     # 2026-10-14: 沪航警811/26「…为圆心1海里范围内」(「半径」が無い)
     r"\s*的?\s*(?:圆形|范围|区域|海域|水域)"   # 2026-10-13: 辽航警423/26「…为圆心，2海里为半径的范围内」も円にする
     r"(?![^。；;]{0,15}扇形)"
 )
@@ -1055,8 +1056,8 @@ def _expand_circles(text, points):
         return points, []
     replacements = {}
     for m in _CIRCLE_RE.finditer(text):
-        r_str = m.group("r1") or m.group("r2")
-        u_str = m.group("u1") or m.group("u2")
+        r_str = m.group("r1") or m.group("r2") or m.group("r3")
+        u_str = m.group("u1") or m.group("u2") or m.group("u3")
         try:
             radius_km = float(r_str) * _CIRCLE_UNIT_KM[u_str]
         except (TypeError, ValueError):
