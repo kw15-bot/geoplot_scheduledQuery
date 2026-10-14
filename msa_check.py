@@ -114,7 +114,7 @@ def check_item(item, feats):
             or (M._BEARING_SECTOR_RE.search(norm) and "SECTOR" not in fmts)):
         issues.append("円・円弧・扇形の記述があるのに、その形で描けていない")
     else:
-        for word in ("半径", "扇形", "圆弧"):
+        for word in ("半径", "扇形", "圆弧", "为圆心", "为中心"):
             if word in norm and not (set(M.SHAPE_FMTS) & fmts):
                 i = norm.find(word)
                 issues.append(f"「{word}」の記述があるのに円/円弧/扇形になっていない(…{norm[max(0, i - 25):i + 20]}…)")
