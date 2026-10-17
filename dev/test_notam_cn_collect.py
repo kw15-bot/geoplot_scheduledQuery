@@ -307,6 +307,20 @@ class Fixture(unittest.TestCase):
         self.assertEqual(arch(self.out)["A0120/26"]["status"], "cancelled")
         self.assertEqual(arch(self.out)["A0120/26"]["ended_by_type"], "C")   # ビューアでは「A0121/26により撤回」
 
+    def test_api_cancelation_date_before_start_archives(self):
+        """取消NOTAMを集めていなくても、APIの取消日(cancelationDate)が開始より前なら、開始を待たずにArchiveへ
+        (2026-10-17: RJJJ P5062/26・RPHI B5404/26 が差し替え後のNOTAMと二重に「予定」で出ていた)。"""
+        f = feat("A0130/26", "ZBPE", "ZBPE", start="2026-09-25T00:00:00.000Z", end="2026-09-26T00:00:00.000Z")
+        self.put([f])
+        self.go("2026-09-21T12:00:00Z")
+        self.assertEqual(props(self.out)["A0130/26"]["status"], "upcoming")
+        f["properties"]["coreNOTAMData"]["notam"]["cancelationDate"] = "2026-09-21T14:00:00.000Z"
+        f["properties"]["coreNOTAMData"]["notam"]["lastUpdated"] = "2026-09-21T14:00:00.000Z"
+        self.put([f])
+        self.go("2026-09-21T16:00:00Z")
+        self.assertNotIn("A0130/26", props(self.out))
+        self.assertEqual(arch(self.out)["A0130/26"]["status"], "cancelled")
+
     # --- 失効とArchive（即時移行）
     def test_expiry_moves_to_archive_immediately(self):
         self.put(BASE)

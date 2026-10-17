@@ -624,13 +624,16 @@ def status_of(rec, now):
     start, end = parse_dt(rec.get("effective_start")), effective_end(rec)
     # 開始前に取消・置換されたもの(取消NOTAMの発行が元NOTAMの開始より前)は、開始を待たずに
     # 「取消」にする。以前は開始時刻まで「予定(upcoming)」のまま残っていた(KZAK A4680/26等)。
-    if rec.get("end_override") and end and end <= now and (not start or end <= start):
+    # 2026-10-17: 取消NOTAMを集めていなくても、APIの取消日(cancelationDate)が開始より前なら同じ扱い
+    # (RJJJ P5062/26・RPHI B5404/B5405/26。差し替え後の P5065・B5549/B5550 と二重に「予定」で出ていた)。
+    cancelled_early = rec.get("end_override") or rec.get("cancelation_date")
+    if cancelled_early and end and end <= now and (not start or end <= start):
         return "cancelled"
     if start and start > now:
         return "upcoming"
     if end and end <= now:
         sched = parse_dt(rec.get("effective_end"))
-        return "cancelled" if (rec.get("end_override") and (not sched or end < sched)) else "expired"
+        return "cancelled" if (cancelled_early and (not sched or end < sched)) else "expired"
     return "active"
 
 
