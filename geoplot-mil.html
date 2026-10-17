@@ -863,7 +863,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.2.1';
+const APP_VERSION = 'v4.2.2';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -943,6 +943,7 @@ const APP_VERSION = 'v4.2.1';
 // v4.0.1〜 一覧(page: ccg_hjyw / ccg_wqzf / mna)ごとに「初めて読んだ」を持つ(一覧を後から足しても、その時点の分で通知が溢れない)
 // v4.2.0: 報道タブと🔔の関連サイト通知をいったんビューアから外した(v3.9.2 の状態に戻した。ユーザー指示「詰めてから実装」)。収集(news_collect.py)と蓄積は続ける。保存済みの関連サイトの通知は読み込み時に捨てる。
 // v4.2.1: 台北(RCTPYNYX)発行のNOTAMは🔔通知しない(ユーザー指示)。一覧・地図はそのまま。保存済みの台北の通知は読み込み時に捨てる。
+// v4.2.2: 台北発行でも本文に BY CHINA があるNOTAMは通知する(ユーザー指示)。保存済みの通知に byChina を持たせ、読み込み時の台北の通知の削除から外す。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -2853,7 +2854,7 @@ try{
 
 try{ seenKeys = new Set(JSON.parse(localStorage.getItem(SEEN_KEY) || '[]')); }catch(e){ /* ignore corrupt storage */ }
 try{
-  (JSON.parse(localStorage.getItem(PENDING_KEY) || '[]')).filter(p => p.kind !== 'news' && !String(p.key || '').startsWith('notam:RCTPYNYX|')).forEach(p => pendingNotifications.set(p.key, p));   // v4.2.0: 関連サイトの通知は外した
+  (JSON.parse(localStorage.getItem(PENDING_KEY) || '[]')).filter(p => p.kind !== 'news' && !(String(p.key || '').startsWith('notam:RCTPYNYX|') && !p.byChina)).forEach(p => pendingNotifications.set(p.key, p));   // v4.2.0: 関連サイトの通知は外した
 }catch(e){ /* ignore corrupt storage */ }
 // if we're resuming with pending items already saved, this isn't a truly first import
 if (pendingNotifications.size || seenKeys.size) hasImportedOnce = true;
@@ -2911,10 +2912,14 @@ function notamNotifKey(f){
   return 'notam:' + [p.issuer, p.number, p.valid_start].join('|');
 }
 // v4.2.1: 台北(RCTPYNYX)が発行したものは通知しない(ユーザー指示。一覧・地図には今までどおり出す)
+// v4.2.2: ただし本文に BY CHINA があるものは台北発行でも通知する(ユーザー指示)
 const NOTAM_NOTIFY_EXCLUDED_ISSUERS = new Set(['RCTPYNYX']);
+function notamNotifyAllowed(p){
+  return !NOTAM_NOTIFY_EXCLUDED_ISSUERS.has(notamIssuerCode(p)) || notamByCountry(p) === 'CHINA';
+}
 function registerNotamsForNotifications(feats){
   const shown = feats.filter(f => notamHasRealPolygon(f) && (f.properties || {}).classification !== 'DOM'
-    && !NOTAM_NOTIFY_EXCLUDED_ISSUERS.has(notamIssuerCode(f.properties || {}))
+    && notamNotifyAllowed(f.properties || {})
     && ['active', 'upcoming'].includes(notamStatusOf(f)));
   if (!notamNotifBaselined){
     shown.forEach(f => seenNotamKeys.add(notamNotifKey(f)));
@@ -2935,7 +2940,7 @@ function registerNotamsForNotifications(feats){
       if (b.isValid()) bounds = [[b.getSouth(), b.getWest()], [b.getNorth(), b.getEast()]];
     }catch(e){ /* 図形が読めなければズームしないだけ */ }
     pendingNotifications.set(k, {
-      key: k, kind: 'notam', title: notamHeading(f),
+      key: k, kind: 'notam', title: notamHeading(f), byChina: notamByCountry(p) === 'CHINA',
       bureau: notamStatusOf(f) === 'upcoming' ? 'NOTAM・Upcoming' : 'NOTAM・Active',
       date: p.valid_start ? p.valid_start.slice(0, 16).replace('T', ' ') + ' UTC〜' : '', bounds,
     });
