@@ -39,6 +39,11 @@ jobs:
       - name: Build report
         run: python notam_daily_report.py --out-dir notam_out
 
+      # 2026-10-17: 本文どおりに地図に描けているかの点検(notam_check.py)。
+      # reports/notam_check_YYYY-MM-DD.md と notam_check_latest.md に書く(下の Commit report で一緒に入る)
+      - name: Check drawings
+        run: python notam_check.py --out-dir notam_out
+
       # reports/ はこのワークフローしか書かないので、収集側(notam-collect / MSA scrape)の
       # pushと競合しても rebase で必ず解消できる。
       - name: Commit report
