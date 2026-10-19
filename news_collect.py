@@ -129,7 +129,9 @@ def http_get(url):
 # (2026-10-19 の Actions: 维权执法は jina で読めたが、海警要闻は jina も「访问被拦截」・wayback は 429)
 MIRRORS = [
     # 出力形式の指定は、今のREADMEでは x-respond-with。旧名の X-Return-Format も効いている(2026-10-19 に HTML が返った)ので両方付ける
-    ("jina", lambda url: "https://r.jina.ai/" + url, {"X-Respond-With": "html", "X-Return-Format": "html"}, 3),
+    # x-no-cache: jina の一時保存(最大1時間)を使わず、毎回取りに行く(新着が遅れないように。2026-10-19 ユーザー指示)
+    ("jina", lambda url: "https://r.jina.ai/" + url,
+     {"X-Respond-With": "html", "X-Return-Format": "html", "X-No-Cache": "true"}, 3),
     ("wayback", lambda url: "https://web.archive.org/web/2/" + url, {}, 1),
 ]
 MIRROR_TIMEOUT = 60
