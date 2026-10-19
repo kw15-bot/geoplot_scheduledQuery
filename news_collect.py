@@ -68,9 +68,9 @@ CCG_NOTIFY = [r"中国台湾岛以东海域(?:依法)?开展常态化执法巡�
 SOURCES = {
     "ccg": {"name": "中国海警局", "pages": [
         {"page": "ccg_hjyw", "name": "中国海警局 海警要闻", "url": "https://www.ccg.gov.cn/hjyw/", "kind": "ccg",
-         "backfill": "https://www.ccg.gov.cn/hjyw/index_{m}.html", "backfill_kind": "ccg", "notify": None},
+         "backfill": "https://www.ccg.gov.cn/hjyw/index_{m}.html", "backfill_kind": "ccg", "notify": None, "mirror": True},
         {"page": "ccg_wqzf", "name": "中国海警局 维权执法", "url": "https://www.ccg.gov.cn/wqzf/", "kind": "ccg",
-         "backfill": "https://www.ccg.gov.cn/wqzf/index_{m}.html", "backfill_kind": "ccg", "notify": None},
+         "backfill": "https://www.ccg.gov.cn/wqzf/index_{m}.html", "backfill_kind": "ccg", "notify": None, "mirror": True},
     ]},
     "mna": {"name": "國防部 軍聞社", "pages": [
         {"page": "mna", "name": "國防部 軍聞社 國防訊息", "url": "https://mna.mnd.gov.tw/news/information/",
@@ -121,6 +121,40 @@ def http_get(url):
     raise last
 
 
+# 2026-10-19: 中国海警局は GitHub Actions から 418(CloudWAF)で拒否され続けている(HANDOFF_NOTAM.md §27.3)。
+# 直接が拒否されたときだけ、別の場所から読んでもらう(どちらも無料・キー不要):
+#   jina    … r.jina.ai(ページを代わりに読んで返すサービス。X-Return-Format: html で元のHTMLに近い形)
+#   wayback … Internet Archive の最新の保存版(web.archive.org/web/2/<URL>。古いことがある)
+MIRRORS = [
+    ("jina", lambda url: "https://r.jina.ai/" + url, {"X-Return-Format": "html"}),
+    ("wayback", lambda url: "https://web.archive.org/web/2/" + url, {}),
+]
+MIRROR_TIMEOUT = 60
+
+
+def fetch_page(url, mirror=False):
+    """(本文, 経路)。経路は 'direct' か MIRRORS の名前。mirror=True のページは、直接が 403/418 で拒否されたら MIRRORS を順に試す。"""
+    try:
+        return http_get(url), "direct"
+    except urllib.error.HTTPError as e:
+        if not mirror or e.code not in (403, 418):
+            raise
+        first = e
+    errs = [f"direct: HTTP {first.code}"]
+    for name, make, extra in MIRRORS:
+        try:
+            req = urllib.request.Request(make(url), headers=dict(HEADERS, **extra))
+            with urllib.request.urlopen(req, timeout=MIRROR_TIMEOUT) as r:
+                text = r.read().decode(r.headers.get_content_charset() or "utf-8", errors="replace")
+            if "访问被拦截" in text:                          # 中継先もファイアウォールに止められた
+                raise ValueError("访问被拦截")
+            return text, name
+        except (urllib.error.URLError, OSError, ValueError) as e:
+            errs.append(f"{name}: {type(e).__name__}: {e}")
+            print(f"[mirror] {name} {url}: {e}", file=sys.stderr)
+    raise urllib.error.URLError("; ".join(errs))
+
+
 def strip_tags(s):
     return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", s or ""))).strip()
 
@@ -145,7 +179,7 @@ def parse_ccg(text, base):
             published = near.group(1) + ("T" + near.group(2) if near.group(2) else "")
         else:
             published = f"{ymd[:4]}-{ymd[4:6]}-{ymd[6:]}"
-        url = urljoin(base, href)
+        url = re.sub(r"^https?://web\.archive\.org/web/[^/]+/", "", urljoin(base, href))   # 保存版のリンクを元のURLに戻す
         if "/hjyw/" not in url and "/wqzf/" not in url:      # 横の欄(国际合作など)の記事は除く
             continue
         iid = f"ccg:{ymd}_{num}"
@@ -294,7 +328,8 @@ def main(argv=None):
                 else:
                     if pg is not src["pages"][0]:
                         time.sleep(PAGE_GAP)
-                    text = http_get(pg.get("fetch") or pg["url"])
+                    text, via = fetch_page(pg.get("fetch") or pg["url"], mirror=pg.get("mirror", False))
+                    meta["pages"][pg["page"]]["via"] = via        # どの経路で読めたか(direct / jina / wayback)
                 items = PARSERS[pg["kind"]](text, pg)
                 if not items:
                     raise ValueError("記事を1件も読み取れなかった(ページの作りが変わった可能性)")
