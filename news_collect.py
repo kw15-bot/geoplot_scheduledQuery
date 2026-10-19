@@ -125,11 +125,14 @@ def http_get(url):
 # 直接が拒否されたときだけ、別の場所から読んでもらう(どちらも無料・キー不要):
 #   jina    … r.jina.ai(ページを代わりに読んで返すサービス。X-Return-Format: html で元のHTMLに近い形)
 #   wayback … Internet Archive の最新の保存版(web.archive.org/web/2/<URL>。古いことがある)
+# (名前, URLの作り方, 追加ヘッダー, 試す回数)。jina は取りに行く場所が毎回変わるらしく、拒否されても取り直すと通ることがある
+# (2026-10-19 の Actions: 维权执法は jina で読めたが、海警要闻は jina も「访问被拦截」・wayback は 429)
 MIRRORS = [
-    ("jina", lambda url: "https://r.jina.ai/" + url, {"X-Return-Format": "html"}),
-    ("wayback", lambda url: "https://web.archive.org/web/2/" + url, {}),
+    ("jina", lambda url: "https://r.jina.ai/" + url, {"X-Return-Format": "html"}, 3),
+    ("wayback", lambda url: "https://web.archive.org/web/2/" + url, {}, 1),
 ]
 MIRROR_TIMEOUT = 60
+MIRROR_RETRY_WAIT = 5
 
 
 def fetch_page(url, mirror=False):
@@ -141,17 +144,21 @@ def fetch_page(url, mirror=False):
             raise
         first = e
     errs = [f"direct: HTTP {first.code}"]
-    for name, make, extra in MIRRORS:
-        try:
-            req = urllib.request.Request(make(url), headers=dict(HEADERS, **extra))
-            with urllib.request.urlopen(req, timeout=MIRROR_TIMEOUT) as r:
-                text = r.read().decode(r.headers.get_content_charset() or "utf-8", errors="replace")
-            if "访问被拦截" in text:                          # 中継先もファイアウォールに止められた
-                raise ValueError("访问被拦截")
-            return text, name
-        except (urllib.error.URLError, OSError, ValueError) as e:
-            errs.append(f"{name}: {type(e).__name__}: {e}")
-            print(f"[mirror] {name} {url}: {e}", file=sys.stderr)
+    for name, make, extra, tries in MIRRORS:
+        for k in range(tries):
+            if k:
+                time.sleep(MIRROR_RETRY_WAIT)
+            try:
+                req = urllib.request.Request(make(url), headers=dict(HEADERS, **extra))
+                with urllib.request.urlopen(req, timeout=MIRROR_TIMEOUT) as r:
+                    text = r.read().decode(r.headers.get_content_charset() or "utf-8", errors="replace")
+                if "访问被拦截" in text:                          # 中継先もファイアウォールに止められた
+                    raise ValueError("访问被拦截")
+                return text, name if k == 0 else f"{name}#{k + 1}"
+            except (urllib.error.URLError, OSError, ValueError) as e:
+                print(f"[mirror] {name} try {k + 1} {url}: {e}", file=sys.stderr)
+                if k == tries - 1:
+                    errs.append(f"{name}: {type(e).__name__}: {e}")
     raise urllib.error.URLError("; ".join(errs))
 
 
