@@ -991,7 +991,7 @@ _CIRCLE_UNIT_KM = {"千米": 1.0, "公里": 1.0, "海里": 1.852, "米": 0.001}
 # (方位角で切った扇形)は意図的にマッチ対象外 -- 円全体ではなく一部の弧なので、
 # 単純な円ポリゴンで近似すると実際より広い範囲を含んでしまい誤りになるため。
 _CIRCLE_RE = re.compile(
-    r"为(?:圆心|中心)\s*[，,]?\s*"
+    r"为(?:圆心|中心)\s*[，,、]?\s*"     # 2026-10-19: 鲁航警906/26「…为中心、半径3公里的圆形区域」
     r"(?:半径\s*(?P<r1>[\d.]+)\s*(?P<u1>千米|公里|海里|米)"
     r"|(?P<r2>[\d.]+)\s*(?P<u2>千米|公里|海里|米)\s*为半径"
     r"|(?P<r3>[\d.]+)\s*(?P<u3>千米|公里|海里|米))"     # 2026-10-14: 沪航警811/26「…为圆心1海里范围内」(「半径」が無い)
@@ -1093,7 +1093,10 @@ def _expand_circles(text, points):
         # 同じ中心点が再度書かれるケース。除外しないと円のリングに余計な1点が
         # 混入して形が歪む。扇形自体の範囲は表現できないままなので不完全だが、
         # 円だけは正しい形で残す方を優先している。
-        if p.get("fmt") not in ("SECTOR", "ARC") and (round(p["lat"], 6), round(p["lon"], 6)) in circle_centers:
+        # 2026-10-19: 同じ座標でも、多角形の頂点として書かれたもの(鲁航警629/906/26「以A为中心…的圆形区域，…A、B、C三点连线」)
+        # は残す。除くのは、もう一度「为圆心/为中心」の中心として書かれたもの(描けない形の中心)だけ。
+        if (p.get("fmt") not in ("SECTOR", "ARC") and (round(p["lat"], 6), round(p["lon"], 6)) in circle_centers
+                and re.match(r"\s*[，,、]?\s*为\s*(?:圆心|中心)", text[p["end"]:p["end"] + 8])):
             continue
         result.append(p)
     return result, extra_boundaries
@@ -2191,7 +2194,7 @@ def run_once(args, keywords):
     for it in state.values():
         if it.get("military") and it.get("raw_text") and it.get("groups") and needs_shape_regroup(it["raw_text"]):
             regrouped = parse_coordinate_groups(it["raw_text"])
-            if shape_point_count(regrouped) != shape_point_count(it["groups"]):
+            if [len(g) for g in regrouped] != [len(g) for g in it["groups"]]:     # 2026-10-19: 点の数で比べる(鲁航警629/26)
                 it["groups"] = regrouped
                 it["points"] = [p for g in regrouped for p in g]
 

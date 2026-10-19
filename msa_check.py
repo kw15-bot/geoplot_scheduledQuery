@@ -13,7 +13,7 @@ msa_check.py
     その形で描けていない(円の中心だけの点や、円弧が直線になった多角形)
   - 本文の座標の数と、描いた点の数が合わない(座標の読み落とし・読み過ぎ)
   - 座標があるのに図形が無い(no_coords)
-  - 多角形の辺が交差している(角の順番の取り違え)
+  - 多角形の辺が交差している(角の順番の取り違え)・区域が2点だけの線になっている
   - 図形が中国沿岸の範囲(北緯0〜45度・東経100〜135度)の外にある
   - 面積が異常に大きい(5万 km² 超)
   - 有効期間が読めていない(期間不明)
@@ -122,6 +122,8 @@ def check_item(item, feats):
         out = [p for p in pts if not (BBOX[0] <= p[1] <= BBOX[1] and BBOX[2] <= p[0] <= BBOX[3])]
         if out:
             issues.append(f"{tag}中国沿岸の範囲の外に点がある(例 {out[0][1]:.3f}N {out[0][0]:.3f}E)")
+        if g["type"] == "LineString":
+            issues.append(f"{tag}2点だけの線になっている(区域の頂点の読み落としの可能性)")
         if g["type"] == "Polygon":
             ring = g["coordinates"][0]
             if ring_self_intersects(ring):
