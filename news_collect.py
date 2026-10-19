@@ -128,7 +128,8 @@ def http_get(url):
 # (名前, URLの作り方, 追加ヘッダー, 試す回数)。jina は取りに行く場所が毎回変わるらしく、拒否されても取り直すと通ることがある
 # (2026-10-19 の Actions: 维权执法は jina で読めたが、海警要闻は jina も「访问被拦截」・wayback は 429)
 MIRRORS = [
-    ("jina", lambda url: "https://r.jina.ai/" + url, {"X-Return-Format": "html"}, 3),
+    # 出力形式の指定は、今のREADMEでは x-respond-with。旧名の X-Return-Format も効いている(2026-10-19 に HTML が返った)ので両方付ける
+    ("jina", lambda url: "https://r.jina.ai/" + url, {"X-Respond-With": "html", "X-Return-Format": "html"}, 3),
     ("wayback", lambda url: "https://web.archive.org/web/2/" + url, {}, 1),
 ]
 MIRROR_TIMEOUT = 60
