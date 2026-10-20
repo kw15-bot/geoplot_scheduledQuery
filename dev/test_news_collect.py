@@ -120,5 +120,45 @@ class News(unittest.TestCase):
         self.assertIn("ccg:20231201_900", self.items())
 
 
+
+class ArticleTest(unittest.TestCase):
+    def test_parse_mna_article(self):
+        a = N.parse_mna_article((FX / "mna_article.html").read_text(encoding="utf-8"),
+                                "https://mna.mnd.gov.tw/news/detail/?UserKey=f5441bd9")
+        self.assertEqual(a["title"], "中共解放軍臺海周邊活動 國軍嚴密監控應處")
+        self.assertEqual(a["category"], "國防訊息")
+        self.assertEqual(a["date"], "民國115年10月20日")
+        self.assertEqual(len(a["figures"]), 1)                    # 拡大表示用の同じ写真・「你可能也會有興趣」の写真は入れない
+        self.assertTrue(a["figures"][0]["src"].startswith("https://mna.mnd.gov.tw/Cms_Data/"))
+        self.assertIn("示意圖", a["figures"][0]["caption"])
+        self.assertEqual(len(a["paragraphs"]), 2)
+        self.assertTrue(a["paragraphs"][0].startswith("（軍聞社記者"))
+        self.assertEqual(a["keywords"], ["共機", "共艦"])
+
+    def test_collect_articles(self):
+        page = (FX / "mna_article.html").read_text(encoding="utf-8")
+        st = {"items": [{"id": "mna:a1", "source": "mna", "url": "https://mna.mnd.gov.tw/news/detail/?UserKey=a1",
+                         "published": "2026-10-20", "title": "x"},
+                        {"id": "ccg:20261010_3249", "source": "ccg", "notify": True, "published": "2026-10-10T17:48",
+                         "url": "https://www.ccg.gov.cn/wqzf/202610/t20261010_3249.html", "title": "y"}]}
+
+        def fetch(url):
+            if "ccg" in url:
+                raise OSError("blocked")
+            return page
+        orig = N.image_data_uri
+        N.image_data_uri = lambda url, referer=None: "data:image/jpeg;base64,AAAA"
+        try:
+            with tempfile.TemporaryDirectory() as d:
+                self.assertEqual(N.collect_articles(st, Path(d), "2026-10-20T00:00:00+00:00", fetch=fetch), 1)
+                art = json.loads((Path(d) / "articles" / "mna_a1.json").read_text(encoding="utf-8"))
+        finally:
+            N.image_data_uri = orig
+        self.assertEqual(st["items"][0]["article"], "articles/mna_a1.json")
+        self.assertEqual(art["figures"][0]["data"], "data:image/jpeg;base64,AAAA")
+        self.assertEqual(st["items"][1]["article_tries"], 1)             # 読めなかった記事は回数を数える
+        self.assertNotIn("article", st["items"][1])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=1)

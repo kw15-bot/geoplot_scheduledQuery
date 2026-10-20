@@ -33,11 +33,13 @@ notify=true を付ける。ビューアは notify のものだけを🔔に出�
 """
 
 import argparse
+import base64
 import datetime as dt
 import http.cookiejar
 import time
 import email.utils
 import html
+import io
 import json
 import re
 import sys
@@ -260,6 +262,159 @@ def parse_mna_list(text, base="https://mna.mnd.gov.tw/"):
     return out
 
 
+# ----------------------------------------------------------------------------- 記事本文の写し(v4.4.0、2026-10-20)
+# 元のサイトに入れないときのために、記事ページの見出し・日付・写真(縮小して埋め込み)・本文を news_out/articles/ に保存する。
+# ビューアは報道タブで見出しを押すとこの写しを元サイト風に表示し、PDF にもできる。
+ARTICLE_DIR = "articles"
+ARTICLE_MAX_PER_RUN = 6         # 1回の収集で新しく写しを作る最大数(遡り分もこの数ずつ埋まっていく)
+ARTICLE_MAX_PER_RUN_CCG = 1     # 中国海警局は記事ページも拒否されがちで、1回の試行に時間がかかる(jina の取り直し)ので1件だけ
+ARTICLE_MAX_TRIES = 5           # 読めない・本文が取れない記事は、この回数で諦める
+IMG_MAX_W = 960
+IMG_QUALITY = 72
+
+
+def _block(text, start_re, tag):
+    """start_re に当たる開始タグから、対応する閉じタグまで(同じタグの入れ子を数える)を返す。"""
+    m = re.search(start_re, text, re.I | re.S)
+    if not m:
+        return ""
+    depth, i = 0, m.start()
+    for t in re.finditer(rf"<(/?){tag}\b[^>]*>", text[m.start():], re.I):
+        depth += -1 if t.group(1) else 1
+        if depth == 0:
+            return text[m.start():m.start() + t.end()]
+    return text[m.start():]
+
+
+def _paragraphs(block):
+    out = []
+    for p in re.findall(r"<p\b[^>]*>(.*?)</p>", block, re.S | re.I):
+        t = strip_tags(re.sub(r"(?i)<br\s*/?>", "\n", p))
+        if t:
+            out.append(t)
+    return out
+
+
+def _figures(block, base):
+    figs, seen = [], set()
+    for f in re.findall(r"<figure\b[^>]*>(.*?)</figure>", block, re.S | re.I):
+        im = re.search(r"<img\b[^>]*\bsrc=[\"']([^\"']+)", f, re.I)
+        if not im:
+            continue
+        src = urljoin(base, html.unescape(im.group(1)))
+        if src in seen:
+            continue
+        seen.add(src)
+        cap = re.search(r"<figcaption\b[^>]*>(.*?)</figcaption>", f, re.S | re.I)
+        figs.append({"src": src, "caption": strip_tags(cap.group(1)) if cap else ""})
+    return figs
+
+
+def parse_mna_article(text, url):
+    """軍聞社の記事ページ。見出し(h2)・分類(tagBlk)・民國の日付(info)・<article> の写真と本文・關鍵字。"""
+    title_m = re.search(r'class=["\']title["\'][^>]*>\s*<h2[^>]*>(.*?)</h2>', text, re.S | re.I)
+    tag_m = re.search(r'class=["\']tagBlk["\'][^>]*>.*?<li[^>]*>(.*?)</li>', text, re.S | re.I)
+    date_m = re.search(r"民國\d{2,3}年\d{1,2}月\d{1,2}日", text)
+    art = _block(text, r"<article\b", "article")
+    art_main = re.sub(r'(?is)<div class="modal\b.*?</figure>\s*</div>\s*</div>', "", art)   # 拡大表示用の同じ写真は除く
+    kw_block = _block(art, r'class=["\']keyWordContent', "div")
+    paras = _paragraphs(re.split(r'class=["\'][^"\']*keywordBlk', art_main)[0])
+    return {"site": "國防部 軍聞社", "category": strip_tags(tag_m.group(1)) if tag_m else "",
+            "title": strip_tags(title_m.group(1)) if title_m else "", "date": date_m.group(0) if date_m else "",
+            "figures": _figures(art_main, url), "paragraphs": paras,
+            "keywords": [strip_tags(k) for k in re.findall(r"<a\b[^>]*>(.*?)</a>", kw_block, re.S)]}
+
+
+def parse_ccg_article(text, url):
+    """中国海警局の記事ページ(作りは未確認。2026-10-20 時点で GitHub からは記事ページを読めていない)。
+    見出しは <h1>/<h2>/ArticleTitle/<title>、日時は最初の「YYYY-MM-DD HH:MM」、本文は TRS_Editor か、本文らしい <p> の集まり。"""
+    title = ""
+    for pat in (r'<meta\s+name=["\']ArticleTitle["\']\s+content=["\']([^"\']+)', r"<h1\b[^>]*>(.*?)</h1>",
+                r"<h2\b[^>]*>(.*?)</h2>", r"<title>(.*?)</title>"):
+        m = re.search(pat, text, re.S | re.I)
+        if m and strip_tags(m.group(1)):
+            title = re.sub(r"\s*[-_|].*$", "", strip_tags(m.group(1))) if "title>" in pat else strip_tags(m.group(1))
+            break
+    date_m = re.search(r"\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}(?::\d{2})?", text)
+    src_m = re.search(r"来源[：:]\s*([^<\s]{2,20})", text)
+    body = _block(text, r'<div\b[^>]*class=["\'][^"\']*TRS_Editor', "div") or \
+        _block(text, r'<div\b[^>]*(?:id|class)=["\'][^"\']*(?:article|content|zoom)[^"\']*["\']', "div")
+    paras = [p for p in _paragraphs(body or text) if len(p) >= 8 and "版权所有" not in p and "备案号" not in p]
+    figs = []
+    for im in re.findall(r"<img\b[^>]*\bsrc=[\"']([^\"']+)", body or "", re.I):
+        figs.append({"src": urljoin(url, html.unescape(im)), "caption": ""})
+    return {"site": "中国海警局", "category": "", "title": title, "date": date_m.group(0) if date_m else "",
+            "source": src_m.group(1) if src_m else "", "figures": figs[:4], "paragraphs": paras, "keywords": []}
+
+
+def _get_bytes(url, referer=None):
+    headers = dict(HEADERS, **({"Referer": referer} if referer else {}))
+    with _opener.open(urllib.request.Request(url, headers=headers), timeout=TIMEOUT) as r:
+        return r.read(), (r.headers.get_content_type() or "image/jpeg")
+
+
+def image_data_uri(url, referer=None):
+    """写真を読み、横 IMG_MAX_W 以下の JPEG にして data: URI で返す(Pillow が無ければ 400KB 以下ならそのまま)。"""
+    raw, ctype = _get_bytes(url, referer)
+    try:
+        from PIL import Image
+        im = Image.open(io.BytesIO(raw))
+        im = im.convert("RGB")
+        if im.width > IMG_MAX_W:
+            im = im.resize((IMG_MAX_W, round(im.height * IMG_MAX_W / im.width)), Image.LANCZOS)
+        buf = io.BytesIO()
+        im.save(buf, "JPEG", quality=IMG_QUALITY, optimize=True)
+        raw, ctype = buf.getvalue(), "image/jpeg"
+    except ImportError:
+        if len(raw) > 400_000:
+            raise ValueError("写真が大きすぎる(Pillow が無いので縮小できない)")
+    except OSError as e:
+        raise ValueError(f"写真を読めない: {e}")
+    return f"data:{ctype};base64," + base64.b64encode(raw).decode("ascii")
+
+
+def article_file(item_id):
+    return f"{ARTICLE_DIR}/{re.sub(r'[^A-Za-z0-9_-]', '_', item_id)}.json"
+
+
+def collect_articles(state, out, now, fetch=None):
+    """写しの無い記事について記事ページを読み、news_out/articles/<id>.json に保存して、item に article(ファイル名)を付ける。
+    通知対象 → 新しい順。読めない・本文が取れないときは article_tries を増やし、ARTICLE_MAX_TRIES 回で諦める。"""
+    fetch = fetch or (lambda url: fetch_page(url, mirror="ccg.gov.cn" in url)[0])
+    todo = [it for it in state["items"] if not it.get("article") and it.get("url")
+            and it.get("article_tries", 0) < ARTICLE_MAX_TRIES]
+    todo.sort(key=lambda it: it.get("published") or "", reverse=True)        # 新しい順
+    todo.sort(key=lambda it: 0 if it.get("notify") else 1)                    # 通知対象を先に(並べ替えは安定なので新しい順は保たれる)
+    done, quota = {"mna": 0, "ccg": 0}, {"mna": ARTICLE_MAX_PER_RUN, "ccg": ARTICLE_MAX_PER_RUN_CCG}
+    made = 0
+    for it in todo:
+        src = it.get("source")
+        if src not in quota or done[src] >= quota[src]:
+            continue
+        done[src] += 1
+        try:
+            text = fetch(it["url"])
+            art = (parse_mna_article if src == "mna" else parse_ccg_article)(text, it["url"])
+            if not art["paragraphs"]:
+                raise ValueError("本文を読み取れなかった")
+            for fig in art["figures"]:
+                try:
+                    fig["data"] = image_data_uri(fig["src"], referer=it["url"])
+                except (urllib.error.URLError, OSError, ValueError) as e:
+                    fig["error"] = f"{type(e).__name__}: {e}"
+            art.update({"id": it["id"], "url": it["url"], "fetched_at": now})
+            path = out / article_file(it["id"])
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_text(json.dumps(art, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
+            it["article"] = article_file(it["id"])
+            it.pop("article_tries", None)
+            made += 1
+        except (urllib.error.URLError, OSError, ValueError) as e:
+            it["article_tries"] = it.get("article_tries", 0) + 1
+            print(f"[article] {it['id']} {it['url']}: {type(e).__name__}: {e}", file=sys.stderr)
+    return made
+
+
 PARSERS = {
     "ccg": lambda text, pg: parse_ccg(text, pg["url"]),
     "mna_rss": lambda text, pg: parse_mna_rss(text, pg.get("category")),
@@ -307,6 +462,7 @@ def main(argv=None):
     ap.add_argument("--backfill", nargs="+", choices=list(SOURCES), help="一覧を最後のページまで遡って集める")
     ap.add_argument("--max-pages", type=int, default=200, help="--backfill で読む最大ページ数(一覧ごと)")
     ap.add_argument("--import-json", help="中国海警局の記事 [{title,url,date}] を取り込む(遡った分として)")
+    ap.add_argument("--no-articles", action="store_true", help="記事本文の写し(news_out/articles/)を作らない")
     ap.add_argument("--probe", nargs="+", metavar="URL",
                     help="記事ページを読んで、script/style を除いたHTMLの先頭をログに出すだけ(作りの調査用。ファイルは書かない)")
     a = ap.parse_args(argv)
@@ -387,6 +543,8 @@ def main(argv=None):
         else:
             # 成功時刻を毎回書くと15分ごとにコミットが出るので、日付だけ持つ(新着・エラー・日付が変わったときだけファイルが変わる)
             meta.update({"last_ok_date": now[:10], "last_error": None, "last_error_at": None})
+    if not a.fixture_dir and not a.no_articles:
+        summary["articles"] = collect_articles(state, out, now)
     out.mkdir(parents=True, exist_ok=True)
     text = json.dumps(state, ensure_ascii=False, indent=1, sort_keys=True) + "\n"
     if not path.exists() or path.read_text(encoding="utf-8") != text:

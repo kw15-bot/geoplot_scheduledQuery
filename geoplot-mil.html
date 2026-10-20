@@ -523,6 +523,30 @@ select{
 .app.mode-news .panel[data-mode-section="news"]{min-width:0;border-right:none;}
 #newsModePanel > .section{width:100%;max-width:960px;margin:0 auto;}
 #newsList{overflow-wrap:anywhere;}
+.news-copy-mark{display:inline-block;font-size:9.5px;color:var(--text-faint);border:1px solid var(--border);border-radius:3px;padding:0 4px;margin-left:6px;vertical-align:1px;font-weight:400;}
+/* v4.4.0: 記事の写し(元サイトに入れないとき用)。収集時に保存した見出し・日付・写真・本文を元サイト風に表示し、PDF にもできる */
+#newsArticleModal{position:fixed;inset:0;background:rgba(30,30,28,.55);z-index:3000;display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:28px 12px;}
+#newsArticleModal.open{display:flex;}
+.na-wrap{width:100%;max-width:820px;background:var(--panel);border-radius:10px;box-shadow:0 10px 40px rgba(0,0,0,.3);overflow:hidden;}
+.na-bar{display:flex;gap:8px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--border);background:var(--panel-alt);position:sticky;top:0;}
+.na-bar .na-note{flex:1;font-size:11px;color:var(--text-faint);}
+#newsArticleDoc{background:#fff;color:#222;padding:28px 34px 30px;font-family:'Noto Sans TC','Noto Sans CJK TC','Microsoft JhengHei','PingFang TC',var(--sans);}
+#newsArticleDoc .na-crumb{font-size:12px;color:#777;margin-bottom:14px;}
+#newsArticleDoc .na-tag{display:inline-block;font-size:12px;color:#fff;background:#1d5fa8;border-radius:3px;padding:2px 8px;margin-bottom:8px;}
+#newsArticleDoc h2{font-size:22px;line-height:1.5;margin:0 0 6px;color:#1a1a1a;}
+#newsArticleDoc .na-date{font-size:13px;color:#666;margin-bottom:18px;padding-bottom:12px;border-bottom:1px solid #ddd;}
+#newsArticleDoc figure{margin:0 0 16px;}
+#newsArticleDoc figure img{display:block;width:100%;height:auto;}
+#newsArticleDoc figcaption{font-size:12.5px;color:#555;margin-top:6px;line-height:1.6;}
+#newsArticleDoc .na-p{font-size:15.5px;line-height:1.95;margin:0 0 14px;text-indent:2em;}
+#newsArticleDoc .na-kw{margin-top:18px;font-size:12.5px;color:#555;}
+#newsArticleDoc .na-kw span{display:inline-block;border:1px solid #c9d6e6;color:#1d5fa8;border-radius:12px;padding:1px 10px;margin:0 6px 6px 0;}
+#newsArticleDoc .na-src{margin-top:22px;padding-top:10px;border-top:1px dashed #ccc;font-size:11px;color:#888;line-height:1.7;word-break:break-all;}
+#newsArticleDoc.ccg{font-family:'Noto Serif SC','Noto Serif CJK SC','SimSun',var(--sans);}
+#newsArticleDoc.ccg .na-site{font-size:13px;color:#a11;font-weight:700;letter-spacing:.2em;border-bottom:3px solid #a11;padding-bottom:6px;margin-bottom:18px;}
+#newsArticleDoc.ccg h2{text-align:center;font-size:21px;}
+#newsArticleDoc.ccg .na-date{text-align:center;}
+#newsArticleDoc .na-imgerr{font-size:12px;color:#999;border:1px dashed #ccc;padding:10px;text-align:center;}
 .app.mode-manual #rightPanel,.app.mode-notam #rightPanel,.app.mode-news #rightPanel{display:none;}
 /* 報道モード(v4.1.0)。一覧の作りは元サイトにそろえる: 中国海警局は「見出し＋日時」、軍聞社は「見出し＋要約＋【國防訊息】＋民國の日付」 */
 #newsTabs .tab-btn{font-size:11.5px;padding:7px 4px;}
@@ -775,6 +799,19 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
     </div>
   </div>
 
+  <!-- v4.4.0: 報道の記事の写し(元サイト風)。PDF出力もここから -->
+  <div id="newsArticleModal" role="dialog" aria-modal="true">
+    <div class="na-wrap">
+      <div class="na-bar">
+        <span class="na-note" id="newsArticleNote"></span>
+        <a class="btn small ghost" id="btnNewsArticleOrig" href="#" target="_blank" rel="noopener">元のサイトを開く</a>
+        <button class="btn small" id="btnNewsArticlePdf">PDF出力</button>
+        <button class="btn small ghost" id="btnNewsArticleClose">閉じる</button>
+      </div>
+      <div id="newsArticleDoc"></div>
+    </div>
+  </div>
+
   <!-- CENTER: map -->
   <div class="map-wrap">
     <div id="map"></div>
@@ -904,7 +941,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.3.1';
+const APP_VERSION = 'v4.4.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -986,6 +1023,7 @@ const APP_VERSION = 'v4.3.1';
 // v4.2.2: 台北発行でも本文に BY CHINA があるNOTAMは通知する(ユーザー指示)。保存済みの通知に byChina を持たせ、読み込み時の台北の通知の削除から外す。
 // v4.3.0: 報道タブ(案A: 一覧のみ・地図なし、v4.1.1 と同じ)と🔔の関連サイト通知を戻した(ユーザー指示)。通知は見出しが指定の語句に当たる投稿(notify)だけ、遡って集めた分は除く。
 // v4.3.1: 報道の一覧で、通知の語句に当たる投稿の印を「通知対象」の文字から赤丸に(ユーザー指示)。
+// v4.4.0: 報道の記事の写し。収集時に保存した記事(見出し・日付・写真・本文、news_out/articles/)があれば、見出しを押すと元サイト風に表示し、PDFにも出せる。元サイトへは写しの上のボタンから。写しの無い記事は今までどおり元サイトを開く。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3077,25 +3115,128 @@ function renderNewsList(){
     const pg = newsPageOf(it), site = newsTab === 'all' ? `<div class="news-site">${esc(NEWS_PAGE_NAMES[pg] || pg)}</div>` : '';
     const flag = it.notify ? `<span class="news-flag" title="通知の条件(${esc(it.matched || '')})に当たる投稿" aria-label="通知対象"></span>` : '';
     const href = esc(it.url || '#');
+    // v4.4.0: 記事の写しがあれば、押すと写しを開く(元サイトへは写しの上のボタンから)。無ければ今までどおり元サイトを開く
+    const open = it.article ? `href="${href}" data-article="${esc(it.id)}"` : `href="${href}" target="_blank" rel="noopener"`;
+    const copy = it.article ? '<span class="news-copy-mark" title="記事の写しを保存済み(元のサイトに入れなくても読める・PDFにできる)">写し</span>' : '';
     if (it.source === 'mna'){
-      return `<a class="news-item mna" href="${href}" target="_blank" rel="noopener">${site}
-        <div class="news-title">${flag}${esc(it.title)}</div>
+      return `<a class="news-item mna" ${open}>${site}
+        <div class="news-title">${flag}${esc(it.title)}${copy}</div>
         ${it.summary ? `<div class="news-summary">${esc(it.summary)}</div>` : ''}
         <div class="news-foot"><span>【國防訊息】</span><span>${esc(newsMinguoDate(it.published))}</span></div></a>`;
     }
     const pub = String(it.published || '').replace('T', ' ').slice(0, 19);
-    return `<a class="news-item ccg" href="${href}" target="_blank" rel="noopener">${site}
-      <div class="news-row"><div class="news-title">${flag}${esc(it.title)}</div><div class="news-date">${esc(pub)}</div></div></a>`;
+    return `<a class="news-item ccg" ${open}>${site}
+      <div class="news-row"><div class="news-title">${flag}${esc(it.title)}${copy}</div><div class="news-date">${esc(pub)}</div></div></a>`;
   }).join('');
 }
+$('#newsList').addEventListener('click', e=>{
+  const a = e.target.closest('a[data-article]');
+  if (!a) return;
+  e.preventDefault();
+  const it = ((newsState && newsState.items) || []).find(x => x.id === a.dataset.article);
+  if (it) openNewsArticle(it);
+});
+
+// ---- 記事の写し(v4.4.0) ----
+let newsArticleOpen = null;     // { it, art }
+function newsArticleUrl(it){ return String(newsUrl).replace(/news\.json(?=[?#]|$)/, it.article); }
+async function openNewsArticle(it){
+  const doc = $('#newsArticleDoc');
+  newsArticleOpen = null;
+  doc.className = it.source === 'mna' ? 'mna' : 'ccg';
+  doc.innerHTML = '<div class="na-date">読み込み中…</div>';
+  $('#btnNewsArticleOrig').href = it.url || '#';
+  $('#newsArticleNote').textContent = '';
+  $('#newsArticleModal').classList.add('open');
+  try{
+    const art = JSON.parse(await fetchDataText(newsArticleUrl(it)));
+    newsArticleOpen = { it, art };
+    renderNewsArticle(it, art);
+  }catch(e){
+    doc.innerHTML = `<div class="na-date">記事の写しを読めませんでした（${esc(e.message)}）。「元のサイトを開く」から元の記事を見てください。</div>`;
+  }
+}
+function renderNewsArticle(it, art){
+  const doc = $('#newsArticleDoc');
+  const figs = (art.figures || []).map(f => f.data
+    ? `<figure><img src="${f.data}" alt="${esc(f.caption || '')}">${f.caption ? `<figcaption>${esc(f.caption)}</figcaption>` : ''}</figure>`
+    : `<figure><div class="na-imgerr">写真を保存できませんでした</div>${f.caption ? `<figcaption>${esc(f.caption)}</figcaption>` : ''}</figure>`).join('');
+  const paras = (art.paragraphs || []).map(p => `<p class="na-p">${esc(p)}</p>`).join('');
+  const fetched = String(art.fetched_at || '').replace('T', ' ').slice(0, 16);
+  const src = `<div class="na-src">出典: ${esc(art.site || '')}　${esc(art.url || it.url || '')}<br>この画面は収集時（${esc(fetched)} UTC）に保存した記事の写しです。元の記事と異なる場合があります。</div>`;
+  if (it.source === 'mna'){
+    doc.innerHTML = `<div class="na-crumb">首頁 ＞ 軍聞消息</div>
+      ${art.category ? `<div class="na-tag">${esc(art.category)}</div>` : ''}
+      <h2>${esc(art.title || it.title)}</h2>
+      <div class="na-date">${esc(art.date || newsMinguoDate(it.published))}</div>
+      ${figs}${paras}
+      ${(art.keywords || []).length ? `<div class="na-kw">關鍵字　${art.keywords.map(k => `<span>${esc(k)}</span>`).join('')}</div>` : ''}
+      ${src}`;
+  } else {
+    doc.innerHTML = `<div class="na-site">中国海警局 China Coast Guard</div>
+      <h2>${esc(art.title || it.title)}</h2>
+      <div class="na-date">${esc(art.date || String(it.published || '').replace('T', ' '))}${art.source ? `　来源：${esc(art.source)}` : ''}</div>
+      ${figs}${paras}${src}`;
+  }
+  $('#newsArticleNote').textContent = `${NEWS_PAGE_NAMES[newsPageOf(it)] || ''}　収集時の写し`;
+}
+function closeNewsArticle(){ $('#newsArticleModal').classList.remove('open'); newsArticleOpen = null; }
+$('#btnNewsArticleClose').addEventListener('click', closeNewsArticle);
+$('#newsArticleModal').addEventListener('click', e=>{ if (e.target.id === 'newsArticleModal') closeNewsArticle(); });
+document.addEventListener('keydown', e=>{ if (e.key === 'Escape' && $('#newsArticleModal').classList.contains('open')) closeNewsArticle(); });
+// PDF: 写しの画面をそのまま撮り、A4 縦に段落の切れ目でページを分けて入れる
+$('#btnNewsArticlePdf').addEventListener('click', async ()=>{
+  if (!newsArticleOpen) return;
+  const btn = $('#btnNewsArticlePdf'), label = btn.textContent;
+  btn.disabled = true; btn.textContent = '生成中...';
+  try{
+    const box = $('#newsArticleDoc');
+    const top = box.getBoundingClientRect().top;
+    const cuts = [...box.querySelectorAll('.na-p, figure, .na-kw, .na-src')].map(el => el.getBoundingClientRect().top - top);
+    const canvas = await html2canvas(box, { backgroundColor:'#ffffff', logging:false, scale:2 });
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({ orientation:'portrait', unit:'mm', format:'a4' });
+    const pageW = pdf.internal.pageSize.getWidth(), pageH = pdf.internal.pageSize.getHeight();
+    const margin = 12, cw = pageW - margin * 2, bottom = pageH - margin;
+    const pxPerMm = canvas.width / cw, cssToPx = canvas.width / box.offsetWidth;
+    const cutPx = cuts.map(c => Math.round(c * cssToPx));
+    let srcY = 0, y = margin;
+    while (srcY < canvas.height){
+      const roomPx = Math.floor((bottom - y) * pxPerMm);
+      let takePx = Math.min(canvas.height - srcY, roomPx);
+      if (srcY + takePx < canvas.height){
+        const c = cutPx.filter(c => c > srcY + roomPx * 0.3 && c <= srcY + takePx).pop();
+        if (c) takePx = c - srcY;
+      }
+      const part = document.createElement('canvas');
+      part.width = canvas.width; part.height = takePx;
+      part.getContext('2d').drawImage(canvas, 0, srcY, canvas.width, takePx, 0, 0, canvas.width, takePx);
+      pdf.addImage(part.toDataURL('image/jpeg', 0.9), 'JPEG', margin, y, cw, takePx / pxPerMm);
+      srcY += takePx;
+      if (srcY < canvas.height){ pdf.addPage(); y = margin; }
+    }
+    const { it } = newsArticleOpen;
+    const d = String(it.published || '').slice(0, 10) || 'undated';
+    const fname = `NEWS_${it.source === 'mna' ? 'MNA' : 'CCG'}_${d}_${String(it.id).replace(/[^A-Za-z0-9]/g, '').slice(-8)}.pdf`;   // 英数字だけ
+    pdf.save(fname);
+    logLine(`記事の写しをPDFにしました: ${fname}`, 'l-ok');
+  }catch(err){
+    console.error(err);
+    logLine('PDF生成に失敗しました: ' + err.message, 'l-err');
+  }finally{
+    btn.disabled = false; btn.textContent = label;
+  }
+});
 $$('#newsTabs .tab-btn').forEach(btn => btn.addEventListener('click', ()=>{
   newsTab = btn.dataset.tab;
   $$('#newsTabs .tab-btn').forEach(b => b.classList.toggle('active', b === btn));
   renderNewsList();
 }));
+let newsUrl = '';
 async function refreshNews(url){
   try{
     newsState = JSON.parse(await fetchDataText(url));
+    newsUrl = url;
     renderNewsList();
     registerNewsForNotifications(newsState);
   }catch(e){
@@ -3133,8 +3274,12 @@ function renderNotifPanel(){
       if (!it) return;
       $('#notifPanel').style.display = 'none';
       if (it.kind === 'news'){
-        // 関連サイトの新着: 元の記事を新しいタブで開く
-        if (it.url) window.open(it.url, '_blank', 'noopener');
+        // 関連サイトの新着: 記事の写しがあれば報道タブで写しを開く(v4.4.0)。無ければ元の記事を新しいタブで開く
+        const ni = ((newsState && newsState.items) || []).find(x => 'news:' + x.id === it.key);
+        if (ni && ni.article){
+          if (!$('#mainApp').classList.contains('mode-news')) enterMode('news');
+          openNewsArticle(ni);
+        } else if (it.url) window.open(it.url, '_blank', 'noopener');
         pendingNotifications.delete(it.key);
         persistNotificationState(); updateNotifBadge(); renderNotifPanel();
         return;
