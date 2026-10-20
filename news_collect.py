@@ -344,7 +344,9 @@ def main(argv=None):
                     if pg is not src["pages"][0]:
                         time.sleep(PAGE_GAP)
                     text, via = fetch_page(pg.get("fetch") or pg["url"], mirror=pg.get("mirror", False))
-                    meta["pages"][pg["page"]]["via"] = via        # どの経路で読めたか(direct / jina / wayback)
+                    # どの経路で読めたか(direct / jina / wayback)はログにだけ出す。ファイルに書くと、直接読めたり読めなかったり
+                    # するたびに中身が変わってコミット(=GitHub Pages の公開)が増えるため(2026-10-20)
+                    summary.setdefault(sid, {}).setdefault("via", {})[pg["page"]] = via
                 items = PARSERS[pg["kind"]](text, pg)
                 if not items:
                     raise ValueError("記事を1件も読み取れなかった(ページの作りが変わった可能性)")
@@ -362,7 +364,7 @@ def main(argv=None):
         if found:
             added = merge(state, sid, list(found.values()), now)
             ok += 1
-            summary[sid] = {"fetched": len(found), "new": added, "notify": sum(i["notify"] for i in found.values())}
+            summary.setdefault(sid, {}).update({"fetched": len(found), "new": added, "notify": sum(i["notify"] for i in found.values())})
         if errors:
             # 時刻まで書くと、失敗が続く間は毎回ファイルが変わってコミットされるので、日付だけ
             meta.update({"last_error": "; ".join(errors), "last_error_at": now[:10]})
