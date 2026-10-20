@@ -1,0 +1,63 @@
+name: Pages deploy
+
+# 2026-10-20: GitHub Pages の公開を「main ブランチから公開」(push のたびに公開)から、このワークフロー経由に変えた
+# (Settings → Pages → Source を「GitHub Actions」にすること。HANDOFF_NOTAM.md §27.13)。
+# 公開はまとめて最大10分に1回:
+#   - 収集(scrape / notam-collect / news-collect / notam-report / msa-check)は、push したときだけ最後にこれを起動する
+#     (GITHUB_TOKEN の push では push トリガーのワークフローが動かないため、workflow_dispatch で起動する)
+#   - PR のマージなど人の push では push で起動する
+#   - 前回の公開から10分たつまで待ってから、その時点の main を公開する。待っている間に来た起動は1つにまとまる
+#     (concurrency: 実行中1つ + 待ち1つ。新しい起動が来ると古い待ちは取り消される)
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  actions: read
+
+concurrency:
+  group: pages-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Wait until 10 minutes after the last deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+          MIN_GAP: "600"
+        run: |
+          last=$(gh run list -R "$GITHUB_REPOSITORY" --workflow pages-deploy.yml --status success --limit 1 --json updatedAt --jq '.[0].updatedAt // empty' || true)
+          if [ -n "$last" ]; then
+            gap=$(( $(date -u +%s) - $(date -u -d "$last" +%s) ))
+            wait=$(( MIN_GAP - gap ))
+            if [ "$wait" -gt 0 ]; then echo "last deploy $last, waiting ${wait}s"; sleep "$wait"; fi
+          fi
+
+      # 待っている間に増えたコミットも含めて、その時点の main を公開する
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Build site
+        run: |
+          mkdir _site
+          git ls-files -z | grep -zv '^\.github/' | xargs -0 cp --parents -t _site
+          touch _site/.nojekyll
+          du -sh _site
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
