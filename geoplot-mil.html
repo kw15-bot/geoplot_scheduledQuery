@@ -643,7 +643,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <button class="mode-tab active" data-mode="auto">NAVWAR</button>
       <button class="mode-tab" data-mode="notam">NOTAM(Beta)</button>
       <button class="mode-tab" data-mode="manual">手動</button>
-      <button class="mode-tab" data-mode="news">報道</button>
+      <button class="mode-tab" data-mode="news">報道(Beta)</button>
     </div>
     <div class="header-spacer"></div>
     <span class="app-version" id="appVersion"></span>
@@ -942,7 +942,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.4.0';
+const APP_VERSION = 'v4.4.1';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1025,6 +1025,7 @@ const APP_VERSION = 'v4.4.0';
 // v4.3.0: 報道タブ(案A: 一覧のみ・地図なし、v4.1.1 と同じ)と🔔の関連サイト通知を戻した(ユーザー指示)。通知は見出しが指定の語句に当たる投稿(notify)だけ、遡って集めた分は除く。
 // v4.3.1: 報道の一覧で、通知の語句に当たる投稿の印を「通知対象」の文字から赤丸に(ユーザー指示)。
 // v4.4.0: 報道の記事の写し。収集時に保存した記事(見出し・日付・写真・本文、news_out/articles/)があれば、見出しを押すと元サイト風に表示し、PDFにも出せる。元サイトへは写しの上のボタンから。写しの無い記事は今までどおり元サイトを開く。
+// v4.4.1: タブの表示を「報道(Beta)」に(ユーザー指示。NOTAM(Beta) と同じ)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
