@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write
+  actions: write      # 最後に pages-deploy.yml を起動する
 
 concurrency:
   group: notam-report
@@ -63,3 +64,15 @@ jobs:
             sleep $((i * 5))
           done
           exit 1
+
+      # 2026-10-20: push したときだけ GitHub Pages の公開を起動する(まとめて最大10分に1回。pages-deploy.yml)
+      - name: Request Pages deploy
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$(git rev-parse HEAD)" != "${{ github.sha }}" ]; then
+            gh workflow run pages-deploy.yml -R "$GITHUB_REPOSITORY" --ref main || echo "could not request deploy"
+          else
+            echo "nothing pushed"
+          fi
