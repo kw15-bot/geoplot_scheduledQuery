@@ -4,10 +4,10 @@ name: News collect
 # ビューアはこれを10分おきに読み、まだ見ていない投稿を🔔通知に出す。
 #   中国海警局「海警要闻」 https://www.ccg.gov.cn/hjyw/
 #   台湾国防部 軍聞社「國防訊息」 https://mna.mnd.gov.tw/news/information/ (RSS から國防訊息だけ)
-# GitHub Actions の schedule は best-effort(数分〜数十分遅れることがある)。手動実行(workflow_dispatch)も可。
+# 2026-10-20: GitHub Actions の schedule は数時間あくこともあった(15分おきの指定が 07:41→15:01→20:33 等)ので外し、
+# NOTAM・航行警報と同じく外部の無料cronサービス(cron-job.org)から10分おきに workflow_dispatch を叩く運用にした
+# (HANDOFF_NOTAM.md §27.10)。手動実行も可。
 on:
-  schedule:
-    - cron: "7,22,37,52 * * * *"
   workflow_dispatch:
     inputs:
       backfill:
