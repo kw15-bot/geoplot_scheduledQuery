@@ -539,7 +539,7 @@ body.dark-mode .news-item.mna .news-title{color:#7fb2ec;}
 .news-item.mna .news-summary{font-size:11.5px;line-height:1.7;color:var(--text-dim);margin-top:3px;
   display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
 .news-item.mna .news-foot{font-size:10.5px;color:var(--text-faint);margin-top:4px;display:flex;gap:8px;}
-.news-flag{display:inline-block;font-size:9.5px;font-weight:700;color:#fff;background:var(--red);border-radius:3px;padding:0 5px;margin-right:6px;vertical-align:1px;}
+.news-flag{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--red);margin-right:7px;vertical-align:1px;}   /* v4.3.1: 「通知対象」の文字をやめて赤丸に */
 .news-status{font-size:10.5px;color:var(--text-faint);margin:-4px 0 6px;}
 
 /* ---------- Dark mode ----------
@@ -904,7 +904,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.3.0';
+const APP_VERSION = 'v4.3.1';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -985,6 +985,7 @@ const APP_VERSION = 'v4.3.0';
 // v4.2.1: 台北(RCTPYNYX)発行のNOTAMは🔔通知しない(ユーザー指示)。一覧・地図はそのまま。保存済みの台北の通知は読み込み時に捨てる。
 // v4.2.2: 台北発行でも本文に BY CHINA があるNOTAMは通知する(ユーザー指示)。保存済みの通知に byChina を持たせ、読み込み時の台北の通知の削除から外す。
 // v4.3.0: 報道タブ(案A: 一覧のみ・地図なし、v4.1.1 と同じ)と🔔の関連サイト通知を戻した(ユーザー指示)。通知は見出しが指定の語句に当たる投稿(notify)だけ、遡って集めた分は除く。
+// v4.3.1: 報道の一覧で、通知の語句に当たる投稿の印を「通知対象」の文字から赤丸に(ユーザー指示)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3074,7 +3075,7 @@ function renderNewsList(){
   $('#newsStatus').textContent = errs.join(' ／ ');
   $('#newsList').innerHTML = shown.map(it => {
     const pg = newsPageOf(it), site = newsTab === 'all' ? `<div class="news-site">${esc(NEWS_PAGE_NAMES[pg] || pg)}</div>` : '';
-    const flag = it.notify ? `<span class="news-flag" title="通知の条件(${esc(it.matched || '')})に当たる投稿">通知対象</span>` : '';
+    const flag = it.notify ? `<span class="news-flag" title="通知の条件(${esc(it.matched || '')})に当たる投稿" aria-label="通知対象"></span>` : '';
     const href = esc(it.url || '#');
     if (it.source === 'mna'){
       return `<a class="news-item mna" href="${href}" target="_blank" rel="noopener">${site}
