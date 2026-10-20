@@ -347,6 +347,22 @@ def parse_ccg_article(text, url):
             "source": src_m.group(1) if src_m else "", "figures": figs[:4], "paragraphs": paras, "keywords": []}
 
 
+def tidy_ccg_article(art, item_title):
+    """中国海警局の写しを整える(2026-10-20、初めて読めた記事 t20261010_3249 で確認):
+    - 見出しは一覧の見出しを使う(ページの h1 などはサイト名「中国海警局」だった)
+    - 本文の先頭にある見出しの繰り返しを除き、その次の英語の見出し(句点で終わらない英文1行)は副題にする
+      (本文は中国語と英語の段落が交互に並ぶ)"""
+    if item_title:
+        art["title"] = item_title
+    paras = list(art.get("paragraphs") or [])
+    if paras and paras[0].strip() == art["title"].strip():
+        paras.pop(0)
+        if paras and re.fullmatch(r"[\x20-\x7e’‘“”]+", paras[0]) and not paras[0].rstrip().endswith("."):
+            art["subtitle"] = paras.pop(0)
+    art["paragraphs"] = paras
+    return art
+
+
 def _get_bytes(url, referer=None):
     headers = dict(HEADERS, **({"Referer": referer} if referer else {}))
     with _opener.open(urllib.request.Request(url, headers=headers), timeout=TIMEOUT) as r:
@@ -381,6 +397,14 @@ def collect_articles(state, out, now, fetch=None):
     """写しの無い記事について記事ページを読み、news_out/articles/<id>.json に保存して、item に article(ファイル名)を付ける。
     通知対象 → 新しい順。読めない・本文が取れないときは article_tries を増やし、ARTICLE_MAX_TRIES 回で諦める。"""
     fetch = fetch or (lambda url: fetch_page(url, mirror="ccg.gov.cn" in url)[0])
+    # tidy_ccg_article より前に作った海警局の写し(見出しが「中国海警局」)を整え直す
+    for it in state["items"]:
+        if it.get("source") == "ccg" and it.get("article") and (out / it["article"]).exists():
+            path = out / it["article"]
+            art = json.loads(path.read_text(encoding="utf-8"))
+            if art.get("title") != it.get("title"):
+                path.write_text(json.dumps(tidy_ccg_article(art, it.get("title")), ensure_ascii=False, sort_keys=True) + "\n",
+                                encoding="utf-8")
     todo = [it for it in state["items"] if not it.get("article") and it.get("url")
             and it.get("article_tries", 0) < ARTICLE_MAX_TRIES]
     todo.sort(key=lambda it: it.get("published") or "", reverse=True)        # 新しい順
@@ -395,6 +419,8 @@ def collect_articles(state, out, now, fetch=None):
         try:
             text = fetch(it["url"])
             art = (parse_mna_article if src == "mna" else parse_ccg_article)(text, it["url"])
+            if src == "ccg":
+                tidy_ccg_article(art, it.get("title"))
             if not art["paragraphs"]:
                 raise ValueError("本文を読み取れなかった")
             for fig in art["figures"]:
