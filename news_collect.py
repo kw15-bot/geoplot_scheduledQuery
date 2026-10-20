@@ -184,11 +184,12 @@ def parse_ccg(text, base):
         title = strip_tags(title_m.group(1)) if title_m else strip_tags(inner)
         if not title:
             continue
-        near = re.search(r"(\d{4}-\d{2}-\d{2})(?:\s+(\d{2}:\d{2}(?::\d{2})?))?", text[m.end():m.end() + 200])
-        if near:
-            published = near.group(1) + ("T" + near.group(2) if near.group(2) else "")
-        else:
-            published = f"{ymd[:4]}-{ymd[4:6]}-{ymd[6:]}"
+        # 2026-10-20: 一覧の本体の記事だけを拾う。本体は「YYYY-MM-DD HH:MM:SS」付き、横の欄(過去の特集など)は日時なし。
+        # 以前は横の欄の2025年の記事も新着として入り、通知の語句に当たるものもあった。
+        near = re.search(r"(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2}(?::\d{2})?)", text[m.end():m.end() + 200])
+        if not near:
+            continue
+        published = near.group(1) + "T" + near.group(2)
         url = re.sub(r"^https?://web\.archive\.org/web/[^/]+/", "", urljoin(base, href))   # 保存版のリンクを元のURLに戻す
         if "/hjyw/" not in url and "/wqzf/" not in url:      # 横の欄(国际合作など)の記事は除く
             continue
@@ -313,6 +314,10 @@ def main(argv=None):
     state.setdefault("sources", {})
     state.setdefault("items", [])
     now = now_iso()
+    # 2026-10-20: 以前、一覧の横の欄(日時なし)から入った中国海警局の古い記事(2025年)は、遡った分として扱い通知しない
+    for it in state["items"]:
+        if it.get("source") == "ccg" and "T" not in str(it.get("published", "")) and not it.get("backfilled"):
+            it["backfilled"] = True
     if a.backfill or a.import_json:
         summary = run_backfill(state, a, now)
         out.mkdir(parents=True, exist_ok=True)

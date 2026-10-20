@@ -59,7 +59,7 @@ class News(unittest.TestCase):
             "ccg:20261010_3249",      # 维权执法: 在我钓鱼岛
             "ccg:20260929_3239",      # 维权执法: 金门
         } | {k for k, v in it.items() if v["source"] == "mna" and "聯合戰備警巡" in v["title"]})
-        self.assertFalse(it["ccg:20250406_2648"]["notify"])          # 「进入我钓鱼岛」は「在我钓鱼岛」ではない
+        self.assertNotIn("ccg:20250406_2648", it)                    # 横の欄(日時なし)の記事は拾わない(2026-10-20)
         self.assertFalse(it["ccg:20261008_3248"]["notify"])
         self.assertEqual(it["ccg:20261010_3249"]["page"], "ccg_wqzf")
         self.assertEqual(it["ccg:20261010_3249"]["matched"], "在我钓鱼岛")
