@@ -307,7 +307,21 @@ def main(argv=None):
     ap.add_argument("--backfill", nargs="+", choices=list(SOURCES), help="一覧を最後のページまで遡って集める")
     ap.add_argument("--max-pages", type=int, default=200, help="--backfill で読む最大ページ数(一覧ごと)")
     ap.add_argument("--import-json", help="中国海警局の記事 [{title,url,date}] を取り込む(遡った分として)")
+    ap.add_argument("--probe", nargs="+", metavar="URL",
+                    help="記事ページを読んで、script/style を除いたHTMLの先頭をログに出すだけ(作りの調査用。ファイルは書かない)")
     a = ap.parse_args(argv)
+    if a.probe:
+        for url in a.probe:
+            try:
+                text, via = fetch_page(url, mirror="ccg.gov.cn" in url)
+            except (urllib.error.URLError, OSError) as e:
+                print(f"=== PROBE {url}: {type(e).__name__}: {e}")
+                continue
+            t = re.sub(r"(?is)<(script|style)\b.*?</\1>", "", text)
+            t = re.sub(r"\s+", " ", t)
+            print(f"=== PROBE {url} via={via} len={len(text)} imgs={len(re.findall(r'<img', t, re.I))}")
+            print(t[:20000])
+        return 0
     out = Path(a.out_dir)
     path = out / "news.json"
     state = json.loads(path.read_text(encoding="utf-8")) if path.exists() else {"sources": {}, "items": []}
