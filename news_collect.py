@@ -267,8 +267,8 @@ def parse_mna_list(text, base="https://mna.mnd.gov.tw/"):
 # ビューアは報道タブで見出しを押すとこの写しを元サイト風に表示し、PDF にもできる。
 ARTICLE_DIR = "articles"
 ARTICLE_MAX_PER_RUN = 6         # 1回の収集で新しく写しを作る最大数(遡り分もこの数ずつ埋まっていく)
-ARTICLE_MAX_PER_RUN_CCG = 1     # 中国海警局は記事ページも拒否されがちで、1回の試行に時間がかかる(jina の取り直し)ので1件だけ
-ARTICLE_MAX_TRIES = 5           # 読めない・本文が取れない記事は、この回数で諦める
+ARTICLE_MAX_PER_RUN_CCG = 3     # 中国海警局は記事ページも拒否されがち(2026-10-20 の実績で約6割は読めた)。1件に最大20秒ほどかかる
+ARTICLE_MAX_TRIES = 5           # 読めない・本文が取れない記事は、この回数で一旦やめ、日が変わったらまた1回だけ試す
 IMG_MAX_W = 960
 IMG_QUALITY = 72
 
@@ -405,8 +405,9 @@ def collect_articles(state, out, now, fetch=None):
             if art.get("title") != it.get("title"):
                 path.write_text(json.dumps(tidy_ccg_article(art, it.get("title")), ensure_ascii=False, sort_keys=True) + "\n",
                                 encoding="utf-8")
+    today = now[:10]
     todo = [it for it in state["items"] if not it.get("article") and it.get("url")
-            and it.get("article_tries", 0) < ARTICLE_MAX_TRIES]
+            and (it.get("article_tries", 0) < ARTICLE_MAX_TRIES or it.get("article_last_try") != today)]
     todo.sort(key=lambda it: it.get("published") or "", reverse=True)        # 新しい順
     todo.sort(key=lambda it: 0 if it.get("notify") else 1)                    # 通知対象を先に(並べ替えは安定なので新しい順は保たれる)
     done, quota = {"mna": 0, "ccg": 0}, {"mna": ARTICLE_MAX_PER_RUN, "ccg": ARTICLE_MAX_PER_RUN_CCG}
@@ -434,9 +435,12 @@ def collect_articles(state, out, now, fetch=None):
             path.write_text(json.dumps(art, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
             it["article"] = article_file(it["id"])
             it.pop("article_tries", None)
+            it.pop("article_last_try", None)
             made += 1
         except (urllib.error.URLError, OSError, ValueError) as e:
             it["article_tries"] = it.get("article_tries", 0) + 1
+            if it["article_tries"] >= ARTICLE_MAX_TRIES:
+                it["article_last_try"] = today          # 諦めた記事は、日付が変わるまで試さない(日付だけなのでコミットは日に1回)
             print(f"[article] {it['id']} {it['url']}: {type(e).__name__}: {e}", file=sys.stderr)
     return made
 
