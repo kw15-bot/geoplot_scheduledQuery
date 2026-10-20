@@ -546,6 +546,7 @@ select{
 #newsArticleDoc.ccg .na-site{font-size:13px;color:#a11;font-weight:700;letter-spacing:.2em;border-bottom:3px solid #a11;padding-bottom:6px;margin-bottom:18px;}
 #newsArticleDoc.ccg h2{text-align:center;font-size:21px;}
 #newsArticleDoc.ccg .na-date{text-align:center;}
+#newsArticleDoc .na-sub{text-align:center;font-size:14px;color:#555;line-height:1.6;margin:0 0 8px;font-family:Georgia,'Times New Roman',serif;}
 #newsArticleDoc .na-imgerr{font-size:12px;color:#999;border:1px dashed #ccc;padding:10px;text-align:center;}
 .app.mode-manual #rightPanel,.app.mode-notam #rightPanel,.app.mode-news #rightPanel{display:none;}
 /* 報道モード(v4.1.0)。一覧の作りは元サイトにそろえる: 中国海警局は「見出し＋日時」、軍聞社は「見出し＋要約＋【國防訊息】＋民國の日付」 */
@@ -3175,6 +3176,7 @@ function renderNewsArticle(it, art){
   } else {
     doc.innerHTML = `<div class="na-site">中国海警局 China Coast Guard</div>
       <h2>${esc(art.title || it.title)}</h2>
+      ${art.subtitle ? `<div class="na-sub">${esc(art.subtitle)}</div>` : ''}
       <div class="na-date">${esc(art.date || String(it.published || '').replace('T', ' '))}${art.source ? `　来源：${esc(art.source)}` : ''}</div>
       ${figs}${paras}${src}`;
   }
