@@ -14,6 +14,10 @@ on:
         description: "遡って集める一覧(例: mna / ccg / mna ccg)。空なら普段の収集"
         required: false
         default: ""
+      probe:
+        description: "調査用: 記事ページのURL(空白区切り)。HTMLの先頭をログに出すだけで、収集もコミットもしない"
+        required: false
+        default: ""
 
 permissions:
   contents: write
@@ -45,8 +49,11 @@ jobs:
       - name: Collect
         env:
           BACKFILL: ${{ github.event.inputs.backfill }}
+          PROBE: ${{ github.event.inputs.probe }}
         run: |
-          if [ -n "$BACKFILL" ]; then
+          if [ -n "$PROBE" ]; then
+            python news_collect.py --out-dir news_out --probe $PROBE
+          elif [ -n "$BACKFILL" ]; then
             python news_collect.py --out-dir news_out --backfill $BACKFILL
           else
             python news_collect.py --out-dir news_out
