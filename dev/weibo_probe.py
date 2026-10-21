@@ -41,8 +41,9 @@ def visitor():
     d = json.loads(m.group(1)).get("data") or {}
     for k in ("sub", "subp"):
         if d.get(k):
-            jar.set_cookie(http.cookiejar.Cookie(0, k.upper(), d[k], None, False, ".weibo.com", True, True, "/", True,
-                                                 False, None, False, None, None, {}))
+            for dom in (".weibo.com", ".weibo.cn"):          # m.weibo.cn にも同じ訪問者 cookie を渡す
+                jar.set_cookie(http.cookiejar.Cookie(0, k.upper(), d[k], None, False, dom, True, True, "/", True,
+                                                     False, None, False, None, None, {}))
     print("visitor cookies:", sorted(c.name for c in jar))
 
 
@@ -69,6 +70,11 @@ def main():
         except Exception as e:  # noqa: BLE001
             print("mymblog parse failed:", e)
         get(f"https://m.weibo.cn/api/container/getIndex?type=uid&value={uid}&containerid=107603{uid}", show=800)
+        get(f"https://m.weibo.cn/profile/info?uid={uid}", headers={"Referer": f"https://m.weibo.cn/u/{uid}",
+                                                                   "MWeibo-Pwa": "1", "X-Requested-With": "XMLHttpRequest"}, show=800)
+        # RSSHub の公開インスタンス(微博のユーザーの投稿を RSS にする)
+        for host in ("https://rsshub.app", "https://rsshub.rssforever.com", "https://rss.shab.fun"):
+            get(f"{host}/weibo/user/{uid}", show=800)
         # 3) r.jina.ai 経由(海警局で使っている経路)
         get(f"https://r.jina.ai/https://m.weibo.cn/api/container/getIndex?type=uid&value={uid}&containerid=107603{uid}",
             headers={"X-No-Cache": "true"}, show=800)
