@@ -65,7 +65,8 @@ _warmed = set()
 
 # 中国海警局の2つの一覧に共通の、通知する見出し(正規表現、どれかに当たれば通知)。
 # 「台湾岛以东」はユーザー指定の「…依法开展常态化执法巡查」のほか、「依法」の無い見出し(2026-07-04)もあったので両方
-CCG_NOTIFY = [r"中国台湾岛以东海域(?:依法)?开展常态化执法巡查", r"在我钓鱼岛", r"金门"]
+# 2026-10-21: 「中国台湾岛以东海域(依法)开展常态化执法巡查」は通知・赤丸の対象から外した(ユーザー指示)
+CCG_NOTIFY = [r"在我钓鱼岛", r"金门"]
 # source(保存の単位) -> 読む一覧(page)。page ごとに、通知する見出しの規則(None は CCG_NOTIFY)
 SOURCES = {
     "ccg": {"name": "中国海警局", "pages": [
@@ -573,6 +574,13 @@ def main(argv=None):
         else:
             # 成功時刻を毎回書くと15分ごとにコミットが出るので、日付だけ持つ(新着・エラー・日付が変わったときだけファイルが変わる)
             meta.update({"last_ok_date": now[:10], "last_error": None, "last_error_at": None})
+    # 通知の規則を変えたときに保存済みの記事にも効くよう、毎回いまの規則で付け直す(2026-10-21)
+    page_rules = {pg["page"]: (pg["notify"] or CCG_NOTIFY) for src in SOURCES.values() for pg in src["pages"]}
+    for it in state["items"]:
+        rules = page_rules.get(it.get("page")) or (CCG_NOTIFY if it.get("source") == "ccg" else None)
+        if rules:
+            hit = notify_match(it.get("title", ""), rules)
+            it["notify"], it["matched"] = bool(hit), hit
     if not a.fixture_dir and not a.no_articles:
         summary["articles"] = collect_articles(state, out, now)
     out.mkdir(parents=True, exist_ok=True)

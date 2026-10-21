@@ -53,12 +53,12 @@ class News(unittest.TestCase):
         it = self.items()
         on = {k for k, v in it.items() if v["notify"]}
         self.assertEqual(on, {
-            "ccg:20260929_3238",      # 海警要闻: 台湾岛以东…依法开展常态化执法巡查
-            "ccg:20260704_3129",      # 海警要闻: 「依法」の無い言い方
-            "ccg:20260902_3198",      # 维权执法だけに載った 台湾岛以东(3つの規則は両方の一覧に使う)
             "ccg:20261010_3249",      # 维权执法: 在我钓鱼岛
             "ccg:20260929_3239",      # 维权执法: 金门
         } | {k for k, v in it.items() if v["source"] == "mna" and "聯合戰備警巡" in v["title"]})
+        # 「台湾岛以东…常态化执法巡查」は 2026-10-21 に通知の対象から外した
+        for k in ("ccg:20260929_3238", "ccg:20260704_3129", "ccg:20260902_3198"):
+            self.assertFalse(it[k]["notify"], k)
         self.assertNotIn("ccg:20250406_2648", it)                    # 横の欄(日時なし)の記事は拾わない(2026-10-20)
         self.assertFalse(it["ccg:20261008_3248"]["notify"])
         self.assertEqual(it["ccg:20261010_3249"]["page"], "ccg_wqzf")
@@ -66,6 +66,17 @@ class News(unittest.TestCase):
         mna_on = [v for v in it.values() if v["source"] == "mna" and v["notify"]]
         self.assertEqual(len(mna_on), 1)
         self.assertEqual(sum(v["source"] == "mna" for v in it.values()), 3)
+
+    def test_notify_recomputed_for_saved_items(self):
+        """保存済みの記事も、毎回いまの規則で通知の印を付け直す(規則から外した語句の記事は印が消える)"""
+        self.run_once()
+        st = json.loads((self.out / "news.json").read_text(encoding="utf-8"))
+        for i in st["items"]:
+            if i["id"] == "ccg:20260929_3238":
+                i["notify"], i["matched"] = True, "中国台湾岛以东海域依法开展常态化执法巡查"
+        (self.out / "news.json").write_text(json.dumps(st, ensure_ascii=False), encoding="utf-8")
+        self.run_once()
+        self.assertFalse(self.items()["ccg:20260929_3238"]["notify"])
 
     def test_mna_rss_only_category(self):
         items = N.parse_mna_rss((FX / "mna.xml").read_text(encoding="utf-8"), "國防訊息")

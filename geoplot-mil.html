@@ -556,9 +556,9 @@ select{
 .news-item.map-selected,.news-item:focus-visible{background:var(--panel-alt);outline:none;}
 .news-site{font-size:10px;color:var(--text-faint);margin-bottom:2px;}
 .news-title{font-size:13px;line-height:1.55;color:var(--text);}
-.news-item.ccg .news-row{display:flex;gap:10px;align-items:baseline;justify-content:space-between;}
-.news-item.ccg .news-title{flex:1;min-width:0;}
-.news-item.ccg .news-date{font-family:var(--mono);font-size:10.5px;color:var(--text-faint);white-space:nowrap;}
+.news-item .news-row{display:flex;gap:10px;align-items:baseline;justify-content:space-between;}
+.news-item .news-row .news-title{flex:1;min-width:0;}
+.news-item .news-date{font-family:var(--mono);font-size:10.5px;color:var(--text-faint);white-space:nowrap;}
 .news-item.mna .news-title{font-weight:700;color:#1d5fa8;}
 body.dark-mode .news-item.mna .news-title{color:#7fb2ec;}
 .news-item.mna .news-summary{font-size:11.5px;line-height:1.7;color:var(--text-dim);margin-top:3px;
@@ -942,7 +942,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.4.1';
+const APP_VERSION = 'v4.4.2';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1026,6 +1026,7 @@ const APP_VERSION = 'v4.4.1';
 // v4.3.1: 報道の一覧で、通知の語句に当たる投稿の印を「通知対象」の文字から赤丸に(ユーザー指示)。
 // v4.4.0: 報道の記事の写し。収集時に保存した記事(見出し・日付・写真・本文、news_out/articles/)があれば、見出しを押すと元サイト風に表示し、PDFにも出せる。元サイトへは写しの上のボタンから。写しの無い記事は今までどおり元サイトを開く。
 // v4.4.1: タブの表示を「報道(Beta)」に(ユーザー指示。NOTAM(Beta) と同じ)。
+// v4.4.2: 一覧の「写し」の印を「PDF」に。記事の画面の「収集時に保存した写しです…」の注記をやめた(出典は残す)。國防訊息にも右に公開日時(台湾時間)。海警局の「台湾岛以东…常态化执法巡查」は通知・赤丸の対象から外した(収集側)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3099,6 +3100,8 @@ function newsMinguoDate(pub){
   const m = String(pub || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
   return m ? `民國${Number(m[1]) - 1911}年${m[2]}月${m[3]}日` : '';
 }
+// 一覧の右の日時: 各サイトの公開日時をそのサイトの現地時間のまま(海警局=北京時間・軍聞社=台湾時間、どちらも UTC+8)。v4.4.2
+function newsLocalTime(pub){ return String(pub || '').replace('T', ' ').slice(0, 19); }
 function renderNewsList(){
   const items = ((newsState && newsState.items) || []).slice()
     .sort((a, b) => String(b.published || '').localeCompare(String(a.published || '')) || String(b.id).localeCompare(String(a.id)));
@@ -3119,16 +3122,15 @@ function renderNewsList(){
     const href = esc(it.url || '#');
     // v4.4.0: 記事の写しがあれば、押すと写しを開く(元サイトへは写しの上のボタンから)。無ければ今までどおり元サイトを開く
     const open = it.article ? `href="${href}" data-article="${esc(it.id)}"` : `href="${href}" target="_blank" rel="noopener"`;
-    const copy = it.article ? '<span class="news-copy-mark" title="記事の写しを保存済み(元のサイトに入れなくても読める・PDFにできる)">写し</span>' : '';
+    const copy = it.article ? '<span class="news-copy-mark" title="記事を保存済み(元のサイトに入れなくても読める・PDFにできる)">PDF</span>' : '';
     if (it.source === 'mna'){
       return `<a class="news-item mna" ${open}>${site}
-        <div class="news-title">${flag}${esc(it.title)}${copy}</div>
+        <div class="news-row"><div class="news-title">${flag}${esc(it.title)}${copy}</div><div class="news-date" title="軍聞社の公開日時(台湾時間)">${esc(newsLocalTime(it.published))}</div></div>
         ${it.summary ? `<div class="news-summary">${esc(it.summary)}</div>` : ''}
         <div class="news-foot"><span>【國防訊息】</span><span>${esc(newsMinguoDate(it.published))}</span></div></a>`;
     }
-    const pub = String(it.published || '').replace('T', ' ').slice(0, 19);
     return `<a class="news-item ccg" ${open}>${site}
-      <div class="news-row"><div class="news-title">${flag}${esc(it.title)}${copy}</div><div class="news-date">${esc(pub)}</div></div></a>`;
+      <div class="news-row"><div class="news-title">${flag}${esc(it.title)}${copy}</div><div class="news-date" title="中国海警局の一覧に出ている公開日時(北京時間)">${esc(newsLocalTime(it.published))}</div></div></a>`;
   }).join('');
 }
 $('#newsList').addEventListener('click', e=>{
@@ -3164,8 +3166,7 @@ function renderNewsArticle(it, art){
     ? `<figure><img src="${f.data}" alt="${esc(f.caption || '')}">${f.caption ? `<figcaption>${esc(f.caption)}</figcaption>` : ''}</figure>`
     : `<figure><div class="na-imgerr">写真を保存できませんでした</div>${f.caption ? `<figcaption>${esc(f.caption)}</figcaption>` : ''}</figure>`).join('');
   const paras = (art.paragraphs || []).map(p => `<p class="na-p">${esc(p)}</p>`).join('');
-  const fetched = String(art.fetched_at || '').replace('T', ' ').slice(0, 16);
-  const src = `<div class="na-src">出典: ${esc(art.site || '')}　${esc(art.url || it.url || '')}<br>この画面は収集時（${esc(fetched)} UTC）に保存した記事の写しです。元の記事と異なる場合があります。</div>`;
+  const src = `<div class="na-src">出典: ${esc(art.site || '')}　${esc(art.url || it.url || '')}</div>`;
   if (it.source === 'mna'){
     doc.innerHTML = `<div class="na-crumb">首頁 ＞ 軍聞消息</div>
       ${art.category ? `<div class="na-tag">${esc(art.category)}</div>` : ''}
@@ -3181,7 +3182,7 @@ function renderNewsArticle(it, art){
       <div class="na-date">${esc(art.date || String(it.published || '').replace('T', ' '))}${art.source ? `　来源：${esc(art.source)}` : ''}</div>
       ${figs}${paras}${src}`;
   }
-  $('#newsArticleNote').textContent = `${NEWS_PAGE_NAMES[newsPageOf(it)] || ''}　収集時の写し`;
+  $('#newsArticleNote').textContent = NEWS_PAGE_NAMES[newsPageOf(it)] || '';
 }
 function closeNewsArticle(){ $('#newsArticleModal').classList.remove('open'); newsArticleOpen = null; }
 $('#btnNewsArticleClose').addEventListener('click', closeNewsArticle);
