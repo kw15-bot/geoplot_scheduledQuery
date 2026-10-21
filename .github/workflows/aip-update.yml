@@ -1,0 +1,91 @@
+name: AIP update
+
+# 2026-10-21: AIRAC 更新(28日ごと)で、AIP索引(aip/cn_aip_index.json.gz.enc)と地図のレイヤー(航空路・ウェイポイント)を作り直す。
+# 手元に AIPDS_KEY が無くても更新できるよう、新しい AIP-DS の ZIP を VIEWER_KEY で暗号化して
+# aip/incoming/<元のファイル名>.zip.enc に置いて push し、このワークフローを手動実行する(HANDOFF_NOTAM.md §19)。
+#   1. ZIP を復号(ランナーの中だけ)  2. 前の索引との差(地点・区間の増減)をログに出す
+#   3. aip_build_index.py で索引を作り直す  4. レイヤーを作り直す  5. aip/incoming/ を消してコミット → Pages の公開を起動
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: aip-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+
+      - name: Rebuild AIP index and layers
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+          AIPDS_KEY: ${{ secrets.AIPDS_KEY }}
+        run: |
+          set -e
+          [ -n "$AIPDS_KEY" ] || { echo "::error::Secret AIPDS_KEY が未設定です"; exit 1; }
+          pip install -q cryptography
+          enc=$(ls aip/incoming/*.zip.enc | sort | tail -1)
+          [ -n "$enc" ] || { echo "::error::aip/incoming/*.zip.enc がありません"; exit 1; }
+          zip="$RUNNER_TEMP/$(basename "${enc%.enc}")"
+          python - "$enc" "$zip" <<'PY'
+          import sys, data_crypt as D
+          open(sys.argv[2], "wb").write(D.decrypt_bytes(open(sys.argv[1], "rb").read(), D.load_key()))
+          PY
+          openssl enc -d -aes-256-cbc -pbkdf2 -pass env:AIPDS_KEY -in aip/cn_aip_index.json.gz.enc \
+            | gunzip > "$RUNNER_TEMP/old.json"
+          python aip_build_index.py "$zip" --plain "$RUNNER_TEMP/new.json"
+          python - "$RUNNER_TEMP/old.json" "$RUNNER_TEMP/new.json" <<'PY'
+          import json, sys
+          o, n = (json.load(open(p)) for p in sys.argv[1:3])
+          def segs(d):
+              P, R = d["points"], d["routes"]
+              return {(R.get(r, "?"), P.get(s, ["?"])[0], P.get(e, ["?"])[0]) for r, s, e in d["segments"]}
+          def pts(d):
+              return {(v[0], v[3]) for v in d["points"].values()}
+          print("old", o["meta"]["pubNo"], o["meta"]["effectiveTime"], "-> new", n["meta"]["pubNo"], n["meta"]["effectiveTime"])
+          for name, f in (("points", pts), ("segments", segs)):
+              a, b = f(o), f(n)
+              print(f"{name}: {len(a)} -> {len(b)}  added {len(b - a)}  removed {len(a - b)}")
+              for x in sorted(b - a)[:40]: print("  +", x)
+              for x in sorted(a - b)[:40]: print("  -", x)
+          print("routes:", len(o["routes"]), "->", len(n["routes"]),
+                "added", sorted(set(n["routes"].values()) - set(o["routes"].values())),
+                "removed", sorted(set(o["routes"].values()) - set(n["routes"].values())))
+          PY
+          python aip_build_index.py "$zip"
+          openssl enc -d -aes-256-cbc -pbkdf2 -pass env:AIPDS_KEY \
+            -in aip/cn_aip_index.json.gz.enc -out "$RUNNER_TEMP/aip_index.json.gz"
+          python aip_build_routes_layer.py --index "$RUNNER_TEMP/aip_index.json.gz" \
+            --out aip/cn_routes_layer.enc --points-out aip/cn_points_layer.enc
+          rm -f "$zip" "$RUNNER_TEMP"/*.json "$RUNNER_TEMP/aip_index.json.gz"
+          git rm -q aip/incoming/*.zip.enc
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add aip/cn_aip_index.json.gz.enc aip/cn_routes_layer.enc aip/cn_points_layer.enc
+          git commit -m "AIP: rebuild index and map layers from the new AIRAC dataset"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push origin HEAD:main && break
+            [ "$i" = 5 ] && exit 1
+            sleep $((i * 5))
+          done
+
+      - name: Request Pages deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages-deploy.yml -R "$GITHUB_REPOSITORY" --ref main || echo "could not request deploy"
