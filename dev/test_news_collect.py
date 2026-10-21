@@ -20,8 +20,11 @@ class News(unittest.TestCase):
     def setUp(self):
         self.tmp = Path(tempfile.mkdtemp())
         self.out = self.tmp / "out"
+        # fixture の投稿(2026-10-04〜08)が「見つけた時点で古い投稿」(is_old_post)にならないよう、時計を固定する
+        self._now_iso, N.now_iso = N.now_iso, lambda: "2026-10-09T00:00:00+00:00"
 
     def tearDown(self):
+        N.now_iso = self._now_iso
         shutil.rmtree(self.tmp)
 
     def run_once(self, fx=FX):
@@ -129,6 +132,14 @@ class News(unittest.TestCase):
         self.assertFalse(it["ccg:20261008_3248"].get("backfilled"))      # 普段の収集で入った分はそのまま
         self.run_once()                                                     # 普段の収集の後も消えない(全件を蓄積)
         self.assertIn("ccg:20231201_900", self.items())
+
+    def test_old_post_found_later_is_backfilled(self):
+        N.now_iso = lambda: "2026-10-21T00:00:00+00:00"                   # 10/04〜08 の投稿を 10/21 に初めて見つけた
+        self.run_once()
+        it = self.items()
+        self.assertTrue(it["ccg:20261008_3248"].get("backfilled"))        # 7日より前 → 通知しない
+        self.assertTrue(N.is_old_post({"published": "2026-10-13"}, "2026-10-21T00:00:00Z"))
+        self.assertFalse(N.is_old_post({"published": "2026-10-14"}, "2026-10-21T00:00:00Z"))
 
 
 

@@ -48,7 +48,7 @@ _ROUTE_CLOSURE = re.compile(r"(?:ATS\s+RTE|\bAWY\b|\bSEGMENT\b|VFR\s+CORRIDOR).*
 def text_points(e_text):
     """E項の座標を (lat, lon, 種類) で返す。種類: 'vertex'(多角形の頂点) / 'center'(円の中心) / 'line'(帯の中心線)。
     括弧の中の臨時ウェイポイント定義は除く(収集側と同じ)。"""
-    t = C._SPLIT_DIGITS.sub("", e_text or "")
+    t = C._rewrite_each_side(C._SPLIT_DIGITS.sub("", e_text or ""))   # 「<線> WITH EACH SIDE OF 30KM」も帯として見る
     corridor = bool(C._CORRIDOR.search(t))
     out = []
     for m in C._TEXT_COORD.finditer(t):
@@ -91,6 +91,9 @@ def check_notam(p, geoms):
     rings = [r for g in geoms for r in rings_of(g)]
 
     if subject not in NON_AREA_SUBJECTS:
+        lines = [x for x in pts if x[2] == "line"]
+        if not drawn and len(lines) >= 2:
+            issues.append(f"本文に帯(線の両側)の座標 {len(lines)} 個があるのに、図形になっていない({src})")
         if not drawn and (len({(round(a, 4), round(b, 4)) for a, b, _ in verts}) >= 3 or centers):
             issues.append(f"本文に座標 {len(verts)} 個・円 {len(centers)} 個があるのに、多角形になっていない({src})")
         if not drawn and _NAMED_CENTER.search(e):

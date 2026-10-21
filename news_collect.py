@@ -463,6 +463,19 @@ def notify_match(title, rules):
 
 
 # ----------------------------------------------------------------------------- 本体
+OLD_POST_DAYS = 7
+
+
+def is_old_post(it, now):
+    """見つけた時点で公開から OLD_POST_DAYS 日より前の投稿か。2026-10-20 06:30 UTC、维权执法の一覧が7〜8月の古い投稿を
+    返し(経路は jina。原因不明)、それらが新着として通知に出たため、古い投稿は遡った分と同じ扱い(通知しない)にする。"""
+    pub, seen = str(it.get("published") or "")[:10], str(now or "")[:10]
+    try:
+        return (dt.date.fromisoformat(seen) - dt.date.fromisoformat(pub)).days > OLD_POST_DAYS
+    except ValueError:
+        return False
+
+
 def merge(state, sid, fetched, now, backfill=False):
     """新しく見つかったものに first_seen を付けて足す(全件を蓄積)。backfill のときは新しく足したものに backfilled を付ける
     (ビューアは通知しない)。足した件数を返す。"""
@@ -476,7 +489,7 @@ def merge(state, sid, fetched, now, backfill=False):
                 it.update({"notify": True, "matched": prev.get("matched"), "page": prev.get("page", it.get("page"))})
         else:
             it["first_seen"] = now
-            if backfill:
+            if backfill or is_old_post(it, now):
                 it["backfilled"] = True
             added += 1
         old[it["id"]] = {**old.get(it["id"], {}), **it}
@@ -518,6 +531,9 @@ def main(argv=None):
     # 2026-10-20: 以前、一覧の横の欄(日時なし)から入った中国海警局の古い記事(2025年)は、遡った分として扱い通知しない
     for it in state["items"]:
         if it.get("source") == "ccg" and "T" not in str(it.get("published", "")) and not it.get("backfilled"):
+            it["backfilled"] = True
+        # 2026-10-21: 見つけた時点で古かった投稿(新着として入ってしまったもの)も、遡った分として扱う
+        if not it.get("backfilled") and it.get("first_seen") and is_old_post(it, it["first_seen"]):
             it["backfilled"] = True
     if a.backfill or a.import_json:
         summary = run_backfill(state, a, now)

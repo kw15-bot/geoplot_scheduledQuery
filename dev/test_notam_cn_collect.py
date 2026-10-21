@@ -610,6 +610,17 @@ class RealNotams(unittest.TestCase):
         self.assertAlmostEqual(lats[0], 36.55 - 1 / 60, places=5)
         self.assertAlmostEqual(lats[-1], 36.55 + 1 / 60, places=5)
 
+    def test_corridor_width_after_line(self):
+        # 2026-10-21追加: ZWUQ A5408/26「THE AREA WITHIN <座標>- <座標> WITH EACH SIDE OF 30KM」(幅が後ろ)が図形なしだった
+        e = "THE AREA WITHIN N443236E0871714- N430441E0811140 WITH EACH SIDE OF 30KM CLSD BTN 9,200M(INCLUSIVE)"
+        rings = C.parse_text_polygons(e)
+        self.assertEqual(len(rings), 1)
+        self.assertEqual(len(rings[0]), 2 * 2 + 1)      # 2点の線 → 左右2点ずつ + 閉じる点
+        # 端の点(81.18889E, 43.07806N)から帯の端までがおよそ30km
+        end = (81 + 11 / 60 + 40 / 3600, 43 + 4 / 60 + 41 / 3600)
+        d = min(((p[0] - end[0]) * 111.32 * 0.73) ** 2 + ((p[1] - end[1]) * 111.32) ** 2 for p in rings[0][:-1]) ** 0.5
+        self.assertAlmostEqual(d, 30, delta=1.5)
+
     def test_named_waypoint_coords_in_parens_are_not_polygon_vertices(self):
         # 2026-09-27追加: A4957/26等の航空路変更NOTAMで、迂回路の臨時ウェイポイント定義
         # 'CG1(N253957E1095707)' のような座標が、実在しないエリア境界として誤検出されていたのを修正。
