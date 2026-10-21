@@ -5,8 +5,18 @@ name: AIP update
 # aip/incoming/<元のファイル名>.zip.enc に置いて push し、このワークフローを手動実行する(HANDOFF_NOTAM.md §19)。
 #   1. ZIP を復号(ランナーの中だけ)  2. 前の索引との差(地点・区間の増減)をログに出す
 #   3. aip_build_index.py で索引を作り直す  4. レイヤーを作り直す  5. aip/incoming/ を消してコミット → Pages の公開を起動
+# 2026-10-21 変更: 発効日時(ファイル名の EFF<YYYYMMDDHHMM>、UTC)になるまでは差し替えない。AIRAC 2612 は 2611 から
+# フフホト(HET)周辺の航空路が組み替わり(W559 等の廃止・B208 等の付け替え)、発効前に使うといまの NOTAM の区間が引けなくなるため。
+# 毎日 16:07 UTC(AIRAC の発効は 16:00 UTC)に見て、発効していれば差し替える。急ぐときは手動実行で early にチェック。
 on:
-  workflow_dispatch: {}
+  schedule:
+    - cron: "7 16 * * *"
+  workflow_dispatch:
+    inputs:
+      early:
+        description: "発効前でも差し替える"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -25,11 +35,29 @@ jobs:
         with:
           ref: main
 
+      - name: Is a staged dataset in effect?
+        id: due
+        env:
+          EARLY: ${{ inputs.early }}
+        run: |
+          enc=$(ls aip/incoming/*.zip.enc 2>/dev/null | sort | tail -1 || true)
+          if [ -z "$enc" ]; then echo "nothing staged"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          eff=$(basename "$enc" | sed -n 's/.*_EFF\([0-9]\{12\}\)_.*/\1/p')
+          now=$(date -u +%Y%m%d%H%M)
+          echo "staged $enc (EFF $eff UTC), now $now UTC"
+          if [ "$EARLY" = "true" ] || { [ -n "$eff" ] && [ "$now" -ge "$eff" ]; }; then
+            echo "go=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "not yet in effect"; echo "go=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/setup-python@v6
+        if: steps.due.outputs.go == 'true'
         with:
           python-version: "3.12"
 
       - name: Rebuild AIP index and layers
+        if: steps.due.outputs.go == 'true'
         env:
           VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
           AIPDS_KEY: ${{ secrets.AIPDS_KEY }}
@@ -74,6 +102,7 @@ jobs:
           git rm -q aip/incoming/*.zip.enc
 
       - name: Commit
+        if: steps.due.outputs.go == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -86,6 +115,7 @@ jobs:
           done
 
       - name: Request Pages deploy
+        if: steps.due.outputs.go == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run pages-deploy.yml -R "$GITHUB_REPOSITORY" --ref main || echo "could not request deploy"
