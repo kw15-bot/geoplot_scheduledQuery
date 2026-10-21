@@ -506,6 +506,7 @@ select{
   font-family:var(--mono);font-size:11.5px;color:var(--text-dim);background:transparent;border:none;
   border-radius:8px;padding:7px 14px;cursor:pointer;transition:.12s;white-space:nowrap;
 }
+.mode-tabs-news{margin-left:10px;}
 .mode-tab:hover{color:var(--text);background:var(--panel-raised);}
 .mode-tab.active{background:var(--phosphor);color:#fff;font-weight:700;}
 .mode-tab .tab-n{margin-left:4px;opacity:.8;}
@@ -643,6 +644,9 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <button class="mode-tab active" data-mode="auto">NAVWAR</button>
       <button class="mode-tab" data-mode="notam">NOTAM(Beta)</button>
       <button class="mode-tab" data-mode="manual">手動</button>
+    </div>
+    <!-- v4.4.3: 報道は地図のモードとは別の囲みに離して置く(ユーザー指示) -->
+    <div class="mode-tabs mode-tabs-news" id="modeTabsNews">
       <button class="mode-tab" data-mode="news">報道(Beta)</button>
     </div>
     <div class="header-spacer"></div>
@@ -942,7 +946,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.4.2';
+const APP_VERSION = 'v4.4.3';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1027,6 +1031,7 @@ const APP_VERSION = 'v4.4.2';
 // v4.4.0: 報道の記事の写し。収集時に保存した記事(見出し・日付・写真・本文、news_out/articles/)があれば、見出しを押すと元サイト風に表示し、PDFにも出せる。元サイトへは写しの上のボタンから。写しの無い記事は今までどおり元サイトを開く。
 // v4.4.1: タブの表示を「報道(Beta)」に(ユーザー指示。NOTAM(Beta) と同じ)。
 // v4.4.2: 一覧の「写し」の印を「PDF」に。記事の画面の「収集時に保存した写しです…」の注記をやめた(出典は残す)。國防訊息にも右に公開日時(台湾時間)。海警局の「台湾岛以东…常态化执法巡查」は通知・赤丸の対象から外した(収集側)。
+// v4.4.3: 「報道(Beta)」のタブを NAVWAR / NOTAM / 手動 の囲みから離し、別の囲みに置いた(ユーザー指示)。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -5014,7 +5019,7 @@ function enterMode(mode){
   const app = $('#mainApp');
   app.classList.remove('mode-auto','mode-manual','mode-notam','mode-news');
   app.classList.add(mode === 'manual' ? 'mode-manual' : mode === 'notam' ? 'mode-notam' : mode === 'news' ? 'mode-news' : 'mode-auto');
-  $$('#modeTabs .mode-tab').forEach(btn=> btn.classList.toggle('active', btn.dataset.mode === mode));
+  $$('.mode-tabs .mode-tab').forEach(btn=> btn.classList.toggle('active', btn.dataset.mode === mode));
   syncOverlayLayers(); // 航空路などの参考レイヤーは NOTAMモードのときだけ出す
   // 3モードとも地図上の表示は排他 -- auto(msaLayer) / manual(manualLayerGroup) / notam(notamLayer)。
   // Each mode only shows its own shapes on the map. Without this, switching modes left the
@@ -5048,7 +5053,7 @@ function enterMode(mode){
     : '自動収集モードで開始しました。?geojson=<URL> 付きで開くとmilitary.geojsonへ自動接続し、10分ごとに自動再取込します。'
   );
 }
-$$('#modeTabs .mode-tab').forEach(btn=>{
+$$('.mode-tabs .mode-tab').forEach(btn=>{
   btn.addEventListener('click', ()=> enterMode(btn.dataset.mode));
 });
 
