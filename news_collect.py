@@ -517,6 +517,15 @@ def main(argv=None):
             except (urllib.error.URLError, OSError) as e:
                 print(f"=== PROBE {url}: {type(e).__name__}: {e}")
                 continue
+            if re.search(r"\.(js|json)(\?|$)", url) or not text.lstrip().startswith("<"):   # データ・スクリプトはそのまま
+                print(f"=== PROBE {url} via={via} len={len(text)} (raw)")
+                print(text[:20000])
+                continue
+            for src in re.findall(r'(?i)<script[^>]+src=["\']([^"\']+)', text):          # 中身を JS で読み込むページの調査用
+                print(f"=== SCRIPT src {src}")
+            for js in re.findall(r"(?is)<script\b[^>]*>(.*?)</script>", text):
+                if js.strip():
+                    print(f"=== INLINE SCRIPT {re.sub(r'\s+', ' ', js)[:3000]}")
             t = re.sub(r"(?is)<(script|style)\b.*?</\1>", "", text)
             t = re.sub(r"\s+", " ", t)
             print(f"=== PROBE {url} via={via} len={len(text)} imgs={len(re.findall(r'<img', t, re.I))}")
