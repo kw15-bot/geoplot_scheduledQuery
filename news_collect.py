@@ -519,7 +519,7 @@ def main(argv=None):
                 continue
             if re.search(r"\.(js|json)(\?|$)", url) or not text.lstrip().startswith("<"):   # データ・スクリプトはそのまま
                 print(f"=== PROBE {url} via={via} len={len(text)} (raw)")
-                print(text[:20000])
+                print(text[:20000] if len(text) <= 60000 else text[-60000:])   # 大きいスクリプトは後ろ(同梱ライブラリの後の本体)
                 continue
             for src in re.findall(r'(?i)<script[^>]+src=["\']([^"\']+)', text):          # 中身を JS で読み込むページの調査用
                 print(f"=== SCRIPT src {src}")
