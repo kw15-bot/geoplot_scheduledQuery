@@ -142,6 +142,36 @@ class News(unittest.TestCase):
         self.assertFalse(N.is_old_post({"published": "2026-10-14"}, "2026-10-21T00:00:00Z"))
 
 
+    def test_jfjb_day(self):
+        self.run_once()
+        idx = json.loads((self.out / "jfjb" / "index.json").read_text(encoding="utf-8"))
+        self.assertEqual(idx["newest"], "2026-10-22")
+        self.assertEqual([p[:3] for p in idx["days"]["2026-10-22"]["pages"]], [["01", "要闻", 2], ["02", "要闻", 1]])  # 版の順に並べ直す
+        day = json.loads((self.out / "jfjb" / "2026-10-22.json").read_text(encoding="utf-8"))
+        a1, a2 = day["pages"][0]["articles"]
+        self.assertEqual((a1["id"], a1["subtitle"], a1["author"]), ("jfjb:2026-10-22_988843", "——习近平主席引领人民军队弘扬伟大长征精神推进新时代强军事业", "■本报记者 费士廷"))
+        self.assertEqual(a1["paragraphs"], ["长征，这一惊天动地的革命壮举。", "江西于都、广西全州。"])
+        self.assertEqual(a2["paragraphs"], ["东部战区新闻发言人表示。", "第二行。"])              # <p> が無い本文は <br> で分ける
+        self.assertIn("articleid=988843", a1["url"])
+        b = day["pages"][1]["articles"][0]
+        self.assertEqual(b["figures"], [{"src": "https://rmt-static-publish.81.cn/image/uploadpic/20261022/06fc46ef72ac9ae3c06dfb221f1ab461.jpg",
+                                         "caption": "图为纪念活动现场。"}])
+        self.assertEqual(b["paragraphs"], ["第一段。", "二、要求"])                                  # 写真の説明は本文に入れない
+        st = self.state()
+        self.assertEqual(st["sources"]["jfjb"]["days"]["2026-10-22"], {"articles": 3, "final": False})
+        self.assertEqual(st["sources"]["jfjb"]["days"]["2026-10-21"], {"articles": 0, "final": True})  # 無い日(404)は読み直さない
+        self.assertFalse([i for i in st["items"] if i["source"] == "jfjb"])                         # 通知の規則が無ければ items に入れない
+
+    def test_jfjb_notify_rule(self):
+        old = N.JFJB_NOTIFY
+        N.JFJB_NOTIFY = [r"东部战区"]
+        try:
+            self.run_once()
+        finally:
+            N.JFJB_NOTIFY = old
+        it = self.items()["jfjb:2026-10-22_988842"]
+        self.assertEqual((it["notify"], it["matched"], it["section"], it["published"]), (True, "东部战区", "第01版：要闻", "2026-10-22"))
+
 
 class ArticleTest(unittest.TestCase):
     def test_parse_mna_article(self):

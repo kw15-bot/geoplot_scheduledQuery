@@ -11,6 +11,7 @@ news_check.py
   - 直近24時間の新着(通知の語句に当たったもの=🔔の対象)
   - 記事の写し(PDF)の進み具合(写しあり / 試行中 / 諦めた)と、直近の新着で写しの無いもの
   - おかしな所: 見つけた時点で古い投稿なのに新着扱い(遡った分になっていない)、公開日時が未来、見出しが空
+  - 解放军报(2026-10-22〜): 最新号の日付と直近7日の版数・記事数。最新号が2日以上前・直近の日が読めていない(取りこぼし)は要確認
 
 使い方:
   python news_check.py --out-dir news_out           # news_out/reports/ に書く
@@ -46,6 +47,35 @@ def copy_state(it):
     return "試行中" if it.get("article_tries") else "未着手"
 
 
+def jfjb_check(state, out_dir, now):
+    """解放军报の直近7日。(行のリスト, 要確認の文のリスト)。"""
+    meta = (state.get("sources") or {}).get("jfjb")
+    if not meta:
+        return [], []
+    p = Path(out_dir) / N.JFJB_DIR / "index.json"
+    index = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {"days": {}}
+    days = meta.get("days") or {}
+    newest = index.get("newest") or ""
+    today = (now + dt.timedelta(hours=8)).date()                  # 北京時間
+    rows, odd = [], []
+    for k in range(7):
+        ds = (today - dt.timedelta(days=k)).isoformat()
+        pages = (index["days"].get(ds) or {}).get("pages") or []
+        d = days.get(ds)
+        if pages:
+            rows.append(f"- {ds}: {len(pages)}版 {sum(x[2] for x in pages)}本" + ("" if d and (d.get('final') or ds == newest) else "(最新号でなくなってから未確認)"))
+        elif d and d.get("final"):
+            rows.append(f"- {ds}: 紙面なし(休刊)")
+        elif ds > newest:
+            rows.append(f"- {ds}: まだ出ていない")
+        else:
+            rows.append(f"- {ds}: **読めていない**")
+            odd.append(f"解放军报 {ds} の紙面を読めていない(取りこぼしの可能性)")
+    if newest and (today - dt.date.fromisoformat(newest)).days >= 2:
+        odd.append(f"解放军报の最新号が {newest} のまま(2日以上更新なし)")
+    return rows, odd
+
+
 def run(state, now):
     items = state.get("items", [])
     out = {"sources": [], "new": [], "copies": collections.Counter(), "no_copy_new": [], "odd": []}
@@ -77,7 +107,7 @@ def render(r, now):
     day = now.astimezone(JST).strftime("%Y-%m-%d")
     o = [f"# 報道 点検 {day}", "",
          f"直近24時間の新着 {len(r['new'])} 件(うち🔔の対象 {sum(1 for i in r['new'] if i.get('notify'))} 件) / "
-         f"要確認 {len(r['odd'])} 件", "", "## 収集の状態", ""]
+         f"要確認 {len(r['odd']) + len(r.get('jfjb_odd', []))} 件", "", "## 収集の状態", ""]
     for name, ok, err, err_at in r["sources"]:
         o.append(f"- {name}: 最後に読めた日 {ok or '-'}" + (f" / **エラー({err_at})**: {err}" if err else ""))
     for pg, pub in sorted(r["latest"].items()):
@@ -89,6 +119,8 @@ def render(r, now):
         mark = "🔔 " if it.get("notify") else ""
         o.append(f"- {mark}[{PAGE_NAMES.get(it.get('page'), it.get('page'))}] {str(it.get('published') or '')[:16].replace('T', ' ')} "
                  f"{it.get('title')}（写し: {copy_state(it)}）")
+    if r.get("jfjb_rows"):
+        o += ["", "## 解放军报(直近7日、北京時間の日付)", ""] + r["jfjb_rows"]
     o += ["", "## 記事の写し(PDF)", ""]
     for src in ("ccg", "mna"):
         c = {k[1]: v for k, v in r["copies"].items() if k[0] == src}
@@ -96,7 +128,9 @@ def render(r, now):
     if r["no_copy_new"]:
         o.append(f"- 直近の新着で写しがまだ無いもの {len(r['no_copy_new'])} 件(次の収集で作る)")
     o += ["", "## 要確認", ""]
-    if not r["odd"]:
+    for why in r.get("jfjb_odd", []):
+        o.append(f"- **{why}**")
+    if not r["odd"] and not r.get("jfjb_odd"):
         o.append("問題は見つかりませんでした。")
     for why, it in r["odd"]:
         o.append(f"- **{why}**: {it.get('id')} {str(it.get('published') or '')[:16]} {it.get('title')}")
@@ -111,7 +145,9 @@ def main(argv=None):
     out = Path(a.out_dir)
     state = json.loads((out / "news.json").read_text(encoding="utf-8"))
     now = dt.datetime.now(dt.timezone.utc)
-    md = render(run(state, now), now)
+    r = run(state, now)
+    r["jfjb_rows"], r["jfjb_odd"] = jfjb_check(state, out, now)
+    md = render(r, now)
     if a.stdout:
         sys.stdout.write(md)
         return

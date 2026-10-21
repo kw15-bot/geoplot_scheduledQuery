@@ -1,0 +1,59 @@
+{
+ "paperInfo": [
+  {
+   "id": 202515,
+   "paperBk": "要闻",
+   "paperData": "2026-10-22",
+   "paperName": "解放军报",
+   "paperNumber": "02",
+   "paperPDF": "https://rmt-static-publish.81.cn/file/20261022/7878c14e41ef571fb1b421818d402aa4.pdf",
+   "xyList": [
+    {
+     "id": 988819,
+     "parentId": 202515,
+     "title": "齐心协力走好新的长征路",
+     "title2": "——纪念中国工农红军长征胜利九十周年",
+     "type": "文字",
+     "content": "<div class=\"attachment-image APP-Image\"><table><tr><td><img style=\"width:100%;height:auto;\"  src=\"https://rmt-static-publish.81.cn/image/uploadpic/20261022/06fc46ef72ac9ae3c06dfb221f1ab461.jpg\"  data-id=\"7799325\"></td></tr><tr><td>图为纪念活动现场。</td></tr></table></div><div tag=\"ueditor-text-p_display\"><p style=\"text-indent: 2em;\">第一段。</p><p style=\"text-indent: 2em;\"><strong>二、要求</strong></p></div>"
+    }
+   ]
+  },
+  {
+   "id": 202521,
+   "paperBk": "要闻",
+   "paperData": "2026-10-22",
+   "paperName": "解放军报",
+   "paperNumber": "01",
+   "paperPDF": "https://rmt-static-publish.81.cn/file/20261022/802579c7c9d1ae2c4378fd1c89b0b05b.pdf",
+   "xyList": [
+    {
+     "id": 988843,
+     "parentId": 202521,
+     "author": "■本报记者 费士廷",
+     "title": "“在新的长征路上继续奋勇前进”",
+     "title2": "——习近平主席引领人民军队弘扬伟大长征精神推进新时代强军事业",
+     "type": "文字",
+     "content": "<p style=\"text-indent: 2em;\">长征，这一惊天动地的革命壮举。</p><p>江西于都、广西全州。</p>"
+    },
+    {
+     "id": 988842,
+     "parentId": 202521,
+     "title": "东部战区组织台岛周边联合演训",
+     "guideTitle": "引题",
+     "type": "文字",
+     "content": "东部战区新闻发言人表示。<br/>第二行。"
+    }
+   ]
+  }
+ ],
+ "bmMenu": [
+  {
+   "paperBk": "要闻",
+   "paperNumber": "01"
+  },
+  {
+   "paperBk": "要闻",
+   "paperNumber": "02"
+  }
+ ]
+}
