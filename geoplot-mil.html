@@ -642,7 +642,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
     <div class="brand"><span class="dot" id="brandDot"></span><span id="brandLabel">警報現況表示</span></div>
     <div class="mode-tabs" id="modeTabs">
       <button class="mode-tab active" data-mode="auto">NAVWAR</button>
-      <button class="mode-tab" data-mode="notam">NOTAM(Beta)</button>
+      <button class="mode-tab" data-mode="notam">NOTAM</button>
       <button class="mode-tab" data-mode="manual">手動</button>
     </div>
     <!-- v4.4.3: 報道は地図のモードとは別の囲みに離して置く(ユーザー指示) -->
@@ -946,7 +946,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.4.4';
+const APP_VERSION = 'v4.4.5';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1033,6 +1033,7 @@ const APP_VERSION = 'v4.4.4';
 // v4.4.2: 一覧の「写し」の印を「PDF」に。記事の画面の「収集時に保存した写しです…」の注記をやめた(出典は残す)。國防訊息にも右に公開日時(台湾時間)。海警局の「台湾岛以东…常态化执法巡查」は通知・赤丸の対象から外した(収集側)。
 // v4.4.3: 「報道(Beta)」のタブを NAVWAR / NOTAM / 手動 の囲みから離し、別の囲みに置いた(ユーザー指示)。
 // v4.4.4: 報道の一覧の右と記事の画面の発行日時を日本時間に(海警局=北京時間・軍聞社=台湾時間から+1時間)。本文の中の時刻は原文のまま。
+// v4.4.5: NOTAM のタブの「(Beta)」を外した(ユーザー指示)。報道は「報道(Beta)」のまま。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
