@@ -1,0 +1,26 @@
+name: Weibo probe
+
+# 2026-10-21 調査用: 微博の公開アカウント(东部战区)の投稿が、ログインなしで読めるか(dev/weibo_probe.py)。
+# 結果はログに出すだけで、何もコミットしない。手動実行のみ。
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "アカウント名"
+        required: false
+        default: "东部战区"
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Probe
+        run: python dev/weibo_probe.py "${{ inputs.name }}"
