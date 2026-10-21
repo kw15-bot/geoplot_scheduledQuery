@@ -100,6 +100,7 @@ JFJB_PAGE_URL = "http://www.81.cn/szb_223187/szblb/index.html?paperNumber={no}&p
 JFJB_ARTICLE_URL = "http://www.81.cn/szb_223187/szbxq/index.html?paperName=jfjb&paperDate={date}&paperNumber={no}&articleid={id}"
 JFJB_FIRST_DAY = "2026-01-01"       # 数字报の「往期回顾」で選べる最初の日
 JFJB_RECHECK_DAYS = 7               # 毎回、この日数ぶん遡って、読めていない日・読み直していない日を読む
+JFJB_BACKFILL_SECONDS = 20 * 60     # 遡りは1回の実行でこの時間まで(1日分の読み込みに6〜9秒。全部は30分の制限に収まらないので、何回かに分けて実行する)
 JFJB_DIR = "jfjb"
 JFJB_NOTIFY = []                    # 通知する見出し(正規表現)。未定(2026-10-22)。当たった記事だけ news.json の items に入れる
 
@@ -542,7 +543,7 @@ def _write_if_changed(path, obj):
     return True
 
 
-def collect_jfjb(state, out, now, backfill=False, get=None, newest=None):
+def collect_jfjb(state, out, now, backfill=False, get=None, newest=None, budget=None):
     """解放军报を読む。最新号は毎回、直近 JFJB_RECHECK_DAYS 日は読めていない日・最新号のうちに読んだきりの日を読む
     (backfill のときは JFJB_FIRST_DAY から)。読めた日は news_out/jfjb/<日付>.json と index.json を書き、
     通知の規則に当たった記事だけ news.json の items に足す。(読んだ日数, 新しく足した記事数, エラー) を返す。"""
@@ -573,7 +574,11 @@ def collect_jfjb(state, out, now, backfill=False, get=None, newest=None):
     index = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else {"days": {}}
     known = {it["id"] for it in state["items"] if it.get("source") == "jfjb"}
     read, added, hits = 0, 0, []
+    deadline = time.time() + budget if budget else None
     for i, ds in enumerate(todo):
+        if deadline and time.time() > deadline:
+            errors.append(f"時間切れ: {len(todo) - i} 日分が残っている(もう一度 backfill を実行する)")
+            break
         if i and backfill:
             time.sleep(PAGE_GAP)
         y, m, dd = ds.split("-")
@@ -589,6 +594,8 @@ def collect_jfjb(state, out, now, backfill=False, get=None, newest=None):
             errors.append(f"{ds}: {type(e).__name__}: {e}")
             continue
         n = sum(len(p["articles"]) for p in day["pages"])
+        if backfill:
+            print(f"[jfjb] {ds}: {len(day['pages'])} pages, {n} articles", file=sys.stderr)
         if not n:
             errors.append(f"{ds}: 記事が0本(作りが変わった可能性)")
             continue
@@ -825,7 +832,7 @@ def run_backfill(state, a, now):
         summary["import"] = {"rows": len(rows), "items": len(items), "new": merge(state, "ccg", items, now, backfill=True)}
     for sid in a.backfill or []:
         if sid == "jfjb":
-            read, added, errs = collect_jfjb(state, Path(a.out_dir), now, backfill=True)
+            read, added, errs = collect_jfjb(state, Path(a.out_dir), now, backfill=True, budget=JFJB_BACKFILL_SECONDS)
             summary["jfjb"] = {"days": read, "new": added, "errors": errs}
             continue
         for pg in SOURCES[sid]["pages"]:
