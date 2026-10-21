@@ -377,6 +377,18 @@ _RADIUS_AFTER = re.compile(r"\s*,?\s*(?:WITH\s+)?(?:A\s+)?RAD(?:IUS)?\s+(?:OF\s+
 # E項の帯状エリア: "1NM EITHER SIDE OF LINE <座標>-<座標>-..." (線の両側に指定幅)
 _CORRIDOR = re.compile(r"(?P<w>\d+(?:\.\d+)?)\s*(?P<u>NM|KM)\s+EITHER\s+SIDE\s+OF\s+(?:THE\s+)?(?:CENT(?:ER|RE)\s*)?LINE", re.I)
 TEXT_CIRCLE_MAX_NM = 500
+# 線の後ろに幅を書く帯: "THE AREA WITHIN N443236E0871714- N430441E0811140 WITH EACH SIDE OF 30KM CLSD"
+# (ZWUQ A5408/A5414/26、2026-10-21 に図形なしで見つかった)。前に幅を書く形("30KM EITHER SIDE OF LINE <座標>-<座標>")に
+# 書き換えてから、いつもの帯の読み取りに通す。
+_COORD_ANON = re.sub(r"\(\?P<\w+>", "(?:", _TEXT_COORD.pattern)       # 名前付きグループを外した座標の形
+_EACH_SIDE_AFTER = re.compile(
+    r"((?:" + _COORD_ANON + r")(?:\s*[-,]\s*(?:TO\s+)?(?:" + _COORD_ANON + r"))+)"
+    r"\s*,?\s*(?:WITH\s+)?(?:ON\s+)?EACH\s+SIDE\s+OF\s+(?:THE\s+LINE\s+)?(\d+(?:\.\d+)?)\s*(NM|KM)", re.I)
+
+
+def _rewrite_each_side(t):
+    """「<座標>-<座標> WITH EACH SIDE OF 30KM」を「30KM EITHER SIDE OF LINE <座標>-<座標>」に書き換える。"""
+    return _EACH_SIDE_AFTER.sub(lambda m: f"{m.group(2)}{m.group(3).upper()} EITHER SIDE OF LINE {m.group(1)}", t)
 
 
 def _to_nm(value, unit):
@@ -417,6 +429,7 @@ def parse_text_polygons(e_text):
     2026-09-28追加: 本文に書かれた円("A CIRCLE RADIUS 7NM CENTERED ON <座標>" 等)は円のリングに、
     "1NM EITHER SIDE OF LINE <座標>-<座標>" は線の両側の帯のリングにする。座標の数字の途中の改行もつなぐ。"""
     t = _SPLIT_DIGITS.sub("", e_text or "")
+    t = _rewrite_each_side(t)
     rings, cur = [], []
     corridor = None          # 帯状エリアの点列を集めている間は幅(NM)
     prev_end = None

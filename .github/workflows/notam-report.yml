@@ -36,6 +36,7 @@ jobs:
         run: |
           pip install -q cryptography
           python data_crypt.py decrypt notam_out
+          python data_crypt.py decrypt news_out
 
       - name: Build report
         run: python notam_daily_report.py --out-dir notam_out
@@ -45,6 +46,10 @@ jobs:
       - name: Check drawings
         run: python notam_check.py --out-dir notam_out
 
+      # 2026-10-21: 報道(news_out/news.json)の点検(news_check.py)。news_out/reports/ に書く
+      - name: Check news
+        run: python news_check.py --out-dir news_out
+
       # reports/ はこのワークフローしか書かないので、収集側(notam-collect / MSA scrape)の
       # pushと競合しても rebase で必ず解消できる。
       - name: Commit report
@@ -52,9 +57,10 @@ jobs:
           VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
         run: |
           python data_crypt.py encrypt notam_out/reports
+          python data_crypt.py encrypt news_out/reports
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add notam_out/reports/*.enc
+          git add notam_out/reports/*.enc news_out/reports/*.enc
           if git diff --staged --quiet; then
             echo "no changes"; exit 0
           fi
