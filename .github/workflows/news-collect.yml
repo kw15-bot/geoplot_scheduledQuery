@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       backfill:
-        description: "遡って集める一覧(例: mna / ccg / mna ccg)。空なら普段の収集"
+        description: "遡って集める一覧(例: mna / ccg / jfjb / mna ccg)。空なら普段の収集。jfjb は解放军报を 2026-01-01 から"
         required: false
         default: ""
       probe:

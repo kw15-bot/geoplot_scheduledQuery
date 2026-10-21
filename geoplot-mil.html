@@ -567,6 +567,20 @@ body.dark-mode .news-item.mna .news-title{color:#7fb2ec;}
 .news-item.mna .news-foot{font-size:10.5px;color:var(--text-faint);margin-top:4px;display:flex;gap:8px;}
 .news-flag{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--red);margin-right:7px;vertical-align:1px;}   /* v4.3.1: 「通知対象」の文字をやめて赤丸に */
 .news-status{font-size:10.5px;color:var(--text-faint);margin:-4px 0 6px;}
+/* v4.5.0: 解放军报(数字报の「版面目录」「第01版：要闻」の見た目に寄せる) */
+.jfjb-head{display:flex;gap:6px;align-items:center;margin-bottom:8px;}
+.jfjb-head select{flex:1;min-width:0;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:12px;padding:5px 6px;}
+.jfjb-pages{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;}
+.jfjb-pages button{font-size:11px;border:1px solid var(--border);background:var(--panel-alt);color:var(--text-dim);border-radius:4px;padding:3px 6px;cursor:pointer;}
+.jfjb-pages button.active{background:#1f5f6b;border-color:#1f5f6b;color:#fff;}
+.jfjb-sec{font-size:13px;font-weight:700;color:#fff;background:#1f5f6b;border-radius:4px;padding:6px 10px;margin-bottom:4px;}
+.news-item.jfjb .news-guide,.news-item.jfjb .news-sub{font-size:11px;color:var(--text-faint);line-height:1.5;}
+#newsArticleDoc.jfjb{font-family:'Noto Serif SC','Noto Serif CJK SC','SimSun',var(--sans);}
+#newsArticleDoc.jfjb .na-site{font-size:13px;color:#c00;font-weight:700;border-bottom:3px solid #c00;padding-bottom:6px;margin-bottom:18px;display:flex;justify-content:space-between;}
+#newsArticleDoc.jfjb .na-guide{text-align:center;font-size:14px;color:#555;margin-bottom:4px;}
+#newsArticleDoc.jfjb h2{text-align:center;font-size:21px;}
+#newsArticleDoc.jfjb .na-author{text-align:center;font-size:13px;color:#555;margin:6px 0 16px;}
+#newsArticleDoc.jfjb .na-date{text-align:center;}
 
 /* ---------- Dark mode ----------
    Toggled by clicking the small dot left of the brand text (see the brandDot click
@@ -797,9 +811,21 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
         <button class="tab-btn" data-tab="ccg_hjyw">海警要闻 <span class="tab-n" id="newsCountHjyw">0</span></button>
         <button class="tab-btn" data-tab="ccg_wqzf">维权执法 <span class="tab-n" id="newsCountWqzf">0</span></button>
         <button class="tab-btn" data-tab="mna">國防訊息 <span class="tab-n" id="newsCountMna">0</span></button>
+        <button class="tab-btn" data-tab="jfjb">解放军报 <span class="tab-n" id="newsCountJfjb">0</span></button>
       </div>
       <div class="news-status" id="newsStatus"></div>
       <div id="newsList"></div>
+      <!-- v4.5.0: 解放军报。日付 → 版(版面目录) → 記事。記事を押すと全文(news_out/jfjb/<日付>.json に保存済み) -->
+      <div id="jfjbView" style="display:none;">
+        <div class="jfjb-head">
+          <select id="jfjbDate" aria-label="発行日"></select>
+          <a class="btn small ghost" id="jfjbPdf" href="#" target="_blank" rel="noopener">版面PDF</a>
+          <a class="btn small ghost" id="jfjbOrig" href="#" target="_blank" rel="noopener">元のサイト</a>
+        </div>
+        <div class="jfjb-pages" id="jfjbPages"></div>
+        <div class="jfjb-sec" id="jfjbSecTitle"></div>
+        <div id="jfjbArticles"></div>
+      </div>
       <div class="empty-hint" id="newsEmptyHint">投稿はまだありません。</div>
     </div>
   </div>
@@ -946,7 +972,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.4.5';
+const APP_VERSION = 'v4.5.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1034,6 +1060,7 @@ const APP_VERSION = 'v4.4.5';
 // v4.4.3: 「報道(Beta)」のタブを NAVWAR / NOTAM / 手動 の囲みから離し、別の囲みに置いた(ユーザー指示)。
 // v4.4.4: 報道の一覧の右と記事の画面の発行日時を日本時間に(海警局=北京時間・軍聞社=台湾時間から+1時間)。本文の中の時刻は原文のまま。
 // v4.4.5: NOTAM のタブの「(Beta)」を外した(ユーザー指示)。報道は「報道(Beta)」のまま。
+// v4.5.0: 報道に「解放军报」(数字报)。日付と版を選んで記事を読む(紙面と同じ構成)。news_out/jfjb/(news_collect.py)
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3100,7 +3127,7 @@ function newsUrlFromNotamUrl(u){ return String(u).replace(/notam_out\/[^?#]*/, '
 // 報道タブ(v4.1.0)。news.json の全投稿を、元サイトの一覧に近い見た目で並べる
 let newsState = null;
 let newsTab = 'all';
-const NEWS_PAGE_NAMES = { ccg_hjyw: '中国海警局 海警要闻', ccg_wqzf: '中国海警局 维权执法', mna: '國防部 軍聞社 國防訊息' };
+const NEWS_PAGE_NAMES = { ccg_hjyw: '中国海警局 海警要闻', ccg_wqzf: '中国海警局 维权执法', mna: '國防部 軍聞社 國防訊息', jfjb: '解放军报' };
 function newsPageOf(it){ return it.page || (it.source === 'mna' ? 'mna' : 'ccg_hjyw'); }
 // 軍聞社の日付は元サイトと同じ「民國115年10月04日」(西暦-1911)
 function newsMinguoDate(pub){
@@ -3121,6 +3148,12 @@ function newsJst(pub){
   return `${t.getUTCFullYear()}-${p2(t.getUTCMonth() + 1)}-${p2(t.getUTCDate())} ${p2(t.getUTCHours())}:${p2(t.getUTCMinutes())}`;
 }
 function renderNewsList(){
+  const isJfjb = newsTab === 'jfjb';
+  $('#jfjbView').style.display = isJfjb ? '' : 'none';
+  $('#newsList').style.display = isJfjb ? 'none' : '';
+  const jd = jfjbIndex && jfjbIndex.days && jfjbIndex.days[jfjbIndex.newest];
+  $('#newsCountJfjb').textContent = jd ? jd.pages.reduce((n, p) => n + p[2], 0) : 0;
+  if (isJfjb){ $('#newsEmptyHint').style.display = 'none'; renderJfjb(); return; }
   const items = ((newsState && newsState.items) || []).slice()
     .sort((a, b) => String(b.published || '').localeCompare(String(a.published || '')) || String(b.id).localeCompare(String(a.id)));
   const count = pg => items.filter(it => newsPageOf(it) === pg).length;
@@ -3185,6 +3218,19 @@ function renderNewsArticle(it, art){
     : `<figure><div class="na-imgerr">写真を保存できませんでした</div>${f.caption ? `<figcaption>${esc(f.caption)}</figcaption>` : ''}</figure>`).join('');
   const paras = (art.paragraphs || []).map(p => `<p class="na-p">${esc(p)}</p>`).join('');
   const src = `<div class="na-src">出典: ${esc(art.site || '')}　${esc(art.url || it.url || '')}</div>`;
+  if (it.source === 'jfjb'){
+    const jfigs = (art.figures || []).map(f => f.caption ? `<figure><figcaption>［写真］${esc(f.caption)}</figcaption></figure>` : '').join('');
+    doc.innerHTML = `<div class="na-site"><span>解放军报</span><span>${esc(art.section || '')}</span></div>
+      ${art.guide ? `<div class="na-guide">${esc(art.guide)}</div>` : ''}
+      <h2>${esc(art.title || it.title)}</h2>
+      ${art.subtitle ? `<div class="na-sub">${esc(art.subtitle)}</div>` : ''}
+      ${art.author ? `<div class="na-author">${esc(art.author)}</div>` : ''}
+      <div class="na-date">${esc(String(it.published || '').replace(/^(\d{4})-(\d{2})-(\d{2}).*/, '$1年$2月$3日'))} ${esc(jfjbWeek(String(it.published || '').slice(0, 10)))}</div>
+      ${jfigs}${paras}
+      <div class="na-src">出典: 解放军报　${esc(art.url || it.url || '')}</div>`;
+    $('#newsArticleNote').textContent = '解放军报';
+    return;
+  }
   if (it.source === 'mna'){
     doc.innerHTML = `<div class="na-crumb">首頁 ＞ 軍聞消息</div>
       ${art.category ? `<div class="na-tag">${esc(art.category)}</div>` : ''}
@@ -3239,7 +3285,7 @@ $('#btnNewsArticlePdf').addEventListener('click', async ()=>{
     }
     const { it } = newsArticleOpen;
     const d = String(it.published || '').slice(0, 10) || 'undated';
-    const fname = `NEWS_${it.source === 'mna' ? 'MNA' : 'CCG'}_${d}_${String(it.id).replace(/[^A-Za-z0-9]/g, '').slice(-8)}.pdf`;   // 英数字だけ
+    const fname = `NEWS_${({ mna: 'MNA', jfjb: 'JFJB' })[it.source] || 'CCG'}_${d}_${String(it.id).replace(/[^A-Za-z0-9]/g, '').slice(-8)}.pdf`;   // 英数字だけ
     pdf.save(fname);
     logLine(`記事の写しをPDFにしました: ${fname}`, 'l-ok');
   }catch(err){
@@ -3254,11 +3300,79 @@ $$('#newsTabs .tab-btn').forEach(btn => btn.addEventListener('click', ()=>{
   $$('#newsTabs .tab-btn').forEach(b => b.classList.toggle('active', b === btn));
   renderNewsList();
 }));
+// ---- 解放军报(v4.5.0) ----
+let jfjbIndex = null, jfjbDay = null, jfjbDate = '', jfjbPageNo = '01';
+function jfjbUrl(name){ return String(newsUrl).replace(/news\.json(?=[?#]|$)/, 'jfjb/' + name); }
+async function loadJfjbIndex(){
+  try{ jfjbIndex = JSON.parse(await fetchDataText(jfjbUrl('index.json'))); }
+  catch(e){ jfjbIndex = null; }                          // まだ一度も読めていない
+}
+const JFJB_WEEK = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+function jfjbWeek(d){ const t = new Date(d + 'T00:00:00Z'); return isNaN(t) ? '' : JFJB_WEEK[t.getUTCDay()]; }
+async function renderJfjb(){
+  const days = (jfjbIndex && jfjbIndex.days) || {};
+  const dates = Object.keys(days).sort().reverse();
+  if (!dates.length){
+    $('#jfjbDate').innerHTML = ''; $('#jfjbPages').innerHTML = ''; $('#jfjbSecTitle').textContent = '';
+    $('#jfjbArticles').innerHTML = '<div class="empty-hint" style="display:block;">解放军报はまだ読めていません。</div>';
+    return;
+  }
+  if (!days[jfjbDate]) jfjbDate = dates[0];
+  $('#jfjbDate').innerHTML = dates.map(d => `<option value="${d}"${d === jfjbDate ? ' selected' : ''}>${d.replace(/-/g, '年').replace(/年(\d+)$/, '月$1日')} ${jfjbWeek(d)}</option>`).join('');
+  const pages = days[jfjbDate].pages || [];
+  if (!pages.some(p => p[0] === jfjbPageNo)) jfjbPageNo = pages.length ? pages[0][0] : '01';
+  $('#jfjbPages').innerHTML = pages.map(p => `<button type="button" data-no="${esc(p[0])}" class="${p[0] === jfjbPageNo ? 'active' : ''}" title="${esc(p[2])}本">第${esc(p[0])}版：${esc(p[1])}</button>`).join('');
+  const cur = pages.find(p => p[0] === jfjbPageNo) || [];
+  $('#jfjbSecTitle').textContent = cur.length ? `第${cur[0]}版：${cur[1]}` : '';
+  $('#jfjbPdf').href = cur[3] || '#';
+  $('#jfjbPdf').style.display = cur[3] ? '' : 'none';
+  $('#jfjbOrig').href = `http://www.81.cn/szb_223187/szblb/index.html?paperNumber=${encodeURIComponent(jfjbPageNo)}&paperName=jfjb&paperDate=${jfjbDate}`;
+  if (!jfjbDay || jfjbDay.date !== jfjbDate){
+    $('#jfjbArticles').innerHTML = '<div class="news-status">読み込み中…</div>';
+    const want = jfjbDate;
+    try{
+      const day = JSON.parse(await fetchDataText(jfjbUrl(want + '.json')));
+      if (want !== jfjbDate) return;                       // 読んでいる間に日付が変わった
+      jfjbDay = day;
+    }catch(e){
+      $('#jfjbArticles').innerHTML = `<div class="news-status">この日の紙面を読めませんでした（${esc(e.message)}）。</div>`;
+      return;
+    }
+  }
+  const page = (jfjbDay.pages || []).find(p => p.no === jfjbPageNo);
+  $('#jfjbArticles').innerHTML = ((page && page.articles) || []).map(a => `<a class="news-item jfjb" href="${esc(a.url)}" data-jfjb="${esc(a.id)}">
+      ${a.guide ? `<div class="news-guide">${esc(a.guide)}</div>` : ''}
+      <div class="news-title">${esc(a.title || '（見出しなし）')}</div>
+      ${a.subtitle ? `<div class="news-sub">${esc(a.subtitle)}</div>` : ''}</a>`).join('');
+}
+$('#jfjbDate').addEventListener('change', e=>{ jfjbDate = e.target.value; jfjbPageNo = '01'; renderJfjb(); });
+$('#jfjbPages').addEventListener('click', e=>{
+  const b = e.target.closest('button[data-no]');
+  if (!b) return;
+  jfjbPageNo = b.dataset.no;
+  renderJfjb();
+});
+$('#jfjbArticles').addEventListener('click', e=>{
+  const a = e.target.closest('a[data-jfjb]');
+  if (!a || !jfjbDay) return;
+  e.preventDefault();
+  const page = (jfjbDay.pages || []).find(p => p.no === jfjbPageNo) || {};
+  const art = (page.articles || []).find(x => x.id === a.dataset.jfjb);
+  if (!art) return;
+  const it = { id: art.id, source: 'jfjb', page: 'jfjb', title: art.title, url: art.url, published: jfjbDay.date };
+  newsArticleOpen = { it, art: { ...art, section: `第${page.no}版：${page.name}` } };
+  $('#newsArticleDoc').className = 'jfjb';
+  $('#btnNewsArticleOrig').href = art.url || '#';
+  renderNewsArticle(it, newsArticleOpen.art);
+  $('#newsArticleModal').classList.add('open');
+});
+
 let newsUrl = '';
 async function refreshNews(url){
   try{
     newsState = JSON.parse(await fetchDataText(url));
     newsUrl = url;
+    await loadJfjbIndex();
     renderNewsList();
     registerNewsForNotifications(newsState);
   }catch(e){

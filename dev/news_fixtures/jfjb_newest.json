@@ -1,0 +1,18 @@
+{
+ "code": 0,
+ "msg": "操作成功",
+ "data": [
+  {
+   "id": 202521,
+   "paperName": "解放军报",
+   "paperData": "2026-10-22",
+   "webUrl": "http://www.81.cn/szb_223187/szblb/index.html?paperNumber=01&paperName=jfjb&paperDate=2026-10-22"
+  },
+  {
+   "id": 202513,
+   "paperName": "中国国防报",
+   "paperData": "2026-10-22",
+   "webUrl": "http://www.81.cn/szb_223187/gfbszblb/index.html?paperNumber=01&paperName=zggfb&paperDate=2026-10-22"
+  }
+ ]
+}

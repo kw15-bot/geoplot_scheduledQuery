@@ -18,6 +18,13 @@ notify=true を付ける。ビューアは notify のものだけを🔔に出�
             一覧と同じ記事を RSS(https://mna.mnd.gov.tw/K2S/RSS、最近3か月の全カテゴリ)から取り、
             カテゴリ(dc:subject)が「國防訊息」のものだけを使う(一覧ページのHTMLより構造が安定しているため)。
 
+  jfjb      解放军报(数字报) http://www.81.cn/szb_223187/szblb/index.html(2026-10-22〜)。紙面のページは JavaScript で、
+            1日分の全版・全記事(見出し・副題・著者・本文HTML・写真)を1つの JSON(/_szb/jfjb/YYYY/MM/DD/index.json)から描いている。
+            最新号の日付は https://rmt-zuul.81.cn/api-paper/api/newestPaper。毎回、最新号を読み直し(後から足された記事も拾う)、
+            直近 JFJB_RECHECK_DAYS 日で読めていない日・最新号でなくなってから読み直していない日も読む(取りこぼし防止)。
+            1日分を news_out/jfjb/YYYY-MM-DD.json(版ごとに記事の本文まで)に、日ごとの版の一覧を news_out/jfjb/index.json に書く。
+            記事数が多い(1日60本前後)ので news.json の items には入れない(通知の規則 JFJB_NOTIFY に当たったものだけ入れる)。
+
 出力: news_out/news.json(リポジトリには暗号化した news_out/news.json.enc だけを置く。data_crypt.py)
   {"sources": {id: {"name", "url", "last_ok_date", "last_error", "last_error_at"}},
    "items": [{"id", "source", "page", "title", "url", "published", "first_seen", "notify", "matched"}, ...]}
@@ -30,6 +37,7 @@ notify=true を付ける。ビューアは notify のものだけを🔔に出�
         python news_collect.py --backfill mna           # 一覧を最後のページまで遡る(軍聞社: ?PageIndex=1,2,…)
         python news_collect.py --backfill ccg           # 中国海警局: index.html, index_1.html, …(海外からはWAFで拒否されやすい)
         python news_collect.py --import-json FILE       # 別の手段で集めた中国海警局の記事 [{"title","url","date"}] を取り込む
+        python news_collect.py --backfill jfjb          # 解放军报を 2026-01-01(数字报で選べる最初の日)から読めていない日まで遡る
 """
 
 import argparse
@@ -82,6 +90,18 @@ SOURCES = {
          "notify": [r"聯合戰備警巡"]},
     ]},
 }
+
+
+# 解放军报(2026-10-22〜、ユーザー指示「解放军报の自動収集、取りこぼさないように」)
+JFJB_NAME = "解放军报"
+JFJB_NEWEST = "https://rmt-zuul.81.cn/api-paper/api/newestPaper"
+JFJB_DAY = "http://www.81.cn/_szb/jfjb/{y}/{m}/{d}/index.json"
+JFJB_PAGE_URL = "http://www.81.cn/szb_223187/szblb/index.html?paperNumber={no}&paperName=jfjb&paperDate={date}"
+JFJB_ARTICLE_URL = "http://www.81.cn/szb_223187/szbxq/index.html?paperName=jfjb&paperDate={date}&paperNumber={no}&articleid={id}"
+JFJB_FIRST_DAY = "2026-01-01"       # 数字报の「往期回顾」で選べる最初の日
+JFJB_RECHECK_DAYS = 7               # 毎回、この日数ぶん遡って、読めていない日・読み直していない日を読む
+JFJB_DIR = "jfjb"
+JFJB_NOTIFY = []                    # 通知する見出し(正規表現)。未定(2026-10-22)。当たった記事だけ news.json の items に入れる
 
 
 def now_iso():
@@ -462,6 +482,137 @@ def notify_match(title, rules):
     return None
 
 
+# ----------------------------------------------------------------------------- 解放军报
+def _jfjb_get(url):
+    """JSON を読む。404 は取り直さない(その日の紙面が無い)。それ以外の失敗は待って取り直す。"""
+    last = None
+    for i in range(RETRIES):
+        try:
+            return json.loads(_get_once(url, referer="http://www.81.cn/"))
+        except urllib.error.HTTPError as e:
+            if e.code == 404:
+                raise
+            last = e
+        except (urllib.error.URLError, OSError, ValueError) as e:
+            last = e
+        if i < RETRIES - 1:
+            time.sleep(RETRY_WAIT * (i + 1))
+    raise last
+
+
+def _jfjb_figures(content):
+    """本文HTMLの写真(<div class="attachment-image"><table><tr><td><img></td></tr><tr><td>説明</td></tr></table>)。
+    写真は保存しない(1日60本前後あり、リポジトリが大きくなるため)。元の URL と説明だけ持つ。"""
+    figs = []
+    for blk in re.findall(r"<table\b.*?</table>", content, re.S | re.I):
+        im = re.search(r"<img\b[^>]*\bsrc=[\"']([^\"']+)", blk, re.I)
+        if im:
+            cells = re.findall(r"<td\b[^>]*>(.*?)</td>", blk, re.S | re.I)
+            cap = " ".join(t for t in (strip_tags(c) for c in cells) if t)
+            figs.append({"src": html.unescape(im.group(1)), "caption": cap})
+    return figs
+
+
+def parse_jfjb_day(data, date):
+    """index.json(1日分)を、版ごとの記事の一覧(本文は段落に分けて)にする。"""
+    pages = []
+    for pg in sorted(data.get("paperInfo") or [], key=lambda p: str(p.get("paperNumber"))):
+        no = str(pg.get("paperNumber") or "")
+        arts = []
+        for xy in pg.get("xyList") or []:
+            content = xy.get("content") or ""
+            body = re.sub(r"(?is)<table\b.*?</table>", "", content)
+            paras = _paragraphs(body) or [t for t in (strip_tags(x) for x in re.split(r"(?i)<br\s*/?>", body)) if t]
+            arts.append({"id": f"jfjb:{date}_{xy.get('id')}", "title": strip_tags(xy.get("title") or ""),
+                         "subtitle": strip_tags(xy.get("title2") or ""), "guide": strip_tags(xy.get("guideTitle") or ""),
+                         "author": strip_tags(xy.get("author") or ""), "kind": xy.get("type") or "",
+                         "paragraphs": paras, "figures": _jfjb_figures(content),
+                         "url": JFJB_ARTICLE_URL.format(date=date, no=no, id=xy.get("id"))})
+        pages.append({"no": no, "name": strip_tags(pg.get("paperBk") or ""), "pdf": pg.get("paperPDF") or "",
+                      "url": JFJB_PAGE_URL.format(no=no, date=date), "articles": arts})
+    return {"date": date, "paper": JFJB_NAME, "pages": pages}
+
+
+def _write_if_changed(path, obj):
+    text = json.dumps(obj, ensure_ascii=False, indent=1, sort_keys=True) + "\n"
+    if path.exists() and path.read_text(encoding="utf-8") == text:
+        return False
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(text, encoding="utf-8")
+    return True
+
+
+def collect_jfjb(state, out, now, backfill=False, get=None, newest=None):
+    """解放军报を読む。最新号は毎回、直近 JFJB_RECHECK_DAYS 日は読めていない日・最新号のうちに読んだきりの日を読む
+    (backfill のときは JFJB_FIRST_DAY から)。読めた日は news_out/jfjb/<日付>.json と index.json を書き、
+    通知の規則に当たった記事だけ news.json の items に足す。(読んだ日数, 新しく足した記事数, エラー) を返す。"""
+    get = get or (lambda url: _jfjb_get(url))
+    meta = state["sources"].setdefault("jfjb", {})
+    meta["name"] = JFJB_NAME
+    meta["pages"] = {"jfjb": {"name": JFJB_NAME, "url": "http://www.81.cn/szb_223187/szblb/index.html"}}
+    days = meta.setdefault("days", {})            # {日付: {"articles": n, "final": 最新号でなくなってから読んだか}}
+    errors = []
+    if newest is None:
+        try:
+            res = get(JFJB_NEWEST)
+            newest = next((d.get("paperData") for d in res.get("data") or [] if d.get("paperName") == JFJB_NAME), None)
+        except (urllib.error.URLError, OSError, ValueError) as e:
+            errors.append(f"newestPaper: {type(e).__name__}: {e}")
+        if not newest:                              # 最新号の日付が分からなければ、北京時間の今日
+            newest = (dt.datetime.fromisoformat(now) + dt.timedelta(hours=8)).date().isoformat()
+    last = dt.date.fromisoformat(newest)
+    first = dt.date.fromisoformat(JFJB_FIRST_DAY) if backfill else last - dt.timedelta(days=JFJB_RECHECK_DAYS)
+    todo = []
+    d = last
+    while d >= first:
+        ds = d.isoformat()
+        if ds == newest or not days.get(ds, {}).get("final"):
+            todo.append(ds)
+        d -= dt.timedelta(days=1)
+    index_path = out / JFJB_DIR / "index.json"
+    index = json.loads(index_path.read_text(encoding="utf-8")) if index_path.exists() else {"days": {}}
+    known = {it["id"] for it in state["items"] if it.get("source") == "jfjb"}
+    read, added, hits = 0, 0, []
+    for i, ds in enumerate(todo):
+        if i and backfill:
+            time.sleep(PAGE_GAP)
+        y, m, dd = ds.split("-")
+        try:
+            day = parse_jfjb_day(get(JFJB_DAY.format(y=y, m=m, d=dd)), ds)
+        except urllib.error.HTTPError as e:
+            if e.code == 404 and ds != newest:          # その日の紙面は無い(休刊)。最新号でなければ、もう読まない
+                days[ds] = {"articles": 0, "final": True}
+            elif e.code != 404:
+                errors.append(f"{ds}: HTTP {e.code}")
+            continue
+        except (urllib.error.URLError, OSError, ValueError) as e:
+            errors.append(f"{ds}: {type(e).__name__}: {e}")
+            continue
+        n = sum(len(p["articles"]) for p in day["pages"])
+        if not n:
+            errors.append(f"{ds}: 記事が0本(作りが変わった可能性)")
+            continue
+        read += 1
+        _write_if_changed(out / JFJB_DIR / f"{ds}.json", day)
+        days[ds] = {"articles": n, "final": ds != newest}
+        index["days"][ds] = {"pages": [[p["no"], p["name"], len(p["articles"]), p["pdf"]] for p in day["pages"]]}
+        for p in day["pages"]:
+            for art in p["articles"]:
+                hit = notify_match(art["title"] + " " + art["subtitle"], JFJB_NOTIFY)
+                if hit and art["id"] not in known:
+                    hits.append({"id": art["id"], "source": "jfjb", "page": "jfjb", "title": art["title"], "url": art["url"],
+                                 "published": ds, "section": f"第{p['no']}版：{p['name']}", "notify": True, "matched": hit})
+    if hits:
+        added = merge(state, "jfjb", hits, now, backfill=backfill)
+    index["newest"] = newest
+    _write_if_changed(index_path, index)
+    if errors:
+        meta.update({"last_error": "; ".join(errors)[:500], "last_error_at": now[:10]})
+    else:
+        meta.update({"last_ok_date": now[:10], "last_error": None, "last_error_at": None})
+    return read, added, errors
+
+
 # ----------------------------------------------------------------------------- 本体
 OLD_POST_DAYS = 7
 
@@ -503,7 +654,7 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--out-dir", default="news_out")
     ap.add_argument("--fixture-dir", help="取得の代わりに <page>.html / <page>.xml を読む(テスト用)")
-    ap.add_argument("--backfill", nargs="+", choices=list(SOURCES), help="一覧を最後のページまで遡って集める")
+    ap.add_argument("--backfill", nargs="+", choices=list(SOURCES) + ["jfjb"], help="一覧を最後のページまで遡って集める")
     ap.add_argument("--max-pages", type=int, default=200, help="--backfill で読む最大ページ数(一覧ごと)")
     ap.add_argument("--import-json", help="中国海警局の記事 [{title,url,date}] を取り込む(遡った分として)")
     ap.add_argument("--no-articles", action="store_true", help="記事本文の写し(news_out/articles/)を作らない")
@@ -588,7 +739,7 @@ def main(argv=None):
                 if not items:
                     raise ValueError("記事を1件も読み取れなかった(ページの作りが変わった可能性)")
                 for it in items:
-                    hit = notify_match(it["title"], pg["notify"] or CCG_NOTIFY)
+                    hit = notify_match(it["title"], CCG_NOTIFY if pg["notify"] is None else pg["notify"])
                     it.update({"source": sid, "page": pg["page"], "notify": bool(hit), "matched": hit})
                     prev = found.get(it["id"])
                     if prev:                                  # 両方の一覧に載っている記事: どちらかで当たれば通知
@@ -617,6 +768,18 @@ def main(argv=None):
         if rules:
             hit = notify_match(it.get("title", ""), rules)
             it["notify"], it["matched"] = bool(hit), hit
+    if a.fixture_dir:
+        fx = Path(a.fixture_dir)
+        if (fx / "jfjb_newest.json").exists():
+            read, added, errs = collect_jfjb(state, out, now, get=lambda url: _fixture_json(fx, url))
+            ok += bool(read)
+            summary["jfjb"] = {"days": read, "new": added, "error": "; ".join(errs) or None}
+    else:
+        read, added, errs = collect_jfjb(state, out, now)
+        ok += bool(read)
+        summary["jfjb"] = {"days": read, "new": added, "error": "; ".join(errs) or None}
+        if errs:
+            print(f"[WARN] jfjb: {'; '.join(errs)}", file=sys.stderr)
     if not a.fixture_dir and not a.no_articles:
         summary["articles"] = collect_articles(state, out, now)
     out.mkdir(parents=True, exist_ok=True)
@@ -625,6 +788,15 @@ def main(argv=None):
         path.write_text(text, encoding="utf-8")
     print(json.dumps(summary, ensure_ascii=False))
     return 0 if ok else 2
+
+
+def _fixture_json(fx, url):
+    """テスト用: 解放军报の URL を fixture のファイル(jfjb_newest.json / jfjb_YYYY-MM-DD.json)に読み替える。無い日は 404。"""
+    m = re.search(r"/_szb/jfjb/(\d{4})/(\d{2})/(\d{2})/index\.json", url)
+    name = f"jfjb_{m.group(1)}-{m.group(2)}-{m.group(3)}.json" if m else "jfjb_newest.json"
+    if not (fx / name).exists():
+        raise urllib.error.HTTPError(url, 404, "Not Found", {}, None)
+    return json.loads((fx / name).read_text(encoding="utf-8"))
 
 
 def _ccg_item(title, url, date=""):
@@ -652,6 +824,10 @@ def run_backfill(state, a, now):
         items = [_with_notify(it, CCG_NOTIFY) for it in items]
         summary["import"] = {"rows": len(rows), "items": len(items), "new": merge(state, "ccg", items, now, backfill=True)}
     for sid in a.backfill or []:
+        if sid == "jfjb":
+            read, added, errs = collect_jfjb(state, Path(a.out_dir), now, backfill=True)
+            summary["jfjb"] = {"days": read, "new": added, "errors": errs}
+            continue
         for pg in SOURCES[sid]["pages"]:
             got, pages, err = {}, 0, None
             for n in range(1, a.max_pages + 1):
