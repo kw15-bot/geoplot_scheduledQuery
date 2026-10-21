@@ -23,4 +23,6 @@ jobs:
         with:
           python-version: "3.12"
       - name: Probe
-        run: python dev/weibo_probe.py "${{ inputs.name }}"
+        env:
+          NAME: ${{ inputs.name }}
+        run: python dev/weibo_probe.py "$NAME"
