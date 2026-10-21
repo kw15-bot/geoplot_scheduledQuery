@@ -946,7 +946,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.4.3';
+const APP_VERSION = 'v4.4.4';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1032,6 +1032,7 @@ const APP_VERSION = 'v4.4.3';
 // v4.4.1: タブの表示を「報道(Beta)」に(ユーザー指示。NOTAM(Beta) と同じ)。
 // v4.4.2: 一覧の「写し」の印を「PDF」に。記事の画面の「収集時に保存した写しです…」の注記をやめた(出典は残す)。國防訊息にも右に公開日時(台湾時間)。海警局の「台湾岛以东…常态化执法巡查」は通知・赤丸の対象から外した(収集側)。
 // v4.4.3: 「報道(Beta)」のタブを NAVWAR / NOTAM / 手動 の囲みから離し、別の囲みに置いた(ユーザー指示)。
+// v4.4.4: 報道の一覧の右と記事の画面の発行日時を日本時間に(海警局=北京時間・軍聞社=台湾時間から+1時間)。本文の中の時刻は原文のまま。
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3107,6 +3108,17 @@ function newsMinguoDate(pub){
 }
 // 一覧の右の日時: 各サイトの公開日時をそのサイトの現地時間のまま(海警局=北京時間・軍聞社=台湾時間、どちらも UTC+8)。v4.4.2
 function newsLocalTime(pub){ return String(pub || '').replace('T', ' ').slice(0, 19); }
+// v4.4.4: 記事の発行日時は日本時間で出す(本文の中の時刻は原文のまま)。時差の無い時刻(海警局の一覧)は北京時間(UTC+8)とみなす
+function newsJst(pub){
+  const m = String(pub || '').match(/^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2})(?::(\d{2}))?)?(Z|[+-]\d{2}:?\d{2})?/);
+  if (!m) return '';
+  if (m[4] === undefined) return `${m[1]}-${m[2]}-${m[3]}`;          // 時刻の無いものは日付だけ
+  let off = 8 * 60;
+  if (m[7]) off = m[7] === 'Z' ? 0 : (m[7][0] === '-' ? -1 : 1) * (parseInt(m[7].slice(1, 3), 10) * 60 + parseInt(m[7].slice(-2), 10));
+  const t = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5], +(m[6] || 0)) - off * 60000 + 9 * 3600000);
+  const p2 = n => String(n).padStart(2, '0');
+  return `${t.getUTCFullYear()}-${p2(t.getUTCMonth() + 1)}-${p2(t.getUTCDate())} ${p2(t.getUTCHours())}:${p2(t.getUTCMinutes())}`;
+}
 function renderNewsList(){
   const items = ((newsState && newsState.items) || []).slice()
     .sort((a, b) => String(b.published || '').localeCompare(String(a.published || '')) || String(b.id).localeCompare(String(a.id)));
@@ -3130,12 +3142,12 @@ function renderNewsList(){
     const copy = it.article ? '<span class="news-copy-mark" title="記事を保存済み(元のサイトに入れなくても読める・PDFにできる)">PDF</span>' : '';
     if (it.source === 'mna'){
       return `<a class="news-item mna" ${open}>${site}
-        <div class="news-row"><div class="news-title">${flag}${esc(it.title)}${copy}</div><div class="news-date" title="軍聞社の公開日時(台湾時間)">${esc(newsLocalTime(it.published))}</div></div>
+        <div class="news-row"><div class="news-title">${flag}${esc(it.title)}${copy}</div><div class="news-date" title="軍聞社の公開日時(日本時間。元は台湾時間 ${esc(newsLocalTime(it.published))})">${esc(newsJst(it.published))} JST</div></div>
         ${it.summary ? `<div class="news-summary">${esc(it.summary)}</div>` : ''}
         <div class="news-foot"><span>【國防訊息】</span><span>${esc(newsMinguoDate(it.published))}</span></div></a>`;
     }
     return `<a class="news-item ccg" ${open}>${site}
-      <div class="news-row"><div class="news-title">${flag}${esc(it.title)}${copy}</div><div class="news-date" title="中国海警局の一覧に出ている公開日時(北京時間)">${esc(newsLocalTime(it.published))}</div></div></a>`;
+      <div class="news-row"><div class="news-title">${flag}${esc(it.title)}${copy}</div><div class="news-date" title="中国海警局の公開日時(日本時間。元は北京時間 ${esc(newsLocalTime(it.published))})">${esc(newsJst(it.published))} JST</div></div></a>`;
   }).join('');
 }
 $('#newsList').addEventListener('click', e=>{
@@ -3176,7 +3188,7 @@ function renderNewsArticle(it, art){
     doc.innerHTML = `<div class="na-crumb">首頁 ＞ 軍聞消息</div>
       ${art.category ? `<div class="na-tag">${esc(art.category)}</div>` : ''}
       <h2>${esc(art.title || it.title)}</h2>
-      <div class="na-date">${esc(art.date || newsMinguoDate(it.published))}</div>
+      <div class="na-date">${esc(art.date || newsMinguoDate(it.published))}${newsJst(it.published).length > 10 ? `　${esc(newsJst(it.published))}（日本時間）` : ''}</div>
       ${figs}${paras}
       ${(art.keywords || []).length ? `<div class="na-kw">關鍵字　${art.keywords.map(k => `<span>${esc(k)}</span>`).join('')}</div>` : ''}
       ${src}`;
@@ -3184,7 +3196,7 @@ function renderNewsArticle(it, art){
     doc.innerHTML = `<div class="na-site">中国海警局 China Coast Guard</div>
       <h2>${esc(art.title || it.title)}</h2>
       ${art.subtitle ? `<div class="na-sub">${esc(art.subtitle)}</div>` : ''}
-      <div class="na-date">${esc(art.date || String(it.published || '').replace('T', ' '))}${art.source ? `　来源：${esc(art.source)}` : ''}</div>
+      <div class="na-date">${esc(newsJst(it.published) || art.date || '')}（日本時間）${art.source ? `　来源：${esc(art.source)}` : ''}</div>
       ${figs}${paras}${src}`;
   }
   $('#newsArticleNote').textContent = NEWS_PAGE_NAMES[newsPageOf(it)] || '';
