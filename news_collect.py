@@ -519,6 +519,17 @@ def main(argv=None):
                 continue
             if re.search(r"\.(js|json)(\?|$)", url) or not text.lstrip().startswith("<"):   # データ・スクリプトはそのまま
                 print(f"=== PROBE {url} via={via} len={len(text)} (raw)")
+                try:                                   # JSON は構造(キーと先頭の要素、長い文字列は短く)を出す
+                    def skel(v, d=0):
+                        if isinstance(v, dict):
+                            return {k: skel(x, d + 1) for k, x in v.items()}
+                        if isinstance(v, list):
+                            return [f"<list len={len(v)}>"] + [skel(x, d + 1) for x in v[:2]]
+                        return v[:300] + "…" if isinstance(v, str) and len(v) > 300 else v
+                    print(json.dumps(skel(json.loads(text)), ensure_ascii=False, indent=1)[:30000])
+                    continue
+                except ValueError:
+                    pass
                 print(text[:20000] if len(text) <= 60000 else text[-60000:])   # 大きいスクリプトは後ろ(同梱ライブラリの後の本体)
                 continue
             for src in re.findall(r'(?i)<script[^>]+src=["\']([^"\']+)', text):          # 中身を JS で読み込むページの調査用
