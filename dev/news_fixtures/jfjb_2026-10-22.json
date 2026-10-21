@@ -43,6 +43,20 @@
      "type": "文字",
      "content": "东部战区新闻发言人表示。<br/>第二行。"
     }
+   ],
+   "imgList": [
+    {
+     "typeName": "标准图",
+     "url": "https://rmt-static-publish.81.cn/image/uploadpic/20261022/7b858d7c9810de8147d9277fcc5401c5.jpg",
+     "width": 885,
+     "height": 1217
+    },
+    {
+     "typeName": "真图",
+     "url": "https://rmt-static-publish.81.cn/image/uploadpic/20261022/9fd40718698e7dcd46c281730cbe821a.jpg",
+     "width": 4499,
+     "height": 6184
+    }
    ]
   }
  ],

@@ -573,6 +573,12 @@ body.dark-mode .news-item.mna .news-title{color:#7fb2ec;}
 .jfjb-pages{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;}
 .jfjb-pages button{font-size:11px;border:1px solid var(--border);background:var(--panel-alt);color:var(--text-dim);border-radius:4px;padding:3px 6px;cursor:pointer;}
 .jfjb-pages button.active{background:#1f5f6b;border-color:#1f5f6b;color:#fff;}
+.jfjb-body{display:flex;gap:12px;align-items:flex-start;}
+.jfjb-body #jfjbArticles{flex:1;min-width:0;}
+.jfjb-paper{flex:0 0 38%;max-width:360px;border:1px solid var(--border);background:#fff;display:block;}
+.jfjb-paper img{display:block;width:100%;height:auto;}
+@media (max-width:700px){ .jfjb-body{flex-direction:column;} .jfjb-paper{max-width:none;width:100%;} }
+#newsArticleDoc.jfjb figure img{display:block;width:100%;height:auto;}
 .jfjb-sec{font-size:13px;font-weight:700;color:#fff;background:#1f5f6b;border-radius:4px;padding:6px 10px;margin-bottom:4px;}
 .news-item.jfjb .news-guide,.news-item.jfjb .news-sub{font-size:11px;color:var(--text-faint);line-height:1.5;}
 #newsArticleDoc.jfjb{font-family:'Noto Serif SC','Noto Serif CJK SC','SimSun',var(--sans);}
@@ -824,7 +830,10 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
         </div>
         <div class="jfjb-pages" id="jfjbPages"></div>
         <div class="jfjb-sec" id="jfjbSecTitle"></div>
-        <div id="jfjbArticles"></div>
+        <div class="jfjb-body">
+          <a class="jfjb-paper" id="jfjbPaper" href="#" target="_blank" rel="noopener noreferrer" title="押すと大きな画像を開く"><img id="jfjbPaperImg" alt="版面" referrerpolicy="no-referrer" onerror="this.parentNode.style.display='none'"></a>
+          <div id="jfjbArticles"></div>
+        </div>
       </div>
       <div class="empty-hint" id="newsEmptyHint">投稿はまだありません。</div>
     </div>
@@ -972,7 +981,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.5.0';
+const APP_VERSION = 'v4.5.1';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1061,6 +1070,7 @@ const APP_VERSION = 'v4.5.0';
 // v4.4.4: 報道の一覧の右と記事の画面の発行日時を日本時間に(海警局=北京時間・軍聞社=台湾時間から+1時間)。本文の中の時刻は原文のまま。
 // v4.4.5: NOTAM のタブの「(Beta)」を外した(ユーザー指示)。報道は「報道(Beta)」のまま。
 // v4.5.0: 報道に「解放军报」(数字报)。日付と版を選んで記事を読む(紙面と同じ構成)。news_out/jfjb/(news_collect.py)
+// v4.5.1: 解放军报の写真と版面の画像を出す(保存はせず、元のサイト rmt-static-publish.81.cn から直接読む。Referer は送らない)
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3219,7 +3229,8 @@ function renderNewsArticle(it, art){
   const paras = (art.paragraphs || []).map(p => `<p class="na-p">${esc(p)}</p>`).join('');
   const src = `<div class="na-src">出典: ${esc(art.site || '')}　${esc(art.url || it.url || '')}</div>`;
   if (it.source === 'jfjb'){
-    const jfigs = (art.figures || []).map(f => f.caption ? `<figure><figcaption>［写真］${esc(f.caption)}</figcaption></figure>` : '').join('');
+    // v4.5.1: 写真は元のサイトから直接読む(読めなければ説明だけ)
+    const jfigs = (art.figures || []).map(f => `<figure>${f.src ? `<img src="${esc(f.src)}" alt="${esc(f.caption || '')}" referrerpolicy="no-referrer" loading="lazy" onerror="this.outerHTML='<div class=&quot;na-imgerr&quot;>写真を読み込めませんでした</div>'">` : ''}${f.caption ? `<figcaption>${esc(f.caption)}</figcaption>` : ''}</figure>`).join('');
     doc.innerHTML = `<div class="na-site"><span>解放军报</span><span>${esc(art.section || '')}</span></div>
       ${art.guide ? `<div class="na-guide">${esc(art.guide)}</div>` : ''}
       <h2>${esc(art.title || it.title)}</h2>
@@ -3261,7 +3272,7 @@ $('#btnNewsArticlePdf').addEventListener('click', async ()=>{
     const box = $('#newsArticleDoc');
     const top = box.getBoundingClientRect().top;
     const cuts = [...box.querySelectorAll('.na-p, figure, .na-kw, .na-src')].map(el => el.getBoundingClientRect().top - top);
-    const canvas = await html2canvas(box, { backgroundColor:'#ffffff', logging:false, scale:2 });
+    const canvas = await html2canvas(box, { backgroundColor:'#ffffff', logging:false, scale:2, useCORS:true });   // v4.5.1: 元のサイトの写真も(許されていれば)入れる
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF({ orientation:'portrait', unit:'mm', format:'a4' });
     const pageW = pdf.internal.pageSize.getWidth(), pageH = pdf.internal.pageSize.getHeight();
@@ -3340,6 +3351,13 @@ async function renderJfjb(){
     }
   }
   const page = (jfjbDay.pages || []).find(p => p.no === jfjbPageNo);
+  // v4.5.1: 版面の画像(元のサイトから直接。古い形のファイルには無い)
+  const pimg = page && page.img;
+  $('#jfjbPaper').style.display = pimg ? '' : 'none';
+  if (pimg){
+    if ($('#jfjbPaperImg').getAttribute('src') !== pimg) $('#jfjbPaperImg').src = pimg;
+    $('#jfjbPaper').href = page.img_large || pimg;
+  }
   $('#jfjbArticles').innerHTML = ((page && page.articles) || []).map(a => `<a class="news-item jfjb" href="${esc(a.url)}" data-jfjb="${esc(a.id)}">
       ${a.guide ? `<div class="news-guide">${esc(a.guide)}</div>` : ''}
       <div class="news-title">${esc(a.title || '（見出しなし）')}</div>

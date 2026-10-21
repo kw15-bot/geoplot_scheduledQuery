@@ -102,6 +102,7 @@ JFJB_FIRST_DAY = "2026-01-01"       # 数字报の「往期回顾」で選べる
 JFJB_RECHECK_DAYS = 7               # 毎回、この日数ぶん遡って、読めていない日・読み直していない日を読む
 JFJB_BACKFILL_SECONDS = 20 * 60     # 遡りは1回の実行でこの時間まで(1日分の読み込みに6〜9秒。全部は30分の制限に収まらないので、何回かに分けて実行する)
 JFJB_DIR = "jfjb"
+JFJB_FORMAT = 2                     # 1日分のファイルの形。変えたら読み直す(2: 版面の画像 img を足した 2026-10-22)
 JFJB_NOTIFY = []                    # 通知する見出し(正規表現)。未定(2026-10-22)。当たった記事だけ news.json の items に入れる
 
 
@@ -503,7 +504,7 @@ def _jfjb_get(url):
 
 def _jfjb_figures(content):
     """本文HTMLの写真(<div class="attachment-image"><table><tr><td><img></td></tr><tr><td>説明</td></tr></table>)。
-    写真は保存しない(1日60本前後あり、リポジトリが大きくなるため)。元の URL と説明だけ持つ。"""
+    写真そのものは保存しない(1日60本前後あり、リポジトリが大きくなるため)。元の URL と説明だけ持ち、ビューアが元のサイトから直接読む。"""
     figs = []
     for blk in re.findall(r"<table\b.*?</table>", content, re.S | re.I):
         im = re.search(r"<img\b[^>]*\bsrc=[\"']([^\"']+)", blk, re.I)
@@ -529,7 +530,9 @@ def parse_jfjb_day(data, date):
                          "author": strip_tags(xy.get("author") or ""), "kind": xy.get("type") or "",
                          "paragraphs": paras, "figures": _jfjb_figures(content),
                          "url": JFJB_ARTICLE_URL.format(date=date, no=no, id=xy.get("id"))})
+        imgs = {i.get("typeName"): i.get("url") for i in pg.get("imgList") or []}
         pages.append({"no": no, "name": strip_tags(pg.get("paperBk") or ""), "pdf": pg.get("paperPDF") or "",
+                      "img": imgs.get("标准图") or pg.get("paperImg") or "", "img_large": imgs.get("真图") or pg.get("paperImg") or "",
                       "url": JFJB_PAGE_URL.format(no=no, date=date), "articles": arts})
     return {"date": date, "paper": JFJB_NAME, "pages": pages}
 
@@ -567,7 +570,8 @@ def collect_jfjb(state, out, now, backfill=False, get=None, newest=None, budget=
     d = last
     while d >= first:
         ds = d.isoformat()
-        if ds == newest or not days.get(ds, {}).get("final"):
+        rec = days.get(ds, {})
+        if ds == newest or not rec.get("final") or (rec.get("articles") and rec.get("v") != JFJB_FORMAT):
             todo.append(ds)
         d -= dt.timedelta(days=1)
     index_path = out / JFJB_DIR / "index.json"
@@ -601,7 +605,7 @@ def collect_jfjb(state, out, now, backfill=False, get=None, newest=None, budget=
             continue
         read += 1
         _write_if_changed(out / JFJB_DIR / f"{ds}.json", day)
-        days[ds] = {"articles": n, "final": ds != newest}
+        days[ds] = {"articles": n, "final": ds != newest, "v": JFJB_FORMAT}
         index["days"][ds] = {"pages": [[p["no"], p["name"], len(p["articles"]), p["pdf"]] for p in day["pages"]]}
         for p in day["pages"]:
             for art in p["articles"]:

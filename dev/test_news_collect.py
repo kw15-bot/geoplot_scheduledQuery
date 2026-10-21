@@ -153,12 +153,14 @@ class News(unittest.TestCase):
         self.assertEqual(a1["paragraphs"], ["长征，这一惊天动地的革命壮举。", "江西于都、广西全州。"])
         self.assertEqual(a2["paragraphs"], ["东部战区新闻发言人表示。", "第二行。"])              # <p> が無い本文は <br> で分ける
         self.assertIn("articleid=988843", a1["url"])
+        self.assertTrue(day["pages"][0]["img"].endswith("7b858d7c9810de8147d9277fcc5401c5.jpg"))         # 版面の画像(标准图)
+        self.assertTrue(day["pages"][0]["img_large"].endswith("9fd40718698e7dcd46c281730cbe821a.jpg"))   # 拡大用(真图)
         b = day["pages"][1]["articles"][0]
         self.assertEqual(b["figures"], [{"src": "https://rmt-static-publish.81.cn/image/uploadpic/20261022/06fc46ef72ac9ae3c06dfb221f1ab461.jpg",
                                          "caption": "图为纪念活动现场。"}])
         self.assertEqual(b["paragraphs"], ["第一段。", "二、要求"])                                  # 写真の説明は本文に入れない
         st = self.state()
-        self.assertEqual(st["sources"]["jfjb"]["days"]["2026-10-22"], {"articles": 3, "final": False})
+        self.assertEqual(st["sources"]["jfjb"]["days"]["2026-10-22"], {"articles": 3, "final": False, "v": N.JFJB_FORMAT})
         self.assertEqual(st["sources"]["jfjb"]["days"]["2026-10-21"], {"articles": 0, "final": True})  # 無い日(404)は読み直さない
         self.assertFalse([i for i in st["items"] if i["source"] == "jfjb"])                         # 通知の規則が無ければ items に入れない
 
