@@ -885,6 +885,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
         <span class="na-note" id="newsArticleNote"></span>
         <a class="btn small ghost" id="btnNewsArticleOrig" href="#" target="_blank" rel="noopener">元のサイトを開く</a>
         <button class="btn small" id="btnNewsArticlePdf">PDF出力</button>
+        <button class="btn small" id="btnNewsArticleTr">翻訳</button>
         <button class="btn small ghost" id="btnNewsArticleClose">閉じる</button>
       </div>
       <div id="newsArticleDoc"></div>
@@ -1020,7 +1021,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.7.2';
+const APP_VERSION = 'v4.8.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1114,6 +1115,8 @@ const APP_VERSION = 'v4.7.2';
 // v4.7.0: 解放军报を紙面型に(ユーザー選択 A案)。左に日付の一覧、中央に版面の画像(記事の場所を押すと本文)、右に版面目录と見出し
 // v4.7.1: 版面の上の「版面PDF・画像を拡大・元のサイト」のリンクをやめた(ユーザー指示)
 // v4.7.2: 左の日付の一覧を月ごとの折りたたみに(ユーザー指示)。最初は選んでいる日の月だけ開く
+// v4.8.0: 記事の画面に「翻訳」ボタン(日本語に。押すと「原文」に戻す)。Chrome 内蔵の翻訳(Translator API、端末内・無料)を使い、
+//         使えないブラウザでは Google 翻訳の無料の窓口(translate.googleapis.com、キー不要)。本文は公開記事なので外に出してよい
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3295,6 +3298,7 @@ async function openNewsArticle(it){
   }
 }
 function renderNewsArticle(it, art){
+  naTrReset();
   const doc = $('#newsArticleDoc');
   const figs = (art.figures || []).map(f => f.data
     ? `<figure><img src="${f.data}" alt="${esc(f.caption || '')}">${f.caption ? `<figcaption>${esc(f.caption)}</figcaption>` : ''}</figure>`
@@ -3332,6 +3336,63 @@ function renderNewsArticle(it, art){
   }
   $('#newsArticleNote').textContent = NEWS_PAGE_NAMES[newsPageOf(it)] || '';
 }
+// ---- 翻訳(v4.8.0) ----
+// 訳す所: 見出し・副題・引題・著者・写真の説明・本文。原文は data-orig に持ち、「原文」で戻す
+const NA_TR_SEL = 'h2, .na-sub, .na-guide, .na-author, figcaption, .na-p';
+let naTrState = 'orig';                // 'orig' | 'busy' | 'ja'
+function naTrButton(){
+  const b = $('#btnNewsArticleTr');
+  b.textContent = naTrState === 'ja' ? '原文' : naTrState === 'busy' ? '翻訳中…' : '翻訳';
+  b.disabled = naTrState === 'busy';
+}
+function naTrReset(){ naTrState = 'orig'; naTrButton(); }
+async function translateBatch(texts, src){
+  // 1) Chrome 内蔵の翻訳(端末内)。言語の取り込みが要る場合は、最初の1回だけ時間がかかる
+  if (self.Translator){
+    try{
+      const opt = { sourceLanguage: src, targetLanguage: 'ja' };
+      // すぐ使えるときだけ(言語の取り込みが要る状態だと待たされるので、そのときは 2) にする)
+      if ((await Translator.availability(opt)) === 'available'){
+        const tr = await Translator.create(opt);
+        const out = [];
+        for (const t of texts) out.push(await tr.translate(t));
+        return out;
+      }
+    }catch(e){ console.warn('Translator API', e); }
+  }
+  // 2) Google 翻訳の無料の窓口(1段落ずつ、5本ずつ並べて)
+  const one = async t => {
+    const r = await fetch('https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ja&dt=t&q=' + encodeURIComponent(t));
+    if (!r.ok) throw new Error(`翻訳 HTTP ${r.status}`);
+    const j = await r.json();
+    return (j[0] || []).map(seg => seg[0]).join('');
+  };
+  const out = [];
+  for (let i = 0; i < texts.length; i += 5) out.push(...await Promise.all(texts.slice(i, i + 5).map(one)));
+  return out;
+}
+$('#btnNewsArticleTr').addEventListener('click', async ()=>{
+  const els = [...$('#newsArticleDoc').querySelectorAll(NA_TR_SEL)];
+  if (naTrState === 'ja'){                                   // 原文に戻す
+    els.forEach(el => { if (el.dataset.orig !== undefined) el.textContent = el.dataset.orig; });
+    naTrReset();
+    return;
+  }
+  if (naTrState === 'busy' || !els.length) return;
+  naTrState = 'busy'; naTrButton();
+  try{
+    const src = $('#newsArticleDoc').classList.contains('mna') ? 'zh-Hant' : 'zh';
+    const texts = els.map(el => el.dataset.orig !== undefined ? el.dataset.orig : el.textContent);
+    const ja = await translateBatch(texts, src);
+    els.forEach((el, i) => { el.dataset.orig = texts[i]; el.textContent = ja[i] || texts[i]; });
+    naTrState = 'ja';
+  }catch(err){
+    console.error(err);
+    logLine('翻訳できませんでした: ' + err.message, 'l-err');
+    naTrState = 'orig';
+  }
+  naTrButton();
+});
 function closeNewsArticle(){ $('#newsArticleModal').classList.remove('open'); newsArticleOpen = null; }
 $('#btnNewsArticleClose').addEventListener('click', closeNewsArticle);
 $('#newsArticleModal').addEventListener('click', e=>{ if (e.target.id === 'newsArticleModal') closeNewsArticle(); });

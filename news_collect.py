@@ -796,6 +796,17 @@ def main(argv=None):
     a = ap.parse_args(argv)
     if a.probe:
         for url in a.probe:
+            if re.search(r"\.(jpe?g|png|gif|webp)(\?|$)", url, re.I):     # 画像: 状態とヘッダーだけ(Referer あり・なしの両方)
+                for ref in (None, "https://kw15-bot.github.io/"):
+                    req = urllib.request.Request(url, headers=dict(HEADERS, **({"Referer": ref} if ref else {})))
+                    try:
+                        with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
+                            print(f"=== IMG {url} referer={ref} -> {r.status} len={len(r.read())} headers={dict(r.headers)}")
+                    except urllib.error.HTTPError as e:
+                        print(f"=== IMG {url} referer={ref} -> HTTP {e.code} headers={dict(e.headers)}")
+                    except (urllib.error.URLError, OSError) as e:
+                        print(f"=== IMG {url} referer={ref} -> {type(e).__name__}: {e}")
+                continue
             try:
                 text, via = fetch_page(url, mirror="ccg.gov.cn" in url)
             except (urllib.error.URLError, OSError) as e:
