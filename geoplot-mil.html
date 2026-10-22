@@ -1021,7 +1021,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.8.1';
+const APP_VERSION = 'v4.9.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1118,6 +1118,7 @@ const APP_VERSION = 'v4.8.1';
 // v4.8.0: 記事の画面に「翻訳」ボタン(日本語に。押すと「原文」に戻す)。Chrome 内蔵の翻訳(Translator API、端末内・無料)を使い、
 //         使えないブラウザでは Google 翻訳の無料の窓口(translate.googleapis.com、キー不要)。本文は公開記事なので外に出してよい
 // v4.8.1: 微博の cookie 切れは「cookie再設定」とだけ、微博のタブにだけ出す(🔔には出さない。ユーザー指示)
+// v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -2060,11 +2061,24 @@ function boxAesKey(box){
   }
   return boxKeyCache.get(ck);
 }
+// v4.9.0: 形 v2(塊ごとの暗号化、data_crypt.py)にも対応。chunks の各要素 = iv(12バイト) + 暗号文。塊ごとに復号・展開してつなぐ
 async function decryptBoxText(box, failMsg){
   const aes = await boxAesKey(box);
+  const fail = () => new Error(failMsg || '復号できません(データが今のkeyで暗号化されていない可能性)');
+  const gunzip = gz => new Response(new Blob([gz]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
+  if (box.v === 2 && Array.isArray(box.chunks)){
+    let parts;
+    try{
+      parts = await Promise.all(box.chunks.map(async c => {
+        const raw = b64bytes(c);
+        return gunzip(await crypto.subtle.decrypt({ name:'AES-GCM', iv: raw.slice(0, 12) }, aes, raw.slice(12)));
+      }));
+    }catch(e){ throw fail(); }
+    return new TextDecoder().decode(await new Blob(parts).arrayBuffer());
+  }
   let gz;
   try { gz = await crypto.subtle.decrypt({ name:'AES-GCM', iv: b64bytes(box.iv) }, aes, b64bytes(box.ct)); }
-  catch (e) { throw new Error(failMsg || '復号できません(データが今のkeyで暗号化されていない可能性)'); }
+  catch (e) { throw fail(); }
   return new Response(new Blob([gz]).stream().pipeThrough(new DecompressionStream('gzip'))).text();
 }
 async function decryptLayerFile(url){

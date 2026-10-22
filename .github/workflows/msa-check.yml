@@ -24,6 +24,15 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v5
+        with:
+          ref: data
+      # 2026-10-22: データ(notam_out・msa_out・news_out)は data ブランチ、コードは main(HANDOFF_NOTAM.md §29)。
+      # data ブランチを取り出し、main のコードをその上に展開する(data ブランチの .gitignore がコードを無視する)
+      - name: Get code from main
+        run: |
+          git fetch --depth=1 origin main
+          git archive FETCH_HEAD -- . ':(exclude).gitignore' ':(exclude)notam_out' ':(exclude)msa_out' ':(exclude)news_out' | tar -x
+          echo "START_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
 
       - uses: actions/setup-python@v6
         with:
@@ -54,7 +63,7 @@ jobs:
           fi
           git commit -m "NAVWAR drawing check $(date -u +%Y-%m-%d) [skip ci]"
           for i in 1 2 3 4 5; do
-            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            git pull --rebase origin data && git push origin HEAD:data && exit 0
             sleep $((i * 5))
           done
           exit 1
@@ -65,7 +74,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if [ "$(git rev-parse HEAD)" != "${{ github.sha }}" ]; then
+          if [ "$(git rev-parse HEAD)" != "$START_SHA" ]; then
             gh workflow run pages-deploy.yml -R "$GITHUB_REPOSITORY" --ref main || echo "could not request deploy"
           else
             echo "nothing pushed"

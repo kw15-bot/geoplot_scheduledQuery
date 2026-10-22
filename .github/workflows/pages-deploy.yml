@@ -48,10 +48,13 @@ jobs:
         with:
           ref: main
 
+      # 2026-10-22: データ(notam_out・msa_out・news_out)は data ブランチから(HANDOFF_NOTAM.md §29)。main に古い分が残っていても使わない
       - name: Build site
         run: |
           mkdir _site
-          git ls-files -z | grep -zv '^\.github/' | xargs -0 cp --parents -t _site
+          git ls-files -z | grep -zv '^\.github/' | grep -zvE '^(notam_out|msa_out|news_out)/' | xargs -0 cp --parents -t _site
+          git fetch --depth=1 origin data
+          git archive FETCH_HEAD -- notam_out msa_out news_out | tar -x -C _site
           touch _site/.nojekyll
           du -sh _site
 

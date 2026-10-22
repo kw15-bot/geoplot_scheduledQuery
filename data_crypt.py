@@ -26,6 +26,13 @@ data_crypt.py
   PBKDF2 の続き32バイトを鍵にした HMAC(gzip(平文)) の先頭12バイト(中身が変わらないファイルを
   毎回コミットし直さないため。分かるのは「前と同じ中身かどうか」だけ)。
 
+2026-10-22 から形 v2(塊ごとの暗号化。ユーザー指示「リポジトリが膨らまないように」):
+  {"v":2,"kdf":"PBKDF2-SHA256","iter":300000,"salt":b64,"chunks":[ b64(iv + ct), … ]}(塊ごとに1行)
+  平文を中身で決まる切れ目(CDC、平均約16KB)で塊に分け、塊ごとに gzip → AES-256-GCM(iv は塊の HMAC。上と同じ考え方)。
+  変わらなかった塊は暗号文も同じになるので、git が前の版との差分だけを保存できる(v1 はファイル全体が毎回別物になり、
+  10分ごとの更新で1日 40〜90MB ずつ履歴が増えていた)。切れ目は中身で決まるので、途中に挿入・削除があっても
+  そこ以外の塊は変わらない。読むとき(ここ・ビューア)は v1 も v2 も読める。
+
 使い方:
   python data_crypt.py decrypt                 # リポジトリ内の *.enc をすべて平文に戻す
   python data_crypt.py decrypt notam_out       # フォルダやファイルを指定してもよい
@@ -78,25 +85,64 @@ def _derive(key, salt=SALT, iters=ITER):
     return _keys[ck]
 
 
-def encrypt_bytes(data, key):
-    from cryptography.hazmat.primitives.ciphers.aead import AESGCM
-    k = _derive(key)
+def _gzip(data):
     gz = bytearray(gzip.compress(data, compresslevel=9, mtime=0))
     gz[9] = 3      # ヘッダの OS 欄を Unix(3) に固定(Python 3.13 から 255 になり、同じ中身でも暗号文が変わるため)
-    gz = bytes(gz)
-    iv = hmac.new(k[32:], gz, hashlib.sha256).digest()[:12]
-    ct = AESGCM(k[:32]).encrypt(iv, gz, None)
+    return bytes(gz)
+
+
+# 中身で決まる切れ目(gear ハッシュの CDC)。表は固定(sha256 から作る)。平均 2^14 = 約16KB、最小4KB・最大64KB
+_GEAR = [int.from_bytes(hashlib.sha256(b"gear%d" % i).digest()[:8], "big") for i in range(256)]
+_CDC_MASK, _CDC_MIN, _CDC_MAX = (1 << 14) - 1, 4096, 65536
+_M64 = (1 << 64) - 1
+
+
+def _chunks(data):
+    out, start, n = [], 0, len(data)
+    gear, mask = _GEAR, _CDC_MASK
+    while start < n:
+        end = min(n, start + _CDC_MAX)
+        i, h = start + _CDC_MIN, 0
+        cut = end
+        while i < end:
+            h = ((h << 1) + gear[data[i]]) & _M64
+            if not (h >> 40) & mask:                 # 上位のビットで判定(下位は直近数バイトしか効かないため)
+                cut = i + 1
+                break
+            i += 1
+        out.append(data[start:cut])
+        start = cut
+    return out
+
+
+def encrypt_bytes(data, key):
+    """v2(塊ごとの暗号化)。同じ平文なら同じ暗号文、変わらなかった塊は同じ行になる。"""
+    from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+    k = _derive(key)
+    aes = AESGCM(k[:32])
     b64 = lambda b: base64.b64encode(b).decode("ascii")
-    box = {"v": 1, "kdf": "PBKDF2-SHA256", "iter": ITER, "salt": b64(SALT), "iv": b64(iv), "ct": b64(ct)}
-    return (json.dumps(box, separators=(",", ":")) + "\n").encode("ascii")
+    lines = []
+    for c in _chunks(data) or [b""]:
+        gz = _gzip(c)
+        iv = hmac.new(k[32:], gz, hashlib.sha256).digest()[:12]
+        lines.append(json.dumps(b64(iv + aes.encrypt(iv, gz, None))))
+    head = json.dumps({"v": 2, "kdf": "PBKDF2-SHA256", "iter": ITER, "salt": b64(SALT)}, separators=(",", ":"))[:-1]
+    return (head + ',"chunks":[\n' + ",\n".join(lines) + "\n]}\n").encode("ascii")
 
 
 def decrypt_bytes(enc, key):
     from cryptography.hazmat.primitives.ciphers.aead import AESGCM
     box = json.loads(enc)
     k = _derive(key, base64.b64decode(box["salt"]), int(box["iter"]))
+    aes = AESGCM(k[:32])
     try:
-        gz = AESGCM(k[:32]).decrypt(base64.b64decode(box["iv"]), base64.b64decode(box["ct"]), None)
+        if box.get("v") == 2:
+            parts = []
+            for c in box["chunks"]:
+                raw = base64.b64decode(c)
+                parts.append(gzip.decompress(aes.decrypt(raw[:12], raw[12:], None)))
+            return b"".join(parts)
+        gz = aes.decrypt(base64.b64decode(box["iv"]), base64.b64decode(box["ct"]), None)
     except Exception:
         raise ValueError("復号できません(key が違う可能性)")
     return gzip.decompress(gz)
