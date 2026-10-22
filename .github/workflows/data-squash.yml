@@ -1,0 +1,85 @@
+name: Data history squash
+
+# 2026-10-22: data ブランチ(10分ごとに更新されるデータ)の履歴を、月に1回「最新の状態だけ」に作り直す
+# (ユーザー指示。リポジトリの容量を一定に保つため。HANDOFF_NOTAM.md §29)。
+#   1. 収集のワークフローを止め、走っている分が終わるのを待つ(作り直しの最中に push されると壊れるため)
+#   2. 作り直す前の履歴を git bundle にして、リリース data-history-YYYYMM に置く(バックアップ。最新3つだけ残す)
+#   3. data ブランチを、今の中身だけの1コミットに置き換える(force push)
+#   4. 収集のワークフローを元に戻す(失敗しても必ず戻す)
+# 毎月1日 18:23 UTC(= 2日 03:23 JST、収集の少ない時間)。手動実行も可。
+# main(コード)と過去の PR は触らない(PR が参照する履歴は消せないため、データは main に置かない)。
+on:
+  schedule:
+    - cron: "23 18 1 * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: data-squash
+  cancel-in-progress: false
+
+env:
+  COLLECTORS: "scrape.yml notam-collect.yml news-collect.yml notam-report.yml msa-check.yml"
+
+jobs:
+  squash:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Stop collectors and wait for running ones
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for w in $COLLECTORS; do gh workflow disable "$w" -R "$GITHUB_REPOSITORY" || true; done
+          for i in $(seq 1 60); do
+            busy=0
+            for w in $COLLECTORS; do
+              n=$(gh run list -R "$GITHUB_REPOSITORY" --workflow "$w" --limit 20 --json status \
+                  --jq '[.[] | select(.status != "completed")] | length' || echo 0)
+              busy=$((busy + n))
+            done
+            echo "running/queued collector runs: $busy"
+            [ "$busy" -eq 0 ] && exit 0
+            sleep 20
+          done
+          echo "::error::収集のワークフローが20分たっても終わらない"; exit 1
+
+      - uses: actions/checkout@v5
+        with:
+          ref: data
+          fetch-depth: 0
+
+      - name: Back up the history (release)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          tag="data-history-$(date -u +%Y%m%d)"
+          git bundle create "$RUNNER_TEMP/data.bundle" HEAD
+          ls -la "$RUNNER_TEMP/data.bundle"
+          ( cd "$RUNNER_TEMP" && split -b 1900m -d data.bundle data.bundle.part )     # リリースの1ファイルは2GBまで
+          gh release create "$tag" "$RUNNER_TEMP"/data.bundle.part* -R "$GITHUB_REPOSITORY" --target main \
+            --title "$tag" --notes "data ブランチの作り直し前の履歴(git bundle、分割した場合は cat data.bundle.part* > data.bundle で戻す)。
+          戻し方: git clone data.bundle restored && cd restored && git log"
+          # 古いバックアップは最新3つだけ残す
+          gh release list -R "$GITHUB_REPOSITORY" --limit 100 --json tagName --jq '.[].tagName' \
+            | grep '^data-history-' | sort -r | tail -n +4 \
+            | xargs -r -I{} gh release delete {} -R "$GITHUB_REPOSITORY" --cleanup-tag -y
+
+      - name: Replace data with a single commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          before=$(git count-objects -vH | grep size-pack)
+          new=$(git commit-tree "HEAD^{tree}" -m "Data as of $(date -u +%Y-%m-%dT%H:%MZ) (history squashed; backup: release data-history-$(date -u +%Y%m%d))")
+          git push --force origin "$new:refs/heads/data"
+          echo "before: $before / commits before: $(git rev-list --count HEAD)"
+
+      - name: Restart collectors
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for w in $COLLECTORS; do gh workflow enable "$w" -R "$GITHUB_REPOSITORY" || echo "::error::$w を元に戻せなかった"; done

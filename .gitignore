@@ -20,3 +20,9 @@ __pycache__/
 /news_out/**/*.md
 /HANDOFF.md
 /HANDOFF_NOTAM.md
+
+# 2026-10-22: 10分ごとに更新されるデータは data ブランチに置く(main はコードだけ。HANDOFF_NOTAM.md §29)。
+# 手元で使うときは: git fetch origin data && git worktree add ../data origin/data などで取り出す
+/notam_out/
+/msa_out/
+/news_out/

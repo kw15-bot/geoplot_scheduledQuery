@@ -75,19 +75,9 @@ jobs:
           fi
           pip install -q cryptography
           printf '%s' "$VIEWER_KEY_PREV" > "$RUNNER_TEMP/prev_key.txt"
-          python data_crypt.py rekey --old-key-file "$RUNNER_TEMP/prev_key.txt"
+          python data_crypt.py rekey --old-key-file "$RUNNER_TEMP/prev_key.txt" layers HANDOFF.md.enc HANDOFF_NOTAM.md.enc
           rm -f "$RUNNER_TEMP/prev_key.txt"
 
-      # 平文のままコミットされているデータがあれば暗号化して、平文をリポジトリから外す(初回の移行用。
-      # 以後は何もしない)。先に .enc を復号して平文を最新にしてから暗号化する(古い平文で .enc を上書きしない)
-      - name: Encrypt plaintext data still in the repository
-        env:
-          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
-        run: |
-          pip install -q cryptography
-          python data_crypt.py decrypt
-          python data_crypt.py encrypt
-          python data_crypt.py untrack
 
       - name: Commit
         run: |
@@ -98,13 +88,52 @@ jobs:
             if [ -f "$f" ]; then git add "$f"; fi
           done
           git add -u -- '*.enc'
-          git add -A -- 'notam_out/*.enc' 'msa_out/*.enc' 'layers/*.enc' 'HANDOFF*.md.enc' .gitignore
+          git add -A -- 'layers/*.enc' 'HANDOFF*.md.enc' .gitignore
           if git diff --staged --quiet; then
             echo "no changes"; exit 0
           fi
           git commit -m "Viewer: sync key hash, map layers and encrypted data from VIEWER_KEY"
           for i in 1 2 3 4 5; do
             git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
+
+  # 2026-10-22: data ブランチのデータ(notam_out・msa_out・news_out)も新しい key で作り直す(VIEWER_KEY_PREV があるときだけ)
+  rekey-data:
+    needs: sync
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: data
+      - name: Get code from main
+        run: |
+          git fetch --depth=1 origin main
+          git archive FETCH_HEAD -- . ':(exclude).gitignore' ':(exclude)notam_out' ':(exclude)msa_out' ':(exclude)news_out' | tar -x
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Re-encrypt data with the new key
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+          VIEWER_KEY_PREV: ${{ secrets.VIEWER_KEY_PREV }}
+        run: |
+          if [ -z "$VIEWER_KEY_PREV" ]; then
+            echo "VIEWER_KEY_PREV not set; data files not re-encrypted"; exit 0
+          fi
+          pip install -q cryptography
+          printf '%s' "$VIEWER_KEY_PREV" > "$RUNNER_TEMP/prev_key.txt"
+          python data_crypt.py rekey --old-key-file "$RUNNER_TEMP/prev_key.txt" notam_out msa_out news_out
+          rm -f "$RUNNER_TEMP/prev_key.txt"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -u -- notam_out msa_out news_out
+          if git diff --staged --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "Data: re-encrypt with the new VIEWER_KEY"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin data && git push origin HEAD:data && exit 0
             sleep $((i * 5))
           done
           exit 1
