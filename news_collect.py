@@ -29,7 +29,8 @@ notify=true を付ける。ビューアは notify のものだけを🔔に出�
             (毎日の定時の投稿 WEIBO_EXCLUDE は除く)。cookie が切れたら sources.weibo.auth_error_at に日付を書く(ビューアが表示する)。
 
 出力: news_out/news.json(リポジトリには暗号化した news_out/news.json.enc だけを置く。data_crypt.py)
-  {"sources": {id: {"name", "url", "last_ok_date", "last_error", "last_error_at"}},
+  {"sources": {id: {"name", "url", "last_ok_date", "last_ok_at", "last_error", "last_error_at", "error_since"}},
+  (last_ok_at = 最後に読めた日時、error_since = 読めなくなった最初の日時。ビューアは最後に読めてから1日たつと「取得できていません」を出す)
    "items": [{"id", "source", "page", "title", "url", "published", "first_seen", "notify", "matched"}, ...]}
   新しい順、全件を蓄積する(2026-10-12〜。通知する見出しを後で決めるため)。page は見つかった一覧(ccg_hjyw / ccg_wqzf / mna)。
   backfilled: 遡って集めた分(--backfill / --import-json)。ビューアはこれを通知しない。
@@ -647,9 +648,9 @@ def collect_jfjb(state, out, now, backfill=False, get=None, newest=None, budget=
     index["newest"] = newest
     _write_if_changed(index_path, index)
     if errors:
-        meta.update({"last_error": "; ".join(errors)[:500], "last_error_at": now[:10]})
+        meta.update({"last_error": "; ".join(errors)[:500], "last_error_at": now[:10], "error_since": meta.get("error_since") or now})
     else:
-        meta.update({"last_ok_date": now[:10], "last_error": None, "last_error_at": None})
+        meta.update({"last_ok_date": now[:10], "last_error": None, "last_error_at": None, "last_ok_at": now, "error_since": None})
     return read, added, errors
 
 
@@ -758,12 +759,12 @@ def collect_weibo(state, now, get=None, cookie=None, accounts=None):
                 errors.append(f"{acct['name']}: {type(e).__name__}: {e}")
     except WeiboAuthError as e:
         err = f"ログインが切れている(cookie を取り直して Secret WEIBO_COOKIE を更新): {e}"
-        meta.update({"last_error": err, "last_error_at": now[:10], "auth_error_at": meta.get("auth_error_at") or now[:10]})
+        meta.update({"last_error": err, "last_error_at": now[:10], "error_since": meta.get("error_since") or now, "auth_error_at": meta.get("auth_error_at") or now[:10]})
         return 0, err
     if errors:
-        meta.update({"last_error": "; ".join(errors), "last_error_at": now[:10], "auth_error_at": None})
+        meta.update({"last_error": "; ".join(errors), "last_error_at": now[:10], "error_since": meta.get("error_since") or now, "auth_error_at": None})
         return added, "; ".join(errors)
-    meta.update({"last_ok_date": now[:10], "last_error": None, "last_error_at": None, "auth_error_at": None})
+    meta.update({"last_ok_date": now[:10], "last_error": None, "last_error_at": None, "auth_error_at": None, "last_ok_at": now, "error_since": None})
     return added, None
 
 
@@ -1016,12 +1017,12 @@ def main(argv=None):
             summary.setdefault(sid, {}).update({"fetched": len(found), "new": added, "notify": sum(i["notify"] for i in found.values())})
         if errors:
             # 時刻まで書くと、失敗が続く間は毎回ファイルが変わってコミットされるので、日付だけ
-            meta.update({"last_error": "; ".join(errors), "last_error_at": now[:10]})
+            meta.update({"last_error": "; ".join(errors), "last_error_at": now[:10], "error_since": meta.get("error_since") or now})
             summary.setdefault(sid, {})["error"] = meta["last_error"]
             print(f"[WARN] {sid}: {meta['last_error']}", file=sys.stderr)
         else:
             # 成功時刻を毎回書くと15分ごとにコミットが出るので、日付だけ持つ(新着・エラー・日付が変わったときだけファイルが変わる)
-            meta.update({"last_ok_date": now[:10], "last_error": None, "last_error_at": None})
+            meta.update({"last_ok_date": now[:10], "last_error": None, "last_error_at": None, "last_ok_at": now, "error_since": None})
     # 通知の規則を変えたときに保存済みの記事にも効くよう、毎回いまの規則で付け直す(2026-10-21)
     page_rules = {pg["page"]: (pg["notify"] or CCG_NOTIFY) for src in SOURCES.values() for pg in src["pages"]}
     for it in state["items"]:
