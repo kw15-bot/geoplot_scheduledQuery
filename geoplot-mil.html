@@ -612,6 +612,10 @@ body.dark-mode .news-item.mna .news-title{color:#7fb2ec;}
 }
 .jfjb-sec{font-size:13px;font-weight:700;color:#fff;background:#1f5f6b;border-radius:4px;padding:6px 10px;margin-bottom:4px;}
 .news-item.jfjb .news-guide,.news-item.jfjb .news-sub{font-size:11px;color:var(--text-faint);line-height:1.5;}
+#newsArticleDoc.weibo .na-site{font-size:13px;color:#e6162d;font-weight:700;border-bottom:2px solid #e6162d;padding-bottom:6px;margin-bottom:16px;display:flex;justify-content:space-between;}
+#newsArticleDoc.weibo .na-p{text-indent:0;}
+#newsArticleDoc.weibo .na-rt{background:#f4f4f4;border-radius:6px;padding:10px 14px;margin:0 0 14px;}
+#newsArticleDoc.weibo figure img{display:block;width:100%;height:auto;}
 #newsArticleDoc.jfjb{font-family:'Noto Serif SC','Noto Serif CJK SC','SimSun',var(--sans);}
 #newsArticleDoc.jfjb .na-site{font-size:13px;color:#c00;font-weight:700;border-bottom:3px solid #c00;padding-bottom:6px;margin-bottom:18px;display:flex;justify-content:space-between;}
 #newsArticleDoc.jfjb .na-guide{text-align:center;font-size:14px;color:#555;margin-bottom:4px;}
@@ -1021,7 +1025,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.9.0';
+const APP_VERSION = 'v4.9.1';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1119,6 +1123,7 @@ const APP_VERSION = 'v4.9.0';
 //         使えないブラウザでは Google 翻訳の無料の窓口(translate.googleapis.com、キー不要)。本文は公開記事なので外に出してよい
 // v4.8.1: 微博の cookie 切れは「cookie再設定」とだけ、微博のタブにだけ出す(🔔には出さない。ユーザー指示)
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
+// v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3259,7 +3264,7 @@ function renderNewsList(){
     const copy = it.article ? '<span class="news-copy-mark" title="記事を保存済み(元のサイトに入れなくても読める・PDFにできる)">PDF</span>' : '';
     if (it.source === 'weibo'){
       const pics = (it.pics || []).map(p => `<img src="${esc(p.thumb || p.src)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.visibility='hidden'">`).join('');
-      return `<a class="news-item weibo" href="${href}" target="_blank" rel="noopener noreferrer">${site}
+      return `<a class="news-item weibo" href="${href}" data-weibo="${esc(it.id)}">${site}
         <div class="wb-head"><span class="wb-name">${flag}东部战区</span><span class="news-date" title="微博の投稿日時(日本時間。元は北京時間 ${esc(newsLocalTime(it.published))})">${esc(newsJst(it.published))} JST</span></div>
         <div class="wb-text">${esc(it.text || it.title)}</div>
         ${it.retweet ? `<div class="wb-rt">${esc(it.retweet)}</div>` : ''}
@@ -3277,6 +3282,13 @@ function renderNewsList(){
   }).join('');
 }
 $('#newsList').addEventListener('click', e=>{
+  const w = e.target.closest('a[data-weibo]');
+  if (w){
+    e.preventDefault();
+    const it = ((newsState && newsState.items) || []).find(x => x.id === w.dataset.weibo);
+    if (it) openWeiboPost(it);
+    return;
+  }
   const a = e.target.closest('a[data-article]');
   if (!a) return;
   e.preventDefault();
@@ -3311,6 +3323,18 @@ function renderNewsArticle(it, art){
     : `<figure><div class="na-imgerr">写真を保存できませんでした</div>${f.caption ? `<figcaption>${esc(f.caption)}</figcaption>` : ''}</figure>`).join('');
   const paras = (art.paragraphs || []).map(p => `<p class="na-p">${esc(p)}</p>`).join('');
   const src = `<div class="na-src">出典: ${esc(art.site || '')}　${esc(art.url || it.url || '')}</div>`;
+  if (it.source === 'weibo'){
+    const pics = (it.pics || []).map(p => `<figure><img src="${esc(p.src)}" alt="" referrerpolicy="no-referrer" loading="lazy" onerror="this.outerHTML='<div class=&quot;na-imgerr&quot;>写真を読み込めませんでした</div>'"></figure>`).join('');
+    const ps = String(it.text || it.title || '').split(/\n+/).filter(x => x.trim()).map(x => `<p class="na-p">${esc(x)}</p>`).join('');
+    doc.innerHTML = `<div class="na-site"><span>东部战区 微博</span><span>${esc(newsJst(it.published))} JST</span></div>
+      ${ps}
+      ${it.retweet ? `<div class="na-rt">${String(it.retweet).split(/\n+/).filter(x => x.trim()).map(x => `<p class="na-p">${esc(x)}</p>`).join('')}</div>` : ''}
+      ${pics}
+      ${it.video ? '<div class="na-imgerr">動画あり（元の投稿で見る）</div>' : ''}
+      <div class="na-src">出典: 东部战区 微博　${esc(it.url || '')}</div>`;
+    $('#newsArticleNote').textContent = '东部战区 微博';
+    return;
+  }
   if (it.source === 'jfjb'){
     // v4.5.1: 写真は元のサイトから直接読む(読めなければ説明だけ)
     const jfigs = (art.figures || []).map(f => `<figure>${f.src ? `<img src="${esc(f.src)}" alt="${esc(f.caption || '')}" referrerpolicy="no-referrer" loading="lazy" onerror="this.outerHTML='<div class=&quot;na-imgerr&quot;>写真を読み込めませんでした</div>'">` : ''}${f.caption ? `<figcaption>${esc(f.caption)}</figcaption>` : ''}</figure>`).join('');
@@ -3399,6 +3423,14 @@ $('#btnNewsArticleTr').addEventListener('click', async ()=>{
   }
   naTrButton();
 });
+// v4.9.1: 微博の投稿(本文・写真は news.json の item に入っている)を記事の画面に出す。写真は sinaimg から直接(Referer なし)
+function openWeiboPost(it){
+  newsArticleOpen = { it, art: { title: it.title } };
+  $('#newsArticleDoc').className = 'weibo';
+  $('#btnNewsArticleOrig').href = it.url || '#';
+  renderNewsArticle(it, newsArticleOpen.art);
+  $('#newsArticleModal').classList.add('open');
+}
 function closeNewsArticle(){ $('#newsArticleModal').classList.remove('open'); newsArticleOpen = null; }
 $('#btnNewsArticleClose').addEventListener('click', closeNewsArticle);
 $('#newsArticleModal').addEventListener('click', e=>{ if (e.target.id === 'newsArticleModal') closeNewsArticle(); });
@@ -3436,7 +3468,7 @@ $('#btnNewsArticlePdf').addEventListener('click', async ()=>{
     }
     const { it } = newsArticleOpen;
     const d = String(it.published || '').slice(0, 10) || 'undated';
-    const fname = `NEWS_${({ mna: 'MNA', jfjb: 'JFJB' })[it.source] || 'CCG'}_${d}_${String(it.id).replace(/[^A-Za-z0-9]/g, '').slice(-8)}.pdf`;   // 英数字だけ
+    const fname = `NEWS_${({ mna: 'MNA', jfjb: 'JFJB', weibo: 'WEIBO' })[it.source] || 'CCG'}_${d}_${String(it.id).replace(/[^A-Za-z0-9]/g, '').slice(-8)}.pdf`;   // 英数字だけ
     pdf.save(fname);
     logLine(`記事の写しをPDFにしました: ${fname}`, 'l-ok');
   }catch(err){
