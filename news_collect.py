@@ -801,7 +801,10 @@ def main(argv=None):
                     req = urllib.request.Request(url, headers=dict(HEADERS, **({"Referer": ref} if ref else {})))
                     try:
                         with urllib.request.urlopen(req, timeout=TIMEOUT) as r:
-                            print(f"=== IMG {url} referer={ref} -> {r.status} len={len(r.read())} headers={dict(r.headers)}")
+                            body = r.read()
+                            print(f"=== IMG {url} referer={ref} -> {r.status} len={len(body)} headers={dict(r.headers)}")
+                            if not r.headers.get_content_type().startswith("image/"):   # 画像の代わりに返ってきたページ(検査ページ等)
+                                print(body[:3000].decode("utf-8", "replace"))
                     except urllib.error.HTTPError as e:
                         print(f"=== IMG {url} referer={ref} -> HTTP {e.code} headers={dict(e.headers)}")
                     except (urllib.error.URLError, OSError) as e:
