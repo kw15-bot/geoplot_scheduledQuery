@@ -577,17 +577,39 @@ body.dark-mode .news-item.mna .news-title{color:#7fb2ec;}
 .news-item.weibo .wb-pics{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:4px;margin-top:6px;max-width:420px;}
 .news-item.weibo .wb-pics img{width:100%;height:88px;object-fit:cover;display:block;background:var(--panel-alt);}
 .news-item.weibo .wb-video{display:inline-block;font-size:10.5px;color:var(--text-faint);border:1px solid var(--border);border-radius:3px;padding:0 5px;margin-top:5px;}
-.jfjb-head{display:flex;gap:6px;align-items:center;margin-bottom:8px;}
-.jfjb-head select{flex:1;min-width:0;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:12px;padding:5px 6px;}
-.jfjb-pages{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;}
-.jfjb-pages button{font-size:11px;border:1px solid var(--border);background:var(--panel-alt);color:var(--text-dim);border-radius:4px;padding:3px 6px;cursor:pointer;}
-.jfjb-pages button.active{background:#1f5f6b;border-color:#1f5f6b;color:#fff;}
-.jfjb-body{display:flex;gap:12px;align-items:flex-start;}
-.jfjb-body #jfjbArticles{flex:1;min-width:0;}
-.jfjb-paper{flex:0 0 38%;max-width:360px;border:1px solid var(--border);background:#fff;display:block;}
+.jfjb-layout{display:grid;grid-template-columns:150px minmax(0,1.05fr) minmax(0,1fr);gap:12px;align-items:start;}
+.jfjb-dates{max-height:calc(100vh - 170px);overflow-y:auto;border:1px solid var(--border);border-radius:6px;background:var(--panel-alt);}
+.jfjb-dates .jd-month{position:sticky;top:0;background:#1f5f6b;color:#fff;font-size:11px;font-weight:700;padding:4px 8px;}
+.jfjb-dates button{display:block;width:100%;text-align:left;border:0;border-bottom:1px solid var(--border);background:transparent;color:var(--text);font-size:12px;padding:6px 8px;cursor:pointer;}
+.jfjb-dates button .jd-w{color:var(--text-faint);font-size:10.5px;margin-left:4px;}
+.jfjb-dates button:hover{background:var(--panel);}
+.jfjb-dates button.active{background:#1f5f6b;color:#fff;}
+.jfjb-dates button.active .jd-w{color:#d6e7ea;}
+.jfjb-layout>*{min-width:0;}
+.jfjb-paper-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 8px;font-size:12px;font-weight:700;margin-bottom:4px;}
+.jfjb-links{white-space:nowrap;}
+.jfjb-links a{font-size:11px;font-weight:400;margin-right:8px;color:var(--text-dim);}
+.jfjb-paper{position:relative;border:1px solid var(--border);background:#fff;}
 .jfjb-paper img{display:block;width:100%;height:auto;}
-@media (max-width:700px){ .jfjb-body{flex-direction:column;} .jfjb-paper{max-width:none;width:100%;} }
-#newsArticleDoc.jfjb figure img{display:block;width:100%;height:auto;}
+.jfjb-paper svg{position:absolute;inset:0;width:100%;height:100%;}
+.jfjb-paper polygon{fill:rgba(31,95,107,0);stroke:rgba(31,95,107,0);stroke-width:.25;cursor:pointer;vector-effect:non-scaling-stroke;}
+.jfjb-paper polygon:hover,.jfjb-paper polygon.hl{fill:rgba(31,95,107,.16);stroke:#1f5f6b;stroke-width:2;}
+.jfjb-paper .jfjb-noimg{display:none;font-size:11.5px;color:var(--text-faint);padding:30px 10px;text-align:center;}
+.jfjb-paper.noimg img,.jfjb-paper.noimg svg{display:none;}
+.jfjb-paper.noimg .jfjb-noimg{display:block;}
+.jfjb-side-title{font-size:13px;font-weight:700;color:#fff;background:#1f5f6b;border-radius:4px 4px 0 0;padding:6px 10px;}
+.jfjb-pages{display:flex;flex-direction:column;border:1px solid var(--border);border-top:0;margin-bottom:10px;max-height:260px;overflow-y:auto;}
+.jfjb-pages button{text-align:left;font-size:12px;border:0;border-bottom:1px solid var(--border);background:var(--panel-alt);color:var(--text);padding:6px 10px;cursor:pointer;}
+.jfjb-pages button:hover{background:var(--panel);}
+.jfjb-pages button.active{background:#e3eef0;color:#1f5f6b;font-weight:700;}
+.jfjb-pages button .jp-n{float:right;color:var(--text-faint);font-weight:400;font-size:10.5px;}
+.news-item.jfjb.hl{background:var(--panel-alt);}
+@media (max-width:900px){
+  .jfjb-layout{grid-template-columns:1fr;}
+  .jfjb-dates{display:flex;overflow-x:auto;max-height:none;}
+  .jfjb-dates .jd-month{display:none;}
+  .jfjb-dates button{flex:0 0 auto;width:auto;border-bottom:0;border-right:1px solid var(--border);}
+}
 .jfjb-sec{font-size:13px;font-weight:700;color:#fff;background:#1f5f6b;border-radius:4px;padding:6px 10px;margin-bottom:4px;}
 .news-item.jfjb .news-guide,.news-item.jfjb .news-sub{font-size:11px;color:var(--text-faint);line-height:1.5;}
 #newsArticleDoc.jfjb{font-family:'Noto Serif SC','Noto Serif CJK SC','SimSun',var(--sans);}
@@ -834,16 +856,23 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <div id="newsList"></div>
       <!-- v4.5.0: 解放军报。日付 → 版(版面目录) → 記事。記事を押すと全文(news_out/jfjb/<日付>.json に保存済み) -->
       <div id="jfjbView" style="display:none;">
-        <div class="jfjb-head">
-          <select id="jfjbDate" aria-label="発行日"></select>
-          <a class="btn small ghost" id="jfjbPdf" href="#" target="_blank" rel="noopener">版面PDF</a>
-          <a class="btn small ghost" id="jfjbOrig" href="#" target="_blank" rel="noopener">元のサイト</a>
-        </div>
-        <div class="jfjb-pages" id="jfjbPages"></div>
-        <div class="jfjb-sec" id="jfjbSecTitle"></div>
-        <div class="jfjb-body">
-          <a class="jfjb-paper" id="jfjbPaper" href="#" target="_blank" rel="noopener noreferrer" title="押すと大きな画像を開く"><img id="jfjbPaperImg" alt="版面" referrerpolicy="no-referrer" onerror="this.parentNode.style.display='none'"></a>
-          <div id="jfjbArticles"></div>
+        <div class="jfjb-layout">
+          <div class="jfjb-dates" id="jfjbDates" aria-label="発行日"></div>
+          <div class="jfjb-paper-col">
+            <div class="jfjb-paper-head"><span id="jfjbPaperTitle"></span>
+              <span class="jfjb-links"><a id="jfjbPdf" href="#" target="_blank" rel="noopener">版面PDF</a><a id="jfjbBig" href="#" target="_blank" rel="noopener noreferrer">画像を拡大</a><a id="jfjbOrig" href="#" target="_blank" rel="noopener">元のサイト</a></span></div>
+            <div class="jfjb-paper" id="jfjbPaper">
+              <img id="jfjbPaperImg" alt="版面" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('noimg')">
+              <svg id="jfjbAreas" viewBox="0 0 100 100" preserveAspectRatio="none" aria-label="記事の場所"></svg>
+              <div class="jfjb-noimg">版面の画像を読み込めませんでした（右の見出しから読めます）</div>
+            </div>
+          </div>
+          <div class="jfjb-side">
+            <div class="jfjb-side-title">版面目录</div>
+            <div class="jfjb-pages" id="jfjbPages"></div>
+            <div class="jfjb-sec" id="jfjbSecTitle"></div>
+            <div id="jfjbArticles"></div>
+          </div>
         </div>
       </div>
       <div class="empty-hint" id="newsEmptyHint">投稿はまだありません。</div>
@@ -992,7 +1021,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.6.0';
+const APP_VERSION = 'v4.7.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1083,6 +1112,7 @@ const APP_VERSION = 'v4.6.0';
 // v4.5.0: 報道に「解放军报」(数字报)。日付と版を選んで記事を読む(紙面と同じ構成)。news_out/jfjb/(news_collect.py)
 // v4.5.1: 解放军报の写真と版面の画像を出す(保存はせず、元のサイト rmt-static-publish.81.cn から直接読む。Referer は送らない)
 // v4.6.0: 東部戦区の微博。投稿は全部一覧に出し、語句に当たるものだけ🔔。cookie が切れたら報道の画面の上と🔔で知らせる
+// v4.7.0: 解放军报を紙面型に(ユーザー選択 A案)。左に日付の一覧、中央に版面の画像(記事の場所を押すと本文)、右に版面目录と見出し
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3366,22 +3396,32 @@ async function renderJfjb(){
   const days = (jfjbIndex && jfjbIndex.days) || {};
   const dates = Object.keys(days).sort().reverse();
   if (!dates.length){
-    $('#jfjbDate').innerHTML = ''; $('#jfjbPages').innerHTML = ''; $('#jfjbSecTitle').textContent = '';
+    $('#jfjbDates').innerHTML = ''; $('#jfjbPages').innerHTML = ''; $('#jfjbSecTitle').textContent = '';
     $('#jfjbArticles').innerHTML = '<div class="empty-hint" style="display:block;">解放军报はまだ読めていません。</div>';
     return;
   }
   if (!days[jfjbDate]) jfjbDate = dates[0];
-  $('#jfjbDate').innerHTML = dates.map(d => `<option value="${d}"${d === jfjbDate ? ' selected' : ''}>${d.replace(/-/g, '年').replace(/年(\d+)$/, '月$1日')} ${jfjbWeek(d)}</option>`).join('');
+  // 左: 日付の一覧(月ごとの見出し付き、新しい順)
+  let month = '';
+  $('#jfjbDates').innerHTML = dates.map(d => {
+    const m = d.slice(0, 7), head = m !== month ? `<div class="jd-month">${m.replace('-', '年')}月</div>` : '';
+    month = m;
+    return `${head}<button type="button" data-date="${d}" class="${d === jfjbDate ? 'active' : ''}">${+d.slice(5, 7)}月${+d.slice(8)}日<span class="jd-w">${jfjbWeek(d).replace('星期', '')}</span></button>`;
+  }).join('');
   const pages = days[jfjbDate].pages || [];
   if (!pages.some(p => p[0] === jfjbPageNo)) jfjbPageNo = pages.length ? pages[0][0] : '01';
-  $('#jfjbPages').innerHTML = pages.map(p => `<button type="button" data-no="${esc(p[0])}" class="${p[0] === jfjbPageNo ? 'active' : ''}" title="${esc(p[2])}本">第${esc(p[0])}版：${esc(p[1])}</button>`).join('');
+  // 右: 版面目录
+  $('#jfjbPages').innerHTML = pages.map(p => `<button type="button" data-no="${esc(p[0])}" class="${p[0] === jfjbPageNo ? 'active' : ''}">第${esc(p[0])}版：${esc(p[1])}<span class="jp-n">${esc(p[2])}本</span></button>`).join('');
   const cur = pages.find(p => p[0] === jfjbPageNo) || [];
-  $('#jfjbSecTitle').textContent = cur.length ? `第${cur[0]}版：${cur[1]}` : '';
+  const secName = cur.length ? `第${cur[0]}版：${cur[1]}` : '';
+  $('#jfjbSecTitle').textContent = secName;
+  $('#jfjbPaperTitle').textContent = `${jfjbDate.replace(/^(\d{4})-(\d{2})-(\d{2})$/, '$1年$2月$3日')} ${jfjbWeek(jfjbDate)}　${secName}`;
   $('#jfjbPdf').href = cur[3] || '#';
   $('#jfjbPdf').style.display = cur[3] ? '' : 'none';
   $('#jfjbOrig').href = `http://www.81.cn/szb_223187/szblb/index.html?paperNumber=${encodeURIComponent(jfjbPageNo)}&paperName=jfjb&paperDate=${jfjbDate}`;
   if (!jfjbDay || jfjbDay.date !== jfjbDate){
     $('#jfjbArticles').innerHTML = '<div class="news-status">読み込み中…</div>';
+    $('#jfjbAreas').innerHTML = '';
     const want = jfjbDate;
     try{
       const day = JSON.parse(await fetchDataText(jfjbUrl(want + '.json')));
@@ -3393,31 +3433,36 @@ async function renderJfjb(){
     }
   }
   const page = (jfjbDay.pages || []).find(p => p.no === jfjbPageNo);
-  // v4.5.1: 版面の画像(元のサイトから直接。古い形のファイルには無い)
+  const arts = (page && page.articles) || [];
+  // 中央: 版面の画像と、記事の場所(area、画像の幅・高さに対する %)。押すと本文
   const pimg = page && page.img;
-  $('#jfjbPaper').style.display = pimg ? '' : 'none';
-  if (pimg){
-    if ($('#jfjbPaperImg').getAttribute('src') !== pimg) $('#jfjbPaperImg').src = pimg;
-    $('#jfjbPaper').href = page.img_large || pimg;
-  }
-  $('#jfjbArticles').innerHTML = ((page && page.articles) || []).map(a => `<a class="news-item jfjb" href="${esc(a.url)}" data-jfjb="${esc(a.id)}">
+  $('#jfjbPaper').classList.toggle('noimg', !pimg);
+  if (pimg && $('#jfjbPaperImg').getAttribute('src') !== pimg) $('#jfjbPaperImg').src = pimg;
+  $('#jfjbBig').href = (page && (page.img_large || page.img)) || '#';
+  $('#jfjbBig').style.display = pimg ? '' : 'none';
+  $('#jfjbAreas').innerHTML = arts.filter(a => (a.area || []).length >= 3).map(a =>
+    `<polygon data-jfjb="${esc(a.id)}" points="${a.area.map(p => p.join(',')).join(' ')}"><title>${esc(a.title || '')}</title></polygon>`).join('');
+  $('#jfjbArticles').innerHTML = arts.map(a => `<a class="news-item jfjb" href="${esc(a.url)}" data-jfjb="${esc(a.id)}">
       ${a.guide ? `<div class="news-guide">${esc(a.guide)}</div>` : ''}
       <div class="news-title">${esc(a.title || '（見出しなし）')}</div>
       ${a.subtitle ? `<div class="news-sub">${esc(a.subtitle)}</div>` : ''}</a>`).join('');
 }
-$('#jfjbDate').addEventListener('change', e=>{ jfjbDate = e.target.value; jfjbPageNo = '01'; renderJfjb(); });
+$('#jfjbDates').addEventListener('click', e=>{
+  const b = e.target.closest('button[data-date]');
+  if (!b) return;
+  jfjbDate = b.dataset.date; jfjbPageNo = '01';
+  renderJfjb();
+});
 $('#jfjbPages').addEventListener('click', e=>{
   const b = e.target.closest('button[data-no]');
   if (!b) return;
   jfjbPageNo = b.dataset.no;
   renderJfjb();
 });
-$('#jfjbArticles').addEventListener('click', e=>{
-  const a = e.target.closest('a[data-jfjb]');
-  if (!a || !jfjbDay) return;
-  e.preventDefault();
+function openJfjbArticle(id){
+  if (!jfjbDay) return;
   const page = (jfjbDay.pages || []).find(p => p.no === jfjbPageNo) || {};
-  const art = (page.articles || []).find(x => x.id === a.dataset.jfjb);
+  const art = (page.articles || []).find(x => x.id === id);
   if (!art) return;
   const it = { id: art.id, source: 'jfjb', page: 'jfjb', title: art.title, url: art.url, published: jfjbDay.date };
   newsArticleOpen = { it, art: { ...art, section: `第${page.no}版：${page.name}` } };
@@ -3425,6 +3470,25 @@ $('#jfjbArticles').addEventListener('click', e=>{
   $('#btnNewsArticleOrig').href = art.url || '#';
   renderNewsArticle(it, newsArticleOpen.art);
   $('#newsArticleModal').classList.add('open');
+}
+$('#jfjbArticles').addEventListener('click', e=>{
+  const a = e.target.closest('a[data-jfjb]');
+  if (!a) return;
+  e.preventDefault();
+  openJfjbArticle(a.dataset.jfjb);
+});
+$('#jfjbAreas').addEventListener('click', e=>{
+  const p = e.target.closest('polygon[data-jfjb]');
+  if (p) openJfjbArticle(p.dataset.jfjb);
+});
+// 見出しと紙面の場所を、マウスを乗せたほうに合わせて互いに強調する
+function jfjbHighlight(id){
+  $$('#jfjbAreas polygon').forEach(p => p.classList.toggle('hl', p.dataset.jfjb === id));
+  $$('#jfjbArticles .news-item').forEach(a => a.classList.toggle('hl', a.dataset.jfjb === id));
+}
+['#jfjbArticles', '#jfjbAreas'].forEach(sel => {
+  $(sel).addEventListener('mouseover', e=>{ const t = e.target.closest('[data-jfjb]'); jfjbHighlight(t ? t.dataset.jfjb : ''); });
+  $(sel).addEventListener('mouseleave', ()=> jfjbHighlight(''));
 });
 
 let newsUrl = '';
