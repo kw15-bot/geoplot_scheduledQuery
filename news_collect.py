@@ -106,7 +106,7 @@ JFJB_FIRST_DAY = "2026-01-01"       # 数字报の「往期回顾」で選べる
 JFJB_RECHECK_DAYS = 7               # 毎回、この日数ぶん遡って、読めていない日・読み直していない日を読む
 JFJB_BACKFILL_SECONDS = 20 * 60     # 遡りは1回の実行でこの時間まで(1日分の読み込みに6〜9秒。全部は30分の制限に収まらないので、何回かに分けて実行する)
 JFJB_DIR = "jfjb"
-JFJB_FORMAT = 2                     # 1日分のファイルの形。変えたら読み直す(2: 版面の画像 img を足した 2026-10-22)
+JFJB_FORMAT = 3                     # 1日分のファイルの形。変えたら読み直す(2: 版面の画像 img、3: 記事の紙面上の位置 area。2026-10-22)
 JFJB_NOTIFY = []                    # 通知する見出し(正規表現)。未定(2026-10-22)。当たった記事だけ news.json の items に入れる
 
 # 东部战区の微博(2026-10-22〜、ユーザー指示「一覧は全部、語句に合うものだけ通知」)
@@ -527,6 +527,18 @@ def _jfjb_figures(content):
     return figs
 
 
+def _jfjb_area(points):
+    """記事の紙面上の位置。point は "x,y"(版面の画像の幅・高さに対する %)の並び → [[x, y], ...](小数2桁)。"""
+    out = []
+    for p in points or []:
+        try:
+            x, y = (float(v) for v in str(p).split(","))
+        except ValueError:
+            continue
+        out.append([round(x, 2), round(y, 2)])
+    return out if len(out) >= 3 else []
+
+
 def parse_jfjb_day(data, date):
     """index.json(1日分)を、版ごとの記事の一覧(本文は段落に分けて)にする。"""
     pages = []
@@ -540,7 +552,7 @@ def parse_jfjb_day(data, date):
             arts.append({"id": f"jfjb:{date}_{xy.get('id')}", "title": strip_tags(xy.get("title") or ""),
                          "subtitle": strip_tags(xy.get("title2") or ""), "guide": strip_tags(xy.get("guideTitle") or ""),
                          "author": strip_tags(xy.get("author") or ""), "kind": xy.get("type") or "",
-                         "paragraphs": paras, "figures": _jfjb_figures(content),
+                         "paragraphs": paras, "figures": _jfjb_figures(content), "area": _jfjb_area(xy.get("point")),
                          "url": JFJB_ARTICLE_URL.format(date=date, no=no, id=xy.get("id"))})
         imgs = {i.get("typeName"): i.get("url") for i in pg.get("imgList") or []}
         pages.append({"no": no, "name": strip_tags(pg.get("paperBk") or ""), "pdf": pg.get("paperPDF") or "",

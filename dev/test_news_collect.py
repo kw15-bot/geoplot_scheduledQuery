@@ -153,6 +153,7 @@ class News(unittest.TestCase):
         self.assertEqual(a1["paragraphs"], ["长征，这一惊天动地的革命壮举。", "江西于都、广西全州。"])
         self.assertEqual(a2["paragraphs"], ["东部战区新闻发言人表示。", "第二行。"])              # <p> が無い本文は <br> で分ける
         self.assertIn("articleid=988843", a1["url"])
+        self.assertEqual(a1["area"], [[3.9, 18.87], [49.32, 18.87], [49.32, 60.5], [3.9, 60.5]])           # 紙面上の位置(%)
         self.assertTrue(day["pages"][0]["img"].endswith("7b858d7c9810de8147d9277fcc5401c5.jpg"))         # 版面の画像(标准图)
         self.assertTrue(day["pages"][0]["img_large"].endswith("9fd40718698e7dcd46c281730cbe821a.jpg"))   # 拡大用(真图)
         b = day["pages"][1]["articles"][0]
