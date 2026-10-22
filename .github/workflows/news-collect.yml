@@ -72,6 +72,17 @@ jobs:
             python news_collect.py --out-dir news_out
           fi
 
+      # 2026-10-23: 🔔と同じ規則の新着(報道・NOTAM・航行警報)を、登録した端末に Web Push で送る(webpush.py、HANDOFF_NOTAM.md §30)。
+      # NOTAM・航行警報は data ブランチにある最新(同時に動いた収集の分は次の回)を読む。失敗しても収集は止めない
+      - name: Web Push
+        if: github.event.inputs.backfill == '' && github.event.inputs.probe == ''
+        continue-on-error: true
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+        run: |
+          python data_crypt.py decrypt notam_out/notam_cn.geojson.enc msa_out/military.geojson.enc layers/webpush_vapid.json.enc
+          python webpush.py send --news news_out/news.json --notam notam_out/notam_cn.geojson --msa msa_out/military.geojson
+
       # news_out/ はこのワークフローしか書かないので、他の収集の push と競合しても rebase で必ず解消できる
       - name: Commit
         env:
