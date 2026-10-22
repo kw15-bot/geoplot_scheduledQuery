@@ -1030,7 +1030,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.2.1';
+const APP_VERSION = 'v5.2.2';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1130,6 +1130,7 @@ const APP_VERSION = 'v5.2.1';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.2.2: 解放军报タブの件数を、最新号の記事数から読めている日数(〇日)に変えた
 // v5.2.1: 微博の「動画あり（元の投稿で見る）」の表示をやめた(ユーザー指示)
 // v5.2.0: 國防訊息・海警要闻・维权执法・微博の一覧を「水色の見出し＋黒の本文」にそろえる(解放军报は除く)。微博は【…】か最初の行を見出しに
 // v5.1.2: 一覧の区切りは枠をやめて線に(濃く・間を広く。全タブ)。長い投稿・要約は数行で止めて「…続きを読む」
@@ -3254,8 +3255,8 @@ function renderNewsList(){
   const isJfjb = newsTab === 'jfjb';
   $('#jfjbView').style.display = isJfjb ? '' : 'none';
   $('#newsList').style.display = isJfjb ? 'none' : '';
-  const jd = jfjbIndex && jfjbIndex.days && jfjbIndex.days[jfjbIndex.newest];
-  $('#newsCountJfjb').textContent = jd ? jd.pages.reduce((n, p) => n + p[2], 0) : 0;
+  // v5.2.2: 解放军报の件数は「最新号の記事数」だと他のタブ(全件数)と意味が違って分かりにくいので、読めている日数にする
+  $('#newsCountJfjb').textContent = jfjbIndex && jfjbIndex.days ? `${Object.keys(jfjbIndex.days).length}日` : 0;
   if (isJfjb){ $('#newsEmptyHint').style.display = 'none'; renderJfjb(); return; }
   const items = ((newsState && newsState.items) || []).slice()
     .sort((a, b) => String(b.published || '').localeCompare(String(a.published || '')) || String(b.id).localeCompare(String(a.id)));
