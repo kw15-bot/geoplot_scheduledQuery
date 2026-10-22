@@ -552,11 +552,6 @@ select{
 .app.mode-manual #rightPanel,.app.mode-notam #rightPanel,.app.mode-news #rightPanel{display:none;}
 /* 報道モード(v4.1.0)。一覧の作りは元サイトにそろえる: 中国海警局は「見出し＋日時」、軍聞社は「見出し＋要約＋【國防訊息】＋民國の日付」 */
 #newsTabs .tab-btn{font-size:11.5px;padding:7px 4px;}
-/* v5.0.0: 海警局・微博の下にもう1段(小分け) */
-.news-subtabs{margin-top:-4px;padding-left:10px;border-left:3px solid var(--border);}
-.news-subtabs .tab-btn{font-size:11px;padding:5px 4px;}
-.news-subtabs[data-group="none"]{display:none;}
-.news-subtabs[data-group="ccg"] .tab-btn[data-group="weibo"],.news-subtabs[data-group="weibo"] .tab-btn[data-group="ccg"]{display:none;}
 .news-item{display:block;text-decoration:none;color:inherit;cursor:pointer;border-bottom:1px dashed var(--border);padding:9px 2px;}
 .news-item:hover .news-title{text-decoration:underline;}
 .news-item.map-selected,.news-item:focus-visible{background:var(--panel-alt);outline:none;}
@@ -856,16 +851,11 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
   <div class="panel left" id="newsModePanel" data-mode-section="news">
     <div class="section">
       <div class="tab-row" id="newsTabs">
-        <button class="tab-btn active" data-group="ccg">海警局 <span class="tab-n" id="newsCountCcg">0</span></button>
-        <button class="tab-btn" data-group="mna">國防訊息 <span class="tab-n" id="newsCountMna">0</span></button>
-        <button class="tab-btn" data-group="jfjb">解放军报 <span class="tab-n" id="newsCountJfjb">0</span></button>
-        <button class="tab-btn" data-group="weibo">微博 <span class="tab-n" id="newsCountWeiboAll">0</span></button>
-      </div>
-      <div class="tab-row news-subtabs" id="newsSubTabs" data-group="ccg">
-        <button class="tab-btn active" data-tab="ccg_hjyw" data-group="ccg">海警要闻 <span class="tab-n" id="newsCountHjyw">0</span></button>
-        <button class="tab-btn" data-tab="ccg_wqzf" data-group="ccg">维权执法 <span class="tab-n" id="newsCountWqzf">0</span></button>
-        <button class="tab-btn" data-tab="weibo_dbzq" data-group="weibo">东部战区 <span class="tab-n" id="newsCountWeibo">0</span></button>
-        <button class="tab-btn" data-tab="weibo_ysjs" data-group="weibo">央视军事 <span class="tab-n" id="newsCountWeiboYsjs">0</span></button>
+        <button class="tab-btn active" data-tab="mna">國防訊息 <span class="tab-n" id="newsCountMna">0</span></button>
+        <button class="tab-btn" data-tab="ccg_hjyw">海警要闻 <span class="tab-n" id="newsCountHjyw">0</span></button>
+        <button class="tab-btn" data-tab="ccg_wqzf">维权执法 <span class="tab-n" id="newsCountWqzf">0</span></button>
+        <button class="tab-btn" data-tab="jfjb">解放军报 <span class="tab-n" id="newsCountJfjb">0</span></button>
+        <button class="tab-btn" data-tab="weibo">微博 <span class="tab-n" id="newsCountWeibo">0</span></button>
       </div>
       <div class="news-alert" id="newsAlert" style="display:none;"></div>
       <div class="news-status" id="newsStatus"></div>
@@ -1037,7 +1027,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.0.3';
+const APP_VERSION = 'v5.1.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1137,6 +1127,7 @@ const APP_VERSION = 'v5.0.3';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.1.0: 報道のタブを1段に戻す(國防訊息・海警要闻・维权执法・解放军报・微博)。微博はアカウントで分けない(ユーザー指示)
 // v5.0.3: 微博の一覧は投稿ごとに枠(カード)で区切る(区切りが分かりにくかった)
 // v5.0.2: 微博の動画の投稿は表紙の画像を写真として出す(収集側。央视军事は動画が多い)
 // v5.0.1: 微博の写真は元のサイトから読めない(埋め込み拒否)ので、収集時に保存したもの(news_out/weibo_pics/)を、一覧の本文の下と本文表示に出す
@@ -3220,7 +3211,7 @@ let newsRefreshTimer = null;
 function newsUrlFromNotamUrl(u){ return String(u).replace(/notam_out\/[^?#]*/, 'news_out/news.json'); }
 // 報道タブ(v4.1.0)。news.json の全投稿を、元サイトの一覧に近い見た目で並べる
 let newsState = null;
-let newsTab = 'ccg_hjyw';
+let newsTab = 'mna';
 const NEWS_PAGE_NAMES = { ccg_hjyw: '中国海警局 海警要闻', ccg_wqzf: '中国海警局 维权执法', mna: '國防部 軍聞社 國防訊息', jfjb: '解放军报', weibo_dbzq: '东部战区 微博', weibo_ysjs: '央视军事 微博' };
 function newsPageOf(it){ return it.page || (it.source === 'mna' ? 'mna' : 'ccg_hjyw'); }
 // 軍聞社の日付は元サイトと同じ「民國115年10月04日」(西暦-1911)
@@ -3245,7 +3236,7 @@ function newsJst(pub){
 const WEIBO_SECRET_URL = 'https://github.com/kw15-bot/geoplot_scheduledQuery/settings/secrets/actions';
 function renderNewsAlert(){
   const wb = newsState && newsState.sources && newsState.sources.weibo;
-  const at = wb && wb.auth_error_at && String(newsTab).startsWith('weibo_');
+  const at = wb && wb.auth_error_at && newsTab === 'weibo';
   $('#newsAlert').style.display = at ? '' : 'none';
   // v4.8.0: 文は短く(ユーザー指示)。リンク先は Secret の設定画面
   if (at) $('#newsAlert').innerHTML = `<a href="${WEIBO_SECRET_URL}" target="_blank" rel="noopener">cookie再設定</a>`;
@@ -3264,11 +3255,9 @@ function renderNewsList(){
   $('#newsCountHjyw').textContent = count('ccg_hjyw');
   $('#newsCountWqzf').textContent = count('ccg_wqzf');
   $('#newsCountMna').textContent = count('mna');
-  $('#newsCountWeibo').textContent = count('weibo_dbzq');
-  $('#newsCountWeiboYsjs').textContent = count('weibo_ysjs');
-  $('#newsCountCcg').textContent = count('ccg_hjyw') + count('ccg_wqzf');
-  $('#newsCountWeiboAll').textContent = count('weibo_dbzq') + count('weibo_ysjs');
-  const shown = items.filter(it => newsPageOf(it) === newsTab);
+  $('#newsCountWeibo').textContent = items.filter(it => it.source === 'weibo').length;
+  // v5.1.0: 微博はアカウントを分けずに1つのタブ(どのアカウントかは投稿の頭に出る)
+  const shown = items.filter(it => newsTab === 'weibo' ? it.source === 'weibo' : newsPageOf(it) === newsTab);
   $('#newsEmptyHint').style.display = shown.length ? 'none' : 'block';
   // 取得に失敗しているサイトがあれば一行で知らせる(中国海警局はファイアウォールで拒否されることが多い)
   const srcs = (newsState && newsState.sources) || {};
@@ -3546,19 +3535,13 @@ $('#btnNewsArticlePdf').addEventListener('click', async ()=>{
     btn.disabled = false; btn.textContent = label;
   }
 });
-// v5.0.0: 上の段(海警局・國防訊息・解放军报・微博)と、海警局・微博の下の段(小分け)。下の段は、前に選んでいたものを覚えておく
-const newsSubLast = { ccg: 'ccg_hjyw', weibo: 'weibo_dbzq' };
+// v5.1.0: タブは1段(國防訊息・海警要闻・维权执法・解放军报・微博)
 function setNewsTab(tab){
   newsTab = tab;
-  const group = tab.startsWith('ccg_') ? 'ccg' : tab.startsWith('weibo_') ? 'weibo' : tab;
-  if (newsSubLast[group]) newsSubLast[group] = tab;
-  $$('#newsTabs .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.group === group));
-  $('#newsSubTabs').dataset.group = newsSubLast[group] ? group : 'none';
-  $$('#newsSubTabs .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  $$('#newsTabs .tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
   renderNewsList();
 }
-$$('#newsTabs .tab-btn').forEach(btn => btn.addEventListener('click', ()=> setNewsTab(newsSubLast[btn.dataset.group] || btn.dataset.group)));
-$$('#newsSubTabs .tab-btn').forEach(btn => btn.addEventListener('click', ()=> setNewsTab(btn.dataset.tab)));
+$$('#newsTabs .tab-btn').forEach(btn => btn.addEventListener('click', ()=> setNewsTab(btn.dataset.tab)));
 // ---- 解放军报(v4.5.0) ----
 let jfjbIndex = null, jfjbDay = null, jfjbDate = '', jfjbPageNo = '01', jfjbOpenMonths = null;
 function jfjbUrl(name){ return String(newsUrl).replace(/news\.json(?=[?#]|$)/, 'jfjb/' + name); }
