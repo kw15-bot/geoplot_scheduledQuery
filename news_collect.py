@@ -110,8 +110,13 @@ JFJB_FORMAT = 3                     # 1日分のファイルの形。変えた�
 JFJB_NOTIFY = []                    # 通知する見出し(正規表現)。未定(2026-10-22)。当たった記事だけ news.json の items に入れる
 
 # 东部战区の微博(2026-10-22〜、ユーザー指示「一覧は全部、語句に合うものだけ通知」)
-WEIBO_UID = "7483054836"
-WEIBO_NAME = "东部战区 微博"
+WEIBO_UID = "7483054836"            # 东部战区(下の WEIBO_ACCOUNTS の先頭)
+WEIBO_NAME = "微博"
+# 見張る微博のアカウント(2026-10-22 央视军事を追加、ユーザー指示)。page はビューアのタブ
+WEIBO_ACCOUNTS = [
+    {"uid": "7483054836", "name": "东部战区", "page": "weibo_dbzq"},
+    {"uid": "6189120710", "name": "央视军事", "page": "weibo_ysjs"},
+]
 WEIBO_LIST = "https://weibo.com/ajax/statuses/mymblog?uid={uid}&page=1&feature=0"
 WEIBO_LONGTEXT = "https://weibo.com/ajax/statuses/longtext?id={mid}"
 WEIBO_NOTIFY = [r"演习", r"联合", r"台岛", r"台湾", r"海峡", r"战备警巡", r"正义使命", r"海峡雷霆"]   # ユーザー確認済み(2026-10-22)
@@ -653,9 +658,9 @@ class WeiboAuthError(Exception):
     """ログインが切れている(cookie 切れ)・cookie が無い。"""
 
 
-def _weibo_get(url, cookie):
+def _weibo_get(url, cookie, uid=WEIBO_UID):
     xsrf = next((c.split("=", 1)[1] for c in cookie.split("; ") if c.startswith("XSRF-TOKEN=")), "")
-    headers = dict(HEADERS, **{"Accept": "application/json, text/plain, */*", "Referer": f"https://weibo.com/u/{WEIBO_UID}",
+    headers = dict(HEADERS, **{"Accept": "application/json, text/plain, */*", "Referer": f"https://weibo.com/u/{uid}",
                                "Cookie": cookie, "X-Requested-With": "XMLHttpRequest"}, **({"X-XSRF-TOKEN": xsrf} if xsrf else {}))
     try:
         with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=TIMEOUT) as r:
@@ -676,7 +681,7 @@ def _weibo_get(url, cookie):
     return data
 
 
-def parse_weibo_post(s):
+def parse_weibo_post(s, acct=None):
     """mymblog の1投稿 → item。本文は text_raw(長い投稿は後で longtext に差し替える)。写真は URL だけ(ビューアが直接読む)。"""
     mid = s.get("mblogid") or str(s.get("idstr") or s.get("id"))
     text = (s.get("text_raw") or strip_tags(s.get("text") or "")).replace("\u200b", "").strip()
@@ -691,9 +696,10 @@ def parse_weibo_post(s):
     pinfo = s.get("page_info") or {}
     rt = s.get("retweeted_status") or {}
     first = re.sub(r"\s+", " ", text.split("\n")[0]).strip()
-    return {"id": f"weibo:{mid}", "source": "weibo", "page": "weibo_dbzq", "mid": mid,
+    acct = acct or WEIBO_ACCOUNTS[0]
+    return {"id": f"weibo:{mid}", "source": "weibo", "page": acct["page"], "account": acct["name"], "mid": mid,
             "title": first[:90] + ("…" if len(first) > 90 else ""), "text": text, "published": pub,
-            "url": f"https://weibo.com/{WEIBO_UID}/{mid}", "pics": pics,
+            "url": f"https://weibo.com/{acct['uid']}/{mid}", "pics": pics,
             "video": pinfo.get("object_type") == "video", "long": bool(s.get("isLongText")),
             "retweet": (rt.get("text_raw") or "").strip()}
 
@@ -704,46 +710,54 @@ def weibo_notify(text):
     return notify_match(text, WEIBO_NOTIFY)
 
 
-def collect_weibo(state, now, get=None, cookie=None):
-    """东部战区の微博の最新の投稿(1ページ目、20件ほど)を読んで items に足す。(新しく足した数, エラー or None)。"""
+def collect_weibo(state, now, get=None, cookie=None, accounts=None):
+    """見張る微博のアカウント(WEIBO_ACCOUNTS)の最新の投稿(1ページ目、20件ほど)を読んで items に足す。(新しく足した数, エラー or None)。"""
     cookie = (cookie if cookie is not None else os.environ.get("WEIBO_COOKIE", "")).strip()
+    gap = PAGE_GAP if get is None else 0
     get = get or (lambda url: _weibo_get(url, cookie))
+    accounts = accounts or WEIBO_ACCOUNTS
     meta = state["sources"].setdefault("weibo", {})
     meta["name"] = WEIBO_NAME
-    meta["pages"] = {"weibo_dbzq": {"name": WEIBO_NAME, "url": f"https://weibo.com/u/{WEIBO_UID}"}}
+    meta["pages"] = {a["page"]: {"name": f"{a['name']} 微博", "url": f"https://weibo.com/u/{a['uid']}"} for a in WEIBO_ACCOUNTS}
+    added, errors = 0, []
     try:
         if not cookie:
             raise WeiboAuthError("Secret WEIBO_COOKIE が設定されていない")
-        data = get(WEIBO_LIST.format(uid=WEIBO_UID))
-        posts = [parse_weibo_post(x) for x in (data.get("data") or {}).get("list") or []]
-        if not posts:
-            raise ValueError("投稿を1件も読み取れなかった")
         known = {it["id"]: it for it in state["items"] if it.get("source") == "weibo"}
-        for p in posts:
-            old = known.get(p["id"])
-            if p["long"]:
-                if old and old.get("text_full"):
-                    p["text"], p["text_full"] = old["text"], True
-                else:
-                    try:
-                        full = (get(WEIBO_LONGTEXT.format(mid=p["mid"])).get("data") or {}).get("longTextContent")
-                        if full:
-                            p["text"], p["text_full"] = full.strip(), True
-                    except (urllib.error.URLError, OSError, ValueError) as e:
-                        print(f"[weibo] longtext {p['mid']}: {e}", file=sys.stderr)
-            hit = weibo_notify(p["text"] + " " + p["retweet"])
-            p.update({"notify": bool(hit), "matched": hit})
-        added = merge(state, "weibo", posts, now)
-        meta.update({"last_ok_date": now[:10], "last_error": None, "last_error_at": None, "auth_error_at": None})
-        return added, None
+        for i, acct in enumerate(accounts):
+            if i:
+                time.sleep(gap)
+            try:
+                data = get(WEIBO_LIST.format(uid=acct["uid"]))
+                posts = [parse_weibo_post(x, acct) for x in (data.get("data") or {}).get("list") or []]
+                if not posts:
+                    raise ValueError("投稿を1件も読み取れなかった")
+                for p in posts:
+                    old = known.get(p["id"])
+                    if p["long"]:
+                        if old and old.get("text_full"):
+                            p["text"], p["text_full"] = old["text"], True
+                        else:
+                            try:
+                                full = (get(WEIBO_LONGTEXT.format(mid=p["mid"])).get("data") or {}).get("longTextContent")
+                                if full:
+                                    p["text"], p["text_full"] = full.strip(), True
+                            except (urllib.error.URLError, OSError, ValueError) as e:
+                                print(f"[weibo] longtext {p['mid']}: {e}", file=sys.stderr)
+                    hit = weibo_notify(p["text"] + " " + p["retweet"])
+                    p.update({"notify": bool(hit), "matched": hit})
+                added += merge(state, "weibo", posts, now)
+            except (urllib.error.URLError, OSError, ValueError, KeyError) as e:
+                errors.append(f"{acct['name']}: {type(e).__name__}: {e}")
     except WeiboAuthError as e:
         err = f"ログインが切れている(cookie を取り直して Secret WEIBO_COOKIE を更新): {e}"
         meta.update({"last_error": err, "last_error_at": now[:10], "auth_error_at": meta.get("auth_error_at") or now[:10]})
         return 0, err
-    except (urllib.error.URLError, OSError, ValueError, KeyError) as e:
-        err = f"{type(e).__name__}: {e}"
-        meta.update({"last_error": err, "last_error_at": now[:10]})
-        return 0, err
+    if errors:
+        meta.update({"last_error": "; ".join(errors), "last_error_at": now[:10], "auth_error_at": None})
+        return added, "; ".join(errors)
+    meta.update({"last_ok_date": now[:10], "last_error": None, "last_error_at": None, "auth_error_at": None})
+    return added, None
 
 
 # ----------------------------------------------------------------------------- 本体
@@ -919,7 +933,7 @@ def main(argv=None):
         fx = Path(a.fixture_dir)
         if (fx / "weibo_mymblog.json").exists():
             wb = json.loads((fx / "weibo_mymblog.json").read_text(encoding="utf-8"))
-            added, err = collect_weibo(state, now, get=lambda url: wb, cookie="SUB=fixture")
+            added, err = collect_weibo(state, now, get=lambda url: wb, cookie="SUB=fixture", accounts=WEIBO_ACCOUNTS[:1])
             ok += err is None
             summary["weibo"] = {"new": added, "error": err}
         if (fx / "jfjb_newest.json").exists():
