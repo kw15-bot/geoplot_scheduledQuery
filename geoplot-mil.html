@@ -1021,7 +1021,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.8.0';
+const APP_VERSION = 'v4.8.1';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1117,6 +1117,7 @@ const APP_VERSION = 'v4.8.0';
 // v4.7.2: 左の日付の一覧を月ごとの折りたたみに(ユーザー指示)。最初は選んでいる日の月だけ開く
 // v4.8.0: 記事の画面に「翻訳」ボタン(日本語に。押すと「原文」に戻す)。Chrome 内蔵の翻訳(Translator API、端末内・無料)を使い、
 //         使えないブラウザでは Google 翻訳の無料の窓口(translate.googleapis.com、キー不要)。本文は公開記事なので外に出してよい
+// v4.8.1: 微博の cookie 切れは「cookie再設定」とだけ、微博のタブにだけ出す(🔔には出さない。ユーザー指示)
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3172,16 +3173,7 @@ function registerNewsForNotifications(state){
   });
   firstPages.forEach(pg => seenNewsPages.add(pg));
   newsNotifBaselined = true;
-  // v4.6.0: 微博の cookie 切れも🔔に1回出す(切れた日ごとに1件)
-  const wbAt = sources.weibo && sources.weibo.auth_error_at;
-  if (wbAt && !seenNewsIds.has('weibo-auth:' + wbAt)){
-    seenNewsIds.add('weibo-auth:' + wbAt);
-    pendingNotifications.set('news:weibo-auth:' + wbAt, {
-      key: 'news:weibo-auth:' + wbAt, kind: 'news', title: '微博のcookie切れ',
-      url: WEIBO_SECRET_URL, bureau: '東部戦区 微博（収集の状態）', date: wbAt,
-    });
-    addedAny = true;
-  }
+  // v4.8.1: 微博の cookie 切れは🔔には出さない(微博のタブにだけ出す)
   if (addedAny) renderNotifPanel();
   persistNotificationState();
   updateNotifBadge();
@@ -3217,10 +3209,10 @@ function newsJst(pub){
 const WEIBO_SECRET_URL = 'https://github.com/kw15-bot/geoplot_scheduledQuery/settings/secrets/actions';
 function renderNewsAlert(){
   const wb = newsState && newsState.sources && newsState.sources.weibo;
-  const at = wb && wb.auth_error_at;
+  const at = wb && wb.auth_error_at && newsTab === 'weibo_dbzq';
   $('#newsAlert').style.display = at ? '' : 'none';
   // v4.8.0: 文は短く(ユーザー指示)。リンク先は Secret の設定画面
-  if (at) $('#newsAlert').innerHTML = `微博のcookie切れ（${esc(at)}〜）　<a href="${WEIBO_SECRET_URL}" target="_blank" rel="noopener">更新する</a>`;
+  if (at) $('#newsAlert').innerHTML = `<a href="${WEIBO_SECRET_URL}" target="_blank" rel="noopener">cookie再設定</a>`;
 }
 function renderNewsList(){
   renderNewsAlert();
