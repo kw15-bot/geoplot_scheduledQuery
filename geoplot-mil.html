@@ -3177,7 +3177,7 @@ function registerNewsForNotifications(state){
   if (wbAt && !seenNewsIds.has('weibo-auth:' + wbAt)){
     seenNewsIds.add('weibo-auth:' + wbAt);
     pendingNotifications.set('news:weibo-auth:' + wbAt, {
-      key: 'news:weibo-auth:' + wbAt, kind: 'news', title: '微博の cookie が切れました。取り直して Secret WEIBO_COOKIE を更新してください',
+      key: 'news:weibo-auth:' + wbAt, kind: 'news', title: '微博のcookie切れ',
       url: WEIBO_SECRET_URL, bureau: '東部戦区 微博（収集の状態）', date: wbAt,
     });
     addedAny = true;
@@ -3219,8 +3219,8 @@ function renderNewsAlert(){
   const wb = newsState && newsState.sources && newsState.sources.weibo;
   const at = wb && wb.auth_error_at;
   $('#newsAlert').style.display = at ? '' : 'none';
-  if (at) $('#newsAlert').innerHTML = `微博のログイン（cookie）が切れています（${esc(at)} から）。東部戦区の微博の新しい投稿を集められません。
-    PCのブラウザで微博にログインして cookie を取り直し、<a href="${WEIBO_SECRET_URL}" target="_blank" rel="noopener">GitHub の Secret WEIBO_COOKIE</a> の値を書き換えてください。`;
+  // v4.8.0: 文は短く(ユーザー指示)。リンク先は Secret の設定画面
+  if (at) $('#newsAlert').innerHTML = `微博のcookie切れ（${esc(at)}〜）　<a href="${WEIBO_SECRET_URL}" target="_blank" rel="noopener">更新する</a>`;
 }
 function renderNewsList(){
   renderNewsAlert();
