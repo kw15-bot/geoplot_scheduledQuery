@@ -4,6 +4,7 @@ name: News collect
 # ビューアはこれを10分おきに読み、まだ見ていない投稿を🔔通知に出す。
 #   中国海警局「海警要闻」 https://www.ccg.gov.cn/hjyw/
 #   台湾国防部 軍聞社「國防訊息」 https://mna.mnd.gov.tw/news/information/ (RSS から國防訊息だけ)
+#   解放军报(数字报)・东部战区の微博(Secret WEIBO_COOKIE。切れたらビューアに表示。取り直して Secret を更新する)
 # 2026-10-20: GitHub Actions の schedule は数時間あくこともあった(15分おきの指定が 07:41→15:01→20:33 等)ので外し、
 # NOTAM・航行警報と同じく外部の無料cronサービス(cron-job.org)から10分おきに workflow_dispatch を叩く運用にした
 # (HANDOFF_NOTAM.md §27.10)。手動実行も可。
@@ -57,6 +58,7 @@ jobs:
         env:
           BACKFILL: ${{ github.event.inputs.backfill }}
           PROBE: ${{ github.event.inputs.probe }}
+          WEIBO_COOKIE: ${{ secrets.WEIBO_COOKIE }}   # 2026-10-22: 东部战区の微博を読むための、ユーザーの微博アカウントの cookie
         run: |
           if [ -n "$PROBE" ]; then
             python news_collect.py --out-dir news_out --probe $PROBE
