@@ -760,6 +760,93 @@ def collect_weibo(state, now, get=None, cookie=None, accounts=None):
     return added, None
 
 
+# ----------------------------------------------------------------------------- 微博の写真(v4.11.0、2026-10-22)
+# 微博の写真(sinaimg.cn)は、ほかのサイトに埋め込むと読み込みを拒否される(ビューアで「写真を読み込めませんでした」)。
+# 収集のときに Referer: weibo.com を付けて読み、縮小して news_out/weibo_pics/<mid>.json に保存する(item に pics_file)。
+# 容量を抑えるため、1投稿 WEIBO_PICS_MAX 枚まで・横 WEIBO_PIC_W px まで。公開から WEIBO_PICS_KEEP_DAYS 日たった投稿の写真は消す
+# (消しても data ブランチの毎月の作り直しで履歴からも消えるので、容量は増え続けない)。
+WEIBO_PICS_DIR = "weibo_pics"
+WEIBO_PICS_MAX = 9
+WEIBO_PIC_W = 720
+WEIBO_PIC_QUALITY = 70
+WEIBO_PICS_PER_RUN = 15         # 1回の収集で写真を保存する投稿の数(新しい順)
+WEIBO_PICS_KEEP_DAYS = 60
+WEIBO_PICS_MAX_TRIES = 3
+
+
+def weibo_pic_url(url):
+    """写真の URL を、ほどよい大きさ(横 690px)のものに読み替える。"""
+    return re.sub(r"(sinaimg\.cn/)[^/]+/", r"\g<1>mw690/", url or "")
+
+
+def weibo_pic_data_uri(url, get_bytes=None):
+    raw, ctype = (get_bytes or _get_bytes)(weibo_pic_url(url), "https://weibo.com/")
+    try:
+        from PIL import Image
+        im = Image.open(io.BytesIO(raw)).convert("RGB")
+        if im.width > WEIBO_PIC_W:
+            im = im.resize((WEIBO_PIC_W, round(im.height * WEIBO_PIC_W / im.width)), Image.LANCZOS)
+        buf = io.BytesIO()
+        im.save(buf, "JPEG", quality=WEIBO_PIC_QUALITY, optimize=True)
+        raw, ctype = buf.getvalue(), "image/jpeg"
+    except ImportError:
+        if len(raw) > 300_000:
+            raise ValueError("写真が大きすぎる(Pillow が無いので縮小できない)")
+    except OSError as e:
+        raise ValueError(f"写真を読めない: {e}")
+    if not ctype.startswith("image/"):
+        raise ValueError(f"写真ではない応答({ctype})")
+    return f"data:{ctype};base64," + base64.b64encode(raw).decode("ascii")
+
+
+def collect_weibo_pics(state, out, now, get_bytes=None):
+    """写真のある微博の投稿について、写真を保存する(新しい順に WEIBO_PICS_PER_RUN 件まで)。古い投稿の写真は消す。
+    {"saved": 保存した投稿数, "removed": 消した数, "errors": [...]} を返す。"""
+    today = now[:10]
+    limit = (dt.date.fromisoformat(today) - dt.timedelta(days=WEIBO_PICS_KEEP_DAYS)).isoformat()
+    items = [it for it in state["items"] if it.get("source") == "weibo"]
+    res = {"saved": 0, "removed": 0, "errors": []}
+    for it in items:                                   # 古い投稿の写真を消す
+        if it.get("pics_file") and str(it.get("published") or "")[:10] < limit:
+            (out / it["pics_file"]).unlink(missing_ok=True)
+            it.pop("pics_file")
+            it["pics_expired"] = True
+            res["removed"] += 1
+    keep = {it["pics_file"] for it in items if it.get("pics_file")}
+    pdir = out / WEIBO_PICS_DIR
+    if pdir.exists():                                  # どの投稿からも指されていないファイルも消す
+        for f in pdir.glob("*.json"):
+            if f"{WEIBO_PICS_DIR}/{f.name}" not in keep:
+                f.unlink()
+                res["removed"] += 1
+    todo = [it for it in items if it.get("pics") and not it.get("pics_file") and not it.get("pics_expired")
+            and str(it.get("published") or "")[:10] >= limit
+            and (it.get("pics_tries", 0) < WEIBO_PICS_MAX_TRIES or it.get("pics_last_try") != today)]
+    todo.sort(key=lambda it: it.get("published") or "", reverse=True)
+    for it in todo[:WEIBO_PICS_PER_RUN]:
+        data, errs = [], []
+        for p in it["pics"][:WEIBO_PICS_MAX]:
+            try:
+                data.append(weibo_pic_data_uri(p.get("src") or p.get("thumb"), get_bytes))
+            except (urllib.error.URLError, OSError, ValueError) as e:
+                data.append(None)
+                errs.append(f"{type(e).__name__}: {e}")
+        if not any(data):
+            it["pics_tries"] = it.get("pics_tries", 0) + 1
+            it["pics_last_try"] = today
+            res["errors"].append(f"{it['id']}: {errs[0] if errs else '写真なし'}")
+            continue
+        name = f"{WEIBO_PICS_DIR}/{re.sub(r'[^A-Za-z0-9_-]', '_', it['mid'])}.json"
+        pdir.mkdir(parents=True, exist_ok=True)
+        (out / name).write_text(json.dumps({"id": it["id"], "pics": data, "fetched_at": now}, ensure_ascii=False) + "\n",
+                                encoding="utf-8")
+        it["pics_file"] = name
+        it.pop("pics_tries", None)
+        it.pop("pics_last_try", None)
+        res["saved"] += 1
+    return res
+
+
 # ----------------------------------------------------------------------------- 本体
 OLD_POST_DAYS = 7
 
@@ -953,6 +1040,9 @@ def main(argv=None):
             print(f"[WARN] weibo: {err}", file=sys.stderr)
     if not a.fixture_dir and not a.no_articles:
         summary["articles"] = collect_articles(state, out, now)
+        summary["weibo_pics"] = collect_weibo_pics(state, out, now)
+        if summary["weibo_pics"]["errors"]:
+            print(f"[WARN] weibo pics: {'; '.join(summary['weibo_pics']['errors'][:3])}", file=sys.stderr)
     out.mkdir(parents=True, exist_ok=True)
     text = json.dumps(state, ensure_ascii=False, indent=1, sort_keys=True) + "\n"
     if not path.exists() or path.read_text(encoding="utf-8") != text:
