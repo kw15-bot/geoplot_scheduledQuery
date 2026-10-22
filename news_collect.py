@@ -25,7 +25,7 @@ notify=true を付ける。ビューアは notify のものだけを🔔に出�
             1日分を news_out/jfjb/YYYY-MM-DD.json(版ごとに記事の本文まで)に、日ごとの版の一覧を news_out/jfjb/index.json に書く。
             記事数が多い(1日60本前後)ので news.json の items には入れない(通知の規則 JFJB_NOTIFY に当たったものだけ入れる)。
   weibo     东部战区の微博 https://weibo.com/u/7483054836(2026-10-22〜)。投稿一覧はログインが要るので、ユーザーの微博アカウントの
-            cookie を GitHub Secret WEIBO_COOKIE で渡す(環境変数)。投稿は全部 items に入れ、WEIBO_NOTIFY の語句に当たるものだけ通知
+            cookie を GitHub Secret WEIBO_COOKIE で渡す(環境変数)。投稿は全部 items に入れ、WEIBO_RULES の条件に当たるものだけ通知
             (毎日の定時の投稿 WEIBO_EXCLUDE は除く)。cookie が切れたら sources.weibo.auth_error_at に日付を書く(ビューアが表示する)。
 
 出力: news_out/news.json(リポジトリには暗号化した news_out/news.json.enc だけを置く。data_crypt.py)
@@ -120,7 +120,16 @@ WEIBO_ACCOUNTS = [
 ]
 WEIBO_LIST = "https://weibo.com/ajax/statuses/mymblog?uid={uid}&page=1&feature=0"
 WEIBO_LONGTEXT = "https://weibo.com/ajax/statuses/longtext?id={mid}"
-WEIBO_NOTIFY = [r"演习", r"联合", r"台岛", r"台湾", r"海峡", r"战备警巡", r"正义使命", r"海峡雷霆"]   # ユーザー確認済み(2026-10-22)
+# 2026-10-22 見直し(ユーザー確認済み): 過去7回の演習(2022-08・联合利剑 2023/2024A/2024B・2025-04-01・海峡雷霆-2025A・
+# 正义使命-2025)の最初の発表は、どれも「东部战区新闻发言人」+ 場所(台岛周边・台湾海峡・台岛〇部)+ 行為(演习・演练・演训・
+# 军事行动・战备警巡)を含む。単独の「联合」「台湾」「海峡」は央视军事で誤通知が多かったのでやめ、組み合わせにした。
+# (名前, [すべてに当たること]) のどれかに当たれば通知。過去7回の発表はすべて当たり、2026-10-22 時点の44件では誤通知0。
+WEIBO_ACTION = r"演习|演练|演训|军事行动|战备警巡|封控|抵近台岛"
+WEIBO_RULES = [
+    ("演习代号", [r"联合利剑|海峡雷霆|正义使命"]),
+    ("发言人+演习", [r"东部战区新闻发言人", WEIBO_ACTION]),
+    ("台岛周边+演习", [r"台岛|台湾海峡|台海", WEIBO_ACTION]),
+]
 WEIBO_EXCLUDE = [r"#东部熄灯号#", r"#直击东部战区练兵备战现场#"]   # 毎日の定時の投稿は通知しない
 
 
@@ -715,7 +724,11 @@ def parse_weibo_post(s, acct=None):
 def weibo_notify(text):
     if any(re.search(rx, text or "") for rx in WEIBO_EXCLUDE):
         return None
-    return notify_match(text, WEIBO_NOTIFY)
+    for name, rxs in WEIBO_RULES:
+        if all(re.search(rx, text or "") for rx in rxs):
+            m = re.search(rxs[0], text)
+            return f"{name}({m.group(0)})"
+    return None
 
 
 def collect_weibo(state, now, get=None, cookie=None, accounts=None):
@@ -727,6 +740,11 @@ def collect_weibo(state, now, get=None, cookie=None, accounts=None):
     meta = state["sources"].setdefault("weibo", {})
     meta["name"] = WEIBO_NAME
     meta["pages"] = {a["page"]: {"name": f"{a['name']} 微博", "url": f"https://weibo.com/u/{a['uid']}"} for a in WEIBO_ACCOUNTS}
+    # 通知の条件を変えたときに、保存済みの投稿も今の条件で判定し直す(前の条件で当たっただけの投稿は通知対象から外す)
+    for it in state["items"]:
+        if it.get("source") == "weibo":
+            hit = weibo_notify((it.get("text") or "") + " " + (it.get("retweet") or ""))
+            it.update({"notify": bool(hit), "matched": hit})
     added, errors = 0, []
     try:
         if not cookie:

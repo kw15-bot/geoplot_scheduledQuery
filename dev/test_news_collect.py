@@ -185,13 +185,26 @@ class News(unittest.TestCase):
         self.assertNotIn("\u200b", a["text"])
         self.assertFalse(a["notify"])                      # 「联合」があっても定時の投稿(#直击…#)は通知しない
         self.assertFalse(b["notify"])                      # #东部熄灯号# も
-        self.assertEqual((c["notify"], c["matched"], c["video"]), (True, "演习", True))
+        self.assertEqual((c["notify"], c["matched"], c["video"]), (True, "演习代号(正义使命)", True))
         self.assertEqual(c["title"], "【东部战区新闻发言人发布】")
         self.assertEqual(c["pics"], [{"src": "https://wx3.sinaimg.cn/orj480/006cover.jpg",
                                       "thumb": "https://wx3.sinaimg.cn/orj480/006cover.jpg", "cover": True}])   # 動画は表紙を写真に
         self.assertEqual(N.weibo_pic_url(c["pics"][0]["src"]), "https://wx3.sinaimg.cn/mw690/006cover.jpg")
         st = self.state()["sources"]["weibo"]
         self.assertIsNone(st["auth_error_at"])
+
+    def test_weibo_rules(self):
+        # 過去の演習の最初の発表(東部戦区新聞発言人)はすべて当たる
+        for t in ["东部战区新闻发言人施毅陆军大校表示，8月2日晚开始，中国人民解放军东部战区将在台岛周边开展一系列联合军事行动",
+                  "东部战区新闻发言人施毅陆军大校表示，4月1日开始，中国人民解放军东部战区组织陆军、海军、空军、火箭军等兵力，位台岛周边组织舰机多向抵近台岛",
+                  "东部战区新闻发言人施毅陆军大校表示，4月2日，中国人民解放军东部战区位台湾海峡中部、南部相关海域组织“海峡雷霆-2025A”演练",
+                  "东部战区新闻发言人李熹海军大校表示，5月23日至24日，…位台岛周边开展“联合利剑—2024A”演习"]:
+            self.assertIsNotNone(N.weibo_notify(t), t)
+        # 2026-10-21〜22 に央视军事で誤って当たっていた投稿は当たらない
+        for t in ["【#大八轮战车亮相中巴联合训练#】中国和巴基斯坦“喀喇昆仑-2026”陆军联合训练转入分段演练阶段",
+                  "【航行警告！#东海海域军事演习#】据中国海事局网站消息，宁波海事局发布航行警告",
+                  "#AI长征新唱三军会师尽开颜#【#AI歌曲长征新唱#第14集】1936年10月，红一、红二、红四方面军"]:
+            self.assertIsNone(N.weibo_notify(t), t)
 
     def test_weibo_auth_error(self):
         state = {"sources": {}, "items": []}
