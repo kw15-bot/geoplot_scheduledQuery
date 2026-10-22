@@ -1027,7 +1027,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.1.0';
+const APP_VERSION = 'v5.1.1';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1127,6 +1127,7 @@ const APP_VERSION = 'v5.1.0';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.1.1: 「〜取得できていません」は、最後に読めてから1日以上たったときだけ出す
 // v5.1.0: 報道のタブを1段に戻す(國防訊息・海警要闻・维权执法・解放军报・微博)。微博はアカウントで分けない(ユーザー指示)
 // v5.0.3: 微博の一覧は投稿ごとに枠(カード)で区切る(区切りが分かりにくかった)
 // v5.0.2: 微博の動画の投稿は表紙の画像を写真として出す(収集側。央视军事は動画が多い)
@@ -3212,6 +3213,7 @@ function newsUrlFromNotamUrl(u){ return String(u).replace(/notam_out\/[^?#]*/, '
 // 報道タブ(v4.1.0)。news.json の全投稿を、元サイトの一覧に近い見た目で並べる
 let newsState = null;
 let newsTab = 'mna';
+const NEWS_ERR_SHOW_MS = 24 * 3600 * 1000;
 const NEWS_PAGE_NAMES = { ccg_hjyw: '中国海警局 海警要闻', ccg_wqzf: '中国海警局 维权执法', mna: '國防部 軍聞社 國防訊息', jfjb: '解放军报', weibo_dbzq: '东部战区 微博', weibo_ysjs: '央视军事 微博' };
 function newsPageOf(it){ return it.page || (it.source === 'mna' ? 'mna' : 'ccg_hjyw'); }
 // 軍聞社の日付は元サイトと同じ「民國115年10月04日」(西暦-1911)
@@ -3259,9 +3261,14 @@ function renderNewsList(){
   // v5.1.0: 微博はアカウントを分けずに1つのタブ(どのアカウントかは投稿の頭に出る)
   const shown = items.filter(it => newsTab === 'weibo' ? it.source === 'weibo' : newsPageOf(it) === newsTab);
   $('#newsEmptyHint').style.display = shown.length ? 'none' : 'block';
-  // 取得に失敗しているサイトがあれば一行で知らせる(中国海警局はファイアウォールで拒否されることが多い)
+  // 取得に失敗しているサイトがあれば一行で知らせる(中国海警局はファイアウォールで拒否されることが多い)。
+  // v5.1.1: 一時的に弾かれるのはよくあるので、最後に読めてから1日(NEWS_ERR_SHOW_MS)以上たったときだけ出す(ユーザー指示)
   const srcs = (newsState && newsState.sources) || {};
-  const errs = Object.entries(srcs).filter(([k, v]) => v && v.last_error && !(k === 'weibo' && v.auth_error_at)).map(([k, v]) => `${v.name || k}: ${v.last_error_at || ''} 以降、取得できていません`);
+  const errs = Object.entries(srcs).filter(([k, v]) => v && v.last_error && !(k === 'weibo' && v.auth_error_at)).map(([k, v]) => {
+    const since = v.last_ok_at || v.error_since || (v.last_error_at ? v.last_error_at + 'T00:00:00+08:00' : '');
+    if (!since || Date.now() - Date.parse(since) < NEWS_ERR_SHOW_MS) return '';
+    return `${v.name || k}: 1日以上取得できていません${v.last_ok_at ? `（最後に取得できたのは ${newsJst(v.last_ok_at)} JST）` : ''}`;
+  }).filter(Boolean);
   $('#newsStatus').textContent = errs.join(' ／ ');
   $('#newsList').innerHTML = shown.map(it => {
     const site = '';
