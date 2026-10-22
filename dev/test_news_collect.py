@@ -187,6 +187,9 @@ class News(unittest.TestCase):
         self.assertFalse(b["notify"])                      # #东部熄灯号# も
         self.assertEqual((c["notify"], c["matched"], c["video"]), (True, "演习", True))
         self.assertEqual(c["title"], "【东部战区新闻发言人发布】")
+        self.assertEqual(c["pics"], [{"src": "https://wx3.sinaimg.cn/orj480/006cover.jpg",
+                                      "thumb": "https://wx3.sinaimg.cn/orj480/006cover.jpg", "cover": True}])   # 動画は表紙を写真に
+        self.assertEqual(N.weibo_pic_url(c["pics"][0]["src"]), "https://wx3.sinaimg.cn/mw690/006cover.jpg")
         st = self.state()["sources"]["weibo"]
         self.assertIsNone(st["auth_error_at"])
 

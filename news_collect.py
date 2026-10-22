@@ -694,6 +694,13 @@ def parse_weibo_post(s, acct=None):
         thumb = (inf.get("bmiddle") or inf.get("large") or {}).get("url") or big
         pics.append({"src": big, "thumb": thumb})
     pinfo = s.get("page_info") or {}
+    if not pics and pinfo.get("object_type") == "video":
+        # 動画の投稿は表紙の画像を写真として扱う(v5.0.2。央视军事は動画の投稿が多い)。page_pic は文字列か {"url": …}
+        cover = pinfo.get("page_pic")
+        cover = cover.get("url") if isinstance(cover, dict) else cover
+        cover = cover or ((pinfo.get("media_info") or {}).get("big_pic_info") or {}).get("pic_big", {}).get("url")
+        if cover:
+            pics.append({"src": cover, "thumb": cover, "cover": True})
     rt = s.get("retweeted_status") or {}
     first = re.sub(r"\s+", " ", text.split("\n")[0]).strip()
     acct = acct or WEIBO_ACCOUNTS[0]
@@ -760,7 +767,7 @@ def collect_weibo(state, now, get=None, cookie=None, accounts=None):
     return added, None
 
 
-# ----------------------------------------------------------------------------- 微博の写真(v5.0.1、2026-10-22)
+# ----------------------------------------------------------------------------- 微博の写真(v5.0.1、2026-10-22。v5.0.2 から動画の投稿は表紙の画像も)
 # 微博の写真(sinaimg.cn)は、ほかのサイトに埋め込むと読み込みを拒否される(ビューアで「写真を読み込めませんでした」)。
 # 収集のときに Referer: weibo.com を付けて読み、縮小して news_out/weibo_pics/<mid>.json に保存する(item に pics_file)。
 # 容量を抑えるため、1投稿 WEIBO_PICS_MAX 枚まで・横 WEIBO_PIC_W px まで。公開から WEIBO_PICS_KEEP_DAYS 日たった投稿の写真は消す
@@ -780,7 +787,13 @@ def weibo_pic_url(url):
 
 
 def weibo_pic_data_uri(url, get_bytes=None):
-    raw, ctype = (get_bytes or _get_bytes)(weibo_pic_url(url), "https://weibo.com/")
+    get_bytes = get_bytes or _get_bytes
+    try:
+        raw, ctype = get_bytes(weibo_pic_url(url), "https://weibo.com/")
+    except (urllib.error.URLError, OSError):
+        if weibo_pic_url(url) == url:
+            raise
+        raw, ctype = get_bytes(url, "https://weibo.com/")     # mw690 が無い画像(動画の表紙など)は元の URL で
     try:
         from PIL import Image
         im = Image.open(io.BytesIO(raw)).convert("RGB")
