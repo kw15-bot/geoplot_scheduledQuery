@@ -568,6 +568,15 @@ body.dark-mode .news-item.mna .news-title{color:#7fb2ec;}
 .news-flag{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--red);margin-right:7px;vertical-align:1px;}   /* v4.3.1: 「通知対象」の文字をやめて赤丸に */
 .news-status{font-size:10.5px;color:var(--text-faint);margin:-4px 0 6px;}
 /* v4.5.0: 解放军报(数字报の「版面目录」「第01版：要闻」の見た目に寄せる) */
+.news-alert{background:#fdecea;color:#a61b1b;border:1px solid #f1b8b5;border-radius:6px;padding:8px 10px;font-size:12px;line-height:1.6;margin-bottom:8px;}
+.news-alert a{color:#a61b1b;font-weight:700;}
+.news-item.weibo .wb-head{display:flex;justify-content:space-between;gap:8px;align-items:baseline;}
+.news-item.weibo .wb-name{font-weight:700;font-size:12.5px;color:var(--text);}
+.news-item.weibo .wb-text{white-space:pre-wrap;font-size:12.5px;line-height:1.75;color:var(--text);margin-top:3px;word-break:break-word;}
+.news-item.weibo .wb-rt{white-space:pre-wrap;font-size:11.5px;line-height:1.6;color:var(--text-dim);background:var(--panel-alt);border-radius:4px;padding:5px 8px;margin-top:4px;}
+.news-item.weibo .wb-pics{display:grid;grid-template-columns:repeat(auto-fill,minmax(88px,1fr));gap:4px;margin-top:6px;max-width:420px;}
+.news-item.weibo .wb-pics img{width:100%;height:88px;object-fit:cover;display:block;background:var(--panel-alt);}
+.news-item.weibo .wb-video{display:inline-block;font-size:10.5px;color:var(--text-faint);border:1px solid var(--border);border-radius:3px;padding:0 5px;margin-top:5px;}
 .jfjb-head{display:flex;gap:6px;align-items:center;margin-bottom:8px;}
 .jfjb-head select{flex:1;min-width:0;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-size:12px;padding:5px 6px;}
 .jfjb-pages{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px;}
@@ -817,8 +826,10 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
         <button class="tab-btn" data-tab="ccg_hjyw">海警要闻 <span class="tab-n" id="newsCountHjyw">0</span></button>
         <button class="tab-btn" data-tab="ccg_wqzf">维权执法 <span class="tab-n" id="newsCountWqzf">0</span></button>
         <button class="tab-btn" data-tab="mna">國防訊息 <span class="tab-n" id="newsCountMna">0</span></button>
+        <button class="tab-btn" data-tab="weibo_dbzq">东部战区 微博 <span class="tab-n" id="newsCountWeibo">0</span></button>
         <button class="tab-btn" data-tab="jfjb">解放军报 <span class="tab-n" id="newsCountJfjb">0</span></button>
       </div>
+      <div class="news-alert" id="newsAlert" style="display:none;"></div>
       <div class="news-status" id="newsStatus"></div>
       <div id="newsList"></div>
       <!-- v4.5.0: 解放军报。日付 → 版(版面目录) → 記事。記事を押すと全文(news_out/jfjb/<日付>.json に保存済み) -->
@@ -981,7 +992,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.5.1';
+const APP_VERSION = 'v4.6.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1071,6 +1082,7 @@ const APP_VERSION = 'v4.5.1';
 // v4.4.5: NOTAM のタブの「(Beta)」を外した(ユーザー指示)。報道は「報道(Beta)」のまま。
 // v4.5.0: 報道に「解放军报」(数字报)。日付と版を選んで記事を読む(紙面と同じ構成)。news_out/jfjb/(news_collect.py)
 // v4.5.1: 解放军报の写真と版面の画像を出す(保存はせず、元のサイト rmt-static-publish.81.cn から直接読む。Referer は送らない)
+// v4.6.0: 東部戦区の微博。投稿は全部一覧に出し、語句に当たるものだけ🔔。cookie が切れたら報道の画面の上と🔔で知らせる
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3126,6 +3138,16 @@ function registerNewsForNotifications(state){
   });
   firstPages.forEach(pg => seenNewsPages.add(pg));
   newsNotifBaselined = true;
+  // v4.6.0: 微博の cookie 切れも🔔に1回出す(切れた日ごとに1件)
+  const wbAt = sources.weibo && sources.weibo.auth_error_at;
+  if (wbAt && !seenNewsIds.has('weibo-auth:' + wbAt)){
+    seenNewsIds.add('weibo-auth:' + wbAt);
+    pendingNotifications.set('news:weibo-auth:' + wbAt, {
+      key: 'news:weibo-auth:' + wbAt, kind: 'news', title: '微博の cookie が切れました。取り直して Secret WEIBO_COOKIE を更新してください',
+      url: WEIBO_SECRET_URL, bureau: '東部戦区 微博（収集の状態）', date: wbAt,
+    });
+    addedAny = true;
+  }
   if (addedAny) renderNotifPanel();
   persistNotificationState();
   updateNotifBadge();
@@ -3137,7 +3159,7 @@ function newsUrlFromNotamUrl(u){ return String(u).replace(/notam_out\/[^?#]*/, '
 // 報道タブ(v4.1.0)。news.json の全投稿を、元サイトの一覧に近い見た目で並べる
 let newsState = null;
 let newsTab = 'all';
-const NEWS_PAGE_NAMES = { ccg_hjyw: '中国海警局 海警要闻', ccg_wqzf: '中国海警局 维权执法', mna: '國防部 軍聞社 國防訊息', jfjb: '解放军报' };
+const NEWS_PAGE_NAMES = { ccg_hjyw: '中国海警局 海警要闻', ccg_wqzf: '中国海警局 维权执法', mna: '國防部 軍聞社 國防訊息', jfjb: '解放军报', weibo_dbzq: '东部战区 微博' };
 function newsPageOf(it){ return it.page || (it.source === 'mna' ? 'mna' : 'ccg_hjyw'); }
 // 軍聞社の日付は元サイトと同じ「民國115年10月04日」(西暦-1911)
 function newsMinguoDate(pub){
@@ -3157,7 +3179,17 @@ function newsJst(pub){
   const p2 = n => String(n).padStart(2, '0');
   return `${t.getUTCFullYear()}-${p2(t.getUTCMonth() + 1)}-${p2(t.getUTCDate())} ${p2(t.getUTCHours())}:${p2(t.getUTCMinutes())}`;
 }
+// v4.6.0: 微博の cookie 切れ(収集側が sources.weibo.auth_error_at に日付を書く)を、報道の画面の上に出す
+const WEIBO_SECRET_URL = 'https://github.com/kw15-bot/geoplot_scheduledQuery/settings/secrets/actions';
+function renderNewsAlert(){
+  const wb = newsState && newsState.sources && newsState.sources.weibo;
+  const at = wb && wb.auth_error_at;
+  $('#newsAlert').style.display = at ? '' : 'none';
+  if (at) $('#newsAlert').innerHTML = `微博のログイン（cookie）が切れています（${esc(at)} から）。東部戦区の微博の新しい投稿を集められません。
+    PCのブラウザで微博にログインして cookie を取り直し、<a href="${WEIBO_SECRET_URL}" target="_blank" rel="noopener">GitHub の Secret WEIBO_COOKIE</a> の値を書き換えてください。`;
+}
 function renderNewsList(){
+  renderNewsAlert();
   const isJfjb = newsTab === 'jfjb';
   $('#jfjbView').style.display = isJfjb ? '' : 'none';
   $('#newsList').style.display = isJfjb ? 'none' : '';
@@ -3171,11 +3203,12 @@ function renderNewsList(){
   $('#newsCountHjyw').textContent = count('ccg_hjyw');
   $('#newsCountWqzf').textContent = count('ccg_wqzf');
   $('#newsCountMna').textContent = count('mna');
+  $('#newsCountWeibo').textContent = count('weibo_dbzq');
   const shown = newsTab === 'all' ? items : items.filter(it => newsPageOf(it) === newsTab);
   $('#newsEmptyHint').style.display = shown.length ? 'none' : 'block';
   // 取得に失敗しているサイトがあれば一行で知らせる(中国海警局はファイアウォールで拒否されることが多い)
   const srcs = (newsState && newsState.sources) || {};
-  const errs = Object.entries(srcs).filter(([, v]) => v && v.last_error).map(([k, v]) => `${v.name || k}: ${v.last_error_at || ''} 以降、取得できていません`);
+  const errs = Object.entries(srcs).filter(([k, v]) => v && v.last_error && !(k === 'weibo' && v.auth_error_at)).map(([k, v]) => `${v.name || k}: ${v.last_error_at || ''} 以降、取得できていません`);
   $('#newsStatus').textContent = errs.join(' ／ ');
   $('#newsList').innerHTML = shown.map(it => {
     const pg = newsPageOf(it), site = newsTab === 'all' ? `<div class="news-site">${esc(NEWS_PAGE_NAMES[pg] || pg)}</div>` : '';
@@ -3184,6 +3217,15 @@ function renderNewsList(){
     // v4.4.0: 記事の写しがあれば、押すと写しを開く(元サイトへは写しの上のボタンから)。無ければ今までどおり元サイトを開く
     const open = it.article ? `href="${href}" data-article="${esc(it.id)}"` : `href="${href}" target="_blank" rel="noopener"`;
     const copy = it.article ? '<span class="news-copy-mark" title="記事を保存済み(元のサイトに入れなくても読める・PDFにできる)">PDF</span>' : '';
+    if (it.source === 'weibo'){
+      const pics = (it.pics || []).map(p => `<img src="${esc(p.thumb || p.src)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.style.visibility='hidden'">`).join('');
+      return `<a class="news-item weibo" href="${href}" target="_blank" rel="noopener noreferrer">${site}
+        <div class="wb-head"><span class="wb-name">${flag}东部战区</span><span class="news-date" title="微博の投稿日時(日本時間。元は北京時間 ${esc(newsLocalTime(it.published))})">${esc(newsJst(it.published))} JST</span></div>
+        <div class="wb-text">${esc(it.text || it.title)}</div>
+        ${it.retweet ? `<div class="wb-rt">${esc(it.retweet)}</div>` : ''}
+        ${pics ? `<div class="wb-pics">${pics}</div>` : ''}
+        ${it.video ? '<span class="wb-video">動画あり（元の投稿で見る）</span>' : ''}</a>`;
+    }
     if (it.source === 'mna'){
       return `<a class="news-item mna" ${open}>${site}
         <div class="news-row"><div class="news-title">${flag}${esc(it.title)}${copy}</div><div class="news-date" title="軍聞社の公開日時(日本時間。元は台湾時間 ${esc(newsLocalTime(it.published))})">${esc(newsJst(it.published))} JST</div></div>

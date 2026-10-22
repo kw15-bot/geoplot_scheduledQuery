@@ -29,6 +29,7 @@ import news_collect as N
 
 JST = dt.timezone(dt.timedelta(hours=9))
 PAGE_NAMES = {pg["page"]: pg["name"] for src in N.SOURCES.values() for pg in src["pages"]}
+PAGE_NAMES.update({"weibo_dbzq": N.WEIBO_NAME, "jfjb": N.JFJB_NAME})
 
 
 def _ts(s):
@@ -49,15 +50,19 @@ def copy_state(it):
 
 def jfjb_check(state, out_dir, now):
     """解放军报の直近7日。(行のリスト, 要確認の文のリスト)。"""
+    odd = []
+    wb = (state.get("sources") or {}).get("weibo") or {}
+    if wb.get("auth_error_at"):                                   # 2026-10-22: 微博の cookie 切れ
+        odd.append(f"微博のcookieが {wb['auth_error_at']} から切れている(取り直して Secret WEIBO_COOKIE を更新)")
     meta = (state.get("sources") or {}).get("jfjb")
     if not meta:
-        return [], []
+        return [], odd
     p = Path(out_dir) / N.JFJB_DIR / "index.json"
     index = json.loads(p.read_text(encoding="utf-8")) if p.exists() else {"days": {}}
     days = meta.get("days") or {}
     newest = index.get("newest") or ""
     today = (now + dt.timedelta(hours=8)).date()                  # 北京時間
-    rows, odd = [], []
+    rows = []
     for k in range(7):
         ds = (today - dt.timedelta(days=k)).isoformat()
         pages = (index["days"].get(ds) or {}).get("pages") or []
@@ -90,7 +95,7 @@ def run(state, now):
         fs = _ts(it.get("first_seen"))
         if fs and now - fs <= dt.timedelta(hours=24) and not it.get("backfilled"):
             out["new"].append(it)
-            if not it.get("article"):
+            if not it.get("article") and it.get("source") in ("ccg", "mna"):     # 微博は写しを作らない(本文を items に持つ)
                 out["no_copy_new"].append(it)
         if not it.get("backfilled") and it.get("first_seen") and N.is_old_post(it, it["first_seen"]):
             out["odd"].append(("見つけた時点で古い投稿なのに新着扱い(通知の対象になりうる)", it))
@@ -118,7 +123,7 @@ def render(r, now):
     for it in sorted(r["new"], key=lambda i: str(i.get("published") or ""), reverse=True):
         mark = "🔔 " if it.get("notify") else ""
         o.append(f"- {mark}[{PAGE_NAMES.get(it.get('page'), it.get('page'))}] {str(it.get('published') or '')[:16].replace('T', ' ')} "
-                 f"{it.get('title')}（写し: {copy_state(it)}）")
+                 f"{it.get('title')}" + (f"（写し: {copy_state(it)}）" if it.get("source") in ("ccg", "mna") else ""))
     if r.get("jfjb_rows"):
         o += ["", "## 解放军报(直近7日、北京時間の日付)", ""] + r["jfjb_rows"]
     o += ["", "## 記事の写し(PDF)", ""]

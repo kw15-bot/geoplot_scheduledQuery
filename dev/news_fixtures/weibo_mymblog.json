@@ -1,0 +1,44 @@
+{
+ "ok": 1,
+ "data": {
+  "since_id": "x",
+  "list": [
+   {
+    "created_at": "Tue Oct 20 08:00:00 +0800 2026",
+    "mblogid": "RnuVx14YM",
+    "idstr": "5221",
+    "text_raw": "#直击东部战区练兵备战现场# 【#陌生岛屿起降锤炼实战硬功# 】近日，东部战区海军某部组织开展联合训练。​​​",
+    "pic_ids": [
+     "006abc"
+    ],
+    "pic_infos": {
+     "006abc": {
+      "bmiddle": {
+       "url": "https://wx1.sinaimg.cn/bmiddle/006abc.jpg"
+      },
+      "large": {
+       "url": "https://wx1.sinaimg.cn/large/006abc.jpg"
+      },
+      "largest": {
+       "url": "https://wx1.sinaimg.cn/large/006abc.jpg"
+      }
+     }
+    }
+   },
+   {
+    "created_at": "Mon Oct 19 22:00:00 +0800 2026",
+    "mblogid": "RnqZZlcES",
+    "text_raw": "#东部熄灯号#铁翼穿云磨利剑，长空练兵谋打赢。 #阅海峡# ​​​"
+   },
+   {
+    "created_at": "Mon Dec 29 07:30:00 +0800 2025",
+    "mblogid": "QzAAAAAAA",
+    "text_raw": "【东部战区新闻发言人发布】\n东部战区于12月29日起位台岛周边组织“正义使命-2025”演习…",
+    "isLongText": true,
+    "page_info": {
+     "object_type": "video"
+    }
+   }
+  ]
+ }
+}

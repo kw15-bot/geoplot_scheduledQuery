@@ -24,6 +24,9 @@ notify=true を付ける。ビューアは notify のものだけを🔔に出�
             直近 JFJB_RECHECK_DAYS 日で読めていない日・最新号でなくなってから読み直していない日も読む(取りこぼし防止)。
             1日分を news_out/jfjb/YYYY-MM-DD.json(版ごとに記事の本文まで)に、日ごとの版の一覧を news_out/jfjb/index.json に書く。
             記事数が多い(1日60本前後)ので news.json の items には入れない(通知の規則 JFJB_NOTIFY に当たったものだけ入れる)。
+  weibo     东部战区の微博 https://weibo.com/u/7483054836(2026-10-22〜)。投稿一覧はログインが要るので、ユーザーの微博アカウントの
+            cookie を GitHub Secret WEIBO_COOKIE で渡す(環境変数)。投稿は全部 items に入れ、WEIBO_NOTIFY の語句に当たるものだけ通知
+            (毎日の定時の投稿 WEIBO_EXCLUDE は除く)。cookie が切れたら sources.weibo.auth_error_at に日付を書く(ビューアが表示する)。
 
 出力: news_out/news.json(リポジトリには暗号化した news_out/news.json.enc だけを置く。data_crypt.py)
   {"sources": {id: {"name", "url", "last_ok_date", "last_error", "last_error_at"}},
@@ -49,6 +52,7 @@ import email.utils
 import html
 import io
 import json
+import os
 import re
 import sys
 import urllib.error
@@ -104,6 +108,14 @@ JFJB_BACKFILL_SECONDS = 20 * 60     # 遡りは1回の実行でこの時間ま�
 JFJB_DIR = "jfjb"
 JFJB_FORMAT = 2                     # 1日分のファイルの形。変えたら読み直す(2: 版面の画像 img を足した 2026-10-22)
 JFJB_NOTIFY = []                    # 通知する見出し(正規表現)。未定(2026-10-22)。当たった記事だけ news.json の items に入れる
+
+# 东部战区の微博(2026-10-22〜、ユーザー指示「一覧は全部、語句に合うものだけ通知」)
+WEIBO_UID = "7483054836"
+WEIBO_NAME = "东部战区 微博"
+WEIBO_LIST = "https://weibo.com/ajax/statuses/mymblog?uid={uid}&page=1&feature=0"
+WEIBO_LONGTEXT = "https://weibo.com/ajax/statuses/longtext?id={mid}"
+WEIBO_NOTIFY = [r"演习", r"联合", r"台岛", r"台湾", r"海峡", r"战备警巡", r"正义使命", r"海峡雷霆"]   # ユーザー確認済み(2026-10-22)
+WEIBO_EXCLUDE = [r"#东部熄灯号#", r"#直击东部战区练兵备战现场#"]   # 毎日の定時の投稿は通知しない
 
 
 def now_iso():
@@ -624,6 +636,104 @@ def collect_jfjb(state, out, now, backfill=False, get=None, newest=None, budget=
     return read, added, errors
 
 
+# ----------------------------------------------------------------------------- 东部战区の微博
+class WeiboAuthError(Exception):
+    """ログインが切れている(cookie 切れ)・cookie が無い。"""
+
+
+def _weibo_get(url, cookie):
+    xsrf = next((c.split("=", 1)[1] for c in cookie.split("; ") if c.startswith("XSRF-TOKEN=")), "")
+    headers = dict(HEADERS, **{"Accept": "application/json, text/plain, */*", "Referer": f"https://weibo.com/u/{WEIBO_UID}",
+                               "Cookie": cookie, "X-Requested-With": "XMLHttpRequest"}, **({"X-XSRF-TOKEN": xsrf} if xsrf else {}))
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=TIMEOUT) as r:
+            text = r.read().decode("utf-8", errors="replace")
+    except urllib.error.HTTPError as e:
+        if e.code in (401, 403):
+            raise WeiboAuthError(f"HTTP {e.code}") from e
+        raise
+    try:
+        data = json.loads(text)
+    except ValueError:
+        raise WeiboAuthError("JSON でない応答(ログイン画面に回された)") from None
+    if not data.get("ok"):
+        msg = str(data.get("message") or data.get("msg") or "")
+        if "登录" in msg or data.get("ok") == -100:
+            raise WeiboAuthError(msg or "ログインが必要")
+        raise ValueError(f"ok={data.get('ok')} {msg}")
+    return data
+
+
+def parse_weibo_post(s):
+    """mymblog の1投稿 → item。本文は text_raw(長い投稿は後で longtext に差し替える)。写真は URL だけ(ビューアが直接読む)。"""
+    mid = s.get("mblogid") or str(s.get("idstr") or s.get("id"))
+    text = (s.get("text_raw") or strip_tags(s.get("text") or "")).replace("\u200b", "").strip()
+    pub = dt.datetime.strptime(s["created_at"], "%a %b %d %H:%M:%S %z %Y").isoformat()
+    infos = s.get("pic_infos") or {}
+    pics = []
+    for pid in s.get("pic_ids") or []:
+        inf = infos.get(pid) or {}
+        big = (inf.get("largest") or inf.get("large") or inf.get("original") or {}).get("url") or f"https://wx1.sinaimg.cn/large/{pid}.jpg"
+        thumb = (inf.get("bmiddle") or inf.get("large") or {}).get("url") or big
+        pics.append({"src": big, "thumb": thumb})
+    pinfo = s.get("page_info") or {}
+    rt = s.get("retweeted_status") or {}
+    first = re.sub(r"\s+", " ", text.split("\n")[0]).strip()
+    return {"id": f"weibo:{mid}", "source": "weibo", "page": "weibo_dbzq", "mid": mid,
+            "title": first[:90] + ("…" if len(first) > 90 else ""), "text": text, "published": pub,
+            "url": f"https://weibo.com/{WEIBO_UID}/{mid}", "pics": pics,
+            "video": pinfo.get("object_type") == "video", "long": bool(s.get("isLongText")),
+            "retweet": (rt.get("text_raw") or "").strip()}
+
+
+def weibo_notify(text):
+    if any(re.search(rx, text or "") for rx in WEIBO_EXCLUDE):
+        return None
+    return notify_match(text, WEIBO_NOTIFY)
+
+
+def collect_weibo(state, now, get=None, cookie=None):
+    """东部战区の微博の最新の投稿(1ページ目、20件ほど)を読んで items に足す。(新しく足した数, エラー or None)。"""
+    cookie = (cookie if cookie is not None else os.environ.get("WEIBO_COOKIE", "")).strip()
+    get = get or (lambda url: _weibo_get(url, cookie))
+    meta = state["sources"].setdefault("weibo", {})
+    meta["name"] = WEIBO_NAME
+    meta["pages"] = {"weibo_dbzq": {"name": WEIBO_NAME, "url": f"https://weibo.com/u/{WEIBO_UID}"}}
+    try:
+        if not cookie:
+            raise WeiboAuthError("Secret WEIBO_COOKIE が設定されていない")
+        data = get(WEIBO_LIST.format(uid=WEIBO_UID))
+        posts = [parse_weibo_post(x) for x in (data.get("data") or {}).get("list") or []]
+        if not posts:
+            raise ValueError("投稿を1件も読み取れなかった")
+        known = {it["id"]: it for it in state["items"] if it.get("source") == "weibo"}
+        for p in posts:
+            old = known.get(p["id"])
+            if p["long"]:
+                if old and old.get("text_full"):
+                    p["text"], p["text_full"] = old["text"], True
+                else:
+                    try:
+                        full = (get(WEIBO_LONGTEXT.format(mid=p["mid"])).get("data") or {}).get("longTextContent")
+                        if full:
+                            p["text"], p["text_full"] = full.strip(), True
+                    except (urllib.error.URLError, OSError, ValueError) as e:
+                        print(f"[weibo] longtext {p['mid']}: {e}", file=sys.stderr)
+            hit = weibo_notify(p["text"] + " " + p["retweet"])
+            p.update({"notify": bool(hit), "matched": hit})
+        added = merge(state, "weibo", posts, now)
+        meta.update({"last_ok_date": now[:10], "last_error": None, "last_error_at": None, "auth_error_at": None})
+        return added, None
+    except WeiboAuthError as e:
+        err = f"ログインが切れている(cookie を取り直して Secret WEIBO_COOKIE を更新): {e}"
+        meta.update({"last_error": err, "last_error_at": now[:10], "auth_error_at": meta.get("auth_error_at") or now[:10]})
+        return 0, err
+    except (urllib.error.URLError, OSError, ValueError, KeyError) as e:
+        err = f"{type(e).__name__}: {e}"
+        meta.update({"last_error": err, "last_error_at": now[:10]})
+        return 0, err
+
+
 # ----------------------------------------------------------------------------- 本体
 OLD_POST_DAYS = 7
 
@@ -781,6 +891,11 @@ def main(argv=None):
             it["notify"], it["matched"] = bool(hit), hit
     if a.fixture_dir:
         fx = Path(a.fixture_dir)
+        if (fx / "weibo_mymblog.json").exists():
+            wb = json.loads((fx / "weibo_mymblog.json").read_text(encoding="utf-8"))
+            added, err = collect_weibo(state, now, get=lambda url: wb, cookie="SUB=fixture")
+            ok += err is None
+            summary["weibo"] = {"new": added, "error": err}
         if (fx / "jfjb_newest.json").exists():
             read, added, errs = collect_jfjb(state, out, now, get=lambda url: _fixture_json(fx, url))
             ok += bool(read)
@@ -791,6 +906,11 @@ def main(argv=None):
         summary["jfjb"] = {"days": read, "new": added, "error": "; ".join(errs) or None}
         if errs:
             print(f"[WARN] jfjb: {'; '.join(errs)}", file=sys.stderr)
+        added, err = collect_weibo(state, now)
+        ok += err is None
+        summary["weibo"] = {"new": added, "error": err}
+        if err:
+            print(f"[WARN] weibo: {err}", file=sys.stderr)
     if not a.fixture_dir and not a.no_articles:
         summary["articles"] = collect_articles(state, out, now)
     out.mkdir(parents=True, exist_ok=True)

@@ -54,7 +54,7 @@ class News(unittest.TestCase):
     def test_notify_rules(self):
         self.assertEqual(self.run_once(), 0)
         it = self.items()
-        on = {k for k, v in it.items() if v["notify"]}
+        on = {k for k, v in it.items() if v["notify"] and v["source"] in ("ccg", "mna")}
         self.assertEqual(on, {
             "ccg:20261010_3249",      # 维权执法: 在我钓鱼岛
             "ccg:20260929_3239",      # 维权执法: 金门
@@ -173,6 +173,32 @@ class News(unittest.TestCase):
             N.JFJB_NOTIFY = old
         it = self.items()["jfjb:2026-10-22_988842"]
         self.assertEqual((it["notify"], it["matched"], it["section"], it["published"]), (True, "东部战区", "第01版：要闻", "2026-10-22"))
+
+    def test_weibo(self):
+        self.run_once()
+        it = self.items()
+        a, b, c = it["weibo:RnuVx14YM"], it["weibo:RnqZZlcES"], it["weibo:QzAAAAAAA"]
+        self.assertEqual(a["published"], "2026-10-20T08:00:00+08:00")
+        self.assertEqual(a["url"], "https://weibo.com/7483054836/RnuVx14YM")
+        self.assertEqual(a["pics"], [{"src": "https://wx1.sinaimg.cn/large/006abc.jpg", "thumb": "https://wx1.sinaimg.cn/bmiddle/006abc.jpg"}])
+        self.assertNotIn("\u200b", a["text"])
+        self.assertFalse(a["notify"])                      # 「联合」があっても定時の投稿(#直击…#)は通知しない
+        self.assertFalse(b["notify"])                      # #东部熄灯号# も
+        self.assertEqual((c["notify"], c["matched"], c["video"]), (True, "演习", True))
+        self.assertEqual(c["title"], "【东部战区新闻发言人发布】")
+        st = self.state()["sources"]["weibo"]
+        self.assertIsNone(st["auth_error_at"])
+
+    def test_weibo_auth_error(self):
+        state = {"sources": {}, "items": []}
+        def deny(url):
+            raise N.WeiboAuthError("HTTP 403")
+        added, err = N.collect_weibo(state, "2026-10-22T01:00:00+00:00", get=deny, cookie="SUB=x")
+        self.assertEqual(added, 0)
+        self.assertIn("cookie", err)
+        self.assertEqual(state["sources"]["weibo"]["auth_error_at"], "2026-10-22")
+        _, err = N.collect_weibo(state, "2026-10-22T01:00:00+00:00", cookie="")   # Secret が無い
+        self.assertIn("WEIBO_COOKIE", err)
 
 
 class ArticleTest(unittest.TestCase):
