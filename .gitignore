@@ -1,0 +1,17 @@
+# data ブランチ: データだけを置く(HANDOFF_NOTAM.md §29)。コードは main から実行時に展開するので無視する
+/*
+!/.gitignore
+!/notam_out/
+!/msa_out/
+!/news_out/
+
+# 平文はコミットしない(暗号化した *.enc だけ。data_crypt.py)
+/notam_out/**/*.json
+/notam_out/**/*.geojson
+/notam_out/**/*.md
+/msa_out/**/*.json
+/msa_out/**/*.geojson
+/msa_out/**/*.md
+/news_out/**/*.json
+/news_out/**/*.md
+__pycache__/
