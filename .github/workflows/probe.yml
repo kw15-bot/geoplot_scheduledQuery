@@ -1,0 +1,27 @@
+name: Probe
+
+# 2026-10-22 調査用: URL を読んで、作り(HTML・JS・JSON の構造、画像なら状態とヘッダー)をログに出すだけ(news_collect.py --probe)。
+# 何もコミットしない。報道の収集(news-collect.yml)の順番待ちに入らないよう、別のワークフローにした。手動実行のみ。
+on:
+  workflow_dispatch:
+    inputs:
+      urls:
+        description: "調べる URL(空白区切り)"
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Probe
+        env:
+          URLS: ${{ inputs.urls }}
+        run: python news_collect.py --out-dir /tmp/none --probe $URLS
