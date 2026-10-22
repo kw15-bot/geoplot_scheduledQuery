@@ -8,8 +8,9 @@ webpush.py
 
 仕組み:
   - 鍵(VAPID): layers/webpush_vapid.json(暗号化して .enc だけをリポジトリに置く。VIEWER_KEY で作り直される)。
-    公開鍵はビューア(geoplot-mil.html の WEBPUSH_PUBLIC_KEY)にも書いてある。
-  - 登録: ビューアの🔔の欄で「この端末に通知を送る」→ 出てきた登録コード(購読情報を key で暗号化したもの)を、
+    公開鍵は登録のページ(push.html の WEBPUSH_PUBLIC_KEY)にも書いてある。
+  - 登録: push.html(ビューアの見た目を変えないよう別のページ)で「この端末に通知を送る」→ 出てきた登録コード
+    (購読情報を key で暗号化したもの)を、
     Actions の「Web Push subscribe」(webpush-subscribe.yml)に貼って実行 → news_out/push_subs.json に足し、確認の通知を送る。
   - 送信: 収集のたびに、ビューアの🔔と同じ規則で「前回までに送っていない新着」を数え、あれば1通にまとめて送る。
     送ったものは news_out/push_state.json に覚える。初めて動いたときは、その時点の分を送ったことにする(一度に大量に送らない)。

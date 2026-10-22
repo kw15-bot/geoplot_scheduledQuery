@@ -4,12 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>GEOPLOT MIL — 座標プロッター / 航行警告モニター</title>
-<!-- v5.3.0: スマホへの通知(Web Push)。ホーム画面に追加して使う(iPhone はこれが必要)。sw.js が通知を出す -->
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="icon-192.png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="警報状況">
-<meta name="theme-color" content="#268056">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
@@ -151,13 +145,6 @@ body{
 }
 .notif-item-dismiss:hover{color:var(--red);}
 .notif-panel .empty-hint{padding:16px 12px;font-size:11.5px;}
-/* v5.3.0: スマホへの通知(Web Push)の登録 */
-.push-box{border-top:1px solid var(--border-bright);padding:10px 12px;font-size:11.5px;background:var(--panel);}
-.push-head{font-weight:700;color:var(--text);margin-bottom:6px;display:flex;justify-content:space-between;gap:6px;}
-.push-head span{font-weight:400;color:var(--text-faint);font-size:10.5px;}
-.push-msg{color:var(--text-dim);line-height:1.6;margin-top:6px;white-space:pre-wrap;}
-.push-box textarea{width:100%;font-size:10px;font-family:monospace;margin-top:6px;word-break:break-all;}
-.push-steps{margin:6px 0 0;padding-left:18px;color:var(--text-dim);line-height:1.6;}
 
 /* ---------- NOTAM mode (専用の第3モード。MAP（自動更新）のrightPanelと同じ構成) ---------- */
 .notam-filters{font-family:var(--mono);font-size:10.5px;color:var(--text-faint);margin-top:10px;}
@@ -734,16 +721,6 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
         </div>
         <div id="notifList"></div>
         <div class="empty-hint" id="notifEmptyHint">新しい航行警報/NOTAM/報道をお知らせ。</div>
-        <div class="push-box" id="pushBox">
-          <div class="push-head">スマホ・PCへの通知<span id="pushState"></span></div>
-          <div class="btn-row"><button class="btn small" id="btnPushOn">この端末に通知を送る</button><button class="btn small ghost" id="btnPushOff" style="display:none;">この端末への通知をやめる</button></div>
-          <div class="push-msg" id="pushMsg"></div>
-          <div id="pushCodeBox" style="display:none;">
-            <textarea id="pushCode" rows="3" readonly></textarea>
-            <div class="btn-row"><button class="btn small" id="btnPushCopy">登録コードをコピー</button><a class="btn small ghost" id="lnkPushRun" target="_blank" rel="noopener" href="https://github.com/kw15-bot/geoplot_scheduledQuery/actions/workflows/webpush-subscribe.yml">登録の画面を開く</a></div>
-            <ol class="push-steps"><li>「登録コードをコピー」</li><li>「登録の画面を開く」→「Run workflow」→ コードを貼って実行</li><li>1〜2分で「通知の登録ができました」が届けば完了</li></ol>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -1053,7 +1030,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.3.0';
+const APP_VERSION = 'v5.2.2';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1153,7 +1130,6 @@ const APP_VERSION = 'v5.3.0';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
-// v5.3.0: スマホ・PCへの通知(Web Push)。🔔の欄の「この端末に通知を送る」で登録(webpush.py・sw.js)
 // v5.2.2: 解放军报タブの件数を、最新号の記事数から読めている日数(〇日)に変えた
 // v5.2.1: 微博の「動画あり（元の投稿で見る）」の表示をやめた(ユーザー指示)
 // v5.2.0: 國防訊息・海警要闻・维权执法・微博の一覧を「水色の見出し＋黒の本文」にそろえる(解放军报は除く)。微博は【…】か最初の行を見出しに
@@ -3790,76 +3766,6 @@ $('#btnNotifBell').addEventListener('click', (e)=>{
   const panel = $('#notifPanel');
   panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
 });
-// ---- v5.3.0: スマホ・PCへの通知(Web Push) ----
-// 収集のワークフロー(webpush.py)が、🔔と同じ規則の新着をこの端末に送る。登録は「この端末に通知を送る」→ 出てきた登録コードを
-// Actions の「Web Push subscribe」に貼って実行(サーバーが無いので、購読情報をリポジトリに入れる道としてこうしている)。
-// 登録コードは購読情報を key で暗号化したもの(data_crypt.py の形 v1)なので、貼った画面が公開されていても中身は読めない。
-const WEBPUSH_PUBLIC_KEY = 'BN77S2QNMzgmVRmLrKwDyNq-m2c7rpggUjqd7r4sJR0hmcztSI4XUicza_EzCPdoQ8jplXTeMswGoc6ayN7xScM';
-const DATA_SALT = 'geoplot_scheduledQuery/data-v1', DATA_ITER = 300000;
-const b64uBytes = s => b64bytes(String(s).replace(/-/g, '+').replace(/_/g, '/') + '='.repeat((4 - String(s).length % 4) % 4));
-const bytesB64 = u8 => btoa(String.fromCharCode(...new Uint8Array(u8)));
-const pushSupported = () => 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
-const pushIsIos = () => /iPhone|iPad|iPod/.test(navigator.userAgent);
-const pushStandalone = () => window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
-async function encryptForRepo(text){
-  const enc = new TextEncoder();
-  const gz = await new Response(new Blob([enc.encode(text)]).stream().pipeThrough(new CompressionStream('gzip'))).arrayBuffer();
-  const base = await crypto.subtle.importKey('raw', enc.encode(viewerKey || ''), 'PBKDF2', false, ['deriveKey']);
-  const aes = await crypto.subtle.deriveKey({ name:'PBKDF2', hash:'SHA-256', salt: enc.encode(DATA_SALT), iterations: DATA_ITER },
-    base, { name:'AES-GCM', length:256 }, false, ['encrypt']);
-  const iv = crypto.getRandomValues(new Uint8Array(12));
-  const ct = await crypto.subtle.encrypt({ name:'AES-GCM', iv }, aes, gz);
-  const box = JSON.stringify({ v:1, kdf:'PBKDF2-SHA256', iter:DATA_ITER, salt: bytesB64(enc.encode(DATA_SALT)), iv: bytesB64(iv), ct: bytesB64(ct) });
-  return btoa(box).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-}
-function pushShowMsg(t){ $('#pushMsg').textContent = t || ''; }
-async function pushRefreshState(){
-  if (!pushSupported()){
-    $('#btnPushOn').disabled = true;
-    pushShowMsg(pushIsIos() && !pushStandalone()
-      ? 'iPhone では、共有ボタン →「ホーム画面に追加」で追加したアイコンからこのページを開くと使えます（iOS 16.4 以降）。'
-      : 'このブラウザは通知に対応していません。');
-    return;
-  }
-  const reg = await navigator.serviceWorker.getRegistration();
-  const sub = reg && await reg.pushManager.getSubscription();
-  $('#pushState').textContent = sub && Notification.permission === 'granted' ? 'この端末: 受け取る設定' : '';
-  $('#btnPushOff').style.display = sub ? '' : 'none';
-}
-$('#btnPushOn').addEventListener('click', async e=>{
-  e.stopPropagation();
-  try{
-    pushShowMsg('準備中…');
-    const reg = await navigator.serviceWorker.register('sw.js');
-    await navigator.serviceWorker.ready;
-    if (await Notification.requestPermission() !== 'granted'){ pushShowMsg('通知が許可されませんでした。端末やブラウザの設定で、このページの通知を許可してください。'); return; }
-    let sub = await reg.pushManager.getSubscription();
-    if (!sub) sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64uBytes(WEBPUSH_PUBLIC_KEY) });
-    const label = (navigator.userAgent.match(/iPhone|iPad|Android|Windows|Macintosh|Linux/) || ['端末'])[0];
-    $('#pushCode').value = await encryptForRepo(JSON.stringify({ ...sub.toJSON(), label }));
-    $('#pushCodeBox').style.display = '';
-    pushShowMsg('この端末の登録コードを作りました。下の手順で登録してください（同じ端末なら一度だけでよい）。');
-    pushRefreshState();
-  }catch(err){
-    pushShowMsg(`登録できませんでした: ${err.message}`);
-  }
-});
-$('#btnPushCopy').addEventListener('click', async e=>{
-  e.stopPropagation();
-  try{ await navigator.clipboard.writeText($('#pushCode').value); pushShowMsg('コピーしました。「登録の画面を開く」→「Run workflow」→ 貼って実行してください。'); }
-  catch(err){ $('#pushCode').select(); pushShowMsg('コピーできなかったので、コードを選びました。長押しでコピーしてください。'); }
-});
-$('#btnPushOff').addEventListener('click', async e=>{
-  e.stopPropagation();
-  const reg = await navigator.serviceWorker.getRegistration();
-  const sub = reg && await reg.pushManager.getSubscription();
-  if (sub) await sub.unsubscribe();
-  $('#pushCodeBox').style.display = 'none';
-  pushShowMsg('この端末への通知をやめました（次に送るときに登録も自動で消えます）。');
-  pushRefreshState();
-});
-$('#pushBox').addEventListener('click', e => e.stopPropagation());
-pushRefreshState().catch(()=>{});
 $('#btnNotifClearAll').addEventListener('click', ()=>{
   pendingNotifications.clear();
   persistNotificationState(); updateNotifBadge(); renderNotifPanel();
