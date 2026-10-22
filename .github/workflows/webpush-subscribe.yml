@@ -1,0 +1,62 @@
+name: Web Push subscribe
+
+# スマホ・PCへの通知(Web Push)の登録と試し送り(webpush.py、HANDOFF_NOTAM.md §30)。
+#   登録: ビューアの🔔の欄「この端末に通知を送る」で出た登録コードを code に貼って実行 → 確認の通知が届けば完了
+#   試し: code を空のまま実行 → 登録しているすべての端末に試しの通知
+# 登録コードは購読情報を key で暗号化したものなので、この画面や記録に残っても中身は読めない。
+# 登録した端末の一覧は data ブランチの news_out/push_subs.json(.enc)。
+on:
+  workflow_dispatch:
+    inputs:
+      code:
+        description: "登録コード(ビューアの🔔の欄で作ったもの)。空なら登録済みの端末に試しの通知を送る"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: news-collect        # 収集(news_out/ を書く)と同時に動かさない
+  cancel-in-progress: false
+
+jobs:
+  subscribe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: data
+      - name: Get code from main
+        run: |
+          git fetch --depth=1 origin main
+          git archive FETCH_HEAD -- . ':(exclude).gitignore' ':(exclude)notam_out' ':(exclude)msa_out' ':(exclude)news_out' | tar -x
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Subscribe or test
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+          CODE: ${{ github.event.inputs.code }}
+        run: |
+          pip install -q cryptography
+          python data_crypt.py decrypt news_out layers/webpush_vapid.json.enc
+          if [ -n "$CODE" ]; then python webpush.py subscribe "$CODE"; else python webpush.py test; fi
+      - name: Commit
+        if: always()
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+        run: |
+          python data_crypt.py encrypt news_out
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add news_out
+          if git diff --staged --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "Web Push: update subscriptions [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin data && git push origin HEAD:data && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 5))
+          done
+          exit 1

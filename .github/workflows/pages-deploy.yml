@@ -52,7 +52,7 @@ jobs:
       - name: Build site
         run: |
           mkdir _site
-          git ls-files -z | grep -zv '^\.github/' | grep -zvE '^(notam_out|msa_out|news_out)/' | xargs -0 cp --parents -t _site
+          git ls-files -z | grep -zv '^\.github/' | grep -zvE '^(notam_out|msa_out|news_out)/|^layers/webpush_vapid' | xargs -0 cp --parents -t _site   # 通知の鍵(暗号化済み)は公開しない
           git fetch --depth=1 origin data
           git archive FETCH_HEAD -- notam_out msa_out news_out | tar -x -C _site
           touch _site/.nojekyll
