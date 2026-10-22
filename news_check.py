@@ -29,7 +29,8 @@ import news_collect as N
 
 JST = dt.timezone(dt.timedelta(hours=9))
 PAGE_NAMES = {pg["page"]: pg["name"] for src in N.SOURCES.values() for pg in src["pages"]}
-PAGE_NAMES.update({"weibo_dbzq": N.WEIBO_NAME, "jfjb": N.JFJB_NAME})
+PAGE_NAMES.update({a["page"]: f"{a['name']} {N.WEIBO_NAME}" for a in N.WEIBO_ACCOUNTS})
+PAGE_NAMES.update({"jfjb": N.JFJB_NAME})
 
 
 def _ts(s):
