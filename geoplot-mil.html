@@ -562,9 +562,10 @@ select{
 .news-item .news-row{display:flex;gap:10px;align-items:baseline;justify-content:space-between;}
 .news-item .news-row .news-title{flex:1;min-width:0;}
 .news-item .news-date{font-family:var(--mono);font-size:10.5px;color:var(--text-faint);white-space:nowrap;}
-.news-item.mna .news-title{font-weight:700;color:#1d5fa8;}
-body.dark-mode .news-item.mna .news-title{color:#7fb2ec;}
-.news-item.mna .news-summary{font-size:11.5px;line-height:1.7;color:var(--text-dim);margin-top:3px;
+/* v5.2.0: 國防訊息・海警・微博は「水色の見出し＋黒の本文」にそろえる(解放军报は除く) */
+.news-item:is(.mna,.ccg,.weibo) .news-title{font-weight:700;color:#1d5fa8;}
+body.dark-mode .news-item:is(.mna,.ccg,.weibo) .news-title{color:#7fb2ec;}
+.news-item.mna .news-summary{font-size:12px;line-height:1.7;color:var(--text);margin-top:3px;
   display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
 .news-item.mna .news-foot{font-size:10.5px;color:var(--text-faint);margin-top:4px;display:flex;gap:8px;}
 .news-flag{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--red);margin-right:7px;vertical-align:1px;}   /* v4.3.1: 「通知対象」の文字をやめて赤丸に */
@@ -573,8 +574,9 @@ body.dark-mode .news-item.mna .news-title{color:#7fb2ec;}
 .news-alert{background:#fdecea;color:#a61b1b;border:1px solid #f1b8b5;border-radius:6px;padding:8px 10px;font-size:12px;line-height:1.6;margin-bottom:8px;}
 .news-alert a{color:#a61b1b;font-weight:700;}
 .news-item.weibo .wb-head{display:flex;justify-content:space-between;gap:8px;align-items:baseline;}
-.news-item.weibo .wb-name{font-weight:700;font-size:12.5px;color:var(--text);}
-.news-item.weibo .wb-text{white-space:pre-wrap;font-size:12.5px;line-height:1.75;color:var(--text);margin-top:3px;word-break:break-word;
+.news-item.weibo .wb-name{font-weight:700;font-size:11px;color:var(--text-dim);}
+.news-item.weibo .news-title{margin-top:2px;}
+.news-item.weibo .wb-text{white-space:pre-wrap;font-size:12px;line-height:1.75;color:var(--text);margin-top:3px;word-break:break-word;
   display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden;}   /* v5.1.2: 長い投稿は5行で止めて「続きを読む」 */
 .news-item.weibo .wb-rt{white-space:pre-wrap;font-size:11.5px;line-height:1.6;color:var(--text-dim);background:var(--panel-alt);border-radius:4px;padding:5px 8px;margin-top:4px;
   display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
@@ -1028,7 +1030,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.1.2';
+const APP_VERSION = 'v5.2.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1128,6 +1130,7 @@ const APP_VERSION = 'v5.1.2';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.2.0: 國防訊息・海警要闻・维权执法・微博の一覧を「水色の見出し＋黒の本文」にそろえる(解放军报は除く)。微博は【…】か最初の行を見出しに
 // v5.1.2: 一覧の区切りは枠をやめて線に(濃く・間を広く。全タブ)。長い投稿・要約は数行で止めて「…続きを読む」
 // v5.1.1: 「〜取得できていません」は、最後に読めてから1日以上たったときだけ出す
 // v5.1.0: 報道のタブを1段に戻す(國防訊息・海警要闻・维权执法・解放军报・微博)。微博はアカウントで分けない(ユーザー指示)
@@ -3282,10 +3285,12 @@ function renderNewsList(){
     if (it.source === 'weibo'){
       // 写真は保存したもの(pics_file)を後から読んで入れる。まだ保存していない投稿は枚数だけ
       const pics = it.pics_file ? `<div class="wb-pics" data-pics="${esc(it.id)}"></div>` : '';
+      const wb = weiboTitleBody(it);
       const picNote = !it.pics_file && (it.pics || []).length ? `<span class="wb-video">写真${it.pics.length}枚（元の投稿で見る）</span>` : '';
       return `<a class="news-item weibo" href="${href}" data-weibo="${esc(it.id)}">${site}
-        <div class="wb-head"><span class="wb-name">${flag}${esc(it.account || '东部战区')}</span><span class="news-date" title="微博の投稿日時(日本時間。元は北京時間 ${esc(newsLocalTime(it.published))})">${esc(newsJst(it.published))} JST</span></div>
-        <div class="wb-text">${esc(it.text || it.title)}</div>
+        <div class="wb-head"><span class="wb-name">${esc(it.account || '东部战区')}</span><span class="news-date" title="微博の投稿日時(日本時間。元は北京時間 ${esc(newsLocalTime(it.published))})">${esc(newsJst(it.published))} JST</span></div>
+        <div class="news-title">${flag}${esc(wb.title)}</div>
+        ${wb.body ? `<div class="wb-text">${esc(wb.body)}</div>` : ''}
         ${it.retweet ? `<div class="wb-rt">${esc(it.retweet)}</div>` : ''}
         ${pics}${picNote}
         ${it.video ? '<span class="wb-video">動画あり（元の投稿で見る）</span>' : ''}</a>`;
@@ -3301,6 +3306,16 @@ function renderNewsList(){
   }).join('');
   fillWeiboPics($('#newsList'), 'img');
   markNewsMore($('#newsList'));
+}
+// v5.2.0: 微博の投稿を「見出し＋本文」に分ける。頭が【…】ならその中身(# を除く)を見出しに、無ければ最初の行(長ければ60字で切り、残りは本文へ)
+function weiboTitleBody(it){
+  const text = String(it.text || it.title || '').trim();
+  // 頭に #話題# が付いていても、その後の【…】を見出しにする(話題は本文の頭に残す)
+  const m = text.match(/^((?:#[^#\n]{1,40}#\s*)*)【([^】]{2,80})】\s*/);
+  if (m) return { title: m[2].replace(/#/g, '').trim(), body: ((m[1].trim() ? m[1].trim() + ' ' : '') + text.slice(m[0].length)).trim() };
+  const nl = text.indexOf('\n'), first = nl < 0 ? text : text.slice(0, nl), rest = nl < 0 ? '' : text.slice(nl + 1).trim();
+  if (first.length <= 60) return { title: first, body: rest };
+  return { title: first.slice(0, 60) + '…', body: ('…' + first.slice(60) + (rest ? '\n' + rest : '')).trim() };
 }
 // v5.1.2: 行数で止めた本文・要約が実際に切れているときだけ、後ろに「続きを読む」を付ける(押すと記事・投稿を開く)
 function markNewsMore(box){
