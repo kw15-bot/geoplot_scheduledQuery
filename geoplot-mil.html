@@ -587,8 +587,6 @@ body.dark-mode .news-item.mna .news-title{color:#7fb2ec;}
 .jfjb-dates button.active .jd-w{color:#d6e7ea;}
 .jfjb-layout>*{min-width:0;}
 .jfjb-paper-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:2px 8px;font-size:12px;font-weight:700;margin-bottom:4px;}
-.jfjb-links{white-space:nowrap;}
-.jfjb-links a{font-size:11px;font-weight:400;margin-right:8px;color:var(--text-dim);}
 .jfjb-paper{position:relative;border:1px solid var(--border);background:#fff;}
 .jfjb-paper img{display:block;width:100%;height:auto;}
 .jfjb-paper svg{position:absolute;inset:0;width:100%;height:100%;}
@@ -859,8 +857,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
         <div class="jfjb-layout">
           <div class="jfjb-dates" id="jfjbDates" aria-label="発行日"></div>
           <div class="jfjb-paper-col">
-            <div class="jfjb-paper-head"><span id="jfjbPaperTitle"></span>
-              <span class="jfjb-links"><a id="jfjbPdf" href="#" target="_blank" rel="noopener">版面PDF</a><a id="jfjbBig" href="#" target="_blank" rel="noopener noreferrer">画像を拡大</a><a id="jfjbOrig" href="#" target="_blank" rel="noopener">元のサイト</a></span></div>
+            <div class="jfjb-paper-head"><span id="jfjbPaperTitle"></span></div>
             <div class="jfjb-paper" id="jfjbPaper">
               <img id="jfjbPaperImg" alt="版面" referrerpolicy="no-referrer" onerror="this.parentNode.classList.add('noimg')">
               <svg id="jfjbAreas" viewBox="0 0 100 100" preserveAspectRatio="none" aria-label="記事の場所"></svg>
@@ -1021,7 +1018,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v4.7.0';
+const APP_VERSION = 'v4.7.1';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1113,6 +1110,7 @@ const APP_VERSION = 'v4.7.0';
 // v4.5.1: 解放军报の写真と版面の画像を出す(保存はせず、元のサイト rmt-static-publish.81.cn から直接読む。Referer は送らない)
 // v4.6.0: 東部戦区の微博。投稿は全部一覧に出し、語句に当たるものだけ🔔。cookie が切れたら報道の画面の上と🔔で知らせる
 // v4.7.0: 解放军报を紙面型に(ユーザー選択 A案)。左に日付の一覧、中央に版面の画像(記事の場所を押すと本文)、右に版面目录と見出し
+// v4.7.1: 版面の上の「版面PDF・画像を拡大・元のサイト」のリンクをやめた(ユーザー指示)
 
 // Small folded-corner "PDF" document glyph used on every PDF-export entry point
 // (results card, auto-mode popup, manual-mode popup). Kept as one constant so the
@@ -3416,9 +3414,6 @@ async function renderJfjb(){
   const secName = cur.length ? `第${cur[0]}版：${cur[1]}` : '';
   $('#jfjbSecTitle').textContent = secName;
   $('#jfjbPaperTitle').textContent = `${jfjbDate.replace(/^(\d{4})-(\d{2})-(\d{2})$/, '$1年$2月$3日')} ${jfjbWeek(jfjbDate)}　${secName}`;
-  $('#jfjbPdf').href = cur[3] || '#';
-  $('#jfjbPdf').style.display = cur[3] ? '' : 'none';
-  $('#jfjbOrig').href = `http://www.81.cn/szb_223187/szblb/index.html?paperNumber=${encodeURIComponent(jfjbPageNo)}&paperName=jfjb&paperDate=${jfjbDate}`;
   if (!jfjbDay || jfjbDay.date !== jfjbDate){
     $('#jfjbArticles').innerHTML = '<div class="news-status">読み込み中…</div>';
     $('#jfjbAreas').innerHTML = '';
@@ -3438,8 +3433,6 @@ async function renderJfjb(){
   const pimg = page && page.img;
   $('#jfjbPaper').classList.toggle('noimg', !pimg);
   if (pimg && $('#jfjbPaperImg').getAttribute('src') !== pimg) $('#jfjbPaperImg').src = pimg;
-  $('#jfjbBig').href = (page && (page.img_large || page.img)) || '#';
-  $('#jfjbBig').style.display = pimg ? '' : 'none';
   $('#jfjbAreas').innerHTML = arts.filter(a => (a.area || []).length >= 3).map(a =>
     `<polygon data-jfjb="${esc(a.id)}" points="${a.area.map(p => p.join(',')).join(' ')}"><title>${esc(a.title || '')}</title></polygon>`).join('');
   $('#jfjbArticles').innerHTML = arts.map(a => `<a class="news-item jfjb" href="${esc(a.url)}" data-jfjb="${esc(a.id)}">
