@@ -226,7 +226,7 @@ class News(unittest.TestCase):
             saved = json.loads((out / a["pics_file"]).read_text(encoding="utf-8"))
             self.assertTrue(saved["pics"][0].startswith("data:image/jpeg;base64,"))
             self.assertEqual((b.get("pics_file"), b["pics_tries"]), (None, 1))
-            self.assertNotIn("pics_file", c)                  # 60日より前の投稿は保存しない
+            self.assertNotIn("pics_file", c)                  # WEIBO_PICS_KEEP_DAYS(30日)より前の投稿は保存しない
             a["published"] = "2026-08-01T08:00:00+08:00"       # 古くなったら消す
             r = N.collect_weibo_pics(state, out, now, get_bytes=get_bytes)
             self.assertEqual(r["removed"], 1)

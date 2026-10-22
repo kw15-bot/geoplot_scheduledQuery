@@ -760,7 +760,7 @@ def collect_weibo(state, now, get=None, cookie=None, accounts=None):
     return added, None
 
 
-# ----------------------------------------------------------------------------- 微博の写真(v4.11.0、2026-10-22)
+# ----------------------------------------------------------------------------- 微博の写真(v5.0.1、2026-10-22)
 # 微博の写真(sinaimg.cn)は、ほかのサイトに埋め込むと読み込みを拒否される(ビューアで「写真を読み込めませんでした」)。
 # 収集のときに Referer: weibo.com を付けて読み、縮小して news_out/weibo_pics/<mid>.json に保存する(item に pics_file)。
 # 容量を抑えるため、1投稿 WEIBO_PICS_MAX 枚まで・横 WEIBO_PIC_W px まで。公開から WEIBO_PICS_KEEP_DAYS 日たった投稿の写真は消す
@@ -770,7 +770,7 @@ WEIBO_PICS_MAX = 9
 WEIBO_PIC_W = 720
 WEIBO_PIC_QUALITY = 70
 WEIBO_PICS_PER_RUN = 15         # 1回の収集で写真を保存する投稿の数(新しい順)
-WEIBO_PICS_KEEP_DAYS = 60
+WEIBO_PICS_KEEP_DAYS = 30
 WEIBO_PICS_MAX_TRIES = 3
 
 
