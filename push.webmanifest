@@ -1,7 +1,7 @@
 {
-  "name": "警報状況表示",
-  "short_name": "警報状況",
-  "start_url": "./geoplot-mil.html",
+  "name": "警報状況 通知",
+  "short_name": "警報状況通知",
+  "start_url": "./push.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#f4f3f0",

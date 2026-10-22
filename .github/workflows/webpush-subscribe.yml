@@ -1,7 +1,7 @@
 name: Web Push subscribe
 
 # スマホ・PCへの通知(Web Push)の登録と試し送り(webpush.py、HANDOFF_NOTAM.md §30)。
-#   登録: ビューアの🔔の欄「この端末に通知を送る」で出た登録コードを code に貼って実行 → 確認の通知が届けば完了
+#   登録: 登録のページ push.html の「この端末に通知を送る」で出た登録コードを code に貼って実行 → 確認の通知が届けば完了
 #   試し: code を空のまま実行 → 登録しているすべての端末に試しの通知
 # 登録コードは購読情報を key で暗号化したものなので、この画面や記録に残っても中身は読めない。
 # 登録した端末の一覧は data ブランチの news_out/push_subs.json(.enc)。
@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       code:
-        description: "登録コード(ビューアの🔔の欄で作ったもの)。空なら登録済みの端末に試しの通知を送る"
+        description: "登録コード(push.html で作ったもの)。空なら登録済みの端末に試しの通知を送る"
         required: false
         default: ""
 
