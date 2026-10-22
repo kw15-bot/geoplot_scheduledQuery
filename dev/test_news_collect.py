@@ -201,6 +201,38 @@ class News(unittest.TestCase):
         _, err = N.collect_weibo(state, "2026-10-22T01:00:00+00:00", cookie="")   # Secret が無い
         self.assertIn("WEIBO_COOKIE", err)
 
+    def test_weibo_pics(self):
+        import io, tempfile
+        from PIL import Image
+        buf = io.BytesIO(); Image.new("RGB", (1000, 500), "red").save(buf, "JPEG")
+        seen = []
+        def get_bytes(url, referer=None):
+            seen.append((url, referer))
+            if "bad" in url:
+                raise OSError("HTTP 403")
+            return buf.getvalue(), "image/jpeg"
+        now = "2026-10-22T01:00:00+00:00"
+        mk = lambda mid, pub, pics: {"id": f"weibo:{mid}", "source": "weibo", "mid": mid, "published": pub, "pics": pics}
+        state = {"sources": {}, "items": [
+            mk("A1", "2026-10-21T08:00:00+08:00", [{"src": "https://wx1.sinaimg.cn/large/x1.jpg"}]),
+            mk("B2", "2026-10-20T08:00:00+08:00", [{"src": "https://wx1.sinaimg.cn/large/bad.jpg"}]),
+            mk("C3", "2026-07-01T08:00:00+08:00", [{"src": "https://wx1.sinaimg.cn/large/x3.jpg"}])]}
+        with tempfile.TemporaryDirectory() as d:
+            out = Path(d)
+            r = N.collect_weibo_pics(state, out, now, get_bytes=get_bytes)
+            a, b, c = state["items"]
+            self.assertEqual((r["saved"], len(r["errors"])), (1, 1))
+            self.assertEqual(seen[0], ("https://wx1.sinaimg.cn/mw690/x1.jpg", "https://weibo.com/"))
+            saved = json.loads((out / a["pics_file"]).read_text(encoding="utf-8"))
+            self.assertTrue(saved["pics"][0].startswith("data:image/jpeg;base64,"))
+            self.assertEqual((b.get("pics_file"), b["pics_tries"]), (None, 1))
+            self.assertNotIn("pics_file", c)                  # 60日より前の投稿は保存しない
+            a["published"] = "2026-08-01T08:00:00+08:00"       # 古くなったら消す
+            r = N.collect_weibo_pics(state, out, now, get_bytes=get_bytes)
+            self.assertEqual(r["removed"], 1)
+            self.assertNotIn("pics_file", a)
+            self.assertEqual(list((out / N.WEIBO_PICS_DIR).glob("*.json")), [])
+
 
 class ArticleTest(unittest.TestCase):
     def test_parse_mna_article(self):
