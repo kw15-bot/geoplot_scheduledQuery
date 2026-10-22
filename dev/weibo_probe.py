@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """微博の公開アカウント(既定: 东部战区)の投稿が、ログインなしで読めるかを調べる(2026-10-21、調査用)。
 訪問者cookie(passport.weibo.com/visitor/genvisitor2)を取り、アカウントの情報と投稿一覧をいくつかの経路で試して、
-結果の先頭をログに出すだけ。何も保存しない。  使い方: python dev/weibo_probe.py [アカウント名]"""
+結果の先頭をログに出すだけ。何も保存しない。  使い方: python dev/weibo_probe.py [アカウント名]
+2026-10-22: 環境変数 WEIBO_COOKIE(GitHub Secret。ログインした微博の cookie)があれば、それで投稿一覧を読む。
+cookie の値はログに出さない。"""
 import http.cookiejar
 import json
+import os
 import re
 import sys
 import urllib.parse
@@ -16,8 +19,16 @@ jar = http.cookiejar.CookieJar()
 op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
 
 
+LOGIN_COOKIE = os.environ.get("WEIBO_COOKIE", "").strip()
+_XSRF = next((c.split("=", 1)[1] for c in LOGIN_COOKIE.split("; ") if c.startswith("XSRF-TOKEN=")), "")
+
+
 def get(url, data=None, headers=None, show=600):
     h = {"User-Agent": UA, "Accept": "application/json, text/plain, */*", "Referer": "https://weibo.com/"}
+    if LOGIN_COOKIE and "weibo.com" in url and "passport." not in url:
+        h.update({"Cookie": LOGIN_COOKIE, "X-Requested-With": "XMLHttpRequest"})
+        if _XSRF:
+            h["X-XSRF-TOKEN"] = _XSRF
     h.update(headers or {})
     req = urllib.request.Request(url, data=data, headers=h)
     try:
@@ -49,6 +60,7 @@ def visitor():
 
 def main():
     q = urllib.parse.quote(NAME)
+    print("login cookie:", "あり" if LOGIN_COOKIE else "なし", "(SUB あり)" if "SUB=" in LOGIN_COOKIE else "")
     # 1) ログインも cookie も無しで
     get(f"https://m.weibo.cn/api/container/getIndex?containerid=100103type%3D3%26q%3D{q}&page_type=searchall")
     # 2) 訪問者 cookie を取ってから
@@ -64,7 +76,7 @@ def main():
     if uid:
         posts = get(f"https://weibo.com/ajax/statuses/mymblog?uid={uid}&page=1&feature=0", show=300)
         try:
-            for s in json.loads(posts)["data"]["list"][:10]:
+            for s in json.loads(posts)["data"]["list"][:20]:
                 text = re.sub(r"<[^>]+>", "", s.get("text_raw") or s.get("text") or "")
                 print("POST", s.get("created_at"), s.get("mblogid"), text[:120].replace("\n", " "))
         except Exception as e:  # noqa: BLE001

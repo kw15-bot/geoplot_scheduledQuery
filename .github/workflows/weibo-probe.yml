@@ -25,4 +25,5 @@ jobs:
       - name: Probe
         env:
           NAME: ${{ inputs.name }}
+          WEIBO_COOKIE: ${{ secrets.WEIBO_COOKIE }}   # 2026-10-22: ログインした cookie(無ければ訪問者として読む)
         run: python dev/weibo_probe.py "$NAME"
