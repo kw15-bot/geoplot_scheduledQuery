@@ -15,8 +15,10 @@ self.addEventListener('push', e => {
 self.addEventListener('notificationclick', e => {
   e.notification.close();
   const url = new URL((e.notification.data && e.notification.data.url) || './geoplot-mil.html', self.registration.scope).href;
+  // 開いているビューアがあれば、その通知の新着(URL の #push=)を出させるため読み直させる(2026-10-23)
   e.waitUntil(self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(list => {
     const open = list.find(c => c.url.split('#')[0].split('?')[0] === url.split('#')[0].split('?')[0]);
+    if (open && open.navigate) return open.navigate(url).then(c => (c || open).focus()).catch(() => open.focus());
     return open ? open.focus() : self.clients.openWindow(url);
   }));
 });
