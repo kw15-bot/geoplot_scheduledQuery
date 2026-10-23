@@ -8,13 +8,13 @@ self.addEventListener('push', e => {
   try { d = e.data ? e.data.json() : {}; } catch (err) { d = { body: e.data ? e.data.text() : '' }; }
   e.waitUntil(self.registration.showNotification(d.title || '警報状況表示', {
     body: d.body || '', tag: d.tag || 'geoplot', renotify: true,
-    icon: 'icon-192.png', badge: 'icon-192.png', data: { url: d.url || './geoplot-mil.html' },
+    icon: 'icon-192.png', badge: 'icon-192.png', data: { url: d.url || './geoplot-mil.html?geojson=msa_out/military.geojson' },
   }));
 });
 
 self.addEventListener('notificationclick', e => {
   e.notification.close();
-  const url = new URL((e.notification.data && e.notification.data.url) || './geoplot-mil.html', self.registration.scope).href;
+  const url = new URL((e.notification.data && e.notification.data.url) || './geoplot-mil.html?geojson=msa_out/military.geojson', self.registration.scope).href;
   // 開いているビューアがあれば、その通知の新着(URL の #push=)を出させるため読み直させる(2026-10-23)
   e.waitUntil(self.clients.matchAll({ type: 'window', includeUncontrolled: true }).then(list => {
     const open = list.find(c => c.url.split('#')[0].split('?')[0] === url.split('#')[0].split('?')[0]);

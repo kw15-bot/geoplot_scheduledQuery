@@ -11,7 +11,7 @@
 // 初めて追加したとき(まだ許可していない)だけ登録の画面を出す。Safari で開いたときや ?setup を付けたときは常にこの画面
 if ((window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true)
     && !/[?&]setup\b/.test(location.search) && window.Notification && Notification.permission === 'granted'){
-  location.replace('geoplot-mil.html');
+  location.replace('geoplot-mil.html?geojson=msa_out/military.geojson');   // ?geojson が無いと航行警報を読まない
 }
 </script>
 <link rel="manifest" href="push.webmanifest">
