@@ -43,7 +43,7 @@ ROOT = Path(__file__).resolve().parent
 VAPID_FILE = ROOT / "layers" / "webpush_vapid.json"
 SUBS_FILE = ROOT / "news_out" / "push_subs.json"
 STATE_FILE = ROOT / "news_out" / "push_state.json"
-VIEWER_URL = "https://kw15-bot.github.io/geoplot_scheduledQuery/geoplot-mil.html"
+VIEWER_URL = "https://kw15-bot.github.io/geoplot_scheduledQuery/geoplot-mil.html?geojson=msa_out/military.geojson"   # ?geojson が無いと航行警報タブが0件
 SUBJECT = "https://kw15-bot.github.io/geoplot_scheduledQuery/"
 TTL = 24 * 3600
 MAX_LINES = 4          # 通知の本文に並べる見出しの数
