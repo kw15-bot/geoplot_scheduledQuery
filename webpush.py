@@ -282,7 +282,10 @@ def main(argv=None):
     s.add_argument("--msa")
     sb = sp.add_parser("subscribe")
     sb.add_argument("code")
-    sp.add_parser("test")
+    t = sp.add_parser("test")
+    t.add_argument("--news")
+    t.add_argument("--notam")
+    t.add_argument("--msa")
     sp.add_parser("keygen")
     a = ap.parse_args(argv)
 
@@ -310,8 +313,17 @@ def main(argv=None):
             return 1
     vapid = load_vapid() if subs["subs"] else None
     if a.cmd == "test":
-        keep, ok = send_all({"title": "試しの通知", "body": "警報状況表示からの通知のテストです。", "url": VIEWER_URL,
-                             "tag": "geoplot-test"}, vapid, subs["subs"])
+        # 2026-10-23: データがあれば、今ある NOTAM・航行警報・報道を1件ずつ使って本物と同じ形で送る(押すとそれが🔔に出る)
+        load = lambda p: _load_json(p, None) if p and Path(p).exists() else None
+        sample = []
+        for evs in (notam_events(load(a.notam)) if load(a.notam) else [], msa_events(load(a.msa)) if load(a.msa) else [],
+                    news_events(load(a.news)) if load(a.news) else []):
+            sample += evs[:1]
+        payload = build_payload(sample) if sample else {"title": "試しの通知", "body": "警報状況表示からの通知のテストです。",
+                                                        "url": VIEWER_URL}
+        payload["tag"] = "geoplot-test"
+        keep, ok = send_all(payload, vapid, subs["subs"])
+        print(f"[test] {payload['title']} / {payload['body']!r}")
         subs["subs"] = keep
         _save_json(SUBS_FILE, subs)
         print(f"送りました: {ok}/{len(keep)}")

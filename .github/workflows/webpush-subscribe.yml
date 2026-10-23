@@ -42,7 +42,11 @@ jobs:
         run: |
           pip install -q cryptography
           python data_crypt.py decrypt news_out layers/webpush_vapid.json.enc
-          if [ -n "$CODE" ]; then python webpush.py subscribe "$CODE"; else python webpush.py test; fi
+          if [ -n "$CODE" ]; then python webpush.py subscribe "$CODE"; else
+            # 試し: 今ある NOTAM・航行警報・報道を1件ずつ使って本物と同じ形で送る
+            python data_crypt.py decrypt notam_out/notam_cn.geojson.enc msa_out/military.geojson.enc
+            python webpush.py test --news news_out/news.json --notam notam_out/notam_cn.geojson --msa msa_out/military.geojson
+          fi
       - name: Commit
         if: always()
         env:
