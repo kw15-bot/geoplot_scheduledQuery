@@ -6,6 +6,14 @@
 <title>通知の登録</title>
 <!-- 警報状況表示の新着(🔔と同じもの)をこの端末に Web Push で受け取る登録のページ(webpush.py・sw.js、HANDOFF_NOTAM.md §30)。
      ビューア(geoplot-mil.html)の見た目を変えないよう、登録はこのページに分けた(2026-10-23 ユーザー指示)。 -->
+<script>
+// 2026-10-23: ホーム画面のアイコンから開いたとき、通知が許可済み(=登録済み)なら、この画面を描く前にすぐビューアを開く(ユーザー指示)。
+// 初めて追加したとき(まだ許可していない)だけ登録の画面を出す。Safari で開いたときや ?setup を付けたときは常にこの画面
+if ((window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true)
+    && !/[?&]setup\b/.test(location.search) && window.Notification && Notification.permission === 'granted'){
+  location.replace('geoplot-mil.html');
+}
+</script>
 <link rel="manifest" href="push.webmanifest">
 <link rel="apple-touch-icon" href="icon-192.png?v=2">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -133,15 +141,7 @@ $('#btnOff').addEventListener('click', async () => {
   say('この端末への通知をやめました（次に送るときに登録も自動で消えます）。');
   refresh();
 });
-// 2026-10-23: ホーム画面のアイコンから開いたとき、この端末が登録済みならそのままビューアを開く(ユーザー指示)。
-// 登録が消えている・通知が許可されていないときだけ、このページ(登録)を出す。?setup を付けて開けば常にこのページ
-(async () => {
-  if (standalone() && supported() && !/[?&]setup\b/.test(location.search) && Notification.permission === 'granted'){
-    const reg = await navigator.serviceWorker.getRegistration();
-    if (reg && await reg.pushManager.getSubscription()){ location.replace('geoplot-mil.html'); return; }
-  }
-  await refresh();
-})().catch(() => {});
+refresh().catch(() => {});
 </script>
 </body>
 </html>
