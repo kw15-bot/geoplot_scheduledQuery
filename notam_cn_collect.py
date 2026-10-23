@@ -420,6 +420,30 @@ def _corridor_ring(pts, width_nm):
     return ring + [ring[0]]
 
 
+def _segments_cross(p1, p2, p3, p4):
+    """線分 p1-p2 と p3-p4 が(端点以外で)交わるか。"""
+    d = lambda a, b, c: (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0])
+    d1, d2, d3, d4 = d(p3, p4, p1), d(p3, p4, p2), d(p1, p2, p3), d(p1, p2, p4)
+    return d1 * d2 < 0 and d3 * d4 < 0
+
+
+def _untangle_quad(ring):
+    """4点の区域が、対角どうしを結ぶ順(線が交差する「砂時計」形)で書かれていたら、交差しない順に並べ直す。
+    2026-10-23: G4710/26(深圳の移動障害物 N222836.6E1135421.2-N222838.4E1135423.6-N222834.4E1135423.1-
+    N222836.1E1135425.5)が交差する順で書かれていて、ビューアで砂時計形に描かれていた。5点以上は触らない
+    (凹んだ区域を壊さないため)。"""
+    if len(ring) != 5 or ring[0] != ring[-1]:
+        return ring
+    a, b, c, d = ring[:4]
+    if not (_segments_cross(a, b, c, d) or _segments_cross(b, c, d, a)):
+        return ring
+    for order in ((a, b, d, c), (a, c, b, d)):
+        q = list(order)
+        if not (_segments_cross(q[0], q[1], q[2], q[3]) or _segments_cross(q[1], q[2], q[3], q[0])):
+            return q + [q[0]]
+    return ring
+
+
 def parse_text_polygons(e_text):
     """E項の座標列を多角形リング(GeoJSON順 [lon,lat])のリストにする。
     先頭点に戻ったところでリングを閉じ、複数エリアの列挙にも対応。3点未満は捨てる。
@@ -439,7 +463,7 @@ def parse_text_polygons(e_text):
             if len(cur) >= 2:
                 rings.append(_corridor_ring(cur, corridor))
         elif len(cur) >= 3:
-            rings.append(cur + [cur[0]])
+            rings.append(_untangle_quad(cur + [cur[0]]))
 
     for m in _TEXT_COORD.finditer(t):
         if _is_named_waypoint_coord(t, m.start(), m.end()):
@@ -476,7 +500,7 @@ def parse_text_polygons(e_text):
             corridor = _to_nm(float(hdr["w"]), hdr["u"])
         prev_end = m.end()
         if corridor is None and cur and pt == cur[0] and len(cur) >= 3:
-            rings.append(cur + [pt])
+            rings.append(_untangle_quad(cur + [pt]))
             cur = []
         else:
             cur.append(pt)
