@@ -217,15 +217,13 @@ def pick_new(events_by_kind, state):
 
 
 def build_payload(new):
-    kinds = {}
-    for k, _ in new:
-        name = {"news": "報道", "notam": "NOTAM", "msa": "航行警報"}[k.split(":", 1)[0]]
-        kinds[name] = kinds.get(name, 0) + 1
-    title = "新着 " + "・".join(f"{n}{c}件" for n, c in kinds.items())
+    """通知の文面(2026-10-23 ユーザー指定): 見出しに1件目(例「NOTAM: ZJSA A2265/26」)、本文に2件目以降(MAX_LINES 件まで+「ほか N件」)。
+    アプリ名「警報状況通知」は iPhone が見出しの上に出す。"""
     lines = [label for _, label in new[:MAX_LINES]]
     if len(new) > MAX_LINES:
         lines.append(f"ほか {len(new) - MAX_LINES}件")
-    return {"title": title, "body": "\n".join(lines), "url": VIEWER_URL + "#push=" + viewer_keys_param(new), "tag": "geoplot-new"}
+    return {"title": lines[0], "body": "\n".join(lines[1:]), "url": VIEWER_URL + "#push=" + viewer_keys_param(new),
+            "tag": "geoplot-new"}
 
 
 MAX_URL_KEYS_CHARS = 2000     # 通知の中身は 4KB まで。URL に載せるキーはこの長さまで(多いときは新しい順に先頭から)

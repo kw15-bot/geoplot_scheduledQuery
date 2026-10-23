@@ -66,8 +66,10 @@ class WebPushTest(unittest.TestCase):
         self.assertEqual([k for k, _ in new], ["news:d"])
         self.assertIn("notam", state["sent"])                       # 読めなかった種類は前のまま
         p = W.build_payload(new)
-        self.assertEqual(p["title"], "新着 報道1件")
-        self.assertIn("东部战区新闻发言人发布", p["body"])
+        self.assertEqual((p["title"], p["body"]), ("報道: 东部战区新闻发言人发布", ""))
+        many = W.build_payload([(f"notam:ZBBBYNYX|A{i}/26|x", f"NOTAM: ZSHA A{i}/26") for i in range(6)])
+        self.assertEqual(many["title"], "NOTAM: ZSHA A0/26")
+        self.assertEqual(many["body"].split("\n"), ["NOTAM: ZSHA A1/26", "NOTAM: ZSHA A2/26", "NOTAM: ZSHA A3/26", "ほか 2件"])
 
     def test_send_all_drops_gone(self):
         v = W.keygen()
