@@ -133,7 +133,15 @@ $('#btnOff').addEventListener('click', async () => {
   say('この端末への通知をやめました（次に送るときに登録も自動で消えます）。');
   refresh();
 });
-refresh().catch(() => {});
+// 2026-10-23: ホーム画面のアイコンから開いたとき、この端末が登録済みならそのままビューアを開く(ユーザー指示)。
+// 登録が消えている・通知が許可されていないときだけ、このページ(登録)を出す。?setup を付けて開けば常にこのページ
+(async () => {
+  if (standalone() && supported() && !/[?&]setup\b/.test(location.search) && Notification.permission === 'granted'){
+    const reg = await navigator.serviceWorker.getRegistration();
+    if (reg && await reg.pushManager.getSubscription()){ location.replace('geoplot-mil.html'); return; }
+  }
+  await refresh();
+})().catch(() => {});
 </script>
 </body>
 </html>
