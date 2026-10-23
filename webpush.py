@@ -46,7 +46,6 @@ STATE_FILE = ROOT / "news_out" / "push_state.json"
 VIEWER_URL = "https://kw15-bot.github.io/geoplot_scheduledQuery/geoplot-mil.html?geojson=msa_out/military.geojson"   # ?geojson が無いと航行警報タブが0件
 SUBJECT = "https://kw15-bot.github.io/geoplot_scheduledQuery/"
 TTL = 24 * 3600
-MAX_LINES = 4          # 通知の本文に並べる見出しの数
 
 
 def b64u(b):
@@ -217,12 +216,14 @@ def pick_new(events_by_kind, state):
 
 
 def build_payload(new):
-    """通知の文面(2026-10-23 ユーザー指定): 見出しに1件目(例「NOTAM: ZJSA A2265/26」)、本文に2件目以降(MAX_LINES 件まで+「ほか N件」)。
-    アプリ名「警報状況通知」は iPhone が見出しの上に出す。"""
-    lines = [label for _, label in new[:MAX_LINES]]
-    if len(new) > MAX_LINES:
-        lines.append(f"ほか {len(new) - MAX_LINES}件")
-    return {"title": lines[0], "body": "\n".join(lines[1:]), "url": VIEWER_URL + "#push=" + viewer_keys_param(new),
+    """通知の文面(2026-10-23 ユーザー指定): 件名「警報現況表示」、本文は新着の種類だけ(例「新しいNOTAM / 航行警報」)。
+    見出しの一覧などは載せない(押すとビューアの🔔に出る)。"""
+    kinds = []
+    for name in ("NOTAM", "航行警報", "報道"):
+        prefix = {"NOTAM": "notam:", "航行警報": "msa:", "報道": "news:"}[name]
+        if any(k.startswith(prefix) for k, _ in new):
+            kinds.append(name)
+    return {"title": "警報現況表示", "body": "新しい" + " / ".join(kinds), "url": VIEWER_URL + "#push=" + viewer_keys_param(new),
             "tag": "geoplot-new"}
 
 
