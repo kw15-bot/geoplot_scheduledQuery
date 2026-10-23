@@ -688,6 +688,24 @@ class TextShapes20260929(unittest.TestCase):
         self.assertAlmostEqual(max(p[1] for p in rings[0]) - (32 + 52 / 60 + 29 / 3600), 404 / 60, delta=0.05)
 
 
+class CrossedQuad20261023(unittest.TestCase):
+    """4点の区域が対角どうしを結ぶ順で書かれたもの(G4710/26)は、交差しない順に並べ直す。"""
+    def test_g4710_untangled(self):
+        e = ("ADD TEMPO MOVING OBSTACLE MARKED WITH LGTS WI FLW AREA:\nN222836.6E1135421.2-N222838.4E1135423.6-\n"
+             "N222834.4E1135423.1-N222836.1E1135425.5-\nN222836.6E1135421.2\nALT:399M.")
+        ring = C.parse_text_polygons(e)[0]
+        self.assertEqual(len(ring), 5)
+        self.assertEqual(ring[0], ring[-1])
+        a, b, c, d = ring[:4]
+        self.assertFalse(C._segments_cross(a, b, c, d) or C._segments_cross(b, c, d, a))
+        self.assertEqual(sorted(map(tuple, ring[:4])), sorted([(113.905889, 22.476833), (113.906556, 22.477333),
+                                                               (113.906417, 22.476222), (113.907083, 22.476694)]))
+
+    def test_simple_quad_unchanged(self):
+        e = "N300000E1200000-N300000E1210000-N310000E1210000-N310000E1200000-N300000E1200000"
+        self.assertEqual(C.parse_text_polygons(e)[0], [[120.0, 30.0], [121.0, 30.0], [121.0, 31.0], [120.0, 31.0], [120.0, 30.0]])
+
+
 class RouteSegments(unittest.TestCase):
     """航空路の区間閉鎖 -> 線(notam_route_segments.py)。索引は合成データなので鍵が無くても動く。"""
 
