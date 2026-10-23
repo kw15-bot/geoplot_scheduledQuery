@@ -216,14 +216,14 @@ def pick_new(events_by_kind, state):
 
 
 def build_payload(new):
-    """通知の文面(2026-10-23 ユーザー指定): 件名「警報現況表示」、本文は新着の種類だけ(例「新しいNOTAM / 航行警報」)。
-    見出しの一覧などは載せない(押すとビューアの🔔に出る)。"""
+    """通知の文面(2026-10-23 ユーザー指定): 新着の種類だけの1行(例「新しいNOTAM / 航行警報」)。件名・見出しの一覧は載せない
+    (押すとビューアの🔔に出る)。iPhone はアプリ名「警報状況通知」と送り元のサイト名を自動で付ける(消せない)。"""
     kinds = []
     for name in ("NOTAM", "航行警報", "報道"):
         prefix = {"NOTAM": "notam:", "航行警報": "msa:", "報道": "news:"}[name]
         if any(k.startswith(prefix) for k, _ in new):
             kinds.append(name)
-    return {"title": "警報現況表示", "body": "新しい" + " / ".join(kinds), "url": VIEWER_URL + "#push=" + viewer_keys_param(new),
+    return {"title": "新しい" + " / ".join(kinds), "body": "", "url": VIEWER_URL + "#push=" + viewer_keys_param(new),
             "tag": "geoplot-new"}
 
 

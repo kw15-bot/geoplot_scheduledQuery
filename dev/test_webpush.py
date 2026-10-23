@@ -66,9 +66,9 @@ class WebPushTest(unittest.TestCase):
         self.assertEqual([k for k, _ in new], ["news:d"])
         self.assertIn("notam", state["sent"])                       # 読めなかった種類は前のまま
         p = W.build_payload(new)
-        self.assertEqual((p["title"], p["body"]), ("警報現況表示", "新しい報道"))
+        self.assertEqual((p["title"], p["body"]), ("新しい報道", ""))
         mix = W.build_payload([("news:a", "x"), ("msa:https://m/1", "y"), ("notam:ZBBBYNYX|A1/26|x", "z")])
-        self.assertEqual(mix["body"], "新しいNOTAM / 航行警報 / 報道")
+        self.assertEqual(mix["title"], "新しいNOTAM / 航行警報 / 報道")
 
     def test_send_all_drops_gone(self):
         v = W.keygen()
