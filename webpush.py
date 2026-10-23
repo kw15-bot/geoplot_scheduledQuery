@@ -225,7 +225,23 @@ def build_payload(new):
     lines = [label for _, label in new[:MAX_LINES]]
     if len(new) > MAX_LINES:
         lines.append(f"ほか {len(new) - MAX_LINES}件")
-    return {"title": title, "body": "\n".join(lines), "url": VIEWER_URL, "tag": "geoplot-new"}
+    return {"title": title, "body": "\n".join(lines), "url": VIEWER_URL + "#push=" + viewer_keys_param(new), "tag": "geoplot-new"}
+
+
+MAX_URL_KEYS_CHARS = 2000     # 通知の中身は 4KB まで。URL に載せるキーはこの長さまで(多いときは新しい順に先頭から)
+
+
+def viewer_keys_param(new):
+    """通知を押して開いたとき、ビューアがその新着を🔔に出せるよう、ビューアの通知キー(報道 news:<id>・NOTAM notam:<発行元|番号|開始>・
+    航行警報 <URL の ? より前>)の一覧を base64url にして URL の #push= に載せる(v5.2.4)。"""
+    keys, size = [], 2
+    for k, _ in new:
+        vk = k[4:] if k.startswith("msa:") else k
+        if size + len(vk) + 3 > MAX_URL_KEYS_CHARS:
+            break
+        keys.append(vk)
+        size += len(vk) + 3
+    return b64u(json.dumps(keys, ensure_ascii=False, separators=(",", ":")).encode("utf-8"))
 
 
 # ----------------------------------------------------------------------------- ファイル

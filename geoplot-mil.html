@@ -1030,7 +1030,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.2.3';
+const APP_VERSION = 'v5.2.4';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1130,6 +1130,7 @@ const APP_VERSION = 'v5.2.3';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.2.4: スマホの通知から開いたとき、その通知の新着を🔔に出して欄を開く(それまでは別の保存場所なので0件だった)
 // v5.2.3: 解放军报タブの日数は数字だけ(「日」を付けない。ユーザー指示)
 // v5.2.2: 解放军报タブの件数を、最新号の記事数から読めている日数(〇日)に変えた
 // v5.2.1: 微博の「動画あり（元の投稿で見る）」の表示をやめた(ユーザー指示)
@@ -3102,22 +3103,45 @@ function updateNotifBadge(){
   $('#btnNotifBell').classList.toggle('has-new', n > 0);
 }
 
+// v5.2.4: スマホ・PCの通知(Web Push、webpush.py・sw.js)から開いたとき、その通知に載っていた新着を🔔に出す。
+// 通知を押すと geoplot-mil.html#push=<キーの一覧> で開く(このブラウザで既に見た扱いのものや、初めて開いたときの分でも出す)。
+// 出したら🔔の欄を開く。見た目は変えない
+const pushForcedKeys = new Set();
+let pushOpenPanel = false;
+(function(){
+  const m = location.hash.match(/(?:^#|&)push=([^&]+)/);
+  if (!m) return;
+  try{
+    const keys = JSON.parse(decodeURIComponent(escape(atob(decodeURIComponent(m[1]).replace(/-/g, '+').replace(/_/g, '/')))));
+    (Array.isArray(keys) ? keys : []).forEach(k => pushForcedKeys.add(String(k)));
+    pushOpenPanel = pushForcedKeys.size > 0;
+  }catch(e){ /* 読めなければ何もしない */ }
+  history.replaceState(null, '', location.pathname + location.search);
+})();
+function openNotifPanelForPush(){
+  if (!pushOpenPanel || !pendingNotifications.size) return;
+  pushOpenPanel = false;
+  $('#notifPanel').style.display = 'block';
+}
 function registerImportedItemsForNotifications(items){
   // items: array of {title,url,date,bureau,points}. Called once per importGeoJSON() run.
   if (!hasImportedOnce){
     // First-ever import (or first import this session with no prior localStorage state):
     // baseline everything as "already seen" rather than announcing the whole initial
     // batch as new -- a wall of "new" notifications on first connect isn't useful.
-    items.forEach(it => seenKeys.add(canonicalKey(it.url)));
+    items.forEach(it => { const ck = canonicalKey(it.url); if (!pushForcedKeys.has(ck)) seenKeys.add(ck); });
     hasImportedOnce = true;
-    persistNotificationState();
-    updateNotifBadge();
-    return;
+    if (!items.some(it => pushForcedKeys.has(canonicalKey(it.url)))){
+      persistNotificationState();
+      updateNotifBadge();
+      return;
+    }
   }
   let addedAny = false;
   items.forEach(it=>{
     const ck = canonicalKey(it.url);
-    if (seenKeys.has(ck)) return;
+    if (seenKeys.has(ck) && !pushForcedKeys.has(ck)) return;
+    pushForcedKeys.delete(ck);
     seenKeys.add(ck);
     if (!pendingNotifications.has(ck)){
       pendingNotifications.set(ck, {
@@ -3128,6 +3152,7 @@ function registerImportedItemsForNotifications(items){
     }
   });
   if (addedAny) renderNotifPanel();
+  if (addedAny) openNotifPanelForPush();
   persistNotificationState();
   updateNotifBadge();
 }
@@ -3149,15 +3174,18 @@ function registerNotamsForNotifications(feats){
     && notamNotifyAllowed(f.properties || {})
     && ['active', 'upcoming'].includes(notamStatusOf(f)));
   if (!notamNotifBaselined){
-    shown.forEach(f => seenNotamKeys.add(notamNotifKey(f)));
+    shown.forEach(f => { const k = notamNotifKey(f); if (!pushForcedKeys.has(k)) seenNotamKeys.add(k); });
     notamNotifBaselined = true;
-    persistNotificationState();
-    return;
+    if (!shown.some(f => pushForcedKeys.has(notamNotifKey(f)))){
+      persistNotificationState();
+      return;
+    }
   }
   let addedAny = false;
   shown.forEach(f=>{
     const k = notamNotifKey(f);
-    if (seenNotamKeys.has(k)) return;
+    if (seenNotamKeys.has(k) && !pushForcedKeys.has(k)) return;
+    pushForcedKeys.delete(k);
     seenNotamKeys.add(k);
     if (pendingNotifications.has(k)) return;
     const p = f.properties || {};
@@ -3174,6 +3202,7 @@ function registerNotamsForNotifications(feats){
     addedAny = true;
   });
   if (addedAny) renderNotifPanel();
+  if (addedAny) openNotifPanelForPush();
   persistNotificationState();
   updateNotifBadge();
 }
@@ -3189,12 +3218,13 @@ function registerNewsForNotifications(state){
   const firstPages = new Set(items.map(pageOf).filter(pg => !newsNotifBaselined || !seenNewsPages.has(pg)));
   let addedAny = false;
   items.slice().reverse().forEach(it=>{                     // 古い順に足す
-    if (seenNewsIds.has(it.id)) return;
+    const forced = pushForcedKeys.delete('news:' + it.id);   // v5.2.4: スマホの通知から開いたときは、その通知の分を必ず出す
+    if (seenNewsIds.has(it.id) && !forced) return;
     seenNewsIds.add(it.id);
     // 初めて読んだ一覧の分・見出しが規則に当たらないもの・遡って集めた分(backfilled、v4.0.3)は通知しない
-    if (firstPages.has(pageOf(it)) || !it.notify || it.backfilled) return;
+    if (!forced && (firstPages.has(pageOf(it)) || !it.notify || it.backfilled)) return;
     // v4.3.0: 中国海警局の一覧の横の欄(日時なし)から入った古い記事は通知しない(収集側も backfilled にする)
-    if (it.source === 'ccg' && !String(it.published || '').includes('T')) return;
+    if (!forced && it.source === 'ccg' && !String(it.published || '').includes('T')) return;
     const k = 'news:' + it.id;
     if (pendingNotifications.has(k)) return;
     const src = sources[it.source] || {};
@@ -3211,6 +3241,7 @@ function registerNewsForNotifications(state){
   newsNotifBaselined = true;
   // v4.8.1: 微博の cookie 切れは🔔には出さない(微博のタブにだけ出す)
   if (addedAny) renderNotifPanel();
+  if (addedAny) openNotifPanelForPush();
   persistNotificationState();
   updateNotifBadge();
 }
