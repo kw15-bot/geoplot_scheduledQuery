@@ -683,10 +683,12 @@ def _weibo_get(url, cookie, uid=WEIBO_UID):
         data = json.loads(text)
     except ValueError:
         raise WeiboAuthError("JSON でない応答(ログイン画面に回された)") from None
-    if not data.get("ok"):
+    # 2026-11-13: ログインが切れると {"ok": -100, "url": "…login.php…"} が返る。-100 は真なので、前は ok と見なして
+    # 「投稿を1件も読み取れなかった」になり、ビューアに「cookie再設定」が出なかった。ok が 1 以外は失敗として調べる
+    if data.get("ok") != 1:
         msg = str(data.get("message") or data.get("msg") or "")
-        if "登录" in msg or data.get("ok") == -100:
-            raise WeiboAuthError(msg or "ログインが必要")
+        if "登录" in msg or data.get("ok") == -100 or "login" in str(data.get("url") or ""):
+            raise WeiboAuthError(msg or f"ログインが必要(ok={data.get('ok')})")
         raise ValueError(f"ok={data.get('ok')} {msg}")
     return data
 
