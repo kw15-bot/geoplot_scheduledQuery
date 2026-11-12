@@ -222,6 +222,54 @@ class News(unittest.TestCase):
         finally:
             N.urllib.request.urlopen = old
 
+    def test_weibo_cookie_refresh(self):
+        # 微博が返した新しい cookie を保存し、次はそれを使う。保存分でログイン切れなら Secret で試し直す(2026-11-13)
+        import os, tempfile
+        wb = json.loads((FX / "weibo_mymblog.json").read_text(encoding="utf-8"))
+        used = []
+        def factory(fail_on=None):
+            def make(jar):
+                def get(url):
+                    used.append(jar.header())
+                    if fail_on and fail_on in jar.header():
+                        raise N.WeiboAuthError("ログインが必要(ok=-100)")
+                    if not fail_on:
+                        jar.update(["SUB=new123; path=/; domain=.weibo.com", "XSRF-TOKEN=; Max-Age=0"])
+                    return wb
+                return get
+            return make
+        old = os.environ.get("WEIBO_COOKIE")
+        os.environ["WEIBO_COOKIE"] = "SUB=old; XSRF-TOKEN=t"
+        try:
+            with tempfile.TemporaryDirectory() as d:
+                path = Path(d) / "c.json"
+                state = {"sources": {}, "items": []}
+                acc = N.WEIBO_ACCOUNTS
+                N.WEIBO_ACCOUNTS = acc[:1]
+                try:
+                    _, err = N.collect_weibo_refreshing(state, "2026-11-13T00:00:00+00:00", path=path, get_factory=factory())
+                    self.assertIsNone(err)
+                    self.assertIn("SUB=new123", json.loads(path.read_text())["cookie"])
+                    used.clear()
+                    N.collect_weibo_refreshing(state, "2026-11-13T00:10:00+00:00", path=path, get_factory=factory())
+                    self.assertIn("SUB=new123", used[0])                     # 2回目は保存した cookie を使う
+                    used.clear()
+                    _, err = N.collect_weibo_refreshing(state, "2026-11-13T00:20:00+00:00", path=path, get_factory=factory("new123"))
+                    self.assertIn("SUB=new123", used[0])
+                    self.assertTrue(any("SUB=old" in h for h in used))      # 保存分がだめなら Secret で試し直す
+                    self.assertIsNone(err)
+                    os.environ["WEIBO_COOKIE"] = "SUB=fresh"                  # Secret を更新したら保存分は使わない
+                    used.clear()
+                    N.collect_weibo_refreshing(state, "2026-11-13T00:30:00+00:00", path=path, get_factory=factory())
+                    self.assertIn("SUB=fresh", used[0])
+                finally:
+                    N.WEIBO_ACCOUNTS = acc
+        finally:
+            if old is None:
+                os.environ.pop("WEIBO_COOKIE", None)
+            else:
+                os.environ["WEIBO_COOKIE"] = old
+
     def test_weibo_auth_error(self):
         state = {"sources": {}, "items": []}
         def deny(url):
