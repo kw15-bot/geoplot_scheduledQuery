@@ -206,6 +206,22 @@ class News(unittest.TestCase):
                   "#AI长征新唱三军会师尽开颜#【#AI歌曲长征新唱#第14集】1936年10月，红一、红二、红四方面军"]:
             self.assertIsNone(N.weibo_notify(t), t)
 
+    def test_weibo_login_expired_minus100(self):
+        # ログインが切れたときの応答 {"ok": -100, "url": login.php} は cookie 切れとして扱う(2026-11-13)
+        import io
+        class R(io.BytesIO):
+            def __enter__(self): return self
+            def __exit__(self, *a): pass
+            def geturl(self): return "https://weibo.com/ajax/statuses/mymblog"
+        body = json.dumps({"ok": -100, "url": "https://weibo.com/login.php?url=https%3A%2F%2Fweibo.com%2F"}).encode()
+        old = N.urllib.request.urlopen
+        N.urllib.request.urlopen = lambda *a, **k: R(body)
+        try:
+            with self.assertRaises(N.WeiboAuthError):
+                N._weibo_get(N.WEIBO_LIST.format(uid="1"), "SUB=x")
+        finally:
+            N.urllib.request.urlopen = old
+
     def test_weibo_auth_error(self):
         state = {"sources": {}, "items": []}
         def deny(url):
