@@ -1,0 +1,25 @@
+name: NOTAM history probe
+
+# 2026-11-13 調査用: NOTAM の過去分(2026-01〜)を NMS-API / FAA NOTAM Search から取れるかを調べる
+# (dev/notam_history_probe.py)。件数・状態コードをログに出すだけで、何もコミットしない。手動実行のみ。
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Probe
+        env:
+          NMS_ENV: ${{ vars.NMS_ENV || 'staging' }}
+          NMS_CLIENT_ID: ${{ secrets.NMS_CLIENT_ID }}
+          NMS_CLIENT_SECRET: ${{ secrets.NMS_CLIENT_SECRET }}
+        run: python dev/notam_history_probe.py
