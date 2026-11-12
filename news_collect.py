@@ -50,6 +50,7 @@ import datetime as dt
 import http.cookiejar
 import time
 import email.utils
+import hashlib
 import html
 import io
 import json
@@ -668,13 +669,46 @@ class WeiboAuthError(Exception):
     """ログインが切れている(cookie 切れ)・cookie が無い。"""
 
 
-def _weibo_get(url, cookie, uid=WEIBO_UID):
+class WeiboCookies:
+    """微博の cookie(名前→値)。応答の Set-Cookie で新しい値が来たら差し替える(2026-11-13、cookie の自動延長の試み。
+    ログインの cookie は約1週間で切れるので、微博が返す新しい cookie を次の収集で使えば延びるかを試す)。"""
+    def __init__(self, text):
+        self.c = {}
+        for part in (text or "").split(";"):
+            if "=" in part:
+                k, v = part.strip().split("=", 1)
+                if k:
+                    self.c[k] = v
+        self.changed = set()
+
+    def header(self):
+        return "; ".join(f"{k}={v}" for k, v in self.c.items())
+
+    def update(self, set_cookies):
+        for sc in set_cookies or []:
+            first, _, attrs = sc.partition(";")
+            if "=" not in first:
+                continue
+            k, v = first.strip().split("=", 1)
+            low = attrs.lower()
+            if not k or not v or v == "deleted" or "max-age=0" in low or "expires=thu, 01-jan-1970" in low:
+                continue
+            if self.c.get(k) != v:
+                self.c[k] = v
+                self.changed.add(k)
+
+
+def _weibo_get(url, cookie, uid=WEIBO_UID, jar=None):
+    if jar is not None:
+        cookie = jar.header()
     xsrf = next((c.split("=", 1)[1] for c in cookie.split("; ") if c.startswith("XSRF-TOKEN=")), "")
     headers = dict(HEADERS, **{"Accept": "application/json, text/plain, */*", "Referer": f"https://weibo.com/u/{uid}",
                                "Cookie": cookie, "X-Requested-With": "XMLHttpRequest"}, **({"X-XSRF-TOKEN": xsrf} if xsrf else {}))
     try:
         with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=TIMEOUT) as r:
             text = r.read().decode("utf-8", errors="replace")
+            if jar is not None:
+                jar.update(r.headers.get_all("Set-Cookie"))
     except urllib.error.HTTPError as e:
         if e.code in (401, 403):
             raise WeiboAuthError(f"HTTP {e.code}") from e
@@ -733,10 +767,49 @@ def weibo_notify(text):
     return None
 
 
-def collect_weibo(state, now, get=None, cookie=None, accounts=None):
+def collect_weibo_refreshing(state, now, path=None, get_factory=None):
+    """cookie の自動延長を試しながら微博を読む(2026-11-13)。前回の収集で微博が返した新しい cookie を path(GitHub Actions の
+    キャッシュ。リポジトリには置かない)に保存しておき、Secret WEIBO_COOKIE が同じ間はそれを使う。保存した cookie で
+    ログイン切れになったら、Secret の cookie でもう一度試す。Secret を更新したら(ハッシュが変わる)保存分は捨てる。"""
+    secret = os.environ.get("WEIBO_COOKIE", "").strip()
+    path = Path(path or os.environ.get("WEIBO_COOKIE_FILE", "") or "") if (path or os.environ.get("WEIBO_COOKIE_FILE")) else None
+    shash = hashlib.sha256(secret.encode()).hexdigest()
+    saved = None
+    if path and path.exists():
+        try:
+            d = json.loads(path.read_text(encoding="utf-8"))
+            if d.get("secret_hash") == shash and d.get("cookie"):
+                saved = d
+        except ValueError:
+            pass
+    get_factory = get_factory or (lambda jar: (lambda url: _weibo_get(url, None, jar=jar)))
+    tries = [(saved["cookie"], "保存した cookie")] if saved else []
+    tries.append((secret, "Secret の cookie"))
+    for i, (cookie, label) in enumerate(tries):
+        jar = WeiboCookies(cookie)
+        added, err = collect_weibo(state, now, get=get_factory(jar), cookie=cookie, gap=PAGE_GAP)
+        auth_failed = bool(err) and err.startswith("ログインが切れている")
+        if auth_failed and i + 1 < len(tries):
+            print(f"[weibo] {label}でログイン切れ。Secret の cookie でもう一度試す", file=sys.stderr)
+            continue
+        if path and not auth_failed:
+            new = jar.header()
+            if not saved or new != saved.get("cookie"):
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text(json.dumps({"secret_hash": shash, "cookie": new, "updated_at": now,
+                                            "since": (saved or {}).get("since") if label == "保存した cookie" else now},
+                                           ensure_ascii=False), encoding="utf-8")
+            print(f"[weibo] {label}を使用。微博が新しくした cookie: {sorted(jar.changed) or 'なし'}"
+                  f"(Secret 更新からの日数の目安: since={(saved or {}).get('since') if label == '保存した cookie' else now})",
+                  file=sys.stderr)
+        return added, err
+    return 0, "微博: cookie がない"
+
+
+def collect_weibo(state, now, get=None, cookie=None, accounts=None, gap=None):
     """見張る微博のアカウント(WEIBO_ACCOUNTS)の最新の投稿(1ページ目、20件ほど)を読んで items に足す。(新しく足した数, エラー or None)。"""
     cookie = (cookie if cookie is not None else os.environ.get("WEIBO_COOKIE", "")).strip()
-    gap = PAGE_GAP if get is None else 0
+    gap = gap if gap is not None else (PAGE_GAP if get is None else 0)
     get = get or (lambda url: _weibo_get(url, cookie))
     accounts = accounts or WEIBO_ACCOUNTS
     meta = state["sources"].setdefault("weibo", {})
@@ -1067,7 +1140,7 @@ def main(argv=None):
         summary["jfjb"] = {"days": read, "new": added, "error": "; ".join(errs) or None}
         if errs:
             print(f"[WARN] jfjb: {'; '.join(errs)}", file=sys.stderr)
-        added, err = collect_weibo(state, now)
+        added, err = collect_weibo_refreshing(state, now)
         ok += err is None
         summary["weibo"] = {"new": added, "error": err}
         if err:
