@@ -1030,7 +1030,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.2.5';
+const APP_VERSION = 'v5.2.6';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1130,6 +1130,7 @@ const APP_VERSION = 'v5.2.5';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.2.6: 微博は直近1か月の投稿だけ写真を出し、それより前は本文だけ(写真の案内も出さない)
 // v5.2.5: key の入力欄が出なかった・キャンセルしたとき、下地をタップすると聞き直す(iPhone のホーム画面のアプリで空の画面になった)
 // v5.2.4: スマホの通知から開いたとき、その通知の新着を🔔に出して欄を開く(それまでは別の保存場所なので0件だった)
 // v5.2.3: 解放军报タブの日数は数字だけ(「日」を付けない。ユーザー指示)
@@ -3321,7 +3322,7 @@ function renderNewsList(){
       // 写真は保存したもの(pics_file)を後から読んで入れる。まだ保存していない投稿は枚数だけ
       const pics = it.pics_file ? `<div class="wb-pics" data-pics="${esc(it.id)}"></div>` : '';
       const wb = weiboTitleBody(it);
-      const picNote = !it.pics_file && (it.pics || []).length ? `<span class="wb-video">写真${it.pics.length}枚（元の投稿で見る）</span>` : '';
+      const picNote = !it.pics_file && !weiboPicsGone(it) && (it.pics || []).length ? `<span class="wb-video">写真${it.pics.length}枚（元の投稿で見る）</span>` : '';
       return `<a class="news-item weibo" href="${href}" data-weibo="${esc(it.id)}">${site}
         <div class="wb-head"><span class="wb-name">${esc(it.account || '东部战区')}</span><span class="news-date" title="微博の投稿日時(日本時間。元は北京時間 ${esc(newsLocalTime(it.published))})">${esc(newsJst(it.published))} JST</span></div>
         <div class="news-title">${flag}${esc(wb.title)}</div>
@@ -3341,6 +3342,10 @@ function renderNewsList(){
   }).join('');
   fillWeiboPics($('#newsList'), 'img');
   markNewsMore($('#newsList'));
+}
+// v5.2.6: 1か月(30日)より前の投稿は写真を消している(収集側 WEIBO_PICS_KEEP_DAYS)ので、本文だけを出す(「写真N枚」の案内も出さない)
+function weiboPicsGone(it){
+  return !!it.pics_expired || (Date.now() - Date.parse(it.published || 0) > 30 * 24 * 3600 * 1000);
 }
 // v5.2.0: 微博の投稿を「見出し＋本文」に分ける。頭が【…】ならその中身(# を除く)を見出しに、無ければ最初の行(長ければ60字で切り、残りは本文へ)
 function weiboTitleBody(it){
@@ -3429,7 +3434,8 @@ function renderNewsArticle(it, art){
   const src = `<div class="na-src">出典: ${esc(art.site || '')}　${esc(art.url || it.url || '')}</div>`;
   if (it.source === 'weibo'){
     const pics = it.pics_file ? `<div class="na-wbpics" data-pics="${esc(it.id)}"></div>`
-      : (it.pics || []).length ? `<div class="na-imgerr">写真${it.pics.length}枚（まだ保存していません。元の投稿で見てください）</div>` : '';
+      
+      : !weiboPicsGone(it) && (it.pics || []).length ? `<div class="na-imgerr">写真${it.pics.length}枚（まだ保存していません。元の投稿で見てください）</div>` : '';
     const ps = String(it.text || it.title || '').split(/\n+/).filter(x => x.trim()).map(x => `<p class="na-p">${esc(x)}</p>`).join('');
     doc.innerHTML = `<div class="na-site"><span>${esc(it.account || '东部战区')} 微博</span><span>${esc(newsJst(it.published))} JST</span></div>
       ${ps}
