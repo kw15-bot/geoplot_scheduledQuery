@@ -9,6 +9,7 @@ import json
 import os
 import re
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -58,7 +59,38 @@ def visitor():
     print("visitor cookies:", sorted(c.name for c in jar))
 
 
+def check_collector_api():
+    """2026-11-13: 収集(news_collect.collect_weibo)と同じ API・同じ cookie で投稿一覧を読み、応答の形だけを出す
+    (中身の文・cookie は出さない)。「投稿を1件も読み取れなかった」の原因調べ用。"""
+    if not LOGIN_COOKIE:
+        return
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+    import news_collect as N
+    for acct in N.WEIBO_ACCOUNTS:
+        url = N.WEIBO_LIST.format(uid=acct["uid"])
+        xsrf = _XSRF
+        hdr = {"User-Agent": UA, "Accept": "application/json, text/plain, */*", "Referer": f"https://weibo.com/u/{acct['uid']}",
+               "Cookie": LOGIN_COOKIE, "X-Requested-With": "XMLHttpRequest", **({"X-XSRF-TOKEN": xsrf} if xsrf else {})}
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=hdr), timeout=30) as r:
+                body = r.read().decode("utf-8", "replace")
+                final = r.geturl()
+            print(f"[collector api] {acct['name']}: HTTP 200 final={final[:60]} len={len(body)}")
+            try:
+                d = json.loads(body)
+                data = d.get("data") if isinstance(d.get("data"), dict) else {}
+                print("   ok=", d.get("ok"), "keys=", sorted(d)[:10], "data.keys=", sorted(data)[:10],
+                      "list=", len(data.get("list") or []), "total=", data.get("total"), "msg=", str(d.get("msg") or d.get("message") or "")[:80])
+            except ValueError:
+                print("   not JSON; head:", re.sub(r"\s+", " ", body[:200]))
+        except urllib.error.HTTPError as e:
+            print(f"[collector api] {acct['name']}: HTTP {e.code}")
+        except Exception as e:  # noqa: BLE001
+            print(f"[collector api] {acct['name']}: {type(e).__name__}: {e}")
+
+
 def main():
+    check_collector_api()
     q = urllib.parse.quote(NAME)
     print("login cookie:", "あり" if LOGIN_COOKIE else "なし", "(SUB あり)" if "SUB=" in LOGIN_COOKIE else "")
     # 1) ログインも cookie も無しで
