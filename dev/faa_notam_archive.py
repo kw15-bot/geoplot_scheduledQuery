@@ -79,22 +79,38 @@ def search_retry(form, tries=3):
     return st, t
 
 
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+def search_noredirect(form):
+    """転送(リダイレクト)をたどらずに、状態コードと転送先(Location)を返す。"""
+    op = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar), _NoRedirect())
+    req = urllib.request.Request(BASE + "search", data=urllib.parse.urlencode(form).encode(), method="POST", headers={
+        "User-Agent": UA, "Referer": BASE + "nsapp.html", "X-Requested-With": "XMLHttpRequest",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"})
+    try:
+        with op.open(req, timeout=60) as r:
+            return r.status, None, r.read().decode("utf-8", "replace")
+    except urllib.error.HTTPError as e:
+        return e.code, e.headers.get("Location"), e.read().decode("utf-8", "replace")
+    except Exception as e:  # noqa: BLE001
+        return 0, None, f"{type(e).__name__}: {e}"
+
+
 def probe():
-    """2回目(2026-11-13): 画面の項目名は archiveDate / archiveDesignator / searchType。過去検索の searchType の番号を探す。"""
-    log("=== 今の NOTAM(北京 FIR、比較用) ===")
-    st, t = search_retry({"searchType": "0", "designatorsForLocation": "ZBPE", "notamsOnly": "false",
-                          "offset": "0", "notamsPerPage": "30"})
-    log(describe(st, t))
-    log("=== 過去検索 2026-01-10 × 北京 FIR(ZBPE)、searchType を 1〜9 で試す ===")
-    for stype in range(1, 10):
+    """3回目(2026-11-13): 過去検索は別のアドレスへ転送され、その名前が引けない(getaddrinfo failed)。転送先を調べる。"""
+    for stype in ("0", "6"):
+        form = {"searchType": stype, "designatorsForLocation": "ZBPE" if stype == "0" else "",
+                "archiveDate": "" if stype == "0" else "01/10/2026", "archiveDesignator": "" if stype == "0" else "ZBPE",
+                "notamsOnly": "false", "offset": "0", "notamsPerPage": "30"}
+        st, loc, body = search_noredirect(form)
+        log(f"searchType={stype}: HTTP {st} 転送先={loc!r} 本文の先頭={re.sub(r'\s+', ' ', body[:300])!r}")
         time.sleep(2)
-        form = {"searchType": str(stype), "designatorsForLocation": "", "archiveDate": "01/10/2026",
-                "archiveDesignator": "ZBPE", "notamsOnly": "false", "offset": "0", "notamsPerPage": "30"}
-        st, t = search_retry(form)
-        log(f"searchType={stype} →", describe(st, t))
     with open("probe_result.txt", "w", encoding="utf-8") as f:
         f.write("\n".join(OUT) + "\n")
-    print("\nprobe_result.txt に保存しました。この画面の文字をコピーして Claude に渡してください。")
+    print("\nこの画面の文字をコピーして Claude に渡してください。")
 
 
 if __name__ == "__main__":
