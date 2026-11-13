@@ -1,0 +1,67 @@
+name: NOTAM import
+
+# 2026-11-13: FAA NOTAM Search の Archive Search の書き出しから変換した過去の NOTAM(notam_import/*.json.enc)を、
+# data ブランチの notam_out/archive に取り込む(notam_xls_import.py merge、HANDOFF_NOTAM.md §33)。
+# 既にある NOTAM(番号+開始時刻)は足さないので、何度実行してもよい。手動実行のみ。
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: notam-collect          # NOTAM の収集と同時に動かさない
+  cancel-in-progress: false
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: data
+      - name: Get code from main
+        run: |
+          git fetch --depth=1 origin main
+          git archive FETCH_HEAD -- . ':(exclude).gitignore' ':(exclude)notam_out' ':(exclude)msa_out' ':(exclude)news_out' | tar -x
+          echo "START_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Import
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+        run: |
+          pip install -q cryptography
+          python data_crypt.py decrypt notam_out
+          for f in notam_import/*.json.enc; do
+            [ -e "$f" ] || continue
+            echo "== $f"
+            python notam_xls_import.py merge "$f" --out-dir notam_out
+          done
+      - name: Commit
+        env:
+          VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
+        run: |
+          python data_crypt.py encrypt notam_out/archive
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add notam_out/archive
+          if git diff --staged --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "Import past NOTAMs from FAA archive search [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin data && git push origin HEAD:data && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 5))
+          done
+          exit 1
+      - name: Request Pages deploy
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ "$(git rev-parse HEAD)" != "$START_SHA" ]; then
+            gh workflow run pages-deploy.yml -R "$GITHUB_REPOSITORY" --ref main || echo "could not request deploy"
+          fi
