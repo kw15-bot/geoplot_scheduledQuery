@@ -26,3 +26,6 @@ __pycache__/
 /notam_out/
 /msa_out/
 /news_out/
+
+# 2026-11-13: NOTAM の過去分の取り込み(notam_xls_import.py)。暗号化した *.json.enc だけを置く
+/notam_import/*.json
