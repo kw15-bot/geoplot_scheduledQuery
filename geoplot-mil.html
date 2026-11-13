@@ -1030,7 +1030,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.2.6';
+const APP_VERSION = 'v5.3.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1130,6 +1130,7 @@ const APP_VERSION = 'v5.2.6';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.3.0: 手動タブで貼った NOTAM・航行警報の文面を、収集と同じ Python の読み取り(Pyodide)で図形にする(見た目は同じ)
 // v5.2.6: 微博は直近1か月の投稿だけ写真を出し、それより前は本文だけ(写真の案内も出さない)
 // v5.2.5: key の入力欄が出なかった・キャンセルしたとき、下地をタップすると聞き直す(iPhone のホーム画面のアプリで空の画面になった)
 // v5.2.4: スマホの通知から開いたとき、その通知の新着を🔔に出して欄を開く(それまでは別の保存場所なので0件だった)
@@ -2416,7 +2417,7 @@ function plotOneGroupOnLayer(points, layerGroup, opts={}){
   // literally draws a self-intersecting "bowtie" instead of the intended rectangle
   // (see 辽航警345/26). This only reorders the closed-polygon case; open lines/points
   // are left in their original order since sequence can matter there.
-  const orderedPoints = (opts.close && points.length > 2) ? orderRingPoints(points) : points;
+  const orderedPoints = (opts.close && points.length > 2 && !opts.keepOrder) ? orderRingPoints(points) : points;
   const latlngs = orderedPoints.map(p=>[p.lat,p.lon]);
   const connect = opts.connect && points.length > 1;
   const close = opts.close && points.length > 2;
@@ -2466,7 +2467,10 @@ function plotGroupsOnLayer(groups, layerGroup, opts={}){
   let allLatLngs = [];
   groups.forEach(grp => {
     if (!grp.length) return;
-    allLatLngs = allLatLngs.concat(plotOneGroupOnLayer(grp, layerGroup, opts));
+    // v5.3.0: 収集と同じ読み取り(manual_parse.py)で作ったグループは、点・線・面の別をグループごとに持つ(チェックボックスより優先)
+    const o = grp._shape ? { ...opts, connect: grp._shape !== 'point', close: grp._shape === 'area', keepOrder: true,
+                             label: grp._label ? shortLabel(grp._label) : opts.label } : opts;
+    allLatLngs = allLatLngs.concat(plotOneGroupOnLayer(grp, layerGroup, o));
   });
   return allLatLngs;
 }
@@ -2482,11 +2486,11 @@ function extractPlotTitle(text){
   return m ? m[0] : null;
 }
 
-function addHistoryEntry(groups, connect, close, sourceText){
+function addHistoryEntry(groups, connect, close, sourceText, titleOverride){
   plotSeq += 1;
   const id = 'h'+plotSeq;
   const lg = L.layerGroup().addTo(manualLayerGroup);
-  const title = extractPlotTitle(sourceText);
+  const title = titleOverride || extractPlotTitle(sourceText);
   const points = groups.flat();
   const displayTitle = title || `プロット #${plotSeq}`;
   // raw_text is exactly what the person pasted, unmodified -- manual mode never parses/
@@ -2524,9 +2528,81 @@ function addHistoryEntry(groups, connect, close, sourceText){
 
 let currentSourceText = ''; // last-plotted raw text, used by the Shp export for the title/filename (via extractPlotTitle)
 
-$('#btnPlot').addEventListener('click', ()=>{
+// v5.3.0: 貼り付けた文章が NOTAM(Q)行のある ICAO 形式)や航行警報(中国海事局の文面)なら、収集と同じ Python の読み取り
+// (notam_cn_collect.py・msa_scraper.py を manual_parse.py 経由)をブラウザの中(Pyodide)で動かして図形にする。
+// 初回だけ Pyodide(約10MB)を読み込むので数秒かかる。読み込めないとき・どちらの定型でもないときは、今までの読み取りで描く。
+const MANUAL_PY_FILES = ['manual_parse.py', 'msa_scraper.py', 'notam_cn_collect.py', 'notam_paste_import.py',
+  'notam_route_segments.py', 'aip_chart_areas.py'];
+const PYODIDE_BASE = 'https://cdn.jsdelivr.net/pyodide/v0.26.4/full/';
+const MANUAL_NOTAM_RE = /\bQ\)\s*[A-Z]{4}\s*\/\s*Q[A-Z]{4}/;
+const MANUAL_MSA_RE = /航行?警|海事局|北纬|东经|北緯|東経|禁止驶入|实弹|军事/;
+let manualPy = null;
+function loadManualPy(){
+  if (!manualPy){
+    manualPy = (async ()=>{
+      if (!window.loadPyodide){
+        await new Promise((ok, ng)=>{
+          const sc = document.createElement('script');
+          sc.src = PYODIDE_BASE + 'pyodide.js';
+          sc.onload = ok; sc.onerror = () => ng(new Error('Pyodide を読み込めませんでした'));
+          document.head.appendChild(sc);
+        });
+      }
+      const py = await loadPyodide({ indexURL: PYODIDE_BASE });
+      for (const f of MANUAL_PY_FILES){
+        const r = await fetch(f + '?v=' + encodeURIComponent(APP_VERSION), { cache:'no-store' });
+        if (!r.ok) throw new Error(`${f} を読めません(HTTP ${r.status})`);
+        py.FS.writeFile(f, await r.text());
+      }
+      py.runPython("import sys\nif '.' not in sys.path:\n    sys.path.insert(0, '.')\nimport manual_parse");
+      return py;
+    })().catch(e => { manualPy = null; throw e; });
+  }
+  return manualPy;
+}
+async function parseWithCollectors(text){
+  const py = await loadManualPy();
+  py.globals.set('_mp_text', text);
+  return JSON.parse(py.runPython('manual_parse.parse(_mp_text)'));
+}
+// GeoJSON の図形 → 手動タブのグループ(点の配列。_shape に点・線・面の別)
+function featuresToGroups(features, kind){
+  const fmt = kind === 'notam' ? 'NOTAM' : 'MSA';
+  const pt = c => ({ lat: c[1], lon: c[0], raw: `${c[1].toFixed(5)}, ${c[0].toFixed(5)}`, fmt });
+  const groups = [];
+  let label = null;
+  const add = (coords, shape) => { const g = coords.map(pt); g._shape = shape; g._label = label; groups.push(g); };
+  features.forEach(f => {
+    label = (f.properties || {}).label || null;
+    const g = f.geometry || {};
+    if (g.type === 'Point') add([g.coordinates], 'point');
+    else if (g.type === 'LineString') add(g.coordinates, 'line');
+    else if (g.type === 'MultiLineString') g.coordinates.forEach(l => add(l, 'line'));
+    else if (g.type === 'Polygon') add(g.coordinates[0].slice(0, -1), 'area');
+    else if (g.type === 'MultiPolygon') g.coordinates.forEach(pl => add(pl[0].slice(0, -1), 'area'));
+  });
+  return groups;
+}
+
+$('#btnPlot').addEventListener('click', async ()=>{
   const text = $('#coordInput').value;
-  const groups = parseCoordinateGroups(text);
+  let groups = null, smartTitle = null;
+  if (MANUAL_NOTAM_RE.test(text) || MANUAL_MSA_RE.test(text)){
+    const btn = $('#btnPlot'), label = btn.textContent;
+    btn.disabled = true; btn.textContent = '読み取り中…';
+    try{
+      const res = await parseWithCollectors(text);
+      if (res.kind && res.features.length){
+        groups = featuresToGroups(res.features, res.kind);
+        smartTitle = [...new Set(res.features.map(f => (f.properties || {}).label).filter(Boolean))].join('・') || null;
+      }
+    }catch(e){
+      console.warn('収集と同じ読み取りが使えないので、簡易の読み取りで描きます:', e);
+    }finally{
+      btn.disabled = false; btn.textContent = label;
+    }
+  }
+  if (!groups) groups = parseCoordinateGroups(text);
   const points = groups.flat();
   currentPoints = points;
   currentGroups = groups;
@@ -2534,10 +2610,10 @@ $('#btnPlot').addEventListener('click', ()=>{
   renderCoordList(points);
   const connect = $('#chkConnect').checked;
   const close = $('#chkClose').checked;
-  const title = extractPlotTitle(text);
+  const title = smartTitle || extractPlotTitle(text);
   plotGroupsOnLayer(groups, manualLayer, { connect, close, label: title ? shortLabel(title) : null });
   if (points.length){
-    addHistoryEntry(groups, connect, close, text);
+    addHistoryEntry(groups, connect, close, text, smartTitle);
     const b = L.latLngBounds(points.map(p=>[p.lat,p.lon]));
     map.fitBounds(b.pad(0.35));
   }
