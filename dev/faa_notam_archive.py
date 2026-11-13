@@ -70,44 +70,31 @@ def describe(st, text):
             f"error={str(d.get('error') or '')[:120]!r} 例={head}")
 
 
+def search_retry(form, tries=3):
+    for k in range(tries):
+        st, t = search(form)
+        if st:                       # 0 = 通信エラー(名前解決の失敗など)はやり直す
+            return st, t
+        time.sleep(5 * (k + 1))
+    return st, t
+
+
 def probe():
-    log("=== 1. 画面の読み込み ===")
-    st, html = get(BASE + "nsapp.html")
-    log("nsapp.html:", st, len(html), "bytes")
-    scripts = re.findall(r'<script[^>]+src="([^"]+)"', html)
-    log("scripts:", scripts[:20])
-    log("=== 2. 画面のプログラムから archive に関係する部分を探す ===")
-    for src in scripts:
-        url = urllib.parse.urljoin(BASE, src)
-        if "jquery" in src.lower() or "bootstrap" in src.lower():
-            continue
-        st, js = get(url)
-        hits = [m.start() for m in re.finditer(r"(?i)archive", js)]
-        log(f"- {src}: {st} {len(js)} bytes, archive の出現 {len(hits)} 回")
-        for pos in hits[:25]:
-            log("   ...", re.sub(r"\s+", " ", js[max(0, pos - 150):pos + 200]))
-    log("=== 3. 今の NOTAM を検索(北京 FIR) ===")
-    st, t = search({"searchType": "0", "designatorsForLocation": "ZBPE", "notamsOnly": "false",
-                    "offset": "0", "notamsPerPage": "30"})
+    """2回目(2026-11-13): 画面の項目名は archiveDate / archiveDesignator / searchType。過去検索の searchType の番号を探す。"""
+    log("=== 今の NOTAM(北京 FIR、比較用) ===")
+    st, t = search_retry({"searchType": "0", "designatorsForLocation": "ZBPE", "notamsOnly": "false",
+                          "offset": "0", "notamsPerPage": "30"})
     log(describe(st, t))
-    log("=== 4. 過去の検索を何通りか試す(2026-01-10、北京 FIR) ===")
-    variants = [
-        {"searchType": "0", "designatorsForLocation": "ZBPE", "archiveDate": "01/10/2026",
-         "archiveDesignator": "ZBPE", "notamsOnly": "false", "offset": "0", "notamsPerPage": "30"},
-        {"searchType": "6", "archiveDate": "01/10/2026", "archiveDesignator": "ZBPE",
-         "offset": "0", "notamsPerPage": "30"},
-        {"searchType": "7", "archiveDate": "01/10/2026", "archiveDesignator": "ZBPE",
-         "offset": "0", "notamsPerPage": "30"},
-        {"searchType": "0", "designatorsForLocation": "ZBPE", "archiveDate": "2026-01-10",
-         "offset": "0", "notamsPerPage": "30"},
-    ]
-    for v in variants:
+    log("=== 過去検索 2026-01-10 × 北京 FIR(ZBPE)、searchType を 1〜9 で試す ===")
+    for stype in range(1, 10):
         time.sleep(2)
-        st, t = search(v)
-        log(json.dumps(v, ensure_ascii=False), "→", describe(st, t))
+        form = {"searchType": str(stype), "designatorsForLocation": "", "archiveDate": "01/10/2026",
+                "archiveDesignator": "ZBPE", "notamsOnly": "false", "offset": "0", "notamsPerPage": "30"}
+        st, t = search_retry(form)
+        log(f"searchType={stype} →", describe(st, t))
     with open("probe_result.txt", "w", encoding="utf-8") as f:
         f.write("\n".join(OUT) + "\n")
-    print("\nprobe_result.txt に保存しました。このファイルを Claude に渡してください。")
+    print("\nprobe_result.txt に保存しました。この画面の文字をコピーして Claude に渡してください。")
 
 
 if __name__ == "__main__":
