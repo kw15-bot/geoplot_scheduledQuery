@@ -1030,7 +1030,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.3.0';
+const APP_VERSION = 'v5.3.1';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1130,6 +1130,7 @@ const APP_VERSION = 'v5.3.0';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.3.1: PDF では参考レイヤーの NOTAM（All）・航行警報（All）も状態によらず赤で撮る。航行警報も同じ範囲の図形はラベルを「・」でまとめる
 // v5.3.0: 手動タブで貼った NOTAM・航行警報の文面を、収集と同じ Python の読み取り(Pyodide)で図形にする(見た目は同じ)
 // v5.2.6: 微博は直近1か月の投稿だけ写真を出し、それより前は本文だけ(写真の案内も出さない)
 // v5.2.5: key の入力欄が出なかった・キャンセルしたとき、下地をタップすると聞き直す(iPhone のホーム画面のアプリで空の画面になった)
@@ -2004,8 +2005,10 @@ const OVERLAYS = [
   // NOTAMモードに航行警報。エリアごとの状態(getGroupStatus: active/notice/archive、期間不明は active 扱い)で選ぶ
   { id: 'msaAll', modes: ['notam'], dynamic: () => {
       const sel = overlaySubSelection('msaAll');
-      return L.layerGroup([...warningsByUrl.values()].filter(it => it.groups && it.groups.length)
-        .flatMap(it => msaItemShapes(it, null, gs => sel.has(gs === 'unknown' ? 'active' : gs))));
+      const shapes = [...warningsByUrl.values()].filter(it => it.groups && it.groups.length)
+        .flatMap(it => msaItemShapes(it, null, gs => sel.has(gs === 'unknown' ? 'active' : gs)));
+      mergeShapeLabels(shapes);
+      return L.layerGroup(shapes);
     } },
   // FIR境界(2026-09-30)。ICAOのFIR図(2020-12-18版、ArcGIS Online公開のもの)から作った公開データなので
   // 暗号化しない(plain、fir_build_layer.py → layers/fir.geojson)。ラベルは ICAOCODE
@@ -2777,6 +2780,24 @@ function closePdfPanel(){
 }
 $('#btnPdfCancel').addEventListener('click', closePdfPanel);
 
+// v5.3.1: PDF を撮るとき、参考レイヤーとして重ねた他モードの全件(航行警報タブの「NOTAM（All）」・NOTAMタブの「航行警報（All）」)も、
+// 状態(Upcoming・Archive など)によらず Active と同じ赤で撮る(ユーザー指示)。元の見た目は restyled に覚え、撮り終えたら戻す
+function recolorStatusOverlaysForPdf(restyled){
+  const red = statusColor('active');
+  ['notamAll', 'msaAll'].forEach(id => {
+    const o = overlayById(id);
+    if (!o || !map.hasLayer(o.layer)) return;
+    const walk = lyr => {
+      if (lyr.eachLayer && !lyr.setStyle){ lyr.eachLayer(walk); return; }
+      if (lyr.eachLayer && lyr.setStyle && lyr.getLayers){ lyr.eachLayer(walk); return; }   // L.geoJSON は中の図形ごとに
+      if (!lyr.setStyle) return;
+      restyled.push([lyr, { color: lyr.options.color, fillColor: lyr.options.fillColor, opacity: lyr.options.opacity }]);
+      lyr.setStyle({ color: red.line, fillColor: red.fill, opacity: 0.9 });
+    };
+    o.layer.eachLayer(walk);
+  });
+}
+
 async function generatePdf(){
   if (!pdfTarget) return;
   if (typeof html2canvas === 'undefined' || !window.jspdf){
@@ -2878,6 +2899,7 @@ async function generatePdf(){
       map.once('moveend', resolve);
       setTimeout(resolve, 1000); // safety fallback in case moveend doesn't fire for some reason
     });
+    recolorStatusOverlaysForPdf(restyled);
     await new Promise(r=>setTimeout(r, 200)); // let the DOM/tiles settle after hiding overlays
 
     // Capturing #map directly (tiles + shapes together) now that shapes render via
@@ -3035,6 +3057,7 @@ async function generateMultiPdf(){
         sh.setStyle({ color: activeColor.line, fillColor: activeColor.fill, opacity: 0.9 });
       }));
     }
+    recolorStatusOverlaysForPdf(restyled);
     await new Promise(resolve=>{
       if (!map._animatingZoom && !(map._panAnim && map._panAnim._inProgress)) return resolve();
       map.once('moveend', resolve);
@@ -4497,9 +4520,36 @@ function msaItemShapes(it, onClick, groupFilter){
       shape.bindTooltip(label, { permanent:true, direction:'center', className:'poly-label' });
     }
     if (onClick) shape.on('click', onClick);
+    // v5.3.1: 範囲がまったく同じ図形のラベルをまとめるための目印(mergeShapeLabels)
+    shape._mlabel = label;
+    shape._mtip = grp.length === 1 ? { permanent:true, direction:'top', offset:[0,-6], className:'poly-label' }
+                                   : { permanent:true, direction:'center', className:'poly-label' };
+    shape._mkey = JSON.stringify(grp.map(p => [+p.lat.toFixed(6), +p.lon.toFixed(6)]));
     shapes.push(shape);
   });
   return shapes;
+}
+// v5.3.1: 航行警報でも、範囲がまったく同じ図形が複数あるとき(同じ海域の警報が続けて出た等)は、NOTAM と同じく
+// ラベルを1つにまとめ(「鲁航警1/26・鲁航警2/26」)最初の図形にだけ付ける(ユーザー指示)。shapes は今地図に出ているもの
+function mergeShapeLabels(shapes){
+  const groups = new Map();
+  shapes.forEach(sh => {
+    if (!sh._mkey) return;
+    if (!groups.has(sh._mkey)) groups.set(sh._mkey, []);
+    groups.get(sh._mkey).push(sh);
+  });
+  groups.forEach(list => {
+    const labels = [...new Set(list.map(sh => sh._mlabel).filter(Boolean))];
+    list.forEach((sh, i) => {
+      sh.unbindTooltip();
+      if (i === 0 && labels.length) sh.bindTooltip(labels.join('・'), sh._mtip);
+    });
+  });
+}
+function mergeMsaLabelsOnMap(){
+  const onMap = [];
+  warningsByUrl.forEach(it => (it._shapes || []).forEach(sh => { if (msaLayer.hasLayer(sh)) onMap.push(sh); }));
+  mergeShapeLabels(onMap);
 }
 
 function setItemMapVisible(it, visible){
@@ -4509,6 +4559,7 @@ function setItemMapVisible(it, visible){
     if (visible) s.addTo(msaLayer);
     else msaLayer.removeLayer(s);
   });
+  mergeMsaLabelsOnMap();
 }
 
 
@@ -4652,6 +4703,7 @@ function importGeoJSON(text, sourceLabel='インポート'){
     if (it.url) importedItems.push(it); // items without a stable url can't be tracked for "new" notifications
   });
 
+  mergeMsaLabelsOnMap();
   registerImportedItemsForNotifications(importedItems);
   refreshDynamicOverlay('msaAll');
   logLine(`インポート完了: ${n}件の警告・${totalPts}点をプロットしました（${sourceLabel}）`, 'l-ok');
