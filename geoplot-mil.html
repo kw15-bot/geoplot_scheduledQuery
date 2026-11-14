@@ -311,9 +311,8 @@ body.base-sat .leaflet-control-attribution{
 }
 .map-toolbar .coord-plot-input.invalid{border-color:var(--red);}
 .coord-pin{width:18px;height:26px;}
-/* レイヤー選択(NOTAMモードのみ。2026-09-29) */
+/* レイヤー選択(2026-09-29。v5.4.0 から手動モードにも FIR・ウェイポイント・航空路) */
 .app:not(.mode-notam) .notam-only{display:none;}
-.app.mode-manual .layer-control{display:none;}
 .layer-row + .layer-row{margin-top:6px;}
 /* 他モードのレイヤーにぶら下がる Active/Upcoming/Archive の選択。親が外れている間は薄くする */
 .layer-sub{display:flex;gap:10px;margin:3px 0 0 22px;font-size:11px;color:var(--text-dim);}
@@ -947,8 +946,21 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
           <label class="check-row"><input type="checkbox" id="layer-fir" data-overlay="fir"> FIR（ICAO）</label>
           <div class="layer-note err" id="layerNote-fir" hidden></div>
         </div>
-        <div class="layer-row layer-src" id="layerSrc" data-modes="notam"></div>
-        <div class="layer-row layer-src" data-modes="notam">資料: ICAO FIR（2020-12-18）</div>
+        <!-- 手動モード(v5.4.0)。チェックは NOTAMモードとは別に持つ(既定はすべてオフ) -->
+        <div class="layer-row" data-modes="manual">
+          <label class="check-row"><input type="checkbox" id="layer-routes-m" data-overlay="routes"> 航空路（中国）</label>
+          <div class="layer-note err" id="layerNote-routes-m" hidden></div>
+        </div>
+        <div class="layer-row" data-modes="manual">
+          <label class="check-row"><input type="checkbox" id="layer-points-m" data-overlay="points"> ウェイポイント（中国）</label>
+          <div class="layer-note err" id="layerNote-points-m" hidden></div>
+        </div>
+        <div class="layer-row" data-modes="manual">
+          <label class="check-row"><input type="checkbox" id="layer-fir-m" data-overlay="fir"> FIR（ICAO）</label>
+          <div class="layer-note err" id="layerNote-fir-m" hidden></div>
+        </div>
+        <div class="layer-row layer-src" id="layerSrc" data-modes="notam manual"></div>
+        <div class="layer-row layer-src" data-modes="notam manual">資料: ICAO FIR（2020-12-18）</div>
       </div>
     </div>
     <div class="measure-panel" id="measurePanel">
@@ -1030,7 +1042,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.3.1';
+const APP_VERSION = 'v5.4.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1130,6 +1142,7 @@ const APP_VERSION = 'v5.3.1';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.4.0: 手動タブにもレイヤーボタン(FIR・ウェイポイント・航空路。チェックはNOTAMタブとは別で、既定はオフ)
 // v5.3.1: PDF では参考レイヤーの NOTAM（All）・航行警報（All）も状態によらず赤で撮る。航行警報も同じ範囲の図形はラベルを「・」でまとめる
 // v5.3.0: 手動タブで貼った NOTAM・航行警報の文面を、収集と同じ Python の読み取り(Pyodide)で図形にする(見た目は同じ)
 // v5.2.6: 微博は直近1か月の投稿だけ写真を出し、それより前は本文だけ(写真の案内も出さない)
@@ -2012,7 +2025,7 @@ const OVERLAYS = [
     } },
   // FIR境界(2026-09-30)。ICAOのFIR図(2020-12-18版、ArcGIS Online公開のもの)から作った公開データなので
   // 暗号化しない(plain、fir_build_layer.py → layers/fir.geojson)。ラベルは ICAOCODE
-  { id: 'fir', modes: ['notam'], url: 'layers/fir.geojson', plain: true,
+  { id: 'fir', modes: ['notam', 'manual'], url: 'layers/fir.geojson', plain: true,
     build: data => {
       const g = L.layerGroup();
       L.geoJSON(data, {
@@ -2028,13 +2041,13 @@ const OVERLAYS = [
       });
       return g;
     } },
-  { id: 'routes', modes: ['notam'], url: 'aip/cn_routes_layer.enc',
+  { id: 'routes', modes: ['notam', 'manual'], url: 'aip/cn_routes_layer.enc',
     build: data => L.geoJSON(data, {
       style: () => ({ color: '#6f6a5e', weight: 0.6, opacity: 0.55 }),   // v3.7.1: 1 → 0.6(細く、ユーザー指示)
       onEachFeature: (f, layer) => layer.bindTooltip(f.properties.route, { sticky: true, className: 'poly-label' }),
     }) },
   // ウェイポイントは小さな塗りの点、航法施設(VOR/DME・NDB)は少し大きい白抜きの点。マウスを乗せると名前
-  { id: 'points', modes: ['notam'], url: 'aip/cn_points_layer.enc',
+  { id: 'points', modes: ['notam', 'manual'], url: 'aip/cn_points_layer.enc',
     build: data => L.geoJSON(data, {
       pointToLayer: (f, ll) => f.properties.kind === 'WPT'
         ? L.circleMarker(ll, { radius: 2.2, weight: 0, fillColor: '#6f6a5e', fillOpacity: 0.75 })
@@ -2046,6 +2059,8 @@ const OVERLAYS = [
 ];
 OVERLAYS.forEach(o => { o.layer = L.layerGroup(); o.loaded = null; });
 const overlayById = id => OVERLAYS.find(o => o.id === id);
+// そのモードでのチェック(手動モードは別のチェック #layer-<id>-m を持つ。v5.4.0)
+const overlayCheck = (o, mode) => $(`#layer-${o.id}${mode === 'manual' ? '-m' : ''}`);
 // ぶら下がりのチェックで選ばれている状態(active/upcoming(notice)/archive)
 function overlaySubSelection(id){
   return new Set($$(`#layerPanel input[data-sub="${id}"]:checked`).map(x => x.value));
@@ -2141,12 +2156,14 @@ function loadOverlay(o){
       : decryptLayerFile(o.url);
     o.loaded = get.then(({ data }) => {
       o.build(data).addTo(o.layer);
-      $(`#layerNote-${o.id}`).hidden = true;
+      $$(`#layerNote-${o.id}, #layerNote-${o.id}-m`).forEach(n => { n.hidden = true; });
     }).catch(err => {
       o.loaded = null;                                      // 次にチェックしたときに読み直す
-      $(`#layer-${o.id}`).checked = false;
-      $(`#layerNote-${o.id}`).hidden = false;
-      $(`#layerNote-${o.id}`).textContent = '読み込めませんでした: ' + err.message;
+      $$(`#layer-${o.id}, #layer-${o.id}-m`).forEach(c => { c.checked = false; });
+      $$(`#layerNote-${o.id}, #layerNote-${o.id}-m`).forEach(n => {
+        n.hidden = false;
+        n.textContent = '読み込めませんでした: ' + err.message;
+      });
       throw err;
     });
   }
@@ -2164,10 +2181,10 @@ function syncOverlayLayers(force){
   const mode = currentMapMode();
   // パネルは今のモードで使える行だけ出す
   $$('#layerPanel .layer-row').forEach(r => { r.hidden = !r.dataset.modes.split(' ').includes(mode); });
-  const wanted = OVERLAYS.filter(o => o.modes.includes(mode) && $(`#layer-${o.id}`).checked);
+  const wanted = OVERLAYS.filter(o => o.modes.includes(mode) && overlayCheck(o, mode).checked);
   return Promise.all(wanted.map(o => loadOverlay(o).catch(() => null))).then(() => {
     const nowMode = currentMapMode();
-    const show = OVERLAYS.filter(o => o.modes.includes(nowMode) && $(`#layer-${o.id}`).checked && o.layer.getLayers().length);
+    const show = OVERLAYS.filter(o => o.modes.includes(nowMode) && overlayCheck(o, nowMode).checked && o.layer.getLayers().length);
     const same = OVERLAYS.every(o => map.hasLayer(o.layer) === show.includes(o));
     if (same && !force) return;
     OVERLAYS.forEach(o => { if (map.hasLayer(o.layer)) map.removeLayer(o.layer); });
@@ -2176,6 +2193,7 @@ function syncOverlayLayers(force){
     // そのモード自身の図形を、参考レイヤーの上に描き直す(同じcanvasは後から載せたものが上)
     if (nowMode === 'notam') rebuildNotamMapLayer();
     else if (nowMode === 'auto' && map.hasLayer(msaLayer)){ map.removeLayer(msaLayer); msaLayer.addTo(map); }
+    else if (nowMode === 'manual' && map.hasLayer(manualLayerGroup)){ map.removeLayer(manualLayerGroup); manualLayerGroup.addTo(map); }
   });
 }
 // 他モードの全件レイヤーを、データが更新されたときに作り直す(表示中なら載せ直す)
@@ -2860,6 +2878,7 @@ async function generatePdf(){
       pointToLayer: (f, latlng)=> L.circleMarker(latlng, { radius:4, color: activeColor.line, weight:1.3, fillColor: activeColor.fill, fillOpacity:0.55 }),
     }).addTo(notamLayer);
   } else {
+    await syncOverlayLayers();     // v5.4.0: 手動モードも、チェックの入った参考レイヤーを描き終えてから撮る
     if (manualLayerGroup.hasLayer(manualLayer)){
       manualLayerGroup.removeLayer(manualLayer); removed.push([manualLayerGroup, manualLayer]);
     }
