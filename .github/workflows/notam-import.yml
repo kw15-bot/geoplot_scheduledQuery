@@ -30,6 +30,20 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      # 航空路閉鎖を線にする AIP 索引(収集と同じ。2026-11-15 追加。無いと Q項に座標の無い閉鎖は描けない)
+      - name: Decrypt AIP index
+        env:
+          AIPDS_KEY: ${{ secrets.AIPDS_KEY }}
+        run: |
+          if [ -z "$AIPDS_KEY" ] || [ ! -f aip/cn_aip_index.json.gz.enc ]; then
+            echo "AIPDS_KEY not set; route closures stay as Q-line points"; exit 0
+          fi
+          if openssl enc -d -aes-256-cbc -pbkdf2 -pass env:AIPDS_KEY \
+               -in aip/cn_aip_index.json.gz.enc -out "$RUNNER_TEMP/aip_index.json.gz"; then
+            echo "AIPDS_INDEX=$RUNNER_TEMP/aip_index.json.gz" >> "$GITHUB_ENV"
+          else
+            echo "::warning::AIP index decrypt failed (wrong AIPDS_KEY?)"
+          fi
       - name: Import
         env:
           VIEWER_KEY: ${{ secrets.VIEWER_KEY }}
