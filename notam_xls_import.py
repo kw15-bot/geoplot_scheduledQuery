@@ -89,16 +89,34 @@ def merge(fixture, out_dir, now=None):
         fixture = plain
     out = Path(out_dir)
     now = now or C.iso(dt.datetime.now(dt.timezone.utc))
-    existing = set()
+    # 前に取り込んだ分(import_source = faa-archive)は「既にある」に数えず、毎回作り直して置き換える
+    # (2026-11-15: AIP 索引なしで取り込んだ航空路閉鎖を、索引ありで線にし直すため)
+    existing, ours = set(), set()
     for path in (out / "archive").glob("notam_*.geojson"):
         for f in (C.read_json(path, {}) or {}).get("features") or []:
-            existing.add(_key(f.get("properties") or {}))
+            p = f.get("properties") or {}
+            (ours if p.get("import_source") == "faa-archive" else existing).add(_key(p))
     for rec in (C.read_json(out / "state_active.json", {}) or {}).values():
         existing.add(_key(rec))
     with tempfile.TemporaryDirectory() as tmp:
         rc = C.main(["--fixture", str(fixture), "--out-dir", tmp, "--now", now])
         if rc not in (0, None):
             raise SystemExit(f"収集本体の取り込みに失敗(終了コード {rc})")
+        redo = set()
+        for tpath in (Path(tmp) / "archive").glob("notam_*.geojson"):
+            for f in (C.read_json(tpath, {}) or {}).get("features") or []:
+                k = _key(f.get("properties") or {})
+                if k in ours and k not in existing:
+                    redo.add(k)
+        if redo:                                   # 前に取り込んだ同じ NOTAM を外してから足し直す
+            for path in (out / "archive").glob("notam_*.geojson"):
+                fc = C.read_json(path, {}) or {}
+                keep = [f for f in fc.get("features") or []
+                        if not ((f.get("properties") or {}).get("import_source") == "faa-archive"
+                                and _key(f.get("properties") or {}) in redo)]
+                if len(keep) != len(fc.get("features") or []):
+                    fc["features"] = keep
+                    C.write_if_changed(path, fc)
         added, skipped = 0, 0
         for tpath in sorted((Path(tmp) / "archive").glob("notam_*.geojson")):
             new = []
@@ -121,7 +139,8 @@ def merge(fixture, out_dir, now=None):
             added += len(new)
             print(f"  {tpath.name}: +{len(new)}")
         still_active = len(C.read_json(Path(tmp) / "state_active.json", {}) or {})
-    print(f"取り込み: 追加 {added} 件 / 既にあった {skipped} 件 / 今も有効なので足さない {still_active} 件")
+    print(f"取り込み: 追加 {added} 件(うち作り直し {len(redo)} 件) / 既にあった {skipped} 件 / "
+          f"今も有効なので足さない {still_active} 件")
     return added
 
 
