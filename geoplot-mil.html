@@ -1042,7 +1042,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.5.0';
+const APP_VERSION = 'v5.6.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1142,6 +1142,7 @@ const APP_VERSION = 'v5.5.0';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.6.0: NOTAM の一覧(特に Archive・All)を、スクロールに合わせて少しずつ作るように(2000件超で重かったため)
 // v5.5.0: 地図上の座標プロットに、半角スペース区切りで複数の座標を入れられるように(全部にピン、全部が入るように地図を合わせる)
 // v5.4.0: 手動タブにもレイヤーボタン(FIR・ウェイポイント・航空路。チェックはNOTAMタブとは別で、既定はオフ)
 // v5.3.1: PDF では参考レイヤーの NOTAM（All）・航行警報（All）も状態によらず赤で撮る。航行警報も同じ範囲の図形はラベルを「・」でまとめる
@@ -5305,7 +5306,9 @@ function renderNotamList(){
   // 有効期間バッジの色分け(航行警報側の.validity-badgeと揃える)
   const STATUS_BADGE_CLASS = { active:'active', upcoming:'notice', expired:'archive', cancelled:'archive', 'cancel-notice':'archive' };
 
-  items.forEach(f=>{
+  // v5.6.0: カードは一度に全部作らず、最初の分だけ作って、下までスクロールしたら続きを足す
+  // (Archive・All が2000件を超えて重くなったため。見た目・並び順は今までと同じ)
+  const makeCard = f=>{
     const p = f.properties || {};
     const key = notamFeatureKey(f);
     const div = document.createElement('div');
@@ -5338,17 +5341,49 @@ function renderNotamList(){
         }
       });
     }
-    container.appendChild(div);
-  });
-
-  $$('input[data-notam-map-toggle]').forEach(chk=>{
-    chk.addEventListener('change', ()=>{
+    const chk = div.querySelector('input[data-notam-map-toggle]');
+    if (chk) chk.addEventListener('change', ()=>{
       notamSetOnMap(chk.dataset.notamMapToggle, chk.dataset.notamArchive === '1', chk.checked);
       rebuildNotamMapLayer();
     });
-  });
+    return div;
+  };
+  if (notamListObserver){ notamListObserver.disconnect(); notamListObserver = null; }
+  const sentinel = document.createElement('div');
+  sentinel.style.height = '1px';
+  notamListState = { items, shown: 0, makeCard, container, sentinel };
+  container.appendChild(sentinel);
+  renderMoreNotamCards(NOTAM_LIST_FIRST);
+  if (items.length > notamListState.shown && 'IntersectionObserver' in window){
+    notamListObserver = new IntersectionObserver(ents => {
+      if (ents.some(e => e.isIntersecting)) renderMoreNotamCards(NOTAM_LIST_STEP);
+    }, { rootMargin: '600px 0px' });
+    notamListObserver.observe(sentinel);
+  } else {
+    renderMoreNotamCards(items.length);
+  }
 
   rebuildNotamMapLayer();
+}
+const NOTAM_LIST_FIRST = 60, NOTAM_LIST_STEP = 120;
+let notamListState = null, notamListObserver = null;
+// 一覧のカードを n 件だけ足す(下端の目印より前に入れる)。全部出し終えたら見張りをやめる
+function renderMoreNotamCards(n){
+  const st = notamListState;
+  if (!st) return;
+  const end = Math.min(st.items.length, st.shown + n);
+  const frag = document.createDocumentFragment();
+  for (let k = st.shown; k < end; k++) frag.appendChild(st.makeCard(st.items[k]));
+  st.container.insertBefore(frag, st.sentinel);
+  st.shown = end;
+  if (st.shown >= st.items.length && notamListObserver){ notamListObserver.disconnect(); notamListObserver = null; }
+}
+// 地図で選んだNOTAMのカードがまだ作られていなければ、そこまで作る
+function ensureNotamCardRendered(key){
+  const st = notamListState;
+  if (!st) return;
+  const idx = st.items.findIndex(g => notamFeatureKey(g) === key);
+  if (idx >= st.shown) renderMoreNotamCards(idx - st.shown + 1);
 }
 
 // 「このタブを全て表示/非表示」: 現在のタブに表示されている(絞り込みを通過した)NOTAMだけを
@@ -5464,6 +5499,7 @@ function selectNotamInPanel(f){
     if (!notamIssuerMatches(f, targetTab)) tf.issuers.add(notamIssuerKey(f.properties || {}));
     renderNotamList();
   }
+  ensureNotamCardRendered(key);
   const card = document.querySelector(`#notamList .warn-item[data-notam-key="${CSS.escape(key)}"]`);
   if (!card) return;
   card.scrollIntoView({ behavior:'smooth', block:'center' });
