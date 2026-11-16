@@ -765,6 +765,25 @@ class RouteSegments(unittest.TestCase):
                          [("X1", "BBB", "DDD")])
         self.assertEqual(len(self.lines("SEGMENT (50KM EAST OF AAA-DDD) OF ATS RTE X1 CLSD")), 1)
 
+    def test_parenthesized_range_without_space(self):
+        """2026-11-16追加(ZWUQ W186): 括弧の直後に空白が無い "(...)OF ATS RTE"。"""
+        self.assertEqual(C.notam_route_segments.find_closures("SEGMENT (BBB-50KM EAST OF CCC)OF ATS RTE X1 CLSD AT 9,200M AND BELOW."),
+                         [("X1", "BBB", "50KM EAST OF CCC")])
+        self.assertEqual(len(self.lines("SEGMENT (BBB-50KM EAST OF CCC)OF ATS RTE X1 CLSD")), 1)
+
+    def test_whole_route_closure(self):
+        """2026-11-16追加: 区間の指定が無い "ATS RTE V67 CLSD." は航空路まるごと線にする。"""
+        R = C.notam_route_segments
+        self.assertEqual(R.find_whole_closures("ATS RTE X1 CLSD AT 8,400M AND BELOW."), ["X1"])
+        self.assertEqual(R.find_whole_closures("ATS RTE X1,Y2 CLSD."), ["X1", "Y2"])
+        self.assertEqual(R.find_whole_closures("ATS RTE X1 AVBL. FLIGHTS ALONG Y2 ADJUSTED"), [])
+        self.assertEqual(R.find_whole_closures("SEGMENT AAA-BBB OF ATS RTE X1 CLSD."), [])
+        lines = self.lines("ATS RTE X1 CLSD.")
+        self.assertEqual(len(lines), 1)
+        self.assertEqual([p[0] for p in lines[0]], [100.0, 101.0, 102.0, 103.0])
+        g, src = C.build_geometry({}, {"coordinates": "3000N10100E", "radius": "999"}, "ATS RTE X1,Y2 CLSD.")
+        self.assertEqual((src, g["type"]), ("route-segment", "MultiLineString"))
+
     def test_circle_centered_on_named_point(self):
         """2026-09-29追加(ZWUQ A5003/26): 円の中心が地点名(VOR)で書かれているもの。中心は索引から引く。"""
         e = "THE AREA WITHIN A CIRCLE CENTERED AT CHANGDU VOR &apos;CCC&apos; WITH RADIUS OF 30KM CLSD AT 8,400M AND BELOW."
