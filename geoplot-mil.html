@@ -819,9 +819,16 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <div class="notam-filters">
         <!-- 全タブで表示(v2.8.0〜)。 -->
         <div id="notamFirFilterRow" style="display:none;margin-top:0;margin-bottom:4px;">
-          <select id="notamFirFilter" style="width:100%;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--mono);font-size:11.5px;padding:6px 8px;">
-            <option value="">FIR: すべて</option>
-          </select>
+          <!-- FIRの絞り込み(v5.4.9〜、チェックボックスで複数選択。何も選ばなければすべて) -->
+          <details id="notamFirFilter" class="notam-issuer-box">
+            <summary id="notamFirSummary">FIR: すべて</summary>
+            <div class="issuer-body">
+              <div class="btn-row" style="margin-top:6px;">
+                <button class="btn small ghost" id="notamFirClear">すべて（選択を外す）</button>
+              </div>
+              <div id="notamFirList"></div>
+            </div>
+          </details>
           <!-- 発行元の絞り込み(v3.2.0〜、チェックボックスで複数選択。既定は北京・BY CHINA だけ) -->
           <details id="notamIssuerFilter" class="notam-issuer-box">
             <summary id="notamIssuerSummary">発行元: 北京(ZBBBYNYX)・中国(BY CHINA)</summary>
@@ -1046,7 +1053,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.4.8';
+const APP_VERSION = 'v5.4.9';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1146,6 +1153,7 @@ const APP_VERSION = 'v5.4.8';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.4.9: NOTAM の FIR の絞り込みを複数選べるチェックボックスに(発行元と同じ形。何も選ばなければすべて)
 // v5.4.8: 「画面をタップすると key を入力できます」を「…パスワードを入力できます」に
 // v5.4.7: パスワードを間違えたときの「key が違います。」をなくし、同じ文で聞き直す
 // v5.4.6: 座標プロット欄にマウスを合わせたときの案内文(title)をなくす
@@ -4913,9 +4921,12 @@ const NOTAM_ARCHIVE_START_MONTH = '2026-01';
 // v3.2.0〜 FIR・発行元の絞り込みはタブごとに別々(notamFilters[tab])。地図では、各NOTAMにその状態のタブ
 // (Active/Upcoming/Archive)の絞り込みを使う。Allタブを開いている間だけ、地図もAllタブの絞り込みに従う。
 // dates: 日付の絞り込み('YYYY-MM-DD'(UTC)の Set。空なら絞り込まない。Archive・Allタブで使う、v3.3.0〜・Allはv3.6.0〜)
-function notamNewTabFilter(){ return { fir: '', issuers: new Set(NOTAM_ISSUER_DEFAULT), dates: new Set() }; }
+function notamNewTabFilter(){ return { firs: new Set(), issuers: new Set(NOTAM_ISSUER_DEFAULT), dates: new Set() }; }
 function notamFirFilterActive(){ return true; }
-function notamFirMatches(f, val){ return !val || notamFirTokens(f).includes(val); }
+// v5.4.9: FIRは複数選べる(firs: Set)。空ならすべて
+// 絞り込みに使うFIRコード(4文字)。見出し用の notamFirTokens は「ZBPE ZLHW」「PART 1 OF 2」のような並びを含むので、ばらして4文字のコードだけにする
+function notamFirCodes(f){ return [...new Set(notamFirTokens(f).flatMap(t => String(t).split(/\s+/)).filter(x => /^[A-Z]{4}$/.test(x) && x !== 'PART'))]; }
+function notamFirMatches(f, firs){ return !firs || !firs.size || notamFirCodes(f).some(t => firs.has(t)); }
 // 発行元の絞り込み(v3.0.0、v3.2.0〜チェックボックスで複数選択)。値は notamIssuerKey(): 本文に BY <国名> があれば
 // 'BY:<国名>'、無ければ issuer(貼り付け取り込み分は北京とみなす)。チェックの入った発行元だけを一覧・地図に出す。
 // 既定は北京(ZBBBYNYX)と BY CHINA だけ(ユーザー判断。北京発行でも本文が BY KOREA なら 'BY:KOREA' で既定は外れる)。
@@ -5025,18 +5036,23 @@ function notamPassesFilter(f, tab, ignoreDate){
   // (INTL、例: A4705/26)でも発行されていて重複になるので表示しない。
   if ((f.properties || {}).classification === 'DOM') return false;
   if (!notamHasRealPolygon(f)) return false;
-  if (notamFirFilterActive() && !notamFirMatches(f, notamFilters[tab].fir)) return false;
+  if (notamFirFilterActive() && !notamFirMatches(f, notamFilters[tab].firs)) return false;
   if (!notamIssuerMatches(f, tab)) return false;
   if (!ignoreDate && notamFilters[tab].dates.size && !notamValidOnDates(f, notamFilters[tab].dates)) return false;
   return true;
 }
 // 航行警報側のupdateBureauFilterOptions()と同じ考え方: 今スコープにある値だけを選択肢にする。
-function updateNotamFirFilterOptions(selectEl, itemsInScope, currentValue){
-  const firsPresent = Array.from(new Set(itemsInScope.flatMap(notamFirTokens))).sort();
-  selectEl.innerHTML = '<option value="">FIR: すべて</option>'
-    + firsPresent.map(v => `<option value="${esc(v)}">${esc(v)}</option>`).join('');
-  selectEl.value = firsPresent.includes(currentValue) ? currentValue : '';
-  return selectEl.value;
+// v5.4.9: チェックボックスで複数選択。件数も出す。今のスコープに無いFIRの選択は外す
+function updateNotamFirFilterOptions(itemsInScope, firs){
+  const counts = new Map();
+  itemsInScope.forEach(f => notamFirCodes(f).forEach(t => counts.set(t, (counts.get(t) || 0) + 1)));
+  const present = [...counts.keys()].sort();
+  [...firs].forEach(v => { if (!counts.has(v)) firs.delete(v); });
+  $('#notamFirList').innerHTML = present.map(v => `<label class="check-row"><input type="checkbox" data-notam-fir="${esc(v)}" ${firs.has(v) ? 'checked' : ''}> ${esc(v)}<span class="issuer-n">${counts.get(v)}</span></label>`).join('')
+    || '<div style="margin-top:6px;color:var(--text-faint);">このタブにNOTAMはありません</div>';
+  $('#notamFirSummary').textContent = 'FIR: ' + (firs.size ? present.filter(v => firs.has(v)).join('・') : 'すべて');
+  $('#notamFirSummary').title = $('#notamFirSummary').textContent;
+  return firs;
 }
 // 発行元のチェックボックス: 今のタブにある発行元だけを「北京(ZBBBYNYX)」「韓国(BY KOREA)」の表記と件数で出す。
 // 上の行(summary)には、チェックの入っている発行元を並べる。
@@ -5298,9 +5314,9 @@ function renderNotamList(){
   $('#notamFirFilterRow').style.display = notamFirFilterActive() ? 'block' : 'none';
   const tf = notamFilters[notamTab];
   syncNotamDateUi();
-  if (notamFirFilterActive()) tf.fir = updateNotamFirFilterOptions($('#notamFirFilter'), polyItemsInTab, tf.fir);
+  if (notamFirFilterActive()) updateNotamFirFilterOptions(polyItemsInTab, tf.firs);
   updateNotamIssuerFilterOptions(polyItemsInTab.filter(f => (f.properties || {}).classification !== 'DOM'
-    && (!notamFirFilterActive() || notamFirMatches(f, tf.fir)) && (!tf.dates.size || notamValidOnDates(f, tf.dates))), tf.issuers);
+    && (!notamFirFilterActive() || notamFirMatches(f, tf.firs)) && (!tf.dates.size || notamValidOnDates(f, tf.dates))), tf.issuers);
 
   const items = notamFeaturesForTab(notamTab).filter(f => notamPassesFilter(f, notamTab))
     .sort((a,b) => ((b.properties||{}).valid_start||'').localeCompare((a.properties||{}).valid_start||''));
@@ -5506,7 +5522,7 @@ function selectNotamInPanel(f){
     notamTab = targetTab;
     $$('#notamValidityTabs .tab-btn').forEach(b=> b.classList.toggle('active', b.dataset.tab === targetTab));
     const tf = notamFilters[targetTab];
-    if (!notamFirMatches(f, tf.fir)) tf.fir = '';
+    if (!notamFirMatches(f, tf.firs)) tf.firs = new Set();
     if (tf.dates.size && !notamValidOnDates(f, tf.dates)) tf.dates = new Set();
     if (!notamIssuerMatches(f, targetTab)) tf.issuers.add(notamIssuerKey(f.properties || {}));
     renderNotamList();
@@ -5528,10 +5544,14 @@ $$('#notamValidityTabs .tab-btn').forEach(btn=>{
     renderNotamList();
   });
 });
-$('#notamFirFilter').addEventListener('change', ()=>{
-  notamFilters[notamTab].fir = $('#notamFirFilter').value;
+$('#notamFirList').addEventListener('change', (e)=>{
+  const v = e.target && e.target.dataset ? e.target.dataset.notamFir : undefined;
+  if (v === undefined) return;
+  const set = notamFilters[notamTab].firs;
+  if (e.target.checked) set.add(v); else set.delete(v);
   renderNotamList();
 });
+$('#notamFirClear').addEventListener('click', ()=>{ notamFilters[notamTab].firs = new Set(); renderNotamList(); });
 $('#notamIssuerList').addEventListener('change', (e)=>{
   const k = e.target && e.target.dataset ? e.target.dataset.notamIssuer : undefined;
   if (k === undefined) return;

@@ -15,6 +15,8 @@ NOTAM の E項に書かれた「航空路(ATS route)の区間閉鎖」を、中�
   SEGMENT 20KM WEST OF YARKANT VOR/DME 'DSC'-LEDEM OF ATS RTE B215   (地点からの距離)
   Y1   :SADAN-170KM EAST OF SADAN
   SEGMENT OMBON - N350737E1000535 OF ATS RTE Y1       (座標の端点は航空路上に投影)
+  SEGMENT (SADAN-50KM EAST OF PAMLI)OF ATS RTE W186   (括弧の直後に空白が無い。2026-11-16)
+  ATS RTE V67 CLSD. / ATS RTE L181 CLSD AT 8,400M AND BELOW.   (区間の指定が無い=航空路まるごと。2026-11-16)
 
 迂回の指示(ADJUST TO / REROUTING / ISSUE FPL / FLIGHTS VIA ... 以降)は閉鎖区間ではないので、
 その手前で本文を切ってから読む。
@@ -48,9 +50,11 @@ _EP = (r"(?:\d+(?:\.\d+)?\s*(?:KM|NM)\s+(?:NORTH|SOUTH|EAST|WEST|NORTHEAST|NORTH
        r"\s+OF\s+)?(?:" + _COORD + r"|[A-Z]{2,5})")
 _EP_PARTS = re.compile(r"(?:(?P<d>\d+(?:\.\d+)?)\s*(?P<u>KM|NM)\s+(?P<dir>[A-Z]+)\s+OF\s+)?(?P<base>.+)$")
 _RANGE = rf"(?P<a>{_EP})\s*-\s*(?P<b>{_EP})"
-_ATS = r"ATS\s+R(?:OU)?TES?"
+_ATS = r"ATS\s+(?:R(?:OU)?TES?|RTW)"   # RTW は原文の打ち間違い(ZWUQ、2026-11-16)
 # 区間が括弧で囲まれた書き方もある: "SEGMENT (50KM WEST OF SADAN-100KM EAST OF PAMLI) OF ATS RTE W186" (ZWUQ A4996/26)
-_PAT_SEG_OF = re.compile(rf"SEGMENT\s+\(?\s*{_RANGE}\s*\)?\s+OF\s+{_ATS}\s+(?P<r>{_RTE})\b")
+_PAT_SEG_OF = re.compile(rf"SEGMENT\s*\(?\s*{_RANGE}\s*(?:\)\s*|\s+)OF\s+{_ATS}\s+(?P<r>{_RTE})\b")
+# 区間の指定が無い閉鎖 = 航空路まるごと: "ATS RTE V67 CLSD." / "ATS RTE V87,V88 CLSD AT ..." (2026-11-16)
+_PAT_WHOLE = re.compile(rf"(?<!OF\s){_ATS}\s+(?P<rs>{_RTE}(?:\s*(?:,|AND)\s*{_RTE})*)\s+(?:IS\s+|ARE\s+)?CLSD\b")
 _PAT_RTE_SEG = re.compile(rf"{_ATS}\s+(?P<r>{_RTE})\s+SEGMENT\s+{_RANGE}")
 _PAT_ITEM = re.compile(rf"(?:^|[\s:.,;])(?:\d+\s*\.\s*)?(?P<r>{_RTE})\s*:\s*{_RANGE}")
 # 迂回の指示などが始まる所。ここより後ろは閉鎖区間の記述ではない
@@ -288,7 +292,7 @@ def closure_text(e_text):
     m = _CUT.search(t)
     if m:
         t = t[:m.start()]
-    return _NAVAID.sub(r"\1", t)
+    return _NAVAID.sub(r"\1 ", t)
 
 
 def find_closures(e_text):
@@ -308,12 +312,53 @@ def find_closures(e_text):
     return out
 
 
+def find_whole_closures(e_text):
+    """区間の指定が無く、航空路まるごと閉鎖されるもの ["V67", ...](本文の順)。"""
+    t = closure_text(e_text)
+    out = []
+    for m in _PAT_WHOLE.finditer(t):
+        for r in re.split(r"\s*(?:,|AND)\s*", m["rs"]):
+            if r and r not in out:
+                out.append(r)
+    return out
+
+
+def _route_chains(g, idx):
+    """航空路の線を、枝分かれ・端で切った折れ線の列にする([lat, lon] の列のリスト)。"""
+    seen, chains = set(), []
+    ends = [u for u in g if len(g[u]) != 2] or list(g)[:1]
+    for start in ends:
+        for nxt in g[start]:
+            if frozenset((start, nxt)) in seen:
+                continue
+            path, prev, cur = [start], start, nxt
+            seen.add(frozenset((prev, cur)))
+            while True:
+                path.append(cur)
+                if len(g[cur]) != 2:
+                    break
+                nx = [n for n in g[cur] if n != prev][0]
+                if frozenset((cur, nx)) in seen:
+                    path.append(nx)
+                    break
+                seen.add(frozenset((cur, nx)))
+                prev, cur = cur, nx
+            chains.append([idx.ll(u) for u in path])
+    return chains
+
+
 def route_closure_lines(e_text, index=None):
     """閉鎖区間の線 [[[lon, lat], ...], ...]。作れなければ空リスト。"""
     idx = index or load_index()
     if not idx:
         return []
     lines = []
+    seg_routes = {r for r, _, _ in find_closures(e_text)}
+    for r in find_whole_closures(e_text):          # 区間の指定が無い航空路は、索引にある線を全部描く
+        g = idx.graph.get(r)
+        if not g or r in seg_routes:
+            continue
+        lines += [[[round(p[1], 6), round(p[0], 6)] for p in ch] for ch in _route_chains(g, idx) if len(ch) >= 2]
     for r, a, b in find_closures(e_text):
         g = idx.graph.get(r)
         if not g:
@@ -350,7 +395,7 @@ _NAMED_CIRCLES = [
 
 def _normalize(e_text):
     t = re.sub(r"\s+", " ", html.unescape(e_text or "").upper())
-    return _NAVAID.sub(r"\1", t)
+    return _NAVAID.sub(r"\1 ", t)
 
 
 def has_named_center_circle(e_text):
