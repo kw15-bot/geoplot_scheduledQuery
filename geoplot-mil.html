@@ -913,7 +913,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <button class="btn small" id="btnBaseToggle">地図切替</button>
       <span class="toolbar-sep"></span>
       <input type="text" id="coordPlotInput" class="coord-plot-input" placeholder="DMS: 000000N0000000E"
-             spellcheck="false" autocomplete="off" title="座標(度分秒 例: 350737N1000535E)を入力すると、その地点にズームしてピンを立てます。半角スペースで区切って複数入れると全部に立てます。消すとピンも消えます">
+             spellcheck="false" autocomplete="off">
     </div>
     <!-- 地図右上のレイヤー選択(NOTAMモードのみ)。アイコンは地図アプリでおなじみの「重なった層」(Material Icons "layers"、Apache-2.0) -->
     <div class="layer-control">
@@ -1046,7 +1046,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.4.5';
+const APP_VERSION = 'v5.4.6';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1146,6 +1146,7 @@ const APP_VERSION = 'v5.4.5';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.4.6: 座標プロット欄にマウスを合わせたときの案内文(title)をなくす
 // v5.4.5: 座標プロットの目印をピンから小さな赤い点(白い縁、中心が座標)に
 // v5.4.4: 座標プロットの座標の文字をピンと同じ赤の太字に、ピンを細く
 // v5.4.3: 座標プロットのピンの右上に、入力した座標(例: 350737N1000535E)を出す
