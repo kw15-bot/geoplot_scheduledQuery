@@ -909,7 +909,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <button class="btn small" id="btnBaseToggle">地図切替</button>
       <span class="toolbar-sep"></span>
       <input type="text" id="coordPlotInput" class="coord-plot-input" placeholder="DMS: 000000N0000000E"
-             spellcheck="false" autocomplete="off" title="座標(度分秒 例: 350737N1000535E)を入力すると、その地点にズームしてピンを立てます。消すとピンも消えます">
+             spellcheck="false" autocomplete="off" title="座標(度分秒 例: 350737N1000535E)を入力すると、その地点にズームしてピンを立てます。半角スペースで区切って複数入れると全部に立てます。消すとピンも消えます">
     </div>
     <!-- 地図右上のレイヤー選択(NOTAMモードのみ)。アイコンは地図アプリでおなじみの「重なった層」(Material Icons "layers"、Apache-2.0) -->
     <div class="layer-control">
@@ -1042,7 +1042,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.4.0';
+const APP_VERSION = 'v5.5.0';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1142,6 +1142,7 @@ const APP_VERSION = 'v5.4.0';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.5.0: 地図上の座標プロットに、半角スペース区切りで複数の座標を入れられるように(全部にピン、全部が入るように地図を合わせる)
 // v5.4.0: 手動タブにもレイヤーボタン(FIR・ウェイポイント・航空路。チェックはNOTAMタブとは別で、既定はオフ)
 // v5.3.1: PDF では参考レイヤーの NOTAM（All）・航行警報（All）も状態によらず赤で撮る。航行警報も同じ範囲の図形はラベルを「・」でまとめる
 // v5.3.0: 手動タブで貼った NOTAM・航行警報の文面を、収集と同じ Python の読み取り(Pyodide)で図形にする(見た目は同じ)
@@ -1937,7 +1938,23 @@ $('#btnBaseToggle').addEventListener('click', ()=> setBasemap(currentBase === 'o
 // 座標プロット(航行警報・NOTAMどちらのモードでも使える)。度分秒の DDMMSS[NS]DDDMMSS[EW]
 // (例: 350737N1000535E、秒の小数・間の空白も可)を入力すると、その地点にズームしてピンを立てる。
 // 入力を消すとピンも消える。途中まで打った状態など読めない間はピンを外し、枠を赤くする。
-let coordPin = null;
+// v5.5.0: 半角スペースで区切って複数の座標を入れると、全部にピンを立て、全部が入るように地図を合わせる。
+let coordPins = [];
+const DMS_RE = /(\d{2})(\d{2})(\d{2}(?:\.\d+)?)\s*([NS])\s*(\d{3})(\d{2})(\d{2}(?:\.\d+)?)\s*([EW])/g;
+// 欄の文字を座標の並びとして読む。座標以外の文字が混じっていれば null(途中まで打った状態も含む)
+function parseDmsCoords(text){
+  const t = text.trim().toUpperCase();
+  if (!t) return [];
+  const out = [];
+  let rest = t;
+  for (const m of t.matchAll(DMS_RE)){
+    const c = parseDmsCoord(m[0]);
+    if (!c) return null;
+    out.push(c);
+    rest = rest.replace(m[0], ' ');
+  }
+  return rest.trim() || !out.length ? null : out;
+}
 function parseDmsCoord(text){
   const m = text.trim().toUpperCase().replace(/\s+/g, '')
     .match(/^(\d{2})(\d{2})(\d{2}(?:\.\d+)?)([NS])(\d{3})(\d{2})(\d{2}(?:\.\d+)?)([EW])$/);
@@ -1951,18 +1968,20 @@ function parseDmsCoord(text){
 }
 function updateCoordPin(){
   const input = $('#coordPlotInput');
-  const c = parseDmsCoord(input.value);
-  if (coordPin){ map.removeLayer(coordPin); coordPin = null; }
-  input.classList.toggle('invalid', !!input.value.trim() && !c);
-  if (!c) return;
+  const cs = parseDmsCoords(input.value);
+  coordPins.forEach(m => map.removeLayer(m));
+  coordPins = [];
+  input.classList.toggle('invalid', cs === null);
+  if (!cs || !cs.length) return;
   // NOTAM側と同じ経度の表し方(西経30°より西は+360°)にして、太平洋側の図形と同じ位置に立てる
-  const ll = L.latLng(c.lat, notamWrapLon(c.lon));
-  coordPin = L.marker(ll, {
+  const lls = cs.map(c => L.latLng(c.lat, notamWrapLon(c.lon)));
+  coordPins = lls.map(ll => L.marker(ll, {
     icon: L.divIcon({ className:'', iconSize:[18,26], iconAnchor:[9,26],
       html:'<svg class="coord-pin" viewBox="0 0 18 26"><path d="M9 25C9 25 17 14.5 17 9A8 8 0 0 0 1 9C1 14.5 9 25 9 25Z" fill="#e0453a" stroke="#fff" stroke-width="1.5"/><circle cx="9" cy="9" r="3" fill="#fff"/></svg>' }),
     keyboard:false, zIndexOffset:1000,
-  }).addTo(map);
-  map.setView(ll, Math.max(map.getZoom(), 8));
+  }).addTo(map));
+  if (lls.length === 1) map.setView(lls[0], Math.max(map.getZoom(), 8));
+  else map.fitBounds(L.latLngBounds(lls), { padding:[60, 60], maxZoom: 8 });
 }
 $('#coordPlotInput').addEventListener('input', updateCoordPin);
 // 欄の幅を、表示している文字(プレースホルダー)の幅ちょうどに合わせる(右に余白が空かないように)。
