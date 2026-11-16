@@ -310,11 +310,11 @@ body.base-sat .leaflet-control-attribution{
   background:rgba(255,255,255,.88);backdrop-filter:blur(3px);border:1px solid var(--border-bright);
 }
 .map-toolbar .coord-plot-input.invalid{border-color:var(--red);}
-.coord-pin{width:18px;height:26px;}
-/* v5.4.3: ピンの右上に入力した座標を出す(白い縁取りの文字。衛星写真では白文字に黒い縁取り) */
-.coord-pin-wrap{position:relative;width:18px;height:26px;}
-.coord-pin-label{position:absolute;left:15px;top:-9px;white-space:nowrap;pointer-events:none;font:600 11px/1 var(--mono, monospace);letter-spacing:.02em;color:#1d1d1d;text-shadow:0 0 2px #fff,0 0 2px #fff,0 0 3px #fff,0 0 4px #fff;}
-body.base-sat .coord-pin-label, body.dark-mode .coord-pin-label{color:#fff;text-shadow:0 0 2px #000,0 0 2px #000,0 0 3px #000,0 0 4px #000;}
+.coord-pin{width:14px;height:26px;}
+/* v5.4.3: ピンの右上に入力した座標を出す。v5.4.4: ピンと同じ赤の太字(白い縁取り。衛星写真・ダークモードでは明るい赤に黒い縁取り)、ピンを細く */
+.coord-pin-wrap{position:relative;width:14px;height:26px;}
+.coord-pin-label{position:absolute;left:12px;top:-9px;white-space:nowrap;pointer-events:none;font:700 11px/1 var(--mono, monospace);letter-spacing:.02em;color:#c8322a;text-shadow:0 0 2px #fff,0 0 2px #fff,0 0 3px #fff,0 0 4px #fff;}
+body.base-sat .coord-pin-label, body.dark-mode .coord-pin-label{color:#ff6b61;text-shadow:0 0 2px #000,0 0 2px #000,0 0 3px #000,0 0 4px #000;}
 /* レイヤー選択(2026-09-29。v5.4.0 から手動モードにも FIR・ウェイポイント・航空路) */
 .app:not(.mode-notam) .notam-only{display:none;}
 .layer-row + .layer-row{margin-top:6px;}
@@ -1046,7 +1046,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.4.3';
+const APP_VERSION = 'v5.4.4';
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1146,6 +1146,7 @@ const APP_VERSION = 'v5.4.3';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.4.4: 座標プロットの座標の文字をピンと同じ赤の太字に、ピンを細く
 // v5.4.3: 座標プロットのピンの右上に、入力した座標(例: 350737N1000535E)を出す
 // v5.4.2: NOTAM の一覧(特に Archive・All)を、スクロールに合わせて少しずつ作るように(2000件超で重かったため)
 // v5.4.1: 地図上の座標プロットに、半角スペース区切りで複数の座標を入れられるように(全部にピン、全部が入るように地図を合わせる)
@@ -1983,8 +1984,8 @@ function updateCoordPin(){
   // NOTAM側と同じ経度の表し方(西経30°より西は+360°)にして、太平洋側の図形と同じ位置に立てる
   const lls = cs.map(c => L.latLng(c.lat, notamWrapLon(c.lon)));
   coordPins = lls.map((ll, k) => L.marker(ll, {
-    icon: L.divIcon({ className:'', iconSize:[18,26], iconAnchor:[9,26],
-      html:'<div class="coord-pin-wrap"><svg class="coord-pin" viewBox="0 0 18 26"><path d="M9 25C9 25 17 14.5 17 9A8 8 0 0 0 1 9C1 14.5 9 25 9 25Z" fill="#e0453a" stroke="#fff" stroke-width="1.5"/><circle cx="9" cy="9" r="3" fill="#fff"/></svg>'
+    icon: L.divIcon({ className:'', iconSize:[14,26], iconAnchor:[7,26],
+      html:'<div class="coord-pin-wrap"><svg class="coord-pin" viewBox="0 0 14 26"><path d="M7 25C7 25 13 14 13 7.2A6 6 0 0 0 1 7.2C1 14 7 25 7 25Z" fill="#e0453a" stroke="#fff" stroke-width="1.4"/><circle cx="7" cy="7.2" r="2.3" fill="#fff"/></svg>'
         + `<span class="coord-pin-label">${esc(cs[k].label)}</span></div>` }),
     keyboard:false, zIndexOffset:1000,
   }).addTo(map));
