@@ -98,9 +98,11 @@ def parse_iso(v):
     if not v:
         return None
     try:
-        return dt.datetime.fromisoformat(str(v).replace("Z", "+00:00"))
+        d = dt.datetime.fromisoformat(str(v).replace("Z", "+00:00"))
     except ValueError:
         return None
+    # 時差の付いていない日時(FAA の取り込み分の first_seen など)は UTC とみなす(2026-11-19)
+    return d if d.tzinfo else d.replace(tzinfo=dt.timezone.utc)
 
 
 def fmt_utc(v):
