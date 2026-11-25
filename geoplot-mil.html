@@ -1057,7 +1057,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.5.0';
+const APP_VERSION = 'v5.5.1';
 // v5.5.0: PDF に図形のラベル(.poly-label)も出すか。確認画面のチェック「ラベルも出力」(最後の選択を覚える)
 function pdfWithLabels(){ const c = document.getElementById('pdfWithLabels'); return !!(c && c.checked); }
 function pdfHideSelectors(){
@@ -1163,6 +1163,7 @@ function pdfHideSelectors(){
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.5.1: NOTAM の単体PDFでも「ラベルも出力」で NOTAM 番号が出るように(単体PDFは番号なしで描き直していた)
 // v5.5.0: PDF の確認画面に「ラベルも出力」(既定はオフ=今までどおりラベルなし。最後の選択を覚える)
 // v5.4.9: NOTAM の FIR の絞り込みを複数選べるチェックボックスに(発行元と同じ形。何も選ばなければすべて)
 // v5.4.8: 「画面をタップすると key を入力できます」を「…パスワードを入力できます」に
@@ -2895,6 +2896,8 @@ async function generatePdf(){
   const hidden = toHide.map(sel => Array.from(document.querySelectorAll(sel))).flat();
   const prevDisplay = hidden.map(el => el.style.display);
   hidden.forEach(el => el.style.display = 'none');
+  // v5.5.1: このあと描き直す図形(NOTAMの単体)に新しく付くラベルも、「ラベルも出力」がオフなら隠す
+  if (!pdfWithLabels()) document.body.classList.add('pdf-capturing');
 
   // Isolate the map to show ONLY the target's own shapes, so nothing else visible in the
   // current view gets captured alongside it. Auto mode's shapes sit directly on msaLayer
@@ -2924,10 +2927,13 @@ async function generatePdf(){
     // 対象1件だけを航行警報側と同じActive色で一時的に描き直す(終了後にrebuildNotamMapLayer()で元に戻す)。
     const activeColor = statusColor('active');
     notamLayer.clearLayers();
-    L.geoJSON(notamForLeaflet(pdfTarget.feature), {
-      style: f => ({ color: activeColor.line, weight: /LineString$/.test(f.geometry.type) ? 2.2 : 1.5, fillColor: activeColor.fill, fillOpacity: 0.14, opacity: 0.9 }),
-      pointToLayer: (f, latlng)=> L.circleMarker(latlng, { radius:4, color: activeColor.line, weight:1.3, fillColor: activeColor.fill, fillOpacity:0.55 }),
-    }).addTo(notamLayer);
+    // v5.5.1: 地図と同じ描き方(notamShapesLayer)で描くので、「ラベルも出力」のときは NOTAM 番号のラベルも付く
+    // (v5.5.0 では単体PDFだけ番号なしで描き直していて、チェックを入れてもラベルが出なかった)
+    const g = notamShapesLayer([pdfTarget.feature]);
+    g.setStyle(f => ({ color: activeColor.line, weight: /LineString$/.test(f.geometry.type) ? 2.2 : 1.5,
+      fillColor: activeColor.fill, fillOpacity: 0.14, opacity: 0.9 }));
+    g.eachLayer(l => { if (l.unbindPopup) l.unbindPopup(); });
+    g.addTo(notamLayer);
   } else {
     await syncOverlayLayers();     // v5.4.0: 手動モードも、チェックの入った参考レイヤーを描き終えてから撮る
     if (manualLayerGroup.hasLayer(manualLayer)){
@@ -3014,6 +3020,7 @@ async function generatePdf(){
       '（地図タイルの読み込み元がCORSを許可していない可能性があります）', 'l-err');
   } finally {
     hidden.forEach((el, i) => el.style.display = prevDisplay[i]);
+    document.body.classList.remove('pdf-capturing');
     removed.forEach(([lg, s]) => lg.addLayer(s));
     added.forEach(([lg, s]) => lg.removeLayer(s));
     restyled.forEach(([s, prevStyle]) => s.setStyle(prevStyle));
