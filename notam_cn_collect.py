@@ -364,6 +364,39 @@ def _is_named_waypoint_coord(e_text, start, end):
 _RING_CONTINUES = re.compile(r"(?:[\s,\-]|\bTO\b)*", re.I)
 # 座標の数字の途中で改行された表記(-36082⏎0N1293040E、N128⏎5338E。RKRRで確認)をつなぐ
 _SPLIT_DIGITS = re.compile(r"(?<=\d)[ \t]*\r?\n[ \t]*(?=\d)")
+# 2026-11-25追加: FAA の本文で2つに分かれた NOTAM(PART 1 OF 2 / PART 2 OF 2)が1つの文につながったもの。
+#   (1) 分かれ目の見出し「END PART 1 OF 2 <番号> NOTAMR … Q) …/2238N11349E005 A) … E)」を取り除く(Q項の座標を頂点と取り違えない)
+#   (2) 座標の数字の途中に「 ) // // 」が挟まったもの(N2238 ) // // 44.1E1134901.4)をつなぐ。G4981/26 で確認
+_PART_BREAK = re.compile(r"\s*\bEND\s+PART\s+\d+\s+OF\s+\d+\b.*?\bE\)", re.S | re.I)
+_PAREN_BREAK = re.compile(r"(?<=\d)\s*\)\s*(?:/{2}\s*)+(?=\d)")
+
+
+def clean_e_text(e_text):
+    """座標を読む前の下ごしらえ(数字の途中の改行・分割の継ぎ目をつなぐ)。描画チェック(notam_check.py)も使う。"""
+    t = _PART_BREAK.sub(" ", e_text or "")
+    t = _PAREN_BREAK.sub("", t)
+    t = re.sub(r"(?<=\d)[ \t]+(?=\.\d)", "", t)     # 秒の小数の前の空白(N405104 .3E1114731.6、E4625/26)
+    return _SPLIT_DIGITS.sub("", t)
+
+
+def _drop_near_close(pts):
+    """最後の点が最初の点とほぼ同じ(閉じるつもりの書き損じ。0656N10836E…0656N10838E、A3590/26)で、
+    そのままだと辺が交差し、外せば交差しないときだけ最後の点を外す(差が区域の大きさの5%未満のとき)。"""
+    if len(pts) < 4:
+        return pts
+    xs, ys = [p[0] for p in pts], [p[1] for p in pts]
+    diag = math.hypot(max(xs) - min(xs), max(ys) - min(ys))
+    if not 0 < math.hypot(pts[-1][0] - pts[0][0], pts[-1][1] - pts[0][1]) < 0.05 * diag:
+        return pts
+
+    def crosses(q):
+        r = q + [q[0]]
+        n = len(r) - 1
+        return any(_segments_cross(r[i], r[i + 1], r[j], r[j + 1])
+                   for i in range(n) for j in range(i + 2, n) if not (i == 0 and j == n - 1))
+    return pts[:-1] if crosses(pts) and not crosses(pts[:-1]) else pts
+
+
 # E項の円: "A CIRCLE RADIUS 7NM CENTERED ON <座標>" / "200NM RADIUS OF <座標>" / "0.5NM RAD OF <座標>"
 # (いずれも直後に座標が来る形。単位は NM / KM / M)
 _R = r"(?P<r>\d+(?:\.\d+)?)\s*(?P<u>NM|KM|M)\b"
@@ -452,8 +485,7 @@ def parse_text_polygons(e_text):
     括弧内に単独で書かれた座標(臨時ウェイポイント定義)は頂点として数えない。
     2026-09-28追加: 本文に書かれた円("A CIRCLE RADIUS 7NM CENTERED ON <座標>" 等)は円のリングに、
     "1NM EITHER SIDE OF LINE <座標>-<座標>" は線の両側の帯のリングにする。座標の数字の途中の改行もつなぐ。"""
-    t = _SPLIT_DIGITS.sub("", e_text or "")
-    t = _rewrite_each_side(t)
+    t = _rewrite_each_side(clean_e_text(e_text))
     rings, cur = [], []
     corridor = None          # 帯状エリアの点列を集めている間は幅(NM)
     prev_end = None
@@ -463,7 +495,8 @@ def parse_text_polygons(e_text):
             if len(cur) >= 2:
                 rings.append(_corridor_ring(cur, corridor))
         elif len(cur) >= 3:
-            rings.append(_untangle_quad(cur + [cur[0]]))
+            pts = _drop_near_close(cur)
+            rings.append(_untangle_quad(pts + [pts[0]]))
 
     for m in _TEXT_COORD.finditer(t):
         if _is_named_waypoint_coord(t, m.start(), m.end()):
@@ -543,6 +576,23 @@ def _valid_polygon(coords):
         return False
 
 
+def _is_qline_circle(polys, n):
+    """API の面が、Q項の半径の真円を多角形にしただけのものか(中心は Q項と少しずれることがある。
+    U2876/26 は Q項 2307N12016E に対し API の円の中心が約10NM 離れていた)。"""
+    if len(polys) != 1 or len(polys[0]) != 1:
+        return False
+    try:
+        r = float(n.get("radius"))
+    except (TypeError, ValueError):
+        return False
+    ring = polys[0][0]
+    if r <= 0 or len(ring) < 12:
+        return False
+    tol = max(0.2, r * 0.03)
+    c = ring_centroid(ring)
+    return all(abs(nm_between((y, x), c) - r) <= tol for x, y in ring[:-1])
+
+
 def build_geometry(feature, n, e_text=""):
     """(geometry|None, source)。優先順: APIの面 > E項テキストの多角形 > 航空路閉鎖の線 > Q項の円 > Q項の点 > APIの点。
     Q項の中心座標は誤記がありうる（実データで、E項の多角形から138NMずれた例を確認）ため、
@@ -563,11 +613,14 @@ def build_geometry(feature, n, e_text=""):
             # 複数FIRにまたがる案内NOTAM(A)欄が複数地点)等でAPIがこの値を返す実例を確認。
             if abs(pc[0]) > 1e-6 or abs(pc[1]) > 1e-6:
                 points.append(pc)
-    if polys:
+    rings = text_rings(e_text)
+    # 2026-11-25: API の面が Q項の円をそのまま多角形にしただけ(中心・半径が Q項と同じ真円)のときは、
+    # 本文に書かれた形(円・多角形)を優先する。U2876/26 など: 本文は「2500M RADIUS CENTRED ON …」なのに
+    # API は Q項の 3NM の円を返し、そちらが描かれていた
+    if polys and not (rings and _is_qline_circle(polys, n)):
         geom = {"type": "Polygon", "coordinates": polys[0]} if len(polys) == 1 \
             else {"type": "MultiPolygon", "coordinates": polys}
         return geom, "api"
-    rings = text_rings(e_text)
     if rings:
         geom = {"type": "Polygon", "coordinates": [rings[0]]} if len(rings) == 1 \
             else {"type": "MultiPolygon", "coordinates": [[r] for r in rings]}

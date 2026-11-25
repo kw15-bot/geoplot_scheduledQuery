@@ -48,7 +48,7 @@ _ROUTE_CLOSURE = re.compile(r"(?:ATS\s+RTE|\bAWY\b|\bSEGMENT\b|VFR\s+CORRIDOR).*
 def text_points(e_text):
     """E項の座標を (lat, lon, 種類) で返す。種類: 'vertex'(多角形の頂点) / 'center'(円の中心) / 'line'(帯の中心線)。
     括弧の中の臨時ウェイポイント定義は除く(収集側と同じ)。"""
-    t = C._rewrite_each_side(C._SPLIT_DIGITS.sub("", e_text or ""))   # 「<線> WITH EACH SIDE OF 30KM」も帯として見る
+    t = C._rewrite_each_side(C.clean_e_text(e_text))   # 「<線> WITH EACH SIDE OF 30KM」も帯として見る
     corridor = bool(C._CORRIDOR.search(t))
     out = []
     for m in C._TEXT_COORD.finditer(t):
@@ -108,6 +108,13 @@ def check_notam(p, geoms):
         vset = [(y, x) for r in rings for x, y in r]
         missing = [(a, b) for a, b, _ in verts
                    if not any(abs(a - y) < NEAR_DEG and abs(b - x) < NEAR_DEG for y, x in vset)]
+        # 閉じるつもりの書き損じ(最後の点が最初の点とわずかに違う。A3590/26)で外した点は数えない
+        # (notam_cn_collect._drop_near_close。区域の大きさの5%未満のずれ)
+        if missing and len(missing) == 1 and verts and (verts[-1][0], verts[-1][1]) == missing[0]:
+            ys, xs = [a for a, _, _ in verts], [b for _, b, _ in verts]
+            diag = ((max(ys) - min(ys)) ** 2 + (max(xs) - min(xs)) ** 2) ** 0.5
+            if ((missing[0][0] - verts[0][0]) ** 2 + (missing[0][1] - verts[0][1]) ** 2) ** 0.5 < 0.05 * diag:
+                missing = []
         if missing and src == "text-polygon":
             a, b = missing[0]
             issues.append(f"本文の座標 {len(missing)} 個が図形の頂点に入っていない(例 {a:.4f}N {b:.4f}E)")
