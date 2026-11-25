@@ -461,7 +461,10 @@ body.dark-mode .toolbar-sep{background:rgba(255,255,255,.18);}
   border-radius:6px;color:var(--text);font-family:var(--sans);font-size:12px;line-height:1.7;padding:8px;
   box-sizing:border-box;
 }
-.pdf-panel .pdf-panel-actions{display:flex;gap:8px;margin-top:10px;justify-content:flex-end;}
+.pdf-panel .pdf-panel-actions{display:flex;gap:8px;margin-top:10px;justify-content:flex-end;align-items:center;}
+/* v5.5.0: PDF に図形のラベル(警報タイトル・NOTAM番号)も出すか。左端に置く */
+.pdf-panel .pdf-label-opt{margin-right:auto;display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--text);cursor:pointer;user-select:none;}
+.pdf-panel .pdf-label-opt input{accent-color:var(--phosphor);cursor:pointer;margin:0;}
 
 /* Rendered off-screen (never visible to the person) purely so html2canvas can rasterize
    the title+body text as an image -- jsPDF has no built-in CJK font, so text drawn with
@@ -988,6 +991,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <div class="pdf-panel-title" id="pdfPanelTitle"></div>
       <textarea id="pdfPanelText"></textarea>
       <div class="pdf-panel-actions">
+        <label class="pdf-label-opt"><input type="checkbox" id="pdfWithLabels"> ラベルも出力</label>
         <button class="btn small ghost" id="btnPdfCancel">キャンセル</button>
         <button class="btn small primary" id="btnPdfGenerate">PDFを生成</button>
       </div>
@@ -1053,7 +1057,13 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.4.9';
+const APP_VERSION = 'v5.5.0';
+// v5.5.0: PDF に図形のラベル(.poly-label)も出すか。確認画面のチェック「ラベルも出力」(最後の選択を覚える)
+function pdfWithLabels(){ const c = document.getElementById('pdfWithLabels'); return !!(c && c.checked); }
+function pdfHideSelectors(){
+  const sel = ['#pdfPanel', '.map-toolbar', '.layer-control', '.readout', '.scale-note', '.measure-control', '.leaflet-control-zoom', '.leaflet-popup-pane'];
+  return pdfWithLabels() ? sel : sel.concat('.poly-label');
+}
 // v1.9.0: NOTAM(中国・香港・マカオ・台湾+周辺国参考FIR: フィリピン/オークランド洋上管制/
 // 福岡FIR/仁川FIR/平壌FIR)収集機能を追加。MAP(自動更新)/MAP(手動)と同格の第3のモード
 // (data-mode-section="notam")として、notam_cn_collect.py(GitHub Actions: notam-collect.yml)
@@ -1153,6 +1163,7 @@ const APP_VERSION = 'v5.4.9';
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.5.0: PDF の確認画面に「ラベルも出力」(既定はオフ=今までどおりラベルなし。最後の選択を覚える)
 // v5.4.9: NOTAM の FIR の絞り込みを複数選べるチェックボックスに(発行元と同じ形。何も選ばなければすべて)
 // v5.4.8: 「画面をタップすると key を入力できます」を「…パスワードを入力できます」に
 // v5.4.7: パスワードを間違えたときの「key が違います。」をなくし、同じ文で聞き直す
@@ -2880,7 +2891,7 @@ async function generatePdf(){
   // 隠さずそのままキャプチャに含める（既定で右下・小さめ・半透明グレーなので目立たない）。
   // .poly-label（ポリゴン上に浮かぶ警報タイトル）も、上のタイトル見出しと重複するため
   // PDF出力時だけ非表示にする（通常のブラウズ時は引き続き表示される）。
-  const toHide = ['#pdfPanel', '.map-toolbar', '.layer-control', '.readout', '.scale-note', '.measure-control', '.leaflet-control-zoom', '.leaflet-popup-pane', '.poly-label'];
+  const toHide = pdfHideSelectors();
   const hidden = toHide.map(sel => Array.from(document.querySelectorAll(sel))).flat();
   const prevDisplay = hidden.map(el => el.style.display);
   hidden.forEach(el => el.style.display = 'none');
@@ -3077,7 +3088,7 @@ async function generateMultiPdf(){
   btn.disabled = true;
   btn.textContent = '生成中...';
   // 地図以外の浮いている部品と、図形の上の番号ラベル(.poly-label)を隠して撮る(単体PDFと同じ。v3.8.3〜ラベルも消す)
-  const toHide = ['#pdfPanel', '.map-toolbar', '.layer-control', '.readout', '.scale-note', '.measure-control', '.leaflet-control-zoom', '.leaflet-popup-pane', '.poly-label'];
+  const toHide = pdfHideSelectors();
   const hidden = toHide.map(sel => Array.from(document.querySelectorAll(sel))).flat();
   const prevDisplay = hidden.map(e => e.style.display);
   hidden.forEach(e => e.style.display = 'none');
@@ -3097,7 +3108,7 @@ async function generateMultiPdf(){
   const activeColor = statusColor('active');
   const restyled = [];
   // NOTAMは下で赤く描き直すので、そのとき新しく付くラベルも隠れるよう、ページ全体のクラスで隠す
-  document.body.classList.add('pdf-capturing');
+  if (!pdfWithLabels()) document.body.classList.add('pdf-capturing');
   try {
     if (mode === 'notam'){
       await syncOverlayLayers();     // 航空路など、チェックの入った参考レイヤーを描き終えてから撮る(赤い図形はその上に描く)
@@ -5551,6 +5562,11 @@ $('#notamFirList').addEventListener('change', (e)=>{
   if (e.target.checked) set.add(v); else set.delete(v);
   renderNotamList();
 });
+(() => {
+  const c = document.getElementById('pdfWithLabels');
+  try { c.checked = localStorage.getItem('pdfWithLabels') === '1'; } catch(e) {}
+  c.addEventListener('change', () => { try { localStorage.setItem('pdfWithLabels', c.checked ? '1' : '0'); } catch(e) {} });
+})();
 $('#notamFirClear').addEventListener('click', ()=>{ notamFilters[notamTab].firs = new Set(); renderNotamList(); });
 $('#notamIssuerList').addEventListener('change', (e)=>{
   const k = e.target && e.target.dataset ? e.target.dataset.notamIssuer : undefined;
