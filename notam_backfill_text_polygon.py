@@ -74,14 +74,21 @@ def _make_polygon_geom(rings):
         else {"type": "MultiPolygon", "coordinates": [[r] for r in rings]}
 
 
+def _api_is_qline_circle(geom, radius_nm):
+    """保存してある "api" の面が、Q項の半径の真円を多角形にしただけのものか(2026-11-25、C._is_qline_circle と同じ判定)。"""
+    if not geom or geom.get("type") != "Polygon":
+        return False
+    return C._is_qline_circle([geom.get("coordinates")], {"radius": radius_nm})
+
+
 def reconcile_state_active_record(rec, e_text_source):
     """state_active方式のdict1件を修正後のロジックで再検証し、必要なら書き換える。
-    戻り値は変更したら True。"api" は触らない。"""
-    if rec.get("geometry_source") == "api":
-        return False
-
+    戻り値は変更したら True。"api" は触らない(2026-11-25〜: Q項の円をそのまま多角形にしただけの "api" で、
+    本文から形が読めるものは本文の形にする)。"""
     e_text = C.e_section(e_text_source, e_text_source)
     rings = C.text_rings(e_text)
+    if rec.get("geometry_source") == "api" and not (rings and _api_is_qline_circle(rec.get("geometry"), rec.get("radius_nm"))):
+        return False
 
     if rings:
         geom = _make_polygon_geom(rings)
@@ -145,12 +152,11 @@ def reconcile_state_active_record(rec, e_text_source):
 def reconcile_archive_feature(feat):
     """archive/notam_YYYY-MM.geojson の1 featureを再検証。戻り値は変更したら True。"""
     p = feat.get("properties") or {}
-    if p.get("geometry_source") == "api":
-        return False
-
     raw_text = p.get("raw_text")
     e_text = C.e_section(raw_text, raw_text)
     rings = C.text_rings(e_text)
+    if p.get("geometry_source") == "api" and not (rings and _api_is_qline_circle(feat.get("geometry"), p.get("radius_nm"))):
+        return False
 
     if rings:
         geom = _make_polygon_geom(rings)
