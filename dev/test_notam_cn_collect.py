@@ -706,6 +706,62 @@ class CrossedQuad20261023(unittest.TestCase):
         self.assertEqual(C.parse_text_polygons(e)[0], [[120.0, 30.0], [121.0, 30.0], [121.0, 31.0], [120.0, 31.0], [120.0, 30.0]])
 
 
+class TextOverQlineCircle20261125(unittest.TestCase):
+    """2026-11-25: API の面が Q項の半径の真円をそのまま多角形にしただけなら、本文の形を優先する。
+    分割された NOTAM の継ぎ目・秒の小数の前の空白・閉じ損じの最後の点も読む。"""
+    @staticmethod
+    def _api(lat, lon, r_nm):
+        return {"geometry": {"type": "Polygon", "coordinates": [C.circle_ring(lat, lon, r_nm)]}}
+
+    def _center_radius(self, ring):
+        lat, lon = C.ring_centroid(ring)
+        return lat, lon, sum(C.nm_between((lat, lon), (y, x)) for x, y in ring[:-1]) / (len(ring) - 1)
+
+    def test_meter_radius_beats_qline_circle(self):
+        """U2876/26: 本文は 2500M の円、API は Q項の 3NM の円(中心も約10NM ずれ)。"""
+        e = "UNMANNED ACFT WILL BE RELEASED: 4.COOR TEL:0918-052897 5.AREA AS FLW: 2500M RADIUS CENTRED ON 230635N 1201626E"
+        g, src = C.build_geometry(self._api(23.27, 120.30, 3.0), {"coordinates": "2307N12016E", "radius": "003"}, e)
+        self.assertEqual(src, "text-polygon")
+        lat, lon, r = self._center_radius(g["coordinates"][0])
+        self.assertAlmostEqual(lat, 23.1097, places=3)
+        self.assertAlmostEqual(lon, 120.2739, places=3)
+        self.assertAlmostEqual(r, 2.5 / 1.852, delta=0.05)
+
+    def test_center_before_radius_beats_qline_circle(self):
+        """A6142/26: CIRCLE CENTERED AT N210800E1124100 WITH RADIUS OF 20KM。"""
+        e = "A TEMPORARY DANGER AREA ESTABLISHED,THE AREA WITHIN A CIRCLE \r\nCENTERED AT N210800E1124100 WITH RADIUS OF 20KM."
+        g, src = C.build_geometry(self._api(21.13, 112.67, 11.0), {"coordinates": "2108N11240E", "radius": "011"}, e)
+        self.assertEqual(src, "text-polygon")
+        self.assertAlmostEqual(self._center_radius(g["coordinates"][0])[1], 112.6833, places=3)
+
+    def test_real_api_polygon_kept(self):
+        """API の面が真円でない(本当の区域)ときは、今までどおり API の面。"""
+        api = {"geometry": {"type": "Polygon", "coordinates": [[[120, 30], [121, 30], [121, 31], [120, 30]]]}}
+        g, src = C.build_geometry(api, {"coordinates": "3030N12030E", "radius": "050"}, "2500M RADIUS CENTRED ON 230635N 1201626E")
+        self.assertEqual(src, "api")
+
+    def test_split_notam_parts_joined(self):
+        """G4981/26: 2つに分かれた本文の継ぎ目(Q項の座標・「 ) // // 」で切れた座標)。"""
+        e = ("AREA 4: N223842.1E1134902.9-N2238 \n ) \n// // 44.1E1134901.4-N223846.2E1134900.0-N223842.1E1134902.9 "
+             "AREA 5: N223914.0E1134848.1-N223915.0E1134850.3- END PART 1 OF 2\nG4981/26 NOTAMR G2017/26 Q) "
+             "ZGZU/QOBCE/IV/M/A/000/999/2238N11349E005 A) ZGSZ  PART 2 OF 2  B) 2611060247 C) 2705041559 EST  E) "
+             "N223905.4E1134856.7-N223914.0E1134848.1 ALT:65.0M.")
+        rings = C.parse_text_polygons(e)
+        self.assertEqual([len(r) for r in rings], [4, 4])
+        self.assertIn([113.817056, 22.645583], rings[0])                    # N223844.1E1134901.4
+        self.assertNotIn([113.816667, 22.633333], [p for r in rings for p in r])   # Q項の 2238N11349E は頂点にしない
+
+    def test_space_before_decimal(self):
+        rings = C.parse_text_polygons("N405110.0E1114729.7-N405117.8E1114752.3-N405108.4E1114755.0-N405104 .3E1114731.6 ALT")
+        self.assertEqual(len(rings[0]), 5)
+
+    def test_near_close_typo_dropped_only_if_it_crosses(self):
+        ring = C.parse_text_polygons("WI 0656N10836E-0649N10906E-0545N10850E-0552N10823E-0656N10838E DUE")[0]
+        self.assertEqual(len(ring), 5)
+        ok = C.parse_text_polygons("N300000E1200000-N300000E1210000-N310000E1210000-N310000E1200000-N300100E1200000")[0]
+        self.assertEqual(len(ok), 6)        # 交差しないなら書かれたとおり
+
+
 class RouteSegments(unittest.TestCase):
     """航空路の区間閉鎖 -> 線(notam_route_segments.py)。索引は合成データなので鍵が無くても動く。"""
 
