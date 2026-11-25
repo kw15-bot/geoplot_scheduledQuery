@@ -89,7 +89,45 @@ def check_collector_api():
             print(f"[collector api] {acct['name']}: {type(e).__name__}: {e}")
 
 
+class _NoRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *a, **k):
+        return None
+
+
+def cookie_report():
+    """2026-11-25 調査: cookie の自動再取得の手がかり。値は出さず、名前・ALF(自動ログインの期限の時刻)・
+    weibo.com を開いたときのリダイレクト先(ホストとパスだけ)と Set-Cookie の名前・期限だけを出す。"""
+    import datetime as dt
+    names = [c.split("=", 1)[0] for c in LOGIN_COOKIE.split("; ") if "=" in c]
+    print("[cookie] names:", names)
+    for c in LOGIN_COOKIE.split("; "):
+        k, _, v = c.partition("=")
+        if k in ("ALF", "SSOLoginState", "LT") and v.isdigit() and len(v) == 10:
+            print(f"[cookie] {k} = {dt.datetime.fromtimestamp(int(v), dt.timezone.utc):%Y-%m-%d %H:%M} UTC")
+    op2 = urllib.request.build_opener(_NoRedirect)
+    url = "https://weibo.com/"
+    for _ in range(6):
+        req = urllib.request.Request(url, headers={"User-Agent": UA, "Cookie": LOGIN_COOKIE, "Accept": "text/html"})
+        try:
+            r = op2.open(req, timeout=30); code, hdr = r.status, r.headers
+        except urllib.error.HTTPError as e:
+            code, hdr = e.code, e.headers
+        except Exception as e:  # noqa: BLE001
+            print(f"[trace] {urllib.parse.urlsplit(url).netloc}: {type(e).__name__}: {e}")
+            break
+        u = urllib.parse.urlsplit(url)
+        sc = [(x.split("=", 1)[0], re.search(r"(?i)expires=([^;]+)", x).group(1) if re.search(r"(?i)expires=", x) else "session",
+               (re.search(r"(?i)domain=([^;]+)", x) or [None, ""])[1]) for x in (hdr.get_all("Set-Cookie") or [])]
+        print(f"[trace] {code} {u.netloc}{u.path} params={sorted(urllib.parse.parse_qs(u.query))} set-cookie={sc}")
+        loc = hdr.get("Location")
+        if not loc or code not in (301, 302, 303, 307, 308):
+            break
+        url = urllib.parse.urljoin(url, loc)
+
+
 def main():
+    if LOGIN_COOKIE:
+        cookie_report()
     check_collector_api()
     q = urllib.parse.quote(NAME)
     print("login cookie:", "あり" if LOGIN_COOKIE else "なし", "(SUB あり)" if "SUB=" in LOGIN_COOKIE else "")
