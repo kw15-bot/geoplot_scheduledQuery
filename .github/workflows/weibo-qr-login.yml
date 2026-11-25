@@ -1,0 +1,30 @@
+name: Weibo QR login
+
+# 2026-11-25: 微博の cookie を QR ログインで取り直す(weibo_qr_login.py、HANDOFF_NOTAM.md §32)。
+# 実行すると、ログに QR の画像の URL が出る → 微博アプリの「扫一扫」で読み取って確認(5分以内)。
+# ログインできたら、収集(news-collect.yml)が使う cookie を Actions のキャッシュに保存する(値はログに出さない)。
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  login:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: QR login
+        env:
+          WEIBO_COOKIE: ${{ secrets.WEIBO_COOKIE }}   # 中身は使わない。収集が「Secret が同じ間は保存分を使う」と判断するためのハッシュだけ
+        run: python weibo_qr_login.py --out "$RUNNER_TEMP/weibo_cookie/cookie.json"
+      # 収集は restore-keys「weibo-cookie-」でいちばん新しいものを戻すので、これが次の収集で使われる
+      - name: Save Weibo cookie
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ runner.temp }}/weibo_cookie/cookie.json
+          key: weibo-cookie-qr-${{ github.run_id }}
