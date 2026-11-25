@@ -70,6 +70,24 @@ class WebPushTest(unittest.TestCase):
         mix = W.build_payload([("news:a", "x"), ("msa:https://m/1", "y"), ("notam:ZBBBYNYX|A1/26|x", "z")])
         self.assertEqual(mix["title"], "新しいNOTAM / 航行警報 / 報道")
 
+    def test_weibo_cookie_reminder(self):
+        """2026-11-25: 微博の cookie は更新から6日目と切れたときに、同じ cookie について1回ずつ知らせる。"""
+        import datetime as dt
+        R = W.weibo_cookie_reminder
+        t0 = dt.datetime(2026, 11, 25, 1, 30, tzinfo=dt.timezone.utc)
+        news = {"sources": {"weibo": {"cookie_key": "abc", "cookie_since": t0.isoformat()}}}
+        st = {}
+        self.assertIsNone(R(news, st, t0 + dt.timedelta(days=5)))
+        r = R(news, st, t0 + dt.timedelta(days=6, minutes=1))
+        self.assertIn("6日", r["title"])
+        self.assertIsNone(R(news, st, t0 + dt.timedelta(days=6, hours=1)))          # 2回目は送らない
+        news["sources"]["weibo"]["auth_error_at"] = "2026-12-02"
+        self.assertIn("切れました", R(news, st, t0 + dt.timedelta(days=7))["title"])
+        self.assertIsNone(R(news, st, t0 + dt.timedelta(days=7, hours=1)))
+        news = {"sources": {"weibo": {"cookie_key": "new", "cookie_since": (t0 + dt.timedelta(days=8)).isoformat()}}}
+        self.assertIsNone(R(news, st, t0 + dt.timedelta(days=9)))                   # 更新したらやり直し
+        self.assertIsNone(R({}, {}, t0))
+
     def test_send_all_drops_gone(self):
         v = W.keygen()
         from cryptography.hazmat.primitives.asymmetric import ec
