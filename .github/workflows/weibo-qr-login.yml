@@ -3,8 +3,16 @@ name: Weibo QR login
 # 2026-11-25: 微博の cookie を QR ログインで取り直す(weibo_qr_login.py、HANDOFF_NOTAM.md §32)。
 # 実行すると、ログに QR の画像の URL が出る → 微博アプリの「扫一扫」で読み取って確認(5分以内)。
 # ログインできたら、収集(news-collect.yml)が使う cookie を Actions のキャッシュに保存する(値はログに出さない)。
+# 2026-11-25: API で作った QR は読み取っても「未使用」のままだったので、既定は公式のログインページを本物のブラウザで開く方法
+# (weibo_qr_login_browser.py)。how=api で前の方法。
 on:
   workflow_dispatch:
+    inputs:
+      how:
+        description: "browser = 公式のログインページを開く / api = API で QR を作る"
+        type: choice
+        options: [browser, api]
+        default: browser
 
 permissions:
   contents: read
@@ -12,16 +20,27 @@ permissions:
 jobs:
   login:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - name: Install browser
+        if: inputs.how != 'api'
+        run: |
+          pip install -q playwright
+          python -m playwright install --with-deps chromium > /dev/null
       - name: QR login
         env:
           WEIBO_COOKIE: ${{ secrets.WEIBO_COOKIE }}   # 中身は使わない。収集が「Secret が同じ間は保存分を使う」と判断するためのハッシュだけ
-        run: python weibo_qr_login.py --out "$RUNNER_TEMP/weibo_cookie/cookie.json"
+          HOW: ${{ inputs.how }}
+        run: |
+          if [ "$HOW" = "api" ]; then
+            python weibo_qr_login.py --out "$RUNNER_TEMP/weibo_cookie/cookie.json"
+          else
+            python weibo_qr_login_browser.py --out "$RUNNER_TEMP/weibo_cookie/cookie.json"
+          fi
       # 収集は restore-keys「weibo-cookie-」でいちばん新しいものを戻すので、これが次の収集で使われる
       - name: Save Weibo cookie
         uses: actions/cache/save@v4
