@@ -792,6 +792,13 @@ def collect_weibo_refreshing(state, now, path=None, get_factory=None):
         if auth_failed and i + 1 < len(tries):
             print(f"[weibo] {label}でログイン切れ。Secret の cookie でもう一度試す", file=sys.stderr)
             continue
+        if not auth_failed and not err:
+            # 2026-11-25: Secret を更新してから初めて読めた時刻を覚える(webpush.py が6日目に「まもなく切れる」と知らせる)。
+            # 鍵は Secret のハッシュの先頭だけ(値そのものは書かない)
+            src = state.setdefault("sources", {}).setdefault("weibo", {})
+            key = shash[:12]
+            if src.get("cookie_key") != key:
+                src["cookie_key"], src["cookie_since"] = key, now
         if path and not auth_failed:
             new = jar.header()
             if not saved or new != saved.get("cookie"):

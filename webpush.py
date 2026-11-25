@@ -244,6 +244,39 @@ def viewer_keys_param(new):
 
 
 # ----------------------------------------------------------------------------- ファイル
+WEIBO_SECRET_URL = "https://github.com/kw15-bot/geoplot_scheduledQuery/settings/secrets/actions"
+WEIBO_REMIND_DAYS = 6          # 微博のログイン cookie は約7日で切れる(2026-11-25 確認)ので、6日目に知らせる
+
+
+def weibo_cookie_reminder(news, state, now=None):
+    """微博の cookie の更新を促す通知(2026-11-25、ユーザー選択「6日目に通知」)。送るものが無ければ None。
+    Secret を更新してから6日たった(news.json の sources.weibo.cookie_since)・切れた(auth_error_at)ときに、
+    同じ cookie(cookie_key)について1回ずつ。送ったことは state["weibo_reminder"] に覚える(state を書き換える)。"""
+    w = ((news or {}).get("sources") or {}).get("weibo") or {}
+    key = w.get("cookie_key")
+    if not key:
+        return None
+    now = now or dt.datetime.now(dt.timezone.utc)
+    sent = state.get("weibo_reminder") or {}
+    if sent.get("key") != key:
+        sent = {"key": key, "kinds": []}
+    kind = body = None
+    if w.get("auth_error_at"):
+        kind, body = "expired", "微博の cookie が切れました。取り直して Secret を更新してください"
+    else:
+        try:
+            since = dt.datetime.fromisoformat(str(w.get("cookie_since")).replace("Z", "+00:00"))
+        except ValueError:
+            since = None
+        if since and now - since >= dt.timedelta(days=WEIBO_REMIND_DAYS):
+            kind, body = "day6", "微博の cookie がまもなく切れます(更新から6日)。取り直して Secret を更新してください"
+    if not kind or kind in sent["kinds"]:
+        return None
+    sent["kinds"].append(kind)
+    state["weibo_reminder"] = sent
+    return {"title": body, "body": "", "url": WEIBO_SECRET_URL, "tag": "geoplot-weibo-cookie"}   # 通知は1行だけ(2026-10-23 の決まり)
+
+
 def _load_json(path, default):
     try:
         return json.loads(Path(path).read_text(encoding="utf-8"))
@@ -333,6 +366,13 @@ def main(argv=None):
     # send
     load = lambda p: _load_json(p, None) if p and Path(p).exists() else None
     news, notam, msa = load(a.news), load(a.notam), load(a.msa)
+    state0 = _load_json(STATE_FILE, {})
+    reminder = weibo_cookie_reminder(news, state0)
+    if reminder and subs["subs"]:
+        keep, ok = send_all(reminder, vapid, subs["subs"])
+        print(f"[webpush] {reminder['title']} → {ok}/{len(subs['subs'])} 台に送った")
+    if reminder:
+        _save_json(STATE_FILE, state0)
     events = {"news": news_events(news) if news else None, "notam": notam_events(notam) if notam else None,
               "msa": msa_events(msa) if msa else None}
     state = _load_json(STATE_FILE, {})

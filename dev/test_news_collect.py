@@ -262,6 +262,13 @@ class News(unittest.TestCase):
                     used.clear()
                     N.collect_weibo_refreshing(state, "2026-11-13T00:30:00+00:00", path=path, get_factory=factory())
                     self.assertIn("SUB=fresh", used[0])
+                    # 2026-11-25: Secret を更新して初めて読めた時刻(6日目の通知に使う)。同じ Secret の間は変わらない
+                    self.assertEqual(state["sources"]["weibo"]["cookie_since"], "2026-11-13T00:30:00+00:00")
+                    key = state["sources"]["weibo"]["cookie_key"]
+                    N.collect_weibo_refreshing(state, "2026-11-13T00:40:00+00:00", path=path, get_factory=factory())
+                    self.assertEqual(state["sources"]["weibo"]["cookie_since"], "2026-11-13T00:30:00+00:00")
+                    self.assertEqual(state["sources"]["weibo"]["cookie_key"], key)
+                    self.assertNotIn("fresh", key)
                 finally:
                     N.WEIBO_ACCOUNTS = acc
         finally:
