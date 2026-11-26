@@ -354,6 +354,8 @@ body.dark-mode .toolbar-sep{background:rgba(255,255,255,.18);}
 }
 .measure-control a:hover{color:var(--cyan)!important;}
 .measure-control a.active{color:#fff!important;background:var(--cyan)!important;}
+/* v5.5.2: 計測中は地図上の印(ウェイポイント・座標プロットの点など)もクリックを素通しして、計測の頂点を優先する */
+body.measuring .leaflet-marker-icon, body.measuring .leaflet-marker-pane *, body.measuring svg .leaflet-interactive{pointer-events:none!important;}
 .measure-panel{
   /* v3.9.2: 下の座標表示(.readout、高さ約34px・下から12px)と詰まって見えたので、間を約10px空ける(bottom 44→56px) */
   display:none;position:absolute;left:12px;bottom:56px;z-index:500;
@@ -1057,7 +1059,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.5.1';
+const APP_VERSION = 'v5.5.2';
 // v5.5.0: PDF に図形のラベル(.poly-label)も出すか。確認画面のチェック「ラベルも出力」(最後の選択を覚える)
 function pdfWithLabels(){ const c = document.getElementById('pdfWithLabels'); return !!(c && c.checked); }
 function pdfHideSelectors(){
@@ -1163,6 +1165,7 @@ function pdfHideSelectors(){
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.5.2: 距離計測中は図形をクリックしても選択にならず、計測の頂点になる(図形より計測を優先)
 // v5.5.1: NOTAM の単体PDFでも「ラベルも出力」で NOTAM 番号が出るように(単体PDFは番号なしで描き直していた)
 // v5.5.0: PDF の確認画面に「ラベルも出力」(既定はオフ=今までどおりラベルなし。最後の選択を覚える)
 // v5.4.9: NOTAM の FIR の絞り込みを複数選べるチェックボックスに(発行元と同じ形。何も選ばなければすべて)
@@ -1902,6 +1905,16 @@ const FULL_VIEW_BOUNDS = [[12, 88], [46, 141]];
 const MAP_LON_MIN = -60, MAP_LON_MAX = 330;
 // renderer の tolerance: 細い線(航空路レイヤー1px、航空路閉鎖2.2px)でも、線から数px以内ならクリック・マウスオーバーを拾う
 // (既定0だと線の太さの半分=0.5pxしか反応しない)。
+// v5.5.2: 計測中は、図形(canvas に描いた NOTAM・航行警報・参考レイヤー)のクリック・マウスの判定をしない。
+// Leaflet の canvas は図形の上のクリックをその図形に渡して地図には届けない(選択・ポップアップになる)ので、
+// 計測中だけ素通しして地図のクリック(=計測の頂点)にする。ダブルクリックでの計測終了も同じ
+const _canvasOnClick = L.Canvas.prototype._onClick, _canvasOnMove = L.Canvas.prototype._onMouseMove;
+// (canvas は図形が無いときも自分で地図のクリックを出すので、図形なし=地図へのクリックとして渡す)
+L.Canvas.prototype._onClick = function(e){ if (window.__measuring) return this._fireEvent(false, e); return _canvasOnClick.call(this, e); };
+L.Canvas.prototype._onMouseMove = function(e){
+  if (window.__measuring){ if (this._hoveredLayer) this._handleMouseOut(e); return; }
+  return _canvasOnMove.call(this, e);
+};
 const map = L.map('map', { zoomControl:false, worldCopyJump:false, renderer: L.canvas({ tolerance: 5 }), zoomSnap:0.25, zoomDelta:1,
   maxBounds: [[-85, MAP_LON_MIN], [85, MAP_LON_MAX]], maxBoundsViscosity: 1.0 });
 // Best-effort initial view -- the map container is still 0x0 at this point (#mainApp is
@@ -2325,8 +2338,11 @@ const MeasureControl = L.Control.extend({
 });
 map.addControl(new MeasureControl());
 
+function syncMeasureClass(){ window.__measuring = measureActive; document.body.classList.toggle('measuring', measureActive); }
+
 function toggleMeasureMode(btnEl){
   measureActive = !measureActive;
+  syncMeasureClass();
   const btn = btnEl || document.querySelector('.measure-control a');
   btn.classList.toggle('active', measureActive);
   map.getContainer().style.cursor = measureActive ? 'crosshair' : '';
@@ -2340,11 +2356,11 @@ function redrawMeasure(){
   measureVertices = [];
   measurePts.forEach(p => {
     measureVertices.push(L.circleMarker(p, {
-      radius: 4, color:'#4fd6e0', weight:2, fillColor:'#0a1119', fillOpacity:1
+      radius: 4, color:'#4fd6e0', weight:2, fillColor:'#0a1119', fillOpacity:1, interactive:false   // v5.5.2: 計測の点・線は下の図形のクリックを邪魔しない
     }).addTo(map));
   });
   if (measurePts.length > 1){
-    measureLine = L.polyline(measurePts, { color:'#4fd6e0', weight:2, opacity:0.9 }).addTo(map);
+    measureLine = L.polyline(measurePts, { color:'#4fd6e0', weight:2, opacity:0.9, interactive:false }).addTo(map);
   }
 }
 
@@ -2357,7 +2373,7 @@ function updateMeasurePreview(latlng){
   if (!measureActive || !measurePts.length || !latlng) return;
   const last = measurePts[measurePts.length - 1];
   measurePreviewLine = L.polyline([last, latlng], {
-    color:'#4fd6e0', weight:2, opacity:0.6, dashArray:'4,6'
+    color:'#4fd6e0', weight:2, opacity:0.6, dashArray:'4,6', interactive:false
   }).addTo(map);
 }
 
@@ -2416,6 +2432,7 @@ map.on('dblclick', (e) => {
   clearMeasurePreview();
   redrawMeasure();
   measureActive = false;
+  syncMeasureClass();
   const btn = document.querySelector('.measure-control a');
   if (btn) btn.classList.remove('active');
   map.getContainer().style.cursor = '';
@@ -2432,6 +2449,7 @@ $('#measureClear').addEventListener('click', () => {
   clearMeasurePreview();
   redrawMeasure();
   measureActive = false;
+  syncMeasureClass();
   const btn = document.querySelector('.measure-control a');
   if (btn) btn.classList.remove('active');
   map.getContainer().style.cursor = '';
