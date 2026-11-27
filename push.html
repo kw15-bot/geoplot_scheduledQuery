@@ -81,6 +81,15 @@ const b64 = u8 => btoa(String.fromCharCode(...new Uint8Array(u8)));
 const b64uBytes = s => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/') + '='.repeat((4 - s.length % 4) % 4)), c => c.charCodeAt(0));
 const supported = () => 'serviceWorker' in navigator && 'PushManager' in window && 'Notification' in window;
 const isIos = () => /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+// 2026-11-27: 登録の一覧に出す端末名。iPhone でも「デスクトップ用Webサイトを表示」がオンだと Mac と名乗るので、
+// Mac と名乗るタッチ画面の端末は iPhone/iPad とみなし、画面の短い辺(600px 未満なら iPhone)で分ける
+function deviceLabel(){
+  const ua = navigator.userAgent;
+  const m = ua.match(/iPhone|iPad|Android|Windows|Macintosh|Linux/);
+  if (m && (m[0] === 'iPhone' || m[0] === 'iPad')) return m[0];
+  if (navigator.maxTouchPoints > 1 && /Macintosh/.test(ua)) return Math.min(screen.width, screen.height) < 600 ? 'iPhone' : 'iPad';
+  return m ? m[0] : '端末';
+}
 const standalone = () => window.matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
 function say(t, err){ $('#msg').textContent = t || ''; $('#msg').className = 'msg' + (err ? ' err' : ''); }
 
@@ -122,10 +131,10 @@ $('#btnOn').addEventListener('click', async () => {
     if (await Notification.requestPermission() !== 'granted'){ say('通知が許可されませんでした。端末やブラウザの設定で、このページの通知を許可してください。', true); return; }
     let sub = await reg.pushManager.getSubscription();
     if (!sub) sub = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64uBytes(WEBPUSH_PUBLIC_KEY) });
-    const label = (navigator.userAgent.match(/iPhone|iPad|Android|Windows|Macintosh|Linux/) || ['端末'])[0];
+    const label = deviceLabel();
     $('#code').value = await encryptForRepo(JSON.stringify({ ...sub.toJSON(), label }), key);
     $('#codeBox').hidden = false;
-    say('この端末の登録コードを作りました。下の手順で登録してください（同じ端末なら一度だけでよい）。');
+    say(`この端末（${label}）の登録コードを作りました。下の手順で登録してください（同じ端末なら一度だけでよい）。`);
     refresh();
   }catch(err){ say(`登録できませんでした: ${err.message}`, true); }
 });
