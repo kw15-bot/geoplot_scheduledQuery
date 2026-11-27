@@ -785,14 +785,30 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
            絞り込み。選択肢はそれぞれのタブの対象範囲に実在する海事局だけを動的に列挙する
            (renderWarnList内)ので、該当0件の局は選択肢に出てこない。 -->
       <div id="archiveBureauFilterRow" style="display:none;margin-top:-2px;margin-bottom:10px;">
-        <select id="archiveBureauFilter" style="width:100%;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--mono);font-size:11.5px;padding:6px 8px;">
-          <option value="">海事局: すべて</option>
-        </select>
+        <!-- v5.5.3: 海事局の絞り込みをチェックボックスに(NOTAM の FIR・発行元と同じ形。最初は全部にチェック、外した局を隠す) -->
+        <details id="archiveBureauFilter" class="notam-issuer-box">
+          <summary id="archiveBureauSummary">海事局: すべて</summary>
+          <div class="issuer-body">
+            <div class="btn-row" style="margin-top:6px;">
+              <button class="btn small ghost" data-bureau-all="archive">すべて</button>
+              <button class="btn small ghost" data-bureau-none="archive">すべて外す</button>
+            </div>
+            <div id="archiveBureauList"></div>
+          </div>
+        </details>
       </div>
       <div id="allBureauFilterRow" style="display:none;margin-top:-2px;margin-bottom:10px;">
-        <select id="allBureauFilter" style="width:100%;background:var(--panel-alt);border:1px solid var(--border);border-radius:6px;color:var(--text);font-family:var(--mono);font-size:11.5px;padding:6px 8px;">
-          <option value="">海事局: すべて</option>
-        </select>
+        <!-- v5.5.3: 海事局の絞り込みをチェックボックスに(NOTAM の FIR・発行元と同じ形。最初は全部にチェック、外した局を隠す) -->
+        <details id="allBureauFilter" class="notam-issuer-box">
+          <summary id="allBureauSummary">海事局: すべて</summary>
+          <div class="issuer-body">
+            <div class="btn-row" style="margin-top:6px;">
+              <button class="btn small ghost" data-bureau-all="all">すべて</button>
+              <button class="btn small ghost" data-bureau-none="all">すべて外す</button>
+            </div>
+            <div id="allBureauList"></div>
+          </div>
+        </details>
       </div>
       <div id="warnList"></div>
       <div class="empty-hint" id="warnEmptyHint">GeoJSONの読み込み、または本文・一覧の貼り付け解析を行うと、ここに一覧が表示されます。</div>
@@ -824,12 +840,13 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
       <div class="notam-filters">
         <!-- 全タブで表示(v2.8.0〜)。 -->
         <div id="notamFirFilterRow" style="display:none;margin-top:0;margin-bottom:4px;">
-          <!-- FIRの絞り込み(v5.4.9〜、チェックボックスで複数選択。何も選ばなければすべて) -->
+          <!-- FIRの絞り込み(v5.4.9〜チェックボックス。v5.5.3〜 最初は全部にチェック、外したFIRを隠す。発行元と同じボタン) -->
           <details id="notamFirFilter" class="notam-issuer-box">
             <summary id="notamFirSummary">FIR: すべて</summary>
             <div class="issuer-body">
               <div class="btn-row" style="margin-top:6px;">
-                <button class="btn small ghost" id="notamFirClear">すべて（選択を外す）</button>
+                <button class="btn small ghost" id="notamFirAll">すべて</button>
+                <button class="btn small ghost" id="notamFirNone">すべて外す</button>
               </div>
               <div id="notamFirList"></div>
             </div>
@@ -1059,7 +1076,7 @@ body.dark-mode .warn-item.mil .wtitle{color:#e3a75c;}
 //    lat側は先頭が"-"や文頭など非英数字の直後であることを要求するが、lon側は直前が
 //    lat側の秒の数字に直接くっつく(区切りが無い)ことを前提に、その手前の文字種は
 //    問わない設計にしている。msa_scraper.py側には未反映(手動モード=HTML側のみの対応)。
-const APP_VERSION = 'v5.5.2';
+const APP_VERSION = 'v5.5.3';
 // v5.5.0: PDF に図形のラベル(.poly-label)も出すか。確認画面のチェック「ラベルも出力」(最後の選択を覚える)
 function pdfWithLabels(){ const c = document.getElementById('pdfWithLabels'); return !!(c && c.checked); }
 function pdfHideSelectors(){
@@ -1165,6 +1182,7 @@ function pdfHideSelectors(){
 // v4.9.0: データの暗号化の形 v2(塊ごと)を読めるように(リポジトリが膨らまないように。data_crypt.py)
 // v4.9.1: 微博の投稿を押すと、記事の画面で本文と写真を出す(元の投稿へはその上のボタンから。ユーザー指示)
 // v4.9.2: 翻訳を速く(段落をまとめて問い合わせ・内蔵翻訳は並べて・同じ記事は覚えておく)
+// v5.5.3: NOTAM の FIR は最初から全部にチェック(外したものを隠す)。航行警報の海事局(Archive・All)も同じチェックボックスに
 // v5.5.2: 距離計測中は図形をクリックしても選択にならず、計測の頂点になる(図形より計測を優先)
 // v5.5.1: NOTAM の単体PDFでも「ラベルも出力」で NOTAM 番号が出るように(単体PDFは番号なしで描き直していた)
 // v5.5.0: PDF の確認画面に「ラベルも出力」(既定はオフ=今までどおりラベルなし。最後の選択を覚える)
@@ -4030,8 +4048,10 @@ function logLine(msg, cls=''){
 
 let validityTab = 'active';
 let currentTabItems = []; // items currently shown under the active tab (active/archive/all) — used by the bulk show/hide buttons
-let archiveBureauFilter = ''; // '' = すべて。Archiveタブでのみ効く(他のタブでは無視される)
-let allBureauFilter = ''; // '' = すべて。Allタブでのみ効く(Archiveの選択とは独立)
+// v5.5.3: 海事局はチェックを外した局(Set)を持つ。空ならすべて。Archiveタブでのみ効く(他のタブでは無視される)
+let archiveBureauOff = new Set();
+let allBureauOff = new Set();   // Allタブでのみ効く(Archiveの選択とは独立)
+const bureauShown = (it, off) => !off.size || !it.bureau || !off.has(it.bureau);
 // 海事局の絞り込みドロップダウンの並び順。msa_scraper.py の BUREAUS と同じ、
 // 公式サイト(https://www.msa.gov.cn/)のメニュー掲載順。
 const BUREAU_SITE_ORDER = [
@@ -4390,8 +4410,10 @@ function renderWarnList(){
   // 増減するため)。並び順はmsa_scraper.py の BUREAUS と同じ、公式サイトの掲載順
   // (上海→天津→…)。リストに無い局名が来た場合(将来局が追加された等)は末尾に
   // そのまま追加する。ArchiveとAllで選択状態は独立(片方を選んでももう片方には影響しない)。
-  function updateBureauFilterOptions(selectEl, itemsInScope, currentValue){
-    const bureausPresent = Array.from(new Set(itemsInScope.map(it => it.bureau).filter(Boolean)))
+  function updateBureauFilterOptions(key, itemsInScope, off){
+    const counts = new Map();
+    itemsInScope.forEach(it => { if (it.bureau) counts.set(it.bureau, (counts.get(it.bureau) || 0) + 1); });
+    const bureausPresent = [...counts.keys()]
       .sort((a,b)=> {
         const ia = BUREAU_SITE_ORDER.indexOf(a), ib = BUREAU_SITE_ORDER.indexOf(b);
         if (ia === -1 && ib === -1) return a.localeCompare(b, 'ja');
@@ -4399,41 +4421,36 @@ function renderWarnList(){
         if (ib === -1) return -1;
         return ia - ib;
       });
-    selectEl.innerHTML = '<option value="">海事局: すべて</option>'
-      + bureausPresent.map(b => `<option value="${esc(b)}">${esc(b)}</option>`).join('');
-    // 選んでいた局がまだ選択肢に残っていれば維持、無くなっていれば「すべて」に戻す
-    selectEl.value = bureausPresent.includes(currentValue) ? currentValue : '';
-    return selectEl.value;
+    $('#' + key + 'BureauList').innerHTML = bureausPresent.map(b => `<label class="check-row"><input type="checkbox" data-bureau-key="${key}" data-bureau="${esc(b)}" ${off.has(b) ? '' : 'checked'}> ${esc(b)}<span class="issuer-n">${counts.get(b)}</span></label>`).join('')
+      || '<div style="margin-top:6px;color:var(--text-faint);">このタブに航行警報はありません</div>';
+    const on = bureausPresent.filter(b => !off.has(b));
+    const sum = $('#' + key + 'BureauSummary');
+    sum.textContent = '海事局: ' + checkSummary(bureausPresent, on);
+    sum.title = sum.textContent;
   }
 
   const archiveFilterRow = $('#archiveBureauFilterRow');
-  const archiveFilterSelect = $('#archiveBureauFilter');
   if (validityTab === 'archive') {
     archiveFilterRow.style.display = '';
-    archiveBureauFilter = updateBureauFilterOptions(
-      archiveFilterSelect,
-      base.filter(it => getValidityStatus(it) === 'archive'),
-      archiveFilterSelect.value,
-    );
+    updateBureauFilterOptions('archive', base.filter(it => getValidityStatus(it) === 'archive'), archiveBureauOff);
   } else {
     archiveFilterRow.style.display = 'none';
   }
 
   const allFilterRow = $('#allBureauFilterRow');
-  const allFilterSelect = $('#allBureauFilter');
   if (validityTab === 'all') {
     allFilterRow.style.display = '';
-    allBureauFilter = updateBureauFilterOptions(allFilterSelect, base, allFilterSelect.value);
+    updateBureauFilterOptions('all', base, allBureauOff);
   } else {
     allFilterRow.style.display = 'none';
   }
 
   const items = base
     .filter(it=>{
-      if (validityTab === 'all') return !allBureauFilter || it.bureau === allBureauFilter;
+      if (validityTab === 'all') return bureauShown(it, allBureauOff);
       const status = getValidityStatus(it);
       if (validityTab === 'active') return status === 'active' || status === 'unknown';
-      if (validityTab === 'archive') return status === 'archive' && (!archiveBureauFilter || it.bureau === archiveBureauFilter);
+      if (validityTab === 'archive') return status === 'archive' && bureauShown(it, archiveBureauOff);
       return status === validityTab; // 'notice'
     })
     .sort((a,b)=> (b.date||'').localeCompare(a.date||''));
@@ -4499,9 +4516,9 @@ function renderWarnList(){
 // kept in sync manually since duplicating that closure isn't practical here.
 function itemVisibleInCurrentTab(it){
   const status = getValidityStatus(it);
-  if (validityTab === 'all') return !allBureauFilter || it.bureau === allBureauFilter;
+  if (validityTab === 'all') return bureauShown(it, allBureauOff);
   if (validityTab === 'active') return status === 'active' || status === 'unknown';
-  if (validityTab === 'archive') return status === 'archive' && (!archiveBureauFilter || it.bureau === archiveBureauFilter);
+  if (validityTab === 'archive') return status === 'archive' && bureauShown(it, archiveBureauOff);
   return status === validityTab; // 'notice'
 }
 
@@ -4516,7 +4533,7 @@ function selectItemInPanel(it){
     const targetTab = (status === 'archive') ? 'archive' : (status === 'notice') ? 'notice' : 'active';
     validityTab = targetTab;
     $$('#validityTabs .tab-btn').forEach(b=> b.classList.toggle('active', b.dataset.tab === targetTab));
-    if (targetTab === 'archive') archiveBureauFilter = '';
+    if (targetTab === 'archive') archiveBureauOff = new Set();
     renderWarnList();
   }
   const key = canonicalKey(it.url);
@@ -4666,14 +4683,24 @@ $$('#validityTabs .tab-btn').forEach(btn=>{
   });
 });
 
-$('#archiveBureauFilter').addEventListener('change', ()=>{
-  archiveBureauFilter = $('#archiveBureauFilter').value;
-  renderWarnList();
+// v5.5.3: 海事局のチェックボックス(Archive・All それぞれ)
+const bureauOffOf = key => key === 'all' ? allBureauOff : archiveBureauOff;
+['archive', 'all'].forEach(key => {
+  $('#' + key + 'BureauList').addEventListener('change', e => {
+    const b = e.target && e.target.dataset ? e.target.dataset.bureau : undefined;
+    if (b === undefined) return;
+    if (e.target.checked) bureauOffOf(key).delete(b); else bureauOffOf(key).add(b);
+    renderWarnList();
+  });
 });
-
-$('#allBureauFilter').addEventListener('change', ()=>{
-  allBureauFilter = $('#allBureauFilter').value;
-  renderWarnList();
+document.addEventListener('click', e => {
+  const all = e.target.closest('[data-bureau-all]'), none = e.target.closest('[data-bureau-none]');
+  if (all){ bureauOffOf(all.dataset.bureauAll).clear(); renderWarnList(); }
+  if (none){
+    const key = none.dataset.bureauNone;
+    $$('#' + key + 'BureauList input[data-bureau]').forEach(c => bureauOffOf(key).add(c.dataset.bureau));
+    renderWarnList();
+  }
 });
 
 // "このタブを全て表示/非表示" — bulk-toggles map visibility for every item with coordinates
@@ -4957,12 +4984,19 @@ const NOTAM_ARCHIVE_START_MONTH = '2026-01';
 // v3.2.0〜 FIR・発行元の絞り込みはタブごとに別々(notamFilters[tab])。地図では、各NOTAMにその状態のタブ
 // (Active/Upcoming/Archive)の絞り込みを使う。Allタブを開いている間だけ、地図もAllタブの絞り込みに従う。
 // dates: 日付の絞り込み('YYYY-MM-DD'(UTC)の Set。空なら絞り込まない。Archive・Allタブで使う、v3.3.0〜・Allはv3.6.0〜)
-function notamNewTabFilter(){ return { firs: new Set(), issuers: new Set(NOTAM_ISSUER_DEFAULT), dates: new Set() }; }
+// v5.5.3: チェックボックスの絞り込みの見出し。全部=すべて、外したほうが少なければ「すべて（A・B を除く）」、それ以外は選んだものを並べる
+function checkSummary(all, on){
+  if (on.length === all.length) return 'すべて';
+  if (!on.length) return 'なし';
+  const off = all.filter(v => !on.includes(v));
+  return off.length < on.length ? `すべて（${off.join('・')} を除く）` : on.join('・');
+}
+function notamNewTabFilter(){ return { firsOff: new Set(), issuers: new Set(NOTAM_ISSUER_DEFAULT), dates: new Set() }; }
 function notamFirFilterActive(){ return true; }
-// v5.4.9: FIRは複数選べる(firs: Set)。空ならすべて
+// v5.5.3: FIRは「チェックを外したもの」(firsOff: Set)を持つ。空ならすべて表示。複数FIRのNOTAMは、どれか1つにチェックがあれば出す
 // 絞り込みに使うFIRコード(4文字)。見出し用の notamFirTokens は「ZBPE ZLHW」「PART 1 OF 2」のような並びを含むので、ばらして4文字のコードだけにする
 function notamFirCodes(f){ return [...new Set(notamFirTokens(f).flatMap(t => String(t).split(/\s+/)).filter(x => /^[A-Z]{4}$/.test(x) && x !== 'PART'))]; }
-function notamFirMatches(f, firs){ return !firs || !firs.size || notamFirCodes(f).some(t => firs.has(t)); }
+function notamFirMatches(f, off){ if (!off || !off.size) return true; const c = notamFirCodes(f); return !c.length || c.some(t => !off.has(t)); }
 // 発行元の絞り込み(v3.0.0、v3.2.0〜チェックボックスで複数選択)。値は notamIssuerKey(): 本文に BY <国名> があれば
 // 'BY:<国名>'、無ければ issuer(貼り付け取り込み分は北京とみなす)。チェックの入った発行元だけを一覧・地図に出す。
 // 既定は北京(ZBBBYNYX)と BY CHINA だけ(ユーザー判断。北京発行でも本文が BY KOREA なら 'BY:KOREA' で既定は外れる)。
@@ -5072,23 +5106,24 @@ function notamPassesFilter(f, tab, ignoreDate){
   // (INTL、例: A4705/26)でも発行されていて重複になるので表示しない。
   if ((f.properties || {}).classification === 'DOM') return false;
   if (!notamHasRealPolygon(f)) return false;
-  if (notamFirFilterActive() && !notamFirMatches(f, notamFilters[tab].firs)) return false;
+  if (notamFirFilterActive() && !notamFirMatches(f, notamFilters[tab].firsOff)) return false;
   if (!notamIssuerMatches(f, tab)) return false;
   if (!ignoreDate && notamFilters[tab].dates.size && !notamValidOnDates(f, notamFilters[tab].dates)) return false;
   return true;
 }
 // 航行警報側のupdateBureauFilterOptions()と同じ考え方: 今スコープにある値だけを選択肢にする。
 // v5.4.9: チェックボックスで複数選択。件数も出す。今のスコープに無いFIRの選択は外す
-function updateNotamFirFilterOptions(itemsInScope, firs){
+// v5.5.3: 最初は全部にチェック。外したもの(off)だけ覚える(今のスコープに無いFIRの「外した」も覚えておく)
+function updateNotamFirFilterOptions(itemsInScope, off){
   const counts = new Map();
   itemsInScope.forEach(f => notamFirCodes(f).forEach(t => counts.set(t, (counts.get(t) || 0) + 1)));
   const present = [...counts.keys()].sort();
-  [...firs].forEach(v => { if (!counts.has(v)) firs.delete(v); });
-  $('#notamFirList').innerHTML = present.map(v => `<label class="check-row"><input type="checkbox" data-notam-fir="${esc(v)}" ${firs.has(v) ? 'checked' : ''}> ${esc(v)}<span class="issuer-n">${counts.get(v)}</span></label>`).join('')
+  $('#notamFirList').innerHTML = present.map(v => `<label class="check-row"><input type="checkbox" data-notam-fir="${esc(v)}" ${off.has(v) ? '' : 'checked'}> ${esc(v)}<span class="issuer-n">${counts.get(v)}</span></label>`).join('')
     || '<div style="margin-top:6px;color:var(--text-faint);">このタブにNOTAMはありません</div>';
-  $('#notamFirSummary').textContent = 'FIR: ' + (firs.size ? present.filter(v => firs.has(v)).join('・') : 'すべて');
+  const on = present.filter(v => !off.has(v));
+  $('#notamFirSummary').textContent = 'FIR: ' + checkSummary(present, on);
   $('#notamFirSummary').title = $('#notamFirSummary').textContent;
-  return firs;
+  return off;
 }
 // 発行元のチェックボックス: 今のタブにある発行元だけを「北京(ZBBBYNYX)」「韓国(BY KOREA)」の表記と件数で出す。
 // 上の行(summary)には、チェックの入っている発行元を並べる。
@@ -5350,9 +5385,9 @@ function renderNotamList(){
   $('#notamFirFilterRow').style.display = notamFirFilterActive() ? 'block' : 'none';
   const tf = notamFilters[notamTab];
   syncNotamDateUi();
-  if (notamFirFilterActive()) updateNotamFirFilterOptions(polyItemsInTab, tf.firs);
+  if (notamFirFilterActive()) updateNotamFirFilterOptions(polyItemsInTab, tf.firsOff);
   updateNotamIssuerFilterOptions(polyItemsInTab.filter(f => (f.properties || {}).classification !== 'DOM'
-    && (!notamFirFilterActive() || notamFirMatches(f, tf.firs)) && (!tf.dates.size || notamValidOnDates(f, tf.dates))), tf.issuers);
+    && (!notamFirFilterActive() || notamFirMatches(f, tf.firsOff)) && (!tf.dates.size || notamValidOnDates(f, tf.dates))), tf.issuers);
 
   const items = notamFeaturesForTab(notamTab).filter(f => notamPassesFilter(f, notamTab))
     .sort((a,b) => ((b.properties||{}).valid_start||'').localeCompare((a.properties||{}).valid_start||''));
@@ -5558,7 +5593,7 @@ function selectNotamInPanel(f){
     notamTab = targetTab;
     $$('#notamValidityTabs .tab-btn').forEach(b=> b.classList.toggle('active', b.dataset.tab === targetTab));
     const tf = notamFilters[targetTab];
-    if (!notamFirMatches(f, tf.firs)) tf.firs = new Set();
+    if (!notamFirMatches(f, tf.firsOff)) tf.firsOff = new Set();
     if (tf.dates.size && !notamValidOnDates(f, tf.dates)) tf.dates = new Set();
     if (!notamIssuerMatches(f, targetTab)) tf.issuers.add(notamIssuerKey(f.properties || {}));
     renderNotamList();
@@ -5583,8 +5618,8 @@ $$('#notamValidityTabs .tab-btn').forEach(btn=>{
 $('#notamFirList').addEventListener('change', (e)=>{
   const v = e.target && e.target.dataset ? e.target.dataset.notamFir : undefined;
   if (v === undefined) return;
-  const set = notamFilters[notamTab].firs;
-  if (e.target.checked) set.add(v); else set.delete(v);
+  const off = notamFilters[notamTab].firsOff;
+  if (e.target.checked) off.delete(v); else off.add(v);
   renderNotamList();
 });
 (() => {
@@ -5592,7 +5627,11 @@ $('#notamFirList').addEventListener('change', (e)=>{
   try { c.checked = localStorage.getItem('pdfWithLabels') === '1'; } catch(e) {}
   c.addEventListener('change', () => { try { localStorage.setItem('pdfWithLabels', c.checked ? '1' : '0'); } catch(e) {} });
 })();
-$('#notamFirClear').addEventListener('click', ()=>{ notamFilters[notamTab].firs = new Set(); renderNotamList(); });
+$('#notamFirAll').addEventListener('click', ()=>{ notamFilters[notamTab].firsOff = new Set(); renderNotamList(); });
+$('#notamFirNone').addEventListener('click', ()=>{
+  $$('#notamFirList input[data-notam-fir]').forEach(c => notamFilters[notamTab].firsOff.add(c.dataset.notamFir));
+  renderNotamList();
+});
 $('#notamIssuerList').addEventListener('change', (e)=>{
   const k = e.target && e.target.dataset ? e.target.dataset.notamIssuer : undefined;
   if (k === undefined) return;
